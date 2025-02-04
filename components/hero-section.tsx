@@ -7,6 +7,7 @@ import DotBackground from './ui/dot-background';
 import heroAnimation1 from '../public/hero-animation1.json';
 import heroAnimation2 from '../public/hero-animation2.json';
 import heroAnimation3 from '../public/hero-animation3.json';
+import DecryptedText from './ui/decrypted-text';
 
 const HeroSection = () => {
   return (
@@ -23,9 +24,13 @@ const HeroSection = () => {
                 <br />
                 Development. Build at
                 <br />
-                <span className="font-extrabold text-yellow-500 text-[60px] leading-tight">
-                  Lightning Speed.
-                </span>
+                <DecryptedText
+                  className="font-extrabold text-yellow-500 text-[60px] leading-tight"
+                  encryptedClassName="font-semibold text-neutral-100 text-[60px] leading-tight"
+                  sequential={true}
+                  text="Lightning Speed."
+                  animateOn="view"
+                />
               </p>
               <p className="text-[250px] leading-none absolute -bottom-10 opacity-40 -right-20 z-0">
                 🚀
