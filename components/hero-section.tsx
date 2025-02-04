@@ -19,14 +19,13 @@ const HeroSection = () => {
             <div className="relative inline-flex items-start justify-start">
               <motion.p
                 initial={{
-                  opacity: 0,
-                  y: '-400px'
+                  scale: 3
                 }}
                 animate={{
-                  opacity: 0.4,
-                  y: '-40px'
+                  scale: 1,
+                  transition: { ease: ['backOut'], duration: 0.3 }
                 }}
-                className="text-[150px] leading-none absolute opacity-40 -left-10 z-0"
+                className="text-[150px] leading-none absolute opacity-40 -left-10 z-0 -top-10"
               >
                 💥
               </motion.p>
@@ -39,7 +38,7 @@ const HeroSection = () => {
                   className="font-extrabold text-yellow-500 text-[60px] leading-tight"
                   encryptedClassName="font-semibold text-neutral-100 text-[60px] leading-tight"
                   sequential={true}
-                  speed={30}
+                  speed={50}
                   text="Lightning Speed."
                   animateOn="view"
                 />
@@ -47,12 +46,12 @@ const HeroSection = () => {
               <motion.p
                 initial={{
                   opacity: 0,
-                  y: '-800px'
+                  y: '-200px'
                 }}
                 animate={{
                   opacity: 0.4,
                   y: '10px',
-                  transition: { ease: ['backInOut'], duration: 1 }
+                  transition: { ease: ['backOut'], duration: 1.2 }
                 }}
                 className="text-[250px] leading-none absolute opacity-40 -right-20 z-0"
               >
@@ -60,11 +59,11 @@ const HeroSection = () => {
               </motion.p>
             </div>
             <motion.p
-              initial={{ opacity: 0, y: '200px', fontWeight: 'bold' }}
+              initial={{ opacity: 0, y: '500px' }}
               animate={{
                 opacity: 1,
                 y: '0px',
-                fontWeight: 'normal'
+                transition: { ease: ['linear'], duration: 0.4 }
               }}
               className="text-[20px] leading-none mt-10 max-w-[700px]"
             >
@@ -74,7 +73,16 @@ const HeroSection = () => {
           </div>
           <div className="flex flex-col gap-[20px]">
             <div className="flex items-center gap-[20px]">
-              <div className="rounded-xl h-[250px] w-[250px] relative overflow-hidden">
+              <motion.div
+                initial={{
+                  scale: 0
+                }}
+                animate={{
+                  scale: 1,
+                  transition: { ease: ['backOut'], duration: 0.6 }
+                }}
+                className="rounded-xl h-[250px] w-[250px] relative overflow-hidden"
+              >
                 <div
                   style={{
                     background:
@@ -88,24 +96,50 @@ const HeroSection = () => {
                   autoPlay={true}
                   className="z-20 h-full w-full opacity-80"
                 />
-              </div>
-              <div className="rounded-full h-[250px] bg-transparent w-[250px] relative overflow-hidden border-[1px] border-white p-5">
+              </motion.div>
+              <motion.div
+                initial={{
+                  left: '-250px',
+                  scale: 0
+                }}
+                animate={{
+                  left: '0px',
+                  scale: 1,
+                  transition: { ease: ['backOut'], duration: 1.2 }
+                }}
+                className="rounded-full h-[250px] bg-transparent w-[250px] relative overflow-hidden border-[1px] border-white p-5"
+              >
                 <Lottie
                   animationData={heroAnimation3}
                   loop={true}
                   autoPlay={true}
                   className="h-full w-full"
                 />
-              </div>
+              </motion.div>
             </div>
-            <div className="rounded-md bg-transparent h-[250px] w-[520px] relative overflow-hidden flex items-center justify-center">
+            <motion.div
+              initial={{
+                y: '-260px',
+                x: '-200px',
+                opacity: 0,
+                scale: 0
+              }}
+              animate={{
+                y: '0px',
+                scale: 1,
+                opacity: 0.8,
+                x: '0px',
+                transition: { duration: 0.7 }
+              }}
+              className="rounded-md bg-transparent h-[250px] w-[520px] relative overflow-hidden flex items-center justify-center"
+            >
               <Lottie
                 animationData={heroAnimation2}
                 loop={true}
                 autoPlay={true}
                 className="h-[1000px] w-[1000px]"
               />
-            </div>
+            </motion.div>
           </div>
         </DotBackground>
       </div>
