@@ -8,7 +8,6 @@ import DotBackground from './ui/dot-background';
 import heroAnimation1 from '../public/hero-animation1.json';
 import heroAnimation2 from '../public/hero-animation2.json';
 import heroAnimation3 from '../public/hero-animation3.json';
-import DecryptedText from './ui/decrypted-text';
 
 const HeroSection = () => {
   const controls = useAnimationControls();
@@ -66,8 +65,8 @@ const HeroSection = () => {
                   },
                   shake: {
                     x: [0, 1, 0, -1, 0, 1, 0, -1, 0],
-                    y: [0, 1, 0, -1, 0, -1, 0, 1, 0],
-                    scale: [1, 1, 1, 1, 1.1, 1.1, 1.1, 1.1, 1],
+                    y: [10, 11, 10, 9, 10, 9, 10, 11, 10],
+                    scale: [1, 1, 1, 1.1, 1, 1.1, 1, 1.1, 1],
                     transition: {
                       repeat: Infinity,
                       repeatType: 'reverse',
@@ -77,7 +76,7 @@ const HeroSection = () => {
                   }
                 }}
                 animate={controls}
-                className="text-[150px] leading-none absolute opacity-40 -left-10 z-0 -top-10"
+                className="text-[150px] leading-none absolute opacity-40 -left-10 z-0 -top-20"
               >
                 💥
               </motion.p>
@@ -100,14 +99,6 @@ const HeroSection = () => {
                 <span className="font-extrabold text-yellow-500 text-[60px] leading-tight">
                   Lightning Speed.
                 </span>
-                {/* <DecryptedText
-                  className="font-extrabold text-yellow-500 text-[60px] leading-tight"
-                  encryptedClassName="font-semibold text-neutral-100 text-[60px] leading-tight"
-                  sequential={true}
-                  speed={45}
-                  text="Lightning Speed."
-                  animateOn="view"
-                /> */}
               </motion.p>
               <motion.p
                 initial={{
