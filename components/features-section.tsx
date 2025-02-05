@@ -42,7 +42,7 @@ const FeaturesSection = () => {
 
   return (
     <div className="flex w-full items-center justify-center bg-black">
-      <div className="flex flex-col max-w-[65%] w-full my-32 gap-[100vh]">
+      <div className="flex flex-col max-w-[65%] w-full gap-[90vh]">
         {features.map((feature, index) => {
           return (
             <motion.div
@@ -66,7 +66,7 @@ const FeaturesSection = () => {
             </motion.div>
           );
         })}
-        <DotBackground className="h-screen flex flex-col">
+        <DotBackground className="py-60 flex flex-col">
           <p className="font-semibold text-center text-yellow-400 text-3xl leading-normal">
             <span className="text-white font-bold text-2xl">All that redundancy 🤢</span>
           </p>
@@ -96,17 +96,17 @@ const FeaturesSection = () => {
               width={60}
             />
           </div>
-          <MovingBorderButton
-            wrapperClassName="rounded-2xl mt-2 p-[3px]"
-            className="rounded-2xl px-2 py-2"
-          >
-            <Image
-              src="/hero-meme.png"
-              alt="hero-meme"
-              height={400}
-              width={400}
-              className="rounded-xl"
-            />
+
+          <Image
+            src="/hero-meme.png"
+            alt="hero-meme"
+            height={400}
+            width={400}
+            className="rounded-xl flicker mt-10"
+          />
+
+          <MovingBorderButton wrapperClassName="mt-10" className="px-2 py-2">
+            Coming Soon
           </MovingBorderButton>
         </DotBackground>
       </div>
