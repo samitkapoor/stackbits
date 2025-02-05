@@ -97,7 +97,7 @@ const FeaturesSection = () => {
             />
           </div>
           <MovingBorderButton
-            wrapperClassName="rounded-2xl mt-10 p-[3px]"
+            wrapperClassName="rounded-2xl mt-2 p-[3px]"
             className="rounded-2xl px-2 py-2"
           >
             <Image
