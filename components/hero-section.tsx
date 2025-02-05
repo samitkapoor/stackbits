@@ -5,6 +5,7 @@ import { motion, useAnimationControls } from 'framer-motion';
 
 import DotBackground from './ui/dot-background';
 import HeroIllustration from './hero-illustration';
+import MovingBorderButton from './ui/moving-border-button';
 
 const HeroSection = () => {
   const controls = useAnimationControls();
@@ -29,6 +30,10 @@ const HeroSection = () => {
     setTimeout(() => {
       controls.start('visibileDescription');
     }, 2000);
+
+    setTimeout(() => {
+      controls.start('cta');
+    }, 2100);
   }, []);
 
   return (
@@ -81,7 +86,7 @@ const HeroSection = () => {
                 <br />
                 Development. Build at
                 <br />
-                <span className="font-extrabold text-yellow-500 text-[60px] leading-tight">
+                <span className="font-extrabold text-yellow-400 text-[60px] leading-tight">
                   Lightning Speed.
                 </span>
               </motion.p>
@@ -129,6 +134,20 @@ const HeroSection = () => {
               A growing library of reusable snippets to help you ship projects faster, empowering
               developers with time-saving tools and ready-to-use code for seamless integration.
             </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: '500px' }}
+              variants={{
+                cta: {
+                  opacity: 1,
+                  y: '0px',
+                  transition: { ease: ['backOut'], duration: 0.7 }
+                }
+              }}
+              animate={controls}
+              className="mt-5"
+            >
+              <MovingBorderButton className="px-4 py-2 text-xl">Get Started</MovingBorderButton>
+            </motion.div>
           </div>
           <HeroIllustration />
         </DotBackground>

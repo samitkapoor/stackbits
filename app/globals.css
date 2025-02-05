@@ -35,3 +35,24 @@ body {
 .flicker {
   animation: neon-flicker 0.8s infinite alternate;
 }
+
+.moving-border-btn {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(var(--angle), transparent, #d0d0d0, transparent);
+  animation: moveGradient 2s linear infinite;
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes moveGradient {
+  to {
+    --angle: 360deg;
+  }
+}
