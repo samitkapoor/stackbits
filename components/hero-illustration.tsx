@@ -38,8 +38,9 @@ const HeroIllustration = () => {
       onMouseLeave={onMouseLeave}
       onMouseEnter={onMouseEnter}
       style={{
-        background:
-          'linear-gradient(135deg, transparent 0%, #cbcbcb25 50%, transparent 100%), linear-gradient(45deg, transparent 0%, #cbcbcb25 50%, transparent 100%)'
+        background: isHovering
+          ? 'linear-gradient(135deg, transparent 0%, #cbcbcb30 50%, transparent 100%), linear-gradient(45deg, transparent 0%, #cbcbcb30 50%, transparent 100%)'
+          : 'linear-gradient(135deg, transparent 0%, #cbcbcb25 50%, transparent 100%), linear-gradient(45deg, transparent 0%, #cbcbcb25 50%, transparent 100%)'
       }}
       className="flex flex-col gap-2 items-center justify-center border-2 rounded-xl h-[500px] w-[380px] relative transition-all duration-200 ease-linear"
     >
@@ -125,9 +126,10 @@ const HeroIllustration = () => {
       </button>
       <p
         style={{
-          opacity: isHovering ? 1 : 0
+          opacity: isHovering ? 1 : 0,
+          transform: isHovering ? 'translateZ(50px) scale(1.1)' : 'scale(1)'
         }}
-        className="absolute bottom-10 transition-all duration-500 font-medium"
+        className="absolute bottom-10 transition-all duration-700 font-medium"
       >
         All this, just one Ctrl+C, Ctrl+V away. 😉
       </p>
