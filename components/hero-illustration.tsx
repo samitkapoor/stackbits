@@ -70,24 +70,12 @@ const HeroIllustration = () => {
         style={{
           opacity: isHovering ? 1 : 0,
           transform: isHovering ? 'translateZ(10px)' : '',
-          top: isHovering ? '287px' : '',
+          top: isHovering ? '145px' : '',
           background:
             'linear-gradient(61deg, rgba(255,106,0,1) 0%, rgba(255,210,0,1) 20%, rgba(224,255,0,1) 40%, rgba(70,255,0,1) 60%, rgba(0,255,175,1) 80%, rgba(0,245,255,1) 100%)'
         }}
         type="button"
         className="px-4 py-2 font-medium absolute z-0 top-1/3 shadow-md shadow-[#ffffff4a] opacity-0 rounded-xl text-transparent text-xl transition-all duration-1000"
-      >
-        Hover over me!
-      </button>
-      <button
-        onMouseMove={onMouseMove}
-        type="button"
-        style={{
-          opacity: isHovering ? 1 : 0,
-          transform: isHovering ? 'translateZ(10px)' : '',
-          top: isHovering ? '145px' : ''
-        }}
-        className="px-4 py-2 font-medium absolute z-0 top-1/3 shadow-md shadow-[#ffffff4a] opacity-0 rounded-xl text-transparent text-xl border-[2px] border-white transition-all duration-1000"
       >
         Hover over me!
       </button>
@@ -107,7 +95,7 @@ const HeroIllustration = () => {
         style={{
           opacity: isHovering ? 1 : 0,
           transform: isHovering ? 'translateZ(10px)' : '',
-          top: isHovering ? '216px' : ''
+          top: isHovering ? '287px' : ''
         }}
         className="px-4 py-2 font-medium absolute z-0 top-1/3 shadow-md shadow-[#ffffff4a] opacity-0 rounded-xl text-white text-xl transition-all duration-1000"
       >
@@ -123,7 +111,18 @@ const HeroIllustration = () => {
       >
         +
       </div>
-
+      <button
+        onMouseMove={onMouseMove}
+        type="button"
+        style={{
+          opacity: isHovering ? 1 : 0,
+          transform: isHovering ? 'translateZ(10px)' : '',
+          top: isHovering ? '216px' : ''
+        }}
+        className="px-4 py-2 font-medium absolute z-0 top-1/3 shadow-md shadow-[#ffffff4a] opacity-0 rounded-xl text-transparent text-xl border-[2px] border-white transition-all duration-1000"
+      >
+        Hover over me!
+      </button>
       <p
         style={{
           opacity: isHovering ? 1 : 0
