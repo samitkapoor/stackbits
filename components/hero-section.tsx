@@ -6,6 +6,7 @@ import { motion, useAnimationControls } from 'framer-motion';
 import DotBackground from './ui/dot-background';
 import HeroIllustration from './hero-illustration';
 import MovingBorderButton from './ui/moving-border-button';
+import { MoveRight } from 'lucide-react';
 
 const HeroSection = () => {
   const controls = useAnimationControls();
@@ -146,7 +147,11 @@ const HeroSection = () => {
               animate={controls}
               className="mt-5"
             >
-              <MovingBorderButton className="px-4 py-2 text-xl">Get Started</MovingBorderButton>
+              {/* <MovingBorderButton className="px-4 py-2 text-xl">
+                Get Started&nbsp;
+                <MoveRight />
+              </MovingBorderButton> */}
+              <MovingBorderButton className="px-4 py-2 text-xl">Coming Soon</MovingBorderButton>
             </motion.div>
           </div>
           <HeroIllustration />
