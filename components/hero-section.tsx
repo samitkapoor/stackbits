@@ -8,6 +8,7 @@ import DotBackground from './ui/dot-background';
 import heroAnimation1 from '../public/hero-animation1.json';
 import heroAnimation2 from '../public/hero-animation2.json';
 import heroAnimation3 from '../public/hero-animation3.json';
+import HeroIllustration from './hero-illustration';
 
 const HeroSection = () => {
   const controls = useAnimationControls();
@@ -144,7 +145,8 @@ const HeroSection = () => {
               developers with time-saving tools and ready-to-use code for seamless integration.
             </motion.p>
           </div>
-          <div className="flex flex-col gap-[20px]">
+          <HeroIllustration />
+          {/* <div className="flex flex-col gap-[20px]">
             <div className="flex items-center gap-[20px]">
               <motion.div
                 initial={{
@@ -220,7 +222,7 @@ const HeroSection = () => {
                 className="h-[1000px] w-[1000px]"
               />
             </motion.div>
-          </div>
+          </div> */}
         </DotBackground>
       </div>
     </div>
