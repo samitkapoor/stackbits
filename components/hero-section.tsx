@@ -1,8 +1,8 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Lottie from 'lottie-react';
-import { motion } from 'framer-motion';
+import { motion, useAnimationControls } from 'framer-motion';
 
 import DotBackground from './ui/dot-background';
 import heroAnimation1 from '../public/hero-animation1.json';
@@ -11,6 +11,42 @@ import heroAnimation3 from '../public/hero-animation3.json';
 import DecryptedText from './ui/decrypted-text';
 
 const HeroSection = () => {
+  const controls = useAnimationControls();
+
+  useEffect(() => {
+    setTimeout(() => {
+      controls.start('explode');
+
+      setTimeout(() => {
+        controls.start('shake');
+      }, 1000);
+    }, 600);
+
+    setTimeout(() => {
+      controls.start('launch');
+
+      setTimeout(() => {
+        controls.start('flyRocket');
+      }, 1000);
+    }, 1000);
+
+    setTimeout(() => {
+      controls.start('visibileDescription');
+    }, 1400 + 1500);
+
+    setTimeout(() => {
+      controls.start('heroAnimation1');
+    }, 1800 - 400);
+
+    setTimeout(() => {
+      controls.start('heroAnimation3');
+    }, 2000 - 400);
+
+    setTimeout(() => {
+      controls.start('heroAnimation2');
+    }, 2200 - 400);
+  }, []);
+
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="flex items-center w-full h-screen relative">
@@ -19,52 +55,98 @@ const HeroSection = () => {
             <div className="relative inline-flex items-start justify-start">
               <motion.p
                 initial={{
-                  scale: 3
+                  opacity: 0,
+                  y: '-800px'
                 }}
-                animate={{
-                  scale: 1,
-                  transition: { ease: ['backOut'], duration: 0.3 }
+                variants={{
+                  explode: {
+                    opacity: 0.4,
+                    y: '10px',
+                    transition: { ease: ['backOut'], duration: 0.7 }
+                  },
+                  shake: {
+                    x: [0, 1, 0, -1, 0, 1, 0, -1, 0],
+                    y: [0, 1, 0, -1, 0, -1, 0, 1, 0],
+                    scale: [1, 1, 1, 1, 1.1, 1.1, 1.1, 1.1, 1],
+                    transition: {
+                      repeat: Infinity,
+                      repeatType: 'reverse',
+                      ease: 'easeInOut',
+                      duration: 5
+                    }
+                  }
                 }}
+                animate={controls}
                 className="text-[150px] leading-none absolute opacity-40 -left-10 z-0 -top-10"
               >
                 💥
               </motion.p>
-              <p className="text-[55px] font-medium leading-none z-30">
+              <motion.p
+                initial={{
+                  opacity: 0,
+                  scale: 3
+                }}
+                animate={{
+                  opacity: 1,
+                  scale: 1,
+                  transition: { duration: 1.5, ease: 'backOut' }
+                }}
+                className="text-[55px] font-medium leading-none z-30"
+              >
                 Accelerate Your
                 <br />
                 Development. Build at
                 <br />
-                <DecryptedText
+                <span className="font-extrabold text-yellow-500 text-[60px] leading-tight">
+                  Lightning Speed.
+                </span>
+                {/* <DecryptedText
                   className="font-extrabold text-yellow-500 text-[60px] leading-tight"
                   encryptedClassName="font-semibold text-neutral-100 text-[60px] leading-tight"
                   sequential={true}
-                  speed={50}
+                  speed={45}
                   text="Lightning Speed."
                   animateOn="view"
-                />
-              </p>
+                /> */}
+              </motion.p>
               <motion.p
                 initial={{
                   opacity: 0,
-                  y: '-200px'
+                  y: '-800px'
                 }}
-                animate={{
-                  opacity: 0.4,
-                  y: '10px',
-                  transition: { ease: ['backOut'], duration: 1.2 }
+                variants={{
+                  launch: {
+                    opacity: 0.4,
+                    y: '0px',
+                    transition: { ease: ['backOut'], duration: 0.7 }
+                  },
+                  flyRocket: {
+                    x: [0, 1, 0, -1, 0, 1, 0, -1, 0],
+                    y: [0, 1, 0, -1, 0, -1, 0, 1, 0],
+                    scale: [1, 1, 1, 1, 1.1, 1.1, 1.1, 1.1, 1],
+                    transition: {
+                      repeat: Infinity,
+                      repeatType: 'reverse',
+                      ease: 'easeInOut',
+                      duration: 3
+                    }
+                  }
                 }}
+                animate={controls}
                 className="text-[250px] leading-none absolute opacity-40 -right-20 z-0"
               >
                 🚀
               </motion.p>
             </div>
             <motion.p
-              initial={{ opacity: 0, y: '500px' }}
-              animate={{
-                opacity: 1,
-                y: '0px',
-                transition: { ease: ['linear'], duration: 0.4 }
+              initial={{ opacity: 0 }}
+              variants={{
+                visibileDescription: {
+                  opacity: 1,
+                  transition: { ease: ['backOut'], duration: 4 }
+                }
               }}
+              animate={controls}
               className="text-[20px] leading-none mt-10 max-w-[700px]"
             >
               A growing library of reusable snippets to help you ship projects faster, empowering
@@ -75,12 +157,17 @@ const HeroSection = () => {
             <div className="flex items-center gap-[20px]">
               <motion.div
                 initial={{
-                  scale: 0
+                  scale: 0,
+                  rotateZ: '-180deg'
                 }}
-                animate={{
-                  scale: 1,
-                  transition: { ease: ['backOut'], duration: 0.6 }
+                variants={{
+                  heroAnimation1: {
+                    scale: 1,
+                    rotateZ: '0deg',
+                    transition: { ease: ['backOut'], duration: 0.6 }
+                  }
                 }}
+                animate={controls}
                 className="rounded-xl h-[250px] w-[250px] relative overflow-hidden"
               >
                 <div
@@ -99,14 +186,17 @@ const HeroSection = () => {
               </motion.div>
               <motion.div
                 initial={{
-                  left: '-250px',
-                  scale: 0
+                  scale: 0,
+                  rotateZ: '180deg'
                 }}
-                animate={{
-                  left: '0px',
-                  scale: 1,
-                  transition: { ease: ['backOut'], duration: 1.2 }
+                variants={{
+                  heroAnimation3: {
+                    scale: 1,
+                    rotateZ: '0deg',
+                    transition: { ease: ['backOut'], duration: 0.6 }
+                  }
                 }}
+                animate={controls}
                 className="rounded-full h-[250px] bg-transparent w-[250px] relative overflow-hidden border-[1px] border-white p-5"
               >
                 <Lottie
@@ -119,18 +209,17 @@ const HeroSection = () => {
             </div>
             <motion.div
               initial={{
-                y: '-260px',
-                x: '-200px',
                 opacity: 0,
                 scale: 0
               }}
-              animate={{
-                y: '0px',
-                scale: 1,
-                opacity: 0.8,
-                x: '0px',
-                transition: { duration: 0.7 }
+              variants={{
+                heroAnimation2: {
+                  scale: 1,
+                  opacity: 0.8,
+                  transition: { ease: ['backOut'], duration: 0.6 }
+                }
               }}
+              animate={controls}
               className="rounded-md bg-transparent h-[250px] w-[520px] relative overflow-hidden flex items-center justify-center"
             >
               <Lottie
