@@ -1,13 +1,9 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import Lottie from 'lottie-react';
 import { motion, useAnimationControls } from 'framer-motion';
 
 import DotBackground from './ui/dot-background';
-import heroAnimation1 from '../public/hero-animation1.json';
-import heroAnimation2 from '../public/hero-animation2.json';
-import heroAnimation3 from '../public/hero-animation3.json';
 import HeroIllustration from './hero-illustration';
 
 const HeroSection = () => {
@@ -32,19 +28,7 @@ const HeroSection = () => {
 
     setTimeout(() => {
       controls.start('visibileDescription');
-    }, 1400 + 1500);
-
-    setTimeout(() => {
-      controls.start('heroAnimation1');
-    }, 1800 - 400);
-
-    setTimeout(() => {
-      controls.start('heroAnimation3');
-    }, 2000 - 400);
-
-    setTimeout(() => {
-      controls.start('heroAnimation2');
-    }, 2200 - 400);
+    }, 2000);
   }, []);
 
   return (
@@ -131,11 +115,12 @@ const HeroSection = () => {
               </motion.p>
             </div>
             <motion.p
-              initial={{ opacity: 0 }}
+              initial={{ opacity: 0, y: '500px' }}
               variants={{
                 visibileDescription: {
                   opacity: 1,
-                  transition: { ease: ['backOut'], duration: 4 }
+                  y: '0px',
+                  transition: { ease: ['backOut'], duration: 0.7 }
                 }
               }}
               animate={controls}
@@ -146,83 +131,6 @@ const HeroSection = () => {
             </motion.p>
           </div>
           <HeroIllustration />
-          {/* <div className="flex flex-col gap-[20px]">
-            <div className="flex items-center gap-[20px]">
-              <motion.div
-                initial={{
-                  scale: 0,
-                  rotateZ: '-180deg'
-                }}
-                variants={{
-                  heroAnimation1: {
-                    scale: 1,
-                    rotateZ: '0deg',
-                    transition: { ease: ['backOut'], duration: 0.6 }
-                  }
-                }}
-                animate={controls}
-                className="rounded-xl h-[250px] w-[250px] relative overflow-hidden"
-              >
-                <div
-                  style={{
-                    background:
-                      'radial-gradient(circle, rgba(11,255,0,1) 25%, rgba(255,0,0,0) 100%)'
-                  }}
-                  className="absolute top-0 left-0 h-full w-full"
-                />
-                <Lottie
-                  animationData={heroAnimation1}
-                  loop={true}
-                  autoPlay={true}
-                  className="z-20 h-full w-full opacity-80"
-                />
-              </motion.div>
-              <motion.div
-                initial={{
-                  scale: 0,
-                  rotateZ: '180deg'
-                }}
-                variants={{
-                  heroAnimation3: {
-                    scale: 1,
-                    rotateZ: '0deg',
-                    transition: { ease: ['backOut'], duration: 0.6 }
-                  }
-                }}
-                animate={controls}
-                className="rounded-full h-[250px] bg-transparent w-[250px] relative overflow-hidden border-[1px] border-white p-5"
-              >
-                <Lottie
-                  animationData={heroAnimation3}
-                  loop={true}
-                  autoPlay={true}
-                  className="h-full w-full"
-                />
-              </motion.div>
-            </div>
-            <motion.div
-              initial={{
-                opacity: 0,
-                scale: 0
-              }}
-              variants={{
-                heroAnimation2: {
-                  scale: 1,
-                  opacity: 0.8,
-                  transition: { ease: ['backOut'], duration: 0.6 }
-                }
-              }}
-              animate={controls}
-              className="rounded-md bg-transparent h-[250px] w-[520px] relative overflow-hidden flex items-center justify-center"
-            >
-              <Lottie
-                animationData={heroAnimation2}
-                loop={true}
-                autoPlay={true}
-                className="h-[1000px] w-[1000px]"
-              />
-            </motion.div>
-          </div> */}
         </DotBackground>
       </div>
     </div>

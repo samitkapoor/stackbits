@@ -1,11 +1,18 @@
 'use client';
 
-import React, { MouseEvent, useRef, useState } from 'react';
+import React, { MouseEvent, useEffect, useRef, useState } from 'react';
 
 const HeroIllustration = () => {
   const divRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const [isHovering, setIsHovering] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (!divRef.current) return;
+      divRef.current.style.opacity = '1';
+    }, 1600);
+  }, [divRef]);
 
   const onMouseMove = (e: MouseEvent<HTMLDivElement | HTMLButtonElement>) => {
     if (!divRef.current) return;
@@ -42,7 +49,7 @@ const HeroIllustration = () => {
           ? 'linear-gradient(135deg, transparent 0%, #cbcbcb30 50%, transparent 100%), linear-gradient(45deg, transparent 0%, #cbcbcb30 50%, transparent 100%)'
           : 'linear-gradient(135deg, transparent 0%, #cbcbcb25 50%, transparent 100%), linear-gradient(45deg, transparent 0%, #cbcbcb25 50%, transparent 100%)'
       }}
-      className="flex flex-col gap-2 items-center justify-center border-2 rounded-xl h-[500px] w-[380px] relative transition-all duration-200 ease-linear"
+      className="flex opacity-0 flex-col gap-2 items-center justify-center border-2 rounded-xl h-[500px] w-[380px] relative transition-all duration-300 ease-linear"
     >
       <button
         ref={buttonRef}
@@ -62,7 +69,7 @@ const HeroIllustration = () => {
           transform: isHovering ? 'translateZ(10px)' : '',
           top: isHovering ? '122px' : ''
         }}
-        className="absolute font-medium z-0 top-1/3 transition-all duration-1000"
+        className="absolute font-medium z-0 top-1/3 transition-all duration-1000 select-none"
       >
         =
       </div>
@@ -86,7 +93,7 @@ const HeroIllustration = () => {
           transform: isHovering ? 'translateZ(10px)' : '',
           top: isHovering ? '193px' : ''
         }}
-        className="absolute z-0 font-medium top-1/3 transition-all duration-1000"
+        className="absolute z-0 font-medium top-1/3 transition-all duration-1000 select-none"
       >
         +
       </div>
@@ -108,7 +115,7 @@ const HeroIllustration = () => {
           transform: isHovering ? 'translateZ(10px)' : '',
           top: isHovering ? '264px' : ''
         }}
-        className="absolute font-medium z-0 top-1/3 transition-all duration-1000"
+        className="absolute font-medium z-0 top-1/3 transition-all duration-1000 select-none"
       >
         +
       </div>
