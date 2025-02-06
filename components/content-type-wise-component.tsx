@@ -1,0 +1,39 @@
+import React from 'react';
+
+const ContentTypeWiseComponent = ({
+  content,
+  contentType
+}: {
+  content: any;
+  contentType: string;
+}) => {
+  if (contentType === 'paragraph') {
+    return <p className="max-w-[800px]">{content}</p>;
+  } else if (contentType === 'ordered-list') {
+    return (
+      <div className="flex flex-col gap-8 mt-4">
+        {content.map((item: { id: number; heading: string; content: string }, i: number) => {
+          const { id, heading, content } = item;
+          return (
+            <div key={item.heading + i} className="flex flex-col items-start gap-1">
+              <div className="flex items-center gap-[20px]">
+                <div className="border-[1px] rounded-full h-[25px] w-[25px] text-center flex items-center justify-center select-none hover:border-yellow-400 hover:text-yellow-400 transition-all">
+                  {id}
+                </div>
+                <p className="font-semibold text-yellow-400">{heading}</p>
+              </div>
+              <div className="flex text-sm flex-col gap-2 ml-[47px]">
+                <p>{content}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
+  } else {
+    console.log({ contentType, content });
+    return <div>ContentTypeWiseComponent</div>;
+  }
+};
+
+export default ContentTypeWiseComponent;

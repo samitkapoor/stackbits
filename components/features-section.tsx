@@ -6,6 +6,7 @@ import DotBackground from './ui/dot-background';
 import Image from 'next/image';
 import MovingBorderButton from './ui/moving-border-button';
 import BuiltForDevelopers from './built-for-developers';
+import Link from 'next/link';
 
 const FeaturesSection = () => {
   const { scrollYProgress } = useScroll();
@@ -124,9 +125,11 @@ const FeaturesSection = () => {
             className="rounded-xl flicker mt-10 h-[350px] w-[350px] lg:h-[400px] lg:w-[400px]"
           />
 
-          <MovingBorderButton wrapperClassName="mt-10" className="px-2 py-2">
-            Coming Soon
-          </MovingBorderButton>
+          <Link href={'/docs/introduction'}>
+            <MovingBorderButton wrapperClassName="mt-20" className="px-2 py-2">
+              Let's gooooo!
+            </MovingBorderButton>
+          </Link>
         </DotBackground>
         <BuiltForDevelopers />
       </div>
