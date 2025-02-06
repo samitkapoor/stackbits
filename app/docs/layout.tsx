@@ -15,7 +15,7 @@ const DocumentationLayout = ({ children }: { children: React.ReactNode }) => {
   };
 
   return (
-    <div className="flex items-start pt-[50px] relative px-[50px] overflow-y-hidden">
+    <div className="flex items-start bg-black pt-[50px] relative px-[50px] overflow-y-hidden">
       <SideBar toggleSideBar={toggleSideBar} isOpen={sideBarIsOpen} />
       <div className="flex flex-col gap-52 xl:gap-0 xl:flex-row w-full lg:pl-[350px] overflow-y-auto overflow-x-hidden pb-32">
         <MovingBorderButton

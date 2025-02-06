@@ -21,7 +21,9 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={`font-poppins antialiased text-white overflow-x-hidden`}>{children}</body>
+      <body className={`font-poppins antialiased text-white bg-black overflow-x-hidden`}>
+        {children}
+      </body>
     </html>
   );
 }
