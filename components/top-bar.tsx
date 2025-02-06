@@ -10,21 +10,27 @@ const TopBar = () => {
     {
       name: 'Home',
       href: '/',
-      icon: <House className="h-[18px] w-[18px]" />
+      icon: <House className="h-[12px] sm:h-[18px] w-[12px] sm:w-[18px]" />
     },
     {
       name: 'Documentation',
       href: '/docs',
-      icon: <File className="h-[18px] w-[18px]" />
+      icon: <File className="h-[12px] sm:h-[18px] w-[12px] sm:w-[18px]" />
     }
   ];
 
   const pathname = usePathname();
 
   return (
-    <div className="w-full flex items-center justify-between px-40 ">
+    <div className="w-full flex items-center justify-between px-10 lg:px-40 ">
       <div className="py-3">
-        <Image src="/logo1.png" alt="logo" height={110} width={110} />
+        <Image
+          src="/logo1.png"
+          alt="logo"
+          height={110}
+          width={110}
+          className="h-[65px] sm:h-[110px] w-[65px] sm:w-[110px] object-contain"
+        />
       </div>
       <div className="flex items-center text-white">
         {links.map((link, index) => {
@@ -35,7 +41,7 @@ const TopBar = () => {
             <a
               key={link.name}
               href={link.href}
-              className={`px-3 py-3 flex items-center gap-1 text-sm transition-all ${extraClass}`}
+              className={`px-1 sm:px-3 py-3 flex items-center gap-1 text-xs sm:text-sm transition-all ${extraClass}`}
             >
               {link.icon}
               <p>{link.name}</p>

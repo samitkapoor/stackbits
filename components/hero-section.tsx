@@ -39,10 +39,10 @@ const HeroSection = () => {
 
   return (
     <div className="flex flex-col w-full items-center justify-center">
-      <div className="flex items-center w-full h-screen relative">
-        <DotBackground className="justify-center gap-20 h-full p-20">
-          <div className="inline-flex flex-col items-start justify-start relative">
-            <div className="relative inline-flex items-start justify-start">
+      <div className="flex items-center w-full relative">
+        <DotBackground className="justify-center gap-20 lg:h-full p-20 lg:flex-row flex-col">
+          <div className="inline-flex flex-col items-start justify-center lg:justify-start relative w-full lg:w-auto">
+            <div className="relative inline-flex items-start justify-center lg:justify-start w-full lg:w-auto">
               <motion.p
                 initial={{
                   opacity: 0,
@@ -67,7 +67,7 @@ const HeroSection = () => {
                   }
                 }}
                 animate={controls}
-                className="text-[150px] leading-none absolute opacity-40 -left-10 z-0 -top-20"
+                className="text-[75px] select-none lg:text-[150px] leading-none absolute opacity-40 -left-10 z-0 -top-20"
               >
                 💥
               </motion.p>
@@ -81,13 +81,13 @@ const HeroSection = () => {
                   scale: 1,
                   transition: { duration: 1.5, ease: 'backOut' }
                 }}
-                className="text-[55px] font-medium leading-none z-30"
+                className="text-[16px] sm:text-[25px] md:text-[45px] lg:text-[55px] text-center lg:text-left font-medium leading-none z-30"
               >
                 Accelerate Your
                 <br />
                 Development. Build at
                 <br />
-                <span className="font-extrabold text-yellow-400 text-[60px] leading-tight">
+                <span className="font-extrabold text-yellow-400 text-[20px] sm:text-[35px] md:text-[50px] lg:text-[60px] leading-tight">
                   Lightning Speed.
                 </span>
               </motion.p>
@@ -115,7 +115,7 @@ const HeroSection = () => {
                   }
                 }}
                 animate={controls}
-                className="text-[250px] leading-none absolute opacity-40 -right-20 z-0"
+                className="text-[100px] select-none lg:text-[250px] leading-none absolute opacity-40 -right-20 z-0"
               >
                 🚀
               </motion.p>
@@ -130,7 +130,7 @@ const HeroSection = () => {
                 }
               }}
               animate={controls}
-              className="text-[20px] leading-none mt-10 max-w-[700px]"
+              className="text-xs sm:text-[16px] lg:text-[20px] leading-none mt-10 text-center lg:text-left lg:max-w-[700px]"
             >
               A growing library of reusable snippets to help you ship projects faster, empowering
               developers with time-saving tools and ready-to-use code for seamless integration.
@@ -145,13 +145,15 @@ const HeroSection = () => {
                 }
               }}
               animate={controls}
-              className="mt-5"
+              className="mt-5 flex items-center justify-center w-full lg:justify-start"
             >
               {/* <MovingBorderButton className="px-4 py-2 text-xl">
                 Get Started&nbsp;
                 <MoveRight />
               </MovingBorderButton> */}
-              <MovingBorderButton className="px-4 py-2 text-xl">Coming Soon</MovingBorderButton>
+              <MovingBorderButton className="px-4 py-2 text-sm md:text-lg lg:text-xl">
+                Coming Soon
+              </MovingBorderButton>
             </motion.div>
           </div>
           <HeroIllustration />

@@ -62,19 +62,19 @@ const FeaturesSection = () => {
                   }
                 }}
                 key={feature.title}
-                className={`flex items-center justify-center text-center w-full text-4xl font-semibold ${feature.className}`}
+                className={`flex items-center justify-center text-center w-full text-xl md:text-2xl lg:text-4xl font-semibold ${feature.className}`}
               >
                 <p className="max-w-[500px]">{feature.title}</p>
               </motion.div>
             );
           })}
         </div>
-        <DotBackground className="p-60 flex flex-col">
+        <DotBackground className="mt-50 lg:mt-0 py-60 px-10 lg:p-60 flex flex-col">
           <p className="font-semibold text-center text-yellow-400 text-3xl leading-normal">
-            <span className="text-white font-bold text-2xl">All that redundancy 🤢</span>
+            <span className="text-white font-bold text-lg lg:text-2xl">All that redundancy 🤢</span>
           </p>
           <div className="flex items-center gap-1">
-            <p className="font-semibold text-center text-yellow-400 text-3xl leading-normal">
+            <p className="font-semibold text-center text-yellow-400 text-xl lg:text-3xl leading-normal">
               Now just a Copy-Paste away
             </p>
             <motion.img
@@ -97,6 +97,7 @@ const FeaturesSection = () => {
               alt="smile"
               height={60}
               width={60}
+              className="h-[40px] w-[40px] lg:h-[60px] lg:w-[60px]"
             />
           </div>
 
@@ -105,7 +106,7 @@ const FeaturesSection = () => {
             alt="hero-meme"
             height={400}
             width={400}
-            className="rounded-xl flicker mt-10"
+            className="rounded-xl flicker mt-10 h-[350px] w-[350px] lg:h-[400px] lg:w-[400px]"
           />
 
           <MovingBorderButton wrapperClassName="mt-10" className="px-2 py-2">

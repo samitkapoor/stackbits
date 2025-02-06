@@ -25,7 +25,7 @@ const BuiltForDevelopers = () => {
       <p className="text-lg md:text-xl text-gray-300 mt-4">No fluff. Just clean, reusable code.</p>
       <p className="text-lg md:text-xl text-gray-300">Use it. Steal it. Make your life easier.</p>
 
-      <div className="mt-6 flex items-center justify-center gap-4">
+      <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
         <span className="text-gray-400">If you love it, drop a shoutout on</span>
         <button
           className="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition"
