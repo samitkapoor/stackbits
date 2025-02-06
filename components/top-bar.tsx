@@ -33,7 +33,7 @@ const TopBar = () => {
         />
       </div>
       <div className="flex items-center text-white">
-        {links.map((link, index) => {
+        {links.map((link) => {
           const extraClass =
             pathname === link.href ? 'text-yellow-400 text-black' : 'hover:text-yellow-400';
 

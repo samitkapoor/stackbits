@@ -1,4 +1,6 @@
-export const introduction = {
+import { Document } from '../main';
+
+export const introduction: Document = {
   sideBar: {
     group: 'Getting Started',
     name: 'Introduction',

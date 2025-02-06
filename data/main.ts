@@ -1,11 +1,36 @@
 import { installation } from './getting-started/installation';
 import { introduction } from './getting-started/introduction';
 
+export type SideBarSectionInDocument = {
+  group: string;
+  name: string;
+  order: number;
+};
+
+export type SectionInDocument = {
+  heading?: string;
+  content?: string | Array<{ id: number; heading: string; content: string }>;
+  sentence?: string;
+  contentType: string;
+};
+
+export type ContentInDocument = {
+  sections: Array<SectionInDocument>;
+};
+
+export type Document = {
+  sideBar: SideBarSectionInDocument;
+  content: ContentInDocument;
+};
+
 export const getSideBarTabs = () => {
   return sideBarOptions;
 };
 
-const sideBarOptions = [
+const sideBarOptions: Array<{
+  title: string;
+  children: Array<{ name: string; href: string; content: Document }>;
+}> = [
   {
     title: 'Getting Started',
     children: [
@@ -17,10 +42,6 @@ const sideBarOptions = [
       }
     ]
   }
-  // {
-  //   title: 'Frontend',
-  //   children: []
-  // }
 ];
 
 export const getDocs = (docId: string) => {

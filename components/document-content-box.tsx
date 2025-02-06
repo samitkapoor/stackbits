@@ -18,7 +18,7 @@ const DocumentContentBox = ({ docId }: { docId: string }) => {
       <div className="max-w-[1000px] w-full">
         <AddressBar sideBarGroup={sideBar.group} name={sideBar.name} />
         <div className="flex flex-col gap-[50px] mt-[30px]">
-          {content.sections.map((section, i) => {
+          {content.sections.map((section) => {
             return (
               <div key={section.heading} className="flex flex-col gap-2">
                 <p className="font-semibold text-xl">{section.heading}</p>

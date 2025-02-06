@@ -1,17 +1,19 @@
 import React from 'react';
 
+import { SectionInDocument } from '@/data/main';
+
 const ContentTypeWiseComponent = ({
   section,
   contentType
 }: {
-  section: any;
+  section: SectionInDocument;
   contentType: string;
 }) => {
   const { content } = section;
 
-  if (contentType === 'paragraph') {
+  if (contentType === 'paragraph' && typeof content === 'string') {
     return <p className="max-w-[800px] text-sm md:text-[16px]">{content}</p>;
-  } else if (contentType === 'ordered-list') {
+  } else if (contentType === 'ordered-list' && typeof content === 'object') {
     return (
       <div className="flex flex-col gap-8 mt-4">
         {content.map((item: { id: number; heading: string; content: string }, i: number) => {
@@ -32,10 +34,10 @@ const ContentTypeWiseComponent = ({
         })}
       </div>
     );
-  } else if (contentType === 'stepper') {
+  } else if (contentType === 'stepper' && typeof content === 'object') {
     return (
       <div className="flex flex-col md:flex-row items-start md:items-center gap-10 md:gap-2 mt-5 w-full">
-        {content.map((item: { id: string; heading: string; content: string }, i: number) => {
+        {content.map((item, i: number) => {
           const { id, heading, content: itemContent } = item;
 
           return (
@@ -57,7 +59,7 @@ const ContentTypeWiseComponent = ({
         })}
       </div>
     );
-  } else if (contentType === 'italic-line') {
+  } else if (contentType === 'italic-line' && typeof content === 'object') {
     const { sentence } = section;
 
     return <p className="text-yellow-400 italic text-sm">{sentence}</p>;

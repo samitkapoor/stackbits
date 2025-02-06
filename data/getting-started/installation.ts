@@ -1,4 +1,6 @@
-export const installation = {
+import { Document } from '../main';
+
+export const installation: Document = {
   sideBar: {
     group: 'Getting Started',
     name: 'Installation',

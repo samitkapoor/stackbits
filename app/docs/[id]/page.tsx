@@ -7,9 +7,9 @@ import DocumentContentBox from '@/components/document-content-box';
 
 const Page = () => {
   const params = useParams();
-  const { id: docId } = params;
 
-  if (docId && typeof docId === 'string') return <DocumentContentBox docId={docId} />;
+  if (params && params.id && typeof params.id === 'string')
+    return <DocumentContentBox docId={params.id} />;
 };
 
 export default Page;

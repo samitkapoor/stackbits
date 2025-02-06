@@ -7,7 +7,7 @@ import { getSideBarTabs } from '@/data/main';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const SideBar = ({ isOpen, toggleSideBar }: { isOpen: boolean; toggleSideBar: () => void }) => {
+const SideBar = ({ isOpen }: { isOpen: boolean }) => {
   const tabs = getSideBarTabs();
 
   const pathname = usePathname();
@@ -28,7 +28,7 @@ const SideBar = ({ isOpen, toggleSideBar }: { isOpen: boolean; toggleSideBar: ()
           className="h-auto w-[125px] object-contain"
         />
       </Link>
-      {tabs.map((group, i) => {
+      {tabs.map((group) => {
         return (
           <div key={group.title} className="flex flex-col items-start gap-2">
             <p className="font-semibold">{group.title}</p>

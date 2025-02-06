@@ -24,14 +24,14 @@ const HeroIllustration = () => {
     divRef.current.style.transform = `rotateY(${y}deg) rotateX(${x}deg)`;
   };
 
-  const onMouseEnter = (e: MouseEvent<HTMLDivElement>) => {
+  const onMouseEnter = () => {
     setIsHovering(true);
     if (!buttonRef.current || !divRef.current) return;
     buttonRef.current.style.transform =
       'translateZ(50px) translateX(0px) translateY(-100px) scale(1.1)';
   };
 
-  const onMouseLeave = (e: MouseEvent<HTMLDivElement>) => {
+  const onMouseLeave = () => {
     setIsHovering(false);
     if (!divRef.current || !buttonRef.current) return;
     divRef.current.style.transform = 'rotateY(0deg) rotateX(0deg)';

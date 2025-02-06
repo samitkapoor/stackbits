@@ -121,7 +121,7 @@ const FeaturesSection = () => {
 
           <Link href={'/docs/introduction'}>
             <MovingBorderButton wrapperClassName="mt-20" className="px-2 py-2">
-              Let's gooooo!
+              Let&apos;s gooooo!
             </MovingBorderButton>
           </Link>
         </DotBackground>
