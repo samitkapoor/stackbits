@@ -16,32 +16,32 @@ const FeaturesSection = () => {
 
   const features = [
     {
-      title: 'Tired of building Login APIs?',
+      title: 'Tired of building Login APIs? 🤕',
       className: 'text-white',
       dividerClassName: 'bg-gradient-to-b from-transparent to-yellow-100'
     },
     {
-      title: 'UI Buttons?',
+      title: 'UI Buttons? 😔',
       className: 'text-yellow-100',
       dividerClassName: 'bg-gradient-to-b from-yellow-100 to-yellow-200'
     },
     {
-      title: 'Forms?',
+      title: 'Or Forms? 🙂',
       className: 'text-yellow-200',
       dividerClassName: 'bg-gradient-to-b from-yellow-200 to-yellow-300'
     },
     {
-      title: 'Or writing file upload and image handling utilities?',
+      title: 'Or writing file upload and image handling utilities? 💀',
       className: 'text-yellow-300',
       dividerClassName: 'bg-gradient-to-b from-yellow-300 to-yellow-400'
     },
     {
-      title: 'Well not anymore',
+      title: 'Well not anymore ❓',
       className: 'text-yellow-400',
       dividerClassName: 'bg-gradient-to-b from-yellow-400 to-yellow-500'
     },
     {
-      title: 'because StackBits got you covered.',
+      title: 'because StackBits got you covered. 😎',
       className: 'text-yellow-500',
       dividerClassName: 'bg-gradient-to-b from-yellow-500 to-transparent'
     }
