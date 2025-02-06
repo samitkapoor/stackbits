@@ -60,9 +60,9 @@ const FeaturesSection = () => {
                 }
               }}
               key={feature.title}
-              className={`flex items-center justify-center text-center w-full text-2xl font-medium ${feature.className}`}
+              className={`flex items-center justify-center text-center w-full text-4xl font-semibold ${feature.className}`}
             >
-              {feature.title}
+              <p className="max-w-[500px]">{feature.title}</p>
             </motion.div>
           );
         })}
