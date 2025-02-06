@@ -40,7 +40,7 @@ const HeroSection = () => {
   return (
     <div className="flex flex-col w-full items-center justify-center">
       <div className="flex items-center w-full relative">
-        <DotBackground className="justify-center gap-20 lg:h-full p-20 lg:flex-row flex-col">
+        <DotBackground className="justify-center gap-20 lg:h-[80vh] p-20 lg:flex-row flex-col">
           <div className="inline-flex flex-col items-start justify-center lg:justify-start relative w-full lg:w-auto">
             <div className="relative inline-flex items-start justify-center lg:justify-start w-full lg:w-auto">
               <motion.p
