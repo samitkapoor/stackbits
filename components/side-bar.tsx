@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 
 import { getSideBarTabs } from '@/data/main';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const SideBar = () => {
   const tabs = getSideBarTabs();
@@ -13,13 +14,15 @@ const SideBar = () => {
 
   return (
     <div className="absolute left-[50px] top-[50px] h-full flex flex-col gap-5 overflow-y-auto w-[350px]">
-      <Image
-        src="/logo1.png"
-        alt="logo"
-        height={110}
-        width={110}
-        className="w-[125px] object-contain"
-      />
+      <Link href="/">
+        <Image
+          src="/logo1.png"
+          alt="logo"
+          height={110}
+          width={110}
+          className="h-auto w-[125px] object-contain"
+        />
+      </Link>
       {tabs.map((group, i) => {
         return (
           <div key={group.title} className="flex flex-col items-start gap-2">

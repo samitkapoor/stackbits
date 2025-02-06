@@ -32,7 +32,7 @@ const ContentTypeWiseComponent = ({
     );
   } else {
     console.log({ contentType, content });
-    return <div>ContentTypeWiseComponent</div>;
+    return <div></div>;
   }
 };
 
