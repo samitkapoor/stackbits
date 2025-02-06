@@ -1,7 +1,7 @@
-import React from 'react';
+import { redirect } from 'next/navigation';
 
 const DocumentationPage = () => {
-  return <div>DocumentationPage</div>;
+  redirect('/docs/introduction');
 };
 
 export default DocumentationPage;

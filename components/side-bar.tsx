@@ -1,0 +1,51 @@
+'use client';
+
+import React from 'react';
+import { usePathname } from 'next/navigation';
+
+import { getSideBarTabs } from '@/data/main';
+import Image from 'next/image';
+
+const SideBar = () => {
+  const tabs = getSideBarTabs();
+
+  const pathname = usePathname();
+
+  return (
+    <div className="absolute left-[50px] top-[50px] h-full flex flex-col gap-5 overflow-y-auto w-[350px]">
+      <Image
+        src="/logo1.png"
+        alt="logo"
+        height={110}
+        width={110}
+        className="w-[125px] object-contain"
+      />
+      {tabs.map((group, i) => {
+        return (
+          <div key={group.title} className="flex flex-col items-start gap-2">
+            <p className="font-semibold">{group.title}</p>
+            <div className="flex flex-col ml-1">
+              {group.children.map((child, j) => {
+                return (
+                  <a
+                    href={child.href}
+                    key={j}
+                    className={
+                      pathname === child.href
+                        ? 'text-yellow-400'
+                        : 'hover:text-yellow-400 transition-all'
+                    }
+                  >
+                    {child.name}
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+export default SideBar;
