@@ -1,13 +1,29 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 
 import SideBar from '@/components/side-bar';
 import SupportPlugin from '@/components/support-plugin';
+import MovingBorderButton from '@/components/ui/moving-border-button';
+import { Menu } from 'lucide-react';
 
 const DocumentationLayout = ({ children }: { children: React.ReactNode }) => {
+  const [sideBarIsOpen, setSideBarIsOpen] = useState(true);
+
+  const toggleSideBar = () => {
+    setSideBarIsOpen(!sideBarIsOpen);
+  };
+
   return (
     <div className="flex items-start pt-[50px] relative px-[50px] overflow-y-hidden">
-      <SideBar />
-      <div className="flex flex-col gap-52 xl:gap-0 xl:flex-row w-full pl-[350px] overflow-y-auto overflow-x-hidden pb-32">
+      <SideBar toggleSideBar={toggleSideBar} isOpen={sideBarIsOpen} />
+      <div className="flex flex-col gap-52 xl:gap-0 xl:flex-row w-full lg:pl-[350px] overflow-y-auto overflow-x-hidden pb-32">
+        <MovingBorderButton
+          onClick={toggleSideBar}
+          wrapperClassName="block lg:hidden w-min absolute top-[50px] right-[50px]"
+        >
+          <Menu />
+        </MovingBorderButton>
         {children}
         <SupportPlugin />
       </div>

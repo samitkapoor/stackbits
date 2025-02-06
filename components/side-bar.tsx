@@ -7,13 +7,18 @@ import { getSideBarTabs } from '@/data/main';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const SideBar = () => {
+const SideBar = ({ isOpen, toggleSideBar }: { isOpen: boolean; toggleSideBar: () => void }) => {
   const tabs = getSideBarTabs();
 
   const pathname = usePathname();
 
   return (
-    <div className="absolute left-[50px] top-[50px] h-full flex flex-col gap-5 overflow-y-auto w-[350px]">
+    <div
+      className={
+        `${isOpen ? `left-[50px]` : `-left-[300px]`} lg:left-[50px] ` +
+        `absolute bg-black top-[50px] h-full flex flex-col gap-5 overflow-y-auto w-[350px]`
+      }
+    >
       <Link href="/">
         <Image
           src="/logo1.png"
