@@ -13,10 +13,6 @@ const TopBar = () => {
     {
       name: 'Documentation',
       href: '/docs'
-    },
-    {
-      name: 'About',
-      href: '/about'
     }
   ];
 
