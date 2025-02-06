@@ -35,6 +35,7 @@ const DocumentContentBox = ({ docId }: { docId: string }) => {
             );
           })}
         </div>
+        <div className="h-[300px] w-[300px] bg-transparent"></div>
       </div>
     )
   );

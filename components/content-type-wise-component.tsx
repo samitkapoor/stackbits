@@ -30,6 +30,27 @@ const ContentTypeWiseComponent = ({
         })}
       </div>
     );
+  } else if (contentType === 'stepper') {
+    return (
+      <div className="flex items-center gap-2 w-full">
+        {content.map((item: { id: string; heading: string; content: string }, i: number) => {
+          const { id, heading, content: itemContent } = item;
+
+          return (
+            <div className="flex items-center gap-2" key={heading + itemContent}>
+              <div className="flex flex-col max-w-[200px] w-full items-center justify-center">
+                <div className="border-[1px] rounded-full h-[25px] w-[25px] text-center flex items-center justify-center select-none hover:border-yellow-400 hover:text-yellow-400 transition-all">
+                  {id}
+                </div>
+                <p className="font-medium text-yellow-400">{heading}</p>
+                <p className="text-xs text-center">{itemContent}</p>
+              </div>
+              {i < content.length - 1 && <div className="h-[1px] w-[150px] bg-white" />}
+            </div>
+          );
+        })}
+      </div>
+    );
   } else {
     console.log({ contentType, content });
     return <div></div>;
