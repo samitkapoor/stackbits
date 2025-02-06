@@ -27,10 +27,7 @@ const DocumentContentBox = ({ docId }: { docId: string }) => {
             return (
               <div key={section.heading} className="flex flex-col gap-2">
                 <p className="font-semibold text-xl">{section.heading}</p>
-                <ContentTypeWiseComponent
-                  content={section.content}
-                  contentType={section.contentType}
-                />
+                <ContentTypeWiseComponent section={section} contentType={section.contentType} />
               </div>
             );
           })}

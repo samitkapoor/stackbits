@@ -1,12 +1,14 @@
 import React from 'react';
 
 const ContentTypeWiseComponent = ({
-  content,
+  section,
   contentType
 }: {
-  content: any;
+  section: any;
   contentType: string;
 }) => {
+  const { content } = section;
+
   if (contentType === 'paragraph') {
     return <p className="max-w-[800px]">{content}</p>;
   } else if (contentType === 'ordered-list') {
@@ -51,6 +53,10 @@ const ContentTypeWiseComponent = ({
         })}
       </div>
     );
+  } else if (contentType === 'italic-line') {
+    const { sentence } = section;
+
+    return <p className="text-yellow-400 italic text-sm">{sentence}</p>;
   } else {
     console.log({ contentType, content });
     return <div></div>;

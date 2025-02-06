@@ -1,3 +1,4 @@
+import { installation } from './getting-started/installation';
 import { introduction } from './getting-started/introduction';
 
 export const getSideBarTabs = () => {
@@ -11,7 +12,8 @@ const sideBarOptions = [
       { name: 'Introduction', href: '/docs/introduction', content: introduction },
       {
         name: 'Installation',
-        href: '/docs/installation'
+        href: '/docs/installation',
+        content: installation
       }
     ]
   },
