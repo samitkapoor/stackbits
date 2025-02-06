@@ -34,7 +34,7 @@ const ContentTypeWiseComponent = ({
     );
   } else if (contentType === 'stepper') {
     return (
-      <div className="flex items-center gap-2 w-full">
+      <div className="flex items-center gap-2 mt-5 w-full">
         {content.map((item: { id: string; heading: string; content: string }, i: number) => {
           const { id, heading, content: itemContent } = item;
 
