@@ -8,21 +8,16 @@ const DocumentContentBox = ({ docId }: { docId: string }) => {
   const doc = getDocs(docId);
 
   if (!doc) {
-    return (
-      <div className="max-w-[1000px] overflow-y-auto w-full h-full ml-[350px]">
-        Something went wrong.
-      </div>
-    );
+    return <div className="max-w-[1000px] w-full">Something went wrong.</div>;
   }
 
   const { sideBar, content } = doc;
 
   return (
     doc && (
-      <div className="max-w-[1000px] overflow-y-auto w-full h-full ml-[350px]">
+      <div className="max-w-[1000px] w-full">
         <AddressBar sideBarGroup={sideBar.group} name={sideBar.name} />
-        <div className="h-[30px]"></div>
-        <div className="flex flex-col gap-[50px]">
+        <div className="flex flex-col gap-[50px] mt-[30px]">
           {content.sections.map((section, i) => {
             return (
               <div key={section.heading} className="flex flex-col gap-2">
@@ -32,7 +27,6 @@ const DocumentContentBox = ({ docId }: { docId: string }) => {
             );
           })}
         </div>
-        <div className="h-[300px] w-[300px] bg-transparent"></div>
       </div>
     )
   );

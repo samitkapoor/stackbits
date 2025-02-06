@@ -21,7 +21,7 @@ const CopyButton = ({
 
   return (
     <button
-      className={`bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition ${
+      className={`bg-gray-800 w-min hover:bg-gray-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition ${
         variant === 'small' && 'text-xs'
       }`}
       onClick={handleCopy}
