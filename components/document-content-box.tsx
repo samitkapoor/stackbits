@@ -17,8 +17,6 @@ const DocumentContentBox = ({ docId }: { docId: string }) => {
 
   const { sideBar, content } = doc;
 
-  console.log(content);
-
   return (
     doc && (
       <div className="max-w-[1000px] overflow-y-auto w-full h-full ml-[350px]">

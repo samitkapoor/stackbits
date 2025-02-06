@@ -1,7 +1,7 @@
 'use client';
 
-import { useScroll, motion } from 'framer-motion';
-import React, { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import React from 'react';
 import DotBackground from './ui/dot-background';
 import Image from 'next/image';
 import MovingBorderButton from './ui/moving-border-button';
@@ -9,12 +9,6 @@ import BuiltForDevelopers from './built-for-developers';
 import Link from 'next/link';
 
 const FeaturesSection = () => {
-  const { scrollYProgress } = useScroll();
-
-  useEffect(() => {
-    console.log(scrollYProgress);
-  }, [scrollYProgress]);
-
   const features = [
     {
       title: 'Tired of building Login APIs? 🤕',
