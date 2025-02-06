@@ -1,17 +1,8 @@
-'use client';
-
-import { useState } from 'react';
-import { Check, TwitterIcon } from 'lucide-react';
+import { TwitterIcon } from 'lucide-react';
+import CopyButton from './ui/copy-button';
 
 const BuiltForDevelopers = () => {
   const twitterHandle = 'x.com/samitkapoorr';
-  const [copied, setCopied] = useState(false);
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(twitterHandle);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 1200);
-  };
 
   return (
     <section className="bg-black text-white py-16 px-6 md:px-12 text-center relative">
@@ -27,17 +18,7 @@ const BuiltForDevelopers = () => {
 
       <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
         <span className="text-gray-400">If you love it, drop a shoutout on</span>
-        <button
-          className="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition"
-          onClick={handleCopy}
-        >
-          {copied ? (
-            <Check className="w-5 h-5 text-green-400" />
-          ) : (
-            <TwitterIcon className="w-5 h-5" />
-          )}
-          {twitterHandle}
-        </button>
+        <CopyButton handle={twitterHandle} icon={<TwitterIcon className="w-5 h-5" />} />
       </div>
     </section>
   );
