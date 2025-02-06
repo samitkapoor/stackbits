@@ -5,6 +5,7 @@ import React, { useEffect } from 'react';
 import DotBackground from './ui/dot-background';
 import Image from 'next/image';
 import MovingBorderButton from './ui/moving-border-button';
+import BuiltForDevelopers from './built-for-developers';
 
 const FeaturesSection = () => {
   const { scrollYProgress } = useScroll();
@@ -42,31 +43,33 @@ const FeaturesSection = () => {
 
   return (
     <div className="flex w-screen items-center justify-center bg-black">
-      <div className="flex flex-col max-w-[65%] w-full mt-20 gap-[90vh]">
-        {features.map((feature, index) => {
-          return (
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{
-                opacity: 1,
-                transition: {
-                  duration: 0.5
-                }
-              }}
-              exit={{
-                opacity: 0,
-                transition: {
-                  duration: 0.5
-                }
-              }}
-              key={feature.title}
-              className={`flex items-center justify-center text-center w-full text-4xl font-semibold ${feature.className}`}
-            >
-              <p className="max-w-[500px]">{feature.title}</p>
-            </motion.div>
-          );
-        })}
-        <DotBackground className="py-60 flex flex-col">
+      <div className="flex flex-col items-center justify-center w-full mt-20 gap-10">
+        <div className="flex flex-col max-w-[65%] w-full mt-20 gap-[90vh]">
+          {features.map((feature, index) => {
+            return (
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  transition: {
+                    duration: 0.5
+                  }
+                }}
+                exit={{
+                  opacity: 0,
+                  transition: {
+                    duration: 0.5
+                  }
+                }}
+                key={feature.title}
+                className={`flex items-center justify-center text-center w-full text-4xl font-semibold ${feature.className}`}
+              >
+                <p className="max-w-[500px]">{feature.title}</p>
+              </motion.div>
+            );
+          })}
+        </div>
+        <DotBackground className="p-60 flex flex-col">
           <p className="font-semibold text-center text-yellow-400 text-3xl leading-normal">
             <span className="text-white font-bold text-2xl">All that redundancy 🤢</span>
           </p>
@@ -109,6 +112,7 @@ const FeaturesSection = () => {
             Coming Soon
           </MovingBorderButton>
         </DotBackground>
+        <BuiltForDevelopers />
       </div>
     </div>
   );

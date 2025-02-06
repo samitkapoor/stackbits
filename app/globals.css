@@ -61,3 +61,21 @@ body {
     --angle: 360deg;
   }
 }
+
+.glitch {
+  position: relative;
+  display: inline-block;
+  animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 2px 0 #ff00ff, -2px -2px 0 #00ffff;
+  }
+  50% {
+    text-shadow: -2px -2px 0 #ff00ff, 2px 2px 0 #00ffff;
+  }
+  100% {
+    text-shadow: 2px -2px 0 #ff00ff, -2px 2px 0 #00ffff;
+  }
+}
