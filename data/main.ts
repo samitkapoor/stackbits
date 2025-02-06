@@ -16,11 +16,11 @@ const sideBarOptions = [
         content: installation
       }
     ]
-  },
-  {
-    title: 'Frontend',
-    children: []
   }
+  // {
+  //   title: 'Frontend',
+  //   children: []
+  // }
 ];
 
 export const getDocs = (docId: string) => {
