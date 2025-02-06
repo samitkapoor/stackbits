@@ -41,8 +41,8 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <div className="flex w-full items-center justify-center bg-black">
-      <div className="flex flex-col max-w-[65%] w-full gap-[90vh]">
+    <div className="flex w-screen items-center justify-center bg-black">
+      <div className="flex flex-col max-w-[65%] w-full mt-20 gap-[90vh]">
         {features.map((feature, index) => {
           return (
             <motion.div

@@ -20,6 +20,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
 @keyframes neon-flicker {
   0%,
   100% {

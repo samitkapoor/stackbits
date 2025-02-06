@@ -38,7 +38,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col w-full items-center justify-center">
       <div className="flex items-center w-full h-screen relative">
         <DotBackground className="justify-center gap-20 h-full p-20">
           <div className="inline-flex flex-col items-start justify-start relative">
