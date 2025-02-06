@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import SideBar from '@/components/side-bar';
 import SupportPlugin from '@/components/support-plugin';
 import MovingBorderButton from '@/components/ui/moving-border-button';
-import { Menu } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const DocumentationLayout = ({ children }: { children: React.ReactNode }) => {
   const [sideBarIsOpen, setSideBarIsOpen] = useState(true);
@@ -22,7 +22,7 @@ const DocumentationLayout = ({ children }: { children: React.ReactNode }) => {
           onClick={toggleSideBar}
           wrapperClassName="block lg:hidden w-min absolute top-[50px] right-[50px]"
         >
-          <Menu />
+          {sideBarIsOpen ? <X /> : <Menu />}
         </MovingBorderButton>
         {children}
         <SupportPlugin />
