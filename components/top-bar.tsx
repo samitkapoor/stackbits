@@ -1,5 +1,6 @@
 'use client';
 
+import { File, House } from 'lucide-react';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import React from 'react';
@@ -8,11 +9,13 @@ const TopBar = () => {
   const links = [
     {
       name: 'Home',
-      href: '/'
+      href: '/',
+      icon: <House className="h-[18px] w-[18px]" />
     },
     {
       name: 'Documentation',
-      href: '/docs'
+      href: '/docs',
+      icon: <File className="h-[18px] w-[18px]" />
     }
   ];
 
@@ -26,17 +29,16 @@ const TopBar = () => {
       <div className="flex items-center text-white">
         {links.map((link, index) => {
           const extraClass =
-            pathname === link.href
-              ? 'border-yellow-400 bg-yellow-400 text-black'
-              : 'border-neutral-900 hover:bg-yellow-700 hover:border-yellow-700';
+            pathname === link.href ? 'text-yellow-400 text-black' : 'hover:text-yellow-400';
 
           return (
             <a
               key={link.name}
               href={link.href}
-              className={`px-8 py-3 border-[1px] transition-all ${extraClass}`}
+              className={`px-3 py-3 flex items-center gap-1 text-sm transition-all ${extraClass}`}
             >
-              {link.name}
+              {link.icon}
+              <p>{link.name}</p>
             </a>
           );
         })}
