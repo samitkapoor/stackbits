@@ -1,3 +1,4 @@
+import FlickerBox from '@/components/ui/flicker-box';
 import { Document } from '../main';
 
 export const flicker: Document = {
@@ -17,7 +18,7 @@ export const flicker: Document = {
       {
         heading: 'Preview',
         contentType: 'preview',
-        code: <div className="flicker px-10 py-10 rounded-xl bg-[#1A1A2E]">Watch me glow</div>
+        code: <FlickerBox>Watch me glow</FlickerBox>
       },
       {
         heading: 'Follow below steps 👇🏻',
@@ -43,9 +44,22 @@ export const flicker: Document = {
 }`
       },
       {
+        heading: 'Component',
+        contentType: 'component',
+        description: 'Create a file flicker-box.tsx in your components folder and paste this code',
+        code: `import React from 'react';
+        
+const FlickerBox = ({ children }: { children?: React.ReactNode }) => {
+  return <div className="flicker px-10 py-10 rounded-xl bg-[#1A1A2E]">{children} </div>;
+};
+
+export default FlickerBox;
+        `
+      },
+      {
         heading: 'Usage',
         contentType: 'usage',
-        code: `<div className="flicker px-10 py-10 rounded-xl bg-[#1A1A2E]">Watch me glow</div>`
+        code: `<FlickerBox>Watch me glow</FlickerBox>`
       }
     ]
   }

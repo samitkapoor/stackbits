@@ -15,6 +15,7 @@ export type SectionInDocument = {
   content?: string | Array<{ id: number; heading: string; content: string }>;
   sentence?: string;
   code?: ReactNode | string;
+  description?: string;
   contentType: string;
 };
 
