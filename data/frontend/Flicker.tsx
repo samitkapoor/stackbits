@@ -17,7 +17,7 @@ export const flicker: Document = {
       {
         heading: 'Preview',
         contentType: 'preview',
-        code: <div className="flicker px-24 py-24 rounded-xl bg-[#1A1A2E]">Watch me glow</div>
+        code: <div className="flicker px-10 py-10 rounded-xl bg-[#1A1A2E]">Watch me glow</div>
       },
       {
         heading: 'Follow below steps 👇🏻',
@@ -41,6 +41,11 @@ export const flicker: Document = {
 .flicker {
   animation: neon-flicker 0.8s infinite alternate;
 }`
+      },
+      {
+        heading: 'Usage',
+        contentType: 'usage',
+        code: `<div className="flicker px-10 py-10 rounded-xl bg-[#1A1A2E]">Watch me glow</div>`
       }
     ]
   }

@@ -98,7 +98,7 @@ const ContentTypeWiseComponent = ({
             )}
           </button>
           <CodeBlock code={code} language={'css'}>
-            <CodeBlock.Code className="bg-[#2f2f2f6f] p-6 rounded-xl shadow-lg max-w-[800px]">
+            <CodeBlock.Code className="bg-[#2f2f2f6f] overflow-auto p-6 rounded-xl shadow-lg max-w-[800px]">
               <div className="table-row">
                 <CodeBlock.LineNumber className="table-cell pr-4 text-sm text-gray-500 text-right select-none" />
                 <CodeBlock.LineContent className="table-cell text-sm">
@@ -108,6 +108,28 @@ const ContentTypeWiseComponent = ({
             </CodeBlock.Code>
           </CodeBlock>
         </div>
+      </div>
+    );
+  } else if (contentType === 'usage' && typeof code === 'string') {
+    return (
+      <div className="max-w-[800px] relative w-full">
+        <button onClick={() => handleCopy(code)} className="absolute top-4 right-4">
+          {!copy ? (
+            <Copy className="h-[20px] w-[20px] cursor-pointer opacity-50 hover:opacity-100" />
+          ) : (
+            <Check className="h-[20px] w-[20px] text-green-500 rounded-full cursor-pointer opacity-50 hover:opacity-100" />
+          )}
+        </button>
+        <CodeBlock code={code} language={'css'}>
+          <CodeBlock.Code className="bg-[#2f2f2f6f] overflow-auto p-6 rounded-xl shadow-lg max-w-[800px]">
+            <div className="table-row">
+              <CodeBlock.LineNumber className="table-cell pr-4 text-sm text-gray-500 text-right select-none" />
+              <CodeBlock.LineContent className="table-cell text-sm">
+                <CodeBlock.Token />
+              </CodeBlock.LineContent>
+            </div>
+          </CodeBlock.Code>
+        </CodeBlock>
       </div>
     );
   } else {

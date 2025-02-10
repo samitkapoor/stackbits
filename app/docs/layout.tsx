@@ -8,7 +8,7 @@ import MovingBorderButton from '@/components/ui/moving-border-button';
 import { Menu, X } from 'lucide-react';
 
 const DocumentationLayout = ({ children }: { children: React.ReactNode }) => {
-  const [sideBarIsOpen, setSideBarIsOpen] = useState(true);
+  const [sideBarIsOpen, setSideBarIsOpen] = useState(false);
 
   const toggleSideBar = () => {
     setSideBarIsOpen(!sideBarIsOpen);
