@@ -123,7 +123,7 @@ const ContentTypeWiseComponent = ({
             <Check className="h-[20px] w-[20px] text-green-500 rounded-full cursor-pointer opacity-50 hover:opacity-100" />
           )}
         </button>
-        <CodeBlock code={code} language={'css'}>
+        <CodeBlock code={code} language={'javascript'}>
           <CodeBlock.Code className="bg-[#2f2f2f6f] overflow-auto p-6 rounded-xl shadow-lg max-w-[800px]">
             <div className="table-row">
               <CodeBlock.LineNumber className="table-cell pr-4 text-sm text-gray-500 text-right select-none" />
@@ -147,7 +147,7 @@ const ContentTypeWiseComponent = ({
               <Check className="h-[20px] w-[20px] text-green-500 rounded-full cursor-pointer opacity-50 hover:opacity-100" />
             )}
           </button>
-          <CodeBlock code={code} language={'css'}>
+          <CodeBlock code={code} language={'javascript'}>
             <CodeBlock.Code className="bg-[#2f2f2f6f] overflow-auto p-6 rounded-xl shadow-lg max-w-[800px]">
               <div className="table-row">
                 <CodeBlock.LineNumber className="table-cell pr-4 text-sm text-gray-500 text-right select-none" />
