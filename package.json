@@ -15,7 +15,9 @@
     "mini-svg-data-uri": "^1.4.4",
     "motion": "^12.0.11",
     "next": "15.1.6",
+    "prism-react-renderer": "^2.4.1",
     "react": "^19.0.0",
+    "react-code-block": "^1.1.1",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^3.0.1"
   },

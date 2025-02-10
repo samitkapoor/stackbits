@@ -29,11 +29,11 @@ body {
   0%,
   100% {
     opacity: 1;
-    box-shadow: 0 0 10px #f6ff008a, 0 0 20px #f6ff008a;
+    box-shadow: 0 0 10px #00ffa3, 0 0 30px #00ffa3;
   }
   50% {
     opacity: 1;
-    box-shadow: 0 0 15px #f6ff008a, 0 0 30px #f6ff008a;
+    box-shadow: 0 0 15px #00ffa3, 0 0 40px #00ffa3;
   }
 }
 

@@ -1,6 +1,10 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 
 import { SectionInDocument } from '@/data/main';
+import { CodeBlock } from 'react-code-block';
+import { Check, Copy } from 'lucide-react';
 
 const ContentTypeWiseComponent = ({
   section,
@@ -9,7 +13,17 @@ const ContentTypeWiseComponent = ({
   section: SectionInDocument;
   contentType: string;
 }) => {
-  const { content } = section;
+  const [copy, setCopy] = useState(false);
+
+  const handleCopy = (code: string) => {
+    navigator.clipboard.writeText(code);
+    setCopy(true);
+    setTimeout(() => {
+      setCopy(false);
+    }, 500);
+  };
+
+  const { content, code } = section;
 
   if (contentType === 'paragraph' && typeof content === 'string') {
     return <p className="max-w-[800px] text-sm md:text-[16px]">{content}</p>;
@@ -63,6 +77,39 @@ const ContentTypeWiseComponent = ({
     const { sentence } = section;
 
     return <p className="text-yellow-400 italic text-sm">{sentence}</p>;
+  } else if (contentType === 'preview') {
+    return (
+      <div className="h-[500px] max-w-[700px] rounded-lg border-[2px] border-[#2f2f2fdf] flex items-center justify-center">
+        {code}
+      </div>
+    );
+  } else if (contentType === 'heading') {
+    return null;
+  } else if (contentType === 'styling' && typeof code === 'string') {
+    return (
+      <div className="flex flex-col">
+        <p className="text-sm mb-2">Add these styles in your .css file</p>
+        <div className="max-w-[800px] relative w-full">
+          <button onClick={() => handleCopy(code)} className="absolute top-4 right-4">
+            {!copy ? (
+              <Copy className="h-[20px] w-[20px] cursor-pointer opacity-50 hover:opacity-100" />
+            ) : (
+              <Check className="h-[20px] w-[20px] text-green-500 rounded-full cursor-pointer opacity-50 hover:opacity-100" />
+            )}
+          </button>
+          <CodeBlock code={code} language={'css'}>
+            <CodeBlock.Code className="bg-[#2f2f2f6f] p-6 rounded-xl shadow-lg max-w-[800px]">
+              <div className="table-row">
+                <CodeBlock.LineNumber className="table-cell pr-4 text-sm text-gray-500 text-right select-none" />
+                <CodeBlock.LineContent className="table-cell text-sm">
+                  <CodeBlock.Token />
+                </CodeBlock.LineContent>
+              </div>
+            </CodeBlock.Code>
+          </CodeBlock>
+        </div>
+      </div>
+    );
   } else {
     console.log({ contentType, content });
     return <div></div>;

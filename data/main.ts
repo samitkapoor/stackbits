@@ -1,3 +1,6 @@
+import { ReactNode } from 'react';
+
+import { flicker } from './frontend/Flicker';
 import { installation } from './getting-started/installation';
 import { introduction } from './getting-started/introduction';
 
@@ -11,6 +14,7 @@ export type SectionInDocument = {
   heading?: string;
   content?: string | Array<{ id: number; heading: string; content: string }>;
   sentence?: string;
+  code?: ReactNode | string;
   contentType: string;
 };
 
@@ -41,6 +45,10 @@ const sideBarOptions: Array<{
         content: installation
       }
     ]
+  },
+  {
+    title: 'Frontend',
+    children: [{ name: 'Flicker', href: '/docs/flicker', content: flicker }]
   }
 ];
 
