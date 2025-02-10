@@ -49,7 +49,7 @@ const sideBarOptions: Array<{
   },
   {
     title: 'Frontend',
-    children: [{ name: 'Flicker', href: '/docs/flicker', content: flicker }]
+    children: [{ name: 'FlickerBox', href: '/docs/flickerbox', content: flicker }]
   }
 ];
 
