@@ -21,7 +21,7 @@ const SideBar = ({ isOpen }: { isOpen: boolean }) => {
     >
       <Link href="/">
         <Image
-          src="/logo1.png"
+          src="/stackbits-logo.png"
           alt="logo"
           height={110}
           width={110}

@@ -25,7 +25,7 @@ const TopBar = () => {
     <div className="w-full flex items-center justify-between px-10 lg:px-40 ">
       <div className="py-3">
         <Image
-          src="/logo1.png"
+          src="/stackbits-logo.png"
           alt="logo"
           height={110}
           width={110}
