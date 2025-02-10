@@ -127,7 +127,7 @@ const ContentTypeWiseComponent = ({
           <CodeBlock.Code className="bg-[#2f2f2f6f] overflow-auto p-6 rounded-xl shadow-lg max-w-[800px]">
             <div className="table-row">
               <CodeBlock.LineNumber className="table-cell pr-4 text-sm text-gray-500 text-right select-none" />
-              <CodeBlock.LineContent className="table-cell text-sm">
+              <CodeBlock.LineContent className="table-cell text-sm !text-green-400">
                 <CodeBlock.Token />
               </CodeBlock.LineContent>
             </div>
