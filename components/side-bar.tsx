@@ -16,7 +16,7 @@ const SideBar = ({ isOpen }: { isOpen: boolean }) => {
     <div
       className={
         `${isOpen ? `left-[50px]` : `-left-[300px]`} lg:left-[50px] ` +
-        `absolute bg-black top-[50px] h-full flex flex-col gap-5 overflow-y-auto w-[350px] z-50`
+        `absolute bg-black top-[50px] flex flex-col gap-5 w-[350px] z-50`
       }
     >
       <Link href="/">
