@@ -6,6 +6,7 @@ import { introduction } from './getting-started/introduction';
 import { storyAvatar } from './frontend/StoryAvatar';
 import { flipBadge } from './frontend/FlipBadge';
 import { encryptionDecryption } from './backend/EncryptionDecryption';
+import { regexValidations } from './backend/RegexValidations';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -18,6 +19,7 @@ export type SectionInDocument = {
   content?: string | Array<{ id: number; heading: string; content: string }>;
   sentence?: string;
   code?: ReactNode | string;
+  preview?: ReactNode;
   description?: string;
   sectionType: string;
 };
@@ -65,6 +67,11 @@ const sideBarOptions: Array<{
         name: 'Encryption Decryption',
         href: '/docs/encryptiondecryption',
         content: encryptionDecryption
+      },
+      {
+        name: 'Regex Validations',
+        href: '/docs/regexvalidations',
+        content: regexValidations
       }
     ]
   }

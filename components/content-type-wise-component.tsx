@@ -164,6 +164,32 @@ const ContentTypeWiseComponent = ({
     );
   } else if (sectionType === 'custom-code') {
     return code;
+  } else if (sectionType === 'utility' && typeof code === 'string') {
+    return (
+      <div className="flex flex-col">
+        <div className="max-w-[800px] relative w-full">
+          <button onClick={() => handleCopy(code)} className="absolute top-4 right-4">
+            {!copy ? (
+              <Copy className="h-[20px] w-[20px] cursor-pointer opacity-50 hover:opacity-100" />
+            ) : (
+              <Check className="h-[20px] w-[20px] text-green-500 rounded-full cursor-pointer opacity-50 hover:opacity-100" />
+            )}
+          </button>
+          <CodeBlock code={code} language={'javascript'}>
+            <CodeBlock.Code className="bg-[#2f2f2f6f] overflow-auto p-6 rounded-xl shadow-lg max-w-[800px]">
+              <div className="table-row">
+                <CodeBlock.LineNumber className="table-cell pr-4 text-sm text-gray-500 text-right select-none" />
+                <CodeBlock.LineContent className="table-cell text-sm">
+                  <CodeBlock.Token />
+                </CodeBlock.LineContent>
+              </div>
+            </CodeBlock.Code>
+          </CodeBlock>
+        </div>
+        {section.sentence && <p className="text-sm md:text-[16px] mt-4">{section.sentence}</p>}
+        {section?.preview}
+      </div>
+    );
   } else {
     console.log({ sectionType, content });
     return <div></div>;
