@@ -51,7 +51,7 @@ const sideBarOptions: Array<{
     ]
   },
   {
-    title: 'Frontend',
+    title: 'Components',
     children: [
       { name: 'FlickerBox', href: '/docs/flickerbox', content: flicker },
       { name: 'FlipBadge', href: '/docs/flipbadge', content: flipBadge },
@@ -59,7 +59,7 @@ const sideBarOptions: Array<{
     ]
   },
   {
-    title: 'Backend',
+    title: 'Utilities',
     children: [
       {
         name: 'Encryption Decryption',

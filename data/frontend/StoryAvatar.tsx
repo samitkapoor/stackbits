@@ -4,7 +4,7 @@ import StoryAvatar from '@/components/ui/story-avatar';
 
 export const storyAvatar: Document = {
   sideBar: {
-    group: 'Frontend',
+    group: 'Components',
     name: 'StoryAvatar',
     order: 2
   },

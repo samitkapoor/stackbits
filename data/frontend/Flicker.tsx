@@ -3,7 +3,7 @@ import { Document } from '../main';
 
 export const flicker: Document = {
   sideBar: {
-    group: 'Frontend',
+    group: 'Components',
     name: 'FlickerBox',
     order: 1
   },

@@ -12,7 +12,7 @@ const generateCryptoSecret = () => {
 
 export const encryptionDecryption: Document = {
   sideBar: {
-    group: 'Backend',
+    group: 'Utilities',
     name: 'Encryption Decryption',
     order: 1
   },

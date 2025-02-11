@@ -3,7 +3,7 @@ import { Document } from '../main';
 
 export const flipBadge: Document = {
   sideBar: {
-    group: 'Frontend',
+    group: 'Components',
     name: 'FlipBadge',
     order: 3
   },
