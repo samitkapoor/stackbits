@@ -41,7 +41,8 @@ export const flicker: Document = {
 
 .flicker {
   animation: neon-flicker 0.8s infinite alternate;
-}`
+}`,
+        sentence: '💡 Change #00ffa3 to any color you want!'
       },
       {
         heading: 'Component',

@@ -108,6 +108,7 @@ const ContentTypeWiseComponent = ({
             </CodeBlock.Code>
           </CodeBlock>
         </div>
+        {section.sentence && <p className="text-sm mt-4">{section.sentence}</p>}
       </div>
     );
   } else if (sectionType === 'usage' && typeof code === 'string') {
