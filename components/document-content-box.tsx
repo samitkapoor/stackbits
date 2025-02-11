@@ -21,7 +21,14 @@ const DocumentContentBox = ({ docId }: { docId: string }) => {
           {content.sections.map((section) => {
             return (
               <div key={section.heading} className="flex flex-col gap-2">
-                <p className="font-semibold text-xl">{section.heading}</p>
+                <p
+                  className={
+                    'font-semibold text-xl' +
+                    (section.sectionType === 'heading' && ' text-yellow-400')
+                  }
+                >
+                  {section.heading}
+                </p>
                 <ContentTypeWiseComponent section={section} sectionType={section.sectionType} />
               </div>
             );
