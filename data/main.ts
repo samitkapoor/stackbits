@@ -4,6 +4,7 @@ import { flicker } from './frontend/Flicker';
 import { installation } from './getting-started/installation';
 import { introduction } from './getting-started/introduction';
 import { storyAvatar } from './frontend/StoryAvatar';
+import { flipBadge } from './frontend/FlipBadge';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -52,7 +53,8 @@ const sideBarOptions: Array<{
     title: 'Frontend',
     children: [
       { name: 'FlickerBox', href: '/docs/flickerbox', content: flicker },
-      { name: 'StoryAvatar', href: '/docs/storyavatar', content: storyAvatar }
+      { name: 'StoryAvatar', href: '/docs/storyavatar', content: storyAvatar },
+      { name: 'FlipBadge', href: '/docs/flipbadge', content: flipBadge }
     ]
   }
 ];

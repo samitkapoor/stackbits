@@ -92,3 +92,27 @@ body {
 .spin {
   animation: spin 1.5s linear infinite;
 }
+
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg); /* Back side becomes visible */
+  }
+  100% {
+    transform: rotateY(360deg); /* Returns to front */
+  }
+}
+
+/* Apply animation to the entire container */
+.flip {
+  animation: flip 2.5s linear infinite;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* Ensure back side is rotated initially */
+.flip-back {
+  transform: rotateY(180deg);
+}
