@@ -25,7 +25,7 @@ const SideBar = ({ isOpen }: { isOpen: boolean }) => {
           alt="logo"
           height={110}
           width={110}
-          className="h-auto w-[125px] object-contain"
+          className="w-[50%] object-contain"
         />
       </Link>
       {tabs.map((group) => {
