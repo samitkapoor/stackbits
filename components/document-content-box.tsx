@@ -23,7 +23,7 @@ const DocumentContentBox = ({ docId }: { docId: string }) => {
               <div key={section.heading} className="flex flex-col gap-2">
                 <p
                   className={
-                    'font-semibold text-xl ' +
+                    'font-semibold text-2xl ' +
                     (section.sectionType === 'heading' && ' text-yellow-400')
                   }
                 >

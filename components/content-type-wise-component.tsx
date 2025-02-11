@@ -88,7 +88,7 @@ const ContentTypeWiseComponent = ({
   } else if (sectionType === 'styling' && typeof code === 'string') {
     return (
       <div className="flex flex-col">
-        <p className="text-sm mb-2">Add these styles in your .css file</p>
+        <p className="text-sm md:text-[16px] mb-2">Add these styles in your .css file</p>
         <div className="max-w-[800px] relative w-full">
           <button onClick={() => handleCopy(code)} className="absolute top-4 right-4">
             {!copy ? (
@@ -108,7 +108,7 @@ const ContentTypeWiseComponent = ({
             </CodeBlock.Code>
           </CodeBlock>
         </div>
-        {section.sentence && <p className="text-sm mt-4">{section.sentence}</p>}
+        {section.sentence && <p className="text-sm md:text-[16px] mt-4">{section.sentence}</p>}
       </div>
     );
   } else if (sectionType === 'usage' && typeof code === 'string') {
@@ -139,7 +139,7 @@ const ContentTypeWiseComponent = ({
   } else if (sectionType === 'component' && typeof code === 'string') {
     return (
       <div className="flex flex-col">
-        <p className="text-sm mb-2">{section.description}</p>
+        <p className="text-sm md:text-[16px] mb-2">{section.description}</p>
         <div className="max-w-[800px] relative w-full">
           <button onClick={() => handleCopy(code)} className="absolute top-4 right-4">
             {!copy ? (
@@ -159,7 +159,7 @@ const ContentTypeWiseComponent = ({
             </CodeBlock.Code>
           </CodeBlock>
         </div>
-        {section.sentence && <p className="text-sm mt-4">{section.sentence}</p>}
+        {section.sentence && <p className="text-sm md:text-[16px] mt-4">{section.sentence}</p>}
       </div>
     );
   } else {
