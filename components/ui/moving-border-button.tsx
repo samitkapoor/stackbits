@@ -11,7 +11,7 @@ const MovingBorderButton = ({
   wrapperClassName?: string;
   className?: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
-  type: 'button' | 'submit' | 'reset';
+  type?: 'button' | 'submit' | 'reset';
 }) => {
   return (
     <button
