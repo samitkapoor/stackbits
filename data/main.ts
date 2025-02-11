@@ -53,8 +53,8 @@ const sideBarOptions: Array<{
     title: 'Frontend',
     children: [
       { name: 'FlickerBox', href: '/docs/flickerbox', content: flicker },
-      { name: 'StoryAvatar', href: '/docs/storyavatar', content: storyAvatar },
-      { name: 'FlipBadge', href: '/docs/flipbadge', content: flipBadge }
+      { name: 'FlipBadge', href: '/docs/flipbadge', content: flipBadge },
+      { name: 'StoryAvatar', href: '/docs/storyavatar', content: storyAvatar }
     ]
   }
 ];
