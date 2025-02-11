@@ -37,16 +37,16 @@ export const flipBadge: Document = {
     transform: rotateY(0deg);
   }
   50% {
-    transform: rotateY(180deg); 
+    transform: rotateY(-180deg); 
   }
   100% {
-    transform: rotateY(360deg); 
+    transform: rotateY(-360deg); 
   }
 }
 
 /* Apply animation to the entire container */
 .flip {
-  animation: flip 2.5s linear infinite;
+  animation: flip 2.4s linear infinite;
   transform-style: preserve-3d;
   position: relative;
 }
