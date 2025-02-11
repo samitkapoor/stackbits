@@ -139,7 +139,7 @@ const ContentTypeWiseComponent = ({
   } else if (sectionType === 'component' && typeof code === 'string') {
     return (
       <div className="flex flex-col">
-        <p className="text-sm md:text-[16px] mb-2">{section.description}</p>
+        <p className="text-sm md:text-[16px] mb-2 max-w-[800px]">{section.description}</p>
         <div className="max-w-[800px] relative w-full">
           <button onClick={() => handleCopy(code)} className="absolute top-4 right-4">
             {!copy ? (
@@ -162,6 +162,8 @@ const ContentTypeWiseComponent = ({
         {section.sentence && <p className="text-sm md:text-[16px] mt-4">{section.sentence}</p>}
       </div>
     );
+  } else if (sectionType === 'custom-code') {
+    return code;
   } else {
     console.log({ sectionType, content });
     return <div></div>;

@@ -6,15 +6,18 @@ import { Check } from 'lucide-react';
 const CopyButton = ({
   handle,
   icon,
-  variant = 'default'
+  variant = 'default',
+  onCopy
 }: {
   handle: string;
   icon: React.ReactNode;
   variant?: 'default' | 'small';
+  onCopy?: () => void;
 }) => {
   const [copied, setCopied] = useState(false);
   const handleCopy = () => {
-    navigator.clipboard.writeText(handle);
+    if (onCopy) onCopy();
+    else navigator.clipboard.writeText(handle);
     setCopied(true);
     setTimeout(() => setCopied(false), 1200);
   };
@@ -31,7 +34,7 @@ const CopyButton = ({
       ) : (
         icon
       )}
-      {handle}
+      <span className="whitespace-nowrap">{handle}</span>
     </button>
   );
 };

@@ -5,6 +5,7 @@ import { installation } from './getting-started/installation';
 import { introduction } from './getting-started/introduction';
 import { storyAvatar } from './frontend/StoryAvatar';
 import { flipBadge } from './frontend/FlipBadge';
+import { encryptionDecryption } from './backend/EncryptionDecryption';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -56,14 +57,27 @@ const sideBarOptions: Array<{
       { name: 'FlipBadge', href: '/docs/flipbadge', content: flipBadge },
       { name: 'StoryAvatar', href: '/docs/storyavatar', content: storyAvatar }
     ]
+  },
+  {
+    title: 'Backend',
+    children: [
+      {
+        name: 'Encryption Decryption',
+        href: '/docs/encryptiondecryption',
+        content: encryptionDecryption
+      }
+    ]
   }
 ];
 
 export const getDocs = (docId: string) => {
   const group = sideBarOptions.filter((tab) =>
-    tab.children.find((child) => child.name.toLowerCase() === docId.toLowerCase())
+    tab.children.find((child) => {
+      return child.name.toLowerCase().replaceAll(' ', '') === docId.toLowerCase();
+    })
   );
 
-  return group[0].children.filter((child) => child.name.toLowerCase() === docId.toLowerCase())[0]
-    .content;
+  return group[0].children.filter(
+    (child) => child.name.toLowerCase().replaceAll(' ', '') === docId.toLowerCase()
+  )[0].content;
 };
