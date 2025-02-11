@@ -16,7 +16,7 @@ export type SectionInDocument = {
   sentence?: string;
   code?: ReactNode | string;
   description?: string;
-  contentType: string;
+  sectionType: string;
 };
 
 export type ContentInDocument = {

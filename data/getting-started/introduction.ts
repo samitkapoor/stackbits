@@ -12,7 +12,7 @@ export const introduction: Document = {
         heading: 'What is Stackbits?',
         content:
           'StackBits is a full-stack component library designed to speed up development by providing plug-and-play code snippets for both frontend and backend. Whether you need React components, API endpoints, utility functions, or authentication flows, StackBits has got you covered.',
-        contentType: 'paragraph'
+        sectionType: 'paragraph'
       },
       {
         heading: 'Why use Stackbits?',
@@ -43,7 +43,7 @@ export const introduction: Document = {
             content: 'Focus on your app, not the code.'
           }
         ],
-        contentType: 'ordered-list'
+        sectionType: 'ordered-list'
       },
       {
         heading: 'How it works?',
@@ -64,7 +64,7 @@ export const introduction: Document = {
             content: 'Grab the code and integrate it instantly.'
           }
         ],
-        contentType: 'stepper'
+        sectionType: 'stepper'
       }
     ]
   }

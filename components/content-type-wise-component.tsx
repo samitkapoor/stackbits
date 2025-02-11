@@ -8,10 +8,10 @@ import { Check, Copy } from 'lucide-react';
 
 const ContentTypeWiseComponent = ({
   section,
-  contentType
+  sectionType
 }: {
   section: SectionInDocument;
-  contentType: string;
+  sectionType: string;
 }) => {
   const [copy, setCopy] = useState(false);
 
@@ -25,9 +25,9 @@ const ContentTypeWiseComponent = ({
 
   const { content, code } = section;
 
-  if (contentType === 'paragraph' && typeof content === 'string') {
+  if (sectionType === 'paragraph' && typeof content === 'string') {
     return <p className="max-w-[800px] text-sm md:text-[16px]">{content}</p>;
-  } else if (contentType === 'ordered-list' && typeof content === 'object') {
+  } else if (sectionType === 'ordered-list' && typeof content === 'object') {
     return (
       <div className="flex flex-col gap-8 mt-4">
         {content.map((item: { id: number; heading: string; content: string }, i: number) => {
@@ -48,7 +48,7 @@ const ContentTypeWiseComponent = ({
         })}
       </div>
     );
-  } else if (contentType === 'stepper' && typeof content === 'object') {
+  } else if (sectionType === 'stepper' && typeof content === 'object') {
     return (
       <div className="flex flex-col md:flex-row items-start md:items-center gap-10 md:gap-2 mt-5 w-full">
         {content.map((item, i: number) => {
@@ -73,19 +73,19 @@ const ContentTypeWiseComponent = ({
         })}
       </div>
     );
-  } else if (contentType === 'italic-line' && typeof content === 'object') {
+  } else if (sectionType === 'italic-line' && typeof content === 'object') {
     const { sentence } = section;
 
     return <p className="text-yellow-400 italic text-sm">{sentence}</p>;
-  } else if (contentType === 'preview') {
+  } else if (sectionType === 'preview') {
     return (
       <div className="h-[500px] max-w-[700px] rounded-lg border-[2px] border-[#2f2f2fdf] flex items-center justify-center">
         {code}
       </div>
     );
-  } else if (contentType === 'heading') {
+  } else if (sectionType === 'heading') {
     return null;
-  } else if (contentType === 'styling' && typeof code === 'string') {
+  } else if (sectionType === 'styling' && typeof code === 'string') {
     return (
       <div className="flex flex-col">
         <p className="text-sm mb-2">Add these styles in your .css file</p>
@@ -110,7 +110,7 @@ const ContentTypeWiseComponent = ({
         </div>
       </div>
     );
-  } else if (contentType === 'usage' && typeof code === 'string') {
+  } else if (sectionType === 'usage' && typeof code === 'string') {
     return (
       <div className="max-w-[800px] relative w-full">
         <button
@@ -135,7 +135,7 @@ const ContentTypeWiseComponent = ({
         </CodeBlock>
       </div>
     );
-  } else if (contentType === 'component' && typeof code === 'string') {
+  } else if (sectionType === 'component' && typeof code === 'string') {
     return (
       <div className="flex flex-col">
         <p className="text-sm mb-2">{section.description}</p>
@@ -161,7 +161,7 @@ const ContentTypeWiseComponent = ({
       </div>
     );
   } else {
-    console.log({ contentType, content });
+    console.log({ sectionType, content });
     return <div></div>;
   }
 };

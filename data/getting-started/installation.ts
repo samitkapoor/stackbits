@@ -11,17 +11,17 @@ export const installation: Document = {
       {
         heading: 'Installation?',
         content: "You don't need any!",
-        contentType: 'paragraph'
+        sectionType: 'paragraph'
       },
       {
         heading: 'No Setup, No Hassle',
         content:
           'StackBits is designed to be as simple as possible. No installations—just copy, paste, and go!',
-        contentType: 'paragraph'
+        sectionType: 'paragraph'
       },
       {
         sentence: 'Why waste time setting up when you can start coding right away?',
-        contentType: 'italic-line'
+        sectionType: 'italic-line'
       }
     ]
   }

@@ -13,20 +13,20 @@ export const flicker: Document = {
         heading: 'FlickerBox',
         content:
           'Ever wanted your components to have that mysterious glow? Maybe a soft flickering neon effect for a cyberpunk vibe? Or a subtle shimmer that catches the eye? Flicker wraps around any component and gives it a dynamic, flickering shadow—because static UI is just too predictable!',
-        contentType: 'paragraph'
+        sectionType: 'paragraph'
       },
       {
         heading: 'Preview',
-        contentType: 'preview',
+        sectionType: 'preview',
         code: <FlickerBox>Watch me glow</FlickerBox>
       },
       {
         heading: 'Follow below steps 👇🏻',
-        contentType: 'heading'
+        sectionType: 'heading'
       },
       {
         heading: 'Styles',
-        contentType: 'styling',
+        sectionType: 'styling',
         code: `@keyframes neon-flicker {
   0%,
   100% {
@@ -45,7 +45,7 @@ export const flicker: Document = {
       },
       {
         heading: 'Component',
-        contentType: 'component',
+        sectionType: 'component',
         description: 'Create a file flicker-box.tsx in your components folder and paste this code',
         code: `import React from 'react';
         
@@ -60,7 +60,7 @@ export default FlickerBox;
       },
       {
         heading: 'Usage',
-        contentType: 'usage',
+        sectionType: 'usage',
         code: `<FlickerBox>Watch me glow</FlickerBox>`
       }
     ]
