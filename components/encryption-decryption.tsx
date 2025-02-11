@@ -26,14 +26,14 @@ const EncryptionDecryptionDemo = () => {
       <input
         onChange={(e) => setData(e.target.value)}
         placeholder="Enter your data"
-        className="w-[300px] bg-gray-800 px-3 py-2 rounded-lg outline-none text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="max-w-[300px] bg-gray-800 px-3 py-2 rounded-lg outline-none text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
         maxLength={15}
       />
       <MovingBorderButton
         type="button"
         onClick={() => setEncryptedData(encryptData(data).encryptedData)}
         wrapperClassName="w-min whitespace-nowrap"
-        className="!px-4 !py-2"
+        className="sm:!px-4 sm:!py-2"
       >
         Encrypt Data
       </MovingBorderButton>

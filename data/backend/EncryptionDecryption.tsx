@@ -25,7 +25,7 @@ export const encryptionDecryption: Document = {
         sectionType: 'paragraph'
       },
       {
-        heading: 'Preview',
+        heading: 'See it in Action 👇🏻',
         sectionType: 'preview',
         code: <EncryptionDecryptionDemo />
       },
