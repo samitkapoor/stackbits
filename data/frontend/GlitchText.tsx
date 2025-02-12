@@ -21,7 +21,7 @@ export const glitchText: Document = {
         sectionType: 'preview',
         code: (
           <div className="h-full w-full flex items-center justify-center">
-            <p className="text-4xl">
+            <p className="text-xl sm:text-2xl md:text-4xl">
               Stackbits is <GlitchText className="font-semibold">Awesome</GlitchText>
             </p>
           </div>
