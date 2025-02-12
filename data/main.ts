@@ -8,6 +8,7 @@ import { flipBadge } from './frontend/FlipBadge';
 import { encryptionDecryption } from './backend/EncryptionDecryption';
 import { regexValidations } from './backend/RegexValidations';
 import { debounce } from './backend/Debounce';
+import { expandableCard } from './frontend/ExpandableCard';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -56,6 +57,7 @@ const sideBarOptions: Array<{
   {
     title: 'Components',
     children: [
+      { name: 'ExpandableCard', href: '/docs/expandablecard', content: expandableCard },
       { name: 'FlickerBox', href: '/docs/flickerbox', content: flicker },
       { name: 'FlipBadge', href: '/docs/flipbadge', content: flipBadge },
       { name: 'StoryAvatar', href: '/docs/storyavatar', content: storyAvatar }
