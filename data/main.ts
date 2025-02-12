@@ -10,6 +10,7 @@ import { regexValidations } from './backend/RegexValidations';
 import { debounce } from './backend/Debounce';
 import { expandableCard } from './frontend/ExpandableCard';
 import { customScrollbar } from './frontend/CustomScrollbar';
+import { glitchText } from './frontend/GlitchText';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -59,6 +60,7 @@ const sideBarOptions: Array<{
     title: 'Components',
     children: [
       { name: 'CustomScrollbar', href: '/docs/customscrollbar', content: customScrollbar },
+      { name: 'GlitchText', href: '/docs/glitchtext', content: glitchText },
       { name: 'ExpandableCard', href: '/docs/expandablecard', content: expandableCard },
       { name: 'FlickerBox', href: '/docs/flickerbox', content: flicker },
       { name: 'FlipBadge', href: '/docs/flipbadge', content: flipBadge },
