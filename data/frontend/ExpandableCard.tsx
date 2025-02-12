@@ -57,7 +57,7 @@ const ExpandableCard = ({ title, paragraph, image }: ExpandableCardProps) => {
 
   return (
     <motion.div
-      className="relative w-full max-w-[250px] sm:max-w-sm md:max-w-md rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+      className="relative h-[200px] w-full max-w-[250px] sm:max-w-sm md:max-w-md rounded-2xl overflow-hidden shadow-lg cursor-pointer"
       onMouseEnter={() => setIsExpanded(true)}
       onMouseLeave={() => setIsExpanded(false)}
       initial={{ scale: 1 }}
