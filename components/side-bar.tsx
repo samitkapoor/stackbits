@@ -36,10 +36,9 @@ const SideBar = ({ isOpen }: { isOpen: boolean }) => {
             <div className="flex flex-col ml-1">
               {group.children.map((child, j) => {
                 return (
-                  <div className="flex items-center gap-1">
+                  <div key={j} className="flex items-center gap-1">
                     <a
                       href={child.href}
-                      key={j}
                       className={
                         pathname === child.href
                           ? 'text-yellow-400'
