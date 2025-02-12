@@ -43,7 +43,7 @@ export const getSideBarTabs = () => {
 
 const sideBarOptions: Array<{
   title: string;
-  children: Array<{ name: string; href: string; content: Document }>;
+  children: Array<{ name: string; href: string; content: Document; isNew?: boolean }>;
 }> = [
   {
     title: 'Getting Started',
@@ -60,8 +60,13 @@ const sideBarOptions: Array<{
     title: 'Components',
     children: [
       { name: 'CustomScrollbar', href: '/docs/customscrollbar', content: customScrollbar },
-      { name: 'GlitchText', href: '/docs/glitchtext', content: glitchText },
-      { name: 'ExpandableCard', href: '/docs/expandablecard', content: expandableCard },
+      { name: 'GlitchText', href: '/docs/glitchtext', content: glitchText, isNew: true },
+      {
+        name: 'ExpandableCard',
+        href: '/docs/expandablecard',
+        content: expandableCard,
+        isNew: true
+      },
       { name: 'FlickerBox', href: '/docs/flickerbox', content: flicker },
       { name: 'FlipBadge', href: '/docs/flipbadge', content: flipBadge },
       { name: 'StoryAvatar', href: '/docs/storyavatar', content: storyAvatar }
@@ -73,7 +78,8 @@ const sideBarOptions: Array<{
       {
         name: 'Debounce',
         href: '/docs/debounce',
-        content: debounce
+        content: debounce,
+        isNew: true
       },
       {
         name: 'Encryption Decryption',

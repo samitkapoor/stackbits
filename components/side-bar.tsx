@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { usePathname } from 'next/navigation';
+import { motion } from 'framer-motion';
 
 import { getSideBarTabs } from '@/data/main';
 import Image from 'next/image';
@@ -35,17 +36,31 @@ const SideBar = ({ isOpen }: { isOpen: boolean }) => {
             <div className="flex flex-col ml-1">
               {group.children.map((child, j) => {
                 return (
-                  <a
-                    href={child.href}
-                    key={j}
-                    className={
-                      pathname === child.href
-                        ? 'text-yellow-400'
-                        : 'hover:text-yellow-400 transition-all'
-                    }
-                  >
-                    {child.name}
-                  </a>
+                  <div className="flex items-center gap-1">
+                    <a
+                      href={child.href}
+                      key={j}
+                      className={
+                        pathname === child.href
+                          ? 'text-yellow-400'
+                          : 'hover:text-yellow-400 transition-all'
+                      }
+                    >
+                      {child.name}
+                    </a>
+                    {child.isNew && (
+                      <motion.p
+                        initial={{ color: '#148bfa' }}
+                        animate={{
+                          color: ['#148bfa', '#83fa14', '#14fab9', '#148bfa'],
+                          transition: { duration: 1, repeat: Infinity, repeatType: 'reverse' }
+                        }}
+                        className="text-xs"
+                      >
+                        New
+                      </motion.p>
+                    )}
+                  </div>
                 );
               })}
             </div>
