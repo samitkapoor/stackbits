@@ -9,7 +9,12 @@ const BuiltForDevelopers = () => {
       <div className="absolute inset-0 bg-grid-white/20 pointer-events-none"></div>
 
       <h2 className="text-3xl md:text-4xl font-bold text-center relative">
-        Built for Developers, by a Developer
+        Built for Developers, by a{' '}
+        <span className="underline text-purple-300 hover:text-purple-200 transition-all">
+          <a href="https://samitkapoor.com" target="_blank">
+            Developer
+          </a>
+        </span>
         <br /> Who Was Just as <span className="glitch">Frustrated</span> as You.
       </h2>
 
