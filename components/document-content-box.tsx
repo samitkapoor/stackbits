@@ -20,7 +20,7 @@ const DocumentContentBox = ({ docId }: { docId: string }) => {
         <div className="flex flex-col gap-[50px] mt-[30px]">
           {content.sections.map((section) => {
             return (
-              <div key={section.heading} className="flex flex-col gap-2">
+              <div key={section.heading + Date.now().toString()} className="flex flex-col gap-2">
                 <p
                   className={
                     'font-semibold text-2xl ' +
