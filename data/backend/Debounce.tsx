@@ -1,9 +1,6 @@
 import crypto from 'crypto';
 
 import { Document } from '../main';
-import CopyButton from '@/components/ui/copy-button';
-import { Copy } from 'lucide-react';
-import EncryptionDecryptionDemo from '@/components/encryption-decryption';
 import DebouncingDemo from '@/components/debouncing-demo';
 
 const generateCryptoSecret = () => {
