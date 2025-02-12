@@ -7,6 +7,7 @@ import { storyAvatar } from './frontend/StoryAvatar';
 import { flipBadge } from './frontend/FlipBadge';
 import { encryptionDecryption } from './backend/EncryptionDecryption';
 import { regexValidations } from './backend/RegexValidations';
+import { debounce } from './backend/Debounce';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -63,6 +64,11 @@ const sideBarOptions: Array<{
   {
     title: 'Utilities',
     children: [
+      {
+        name: 'Debounce',
+        href: '/docs/debounce',
+        content: debounce
+      },
       {
         name: 'Encryption Decryption',
         href: '/docs/encryptiondecryption',

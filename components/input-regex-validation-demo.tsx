@@ -1,3 +1,4 @@
+import useDebounce from '@/lib/useDebounce';
 import React, { useEffect } from 'react';
 
 const validator = (text: string, regex: RegExp): boolean => {
@@ -14,6 +15,7 @@ const InputRegexValidationDemo = ({
   placeholder: string;
 }) => {
   const [data, setData] = React.useState('');
+  const debouncedValue = useDebounce(data, 250);
   const [isValid, setIsValid] = React.useState(true);
   const [firstTime, setFirstTime] = React.useState(true);
 
@@ -23,16 +25,12 @@ const InputRegexValidationDemo = ({
       return;
     }
 
-    const id = setTimeout(() => {
-      if (validator(data, regex)) {
-        setIsValid(true);
-      } else {
-        setIsValid(false);
-      }
-    }, 250);
-
-    return () => clearTimeout(id);
-  }, [data]);
+    if (validator(debouncedValue, regex)) {
+      setIsValid(true);
+    } else {
+      setIsValid(false);
+    }
+  }, [debouncedValue]);
 
   return (
     <div className="mt-4 gap-1 flex flex-col ml-1">
