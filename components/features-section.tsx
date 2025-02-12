@@ -48,7 +48,7 @@ const FeaturesSection = () => {
         <div className="flex flex-col max-w-[65%] w-full mt-20">
           {features.map((feature, index) => {
             return (
-              <>
+              <div key={feature.title + Date.now().toString()}>
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{
@@ -63,7 +63,6 @@ const FeaturesSection = () => {
                       duration: 0.5
                     }
                   }}
-                  key={feature.title}
                   className={`flex items-center justify-center text-center w-full text-xl md:text-2xl lg:text-4xl font-semibold ${feature.className}`}
                 >
                   <p className="max-w-[500px]">{feature.title}</p>
@@ -75,7 +74,7 @@ const FeaturesSection = () => {
                 >
                   <div className={`h-full w-[1px] ${feature.dividerClassName}`} />
                 </div>
-              </>
+              </div>
             );
           })}
         </div>
