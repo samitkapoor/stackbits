@@ -19,10 +19,12 @@ export const flipBadge: Document = {
         heading: 'Preview',
         sectionType: 'preview',
         code: (
-          <FlipBadge
-            frontContent={<p className="font-medium text-black">"Should be an easy fix"</p>}
-            backContent={<p className="font-medium text-white">*Spends 6 hours*</p>}
-          />
+          <div className="h-full w-full flex items-center justify-center">
+            <FlipBadge
+              frontContent={<p className="font-medium text-black">"Should be an easy fix"</p>}
+              backContent={<p className="font-medium text-white">*Spends 6 hours*</p>}
+            />
+          </div>
         )
       },
       {

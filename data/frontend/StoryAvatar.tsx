@@ -20,7 +20,7 @@ export const storyAvatar: Document = {
         heading: 'Preview',
         sectionType: 'preview',
         code: (
-          <div className="flex flex-wrap items-center gap-10 p-5 justify-center">
+          <div className="flex flex-wrap items-center gap-10 p-5 justify-center w-full h-full">
             <StoryAvatar>
               <Image alt="nft-monkey" src="/nft-monkey.svg" width={100} height={100} />
             </StoryAvatar>

@@ -27,7 +27,11 @@ export const encryptionDecryption: Document = {
       {
         heading: 'See it in Action 👇🏻',
         sectionType: 'preview',
-        code: <EncryptionDecryptionDemo />
+        code: (
+          <div className="h-full w-full flex items-center justify-center">
+            <EncryptionDecryptionDemo />
+          </div>
+        )
       },
       {
         heading: 'Follow below steps 👇🏻',

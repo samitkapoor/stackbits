@@ -79,7 +79,7 @@ const ContentTypeWiseComponent = ({
     return <p className="text-yellow-400 italic text-sm">{sentence}</p>;
   } else if (sectionType === 'preview') {
     return (
-      <div className="h-[500px] max-w-[700px] rounded-lg border-[2px] border-[#2f2f2fdf] flex items-center justify-center">
+      <div className="h-[500px] max-w-[700px] rounded-lg border-[2px] border-[#2f2f2fdf] flex items-start justify-start overflow-x-hidden relative">
         {code}
       </div>
     );

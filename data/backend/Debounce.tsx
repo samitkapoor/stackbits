@@ -28,7 +28,11 @@ export const debounce: Document = {
       {
         heading: 'See it in Action 👇🏻',
         sectionType: 'preview',
-        code: <DebouncingDemo />
+        code: (
+          <div className="h-full w-full flex items-center justify-center">
+            <DebouncingDemo />
+          </div>
+        )
       },
       {
         heading: 'Follow below steps 👇🏻',

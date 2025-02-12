@@ -18,7 +18,11 @@ export const flicker: Document = {
       {
         heading: 'Preview',
         sectionType: 'preview',
-        code: <FlickerBox>Watch me glow</FlickerBox>
+        code: (
+          <div className="w-full h-full flex items-center justify-center">
+            <FlickerBox>Watch me glow</FlickerBox>
+          </div>
+        )
       },
       {
         heading: 'Follow below steps 👇🏻',
