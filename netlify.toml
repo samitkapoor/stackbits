@@ -1,0 +1,5 @@
+[[redirects]]
+    from = "/*"
+    to = "https://stackbits.dev"
+    status = 301
+    force = true
