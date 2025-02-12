@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const FlipBadge = ({
   frontContent,
@@ -10,8 +11,16 @@ const FlipBadge = ({
   // * ----
 }) => {
   return (
-    <div className="relative h-[200px] w-[200px] rounded-full" style={{ perspective: '1000px' }}>
-      <div className="flip h-full w-full rounded-full relative">
+    <motion.div
+      initial={{ y: -20 }}
+      animate={{
+        y: 0,
+        transition: { repeat: Infinity, duration: 0.8, repeatType: 'reverse' }
+      }}
+      className="relative h-[175px] w-[175px] rounded-full"
+      style={{ perspective: '1000px' }}
+    >
+      <div className="flip h-full w-full rounded-full relative flex items-center justify-center">
         {/* Front Side */}
         <div
           className="h-full w-full absolute top-0 left-0 flex items-center justify-center bg-neutral-100 rounded-full"
@@ -32,7 +41,7 @@ const FlipBadge = ({
           {backContent}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

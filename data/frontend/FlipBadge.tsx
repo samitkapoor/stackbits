@@ -21,8 +21,19 @@ export const flipBadge: Document = {
         code: (
           <div className="h-full w-full flex items-center justify-center">
             <FlipBadge
-              frontContent={<p className="font-medium text-black">"Should be an easy fix"</p>}
-              backContent={<p className="font-medium text-white">*Spends 6 hours*</p>}
+              frontContent={
+                <p className="font-medium text-center text-black">
+                  "Should be an
+                  <br />
+                  easy fix"
+                </p>
+              }
+              backContent={
+                <p className="font-medium text-center text-white">
+                  *Spends
+                  <br />6 hours*
+                </p>
+              }
             />
           </div>
         )
@@ -30,6 +41,11 @@ export const flipBadge: Document = {
       {
         heading: 'Follow below steps 👇🏻',
         sectionType: 'heading'
+      },
+      {
+        heading: 'Install dependencies',
+        sectionType: 'component',
+        code: `npm i framer-motion`
       },
       {
         heading: 'Styles',
@@ -63,7 +79,8 @@ export const flipBadge: Document = {
         sectionType: 'component',
         description: 'Create a file flip-badge.tsx in your components folder and paste this code',
         code: `import React from 'react';
-        
+import { motion } from 'framer-motion';
+
 const FlipBadge = ({
   frontContent,
   backContent
@@ -74,8 +91,16 @@ const FlipBadge = ({
   // * ----
 }) => {
   return (
-    <div className="relative h-[200px] w-[200px] rounded-full" style={{ perspective: '1000px' }}>
-      <div className="flip h-full w-full rounded-full relative">
+    <motion.div
+      initial={{ y: -20 }}
+      animate={{
+        y: 0,
+        transition: { repeat: Infinity, duration: 0.8, repeatType: 'reverse' }
+      }}
+      className="relative h-[175px] w-[175px] rounded-full"
+      style={{ perspective: '1000px' }}
+    >
+      <div className="flip h-full w-full rounded-full relative flex items-center justify-center">
         {/* Front Side */}
         <div
           className="h-full w-full absolute top-0 left-0 flex items-center justify-center bg-neutral-100 rounded-full"
@@ -96,12 +121,12 @@ const FlipBadge = ({
           {backContent}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 export default FlipBadge;
-        `,
+`,
         sentence:
           '💡 Customize the background colors to anything you like—make it as wild or as classy as you want!'
       },
