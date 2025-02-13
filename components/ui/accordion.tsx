@@ -35,7 +35,7 @@ const Accordion = ({
       className="shadow-lg rounded-xl overflow-hidden border border-gray-300 w-full relative"
     >
       <button
-        className="w-full flex justify-between items-center p-5 h-[60px] text-left font-semibold text-white"
+        className="text-sm sm:text-[16px] w-full flex justify-between items-center p-5 h-[60px] text-left font-semibold text-white"
         onClick={() => selectAccordion(index)}
       >
         {item.title}
@@ -46,7 +46,9 @@ const Accordion = ({
         )}
       </button>
 
-      <div className="px-5 pb-5 text-white overflow-hidden">{item.content}</div>
+      <div className="px-5 pb-5 text-white overflow-hidden text-xs sm:text-[16px]">
+        {item.content}
+      </div>
     </motion.div>
   );
 };
