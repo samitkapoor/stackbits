@@ -51,6 +51,11 @@ export const yupValidations: Document = {
         sectionType: 'heading'
       },
       {
+        heading: 'Install dependencies',
+        sectionType: 'component',
+        code: `npm i yup`
+      },
+      {
         heading: 'Re-usable Validation Rules',
         sectionType: 'component',
         description: 'Take these reusable validations and store them in a separate file.',
