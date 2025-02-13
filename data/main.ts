@@ -13,6 +13,7 @@ import { customScrollbar } from './frontend/CustomScrollbar';
 import { glitchText } from './frontend/GlitchText';
 import { yupValidations } from './utilities/YupValidations';
 import { darkThemeLightTheme } from './utilities/DarkThemeLightTheme';
+import { accordion } from './frontend/Accordion';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -71,7 +72,13 @@ const sideBarOptions: Array<{
       },
       { name: 'FlickerBox', href: '/docs/flickerbox', content: flicker },
       { name: 'FlipBadge', href: '/docs/flipbadge', content: flipBadge },
-      { name: 'StoryAvatar', href: '/docs/storyavatar', content: storyAvatar }
+      { name: 'StoryAvatar', href: '/docs/storyavatar', content: storyAvatar },
+      {
+        name: 'Accordion',
+        href: '/docs/accordion',
+        content: accordion,
+        isNew: true
+      }
     ]
   },
   {
