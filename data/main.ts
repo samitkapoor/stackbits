@@ -11,6 +11,7 @@ import { debounce } from './utilities/Debounce';
 import { expandableCard } from './frontend/ExpandableCard';
 import { customScrollbar } from './frontend/CustomScrollbar';
 import { glitchText } from './frontend/GlitchText';
+import { yupValidations } from './utilities/YupValidations';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -60,12 +61,11 @@ const sideBarOptions: Array<{
     title: 'Components',
     children: [
       { name: 'CustomScrollbar', href: '/docs/customscrollbar', content: customScrollbar },
-      { name: 'GlitchText', href: '/docs/glitchtext', content: glitchText, isNew: true },
+      { name: 'GlitchText', href: '/docs/glitchtext', content: glitchText },
       {
         name: 'ExpandableCard',
         href: '/docs/expandablecard',
-        content: expandableCard,
-        isNew: true
+        content: expandableCard
       },
       { name: 'FlickerBox', href: '/docs/flickerbox', content: flicker },
       { name: 'FlipBadge', href: '/docs/flipbadge', content: flipBadge },
@@ -78,8 +78,7 @@ const sideBarOptions: Array<{
       {
         name: 'Debounce',
         href: '/docs/debounce',
-        content: debounce,
-        isNew: true
+        content: debounce
       },
       {
         name: 'Encryption Decryption',
@@ -90,6 +89,12 @@ const sideBarOptions: Array<{
         name: 'Regex Validations',
         href: '/docs/regexvalidations',
         content: regexValidations
+      },
+      {
+        name: 'Yup Validations',
+        href: '/docs/yupvalidations',
+        content: yupValidations,
+        isNew: true
       }
     ]
   }
