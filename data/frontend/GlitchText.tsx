@@ -1,6 +1,5 @@
 import GlitchText from '@/components/ui/glitch-text';
 import { Document } from '../main';
-import ExpandableCard from '@/components/ui/expandable-card';
 
 export const glitchText: Document = {
   sideBar: {
