@@ -12,6 +12,7 @@ import { expandableCard } from './frontend/ExpandableCard';
 import { customScrollbar } from './frontend/CustomScrollbar';
 import { glitchText } from './frontend/GlitchText';
 import { yupValidations } from './utilities/YupValidations';
+import { darkThemeLightTheme } from './utilities/DarkThemeLightTheme';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -77,6 +78,12 @@ const sideBarOptions: Array<{
     title: 'Utilities',
     children: [
       {
+        name: 'Dark & Light Theme',
+        href: '/docs/dark&lighttheme',
+        content: darkThemeLightTheme,
+        isNew: true
+      },
+      {
         name: 'Debounce',
         href: '/docs/debounce',
         content: debounce,
@@ -105,11 +112,14 @@ const sideBarOptions: Array<{
 export const getDocs = (docId: string) => {
   const group = sideBarOptions.filter((tab) =>
     tab.children.find((child) => {
-      return child.name.toLowerCase().replaceAll(' ', '') === docId.toLowerCase();
+      return (
+        child.name.toLowerCase().replaceAll(' ', '') === decodeURIComponent(docId.toLowerCase())
+      );
     })
   );
 
   return group[0].children.filter(
-    (child) => child.name.toLowerCase().replaceAll(' ', '') === docId.toLowerCase()
+    (child) =>
+      child.name.toLowerCase().replaceAll(' ', '') === decodeURIComponent(docId.toLowerCase())
   )[0].content;
 };
