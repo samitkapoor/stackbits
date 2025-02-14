@@ -15,6 +15,7 @@ import { yupValidations } from './utilities/YupValidations';
 import { darkThemeLightTheme } from './utilities/DarkThemeLightTheme';
 import { accordion } from './frontend/Accordion';
 import { rainbowText } from './frontend/RainbowText';
+import { customLogger } from './utilities/CustomLogger';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -85,6 +86,12 @@ const sideBarOptions: Array<{
   {
     title: 'Utilities',
     children: [
+      {
+        name: 'Custom Logger',
+        href: '/docs/customlogger',
+        content: customLogger,
+        isNew: true
+      },
       {
         name: 'Dark & Light Theme',
         href: '/docs/dark&lighttheme',
