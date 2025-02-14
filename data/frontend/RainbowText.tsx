@@ -20,7 +20,9 @@ export const rainbowText: Document = {
         sectionType: 'preview',
         code: (
           <div className="h-full w-full flex items-center justify-center bg-gradient-to-b from-black via-gray-900 to-black">
-            <RainbowText className="text-6xl font-semibold drop-shadow-lg">Fresh Drop</RainbowText>
+            <RainbowText className="text-2xl sm:text-4xl md:text-6xl text-center font-semibold drop-shadow-lg">
+              Fresh Drop
+            </RainbowText>
           </div>
         )
       },
