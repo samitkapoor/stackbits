@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { getSideBarTabs } from '@/data/main';
 import Image from 'next/image';
 import Link from 'next/link';
+import RainbowText from './ui/rainbow-text';
 
 const SideBar = ({ isOpen }: { isOpen: boolean }) => {
   const tabs = getSideBarTabs();
@@ -47,18 +48,7 @@ const SideBar = ({ isOpen }: { isOpen: boolean }) => {
                     >
                       {child.name}
                     </a>
-                    {child.isNew && (
-                      <motion.p
-                        initial={{ color: '#148bfa' }}
-                        animate={{
-                          color: ['#148bfa', '#83fa14', '#14fab9', '#148bfa'],
-                          transition: { duration: 1, repeat: Infinity, repeatType: 'reverse' }
-                        }}
-                        className="text-xs"
-                      >
-                        New
-                      </motion.p>
-                    )}
+                    {child.isNew && <RainbowText>New</RainbowText>}
                   </div>
                 );
               })}
