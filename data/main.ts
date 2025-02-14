@@ -14,6 +14,7 @@ import { glitchText } from './frontend/GlitchText';
 import { yupValidations } from './utilities/YupValidations';
 import { darkThemeLightTheme } from './utilities/DarkThemeLightTheme';
 import { accordion } from './frontend/Accordion';
+import { rainbowText } from './frontend/RainbowText';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -67,11 +68,11 @@ const sideBarOptions: Array<{
       {
         name: 'ExpandableCard',
         href: '/docs/expandablecard',
-        content: expandableCard,
-        isNew: true
+        content: expandableCard
       },
       { name: 'FlickerBox', href: '/docs/flickerbox', content: flicker },
       { name: 'FlipBadge', href: '/docs/flipbadge', content: flipBadge },
+      { name: 'RainbowText', href: '/docs/rainbowtext', content: rainbowText, isNew: true },
       { name: 'StoryAvatar', href: '/docs/storyavatar', content: storyAvatar },
       {
         name: 'Accordion',
@@ -93,8 +94,7 @@ const sideBarOptions: Array<{
       {
         name: 'Debounce',
         href: '/docs/debounce',
-        content: debounce,
-        isNew: true
+        content: debounce
       },
       {
         name: 'Encryption Decryption',

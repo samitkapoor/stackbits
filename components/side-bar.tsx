@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { usePathname } from 'next/navigation';
-import { motion } from 'framer-motion';
 
 import { getSideBarTabs } from '@/data/main';
 import Image from 'next/image';
@@ -48,7 +47,11 @@ const SideBar = ({ isOpen }: { isOpen: boolean }) => {
                     >
                       {child.name}
                     </a>
-                    {child.isNew && <RainbowText>New</RainbowText>}
+                    {child.isNew && (
+                      <RainbowText className="text-xs" duration={1.5}>
+                        New
+                      </RainbowText>
+                    )}
                   </div>
                 );
               })}
