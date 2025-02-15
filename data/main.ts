@@ -17,6 +17,7 @@ import { accordion } from './frontend/Accordion';
 import { rainbowText } from './frontend/RainbowText';
 import { customLogger } from './utilities/CustomLogger';
 import { skewedText } from './frontend/SkewedText';
+import { barricadeTape } from './frontend/BarricadeTape';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -69,6 +70,12 @@ const sideBarOptions: Array<{
         name: 'Accordion',
         href: '/docs/accordion',
         content: accordion,
+        isNew: true
+      },
+      {
+        name: 'BarricadeTape',
+        href: '/docs/barricadeTape',
+        content: barricadeTape,
         isNew: true
       },
       { name: 'CustomScrollbar', href: '/docs/customscrollbar', content: customScrollbar },
