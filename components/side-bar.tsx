@@ -16,7 +16,9 @@ const SideBar = ({ isOpen }: { isOpen: boolean }) => {
   return (
     <div
       className={
-        `${isOpen ? `left-[50px] overflow-y-auto` : `-left-[300px]`} lg:left-[50px] ` +
+        `${
+          isOpen ? `left-[50px] overflow-y-auto lg:overflow-y-hidden pb-10` : `-left-[300px]`
+        } lg:left-[50px] ` +
         `absolute bg-black h-full top-[50px] flex flex-col gap-5 w-[350px] z-40`
       }
     >
