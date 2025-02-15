@@ -38,7 +38,7 @@ const BarricadeTape = ({
         transition: { duration, ease, delay }
       }}
       viewport={{ once: true }}
-      className={`text-black font-bold text-5xl w-screen flex items-center justify-center gap-5 h-[80px] bg-yellow-500 overflow-hidden whitespace-nowrap border-[10px] border-black border-dashed ${className}`}
+      className={`text-black font-bold text-3xl md:text-5xl w-screen flex items-center justify-center gap-5 h-[50px] md:h-[80px] bg-yellow-500 overflow-hidden whitespace-nowrap border-[5px] md:border-[10px] border-black border-dashed ${className}`}
     >
       {sentence}
     </motion.div>
