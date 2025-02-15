@@ -102,8 +102,7 @@ const sideBarOptions: Array<{
       {
         name: 'Dark & Light Theme',
         href: '/docs/dark&lighttheme',
-        content: darkThemeLightTheme,
-        isNew: true
+        content: darkThemeLightTheme
       },
       {
         name: 'Debounce',
@@ -123,8 +122,7 @@ const sideBarOptions: Array<{
       {
         name: 'Yup Validations',
         href: '/docs/yupvalidations',
-        content: yupValidations,
-        isNew: true
+        content: yupValidations
       }
     ]
   }
