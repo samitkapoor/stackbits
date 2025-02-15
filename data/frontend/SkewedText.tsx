@@ -111,7 +111,7 @@ export default SkewedText;
       {
         heading: 'Usage',
         sectionType: 'usage',
-        code: `<SkewedText className="text-green-500 text-xl">
+        code: `<SkewedText className="text-green-500 sm:text-lg md:text-xl">
   Reality is nothing more than code. A program running endlessly, repeating itself,
   glitching when something doesn’t fit. But what if you could rewrite the code?
   What if you could break the loop and escape the system?
