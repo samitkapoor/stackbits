@@ -16,6 +16,7 @@ import { darkThemeLightTheme } from './utilities/DarkThemeLightTheme';
 import { accordion } from './frontend/Accordion';
 import { rainbowText } from './frontend/RainbowText';
 import { customLogger } from './utilities/CustomLogger';
+import { skewedText } from './frontend/SkewedText';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -64,8 +65,14 @@ const sideBarOptions: Array<{
   {
     title: 'Components',
     children: [
+      {
+        name: 'Accordion',
+        href: '/docs/accordion',
+        content: accordion,
+        isNew: true
+      },
       { name: 'CustomScrollbar', href: '/docs/customscrollbar', content: customScrollbar },
-      { name: 'GlitchText', href: '/docs/glitchtext', content: glitchText, isNew: true },
+      { name: 'GlitchText', href: '/docs/glitchtext', content: glitchText },
       {
         name: 'ExpandableCard',
         href: '/docs/expandablecard',
@@ -74,13 +81,13 @@ const sideBarOptions: Array<{
       { name: 'FlickerBox', href: '/docs/flickerbox', content: flicker },
       { name: 'FlipBadge', href: '/docs/flipbadge', content: flipBadge },
       { name: 'RainbowText', href: '/docs/rainbowtext', content: rainbowText, isNew: true },
-      { name: 'StoryAvatar', href: '/docs/storyavatar', content: storyAvatar },
       {
-        name: 'Accordion',
-        href: '/docs/accordion',
-        content: accordion,
+        name: 'SkewedText',
+        href: '/docs/skewedtext',
+        content: skewedText,
         isNew: true
-      }
+      },
+      { name: 'StoryAvatar', href: '/docs/storyavatar', content: storyAvatar }
     ]
   },
   {

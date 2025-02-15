@@ -37,7 +37,7 @@ const RainbowText = ({
   }
 
   return (
-    <motion.p
+    <motion.span
       initial={{ backgroundImage: linearGradients[0] }}
       animate={{ backgroundImage: linearGradients }}
       transition={{
@@ -54,7 +54,7 @@ const RainbowText = ({
       }}
     >
       {children}
-    </motion.p>
+    </motion.span>
   );
 };
 
