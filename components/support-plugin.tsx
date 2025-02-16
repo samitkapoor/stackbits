@@ -6,7 +6,7 @@ const SupportPlugin = () => {
   return (
     <div className="flex flex-col gap-2 text-xs">
       <p>
-        Got a question or feedback?
+        ⭐️ Got a question or feedback?
         <br /> Feel free to reach out!
       </p>
 
