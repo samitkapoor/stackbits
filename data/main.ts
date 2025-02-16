@@ -18,6 +18,7 @@ import { rainbowText } from './frontend/RainbowText';
 import { customLogger } from './utilities/CustomLogger';
 import { skewedText } from './frontend/SkewedText';
 import { barricadeTape } from './frontend/BarricadeTape';
+import { expandableIconButton } from './frontend/ExpandableIconButton';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -69,8 +70,7 @@ const sideBarOptions: Array<{
       {
         name: 'Accordion',
         href: '/docs/accordion',
-        content: accordion,
-        isNew: true
+        content: accordion
       },
       {
         name: 'BarricadeTape',
@@ -84,6 +84,12 @@ const sideBarOptions: Array<{
         name: 'ExpandableCard',
         href: '/docs/expandablecard',
         content: expandableCard
+      },
+      {
+        name: 'ExpandableIconButton',
+        href: '/docs/expandableiconbutton',
+        content: expandableIconButton,
+        isNew: true
       },
       { name: 'FlickerBox', href: '/docs/flickerbox', content: flicker },
       { name: 'FlipBadge', href: '/docs/flipbadge', content: flipBadge },
