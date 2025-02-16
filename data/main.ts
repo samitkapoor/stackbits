@@ -100,12 +100,11 @@ const sideBarOptions: Array<{
       },
       { name: 'FlickerBox', href: '/docs/flickerbox', content: flicker },
       { name: 'FlipBadge', href: '/docs/flipbadge', content: flipBadge },
-      { name: 'RainbowText', href: '/docs/rainbowtext', content: rainbowText, isNew: true },
+      { name: 'RainbowText', href: '/docs/rainbowtext', content: rainbowText },
       {
         name: 'SkewedText',
         href: '/docs/skewedtext',
-        content: skewedText,
-        isNew: true
+        content: skewedText
       },
       { name: 'StoryAvatar', href: '/docs/storyavatar', content: storyAvatar }
     ]
