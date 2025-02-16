@@ -19,6 +19,7 @@ import { customLogger } from './utilities/CustomLogger';
 import { skewedText } from './frontend/SkewedText';
 import { barricadeTape } from './frontend/BarricadeTape';
 import { expandableIconButton } from './frontend/ExpandableIconButton';
+import { countUp } from './frontend/CountUp';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -76,6 +77,12 @@ const sideBarOptions: Array<{
         name: 'BarricadeTape',
         href: '/docs/barricadeTape',
         content: barricadeTape,
+        isNew: true
+      },
+      {
+        name: 'CountUp',
+        href: '/docs/countup',
+        content: countUp,
         isNew: true
       },
       { name: 'CustomScrollbar', href: '/docs/customscrollbar', content: customScrollbar },
