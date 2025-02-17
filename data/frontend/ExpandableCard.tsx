@@ -58,11 +58,11 @@ const ExpandableCard = ({ title, paragraph, image }: ExpandableCardProps) => {
 
   return (
     <motion.div
-      className="relative h-[200px] w-full max-w-[250px] sm:max-w-sm md:max-w-md rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+      className="relative w-full h-[200px] max-w-[250px] sm:max-w-sm md:max-w-md rounded-2xl overflow-hidden shadow-lg cursor-pointer"
       onMouseEnter={() => setIsExpanded(true)}
       onMouseLeave={() => setIsExpanded(false)}
       initial={{ scale: 1 }}
-      animate={{ transform: isExpanded ? 'scaleX(1.1) scaleY(1.2)' : 'scaleX(1) scaleY(1)' }}
+      animate={{ scale: isExpanded ? 1.1 : 1 }}
       whileTap={{ scale: 1 }}
       transition={{ duration: 0.8, ease: 'backOut' }}
     >
@@ -79,7 +79,7 @@ const ExpandableCard = ({ title, paragraph, image }: ExpandableCardProps) => {
           className="text-white text-xs sm:text-sm opacity-80 mt-2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isExpanded ? 1 : 0, y: isExpanded ? 0 : 20 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.4 }}
         >
           {paragraph}
         </motion.p>
