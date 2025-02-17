@@ -4,13 +4,13 @@ import { Document } from '../main';
 export const flipBadge: Document = {
   sideBar: {
     group: 'Components',
-    name: 'FlipBadge',
+    name: 'Flip Badge',
     order: 3
   },
   content: {
     sections: [
       {
-        heading: 'FlipBadge',
+        heading: 'Flip Badge',
         content:
           'Ever wanted a badge that stands out—literally? This component adds a dynamic flipping effect to your badges, making them feel interactive and eye-catching. Perfect for status indicators, achievement badges, or call-to-action elements. Fully customizable with different colors, and content on each side.',
         sectionType: 'paragraph'

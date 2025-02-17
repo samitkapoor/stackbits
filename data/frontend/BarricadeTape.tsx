@@ -4,13 +4,13 @@ import { Document } from '../main';
 export const barricadeTape: Document = {
   sideBar: {
     group: 'Components',
-    name: 'BarricadeTape',
+    name: 'Barricade Tape',
     order: 10
   },
   content: {
     sections: [
       {
-        heading: 'BarricadeTape',
+        heading: 'Barricade Tape',
         content:
           'BarricadeTape is a bold, no-nonsense banner that slides in like crime scene tape, making sure your message can’t be ignored. Whether it’s a warning, an alert, or just some dev humor, this tape grabs attention and doesn’t let go. It swoops in smoothly when in view—because important messages deserve a grand entrance.',
         sectionType: 'paragraph'

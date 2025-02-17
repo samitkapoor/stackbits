@@ -124,20 +124,20 @@ const sideBarOptions: Array<{
         content: accordion
       },
       {
-        name: 'BarricadeTape',
+        name: 'Barricade Tape',
         href: '/docs/barricadeTape',
         content: barricadeTape,
         isNew: true
       },
-      { name: 'CustomScrollbar', href: '/docs/customscrollbar', content: customScrollbar },
+      // { name: 'CustomScrollbar', href: '/docs/customscrollbar', content: customScrollbar },
       {
-        name: 'ExpandableCard',
+        name: 'Expandable Card',
         href: '/docs/expandablecard',
         content: expandableCard
       },
-      { name: 'FlickerBox', href: '/docs/flickerbox', content: flicker },
-      { name: 'FlipBadge', href: '/docs/flipbadge', content: flipBadge },
-      { name: 'StoryAvatar', href: '/docs/storyavatar', content: storyAvatar }
+      { name: 'Flicker Box', href: '/docs/flickerbox', content: flicker },
+      { name: 'Flip Badge', href: '/docs/flipbadge', content: flipBadge },
+      { name: 'Story Avatar', href: '/docs/storyavatar', content: storyAvatar }
     ]
   },
   {

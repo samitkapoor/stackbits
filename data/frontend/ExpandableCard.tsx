@@ -4,13 +4,13 @@ import ExpandableCard from '@/components/ui/expandable-card';
 export const expandableCard: Document = {
   sideBar: {
     group: 'Components',
-    name: 'ExpandableCard',
+    name: 'Expandable Card',
     order: 1
   },
   content: {
     sections: [
       {
-        heading: 'ExpandableCard',
+        heading: 'Expandable Card',
         content:
           'Think of an Expandable Card like a mystery box—compact, stylish, and hiding something exciting inside! Click, tap, or hover, and boom—it expands to reveal extra details, cool insights, or even a secret travel tip.',
         sectionType: 'paragraph'

@@ -4,13 +4,13 @@ import { Document } from '../main';
 export const flicker: Document = {
   sideBar: {
     group: 'Components',
-    name: 'FlickerBox',
+    name: 'Flicker Box',
     order: 1
   },
   content: {
     sections: [
       {
-        heading: 'FlickerBox',
+        heading: 'Flicker Box',
         content:
           'Ever wanted your components to have that mysterious glow? Maybe a soft flickering neon effect for a cyberpunk vibe? Or a subtle shimmer that catches the eye? Flicker wraps around any component and gives it a dynamic, flickering shadow—because static UI is just too predictable!',
         sectionType: 'paragraph'

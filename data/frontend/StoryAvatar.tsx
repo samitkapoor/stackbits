@@ -5,13 +5,13 @@ import StoryAvatar from '@/components/ui/story-avatar';
 export const storyAvatar: Document = {
   sideBar: {
     group: 'Components',
-    name: 'StoryAvatar',
+    name: 'Story Avatar',
     order: 2
   },
   content: {
     sections: [
       {
-        heading: 'StoryAvatar',
+        heading: 'Story Avatar',
         content:
           'Ever wanted to create an avatar like the ones you see on Instagram Stories? This component gives you a sleek, rounded profile avatar with a gradient border effect, perfect for highlighting user stories or statuses. Easily customizable with different border styles and hover effects to match your design needs.',
         sectionType: 'paragraph'
