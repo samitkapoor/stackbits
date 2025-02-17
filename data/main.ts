@@ -66,6 +66,24 @@ const sideBarOptions: Array<{
     ]
   },
   {
+    title: 'Texts',
+    children: [
+      {
+        name: 'CountUp',
+        href: '/docs/countup',
+        content: countUp,
+        isNew: true
+      },
+      { name: 'GlitchText', href: '/docs/glitchtext', content: glitchText },
+      { name: 'RainbowText', href: '/docs/rainbowtext', content: rainbowText },
+      {
+        name: 'SkewedText',
+        href: '/docs/skewedtext',
+        content: skewedText
+      },
+    ]
+  },
+  {
     title: 'Components',
     children: [
       {
@@ -79,14 +97,7 @@ const sideBarOptions: Array<{
         content: barricadeTape,
         isNew: true
       },
-      {
-        name: 'CountUp',
-        href: '/docs/countup',
-        content: countUp,
-        isNew: true
-      },
       { name: 'CustomScrollbar', href: '/docs/customscrollbar', content: customScrollbar },
-      { name: 'GlitchText', href: '/docs/glitchtext', content: glitchText },
       {
         name: 'ExpandableCard',
         href: '/docs/expandablecard',
@@ -100,12 +111,6 @@ const sideBarOptions: Array<{
       },
       { name: 'FlickerBox', href: '/docs/flickerbox', content: flicker },
       { name: 'FlipBadge', href: '/docs/flipbadge', content: flipBadge },
-      { name: 'RainbowText', href: '/docs/rainbowtext', content: rainbowText },
-      {
-        name: 'SkewedText',
-        href: '/docs/skewedtext',
-        content: skewedText
-      },
       { name: 'StoryAvatar', href: '/docs/storyavatar', content: storyAvatar }
     ]
   },
