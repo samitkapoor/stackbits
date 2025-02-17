@@ -34,7 +34,7 @@ const SkewedText = ({ children, className }: { children: React.ReactNode; classN
       style={{
         transform: `perspective(300px) rotateX(20deg) rotateY(3deg)`
       }}
-      className="w-full flex items-center justify-center"
+      className="w-full flex items-center justify-center p-10"
     >
       <motion.p
         ref={pRef}
