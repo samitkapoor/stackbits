@@ -22,6 +22,7 @@ import { expandableIconButton } from './frontend/ExpandableIconButton';
 import { countUp } from './frontend/CountUp';
 import { copyTextButton } from './frontend/CopyTextButton';
 import { animatedGradientButton } from './frontend/AnimatedGradientButton';
+import { glassButton } from './frontend/GlassButton';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -98,6 +99,12 @@ const sideBarOptions: Array<{
         name: 'CopyTextButton',
         href: '/docs/copytextbutton',
         content: copyTextButton,
+        isNew: true
+      },
+      {
+        name: 'GlassButton',
+        href: '/docs/glassbutton',
+        content: glassButton,
         isNew: true
       },
       {
