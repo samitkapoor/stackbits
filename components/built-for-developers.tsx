@@ -1,5 +1,5 @@
 import { TwitterIcon } from 'lucide-react';
-import CopyButton from './ui/copy-button';
+import CopyTextButton from './ui/copy-text-button';
 
 const BuiltForDevelopers = () => {
   const twitterHandle = 'x.com/samitkapoorr';
@@ -23,7 +23,7 @@ const BuiltForDevelopers = () => {
 
       <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
         <span className="text-gray-400">If you love it, drop a shoutout on</span>
-        <CopyButton handle={twitterHandle} icon={<TwitterIcon className="w-5 h-5" />} />
+        <CopyTextButton handle={twitterHandle} icon={<TwitterIcon className="w-5 h-5" />} />
       </div>
     </section>
   );

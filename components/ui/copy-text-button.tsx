@@ -1,16 +1,16 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Check } from 'lucide-react';
+import { Check, Copy } from 'lucide-react';
 
-const CopyButton = ({
-  handle,
-  icon,
+const CopyTextButton = ({
+  handle, // * Text you want the user to copy
+  icon = <Copy className="h-5 w-5"/>, // * Icon to show on the button
   variant = 'default',
   onCopy
 }: {
   handle: string;
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
   variant?: 'default' | 'small';
   onCopy?: () => void;
 }) => {
@@ -39,4 +39,4 @@ const CopyButton = ({
   );
 };
 
-export default CopyButton;
+export default CopyTextButton;

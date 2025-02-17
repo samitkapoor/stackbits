@@ -20,6 +20,7 @@ import { skewedText } from './frontend/SkewedText';
 import { barricadeTape } from './frontend/BarricadeTape';
 import { expandableIconButton } from './frontend/ExpandableIconButton';
 import { countUp } from './frontend/CountUp';
+import { copyTextButton } from './frontend/CopyTextButton';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -84,6 +85,23 @@ const sideBarOptions: Array<{
     ]
   },
   {
+    title: 'Buttons',
+    children: [
+      {
+        name: 'ExpandableIconButton',
+        href: '/docs/expandableiconbutton',
+        content: expandableIconButton,
+        isNew: true
+      },
+      {
+        name: 'CopyTextButton',
+        href: '/docs/copytextbutton',
+        content: copyTextButton,
+        isNew: true
+      }
+    ]
+  },
+  {
     title: 'Components',
     children: [
       {
@@ -102,12 +120,6 @@ const sideBarOptions: Array<{
         name: 'ExpandableCard',
         href: '/docs/expandablecard',
         content: expandableCard
-      },
-      {
-        name: 'ExpandableIconButton',
-        href: '/docs/expandableiconbutton',
-        content: expandableIconButton,
-        isNew: true
       },
       { name: 'FlickerBox', href: '/docs/flickerbox', content: flicker },
       { name: 'FlipBadge', href: '/docs/flipbadge', content: flipBadge },

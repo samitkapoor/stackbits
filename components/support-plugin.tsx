@@ -1,5 +1,5 @@
 import React from 'react';
-import CopyButton from './ui/copy-button';
+import CopyTextButton from './ui/copy-text-button';
 import { Mail, Twitter } from 'lucide-react';
 
 const SupportPlugin = () => {
@@ -10,8 +10,8 @@ const SupportPlugin = () => {
         <br /> Feel free to reach out!
       </p>
 
-      <CopyButton handle="samitkapoorr" icon={<Twitter className="w-4 h-4" />} variant="small" />
-      <CopyButton
+      <CopyTextButton handle="samitkapoorr" icon={<Twitter className="w-4 h-4" />} variant="small" />
+      <CopyTextButton
         handle="samitkapoor77@gmail.com"
         icon={<Mail className="w-4 h-4" />}
         variant="small"

@@ -1,7 +1,7 @@
 import crypto from 'crypto';
 
 import { Document } from '../main';
-import CopyButton from '@/components/ui/copy-button';
+import CopyTextButton from '@/components/ui/copy-text-button';
 import { Copy } from 'lucide-react';
 import EncryptionDecryptionDemo from '@/components/encryption-decryption';
 
@@ -46,7 +46,7 @@ export const encryptionDecryption: Document = {
               Copy a secret key using the button below and store it in your .env file or somewhere
               safe.
             </p>
-            <CopyButton
+            <CopyTextButton
               icon={<Copy className="w-4 h-4" />}
               handle="Copy a new secret"
               onCopy={generateCryptoSecret}
