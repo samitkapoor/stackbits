@@ -5,15 +5,15 @@ import { Rocket } from 'lucide-react';
 export const copyTextButton: Document = {
   sideBar: {
     group: 'Components',
-    name: 'ExpandableIconButton',
+    name: 'CopyTextButton',
     order: 11
   },
   content: {
     sections: [
       {
-        heading: 'ExpandableIconButton',
+        heading: 'CopyTextButton',
         content:
-          'Think of this as the Clark Kent of buttons—small, subtle, and all business at first. But the moment you hover, BOOM! It expands, revealing its secret identity (a text label!).',
+          'A simple button that lets users quickly copy text, making it ideal for links, tags, or any reusable content. It can include visual feedback, such as a tooltip or icon change, to confirm successful copying.',
         sectionType: 'paragraph'
       },
       {
