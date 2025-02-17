@@ -9,7 +9,7 @@ import { encryptionDecryption } from './utilities/EncryptionDecryption';
 import { regexValidations } from './utilities/RegexValidations';
 import { debounce } from './utilities/Debounce';
 import { expandableCard } from './frontend/ExpandableCard';
-import { customScrollbar } from './frontend/CustomScrollbar';
+// import { customScrollbar } from './frontend/CustomScrollbar';
 import { glitchText } from './frontend/GlitchText';
 import { yupValidations } from './utilities/YupValidations';
 import { darkThemeLightTheme } from './utilities/DarkThemeLightTheme';

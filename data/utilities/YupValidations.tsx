@@ -1,5 +1,4 @@
 import { Document } from '../main';
-import InputRegexValidationDemo from '@/components/input-regex-validation-demo';
 
 export const yupValidations: Document = {
   sideBar: {

@@ -42,9 +42,7 @@ export const expandableCard: Document = {
         sectionType: 'component',
         description:
           'Create a file expandable-card.tsx in your components folder and paste this code',
-        code: `'use client';
-
-import { useState } from 'react';
+        code: `import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 type ExpandableCardProps = {

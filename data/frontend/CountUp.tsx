@@ -1,4 +1,3 @@
-import GlitchText from '@/components/ui/glitch-text';
 import { Document } from '../main';
 import CountUp from '@/components/ui/count-up';
 
