@@ -21,6 +21,7 @@ import { barricadeTape } from './frontend/BarricadeTape';
 import { expandableIconButton } from './frontend/ExpandableIconButton';
 import { countUp } from './frontend/CountUp';
 import { copyTextButton } from './frontend/CopyTextButton';
+import { animatedGradientButton } from './frontend/AnimatedGradientButton';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -81,22 +82,28 @@ const sideBarOptions: Array<{
         name: 'SkewedText',
         href: '/docs/skewedtext',
         content: skewedText
-      },
+      }
     ]
   },
   {
     title: 'Buttons',
     children: [
       {
-        name: 'ExpandableIconButton',
-        href: '/docs/expandableiconbutton',
-        content: expandableIconButton,
+        name: 'AnimatedGradientButton',
+        href: '/docs/animatedgradientbutton',
+        content: animatedGradientButton,
         isNew: true
       },
       {
         name: 'CopyTextButton',
         href: '/docs/copytextbutton',
         content: copyTextButton,
+        isNew: true
+      },
+      {
+        name: 'ExpandableIconButton',
+        href: '/docs/expandableiconbutton',
+        content: expandableIconButton,
         isNew: true
       }
     ]
