@@ -10,7 +10,9 @@ const GradientButton = ({ children, className, ...props }: GradientButtonProps) 
   return (
     <motion.button
       {...props}
-      initial={{ background: 'linear-gradient(45deg, #84cc16, #ec4899)' }}
+      initial={{ background: 'linear-gradient(45deg, #84cc16, #ec4899)', scale: 1 }}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
       animate={{
         background: [
           'linear-gradient(45deg, #84cc16, #ec4899)',
@@ -23,10 +25,10 @@ const GradientButton = ({ children, className, ...props }: GradientButtonProps) 
           'linear-gradient(45deg, #ff77ff, #00aaff)',
           'linear-gradient(45deg, #ff3d00, #ffea00)',
           'linear-gradient(45deg, #2196f3, #4caf50)'
-        ]
+        ],
+        transition: { duration: 20, repeat: Infinity, repeatType: 'reverse' }
       }}
-      transition={{ duration: 20, repeat: Infinity, repeatType: 'reverse' }}
-      className={`outline-none border-[2px] border-[#ffffff5a] hover:border-white px-4 py-2 text-white transition-all duration-500 ease-in-out ${className}`}
+      className={`outline-none border-[2px] border-[#ffffff5a] hover:border-white px-4 py-2 text-white ${className}`}
     >
       {children}
     </motion.button>
