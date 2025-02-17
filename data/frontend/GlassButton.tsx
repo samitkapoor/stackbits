@@ -5,7 +5,7 @@ export const glassButton: Document = {
   sideBar: {
     group: 'Buttons',
     name: 'GlassButton',
-    order: 4
+    order: 3
   },
   content: {
     sections: [

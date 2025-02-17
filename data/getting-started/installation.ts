@@ -10,11 +10,11 @@ export const installation: Document = {
     sections: [
       {
         heading: 'Installation?',
-        content: "You don't need any!",
+        content: "You don't need any! 😉",
         sectionType: 'paragraph'
       },
       {
-        heading: 'No Setup, No Hassle',
+        heading: 'No Setup, No Hassle ❤️',
         content:
           'StackBits is designed to be as simple as possible. No installations—just copy, paste, and go!',
         sectionType: 'paragraph'

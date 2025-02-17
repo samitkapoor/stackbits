@@ -1,13 +1,11 @@
-import CopyTextButton from '@/components/ui/copy-text-button';
 import { Document } from '../main';
-import { Rocket } from 'lucide-react';
 import AnimatedGradientButton from '@/components/ui/animated-gradient-button';
 
 export const animatedGradientButton: Document = {
   sideBar: {
-    group: 'Components',
-    name: 'AnimatedGradientButton',
-    order: 11
+    group: 'Buttons',
+    name: 'Animated Gradient Button',
+    order: 1
   },
   content: {
     sections: [
@@ -45,12 +43,12 @@ export const animatedGradientButton: Document = {
         code: `import React from 'react';
 import { HTMLMotionProps, motion } from 'framer-motion';
 
-type GradientButtonProps = HTMLMotionProps<'button'> & {
+type AnimatedGradientButtonProps = HTMLMotionProps<'button'> & {
   children?: React.ReactNode;
   className?: string;
 };
 
-const GradientButton = ({ children, className, ...props }: GradientButtonProps) => {
+const AnimatedGradientButton = ({ children, className, ...props }: AnimatedGradientButtonProps) => {
   return (
     <motion.button
       {...props}
@@ -79,7 +77,8 @@ const GradientButton = ({ children, className, ...props }: GradientButtonProps) 
   );
 };
 
-export default GradientButton;
+export default AnimatedGradientButton;
+
 `
       },
       {

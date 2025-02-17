@@ -72,15 +72,15 @@ const sideBarOptions: Array<{
     title: 'Texts',
     children: [
       {
-        name: 'CountUp',
+        name: 'Count Up',
         href: '/docs/countup',
         content: countUp,
         isNew: true
       },
-      { name: 'GlitchText', href: '/docs/glitchtext', content: glitchText },
-      { name: 'RainbowText', href: '/docs/rainbowtext', content: rainbowText },
+      { name: 'Glitch Text', href: '/docs/glitchtext', content: glitchText },
+      { name: 'Rainbow Text', href: '/docs/rainbowtext', content: rainbowText },
       {
-        name: 'SkewedText',
+        name: 'Skewed Text',
         href: '/docs/skewedtext',
         content: skewedText
       }
@@ -90,25 +90,25 @@ const sideBarOptions: Array<{
     title: 'Buttons',
     children: [
       {
-        name: 'AnimatedGradientButton',
+        name: 'Animated Gradient Button',
         href: '/docs/animatedgradientbutton',
         content: animatedGradientButton,
         isNew: true
       },
       {
-        name: 'CopyTextButton',
+        name: 'Copy Text Button',
         href: '/docs/copytextbutton',
         content: copyTextButton,
         isNew: true
       },
       {
-        name: 'GlassButton',
+        name: 'Glass Button',
         href: '/docs/glassbutton',
         content: glassButton,
         isNew: true
       },
       {
-        name: 'ExpandableIconButton',
+        name: 'Expandable Icon Button',
         href: '/docs/expandableiconbutton',
         content: expandableIconButton,
         isNew: true

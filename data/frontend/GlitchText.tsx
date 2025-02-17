@@ -3,14 +3,14 @@ import { Document } from '../main';
 
 export const glitchText: Document = {
   sideBar: {
-    group: 'Components',
-    name: 'GlitchText',
-    order: 6
+    group: 'Texts',
+    name: 'Glitch Text',
+    order: 2
   },
   content: {
     sections: [
       {
-        heading: 'GlitchText',
+        heading: 'Glitch Text',
         content:
           'Bored of plain old text? Want your words to look like they just escaped the Matrix? Meet GlitchText—a funky, animated, cyberpunk-style text effect that adds a chaotic, digital distortion to your UI.',
         sectionType: 'paragraph'

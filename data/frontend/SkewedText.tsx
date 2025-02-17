@@ -4,14 +4,14 @@ import RainbowText from '@/components/ui/rainbow-text';
 
 export const skewedText: Document = {
   sideBar: {
-    group: 'Components',
-    name: 'SkewedText',
-    order: 7
+    group: 'Texts',
+    name: 'Skewed Text',
+    order: 4
   },
   content: {
     sections: [
       {
-        heading: 'SkewedText',
+        heading: 'Skewed Text',
         content:
           'Step into the digital future with SkewedText, a dynamic and animated text effect that distorts and tilts your words as if they’re breaking free from a static world. Inspired by cyberpunk aesthetics, sci-fi interfaces, and glitchy digital landscapes, this effect brings a sense of movement, depth, and perspective to your typography. Perfect for hacking-inspired designs, neon-lit interfaces, or just making text look cool, this effect distorts, shifts, and skews with interactivity—reacting dynamically to your cursor movements. Make your UI feel responsive, immersive, and ahead of its time.',
         sectionType: 'paragraph'

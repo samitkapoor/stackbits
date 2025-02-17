@@ -4,14 +4,14 @@ import CountUp from '@/components/ui/count-up';
 
 export const countUp: Document = {
   sideBar: {
-    group: 'Components',
-    name: 'CountUp',
+    group: 'Texts',
+    name: 'Count Up',
     order: 12
   },
   content: {
     sections: [
       {
-        heading: 'CountUp',
+        heading: 'Count Up',
         content:
           'The CountUp component brings numbers to life with a smooth animated climb from start to target, making stats and achievements more exciting! Watch the magic unfold as it counts up, and when it hits the goal—boom! A burst of confetti celebrates the moment.',
         sectionType: 'paragraph'

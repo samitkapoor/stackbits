@@ -4,14 +4,14 @@ import { Rocket } from 'lucide-react';
 
 export const copyTextButton: Document = {
   sideBar: {
-    group: 'Components',
-    name: 'CopyTextButton',
-    order: 11
+    group: 'Buttons',
+    name: 'Copy Text Button',
+    order: 2
   },
   content: {
     sections: [
       {
-        heading: 'CopyTextButton',
+        heading: 'Copy Text Button',
         content:
           'A simple button that lets users quickly copy text, making it ideal for links, tags, or any reusable content. It can include visual feedback, such as a tooltip or icon change, to confirm successful copying.',
         sectionType: 'paragraph'
@@ -21,7 +21,9 @@ export const copyTextButton: Document = {
         sectionType: 'preview',
         code: (
           <div className="h-full w-full flex flex-col items-center justify-center gap-2">
-            <p className="text-center text-xs sm:text-base">Click the button below to copy the text</p>
+            <p className="text-center text-xs sm:text-base">
+              Click the button below to copy the text
+            </p>
             <CopyTextButton handle={'Stackbits is awesome'} icon={<Rocket className="h-5 w-5" />} />
           </div>
         )

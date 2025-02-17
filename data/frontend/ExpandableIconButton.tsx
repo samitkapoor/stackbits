@@ -5,14 +5,14 @@ import RainbowText from '@/components/ui/rainbow-text';
 
 export const expandableIconButton: Document = {
   sideBar: {
-    group: 'Components',
-    name: 'ExpandableIconButton',
-    order: 11
+    group: 'Buttons',
+    name: 'Expandable Icon Button',
+    order: 4
   },
   content: {
     sections: [
       {
-        heading: 'ExpandableIconButton',
+        heading: 'Expandable Icon Button',
         content:
           'Think of this as the Clark Kent of buttons—small, subtle, and all business at first. But the moment you hover, BOOM! It expands, revealing its secret identity (a text label!).',
         sectionType: 'paragraph'

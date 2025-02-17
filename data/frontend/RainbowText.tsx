@@ -3,14 +3,14 @@ import RainbowText from '@/components/ui/rainbow-text';
 
 export const rainbowText: Document = {
   sideBar: {
-    group: 'Components',
-    name: 'RainbowText',
-    order: 7
+    group: 'Texts',
+    name: 'Rainbow Text',
+    order: 3
   },
   content: {
     sections: [
       {
-        heading: 'RainbowText',
+        heading: '🌈 Rainbow Text',
         content:
           'RainbowText is a dynamic React component that brings text to life with smooth, animated gradients. Perfect for creating eye-catching headlines, call-to-actions, or any UI element that needs a bold and colorful touch.',
         sectionType: 'paragraph'

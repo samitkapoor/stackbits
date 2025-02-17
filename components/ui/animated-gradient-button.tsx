@@ -1,12 +1,12 @@
 import React from 'react';
 import { HTMLMotionProps, motion } from 'framer-motion';
 
-type GradientButtonProps = HTMLMotionProps<'button'> & {
+type AnimatedGradientButtonProps = HTMLMotionProps<'button'> & {
   children?: React.ReactNode;
   className?: string;
 };
 
-const GradientButton = ({ children, className, ...props }: GradientButtonProps) => {
+const AnimatedGradientButton = ({ children, className, ...props }: AnimatedGradientButtonProps) => {
   return (
     <motion.button
       {...props}
@@ -35,4 +35,4 @@ const GradientButton = ({ children, className, ...props }: GradientButtonProps) 
   );
 };
 
-export default GradientButton;
+export default AnimatedGradientButton;
