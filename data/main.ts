@@ -23,6 +23,7 @@ import { countUp } from './frontend/CountUp';
 import { copyTextButton } from './frontend/CopyTextButton';
 import { animatedGradientButton } from './frontend/AnimatedGradientButton';
 import { glassButton } from './frontend/GlassButton';
+import { toggleButton } from './frontend/ToggleButton';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -111,6 +112,12 @@ const sideBarOptions: Array<{
         name: 'Expandable Icon Button',
         href: '/docs/expandableiconbutton',
         content: expandableIconButton,
+        isNew: true
+      },
+      {
+        name: 'Toggle Button',
+        href: '/docs/togglebutton',
+        content: toggleButton,
         isNew: true
       }
     ]
