@@ -15,7 +15,7 @@ const TradingCard: React.FC<TradingCardProps> = ({ illustration, rank, name, des
   const contentControls = useAnimationControls();
   const cardControls = useAnimationControls();
 
-  const onMouseEnter: React.MouseEventHandler<HTMLDivElement> = (e) => {
+  const onMouseEnter: React.MouseEventHandler<HTMLDivElement> = () => {
     contentControls.start({ x: -300 });
     backgroundControls.start({ scale: 1.05, opacity: 1 });
   };
