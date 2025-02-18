@@ -26,6 +26,7 @@ import { glassButton } from './frontend/GlassButton';
 import { toggleButton } from './frontend/ToggleButton';
 import { glassCard } from './frontend/GlassCard';
 import { tradingCard } from './frontend/TradingCard';
+import { SearchResult } from '@/components/support-plugin';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -217,4 +218,66 @@ export const getDocs = (docId: string) => {
     (child) =>
       child.name.toLowerCase().replaceAll(' ', '') === decodeURIComponent(docId.toLowerCase())
   )[0].content;
+};
+
+const extractSubstring = (A: string, B: string) => {
+  const index = B.toLowerCase().indexOf(A.toLowerCase());
+  if (index !== -1) {
+    return B.substring(index);
+  }
+  return '';
+};
+
+export const searchDocs = (q: string): Array<SearchResult> => {
+  const query = q.toLowerCase();
+  if (query === '') return [];
+
+  const results: Array<SearchResult> = [];
+
+  sideBarOptions.forEach((sideBarGroup) => {
+    const { children } = sideBarGroup;
+
+    children.forEach((doc) => {
+      const sections = doc.content.content.sections;
+
+      let takeIt: boolean = false;
+      let preview: string = '';
+
+      for (let i = 0; i < sections.length; i++) {
+        const section = sections[i];
+        const { sectionType, heading, content, sentence, code, description } = section;
+
+        if (sectionType === 'ordered-list') {
+          continue;
+        }
+
+        if (heading?.toLowerCase().includes(query)) {
+          takeIt = true;
+          preview = extractSubstring(query, heading);
+        } else if (typeof content === 'string' && content.toLowerCase().includes(query)) {
+          takeIt = true;
+          preview = extractSubstring(query, content);
+        } else if (sentence?.toLowerCase().includes(query)) {
+          takeIt = true;
+          preview = extractSubstring(query, sentence);
+        } else if (typeof code === 'string' && code?.toLowerCase().includes(query)) {
+          takeIt = true;
+          preview = extractSubstring(query, code);
+        } else if (description?.toLowerCase().includes(query)) {
+          takeIt = true;
+          preview = extractSubstring(query, description);
+        }
+      }
+
+      if (takeIt) {
+        results.push({
+          name: doc.name,
+          preview,
+          to: doc.href
+        });
+      }
+    });
+  });
+
+  return results.slice(0, 5);
 };
