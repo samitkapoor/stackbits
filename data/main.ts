@@ -230,7 +230,7 @@ const extractSubstring = (A: string, B: string) => {
 
 export const searchDocs = (q: string): Array<SearchResult> => {
   const query = q.toLowerCase();
-  if (query === '') return [];
+  if (query === '' || query.length < 3) return [];
 
   const results: Array<SearchResult> = [];
 
