@@ -24,6 +24,7 @@ import { copyTextButton } from './frontend/CopyTextButton';
 import { animatedGradientButton } from './frontend/AnimatedGradientButton';
 import { glassButton } from './frontend/GlassButton';
 import { toggleButton } from './frontend/ToggleButton';
+import { glassCard } from './frontend/GlassCard';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -123,6 +124,22 @@ const sideBarOptions: Array<{
     ]
   },
   {
+    title: 'Cards',
+    children: [
+      {
+        name: 'Expandable Card',
+        href: '/docs/expandablecard',
+        content: expandableCard
+      },
+      {
+        name: 'Glass Card',
+        href: '/docs/glasscard',
+        content: glassCard,
+        isNew: true
+      }
+    ]
+  },
+  {
     title: 'Components',
     children: [
       {
@@ -137,11 +154,6 @@ const sideBarOptions: Array<{
         isNew: true
       },
       // { name: 'CustomScrollbar', href: '/docs/customscrollbar', content: customScrollbar },
-      {
-        name: 'Expandable Card',
-        href: '/docs/expandablecard',
-        content: expandableCard
-      },
       { name: 'Flicker Box', href: '/docs/flickerbox', content: flicker },
       { name: 'Flip Badge', href: '/docs/flipbadge', content: flipBadge },
       { name: 'Story Avatar', href: '/docs/storyavatar', content: storyAvatar }

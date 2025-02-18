@@ -3,7 +3,7 @@ import ExpandableCard from '@/components/ui/expandable-card';
 
 export const expandableCard: Document = {
   sideBar: {
-    group: 'Components',
+    group: 'Cards',
     name: 'Expandable Card',
     order: 1
   },
