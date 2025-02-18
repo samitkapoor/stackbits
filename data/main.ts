@@ -25,6 +25,7 @@ import { animatedGradientButton } from './frontend/AnimatedGradientButton';
 import { glassButton } from './frontend/GlassButton';
 import { toggleButton } from './frontend/ToggleButton';
 import { glassCard } from './frontend/GlassCard';
+import { tradingCard } from './frontend/TradingCard';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -127,15 +128,21 @@ const sideBarOptions: Array<{
     title: 'Cards',
     children: [
       {
-        name: 'Expandable Card',
-        href: '/docs/expandablecard',
-        content: expandableCard
+        name: 'Trading Card',
+        href: '/docs/tradingCard',
+        content: tradingCard,
+        isNew: true
       },
       {
         name: 'Glass Card',
         href: '/docs/glasscard',
         content: glassCard,
         isNew: true
+      },
+      {
+        name: 'Expandable Card',
+        href: '/docs/expandablecard',
+        content: expandableCard
       }
     ]
   },
