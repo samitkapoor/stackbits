@@ -17,11 +17,19 @@ const HeroIllustration = () => {
   const onMouseMove = (e: MouseEvent<HTMLDivElement | HTMLButtonElement>) => {
     if (!divRef.current) return;
 
-    const rect = divRef.current.getBoundingClientRect();
-    const x = (e.clientX - rect.left - rect.width / 2) / 8;
-    const y = (e.clientY - rect.top - rect.height / 2) / 8;
+    const rect = divRef.current?.getBoundingClientRect();
+    if (!rect) return;
 
-    divRef.current.style.transform = `rotateY(${y}deg) rotateX(${x}deg)`;
+    const mx = e.clientX - rect.left;
+    const my = e.clientY - rect.top;
+
+    const width = rect.right - rect.left;
+    const height = rect.bottom - rect.top;
+
+    const xd = (mx - width / 2) / 10;
+    const yd = (height / 2 - my) / 10;
+
+    divRef.current.style.transform = `perspective(1000px) rotateY(${xd}deg) rotateX(${yd}deg)`;
   };
 
   const onMouseEnter = () => {
@@ -34,7 +42,7 @@ const HeroIllustration = () => {
   const onMouseLeave = () => {
     setIsHovering(false);
     if (!divRef.current || !buttonRef.current) return;
-    divRef.current.style.transform = 'rotateY(0deg) rotateX(0deg)';
+    divRef.current.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg)';
     buttonRef.current.style.transform = 'translateZ(0px) translateX(0px) translateY(0px) scale(1)';
   };
 
@@ -45,6 +53,8 @@ const HeroIllustration = () => {
       onMouseLeave={onMouseLeave}
       onMouseEnter={onMouseEnter}
       style={{
+        transform: 'perspective(1000px) rotateX(0deg) rotateY(0deg)',
+        transformStyle: 'preserve-3d',
         background: isHovering
           ? 'linear-gradient(135deg, transparent 0%, #cbcbcb30 50%, transparent 100%), linear-gradient(45deg, transparent 0%, #cbcbcb30 50%, transparent 100%)'
           : 'linear-gradient(135deg, transparent 0%, #cbcbcb25 50%, transparent 100%), linear-gradient(45deg, transparent 0%, #cbcbcb25 50%, transparent 100%)'
