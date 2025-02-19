@@ -170,7 +170,7 @@ const HeroSection = () => {
                 }}
                 animate={{
                   opacity: 1,
-                  transition: { duration: 1.2, ease: 'backOut', delay: 2 }
+                  transition: { duration: 1.2, ease: 'backOut', delay: 1.5 }
                 }}
                 className="text-[14px] sm:text-[16px] lg:text-[14px] leading-6 mt-10 md:mt-10 text-center lg:text-left px-5"
               >

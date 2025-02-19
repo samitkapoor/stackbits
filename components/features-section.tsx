@@ -112,7 +112,7 @@ const FeaturesSection = () => {
           </div>
           <RainbowText
             duration={8}
-            className="text-center font-bold text-2xl sm:text-3xl md:text-6xl mt-10"
+            className="text-center text-xl md:text-2xl lg:text-4xl font-extrabold mt-10"
           >
             Yes, it&apos;s that easy.
           </RainbowText>
@@ -155,7 +155,7 @@ const FeaturesSection = () => {
         </div>
 
         <Link href="/docs/introduction">
-          <MovingBorderButton className="sm:text-xl md:text-4xl !px-5 sm:!px-10 py-4">
+          <MovingBorderButton className="text-lg md:text-xl lg:text-3xl font-medium !px-5 sm:!px-10 py-4">
             Join the speedforce
           </MovingBorderButton>
         </Link>
