@@ -155,7 +155,7 @@ const HeroSection = () => {
                   opacity: 1,
                   transition: { duration: 1.2, delay: 0.2 }
                 }}
-                className="mt-10 flex items-center justify-center w-full xl:justify-start"
+                className="mt-10 flex items-center justify-center xl:justify-start px-5"
               >
                 <Link href={'/docs/introduction'}>
                   <MovingBorderButton className="px-4 py-2 text-xl">
