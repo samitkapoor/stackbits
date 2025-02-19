@@ -5,7 +5,7 @@ const BuiltForDevelopers = () => {
   const twitterHandle = 'x.com/samitkapoorr';
 
   return (
-    <section className="bg-black text-white py-16 px-6 md:px-12 text-center relative">
+    <section className="bg-black text-white py-16 px-6 md:px-12 text-center relative mt-32">
       <div className="absolute inset-0 bg-grid-white/20 pointer-events-none"></div>
 
       <h2 className="text-3xl md:text-4xl font-bold text-center relative">
