@@ -145,7 +145,7 @@ const HeroSection = () => {
                 developers with time-saving tools and ready-to-use code for seamless integration.
               </motion.p>
               <div className="grid grid-cols-2 gap-2 mt-10 px-5">
-                {features.map((feature, index) => {
+                {features.map((feature) => {
                   return <IconCard key={feature.text} icon={feature.icon} text={feature.text} />;
                 })}
               </div>
