@@ -22,12 +22,12 @@ const TopBar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="w-full flex items-center justify-between px-10 lg:px-40 ">
+    <div className="w-full flex items-center justify-between px-10 lg:px-40 h-[120px]">
       <div className="py-3">
         <Image
           src="/stackbits-logo.png"
           alt="logo"
-          height={150}
+          height={100}
           width={150}
           className="h-[65px] sm:h-[150px] w-[65px] sm:w-[150px] object-contain"
         />
