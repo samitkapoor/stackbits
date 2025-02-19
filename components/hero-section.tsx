@@ -164,6 +164,20 @@ const HeroSection = () => {
                   </MovingBorderButton>
                 </Link>
               </motion.div>
+              <motion.p
+                initial={{
+                  opacity: 0
+                }}
+                animate={{
+                  opacity: 1,
+                  transition: { duration: 1.2, ease: 'backOut', delay: 2 }
+                }}
+                className="text-[14px] sm:text-[16px] lg:text-[14px] leading-6 mt-10 md:mt-10 text-center lg:text-left px-5"
+              >
+                Other devs *write* code. You? You *assemble* greatness.{' '}
+                <br className="hidden sm:block" />
+                With StackBits, you get copy-paste-ready snippets that actually work (yes, really).
+              </motion.p>
             </div>
             <HeroIllustration />
           </div>
