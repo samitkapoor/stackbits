@@ -27,6 +27,7 @@ import { toggleButton } from './frontend/ToggleButton';
 import { glassCard } from './frontend/GlassCard';
 import { tradingCard } from './frontend/TradingCard';
 import { SearchResult } from '@/components/support-plugin';
+import { expressServer } from './utilities/ExpressServer';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -78,8 +79,7 @@ const sideBarOptions: Array<{
       {
         name: 'Count Up',
         href: '/docs/countup',
-        content: countUp,
-        isNew: true
+        content: countUp
       },
       { name: 'Glitch Text', href: '/docs/glitchtext', content: glitchText },
       { name: 'Rainbow Text', href: '/docs/rainbowtext', content: rainbowText },
@@ -96,32 +96,27 @@ const sideBarOptions: Array<{
       {
         name: 'Animated Gradient Button',
         href: '/docs/animatedgradientbutton',
-        content: animatedGradientButton,
-        isNew: true
+        content: animatedGradientButton
       },
       {
         name: 'Copy Text Button',
         href: '/docs/copytextbutton',
-        content: copyTextButton,
-        isNew: true
+        content: copyTextButton
       },
       {
         name: 'Glass Button',
         href: '/docs/glassbutton',
-        content: glassButton,
-        isNew: true
+        content: glassButton
       },
       {
         name: 'Expandable Icon Button',
         href: '/docs/expandableiconbutton',
-        content: expandableIconButton,
-        isNew: true
+        content: expandableIconButton
       },
       {
         name: 'Toggle Button',
         href: '/docs/togglebutton',
-        content: toggleButton,
-        isNew: true
+        content: toggleButton
       }
     ]
   },
@@ -137,8 +132,7 @@ const sideBarOptions: Array<{
       {
         name: 'Glass Card',
         href: '/docs/glasscard',
-        content: glassCard,
-        isNew: true
+        content: glassCard
       },
       {
         name: 'Expandable Card',
@@ -158,8 +152,7 @@ const sideBarOptions: Array<{
       {
         name: 'Barricade Tape',
         href: '/docs/barricadeTape',
-        content: barricadeTape,
-        isNew: true
+        content: barricadeTape
       },
       // { name: 'CustomScrollbar', href: '/docs/customscrollbar', content: customScrollbar },
       { name: 'Flicker Box', href: '/docs/flickerbox', content: flicker },
@@ -173,8 +166,7 @@ const sideBarOptions: Array<{
       {
         name: 'Custom Logger',
         href: '/docs/customlogger',
-        content: customLogger,
-        isNew: true
+        content: customLogger
       },
       {
         name: 'Dark & Light Theme',
@@ -190,6 +182,12 @@ const sideBarOptions: Array<{
         name: 'Encryption Decryption',
         href: '/docs/encryptiondecryption',
         content: encryptionDecryption
+      },
+      {
+        name: 'Express Server',
+        href: '/docs/expressserver',
+        content: expressServer,
+        isNew: true
       },
       {
         name: 'Regex Validations',
