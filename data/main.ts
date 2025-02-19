@@ -28,6 +28,7 @@ import { glassCard } from './frontend/GlassCard';
 import { tradingCard } from './frontend/TradingCard';
 import { SearchResult } from '@/components/support-plugin';
 import { expressServer } from './utilities/ExpressServer';
+import { axiosInterceptor } from './utilities/AxiosInterceptor';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -163,6 +164,12 @@ const sideBarOptions: Array<{
   {
     title: 'Utilities',
     children: [
+      {
+        name: 'Axios Interceptor',
+        href: '/docs/axiosinterceptor',
+        content: axiosInterceptor,
+        isNew: true
+      },
       {
         name: 'Custom Logger',
         href: '/docs/customlogger',
