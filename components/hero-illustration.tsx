@@ -11,7 +11,7 @@ const HeroIllustration = () => {
     setTimeout(() => {
       if (!divRef.current) return;
       divRef.current.style.opacity = '1';
-    }, 1600);
+    }, 200);
   }, [divRef]);
 
   const onMouseMove = (e: MouseEvent<HTMLDivElement | HTMLButtonElement>) => {
