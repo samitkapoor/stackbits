@@ -55,7 +55,7 @@ const HeroSection = () => {
   return (
     <div className="flex flex-col w-full items-center justify-center">
       <div className="flex items-center w-full relative">
-        <DotBackground className="justify-center sm:gap-10 md:gap-20 py-5 md:p-20 flex-col relative">
+        <DotBackground className="justify-center sm:gap-10 md:gap-20 py-5 md:p-8 flex-col relative">
           <motion.p
             initial={{
               opacity: 0,
