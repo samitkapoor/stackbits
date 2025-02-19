@@ -27,9 +27,9 @@ const TopBar = () => {
         <Image
           src="/stackbits-logo.png"
           alt="logo"
-          height={110}
-          width={110}
-          className="h-[65px] sm:h-[110px] w-[65px] sm:w-[110px] object-contain"
+          height={150}
+          width={150}
+          className="h-[65px] sm:h-[150px] w-[65px] sm:w-[150px] object-contain"
         />
       </div>
       <div className="flex items-center text-white">
