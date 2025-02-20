@@ -6,7 +6,7 @@ const BuiltForDevelopers = () => {
 
   return (
     <div>
-      <h2 className="text-3xl md:text-4xl mt-40 font-bold text-center relative">
+      <h2 className="text-3xl md:text-4xl m-10 font-bold text-center relative">
         Built for Developers, by a{' '}
         <span className="underline text-purple-300 hover:text-purple-200 transition-all">
           <a href="https://samitkapoor.com" target="_blank">
