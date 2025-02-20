@@ -29,6 +29,7 @@ import { tradingCard } from './frontend/TradingCard';
 import { SearchResult } from '@/components/support-plugin';
 import { expressServer } from './utilities/ExpressServer';
 import { axiosInterceptor } from './utilities/AxiosInterceptor';
+import { prismaticHaze } from './frontend/PrismaticHaze';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -158,6 +159,12 @@ const sideBarOptions: Array<{
       // { name: 'CustomScrollbar', href: '/docs/customscrollbar', content: customScrollbar },
       { name: 'Flicker Box', href: '/docs/flickerbox', content: flicker },
       { name: 'Flip Badge', href: '/docs/flipbadge', content: flipBadge },
+      {
+        name: 'Prismatic Haze',
+        href: '/docs/prismaticHaze',
+        content: prismaticHaze,
+        isNew: true
+      },
       { name: 'Story Avatar', href: '/docs/storyavatar', content: storyAvatar }
     ]
   },
