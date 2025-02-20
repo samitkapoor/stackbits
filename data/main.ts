@@ -30,6 +30,7 @@ import { SearchResult } from '@/components/support-plugin';
 import { expressServer } from './utilities/ExpressServer';
 import { axiosInterceptor } from './utilities/AxiosInterceptor';
 import { prismaticHaze } from './frontend/PrismaticHaze';
+import { colorCyclone } from './frontend/ColorCyclone';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -155,6 +156,12 @@ const sideBarOptions: Array<{
         name: 'Barricade Tape',
         href: '/docs/barricadeTape',
         content: barricadeTape
+      },
+      {
+        name: 'Color Cyclone',
+        href: '/docs/colorCyclone',
+        content: colorCyclone,
+        isNew: true
       },
       // { name: 'CustomScrollbar', href: '/docs/customscrollbar', content: customScrollbar },
       { name: 'Flicker Box', href: '/docs/flickerbox', content: flicker },

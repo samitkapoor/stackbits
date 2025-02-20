@@ -1,6 +1,5 @@
 import PrismaticHazeBackground from '@/components/ui/prismatic-haze';
 import { Document } from '../main';
-import AnimatedGradientButton from '@/components/ui/animated-gradient-button';
 
 export const prismaticHaze: Document = {
   sideBar: {
