@@ -1,6 +1,5 @@
 import React from 'react';
 import EndToEndBanner from './ui/barricade-tape';
-import RainbowText from './ui/rainbow-text';
 
 const BarricadeTapeDemo = () => {
   return (
