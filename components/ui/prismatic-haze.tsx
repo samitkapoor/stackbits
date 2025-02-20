@@ -1,6 +1,11 @@
 import React, { JSX, useRef } from 'react';
 import { Canvas, useFrame, extend } from '@react-three/fiber';
 import { shaderMaterial } from '@react-three/drei';
+import * as THREE from 'three';
+
+interface IridescentShaderMaterial extends THREE.ShaderMaterial {
+  uTime: number;
+}
 
 const IridescentShaderMaterial = shaderMaterial(
   { uTime: 0 },
@@ -90,7 +95,7 @@ declare module '@react-three/fiber' {
 }
 
 function PrismaticHazePlane() {
-  const materialRef = useRef<any>(null);
+  const materialRef = useRef<IridescentShaderMaterial | null>(null);
 
   useFrame(({ clock }) => {
     if (materialRef.current) {
