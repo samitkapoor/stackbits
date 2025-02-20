@@ -1,6 +1,14 @@
 import { Document } from '../main';
 import ColorCyclone from '@/components/ui/color-cyclone';
 
+export const colorCyclonePreview = (
+  <div className="h-full w-full flex items-center justify-center">
+    <ColorCyclone>
+      <p className="text-black font-extrabold text-xl">Color Cyclone Background</p>
+    </ColorCyclone>
+  </div>
+);
+
 export const colorCyclone: Document = {
   sideBar: {
     group: 'Components',

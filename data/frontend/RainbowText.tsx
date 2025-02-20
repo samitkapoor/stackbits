@@ -1,6 +1,12 @@
 import { Document } from '../main';
 import RainbowText from '@/components/ui/rainbow-text';
 
+export const rainbowTextPreview = (
+  <div className="h-full w-full flex items-center justify-center">
+    <RainbowText className="text-[50px] font-bold">Fresh Drop</RainbowText>
+  </div>
+);
+
 export const rainbowText: Document = {
   sideBar: {
     group: 'Texts',

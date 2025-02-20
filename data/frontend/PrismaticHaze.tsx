@@ -1,6 +1,14 @@
 import PrismaticHazeBackground from '@/components/ui/prismatic-haze';
 import { Document } from '../main';
 
+export const prismaticHazePreview = (
+  <div className="h-full w-full flex flex-col items-center justify-center gap-2">
+    <PrismaticHazeBackground className="flex items-center justify-center">
+      <p className="text-black font-extrabold text-xl">Prismatic Haze Background</p>
+    </PrismaticHazeBackground>
+  </div>
+);
+
 export const prismaticHaze: Document = {
   sideBar: {
     group: 'Components',

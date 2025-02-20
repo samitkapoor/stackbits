@@ -1,6 +1,12 @@
 import GlitchText from '@/components/ui/glitch-text';
 import { Document } from '../main';
 
+export const glitchTextPreview = (
+  <div className="h-full w-full flex items-center justify-center">
+    <GlitchText className="text-[50px] font-bold">Awesome</GlitchText>
+  </div>
+);
+
 export const glitchText: Document = {
   sideBar: {
     group: 'Texts',

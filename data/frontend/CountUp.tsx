@@ -1,6 +1,18 @@
 import { Document } from '../main';
 import CountUp from '@/components/ui/count-up';
 
+export const countUpPreview = (
+  <div className="h-full w-full flex items-center justify-center">
+    <CountUp
+      duration={1.5}
+      start={500}
+      target={777}
+      confettiDuration={50}
+      className="text-[50px] font-bold"
+    />
+  </div>
+);
+
 export const countUp: Document = {
   sideBar: {
     group: 'Texts',

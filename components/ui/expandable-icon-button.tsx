@@ -49,7 +49,7 @@ const ExpandableIconButton = ({ onClick, icon, text, className }: ExpandableIcon
         width: iconWidth + 32,
         opacity: iconWidth <= 0 ? 0 : 1
       }}
-      className={`grid grid-cols-2 items-center p-[16px] justify-start gap-[8px] rounded-full overflow-hidden ${className}`}
+      className={`grid grid-cols-2 items-center justify-start gap-[8px] overflow-hidden border-[1px] ${className}`}
     >
       <div ref={iconRef} className="p-0 flex items-center justify-center">
         {icon}

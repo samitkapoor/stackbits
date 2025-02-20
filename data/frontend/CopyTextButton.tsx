@@ -2,6 +2,13 @@ import CopyTextButton from '@/components/ui/copy-text-button';
 import { Document } from '../main';
 import { Rocket } from 'lucide-react';
 
+export const copyTextButtonPreview = (
+  <div className="h-full w-full flex flex-col items-center justify-center gap-2">
+    <p className="text-center text-xs sm:text-base">Click the button below to copy the text</p>
+    <CopyTextButton handle={'Stackbits is awesome'} icon={<Rocket className="h-5 w-5" />} />
+  </div>
+);
+
 export const copyTextButton: Document = {
   sideBar: {
     group: 'Buttons',
@@ -19,14 +26,7 @@ export const copyTextButton: Document = {
       {
         heading: 'Preview',
         sectionType: 'preview',
-        code: (
-          <div className="h-full w-full flex flex-col items-center justify-center gap-2">
-            <p className="text-center text-xs sm:text-base">
-              Click the button below to copy the text
-            </p>
-            <CopyTextButton handle={'Stackbits is awesome'} icon={<Rocket className="h-5 w-5" />} />
-          </div>
-        )
+        code: copyTextButtonPreview
       },
       {
         heading: 'Follow below steps 👇🏻',

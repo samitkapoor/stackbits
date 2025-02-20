@@ -7,6 +7,7 @@ import { getSideBarTabs } from '@/data/main';
 import Image from 'next/image';
 import Link from 'next/link';
 import RainbowText from './ui/rainbow-text';
+import { categories } from '@/app/docs/[id]/page';
 
 const SideBar = ({ isOpen }: { isOpen: boolean }) => {
   const tabs = getSideBarTabs();
@@ -36,7 +37,21 @@ const SideBar = ({ isOpen }: { isOpen: boolean }) => {
       {tabs.map((group) => {
         return (
           <div key={group.title} className="flex flex-col items-start gap-2">
-            <p className="font-semibold">{group.title}</p>
+            {categories.includes(group.title.toLowerCase()) ? (
+              <a
+                href={`/docs/${group.title.toLowerCase()}`}
+                className={
+                  (pathname?.split('docs/')[1] === group.title.toLowerCase()
+                    ? 'text-yellow-400'
+                    : 'hover:text-yellow-400 transition-all') + ' font-semibold'
+                }
+              >
+                {group.title}
+              </a>
+            ) : (
+              <p className="font-semibold">{group.title}</p>
+            )}
+
             <div className="flex flex-col ml-1">
               {group.children.map((child, j) => {
                 return (

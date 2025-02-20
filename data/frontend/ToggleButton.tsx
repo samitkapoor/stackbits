@@ -2,6 +2,29 @@ import { Moon, Rocket, Sun } from 'lucide-react';
 import { Document } from '../main';
 import ToggleButton from '@/components/ui/toggle-button';
 
+export const toggleButtonPreview = (
+  <div className="h-full w-full flex flex-col items-center justify-center gap-2">
+    <ToggleButton
+      //   onChange={(value) => console.log(value)}
+      options={[
+        {
+          icon: <Sun />,
+          value: 'Sun'
+        },
+        {
+          icon: <Moon />,
+          value: 'Moon'
+        },
+        {
+          icon: <Rocket />,
+          value: 'Rocket'
+        }
+      ]}
+      defaultValue="Sun"
+    />
+  </div>
+);
+
 export const toggleButton: Document = {
   sideBar: {
     group: 'Buttons',
@@ -19,28 +42,7 @@ export const toggleButton: Document = {
       {
         heading: 'Preview',
         sectionType: 'preview',
-        code: (
-          <div className="h-full w-full flex flex-col items-center justify-center gap-2">
-            <ToggleButton
-              //   onChange={(value) => console.log(value)}
-              options={[
-                {
-                  icon: <Sun />,
-                  value: 'Sun'
-                },
-                {
-                  icon: <Moon />,
-                  value: 'Moon'
-                },
-                {
-                  icon: <Rocket />,
-                  value: 'Rocket'
-                }
-              ]}
-              defaultValue="Sun"
-            />
-          </div>
-        )
+        code: toggleButtonPreview
       },
       {
         heading: 'Follow below steps 👇🏻',

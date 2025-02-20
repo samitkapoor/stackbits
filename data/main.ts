@@ -1,37 +1,40 @@
 import { ReactNode } from 'react';
 
-import { flicker } from './frontend/Flicker';
+import { flicker, flickerPreview } from './frontend/Flicker';
 import { installation } from './getting-started/installation';
 import { introduction } from './getting-started/introduction';
-import { storyAvatar } from './frontend/StoryAvatar';
-import { flipBadge } from './frontend/FlipBadge';
+import { storyAvatar, storyAvatarPreview } from './frontend/StoryAvatar';
+import { flipBadge, flipBadgePreview } from './frontend/FlipBadge';
 import { encryptionDecryption } from './utilities/EncryptionDecryption';
 import { regexValidations } from './utilities/RegexValidations';
 import { debounce } from './utilities/Debounce';
-import { expandableCard } from './frontend/ExpandableCard';
+import { expandableCard, expandableCardPreview } from './frontend/ExpandableCard';
 // import { customScrollbar } from './frontend/CustomScrollbar';
-import { glitchText } from './frontend/GlitchText';
+import { glitchText, glitchTextPreview } from './frontend/GlitchText';
 import { yupValidations } from './utilities/YupValidations';
 import { darkThemeLightTheme } from './utilities/DarkThemeLightTheme';
-import { accordion } from './frontend/Accordion';
-import { rainbowText } from './frontend/RainbowText';
+import { accordion, accordionPreview } from './frontend/Accordion';
+import { rainbowText, rainbowTextPreview } from './frontend/RainbowText';
 import { customLogger } from './utilities/CustomLogger';
-import { skewedText } from './frontend/SkewedText';
-import { barricadeTape } from './frontend/BarricadeTape';
-import { expandableIconButton } from './frontend/ExpandableIconButton';
-import { countUp } from './frontend/CountUp';
-import { copyTextButton } from './frontend/CopyTextButton';
-import { animatedGradientButton } from './frontend/AnimatedGradientButton';
-import { glassButton } from './frontend/GlassButton';
-import { toggleButton } from './frontend/ToggleButton';
-import { glassCard } from './frontend/GlassCard';
-import { tradingCard } from './frontend/TradingCard';
+import { skewedText, skewedTextPreview } from './frontend/SkewedText';
+import { barricadeTape, barricadeTapePreview } from './frontend/BarricadeTape';
+import { expandableIconButton, expandableIconButtonPreview } from './frontend/ExpandableIconButton';
+import { countUp, countUpPreview } from './frontend/CountUp';
+import { copyTextButton, copyTextButtonPreview } from './frontend/CopyTextButton';
+import {
+  animatedGradientButton,
+  animatedGradientButtonPreview
+} from './frontend/AnimatedGradientButton';
+import { glassButton, glassButtonPreview } from './frontend/GlassButton';
+import { toggleButton, toggleButtonPreview } from './frontend/ToggleButton';
+import { glassCard, glassCardPreview } from './frontend/GlassCard';
+import { tradingCard, tradingCardPreview } from './frontend/TradingCard';
 import { SearchResult } from '@/components/support-plugin';
 import { expressServer } from './utilities/ExpressServer';
 import { axiosInterceptor } from './utilities/AxiosInterceptor';
-import { prismaticHaze } from './frontend/PrismaticHaze';
-import { colorCyclone } from './frontend/ColorCyclone';
-import { movingBorderButton } from './frontend/MovingBorderButton';
+import { prismaticHaze, prismaticHazePreview } from './frontend/PrismaticHaze';
+import { colorCyclone, colorCyclonePreview } from './frontend/ColorCyclone';
+import { movingBorderButton, movingBorderButtonPreview } from './frontend/MovingBorderButton';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -64,7 +67,13 @@ export const getSideBarTabs = () => {
 
 const sideBarOptions: Array<{
   title: string;
-  children: Array<{ name: string; href: string; content: Document; isNew?: boolean }>;
+  children: Array<{
+    name: string;
+    href: string;
+    content: Document;
+    isNew?: boolean;
+    preview?: ReactNode;
+  }>;
 }> = [
   {
     title: 'Getting Started',
@@ -83,14 +92,26 @@ const sideBarOptions: Array<{
       {
         name: 'Count Up',
         href: '/docs/countup',
-        content: countUp
+        content: countUp,
+        preview: countUpPreview
       },
-      { name: 'Glitch Text', href: '/docs/glitchtext', content: glitchText },
-      { name: 'Rainbow Text', href: '/docs/rainbowtext', content: rainbowText },
+      {
+        name: 'Glitch Text',
+        href: '/docs/glitchtext',
+        content: glitchText,
+        preview: glitchTextPreview
+      },
+      {
+        name: 'Rainbow Text',
+        href: '/docs/rainbowtext',
+        content: rainbowText,
+        preview: rainbowTextPreview
+      },
       {
         name: 'Skewed Text',
         href: '/docs/skewedtext',
-        content: skewedText
+        content: skewedText,
+        preview: skewedTextPreview
       }
     ]
   },
@@ -100,33 +121,39 @@ const sideBarOptions: Array<{
       {
         name: 'Animated Gradient Button',
         href: '/docs/animatedgradientbutton',
-        content: animatedGradientButton
+        content: animatedGradientButton,
+        preview: animatedGradientButtonPreview
       },
       {
         name: 'Copy Text Button',
         href: '/docs/copytextbutton',
-        content: copyTextButton
+        content: copyTextButton,
+        preview: copyTextButtonPreview
       },
       {
         name: 'Glass Button',
         href: '/docs/glassbutton',
-        content: glassButton
+        content: glassButton,
+        preview: glassButtonPreview
       },
       {
         name: 'Expandable Icon Button',
         href: '/docs/expandableiconbutton',
-        content: expandableIconButton
+        content: expandableIconButton,
+        preview: expandableIconButtonPreview
       },
       {
         name: 'Moving Border Button',
         href: '/docs/movingborderbutton',
         content: movingBorderButton,
+        preview: movingBorderButtonPreview,
         isNew: true
       },
       {
         name: 'Toggle Button',
         href: '/docs/togglebutton',
-        content: toggleButton
+        content: toggleButton,
+        preview: toggleButtonPreview
       }
     ]
   },
@@ -137,17 +164,20 @@ const sideBarOptions: Array<{
         name: 'Trading Card',
         href: '/docs/tradingCard',
         content: tradingCard,
+        preview: tradingCardPreview,
         isNew: true
       },
       {
         name: 'Glass Card',
         href: '/docs/glasscard',
-        content: glassCard
+        content: glassCard,
+        preview: glassCardPreview
       },
       {
         name: 'Expandable Card',
         href: '/docs/expandablecard',
-        content: expandableCard
+        content: expandableCard,
+        preview: expandableCardPreview
       }
     ]
   },
@@ -157,29 +187,43 @@ const sideBarOptions: Array<{
       {
         name: 'Accordion',
         href: '/docs/accordion',
-        content: accordion
+        content: accordion,
+        preview: accordionPreview
       },
       {
         name: 'Barricade Tape',
         href: '/docs/barricadeTape',
-        content: barricadeTape
+        content: barricadeTape,
+        preview: barricadeTapePreview
       },
       {
         name: 'Color Cyclone',
         href: '/docs/colorCyclone',
         content: colorCyclone,
+        preview: colorCyclonePreview,
         isNew: true
       },
       // { name: 'CustomScrollbar', href: '/docs/customscrollbar', content: customScrollbar },
-      { name: 'Flicker Box', href: '/docs/flickerbox', content: flicker },
-      { name: 'Flip Badge', href: '/docs/flipbadge', content: flipBadge },
+      { name: 'Flicker Box', href: '/docs/flickerbox', content: flicker, preview: flickerPreview },
+      {
+        name: 'Flip Badge',
+        href: '/docs/flipbadge',
+        content: flipBadge,
+        preview: flipBadgePreview
+      },
       {
         name: 'Prismatic Haze',
         href: '/docs/prismaticHaze',
         content: prismaticHaze,
+        preview: prismaticHazePreview,
         isNew: true
       },
-      { name: 'Story Avatar', href: '/docs/storyavatar', content: storyAvatar }
+      {
+        name: 'Story Avatar',
+        href: '/docs/storyavatar',
+        content: storyAvatar,
+        preview: storyAvatarPreview
+      }
     ]
   },
   {
@@ -306,4 +350,12 @@ export const searchDocs = (q: string): Array<SearchResult> => {
   });
 
   return results.slice(0, 5);
+};
+
+export const getCategory = (docId: string) => {
+  const group = sideBarOptions.filter((tab) => {
+    return tab.title.toLowerCase().replaceAll(' ', '') === docId.toLowerCase();
+  });
+
+  return group;
 };

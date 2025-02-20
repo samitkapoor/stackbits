@@ -1,6 +1,14 @@
 import { Document } from '../main';
 import AnimatedGradientButton from '@/components/ui/animated-gradient-button';
 
+export const animatedGradientButtonPreview = (
+  <div className="h-full w-full flex flex-col items-center justify-center gap-2">
+    <AnimatedGradientButton className="text-lg md:text-xl font-medium !px-5 sm:!px-10 py-4 rounded-lg">
+      Let's go!
+    </AnimatedGradientButton>
+  </div>
+);
+
 export const animatedGradientButton: Document = {
   sideBar: {
     group: 'Buttons',
@@ -18,13 +26,7 @@ export const animatedGradientButton: Document = {
       {
         heading: 'Preview',
         sectionType: 'preview',
-        code: (
-          <div className="h-full w-full flex flex-col items-center justify-center gap-2">
-            <AnimatedGradientButton className="text-lg md:text-xl lg:text-3xl font-medium !px-5 sm:!px-10 py-4 rounded-full">
-              Let's go!
-            </AnimatedGradientButton>
-          </div>
-        )
+        code: animatedGradientButtonPreview
       },
       {
         heading: 'Follow below steps 👇🏻',

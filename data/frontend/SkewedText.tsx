@@ -2,6 +2,12 @@ import SkewedText from '@/components/ui/skewed-text';
 import { Document } from '../main';
 import RainbowText from '@/components/ui/rainbow-text';
 
+export const skewedTextPreview = (
+  <div className="h-full w-full flex items-center justify-center">
+    <SkewedText className="text-[50px] font-bold">Hover</SkewedText>
+  </div>
+);
+
 export const skewedText: Document = {
   sideBar: {
     group: 'Texts',

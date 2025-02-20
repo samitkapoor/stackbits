@@ -1,6 +1,12 @@
 import BarricadeTapeDemo from '@/components/barricade-tape-demo';
 import { Document } from '../main';
 
+export const barricadeTapePreview = (
+  <div className="pt-20 flex items-center justify-center">
+    <BarricadeTapeDemo />
+  </div>
+);
+
 export const barricadeTape: Document = {
   sideBar: {
     group: 'Components',

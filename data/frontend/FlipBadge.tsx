@@ -1,6 +1,26 @@
 import FlipBadge from '@/components/ui/flip-badge';
 import { Document } from '../main';
 
+export const flipBadgePreview = (
+  <div className="h-full w-full flex items-center justify-center">
+    <FlipBadge
+      frontContent={
+        <p className="font-medium text-center text-black">
+          "Should be an
+          <br />
+          easy fix"
+        </p>
+      }
+      backContent={
+        <p className="font-medium text-center text-white">
+          *Spends
+          <br />6 hours*
+        </p>
+      }
+    />
+  </div>
+);
+
 export const flipBadge: Document = {
   sideBar: {
     group: 'Components',

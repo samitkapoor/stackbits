@@ -2,6 +2,20 @@ import Image from 'next/image';
 import { Document } from '../main';
 import StoryAvatar from '@/components/ui/story-avatar';
 
+export const storyAvatarPreview = (
+  <div className="flex flex-wrap items-center gap-10 p-5 justify-center w-full h-full scale-75">
+    <StoryAvatar>
+      <Image alt="nft-monkey" src="/nft-monkey.svg" width={100} height={100} />
+    </StoryAvatar>
+    <StoryAvatar spin backgroundClassName="!bg-gradient-to-br !from-blue-500 !to-transparent">
+      <Image alt="nft-monkey" src="/nft-monkey.svg" width={100} height={100} />
+    </StoryAvatar>
+    <StoryAvatar flicker backgroundClassName="!bg-gradient-to-r !from-green-200 !to-green-100">
+      <Image alt="nft-monkey" src="/nft-monkey.svg" width={100} height={100} />
+    </StoryAvatar>
+  </div>
+);
+
 export const storyAvatar: Document = {
   sideBar: {
     group: 'Components',

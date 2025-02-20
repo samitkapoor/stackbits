@@ -5,14 +5,15 @@ type ExpandableCardProps = {
   title?: string;
   paragraph?: string;
   image?: string;
+  className?: string;
 };
 
-const ExpandableCard = ({ title, paragraph, image }: ExpandableCardProps) => {
+const ExpandableCard = ({ title, paragraph, image, className }: ExpandableCardProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <motion.div
-      className="relative w-full h-[200px] max-w-[250px] sm:max-w-sm md:max-w-md rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+      className={`relative w-full h-[200px] max-w-[250px] sm:max-w-sm md:max-w-md rounded-2xl overflow-hidden shadow-lg cursor-pointer ${className}`}
       onMouseEnter={() => setIsExpanded(true)}
       onMouseLeave={() => setIsExpanded(false)}
       initial={{ scale: 1 }}

@@ -1,6 +1,14 @@
 import MovingBorderButton from '@/components/ui/moving-border-button';
 import { Document } from '../main';
 
+export const movingBorderButtonPreview = (
+  <div className="h-full w-full flex flex-col items-center justify-center gap-2">
+    <MovingBorderButton className="text-lg md:text-xl font-medium !px-5 sm:!px-10 py-4">
+      Continue
+    </MovingBorderButton>
+  </div>
+);
+
 export const movingBorderButton: Document = {
   sideBar: {
     group: 'Buttons',
@@ -18,13 +26,7 @@ export const movingBorderButton: Document = {
       {
         heading: 'Preview',
         sectionType: 'preview',
-        code: (
-          <div className="h-full w-full flex flex-col items-center justify-center gap-2">
-            <MovingBorderButton className="text-lg md:text-xl lg:text-3xl font-medium !px-5 sm:!px-10 py-4">
-              Join the speedforce
-            </MovingBorderButton>
-          </div>
-        )
+        code: movingBorderButtonPreview
       },
       {
         heading: 'Follow below steps 👇🏻',
