@@ -52,7 +52,6 @@ const GlassCard = ({ children, className }: GlassCardProps) => {
       animate={{ y: 0, opacity: 1 }}
       whileHover={{
         y: -5,
-        boxShadow: '0px 10px 20px rgba(255, 255, 255, 0.2)',
         background: 'rgba(255, 255, 255, 0.3)'
       }}
       transition={{ duration: 0.1 }}
@@ -65,7 +64,6 @@ const GlassCard = ({ children, className }: GlassCardProps) => {
 };
 
 export default GlassCard;
-
 `
       },
       {

@@ -11,11 +11,11 @@ const GlassButton = ({ children, className, ...props }: GlassButtonProps) => {
     <motion.button
       {...props}
       className={`relative overflow-hidden rounded-xl px-6 py-3 text-white font-semibold backdrop-blur-md ${className}`}
-      initial={{ background: 'rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(10px)' }}
+      initial={{ y: 10, opacity: 0, background: 'rgba(255, 255, 255, 0.1)' }}
+      animate={{ y: 0, opacity: 1 }}
       whileHover={{
-        background: 'rgba(255, 255, 255, 0.3)',
-        backdropFilter: 'blur(15px)',
-        scale: 1.05
+        y: -5,
+        background: 'rgba(255, 255, 255, 0.3)'
       }}
       whileTap={{ scale: 0.95 }}
       transition={{ duration: 0.3 }}

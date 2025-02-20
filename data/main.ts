@@ -31,6 +31,7 @@ import { expressServer } from './utilities/ExpressServer';
 import { axiosInterceptor } from './utilities/AxiosInterceptor';
 import { prismaticHaze } from './frontend/PrismaticHaze';
 import { colorCyclone } from './frontend/ColorCyclone';
+import { movingBorderButton } from './frontend/MovingBorderButton';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -115,6 +116,12 @@ const sideBarOptions: Array<{
         name: 'Expandable Icon Button',
         href: '/docs/expandableiconbutton',
         content: expandableIconButton
+      },
+      {
+        name: 'Moving Border Button',
+        href: '/docs/movingborderbutton',
+        content: movingBorderButton,
+        isNew: true
       },
       {
         name: 'Toggle Button',

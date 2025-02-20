@@ -20,7 +20,9 @@ export const glassButton: Document = {
         sectionType: 'preview',
         code: (
           <div className="h-full w-full flex flex-col items-center justify-center gap-2">
-            <GlassButton>Continue</GlassButton>
+            <GlassButton className="text-lg md:text-xl lg:text-3xl font-medium !px-5 sm:!px-10 py-4">
+              Continue
+            </GlassButton>
           </div>
         )
       },
