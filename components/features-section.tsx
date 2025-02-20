@@ -10,6 +10,7 @@ import NoiseCard from './ui/noise-card';
 import RainbowText from './ui/rainbow-text';
 import Image from 'next/image';
 import GridBackground from './ui/grid-background';
+import { ClipboardPaste, Copy } from 'lucide-react';
 
 const FeaturesSection = () => {
   const features = [
@@ -70,11 +71,12 @@ const FeaturesSection = () => {
       title: 'Spend less time on setup, more time on innovation',
       illustration: (
         <div className="flex flex-col w-full items-center justify-center">
-          <div className="grid grid-cols-2 justify-center items-center w-full sm:h-[200px] md:h-[300px]">
-            <div className="w-full h-full flex items-center justify-center">
+          <div className="grid grid-cols-2 justify-center items-center w-full sm:h-[200px] md:h-[250px]">
+            <div className="w-full h-full flex flex-col items-center justify-center gap-1">
+              <Copy className="h-16 w-16 font-bold opacity-50" />
               <motion.p
                 initial={{
-                  opacity: 0
+                  opacity: 0.5
                 }}
                 animate={{
                   opacity: 1,
@@ -85,15 +87,16 @@ const FeaturesSection = () => {
                     repeatType: 'reverse'
                   }
                 }}
-                className="text-2xl sm:text-3xl md:text-6xl font-bold opacity-0"
+                className="text-2xl sm:text-3xl md:text-4xl font-bold opacity-0"
               >
                 Ctrl + C
               </motion.p>
             </div>
-            <div className="w-full h-full flex items-center justify-center">
+            <div className="w-full h-full flex flex-col items-center justify-center gap-1">
+              <ClipboardPaste className="h-16 w-16 font-bold opacity-50" />
               <motion.p
                 initial={{
-                  opacity: 0
+                  opacity: 0.3
                 }}
                 animate={{
                   opacity: 1,
@@ -105,7 +108,7 @@ const FeaturesSection = () => {
                     repeatType: 'reverse'
                   }
                 }}
-                className="text-2xl sm:text-3xl md:text-6xl font-bold opacity-0"
+                className="text-2xl sm:text-3xl md:text-4xl font-bold opacity-0"
               >
                 Ctrl + V
               </motion.p>
@@ -113,7 +116,7 @@ const FeaturesSection = () => {
           </div>
           <RainbowText
             duration={8}
-            className="text-center text-xl md:text-2xl lg:text-4xl font-extrabold mt-10"
+            className="text-center text-xl md:text-2xl lg:text-4xl font-extrabold"
           >
             Yes, it&apos;s that easy.
           </RainbowText>
