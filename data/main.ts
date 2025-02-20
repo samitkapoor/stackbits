@@ -275,6 +275,8 @@ const sideBarOptions: Array<{
   }
 ];
 
+export const categories = ['buttons', 'texts', 'cards', 'components'];
+
 export const getDocs = (docId: string) => {
   const group = sideBarOptions.filter((tab) =>
     tab.children.find((child) => {

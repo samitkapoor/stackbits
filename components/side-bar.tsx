@@ -3,11 +3,10 @@
 import React from 'react';
 import { usePathname } from 'next/navigation';
 
-import { getSideBarTabs } from '@/data/main';
+import { categories, getSideBarTabs } from '@/data/main';
 import Image from 'next/image';
 import Link from 'next/link';
 import RainbowText from './ui/rainbow-text';
-import { categories } from '@/app/docs/[id]/page';
 
 const SideBar = ({ isOpen }: { isOpen: boolean }) => {
   const tabs = getSideBarTabs();

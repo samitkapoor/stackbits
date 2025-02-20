@@ -5,8 +5,7 @@ import { useParams } from 'next/navigation';
 
 import DocumentContentBox from '@/components/document-content-box';
 import CategoryPage from '@/components/category-page';
-
-export const categories = ['buttons', 'texts', 'cards', 'components'];
+import { categories } from '@/data/main';
 
 const Page = () => {
   const params = useParams();
