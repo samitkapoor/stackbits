@@ -35,7 +35,7 @@ import { axiosInterceptor } from './utilities/AxiosInterceptor';
 import { prismaticHaze, prismaticHazePreview } from './frontend/PrismaticHaze';
 import { colorCyclone, colorCyclonePreview } from './frontend/ColorCyclone';
 import { movingBorderButton, movingBorderButtonPreview } from './frontend/MovingBorderButton';
-import { wavyBackgroundPreview, wavyBackground } from './frontend/WaterBackground';
+import { wavyBackgroundPreview, wavyBackground } from './frontend/WavyBackground';
 
 export type SideBarSectionInDocument = {
   group: string;

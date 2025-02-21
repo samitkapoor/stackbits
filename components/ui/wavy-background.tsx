@@ -78,11 +78,13 @@ type WavyBackgroundProps = {
 
 const WavyBackground = ({ children }: WavyBackgroundProps) => {
   return (
-    <div className="overflow-hidden w-full h-full relative">
+    <div className="w-full h-full relative">
+      <div className="relative z-10 h-full w-full">{children}</div>
+
       <motion.svg
         viewBox="0 0 1920 1080"
         preserveAspectRatio="xMidYMid slice"
-        className="absolute w-full h-full z-0"
+        className="absolute w-full h-full z-0 top-0 left-0"
       >
         <rect width="1920" height="1080" fill="#376FCB" className="h-full w-full" />
         {waves.map((wave, i) => {
@@ -104,7 +106,6 @@ const WavyBackground = ({ children }: WavyBackgroundProps) => {
           );
         })}
       </motion.svg>
-      <div className="z-10 absolute top-0 left-0 h-full w-full">{children}</div>
     </div>
   );
 };
