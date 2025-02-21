@@ -37,6 +37,7 @@ import { colorCyclone, colorCyclonePreview } from './frontend/ColorCyclone';
 import { movingBorderButton, movingBorderButtonPreview } from './frontend/MovingBorderButton';
 import { wavyBackgroundPreview, wavyBackground } from './frontend/WavyBackground';
 import { navigationButton, navigationButtonPreview } from './frontend/NavigationButton';
+import { shineButton, shineButtonPreview } from './frontend/ShineButton';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -156,6 +157,13 @@ const sideBarOptions: Array<{
         href: '/docs/navigationbutton',
         content: navigationButton,
         preview: navigationButtonPreview,
+        isNew: true
+      },
+      {
+        name: 'Shine Button',
+        href: '/docs/shinebutton',
+        content: shineButton,
+        preview: shineButtonPreview,
         isNew: true
       },
       {
