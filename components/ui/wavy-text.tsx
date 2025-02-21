@@ -15,7 +15,7 @@ const WavyText: FC<WavyTextProps> = ({ text, className }) => {
           initial={{ y: '100%' }}
           animate={{ y: [0, -15] }}
           transition={{
-            duration: 0.5,
+            duration: 1,
             delay: index * 0.1,
             ease: 'backIn',
             repeat: Infinity,
