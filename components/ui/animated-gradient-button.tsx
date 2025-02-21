@@ -28,7 +28,7 @@ const AnimatedGradientButton = ({ children, className, ...props }: AnimatedGradi
         ],
         transition: { duration: 20, repeat: Infinity, repeatType: 'reverse' }
       }}
-      className={`outline-none border-[2px] border-[#ffffff5a] hover:border-white px-4 py-2 text-white ${className}`}
+      className={`outline-none border-none px-4 py-2 text-white ${className}`}
     >
       {children}
     </motion.button>
