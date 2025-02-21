@@ -42,7 +42,7 @@ export const glitchText: Document = {
         code: `.glitch {
   position: relative;
   display: inline-block;
-  animation: glitch 1.5s infinite;
+  animation: glitch 0.7s infinite;
 }
 
 @keyframes glitch {
@@ -69,13 +69,39 @@ export const glitchText: Document = {
         description:
           'Create a file custom-scrollbar.tsx in your components folder and paste this code',
         code: `import React from 'react';
-        
+import { motion } from 'framer-motion';
+
 const GlitchText = ({ children, className }: { children: React.ReactNode; className?: string }) => {
-    return <span className={\`glitch \${className}\`}>{children}</span>;
+  return (
+    <motion.span
+      animate={{
+        scale: [1, 1, 1.3, 1, 1, 1, 1],
+        x: [0, 0, 0, 2, 0, 2, 2],
+        y: [2, -2, -2, 0, 0, 2, 0],
+        filter: [
+          'blur(0px)',
+          'blur(2px)',
+          'blur(4px)',
+          'blur(0px)',
+          'blur(0px)',
+          'blur(0px)',
+          'blur(0px)'
+        ],
+        transition: {
+          repeat: Infinity,
+          duration: 0.3,
+          repeatDelay: 1
+        }
+      }}
+      className={\`glitch \${className}\`}
+    >
+      {children}
+    </motion.span>
+  );
 };
 
 export default GlitchText;
-        `
+`
       },
       {
         heading: 'Usage',
