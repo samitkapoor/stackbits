@@ -35,6 +35,7 @@ import { axiosInterceptor } from './utilities/AxiosInterceptor';
 import { prismaticHaze, prismaticHazePreview } from './frontend/PrismaticHaze';
 import { colorCyclone, colorCyclonePreview } from './frontend/ColorCyclone';
 import { movingBorderButton, movingBorderButtonPreview } from './frontend/MovingBorderButton';
+import { wavyBackgroundPreview, wavyBackground } from './frontend/WaterBackground';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -223,6 +224,13 @@ const sideBarOptions: Array<{
         href: '/docs/storyavatar',
         content: storyAvatar,
         preview: storyAvatarPreview
+      },
+      {
+        name: 'Wavy Background',
+        href: '/docs/wavybackground',
+        content: wavyBackground,
+        preview: wavyBackgroundPreview,
+        isNew: true
       }
     ]
   },
