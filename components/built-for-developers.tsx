@@ -8,15 +8,15 @@ const BuiltForDevelopers = () => {
   return (
     <div className="h-full w-full flex flex-col items-center justify-center gap-2 mt-10">
       <div className="flex items-center justify-center rounded-xl overflow-hidden">
-        <WavyBackground>
-          <div className="h-full w-full flex flex-col items-center justify-center gap-2 relative p-24">
+        <WavyBackground speed={1}>
+          <div className="h-[70vh] w-screen flex flex-col items-center justify-start gap-2 relative">
             <div
               style={{
                 background: 'radial-gradient(circle, transparent, #000000)'
               }}
               className="h-full w-full absolute opacity-80 -z-10"
             ></div>
-            <h2 className="text-3xl md:text-4xl mb-10 font-bold text-center relative">
+            <h2 className="text-3xl md:text-4xl mb-10 font-bold text-center relative mt-20">
               Built for Developers, by a{' '}
               <span className="underline text-purple-300 hover:text-purple-200 transition-all">
                 <a href="https://samitkapoor.com" target="_blank">

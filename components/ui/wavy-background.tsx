@@ -74,9 +74,10 @@ const waves = [
 
 type WavyBackgroundProps = {
   children?: React.ReactNode;
+  speed?: number;
 };
 
-const WavyBackground = ({ children }: WavyBackgroundProps) => {
+const WavyBackground = ({ children, speed = 7 }: WavyBackgroundProps) => {
   return (
     <div className="w-full h-full relative">
       <div className="relative z-10 h-full w-full">{children}</div>
@@ -97,7 +98,7 @@ const WavyBackground = ({ children }: WavyBackgroundProps) => {
               initial="start"
               animate={'end'}
               transition={{
-                duration: wave.duration + 7,
+                duration: wave.duration + speed,
                 repeat: Infinity,
                 repeatType: 'reverse',
                 ease: 'linear'

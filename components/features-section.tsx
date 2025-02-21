@@ -126,7 +126,7 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <div className="flex w-screen items-center justify-center bg-black">
+    <div className="flex flex-col w-screen items-center justify-center bg-black">
       <GridBackground>
         <div className="flex flex-col items-center justify-center w-full mt-20 gap-10">
           <div className="flex flex-col max-w-[65%] w-full mt-20 gap-10">
@@ -164,10 +164,9 @@ const FeaturesSection = () => {
               Join the speedforce
             </MovingBorderButton>
           </Link>
-
-          <BuiltForDevelopers />
         </div>
       </GridBackground>
+      <BuiltForDevelopers />
     </div>
   );
 };
