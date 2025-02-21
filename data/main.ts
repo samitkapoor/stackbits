@@ -40,6 +40,7 @@ import { navigationButton, navigationButtonPreview } from './frontend/Navigation
 import { shineButton, shineButtonPreview } from './frontend/ShineButton';
 import { fadeInText, fadeInTextPreview } from './frontend/FadeInText';
 import { wavyText, wavyTextPreview } from './frontend/WavyText';
+import { blurText, blurTextPreview } from './frontend/BlurText';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -94,6 +95,13 @@ const sideBarOptions: Array<{
   {
     title: 'Texts',
     children: [
+      {
+        name: 'Blur Text',
+        href: '/docs/blurtext',
+        content: blurText,
+        preview: blurTextPreview,
+        isNew: true
+      },
       {
         name: 'Count Up',
         href: '/docs/countup',
