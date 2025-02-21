@@ -139,10 +139,10 @@ const HeroSection = () => {
                   opacity: 1,
                   transition: { duration: 1.2, ease: 'backOut', delay: 0.2 }
                 }}
-                className="text-[14px] sm:text-[16px] lg:text-[20px] leading-6 mt-4 text-center lg:text-left px-5"
+                className="text-[14px] sm:text-[16px] lg:text-[20px] leading-7 mt-4 text-center lg:text-left px-5"
               >
-                A growing library of reusable snippets to help you ship projects faster, empowering
-                developers with time-saving tools and ready-to-use code for seamless integration.
+                Save time with a library of pre-built components, utility functions, and code
+                snippets, along with templates for quick and efficient development.
               </motion.p>
               <div className="grid grid-cols-2 gap-2 mt-10 px-5">
                 {features.map((feature) => {
