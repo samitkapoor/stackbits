@@ -36,6 +36,7 @@ import { prismaticHaze, prismaticHazePreview } from './frontend/PrismaticHaze';
 import { colorCyclone, colorCyclonePreview } from './frontend/ColorCyclone';
 import { movingBorderButton, movingBorderButtonPreview } from './frontend/MovingBorderButton';
 import { wavyBackgroundPreview, wavyBackground } from './frontend/WavyBackground';
+import { navigationButton, navigationButtonPreview } from './frontend/NavigationButton';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -148,6 +149,13 @@ const sideBarOptions: Array<{
         href: '/docs/movingborderbutton',
         content: movingBorderButton,
         preview: movingBorderButtonPreview,
+        isNew: true
+      },
+      {
+        name: 'Navigation Button',
+        href: '/docs/navigationbutton',
+        content: navigationButton,
+        preview: navigationButtonPreview,
         isNew: true
       },
       {

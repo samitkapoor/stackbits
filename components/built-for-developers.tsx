@@ -1,6 +1,7 @@
 import { TwitterIcon } from 'lucide-react';
 import CopyTextButton from './ui/copy-text-button';
 import WavyBackground from './ui/wavy-background';
+import NavigationButton from './ui/navigation-button';
 
 const BuiltForDevelopers = () => {
   const twitterHandle = 'x.com/samitkapoorr';
@@ -14,7 +15,7 @@ const BuiltForDevelopers = () => {
               style={{
                 background: 'radial-gradient(circle, transparent, #000000)'
               }}
-              className="h-full w-full absolute opacity-80"
+              className="h-full w-full absolute opacity-80 -z-10"
             ></div>
             <h2 className="text-3xl md:text-4xl mb-10 font-bold text-center relative">
               Built for Developers, by a{' '}
@@ -35,7 +36,14 @@ const BuiltForDevelopers = () => {
 
             <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
               <span className="text-gray-400">If you love it, drop a shoutout on</span>
-              <CopyTextButton handle={twitterHandle} icon={<TwitterIcon className="w-5 h-5" />} />
+              <NavigationButton
+                target="_blank"
+                href={'https://x.com/samitkapoorr'}
+                icon={<TwitterIcon className="w-5 h-5" />}
+                className="opacity-60 rounded-full"
+              >
+                {twitterHandle}
+              </NavigationButton>
             </div>
           </div>
         </WavyBackground>
