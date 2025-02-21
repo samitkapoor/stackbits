@@ -272,8 +272,7 @@ const sideBarOptions: Array<{
       {
         name: 'Axios Interceptor',
         href: '/docs/axiosinterceptor',
-        content: axiosInterceptor,
-        isNew: true
+        content: axiosInterceptor
       },
       {
         name: 'Custom Logger',
@@ -298,8 +297,7 @@ const sideBarOptions: Array<{
       {
         name: 'Express Server',
         href: '/docs/expressserver',
-        content: expressServer,
-        isNew: true
+        content: expressServer
       },
       {
         name: 'Regex Validations',
