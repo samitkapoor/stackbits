@@ -75,7 +75,7 @@ const FadeInText: React.FC<FadeInTextProps> = ({ text, className }) => {
       {text.split(' ').map((word, index) => (
         <motion.span
           key={index}
-          initial={{ opacity: 0.5 }}
+          initial={{ opacity: 0.2 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.5 }}
