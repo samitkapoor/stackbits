@@ -1,5 +1,4 @@
 import { TwitterIcon } from 'lucide-react';
-import CopyTextButton from './ui/copy-text-button';
 import WavyBackground from './ui/wavy-background';
 import NavigationButton from './ui/navigation-button';
 
