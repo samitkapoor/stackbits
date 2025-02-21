@@ -38,6 +38,7 @@ import { movingBorderButton, movingBorderButtonPreview } from './frontend/Moving
 import { wavyBackgroundPreview, wavyBackground } from './frontend/WavyBackground';
 import { navigationButton, navigationButtonPreview } from './frontend/NavigationButton';
 import { shineButton, shineButtonPreview } from './frontend/ShineButton';
+import { fadeInText, fadeInTextPreview } from './frontend/FadeInText';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -97,6 +98,13 @@ const sideBarOptions: Array<{
         href: '/docs/countup',
         content: countUp,
         preview: countUpPreview
+      },
+      {
+        name: 'Fade In Text',
+        href: '/docs/fadeintext',
+        content: fadeInText,
+        preview: fadeInTextPreview,
+        isNew: true
       },
       {
         name: 'Glitch Text',
