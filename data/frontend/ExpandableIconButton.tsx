@@ -75,7 +75,9 @@ export const expandableIconButton: Document = {
         sectionType: 'component',
         description:
           'Create a file expandable-icon-button.tsx in your components folder and paste this code',
-        code: `import { motion, useAnimationControls } from 'framer-motion';
+        code: `'use client';
+
+import { motion, useAnimationControls } from 'framer-motion';
 import { MouseEventHandler, useEffect, useRef, useState } from 'react';
 
 type ExpandableIconButtonProps = {
