@@ -39,6 +39,7 @@ import { wavyBackgroundPreview, wavyBackground } from './frontend/WavyBackground
 import { navigationButton, navigationButtonPreview } from './frontend/NavigationButton';
 import { shineButton, shineButtonPreview } from './frontend/ShineButton';
 import { fadeInText, fadeInTextPreview } from './frontend/FadeInText';
+import { wavyText, wavyTextPreview } from './frontend/WavyText';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -123,6 +124,13 @@ const sideBarOptions: Array<{
         href: '/docs/skewedtext',
         content: skewedText,
         preview: skewedTextPreview
+      },
+      {
+        name: 'Wavy Text',
+        href: '/docs/wavytext',
+        content: wavyText,
+        preview: wavyTextPreview,
+        isNew: true
       }
     ]
   },
