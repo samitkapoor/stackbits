@@ -9,7 +9,7 @@ export const navigationButtonPreview = (
       target="_blank"
       className="text-lg md:text-xl font-medium rounded-xl !px-5 sm:!px-10 py-4"
     >
-      Continue
+      Open
     </NavigationButton>
   </div>
 );

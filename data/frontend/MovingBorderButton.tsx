@@ -1,10 +1,11 @@
 import MovingBorderButton from '@/components/ui/moving-border-button';
 import { Document } from '../main';
+import { RefreshCcw } from 'lucide-react';
 
 export const movingBorderButtonPreview = (
   <div className="h-full w-full flex flex-col items-center justify-center gap-2">
-    <MovingBorderButton className="text-lg md:text-xl font-medium !px-5 sm:!px-10 py-4">
-      Continue
+    <MovingBorderButton className="text-lg md:text-xl font-medium !px-5 sm:!px-10 py-4 gap-1">
+      Border <RefreshCcw />
     </MovingBorderButton>
   </div>
 );
