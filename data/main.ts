@@ -47,6 +47,7 @@ import { iconWheel, iconWheelPreview } from './frontend/IconWheel';
 import { waveNoiseBackground, waveNoiseBackgroundPreview } from './frontend/WaveNoiseBackground';
 import { topographyBackground, topographyBackgroundPreview } from './frontend/TopographyBackground';
 import { textureBackground, textureBackgroundPreview } from './frontend/TextureBackground';
+import { epicNameDrop, epicNameDropPreview } from './frontend/EpicNameDrop';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -303,6 +304,13 @@ const sideBarOptions: Array<{
         href: '/docs/barricadeTape',
         content: barricadeTape,
         preview: barricadeTapePreview
+      },
+      {
+        name: 'Epic Name Drop',
+        href: '/docs/epicNameDrop',
+        content: epicNameDrop,
+        preview: epicNameDropPreview,
+        isNew: true
       },
       // { name: 'CustomScrollbar', href: '/docs/customscrollbar', content: customScrollbar },
       { name: 'Flicker Box', href: '/docs/flickerbox', content: flicker, preview: flickerPreview },

@@ -40,7 +40,7 @@ const CategoryPage = ({ docId }: CategoryPageProps) => {
                   x: 0,
                   boxShadow: 'none'
                 }}
-                className="flex flex-col gap-2 rounded-2xl px-2 hover:bg-neutral-900 border-[1px] border-neutral-900"
+                className="flex flex-col gap-2 rounded-2xl px-2 pt-2 hover:bg-neutral-900 border-[1px] border-neutral-900"
               >
                 <div className="h-[300px] border-b-[1px] border-neutral-800 rounded-xl flex items-center overflow-hidden justify-center">
                   {child?.preview}
