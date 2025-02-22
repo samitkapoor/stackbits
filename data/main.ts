@@ -41,6 +41,7 @@ import { shineButton, shineButtonPreview } from './frontend/ShineButton';
 import { fadeInText, fadeInTextPreview } from './frontend/FadeInText';
 import { wavyText, wavyTextPreview } from './frontend/WavyText';
 import { blurText, blurTextPreview } from './frontend/BlurText';
+import { flipRevealCard, flipRevealCardPreview } from './frontend/FlipRevealCard';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -202,10 +203,16 @@ const sideBarOptions: Array<{
     title: 'Cards',
     children: [
       {
-        name: 'Trading Card',
-        href: '/docs/tradingCard',
-        content: tradingCard,
-        preview: tradingCardPreview,
+        name: 'Expandable Card',
+        href: '/docs/expandablecard',
+        content: expandableCard,
+        preview: expandableCardPreview
+      },
+      {
+        name: 'Flip Reveal Card',
+        href: '/docs/fliprevealcard',
+        content: flipRevealCard,
+        preview: flipRevealCardPreview,
         isNew: true
       },
       {
@@ -215,10 +222,11 @@ const sideBarOptions: Array<{
         preview: glassCardPreview
       },
       {
-        name: 'Expandable Card',
-        href: '/docs/expandablecard',
-        content: expandableCard,
-        preview: expandableCardPreview
+        name: 'Trading Card',
+        href: '/docs/tradingCard',
+        content: tradingCard,
+        preview: tradingCardPreview,
+        isNew: true
       }
     ]
   },
