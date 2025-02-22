@@ -14,14 +14,14 @@ export const waveNoiseBackgroundPreview = (
 
 export const waveNoiseBackground: Document = {
   sideBar: {
-    group: 'Cards',
-    name: 'Wave Noise Card',
-    order: 3
+    group: 'Backgrounds',
+    name: 'Wave Noise Background',
+    order: 4
   },
   content: {
     sections: [
       {
-        heading: '🕹️ Wave Noise Card',
+        heading: '🕹️ Wave Noise Background',
         content:
           'WaveNoiseBackground brings a subtle, wavy motion to your UI, making static backgrounds a thing of the past! 🌊✨ With a seamless SVG wave animation that glides infinitely, this component adds a dynamic and modern touch to any section. Perfect for creating depth, movement, and a hint of elegance—because why settle for boring when you can have waves?',
         sectionType: 'paragraph'

@@ -45,6 +45,8 @@ import { flipRevealCard, flipRevealCardPreview } from './frontend/FlipRevealCard
 import { movingBorderCard, movingBorderCardPreview } from './frontend/MovingBorderCard';
 import { iconWheel, iconWheelPreview } from './frontend/IconWheel';
 import { waveNoiseBackground, waveNoiseBackgroundPreview } from './frontend/WaveNoiseBackground';
+import { topographyBackground, topographyBackgroundPreview } from './frontend/TopographyBackground';
+import { textureBackground, textureBackgroundPreview } from './frontend/TextureBackground';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -161,6 +163,20 @@ const sideBarOptions: Array<{
         href: '/docs/prismaticHaze',
         content: prismaticHaze,
         preview: prismaticHazePreview,
+        isNew: true
+      },
+      {
+        name: 'Texture Background',
+        href: '/docs/textureBackground',
+        content: textureBackground,
+        preview: textureBackgroundPreview,
+        isNew: true
+      },
+      {
+        name: 'Topography Background',
+        href: '/docs/topographyBackground',
+        content: topographyBackground,
+        preview: topographyBackgroundPreview,
         isNew: true
       },
       {
