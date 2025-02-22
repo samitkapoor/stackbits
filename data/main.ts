@@ -43,6 +43,7 @@ import { wavyText, wavyTextPreview } from './frontend/WavyText';
 import { blurText, blurTextPreview } from './frontend/BlurText';
 import { flipRevealCard, flipRevealCardPreview } from './frontend/FlipRevealCard';
 import { movingBorderCard, movingBorderCardPreview } from './frontend/MovingBorderCard';
+import { iconWheel, iconWheelPreview } from './frontend/IconWheel';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -267,6 +268,13 @@ const sideBarOptions: Array<{
         href: '/docs/flipbadge',
         content: flipBadge,
         preview: flipBadgePreview
+      },
+      {
+        name: 'Icon Wheel',
+        href: '/docs/iconwheel',
+        content: iconWheel,
+        preview: iconWheelPreview,
+        isNew: true
       },
       {
         name: 'Prismatic Haze',

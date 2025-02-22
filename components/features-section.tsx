@@ -5,7 +5,7 @@ import React from 'react';
 import MovingBorderButton from './ui/moving-border-button';
 import BuiltForDevelopers from './built-for-developers';
 import Link from 'next/link';
-import TechWheel from './ui/tech-wheel';
+import IconWheel from './ui/icon-wheel';
 import NoiseCard from './ui/noise-card';
 import RainbowText from './ui/rainbow-text';
 import Image from 'next/image';
@@ -17,7 +17,7 @@ const FeaturesSection = () => {
     {
       title: 'Why reinvent the wheel with every project?',
       illustration: (
-        <TechWheel
+        <IconWheel
           icons={[
             '/css.png',
             '/framermotion.png',

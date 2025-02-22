@@ -63,7 +63,7 @@ const ColorCyclone = ({ children }: { children?: React.ReactNode }) => {
 
   return (
     <div
-      className="h-full w-full relative flex items-center justify-center overflow-hidden bg-[#ffffff71]"
+      className="h-full w-full relative flex items-center justify-center overflow-hidden bg-[#ffffff11]"
       style={{ perspective: '1000px', transformStyle: 'preserve-3d' }}
     >
       <div className="z-10">{children}</div>
@@ -91,7 +91,7 @@ const ColorCyclone = ({ children }: { children?: React.ReactNode }) => {
             animate={{
               transform: `translateZ(-10px) translateX(${fog.gotoX}) translateY(${fog.gotoY})`,
               transition: {
-                duration: 10,
+                duration: 3,
                 repeat: Infinity,
                 repeatType: 'reverse'
               }

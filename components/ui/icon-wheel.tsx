@@ -4,11 +4,11 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-type TechWheelProps = {
+type IconWheelProps = {
   icons: Array<string>;
 };
 
-const TechWheel = ({ icons }: TechWheelProps) => {
+const IconWheel = ({ icons }: IconWheelProps) => {
   const [radius, setRadius] = useState(200); // Adjust based on the container size
   const centerX = 32; // Center of the wheel (half of the container width)
   const centerY = 32; // Center of the wheel (half of the container height)
@@ -68,4 +68,4 @@ const TechWheel = ({ icons }: TechWheelProps) => {
   );
 };
 
-export default TechWheel;
+export default IconWheel;
