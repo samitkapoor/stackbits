@@ -48,6 +48,10 @@ import { waveNoiseBackground, waveNoiseBackgroundPreview } from './frontend/Wave
 import { topographyBackground, topographyBackgroundPreview } from './frontend/TopographyBackground';
 import { textureBackground, textureBackgroundPreview } from './frontend/TextureBackground';
 import { epicNameDrop, epicNameDropPreview } from './frontend/EpicNameDrop';
+import {
+  glowingDotsBackground,
+  glowingDotsBackgroundPreview
+} from './frontend/GlowingDotsBackground';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -157,6 +161,13 @@ const sideBarOptions: Array<{
         href: '/docs/colorCyclone',
         content: colorCyclone,
         preview: colorCyclonePreview,
+        isNew: true
+      },
+      {
+        name: 'Glowing Dots Background',
+        href: '/docs/glowingDotsBackground',
+        content: glowingDotsBackground,
+        preview: glowingDotsBackgroundPreview,
         isNew: true
       },
       {
