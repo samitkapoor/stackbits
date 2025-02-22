@@ -1,12 +1,39 @@
-import TradingCardDemo from '@/components/trading-card-demo';
 import { Document } from '../main';
 import FlipRevealCard from '@/components/ui/flip-reveal-card';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import MovingBorderCard from '@/components/ui/moving-border-card';
 
 export const flipRevealCardPreview = (
-  <div className="h-full w-full flex items-center justify-center scale-50">
-    <TradingCardDemo />
+  <div className="h-full w-full flex items-center justify-center scale-75">
+    <FlipRevealCard
+      frontContent={
+        <MovingBorderCard wrapperClassName="rounded-xl" className="rounded-xl">
+          <div className="sm:h-[200px] h-[190px] w-[275px] sm:w-[350px] rounded-xl relative bg-gradient-to-tr from-neutral-500 to-blue-500 p-5 flex flex-col items-end justify-center overflow-visible">
+            <Image src="/sony-headphones.png" alt="Sony Headphones" width={300} height={200} />
+            <p className="absolute bottom-0 left-0 p-2 text-xl font-extrabold">
+              Crystal clear sound,
+              <br />
+              40-hour battery life
+            </p>
+            <p className="absolute top-0 right-0 p-2 text-xl font-extrabold">$115.99</p>
+          </div>
+        </MovingBorderCard>
+      }
+      backContent={
+        <MovingBorderCard wrapperClassName="rounded-xl" className="rounded-xl">
+          <div className="sm:h-[200px] sm:w-[350px] rounded-xl relative bg-gradient-to-tr from-neutral-500 to-blue-500 p-5 flex flex-col items-start justify-center">
+            <p className="font-bold">Key Features:</p>
+            <div className="grid grid-cols-1 mt-1 font-medium">
+              <p>🎧 Active Noise Cancellation</p>
+              <p>🔋 40-hour battery with fast charging</p>
+              <p> 🌊 IPX7 Waterproof & Sweatproof </p>
+              <p>📱 Bluetooth 5.3 with ultra-low latency</p>
+            </div>
+          </div>
+        </MovingBorderCard>
+      }
+    />
   </div>
 );
 
@@ -42,31 +69,35 @@ export const flipRevealCard: Document = {
               <p className="text-lg mb-3 font-bold">Sony WHCH720N</p>
               <FlipRevealCard
                 frontContent={
-                  <div className="border-[1px] border-neutral-400 sm:h-[200px] h-[190px] w-[275px] sm:w-[350px] rounded-xl relative bg-gradient-to-tr from-neutral-500 to-blue-500 p-5 flex flex-col items-end justify-center">
-                    <Image
-                      src="/sony-headphones.png"
-                      alt="Sony Headphones"
-                      width={300}
-                      height={200}
-                    />
-                    <p className="absolute bottom-0 left-0 p-2 text-xl font-extrabold">
-                      Crystal clear sound,
-                      <br />
-                      40-hour battery life
-                    </p>
-                    <p className="absolute top-0 right-0 p-2 text-xl font-extrabold">$115.99</p>
-                  </div>
+                  <MovingBorderCard wrapperClassName="rounded-xl" className="rounded-xl">
+                    <div className="sm:h-[200px] h-[190px] w-[275px] sm:w-[350px] rounded-xl relative bg-gradient-to-tr from-neutral-500 to-blue-500 p-5 flex flex-col items-end justify-center overflow-visible">
+                      <Image
+                        src="/sony-headphones.png"
+                        alt="Sony Headphones"
+                        width={300}
+                        height={200}
+                      />
+                      <p className="absolute bottom-0 left-0 p-2 text-xl font-extrabold">
+                        Crystal clear sound,
+                        <br />
+                        40-hour battery life
+                      </p>
+                      <p className="absolute top-0 right-0 p-2 text-xl font-extrabold">$115.99</p>
+                    </div>
+                  </MovingBorderCard>
                 }
                 backContent={
-                  <div className="border-[1px] border-neutral-400 sm:h-[200px] sm:w-[350px] rounded-xl relative bg-gradient-to-tr from-neutral-500 to-blue-500 p-5 flex flex-col items-start justify-center">
-                    <p className="font-bold">Key Features:</p>
-                    <div className="grid grid-cols-1 mt-1 font-medium">
-                      <p>🎧 Active Noise Cancellation</p>
-                      <p>🔋 40-hour battery with fast charging</p>
-                      <p> 🌊 IPX7 Waterproof & Sweatproof </p>
-                      <p>📱 Bluetooth 5.3 with ultra-low latency</p>
+                  <MovingBorderCard wrapperClassName="rounded-xl" className="rounded-xl">
+                    <div className="sm:h-[200px] sm:w-[350px] rounded-xl relative bg-gradient-to-tr from-blue-500 to-neutral-500 p-5 flex flex-col items-start justify-center">
+                      <p className="font-bold">Key Features:</p>
+                      <div className="grid grid-cols-1 mt-1 font-medium">
+                        <p>🎧 Active Noise Cancellation</p>
+                        <p>🔋 40-hour battery with fast charging</p>
+                        <p> 🌊 IPX7 Waterproof & Sweatproof </p>
+                        <p>📱 Bluetooth 5.3 with ultra-low latency</p>
+                      </div>
                     </div>
-                  </div>
+                  </MovingBorderCard>
                 }
               />
             </motion.div>
