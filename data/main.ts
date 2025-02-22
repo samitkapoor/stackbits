@@ -42,6 +42,7 @@ import { fadeInText, fadeInTextPreview } from './frontend/FadeInText';
 import { wavyText, wavyTextPreview } from './frontend/WavyText';
 import { blurText, blurTextPreview } from './frontend/BlurText';
 import { flipRevealCard, flipRevealCardPreview } from './frontend/FlipRevealCard';
+import { movingBorderCard, movingBorderCardPreview } from './frontend/MovingBorderCard';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -220,6 +221,13 @@ const sideBarOptions: Array<{
         href: '/docs/glasscard',
         content: glassCard,
         preview: glassCardPreview
+      },
+      {
+        name: 'Moving Border Card',
+        href: '/docs/movingbordercard',
+        content: movingBorderCard,
+        preview: movingBorderCardPreview,
+        isNew: true
       },
       {
         name: 'Trading Card',
