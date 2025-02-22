@@ -6,7 +6,7 @@ import MovingBorderButton from './ui/moving-border-button';
 import BuiltForDevelopers from './built-for-developers';
 import Link from 'next/link';
 import IconWheel from './ui/icon-wheel';
-import NoiseCard from './ui/noise-card';
+import WaveNoiseBackground from './ui/wave-noise-background';
 import RainbowText from './ui/rainbow-text';
 import Image from 'next/image';
 import GridBackground from './ui/grid-background';
@@ -34,37 +34,46 @@ const FeaturesSection = () => {
     {
       title: 'Your time is valuable—why waste it on boilerplate?',
       illustration: (
-        <NoiseCard
-          style={{
-            backgroundImage:
-              'linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12)'
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: { delay: 0.5, duration: 0.5 }
           }}
-          className="w-full bg-white flex flex-col md:flex-row items-center justify-center md:items-end md:justify-start pt-20 rounded rounded-se-lg max-h-[650px]"
+          viewport={{ once: true }}
         >
-          <Image
-            src="/debounce-code.png"
-            className="w-[95%] md:w-[70%] lg:w-[50%] rounded-lg md:rounded-ee-none md:rounded-ss-none md:rounded-es-none md:rounded-se-lg"
-            alt="debounce-code-preview"
-            width={1000}
-            height={1000}
-          />
-          <motion.div
-            initial={{
-              opacity: 0
+          <WaveNoiseBackground
+            style={{
+              backgroundImage:
+                'linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12)'
             }}
-            whileInView={{
-              opacity: 1,
-              transition: { duration: 1, delay: 0.7 }
-            }}
-            viewport={{
-              once: true
-            }}
-            className="w-full md:w-[40%] lg:w-[50%] p-4 xl:p-10 lg:text-3xl xl:text-5xl font-extrabold text-center md:text-left"
+            className="w-full bg-white flex flex-col md:flex-row items-center justify-center md:items-end md:justify-start pt-20 rounded rounded-se-lg max-h-[650px]"
           >
-            <p>Skip the setup.</p>
-            <p>Start Building.</p>
-          </motion.div>
-        </NoiseCard>
+            <Image
+              src="/debounce-code.png"
+              className="w-[95%] md:w-[70%] lg:w-[50%] rounded-lg md:rounded-ee-none md:rounded-ss-none md:rounded-es-none md:rounded-se-lg"
+              alt="debounce-code-preview"
+              width={1000}
+              height={1000}
+            />
+            <motion.div
+              initial={{
+                opacity: 0
+              }}
+              whileInView={{
+                opacity: 1,
+                transition: { duration: 1, delay: 0.5 }
+              }}
+              viewport={{
+                once: true
+              }}
+              className="w-full md:w-[40%] lg:w-[50%] p-4 xl:p-10 lg:text-3xl xl:text-5xl font-extrabold text-center md:text-left"
+            >
+              <p>Skip the setup.</p>
+              <p>Start Building.</p>
+            </motion.div>
+          </WaveNoiseBackground>
+        </motion.div>
       )
     },
     {

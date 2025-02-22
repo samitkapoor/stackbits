@@ -44,6 +44,7 @@ import { blurText, blurTextPreview } from './frontend/BlurText';
 import { flipRevealCard, flipRevealCardPreview } from './frontend/FlipRevealCard';
 import { movingBorderCard, movingBorderCardPreview } from './frontend/MovingBorderCard';
 import { iconWheel, iconWheelPreview } from './frontend/IconWheel';
+import { waveNoiseBackground, waveNoiseBackgroundPreview } from './frontend/WaveNoiseBackground';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -141,6 +142,39 @@ const sideBarOptions: Array<{
         href: '/docs/wavytext',
         content: wavyText,
         preview: wavyTextPreview,
+        isNew: true
+      }
+    ]
+  },
+  {
+    title: 'Backgrounds',
+    children: [
+      {
+        name: 'Color Cyclone',
+        href: '/docs/colorCyclone',
+        content: colorCyclone,
+        preview: colorCyclonePreview,
+        isNew: true
+      },
+      {
+        name: 'Prismatic Haze',
+        href: '/docs/prismaticHaze',
+        content: prismaticHaze,
+        preview: prismaticHazePreview,
+        isNew: true
+      },
+      {
+        name: 'Wave Noise Background',
+        href: '/docs/waveNoiseBackground',
+        content: waveNoiseBackground,
+        preview: waveNoiseBackgroundPreview,
+        isNew: true
+      },
+      {
+        name: 'Wavy Background',
+        href: '/docs/wavybackground',
+        content: wavyBackground,
+        preview: wavyBackgroundPreview,
         isNew: true
       }
     ]
@@ -254,13 +288,6 @@ const sideBarOptions: Array<{
         content: barricadeTape,
         preview: barricadeTapePreview
       },
-      {
-        name: 'Color Cyclone',
-        href: '/docs/colorCyclone',
-        content: colorCyclone,
-        preview: colorCyclonePreview,
-        isNew: true
-      },
       // { name: 'CustomScrollbar', href: '/docs/customscrollbar', content: customScrollbar },
       { name: 'Flicker Box', href: '/docs/flickerbox', content: flicker, preview: flickerPreview },
       {
@@ -277,24 +304,10 @@ const sideBarOptions: Array<{
         isNew: true
       },
       {
-        name: 'Prismatic Haze',
-        href: '/docs/prismaticHaze',
-        content: prismaticHaze,
-        preview: prismaticHazePreview,
-        isNew: true
-      },
-      {
         name: 'Story Avatar',
         href: '/docs/storyavatar',
         content: storyAvatar,
         preview: storyAvatarPreview
-      },
-      {
-        name: 'Wavy Background',
-        href: '/docs/wavybackground',
-        content: wavyBackground,
-        preview: wavyBackgroundPreview,
-        isNew: true
       }
     ]
   },
@@ -345,7 +358,7 @@ const sideBarOptions: Array<{
   }
 ];
 
-export const categories = ['buttons', 'texts', 'cards', 'components'];
+export const categories = ['buttons', 'backgrounds', 'texts', 'cards', 'components'];
 
 export const getDocs = (docId: string) => {
   const group = sideBarOptions.filter((tab) =>
