@@ -21,9 +21,9 @@ export const waveNoiseBackground: Document = {
   content: {
     sections: [
       {
-        heading: '🕹️ Wave Noise Background',
+        heading: '🌊 Wave Noise Background',
         content:
-          'WaveNoiseBackground brings a subtle, wavy motion to your UI, making static backgrounds a thing of the past! 🌊✨ With a seamless SVG wave animation that glides infinitely, this component adds a dynamic and modern touch to any section. Perfect for creating depth, movement, and a hint of elegance—because why settle for boring when you can have waves?',
+          "Ditch static backgrounds and bring your UI to life with WaveNoiseBackground, a sleek React component featuring a seamless, undulating SVG wave animation. Perfect for adding depth, movement, and elegance to hero sections, landing pages, and interactive backgrounds, this effect creates a calming yet dynamic atmosphere. Whether you're designing for a futuristic, minimal, or nature-inspired aesthetic, WaveNoiseBackground delivers a fluid, high-performance experience that feels effortlessly modern.",
         sectionType: 'paragraph'
       },
       {
@@ -46,7 +46,7 @@ export const waveNoiseBackground: Document = {
       },
       {
         heading: 'Install dependencies',
-        sectionType: 'component',
+        sectionType: 'dependencies',
         code: `npm i framer-motion`
       },
       {

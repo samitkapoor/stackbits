@@ -22,7 +22,7 @@ export const wavyBackground: Document = {
       {
         heading: '🌊 Wavy Background',
         content:
-          'The Wavy Background Component is a visually dynamic background element that creates smooth, flowing wave-like animations. It enhances UI aesthetics by adding a modern, fluid design that can be used in landing pages, hero sections, or animated backgrounds.',
+          'Transform your UI with Wavy Background, a sleek React component that creates mesmerizing wave-like animations. Designed for landing pages, hero sections, and animated backgrounds, this fluid effect adds a modern, dynamic aesthetic to any project. The smooth, flowing motion enhances engagement, making your design feel more immersive and interactive.',
         sectionType: 'paragraph'
       },
       {
@@ -44,7 +44,7 @@ export const wavyBackground: Document = {
       },
       {
         heading: 'Install dependencies',
-        sectionType: 'component',
+        sectionType: 'dependencies',
         code: `npm i framer-motion`
       },
       {

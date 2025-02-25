@@ -18,9 +18,9 @@ export const copyTextButton: Document = {
   content: {
     sections: [
       {
-        heading: 'Copy Text Button',
+        heading: '🔍 Copy Text Button',
         content:
-          'A simple button that lets users quickly copy text, making it ideal for links, tags, or any reusable content. It can include visual feedback, such as a tooltip or icon change, to confirm successful copying.',
+          "Make copying text effortless with the Copy Button, a simple yet powerful React component designed for quick text duplication. Ideal for sharing links, copying tags, or grabbing reusable content, this button enhances user experience with instant feedback—whether it's a tooltip, icon change, or subtle animation.",
         sectionType: 'paragraph'
       },
       {
@@ -34,7 +34,7 @@ export const copyTextButton: Document = {
       },
       {
         heading: 'Install dependencies',
-        sectionType: 'component',
+        sectionType: 'dependencies',
         code: `npm i lucide-react`
       },
       {

@@ -21,9 +21,9 @@ export const expandableIconButton: Document = {
   content: {
     sections: [
       {
-        heading: 'Expandable Icon Button',
+        heading: '🏹 Expandable Icon Button',
         content:
-          'Think of this as the Clark Kent of buttons—small, subtle, and all business at first. But the moment you hover, BOOM! It expands, revealing its secret identity (a text label!).',
+          'Think of this as the Clark Kent of buttons—small, subtle, and all business at first. But the moment you hover, BOOM! 💥 It expands, revealing its secret identity (a text label!). Perfect for minimalist UIs, modern dashboards, or interactive call-to-actions, this button keeps things sleek while adding a touch of surprise and delight.',
         sectionType: 'paragraph'
       },
       {
@@ -67,7 +67,7 @@ export const expandableIconButton: Document = {
       },
       {
         heading: 'Install dependencies',
-        sectionType: 'component',
+        sectionType: 'dependencies',
         code: `npm i framer-motion`
       },
       {

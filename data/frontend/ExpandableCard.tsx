@@ -20,9 +20,9 @@ export const expandableCard: Document = {
   content: {
     sections: [
       {
-        heading: 'Expandable Card',
+        heading: '🏹 Expandable Card',
         content:
-          'Think of an Expandable Card like a mystery box—compact, stylish, and hiding something exciting inside! Click, tap, or hover, and boom—it expands to reveal extra details, cool insights, or even a secret travel tip.',
+          'Think of an Expandable Card as a mystery box—compact, stylish, and packed with hidden surprises! 🎁 With a simple click, tap, or hover, it smoothly expands to reveal extra details, insights, or even a secret tip. Perfect for modern dashboards, product previews, FAQs, or storytelling elements, this card keeps your UI clean while delivering engaging, interactive content.',
         sectionType: 'paragraph'
       },
       {
@@ -44,7 +44,7 @@ export const expandableCard: Document = {
       },
       {
         heading: 'Install dependencies',
-        sectionType: 'component',
+        sectionType: 'dependencies',
         code: `npm i framer-motion`
       },
       {

@@ -20,7 +20,7 @@ export const colorCyclone: Document = {
       {
         heading: '🌀 Color Cyclone Background',
         content:
-          'A mesmerizing swirl of dynamic hues that continuously shift and blend, creating a dreamy, atmospheric fog effect. Ideal for enhancing hero sections, landing pages, interactive backgrounds, or adding a subtle yet captivating ambiance to modern web designs.',
+          'Transform your UI with ColorCyclone, a mesmerizing React animation component that creates a swirling vortex of dynamic colors! 🎨✨ Using Framer Motion, this effect blends multiple radial gradients, smoothly shifting them across the screen to form a hypnotic cyclone of motion and depth. Perfect for hero sections, interactive backgrounds, loading screens, and futuristic UI designs, ColorCyclone adds a fluid, dreamlike ambiance that keeps users engaged. Whether you’re crafting a modern web experience, a sci-fi-inspired design, or an eye-catching visual effect, this component brings the magic of animated color transitions to your projects. 🚀',
         sectionType: 'paragraph'
       },
       {
@@ -40,7 +40,7 @@ export const colorCyclone: Document = {
       },
       {
         heading: 'Install dependencies',
-        sectionType: 'component',
+        sectionType: 'dependencies',
         code: `npm i framer-motion`
       },
       {

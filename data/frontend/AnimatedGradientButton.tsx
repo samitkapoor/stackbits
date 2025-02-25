@@ -18,9 +18,9 @@ export const animatedGradientButton: Document = {
   content: {
     sections: [
       {
-        heading: 'Animated Gradient Button',
+        heading: '🌈 Animated Gradient Button',
         content:
-          'The animated gradient button features a smooth, looping color transition that creates a dynamic, eye-catching effect. It cycles through various gradient combinations, adding interactivity and visual appeal to call-to-action elements like "Submit" or "Get Started." This modern design enhances user engagement with smooth hover and transition effects.',
+          "Upgrade your call-to-action buttons with the Animated Gradient Button, a stylish React component featuring seamless, looping color transitions. Designed for modern UIs, this button cycles through vibrant gradient combinations, making elements like 'Submit,' 'Get Started,' and 'Sign Up' more interactive and visually engaging. With smooth hover effects and fluid animations, it enhances user experience while maintaining high performance.",
         sectionType: 'paragraph'
       },
       {
@@ -34,7 +34,7 @@ export const animatedGradientButton: Document = {
       },
       {
         heading: 'Install dependencies',
-        sectionType: 'component',
+        sectionType: 'dependencies',
         code: `npm i framer-motion`
       },
       {

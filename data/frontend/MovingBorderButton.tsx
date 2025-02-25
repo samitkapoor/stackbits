@@ -19,9 +19,9 @@ export const movingBorderButton: Document = {
   content: {
     sections: [
       {
-        heading: 'Moving Border Button',
+        heading: '🔄 Moving Border Button',
         content:
-          'A visually appealing button with an animated border that moves continuously, adding a dynamic touch to your UI. Ideal for modern designs, this effect is achieved using CSS keyframes for smooth transitions. Enhance user interaction with this stylish component!',
+          'The Animated Border Button adds a sleek, moving border effect using CSS keyframes, making buttons more interactive and eye-catching. Perfect for call-to-action buttons and modern UIs, it’s lightweight, customizable, and seamlessly integrates into any project. Adjust speed, color, and thickness to match your design needs for a polished, dynamic touch.',
         sectionType: 'paragraph'
       },
       {
@@ -35,7 +35,7 @@ export const movingBorderButton: Document = {
       },
       {
         heading: 'Component',
-        sectionType: 'component',
+        sectionType: 'dependencies',
         description:
           'Create a file moving-border-button.tsx in your components folder and paste this code',
         code: `import React from 'react';

@@ -21,9 +21,9 @@ export const textureBackground: Document = {
   content: {
     sections: [
       {
-        heading: '🕹️ Texture Background',
+        heading: '🎨 Texture Background',
         content:
-          'TextureBackground adds a stylish, pixel-perfect texture overlay to your UI, giving it a unique and modern aesthetic. 🎨✨ With customizable pattern sizes, this lightweight React component seamlessly enhances backgrounds without sacrificing performance. Perfect for sleek, minimal, or retro-inspired designs—because plain backgrounds are just too boring! 🚀🎭',
+          "Say goodbye to boring, flat backgrounds! TextureBackground is a lightweight React component that adds a crisp, customizable texture overlay to your UI, instantly enhancing its depth and aesthetic appeal. 🌟 With adjustable pattern sizes and seamless integration, this effect is perfect for minimalist designs, sleek modern UIs, or retro-inspired web pages. Built for performance and visual impact, it brings subtle sophistication without slowing things down. Whether you're designing a futuristic dashboard, a bold landing page, or a nostalgic 8-bit interface, TextureBackground ensures your backgrounds are anything but ordinary. 🚀✨",
         sectionType: 'paragraph'
       },
       {

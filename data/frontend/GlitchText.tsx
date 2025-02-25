@@ -16,9 +16,9 @@ export const glitchText: Document = {
   content: {
     sections: [
       {
-        heading: 'Glitch Text',
+        heading: '👾 Glitch Text',
         content:
-          'Bored of plain old text? Want your words to look like they just escaped the Matrix? Meet GlitchText—a funky, animated, cyberpunk-style text effect that adds a chaotic, digital distortion to your UI.',
+          'Meet GlitchText—a dynamic, animated text effect that brings chaotic, digital distortion to your UI. Perfect for cyberpunk themes, futuristic designs, gaming websites, and high-tech branding, this Framer Motion-powered React component adds a real-time glitch effect that makes your text look broken, hacked, or straight out of a sci-fi universe. ⚡👾',
         sectionType: 'paragraph'
       },
       {

@@ -18,9 +18,9 @@ export const glassButton: Document = {
   content: {
     sections: [
       {
-        heading: 'Glass Button',
+        heading: '🔍 Glass Button',
         content:
-          'GlassButton is a modern, glassmorphism-style button with a semi-transparent gradient background, soft blur effect, and smooth hover transitions. It uses Framer Motion for animations and Tailwind CSS for styling, creating a sleek and interactive UI component.',
+          'GlassButton brings a modern, glassmorphic touch to your UI with a semi-transparent gradient background, a soft blur effect, and smooth hover transitions. Powered by Framer Motion for animations and Tailwind CSS for styling, this button delivers a sleek, futuristic feel perfect for minimalist and modern designs.',
         sectionType: 'paragraph'
       },
       {
@@ -34,7 +34,7 @@ export const glassButton: Document = {
       },
       {
         heading: 'Install dependencies',
-        sectionType: 'component',
+        sectionType: 'dependencies',
         code: `npm i framer-motion`
       },
       {

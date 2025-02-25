@@ -17,9 +17,9 @@ export const skewedText: Document = {
   content: {
     sections: [
       {
-        heading: 'Skewed Text',
+        heading: '😵 Skewed Text',
         content:
-          'Step into the digital future with SkewedText, a dynamic and animated text effect that distorts and tilts your words as if they’re breaking free from a static world. Inspired by cyberpunk aesthetics, sci-fi interfaces, and glitchy digital landscapes, this effect brings a sense of movement, depth, and perspective to your typography. Perfect for hacking-inspired designs, neon-lit interfaces, or just making text look cool, this effect distorts, shifts, and skews with interactivity—reacting dynamically to your cursor movements. Make your UI feel responsive, immersive, and ahead of its time.',
+          'Step into the digital future with SkewedText, a bold and animated text distortion effect that makes your words look like they’re breaking free from a static world. 🔥 Inspired by cyberpunk aesthetics, sci-fi interfaces, and glitchy digital landscapes, this React component skews, shifts, and tilts text dynamically—reacting to cursor movements for an interactive, immersive feel. Perfect for hacking-inspired designs, neon-lit UIs, futuristic typography, and gaming websites, it adds movement, depth, and perspective to your UI. 🕶️💻',
         sectionType: 'paragraph'
       },
       {
@@ -41,7 +41,7 @@ export const skewedText: Document = {
       },
       {
         heading: 'Install dependencies',
-        sectionType: 'component',
+        sectionType: 'dependencies',
         code: `npm i framer-motion`
       },
       {

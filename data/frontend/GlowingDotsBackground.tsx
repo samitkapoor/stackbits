@@ -18,9 +18,9 @@ export const glowingDotsBackground: Document = {
   content: {
     sections: [
       {
-        heading: '🕹️ Glowing Dots Background',
+        heading: '💡 Glowing Dots Background',
         content:
-          'Elevate your UI with Glowing Graph Background, a sleek, interactive React & Framer Motion component that brings a dynamic hover glow effect to your pages. Watch as grid cells light up with random neon colors, smoothly fading out for a mesmerizing experience. Perfect for modern dashboards, landing pages, and futuristic designs. Built with Next.js & Tailwind CSS, this lightweight component adds a visually engaging, high-performance background to any project. 🚀🔥',
+          "Bring your UI to life with Glowing Graph Background, a high-performance React component that creates a mesmerizing, interactive grid glow effect! 🔥✨ As users hover, random grid cells illuminate with neon colors, smoothly fading out for a futuristic, cyberpunk-inspired aesthetic. Perfect for dashboards, landing pages, hero sections, and modern web designs, this Next.js & Tailwind CSS-powered effect adds a dynamic, lightweight animation without compromising performance. Whether you're building a tech-inspired UI, a sci-fi interface, or an engaging user experience, this glowing grid background makes every interaction feel next-level. 🚀💡",
         sectionType: 'paragraph'
       },
       {
@@ -40,7 +40,7 @@ export const glowingDotsBackground: Document = {
       },
       {
         heading: 'Install dependencies',
-        sectionType: 'component',
+        sectionType: 'dependencies',
         code: `npm i framer-motion`
       },
       {

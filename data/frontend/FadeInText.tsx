@@ -23,9 +23,9 @@ export const fadeInText: Document = {
   content: {
     sections: [
       {
-        heading: 'Fade In Text',
+        heading: '👀 Fade In Text',
         content:
-          'FadeInText is a React component that animates text by fading in each word individually as it comes into view. Built with Framer Motion, it enhances readability and engagement by smoothly revealing content. Ideal for headers, quotes, or dynamic text displays.',
+          'FadeInText is a React component that animates text with a smooth fade-in effect, revealing each word individually as it comes into view. Built with Framer Motion, it enhances readability, engagement, and user experience by dynamically displaying content. Perfect for headings, quotes, landing pages, and interactive UI elements, this text animation component makes your website feel more polished and engaging. 🎭✨',
         sectionType: 'paragraph'
       },
       {
@@ -50,7 +50,7 @@ export const fadeInText: Document = {
       },
       {
         heading: 'Install dependencies',
-        sectionType: 'component',
+        sectionType: 'dependencies',
         code: `npm i framer-motion`
       },
       {

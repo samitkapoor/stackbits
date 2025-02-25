@@ -21,7 +21,7 @@ export const blurText: Document = {
       {
         heading: '🌫️ Blur Text',
         content:
-          'Make your text appear like magic with BlurText! ✨ Watch each letter sharpen into focus as it comes into view—perfect for dramatic reveals, mysterious vibes, or just making your UI a little more fun! 🔮👀',
+          'Make your text animation stand out with BlurText! ✨ Watch as each letter smoothly sharpens into focus as it comes into view, creating a stunning blur-to-clear effect. Perfect for dramatic reveals, mysterious aesthetics, interactive UI elements, and engaging landing pages, this React component uses Framer Motion to add a sleek and modern touch to your website. 👀🔮',
         sectionType: 'paragraph'
       },
       {

@@ -19,9 +19,9 @@ export const wavyText: Document = {
   content: {
     sections: [
       {
-        heading: 'Wavy Text',
+        heading: '🌊 Wavy Text',
         content:
-          'Make your text dance with WavyText! 🌊✨ Each letter bounces in a smooth wave, adding a fun, eye-catching motion to your UI. Perfect for playful headings, animated logos, or just making words a little more exciting! 🚀',
+          "Make your text come alive with WavyText! ✨ This React component creates a smooth, flowing wave animation, making each letter bounce and ripple dynamically. Perfect for playful headings, animated logos, fun UI elements, and engaging website designs, this Framer Motion-powered effect adds a lively and eye-catching motion to your typography. Whether you're aiming for a fun, creative, or interactive feel, WavyText makes your words stand out with style! 🚀",
         sectionType: 'paragraph'
       },
       {
@@ -42,7 +42,7 @@ export const wavyText: Document = {
       },
       {
         heading: 'Install dependencies',
-        sectionType: 'component',
+        sectionType: 'dependencies',
         code: `npm i framer-motion`
       },
       {

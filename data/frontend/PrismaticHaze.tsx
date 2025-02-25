@@ -18,9 +18,9 @@ export const prismaticHaze: Document = {
   content: {
     sections: [
       {
-        heading: 'Prismatic Haze Background',
+        heading: '🌠 Prismatic Haze Background',
         content:
-          "Prismatic Haze is like a dreamy swirl of cosmic magic, where colors melt and shift in a hypnotic dance of iridescence. Soft noise and subtle grain add a touch of texture, making it feel alive—almost like a misty nebula shimmering under neon lights. Whether you're crafting a futuristic UI, designing an eye-catching website, or setting the mood for a music visualizer, Prismatic Haze brings that perfect mix of dreamy, trippy, and effortlessly cool.",
+          'Step into a world of dreamy, shifting colors with Prismatic Haze, a React animation effect that blends cosmic swirls, neon hues, and soft grain textures to create an immersive, hypnotic ambiance. ✨🌠 This dynamic, iridescent mist flows like a living nebula, making it perfect for futuristic UIs, music visualizers, landing pages, and eye-catching web designs. Whether you’re aiming for a trippy, cyberpunk-inspired aesthetic or a soft, atmospheric glow, Prismatic Haze adds that effortlessly cool, next-gen vibe to your project. 🚀💫',
         sectionType: 'paragraph'
       },
       {
@@ -40,7 +40,7 @@ export const prismaticHaze: Document = {
       },
       {
         heading: 'Install dependencies',
-        sectionType: 'component',
+        sectionType: 'dependencies',
         code: `npm i @react-three/fiber @react-three/drei three`
       },
       {

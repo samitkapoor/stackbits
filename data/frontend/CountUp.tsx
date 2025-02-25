@@ -22,9 +22,9 @@ export const countUp: Document = {
   content: {
     sections: [
       {
-        heading: 'Count Up',
+        heading: '🔢 Count Up',
         content:
-          'The CountUp component brings numbers to life with a smooth animated climb from start to target, making stats and achievements more exciting! Watch the magic unfold as it counts up, and when it hits the goal—boom! A burst of confetti celebrates the moment.',
+          'The CountUp component isn’t just about numbers—it’s about bringing data to life! 🎢 Watch as digits smoothly count up from start to finish, making stats, milestones, and achievements more engaging. Built for React with Framer Motion, this animated number counter adds excitement to dashboards, analytics, and landing pages. And when it hits the goal? BOOM! 🎉 A confetti explosion makes every milestone feel like a celebration!',
         sectionType: 'paragraph'
       },
       {
@@ -48,7 +48,7 @@ export const countUp: Document = {
       },
       {
         heading: 'Install dependencies',
-        sectionType: 'component',
+        sectionType: 'dependencies',
         code: `npm i framer-motion react-confetti`
       },
       {
