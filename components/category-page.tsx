@@ -18,7 +18,7 @@ const CategoryPage = ({ docId }: CategoryPageProps) => {
   const { title, children } = doc;
 
   return (
-    <div className="max-w-[1000px] w-full flex flex-col xl:px-10">
+    <div className="max-w-[1000px] w-full flex flex-col h-full xl:px-10">
       <p className="font-semibold text-2xl">{title}</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 mt-10 gap-5">
         {children.map((child, i) => {

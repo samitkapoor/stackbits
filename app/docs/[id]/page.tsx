@@ -10,16 +10,18 @@ import { categories } from '@/data/main';
 const Page = () => {
   const params = useParams();
 
-  if (
-    params &&
-    params.id &&
-    typeof params.id === 'string' &&
-    categories.includes(params.id.toLowerCase())
-  ) {
-    return <CategoryPage docId={params.id} />;
-  } else if (params && params.id && typeof params.id === 'string') {
-    return <DocumentContentBox docId={params.id} />;
-  }
+  return (
+    <div id="parent-container" className="h-full w-full px-10">
+      {params &&
+        params.id &&
+        typeof params.id === 'string' &&
+        (categories.includes(params.id.toLowerCase()) ? (
+          <CategoryPage docId={params.id} />
+        ) : (
+          <DocumentContentBox docId={params.id} />
+        ))}
+    </div>
+  );
 };
 
 export default Page;
