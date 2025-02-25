@@ -17,7 +17,8 @@ const DocumentationLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className={`flex items-start bg-black relative px-[20px] md:px-[50px] h-screen`}>
       <SideBar isOpen={sideBarIsOpen} />
-      <div className="flex flex-col gap-52 pt-[50px] xl:gap-0 xl:flex-row w-full lg:pl-[350px] pb-32">
+      <div className="flex flex-col gap-52 xl:gap-0 xl:flex-row w-full h-screen overflow-y-auto scrollbar-hide">
+        {/* Side bar button */}
         <MovingBorderButton
           onClick={toggleSideBar}
           wrapperClassName="block lg:hidden w-min absolute top-[50px] right-[50px] z-50"
@@ -25,7 +26,6 @@ const DocumentationLayout = ({ children }: { children: React.ReactNode }) => {
           {sideBarIsOpen ? <X /> : <Menu />}
         </MovingBorderButton>
         {children}
-
         <SupportPlugin />
       </div>
     </div>
