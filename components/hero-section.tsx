@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useEffect } from 'react';
-import { motion, useAnimationControls } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 import DotBackground from './ui/dot-background';
 import HeroIllustration from './hero-illustration';
@@ -13,8 +13,6 @@ import GlitchText from './ui/glitch-text';
 import IconCard from './ui/icon-card';
 
 const HeroSection = () => {
-  const controls = useAnimationControls();
-
   const features = [
     {
       icon: <CircleCheckBig className="sm:h-[40px] sm:w-[40px] h-[30px] w-[30px] text-green-400" />,
@@ -34,28 +32,10 @@ const HeroSection = () => {
     }
   ];
 
-  useEffect(() => {
-    setTimeout(() => {
-      controls.start('explode');
-
-      setTimeout(() => {
-        controls.start('shake');
-      }, 1000);
-    }, 600);
-
-    setTimeout(() => {
-      controls.start('launch');
-
-      setTimeout(() => {
-        controls.start('flyRocket');
-      }, 1000);
-    }, 1000);
-  }, []);
-
   return (
     <div className="flex flex-col w-full items-center justify-center">
       <div className="flex items-center w-full relative">
-        <DotBackground className="justify-center sm:gap-10 md:gap-20 py-5 md:p-8 flex-col relative">
+        <DotBackground className="sm:gap-10 md:gap-20 py-5 md:p-8 lg:px-32 flex-col relative">
           <motion.p
             initial={{
               opacity: 0,
@@ -73,62 +53,7 @@ const HeroSection = () => {
               React.js
             </GlitchText>
           </motion.p>
-          <motion.p
-            initial={{
-              opacity: 0,
-              y: '-800px'
-            }}
-            variants={{
-              explode: {
-                opacity: 0.2,
-                y: '10px',
-                transition: { ease: ['backOut'], duration: 0.7 }
-              },
-              shake: {
-                x: [0, 1, 0, -1, 0, 1, 0, -1, 0],
-                y: [10, 11, 10, 9, 10, 9, 10, 11, 10],
-                scale: [1, 1, 1, 1.1, 1, 1.1, 1, 1.1, 1],
-                transition: {
-                  repeat: Infinity,
-                  repeatType: 'reverse',
-                  ease: 'easeInOut',
-                  duration: 5
-                }
-              }
-            }}
-            animate={controls}
-            className="text-[75px] hidden sm:block select-none lg:text-[150px] leading-none absolute opacity-40 left-[175px] z-0 top-[100px]"
-          >
-            💥
-          </motion.p>
-          <motion.p
-            initial={{
-              opacity: 0,
-              y: '-800px'
-            }}
-            variants={{
-              launch: {
-                opacity: 0.2,
-                y: '0px',
-                transition: { ease: ['backOut'], duration: 0.7 }
-              },
-              flyRocket: {
-                x: [0, 1, 0, -1, 0, 1, 0, -1, 0],
-                y: [0, 1, 0, -1, 0, -1, 0, 1, 0],
-                scale: [1, 1, 1, 1, 1.1, 1.1, 1.1, 1.1, 1],
-                transition: {
-                  repeat: Infinity,
-                  repeatType: 'reverse',
-                  ease: 'easeInOut',
-                  duration: 3
-                }
-              }
-            }}
-            animate={controls}
-            className="text-[100px] select-none hidden sm:block lg:text-[250px] leading-none absolute opacity-40 right-[175px] z-0 top-[100px]"
-          >
-            🚀
-          </motion.p>
+
           <div className="flex flex-col xl:flex-row items-center xl:items-start justify-center xl:justify-start gap-10 relative">
             <div className="inline-flex flex-col items-start justify-center lg:justify-start relative lg:max-w-[650px] lg:w-auto">
               <motion.p
