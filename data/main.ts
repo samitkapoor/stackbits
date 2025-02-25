@@ -52,6 +52,7 @@ import {
   glowingDotsBackground,
   glowingDotsBackgroundPreview
 } from './frontend/GlowingDotsBackground';
+import { footer, footerPreview } from './frontend/Footer';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -330,6 +331,13 @@ const sideBarOptions: Array<{
         href: '/docs/flipbadge',
         content: flipBadge,
         preview: flipBadgePreview
+      },
+      {
+        name: 'Footer',
+        href: '/docs/footer',
+        content: footer,
+        preview: footerPreview,
+        isNew: true
       },
       {
         name: 'Icon Wheel',
