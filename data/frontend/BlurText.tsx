@@ -19,7 +19,7 @@ export const blurText: Document = {
   content: {
     sections: [
       {
-        heading: 'Blur Text',
+        heading: '🌫️ Blur Text',
         content:
           'Make your text appear like magic with BlurText! ✨ Watch each letter sharpen into focus as it comes into view—perfect for dramatic reveals, mysterious vibes, or just making your UI a little more fun! 🔮👀',
         sectionType: 'paragraph'
@@ -42,7 +42,7 @@ export const blurText: Document = {
       },
       {
         heading: 'Install dependencies',
-        sectionType: 'component',
+        sectionType: 'dependencies',
         code: `npm i framer-motion`
       },
       {
