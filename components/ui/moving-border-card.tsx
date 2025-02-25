@@ -11,7 +11,7 @@ const MovingBorderCard = ({
 }) => {
   return (
     <div className={`moving-border-card p-[3px] ${wrapperClassName}`}>
-      <div className={`flex items-center justify-center relative ${className}`}>{children}</div>
+      <div className={`${className}`}>{children}</div>
     </div>
   );
 };

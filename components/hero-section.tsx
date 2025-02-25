@@ -3,7 +3,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-import DotBackground from './ui/dot-background';
 import HeroIllustration from './hero-illustration';
 import MovingBorderButton from './ui/moving-border-button';
 import { ChevronsUp, CircleCheckBig, Gauge, MoveRight, Palette } from 'lucide-react';
@@ -35,7 +34,7 @@ const HeroSection = () => {
   return (
     <div className="flex flex-col w-full items-center justify-center">
       <div className="flex items-center w-full relative">
-        <DotBackground className="sm:gap-10 md:gap-20 py-5 md:p-8 lg:px-32 flex-col relative">
+        <div className="sm:gap-10 md:gap-10 py-5 md:p-8 lg:px-32 flex-col relative w-full flex items-start justify-start">
           <motion.p
             initial={{
               opacity: 0,
@@ -53,7 +52,6 @@ const HeroSection = () => {
               React.js
             </GlitchText>
           </motion.p>
-
           <div className="flex flex-col xl:flex-row items-center xl:items-start justify-center xl:justify-start gap-10 relative">
             <div className="inline-flex flex-col items-start justify-center lg:justify-start relative lg:max-w-[650px] lg:w-auto">
               <motion.p
@@ -64,12 +62,12 @@ const HeroSection = () => {
                   opacity: 1,
                   transition: { duration: 1.2, ease: 'backOut', delay: 0.2 }
                 }}
-                className="text-[14px] sm:text-[16px] lg:text-[20px] leading-7 mt-4 text-center lg:text-left px-5"
+                className="text-[14px] sm:text-[16px] lg:text-[20px] leading-7 mt-4 text-center lg:text-left"
               >
                 Save time with a library of pre-built components, utility functions, and code
                 snippets, along with templates for quick and efficient development.
               </motion.p>
-              <div className="grid grid-cols-2 gap-2 mt-10 px-5">
+              <div className="grid grid-cols-2 gap-2 mt-10">
                 {features.map((feature) => {
                   return <IconCard key={feature.text} icon={feature.icon} text={feature.text} />;
                 })}
@@ -80,7 +78,7 @@ const HeroSection = () => {
                   opacity: 1,
                   transition: { duration: 1.2, delay: 0.2 }
                 }}
-                className="mt-10 flex items-center justify-center xl:justify-start px-5"
+                className="mt-10 flex items-center justify-center xl:justify-start"
               >
                 <Link href={'/docs/introduction'}>
                   <MovingBorderButton wrapperClassName="p-[2px]" className="px-4 py-2 text-xl">
@@ -97,7 +95,7 @@ const HeroSection = () => {
                   opacity: 1,
                   transition: { duration: 1.2, ease: 'backOut', delay: 1.5 }
                 }}
-                className="text-[14px] sm:text-[16px] lg:text-[14px] leading-6 mt-10 md:mt-10 text-center lg:text-left px-5"
+                className="text-[14px] sm:text-[16px] lg:text-[14px] leading-6 mt-10 md:mt-10 text-center lg:text-left"
               >
                 Other devs *write* code. You? You *assemble* greatness.{' '}
                 <br className="hidden sm:block" />
@@ -106,7 +104,7 @@ const HeroSection = () => {
             </div>
             <HeroIllustration />
           </div>
-        </DotBackground>
+        </div>
       </div>
     </div>
   );

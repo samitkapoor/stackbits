@@ -1,9 +1,16 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 
-type ShineButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
+type ShineButtonProps = {
+  speed?: number;
+} & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-const ShineButton: React.FC<ShineButtonProps> = ({ children, className, ...props }) => {
+const ShineButton: React.FC<ShineButtonProps> = ({
+  children,
+  className,
+  speed = 2.5,
+  ...props
+}) => {
   return (
     <button
       {...props}
@@ -17,7 +24,7 @@ const ShineButton: React.FC<ShineButtonProps> = ({ children, className, ...props
           background: 'linear-gradient(-55deg, transparent 45%, #ffffffaa, transparent 55%)'
         }}
         transition={{
-          duration: 2.5,
+          duration: speed,
           repeat: Infinity,
           ease: 'linear'
         }}
