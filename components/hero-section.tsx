@@ -83,7 +83,7 @@ const HeroSection = () => {
                 className="mt-10 flex items-center justify-center xl:justify-start px-5"
               >
                 <Link href={'/docs/introduction'}>
-                  <MovingBorderButton className="px-4 py-2 text-xl">
+                  <MovingBorderButton wrapperClassName="p-[2px]" className="px-4 py-2 text-xl">
                     Get Started&nbsp;
                     <MoveRight />
                   </MovingBorderButton>
