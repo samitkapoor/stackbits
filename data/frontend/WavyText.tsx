@@ -5,7 +5,7 @@ export const wavyTextPreview = (
   <div className="h-full w-full flex items-center justify-center">
     <WavyText
       text="Mahaul poora wavy"
-      className="text-blue-500 text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase"
+      className="text-blue-500 text-xl sm:text-2xl md:text-3xl font-extrabold uppercase"
     ></WavyText>
   </div>
 );
