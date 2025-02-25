@@ -1,6 +1,14 @@
 import GlassButton from '@/components/ui/glass-button';
 import { Document } from '../main';
 
+export const glassButtonPreview = (
+  <div className="h-full w-full flex flex-col items-center justify-center gap-2">
+    <GlassButton className="text-lg md:text-xl font-medium !px-5 sm:!px-10 py-4 rounded-lg">
+      Glass
+    </GlassButton>
+  </div>
+);
+
 export const glassButton: Document = {
   sideBar: {
     group: 'Buttons',
@@ -10,19 +18,15 @@ export const glassButton: Document = {
   content: {
     sections: [
       {
-        heading: 'Glass Button',
+        heading: '🔍 Glass Button',
         content:
-          'GlassButton is a modern, glassmorphism-style button with a semi-transparent gradient background, soft blur effect, and smooth hover transitions. It uses Framer Motion for animations and Tailwind CSS for styling, creating a sleek and interactive UI component.',
+          'GlassButton brings a modern, glassmorphic touch to your UI with a semi-transparent gradient background, a soft blur effect, and smooth hover transitions. Powered by Framer Motion for animations and Tailwind CSS for styling, this button delivers a sleek, futuristic feel perfect for minimalist and modern designs.',
         sectionType: 'paragraph'
       },
       {
         heading: 'Preview',
         sectionType: 'preview',
-        code: (
-          <div className="h-full w-full flex flex-col items-center justify-center gap-2">
-            <GlassButton>Continue</GlassButton>
-          </div>
-        )
+        code: glassButtonPreview
       },
       {
         heading: 'Follow below steps 👇🏻',
@@ -30,7 +34,7 @@ export const glassButton: Document = {
       },
       {
         heading: 'Install dependencies',
-        sectionType: 'component',
+        sectionType: 'dependencies',
         code: `npm i framer-motion`
       },
       {
@@ -49,25 +53,37 @@ const GlassButton = ({ children, className, ...props }: GlassButtonProps) => {
   return (
     <motion.button
       {...props}
-      className={\`relative overflow-hidden rounded-xl px-6 py-3 text-white font-semibold backdrop-blur-md \${className}\`}
-      initial={{ background: 'rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(10px)' }}
+      className={\`relative overflow-hidden rounded-xl px-6 py-3 text-white bg-gradient-to-tr from-[#46C0F7a9] to-[#E3E8EAa9] font-semibold \${className}\`}
+      initial={{ y: 10, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
       whileHover={{
-        background: 'rgba(255, 255, 255, 0.3)',
-        backdropFilter: 'blur(15px)',
-        scale: 1.05
+        y: -5
       }}
       whileTap={{ scale: 0.95 }}
       transition={{ duration: 0.3 }}
     >
-      <span className="absolute inset-0 opacity-50 bg-gradient-to-tr from-sky-400 to-neutral-200" />
+      <motion.span
+        className="absolute inset-0"
+        style={{
+          background: 'linear-gradient(-70deg, transparent 48%, #ffffff8f 50%, transparent 52%)'
+        }}
+        initial={{ x: '-100%' }}
+        animate={{ x: '100%' }}
+        transition={{
+          duration: 2,
+          repeatDelay: 1,
+          repeat: Infinity,
+          ease: 'linear'
+        }}
+      />
 
-      <div className="relative z-10">{children}</div>
+      {/* Button Content */}
+      <div className="relative">{children}</div>
     </motion.button>
   );
 };
 
 export default GlassButton;
-
 `
       },
       {

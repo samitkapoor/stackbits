@@ -3,6 +3,15 @@ import { Document } from '../main';
 import { Globe, InstagramIcon, Mail, TwitterIcon } from 'lucide-react';
 import RainbowText from '@/components/ui/rainbow-text';
 
+export const expandableIconButtonPreview = (
+  <ExpandableIconButton
+    onClick={() => (window.location.href = 'https://twitter.com/samitkapoorr')}
+    icon={<TwitterIcon />}
+    text={'samitkapoorr'}
+    className="rounded-full p-[16px] text-lg md:text-xl font-medium hover:bg-blue-500"
+  />
+);
+
 export const expandableIconButton: Document = {
   sideBar: {
     group: 'Buttons',
@@ -12,9 +21,9 @@ export const expandableIconButton: Document = {
   content: {
     sections: [
       {
-        heading: 'Expandable Icon Button',
+        heading: '🏹 Expandable Icon Button',
         content:
-          'Think of this as the Clark Kent of buttons—small, subtle, and all business at first. But the moment you hover, BOOM! It expands, revealing its secret identity (a text label!).',
+          'Think of this as the Clark Kent of buttons—small, subtle, and all business at first. But the moment you hover, BOOM! 💥 It expands, revealing its secret identity (a text label!). Perfect for minimalist UIs, modern dashboards, or interactive call-to-actions, this button keeps things sleek while adding a touch of surprise and delight.',
         sectionType: 'paragraph'
       },
       {
@@ -28,25 +37,25 @@ export const expandableIconButton: Document = {
                 onClick={() => (window.location.href = 'https://twitter.com/samitkapoorr')}
                 icon={<TwitterIcon />}
                 text={'samitkapoorr'}
-                className="border-[1px] hover:bg-blue-500"
+                className="rounded-full p-[16px] text-lg md:text-xl font-medium hover:bg-blue-500"
               />
               <ExpandableIconButton
                 onClick={() => (window.location.href = 'https://instagram.com/im_samit')}
                 icon={<InstagramIcon />}
                 text={'im_samit'}
-                className="border-[1px] hover:bg-gradient-to-r hover:from-pink-500 hover:to-red-500"
+                className="rounded-full p-[16px] text-lg md:text-xl font-medium hover:bg-gradient-to-r hover:from-pink-500 hover:to-red-500"
               />
               <ExpandableIconButton
                 onClick={() => (window.location.href = 'mailto:samitkapoor77@gmail.com')}
                 icon={<Mail />}
                 text={'samitkapoor77@gmail.com'}
-                className="border-[1px] hover:bg-red-500"
+                className="rounded-full p-[16px] text-lg md:text-xl font-medium hover:bg-red-500"
               />
               <ExpandableIconButton
                 onClick={() => (window.location.href = 'https://samitkapoor.com')}
                 icon={<Globe />}
                 text={'samitkapoor.com'}
-                className="border-[1px] hover:bg-gradient-to-tr hover:from-neutral-400 hover:to-green-500"
+                className="rounded-full p-[16px] text-lg md:text-xl font-medium hover:bg-gradient-to-tr hover:from-neutral-400 hover:to-green-500"
               />
             </div>
           </div>
@@ -58,7 +67,7 @@ export const expandableIconButton: Document = {
       },
       {
         heading: 'Install dependencies',
-        sectionType: 'component',
+        sectionType: 'dependencies',
         code: `npm i framer-motion`
       },
       {
@@ -66,7 +75,9 @@ export const expandableIconButton: Document = {
         sectionType: 'component',
         description:
           'Create a file expandable-icon-button.tsx in your components folder and paste this code',
-        code: `import { motion, useAnimationControls } from 'framer-motion';
+        code: `'use client';
+
+import { motion, useAnimationControls } from 'framer-motion';
 import { MouseEventHandler, useEffect, useRef, useState } from 'react';
 
 type ExpandableIconButtonProps = {

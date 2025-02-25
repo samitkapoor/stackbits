@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import ContactMe from '@/components/contact-me';
 
 export const metadata: Metadata = {
   title: 'Stackbits'
@@ -21,8 +22,9 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={`font-poppins antialiased text-white bg-black overflow-x-hidden`}>
+      <body className={`font-poppins antialiased text-white bg-black overflow-x-hidden relative`}>
         {children}
+        <ContactMe />
       </body>
     </html>
   );

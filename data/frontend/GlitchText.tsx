@@ -1,6 +1,12 @@
 import GlitchText from '@/components/ui/glitch-text';
 import { Document } from '../main';
 
+export const glitchTextPreview = (
+  <div className="h-full w-full flex items-center justify-center">
+    <GlitchText className="text-[50px] font-bold">Awesome</GlitchText>
+  </div>
+);
+
 export const glitchText: Document = {
   sideBar: {
     group: 'Texts',
@@ -10,9 +16,9 @@ export const glitchText: Document = {
   content: {
     sections: [
       {
-        heading: 'Glitch Text',
+        heading: '👾 Glitch Text',
         content:
-          'Bored of plain old text? Want your words to look like they just escaped the Matrix? Meet GlitchText—a funky, animated, cyberpunk-style text effect that adds a chaotic, digital distortion to your UI.',
+          'Meet GlitchText—a dynamic, animated text effect that brings chaotic, digital distortion to your UI. Perfect for cyberpunk themes, futuristic designs, gaming websites, and high-tech branding, this Framer Motion-powered React component adds a real-time glitch effect that makes your text look broken, hacked, or straight out of a sci-fi universe. ⚡👾',
         sectionType: 'paragraph'
       },
       {
@@ -36,7 +42,7 @@ export const glitchText: Document = {
         code: `.glitch {
   position: relative;
   display: inline-block;
-  animation: glitch 1.5s infinite;
+  animation: glitch 0.7s infinite;
 }
 
 @keyframes glitch {
@@ -63,13 +69,39 @@ export const glitchText: Document = {
         description:
           'Create a file custom-scrollbar.tsx in your components folder and paste this code',
         code: `import React from 'react';
-        
+import { motion } from 'framer-motion';
+
 const GlitchText = ({ children, className }: { children: React.ReactNode; className?: string }) => {
-    return <span className={\`glitch \${className}\`}>{children}</span>;
+  return (
+    <motion.span
+      animate={{
+        scale: [1, 1, 1.3, 1, 1, 1, 1],
+        x: [0, 0, 0, 2, 0, 2, 2],
+        y: [2, -2, -2, 0, 0, 2, 0],
+        filter: [
+          'blur(0px)',
+          'blur(2px)',
+          'blur(4px)',
+          'blur(0px)',
+          'blur(0px)',
+          'blur(0px)',
+          'blur(0px)'
+        ],
+        transition: {
+          repeat: Infinity,
+          duration: 0.3,
+          repeatDelay: 1
+        }
+      }}
+      className={\`glitch \${className}\`}
+    >
+      {children}
+    </motion.span>
+  );
 };
 
 export default GlitchText;
-        `
+`
       },
       {
         heading: 'Usage',

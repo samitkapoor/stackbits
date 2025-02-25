@@ -1,6 +1,12 @@
 import { Document } from '../main';
 import RainbowText from '@/components/ui/rainbow-text';
 
+export const rainbowTextPreview = (
+  <div className="h-full w-full flex items-center justify-center">
+    <RainbowText className="text-[50px] font-bold">Fresh Drop</RainbowText>
+  </div>
+);
+
 export const rainbowText: Document = {
   sideBar: {
     group: 'Texts',
@@ -12,7 +18,7 @@ export const rainbowText: Document = {
       {
         heading: '🌈 Rainbow Text',
         content:
-          'RainbowText is a dynamic React component that brings text to life with smooth, animated gradients. Perfect for creating eye-catching headlines, call-to-actions, or any UI element that needs a bold and colorful touch.',
+          'Why settle for boring text when you can make it shine with color? ✨ RainbowText is a React component that adds smooth, animated gradient effects to your text, making every word pop with vibrant, eye-catching colors. Perfect for headlines, call-to-actions, banners, landing pages, and playful UI elements, this Framer Motion-powered animation brings a fun and dynamic touch to your design. 🌟',
         sectionType: 'paragraph'
       },
       {
@@ -32,7 +38,7 @@ export const rainbowText: Document = {
       },
       {
         heading: 'Install dependencies',
-        sectionType: 'component',
+        sectionType: 'dependencies',
         code: `npm i framer-motion`
       },
       {

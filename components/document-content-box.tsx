@@ -15,7 +15,7 @@ const DocumentContentBox = ({ docId }: { docId: string }) => {
 
   return (
     doc && (
-      <div className="max-w-[1000px] w-full">
+      <div className="max-w-[1000px] h-full w-full">
         <AddressBar sideBarGroup={sideBar.group} name={sideBar.name} />
         <div className="flex flex-col gap-[50px] mt-[30px]">
           {content.sections.map((section) => {

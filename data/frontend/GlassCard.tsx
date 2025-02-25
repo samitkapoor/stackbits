@@ -1,6 +1,12 @@
 import { Document } from '../main';
 import GlassCardDemo from '@/components/glass-card-demo';
 
+export const glassCardPreview = (
+  <div className="h-full w-full flex items-center justify-center scale-90">
+    <GlassCardDemo />
+  </div>
+);
+
 export const glassCard: Document = {
   sideBar: {
     group: 'Cards',
@@ -48,24 +54,34 @@ type GlassCardProps = {
 const GlassCard = ({ children, className }: GlassCardProps) => {
   return (
     <motion.div
-      initial={{ y: 10, opacity: 0, background: 'rgba(255, 255, 255, 0.1)' }}
+      initial={{ y: 10, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       whileHover={{
-        y: -5,
-        boxShadow: '0px 10px 20px rgba(255, 255, 255, 0.2)',
-        background: 'rgba(255, 255, 255, 0.3)'
+        y: -5
       }}
       transition={{ duration: 0.1 }}
-      className={\`relative p-6 rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20 shadow-md hover:border-white/40 transition-all overflow-hidden \${className}\`}
+      className={\`relative bg-gradient-to-tr from-[#46C0F75f] to-[#E3E8EA5f] p-6 rounded-2xl bg-white/10 shadow-md hover:border-white/40 transition-all overflow-hidden \${className}\`}
     >
-      <span className="absolute inset-0 opacity-50 bg-gradient-to-tr from-sky-400 to-neutral-200" />
+      <motion.span
+        className="absolute inset-0"
+        style={{
+          background: 'linear-gradient(-70deg, transparent 48%, #ffffff8f 50%, transparent 52%)'
+        }}
+        initial={{ x: '-100%' }}
+        animate={{ x: '100%' }}
+        transition={{
+          duration: 2,
+          repeatDelay: 1,
+          repeat: Infinity,
+          ease: 'linear'
+        }}
+      />
       {children}
     </motion.div>
   );
 };
 
 export default GlassCard;
-
 `
       },
       {

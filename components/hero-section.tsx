@@ -139,13 +139,13 @@ const HeroSection = () => {
                   opacity: 1,
                   transition: { duration: 1.2, ease: 'backOut', delay: 0.2 }
                 }}
-                className="text-[14px] sm:text-[16px] lg:text-[20px] leading-6 mt-4 text-center lg:text-left px-5"
+                className="text-[14px] sm:text-[16px] lg:text-[20px] leading-7 mt-4 text-center lg:text-left px-5"
               >
-                A growing library of reusable snippets to help you ship projects faster, empowering
-                developers with time-saving tools and ready-to-use code for seamless integration.
+                Save time with a library of pre-built components, utility functions, and code
+                snippets, along with templates for quick and efficient development.
               </motion.p>
               <div className="grid grid-cols-2 gap-2 mt-10 px-5">
-                {features.map((feature, index) => {
+                {features.map((feature) => {
                   return <IconCard key={feature.text} icon={feature.icon} text={feature.text} />;
                 })}
               </div>
@@ -155,7 +155,7 @@ const HeroSection = () => {
                   opacity: 1,
                   transition: { duration: 1.2, delay: 0.2 }
                 }}
-                className="mt-10 flex items-center justify-center w-full xl:justify-start"
+                className="mt-10 flex items-center justify-center xl:justify-start px-5"
               >
                 <Link href={'/docs/introduction'}>
                   <MovingBorderButton className="px-4 py-2 text-xl">
@@ -164,6 +164,20 @@ const HeroSection = () => {
                   </MovingBorderButton>
                 </Link>
               </motion.div>
+              <motion.p
+                initial={{
+                  opacity: 0
+                }}
+                animate={{
+                  opacity: 1,
+                  transition: { duration: 1.2, ease: 'backOut', delay: 1.5 }
+                }}
+                className="text-[14px] sm:text-[16px] lg:text-[14px] leading-6 mt-10 md:mt-10 text-center lg:text-left px-5"
+              >
+                Other devs *write* code. You? You *assemble* greatness.{' '}
+                <br className="hidden sm:block" />
+                With StackBits, you get copy-paste-ready snippets that actually work (yes, really).
+              </motion.p>
             </div>
             <HeroIllustration />
           </div>

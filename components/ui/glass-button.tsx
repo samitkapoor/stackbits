@@ -10,19 +10,32 @@ const GlassButton = ({ children, className, ...props }: GlassButtonProps) => {
   return (
     <motion.button
       {...props}
-      className={`relative overflow-hidden rounded-xl px-6 py-3 text-white font-semibold backdrop-blur-md ${className}`}
-      initial={{ background: 'rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(10px)' }}
+      className={`relative overflow-hidden rounded-xl px-6 py-3 text-white bg-gradient-to-tr from-[#46C0F7a9] to-[#E3E8EAa9] font-semibold ${className}`}
+      initial={{ y: 10, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
       whileHover={{
-        background: 'rgba(255, 255, 255, 0.3)',
-        backdropFilter: 'blur(15px)',
-        scale: 1.05
+        y: -5
       }}
       whileTap={{ scale: 0.95 }}
       transition={{ duration: 0.3 }}
     >
-      <span className="absolute inset-0 opacity-50 bg-gradient-to-tr from-sky-400 to-neutral-200" />
+      <motion.span
+        className="absolute inset-0"
+        style={{
+          background: 'linear-gradient(-70deg, transparent 48%, #ffffff8f 50%, transparent 52%)'
+        }}
+        initial={{ x: '-100%' }}
+        animate={{ x: '100%' }}
+        transition={{
+          duration: 2,
+          repeatDelay: 1,
+          repeat: Infinity,
+          ease: 'linear'
+        }}
+      />
 
-      <div className="relative z-10">{children}</div>
+      {/* Button Content */}
+      <div className="relative">{children}</div>
     </motion.button>
   );
 };

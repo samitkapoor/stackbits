@@ -1,6 +1,14 @@
 import { Document } from '../main';
 import AnimatedGradientButton from '@/components/ui/animated-gradient-button';
 
+export const animatedGradientButtonPreview = (
+  <div className="h-full w-full flex flex-col items-center justify-center gap-2">
+    <AnimatedGradientButton className="text-lg md:text-xl font-medium !px-5 sm:!px-10 py-4 rounded-lg">
+      Gradient
+    </AnimatedGradientButton>
+  </div>
+);
+
 export const animatedGradientButton: Document = {
   sideBar: {
     group: 'Buttons',
@@ -10,21 +18,15 @@ export const animatedGradientButton: Document = {
   content: {
     sections: [
       {
-        heading: 'Animated Gradient Button',
+        heading: '🌈 Animated Gradient Button',
         content:
-          'The animated gradient button features a smooth, looping color transition that creates a dynamic, eye-catching effect. It cycles through various gradient combinations, adding interactivity and visual appeal to call-to-action elements like "Submit" or "Get Started." This modern design enhances user engagement with smooth hover and transition effects.',
+          "Upgrade your call-to-action buttons with the Animated Gradient Button, a stylish React component featuring seamless, looping color transitions. Designed for modern UIs, this button cycles through vibrant gradient combinations, making elements like 'Submit,' 'Get Started,' and 'Sign Up' more interactive and visually engaging. With smooth hover effects and fluid animations, it enhances user experience while maintaining high performance.",
         sectionType: 'paragraph'
       },
       {
         heading: 'Preview',
         sectionType: 'preview',
-        code: (
-          <div className="h-full w-full flex flex-col items-center justify-center gap-2">
-            <AnimatedGradientButton className="rounded-md text-lg">
-              Let's go!
-            </AnimatedGradientButton>
-          </div>
-        )
+        code: animatedGradientButtonPreview
       },
       {
         heading: 'Follow below steps 👇🏻',
@@ -32,7 +34,7 @@ export const animatedGradientButton: Document = {
       },
       {
         heading: 'Install dependencies',
-        sectionType: 'component',
+        sectionType: 'dependencies',
         code: `npm i framer-motion`
       },
       {
@@ -57,8 +59,6 @@ const AnimatedGradientButton = ({ children, className, ...props }: AnimatedGradi
       whileTap={{ scale: 0.95 }}
       animate={{
         background: [
-          'linear-gradient(45deg, #84cc16, #ec4899)',
-          'linear-gradient(45deg, #facc15, #6366f1)',
           'linear-gradient(45deg, #ec4899, #84cc16)',
           'linear-gradient(45deg, #ff7e5f, #feb47b)',
           'linear-gradient(45deg, #00b4d8, #90e0ef)',
@@ -66,11 +66,13 @@ const AnimatedGradientButton = ({ children, className, ...props }: AnimatedGradi
           'linear-gradient(45deg, #009688, #ff5722)',
           'linear-gradient(45deg, #ff77ff, #00aaff)',
           'linear-gradient(45deg, #ff3d00, #ffea00)',
-          'linear-gradient(45deg, #2196f3, #4caf50)'
+          'linear-gradient(45deg, #2196f3, #4caf50)',
+          'linear-gradient(45deg, #84cc16, #ec4899)',
+          'linear-gradient(45deg, #facc15, #6366f1)'
         ],
         transition: { duration: 20, repeat: Infinity, repeatType: 'reverse' }
       }}
-      className={\`outline-none border-[2px] border-[#ffffff5a] hover:border-white px-4 py-2 text-white \${className}\`}
+      className={\`outline-none border-none px-4 py-2 text-white \${className}\`}
     >
       {children}
     </motion.button>
@@ -78,7 +80,6 @@ const AnimatedGradientButton = ({ children, className, ...props }: AnimatedGradi
 };
 
 export default AnimatedGradientButton;
-
 `
       },
       {

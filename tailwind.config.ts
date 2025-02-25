@@ -24,6 +24,7 @@ export default {
     }
   },
   plugins: [
+    require('tailwind-scrollbar-hide'),
     function ({ matchUtilities, theme }: any) {
       matchUtilities(
         {

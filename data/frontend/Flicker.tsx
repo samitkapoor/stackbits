@@ -1,6 +1,12 @@
 import FlickerBox from '@/components/ui/flicker-box';
 import { Document } from '../main';
 
+export const flickerPreview = (
+  <div className="w-full h-full flex items-center justify-center scale-75">
+    <FlickerBox>Watch me glow</FlickerBox>
+  </div>
+);
+
 export const flicker: Document = {
   sideBar: {
     group: 'Components',

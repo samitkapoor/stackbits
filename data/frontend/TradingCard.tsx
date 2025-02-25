@@ -1,6 +1,12 @@
 import TradingCardDemo from '@/components/trading-card-demo';
 import { Document } from '../main';
 
+export const tradingCardPreview = (
+  <div className="h-full w-full flex items-center justify-center scale-50">
+    <TradingCardDemo />
+  </div>
+);
+
 export const tradingCard: Document = {
   sideBar: {
     group: 'Cards',

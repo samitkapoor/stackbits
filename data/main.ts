@@ -1,32 +1,58 @@
 import { ReactNode } from 'react';
 
-import { flicker } from './frontend/Flicker';
+import { flicker, flickerPreview } from './frontend/Flicker';
 import { installation } from './getting-started/installation';
 import { introduction } from './getting-started/introduction';
-import { storyAvatar } from './frontend/StoryAvatar';
-import { flipBadge } from './frontend/FlipBadge';
+import { storyAvatar, storyAvatarPreview } from './frontend/StoryAvatar';
+import { flipBadge, flipBadgePreview } from './frontend/FlipBadge';
 import { encryptionDecryption } from './utilities/EncryptionDecryption';
 import { regexValidations } from './utilities/RegexValidations';
 import { debounce } from './utilities/Debounce';
-import { expandableCard } from './frontend/ExpandableCard';
+import { expandableCard, expandableCardPreview } from './frontend/ExpandableCard';
 // import { customScrollbar } from './frontend/CustomScrollbar';
-import { glitchText } from './frontend/GlitchText';
+import { glitchText, glitchTextPreview } from './frontend/GlitchText';
 import { yupValidations } from './utilities/YupValidations';
 import { darkThemeLightTheme } from './utilities/DarkThemeLightTheme';
-import { accordion } from './frontend/Accordion';
-import { rainbowText } from './frontend/RainbowText';
+import { accordion, accordionPreview } from './frontend/Accordion';
+import { rainbowText, rainbowTextPreview } from './frontend/RainbowText';
 import { customLogger } from './utilities/CustomLogger';
-import { skewedText } from './frontend/SkewedText';
-import { barricadeTape } from './frontend/BarricadeTape';
-import { expandableIconButton } from './frontend/ExpandableIconButton';
-import { countUp } from './frontend/CountUp';
-import { copyTextButton } from './frontend/CopyTextButton';
-import { animatedGradientButton } from './frontend/AnimatedGradientButton';
-import { glassButton } from './frontend/GlassButton';
-import { toggleButton } from './frontend/ToggleButton';
-import { glassCard } from './frontend/GlassCard';
-import { tradingCard } from './frontend/TradingCard';
+import { skewedText, skewedTextPreview } from './frontend/SkewedText';
+import { barricadeTape, barricadeTapePreview } from './frontend/BarricadeTape';
+import { expandableIconButton, expandableIconButtonPreview } from './frontend/ExpandableIconButton';
+import { countUp, countUpPreview } from './frontend/CountUp';
+import { copyTextButton, copyTextButtonPreview } from './frontend/CopyTextButton';
+import {
+  animatedGradientButton,
+  animatedGradientButtonPreview
+} from './frontend/AnimatedGradientButton';
+import { glassButton, glassButtonPreview } from './frontend/GlassButton';
+import { toggleButton, toggleButtonPreview } from './frontend/ToggleButton';
+import { glassCard, glassCardPreview } from './frontend/GlassCard';
+import { tradingCard, tradingCardPreview } from './frontend/TradingCard';
 import { SearchResult } from '@/components/support-plugin';
+import { expressServer } from './utilities/ExpressServer';
+import { axiosInterceptor } from './utilities/AxiosInterceptor';
+import { prismaticHaze, prismaticHazePreview } from './frontend/PrismaticHaze';
+import { colorCyclone, colorCyclonePreview } from './frontend/ColorCyclone';
+import { movingBorderButton, movingBorderButtonPreview } from './frontend/MovingBorderButton';
+import { wavyBackgroundPreview, wavyBackground } from './frontend/WavyBackground';
+import { navigationButton, navigationButtonPreview } from './frontend/NavigationButton';
+import { shineButton, shineButtonPreview } from './frontend/ShineButton';
+import { fadeInText, fadeInTextPreview } from './frontend/FadeInText';
+import { wavyText, wavyTextPreview } from './frontend/WavyText';
+import { blurText, blurTextPreview } from './frontend/BlurText';
+import { flipRevealCard, flipRevealCardPreview } from './frontend/FlipRevealCard';
+import { movingBorderCard, movingBorderCardPreview } from './frontend/MovingBorderCard';
+import { iconWheel, iconWheelPreview } from './frontend/IconWheel';
+import { waveNoiseBackground, waveNoiseBackgroundPreview } from './frontend/WaveNoiseBackground';
+import { topographyBackground, topographyBackgroundPreview } from './frontend/TopographyBackground';
+import { textureBackground, textureBackgroundPreview } from './frontend/TextureBackground';
+import { epicNameDrop, epicNameDropPreview } from './frontend/EpicNameDrop';
+import {
+  glowingDotsBackground,
+  glowingDotsBackgroundPreview
+} from './frontend/GlowingDotsBackground';
+import { footer, footerPreview } from './frontend/Footer';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -59,7 +85,13 @@ export const getSideBarTabs = () => {
 
 const sideBarOptions: Array<{
   title: string;
-  children: Array<{ name: string; href: string; content: Document; isNew?: boolean }>;
+  children: Array<{
+    name: string;
+    href: string;
+    content: Document;
+    isNew?: boolean;
+    preview?: ReactNode;
+  }>;
 }> = [
   {
     title: 'Getting Started',
@@ -76,17 +108,98 @@ const sideBarOptions: Array<{
     title: 'Texts',
     children: [
       {
+        name: 'Blur Text',
+        href: '/docs/blurtext',
+        content: blurText,
+        preview: blurTextPreview,
+        isNew: true
+      },
+      {
         name: 'Count Up',
         href: '/docs/countup',
         content: countUp,
+        preview: countUpPreview
+      },
+      {
+        name: 'Fade In Text',
+        href: '/docs/fadeintext',
+        content: fadeInText,
+        preview: fadeInTextPreview,
         isNew: true
       },
-      { name: 'Glitch Text', href: '/docs/glitchtext', content: glitchText },
-      { name: 'Rainbow Text', href: '/docs/rainbowtext', content: rainbowText },
+      {
+        name: 'Glitch Text',
+        href: '/docs/glitchtext',
+        content: glitchText,
+        preview: glitchTextPreview
+      },
+      {
+        name: 'Rainbow Text',
+        href: '/docs/rainbowtext',
+        content: rainbowText,
+        preview: rainbowTextPreview
+      },
       {
         name: 'Skewed Text',
         href: '/docs/skewedtext',
-        content: skewedText
+        content: skewedText,
+        preview: skewedTextPreview
+      },
+      {
+        name: 'Wavy Text',
+        href: '/docs/wavytext',
+        content: wavyText,
+        preview: wavyTextPreview,
+        isNew: true
+      }
+    ]
+  },
+  {
+    title: 'Backgrounds',
+    children: [
+      {
+        name: 'Color Cyclone',
+        href: '/docs/colorCyclone',
+        content: colorCyclone,
+        preview: colorCyclonePreview
+      },
+      {
+        name: 'Glowing Dots Background',
+        href: '/docs/glowingDotsBackground',
+        content: glowingDotsBackground,
+        preview: glowingDotsBackgroundPreview,
+        isNew: true
+      },
+      {
+        name: 'Prismatic Haze',
+        href: '/docs/prismaticHaze',
+        content: prismaticHaze,
+        preview: prismaticHazePreview
+      },
+      {
+        name: 'Texture Background',
+        href: '/docs/textureBackground',
+        content: textureBackground,
+        preview: textureBackgroundPreview
+      },
+      {
+        name: 'Topography Background',
+        href: '/docs/topographyBackground',
+        content: topographyBackground,
+        preview: topographyBackgroundPreview
+      },
+      {
+        name: 'Wave Noise Background',
+        href: '/docs/waveNoiseBackground',
+        content: waveNoiseBackground,
+        preview: waveNoiseBackgroundPreview,
+        isNew: true
+      },
+      {
+        name: 'Wavy Background',
+        href: '/docs/wavybackground',
+        content: wavyBackground,
+        preview: wavyBackgroundPreview
       }
     ]
   },
@@ -97,31 +210,51 @@ const sideBarOptions: Array<{
         name: 'Animated Gradient Button',
         href: '/docs/animatedgradientbutton',
         content: animatedGradientButton,
-        isNew: true
+        preview: animatedGradientButtonPreview
       },
       {
         name: 'Copy Text Button',
         href: '/docs/copytextbutton',
         content: copyTextButton,
-        isNew: true
+        preview: copyTextButtonPreview
       },
       {
         name: 'Glass Button',
         href: '/docs/glassbutton',
         content: glassButton,
-        isNew: true
+        preview: glassButtonPreview
       },
       {
         name: 'Expandable Icon Button',
         href: '/docs/expandableiconbutton',
         content: expandableIconButton,
+        preview: expandableIconButtonPreview
+      },
+      {
+        name: 'Moving Border Button',
+        href: '/docs/movingborderbutton',
+        content: movingBorderButton,
+        preview: movingBorderButtonPreview
+      },
+      {
+        name: 'Navigation Button',
+        href: '/docs/navigationbutton',
+        content: navigationButton,
+        preview: navigationButtonPreview,
+        isNew: true
+      },
+      {
+        name: 'Shine Button',
+        href: '/docs/shinebutton',
+        content: shineButton,
+        preview: shineButtonPreview,
         isNew: true
       },
       {
         name: 'Toggle Button',
         href: '/docs/togglebutton',
         content: toggleButton,
-        isNew: true
+        preview: toggleButtonPreview
       }
     ]
   },
@@ -129,21 +262,36 @@ const sideBarOptions: Array<{
     title: 'Cards',
     children: [
       {
-        name: 'Trading Card',
-        href: '/docs/tradingCard',
-        content: tradingCard,
+        name: 'Expandable Card',
+        href: '/docs/expandablecard',
+        content: expandableCard,
+        preview: expandableCardPreview
+      },
+      {
+        name: 'Flip Reveal Card',
+        href: '/docs/fliprevealcard',
+        content: flipRevealCard,
+        preview: flipRevealCardPreview,
         isNew: true
       },
       {
         name: 'Glass Card',
         href: '/docs/glasscard',
         content: glassCard,
+        preview: glassCardPreview
+      },
+      {
+        name: 'Moving Border Card',
+        href: '/docs/movingbordercard',
+        content: movingBorderCard,
+        preview: movingBorderCardPreview,
         isNew: true
       },
       {
-        name: 'Expandable Card',
-        href: '/docs/expandablecard',
-        content: expandableCard
+        name: 'Trading Card',
+        href: '/docs/tradingCard',
+        content: tradingCard,
+        preview: tradingCardPreview
       }
     ]
   },
@@ -153,28 +301,62 @@ const sideBarOptions: Array<{
       {
         name: 'Accordion',
         href: '/docs/accordion',
-        content: accordion
+        content: accordion,
+        preview: accordionPreview
       },
       {
         name: 'Barricade Tape',
         href: '/docs/barricadeTape',
         content: barricadeTape,
-        isNew: true
+        preview: barricadeTapePreview
+      },
+      {
+        name: 'Epic Name Drop',
+        href: '/docs/epicNameDrop',
+        content: epicNameDrop,
+        preview: epicNameDropPreview
       },
       // { name: 'CustomScrollbar', href: '/docs/customscrollbar', content: customScrollbar },
-      { name: 'Flicker Box', href: '/docs/flickerbox', content: flicker },
-      { name: 'Flip Badge', href: '/docs/flipbadge', content: flipBadge },
-      { name: 'Story Avatar', href: '/docs/storyavatar', content: storyAvatar }
+      { name: 'Flicker Box', href: '/docs/flickerbox', content: flicker, preview: flickerPreview },
+      {
+        name: 'Flip Badge',
+        href: '/docs/flipbadge',
+        content: flipBadge,
+        preview: flipBadgePreview
+      },
+      {
+        name: 'Footer',
+        href: '/docs/footer',
+        content: footer,
+        preview: footerPreview,
+        isNew: true
+      },
+      {
+        name: 'Icon Wheel',
+        href: '/docs/iconwheel',
+        content: iconWheel,
+        preview: iconWheelPreview
+      },
+      {
+        name: 'Story Avatar',
+        href: '/docs/storyavatar',
+        content: storyAvatar,
+        preview: storyAvatarPreview
+      }
     ]
   },
   {
     title: 'Utilities',
     children: [
       {
+        name: 'Axios Interceptor',
+        href: '/docs/axiosinterceptor',
+        content: axiosInterceptor
+      },
+      {
         name: 'Custom Logger',
         href: '/docs/customlogger',
-        content: customLogger,
-        isNew: true
+        content: customLogger
       },
       {
         name: 'Dark & Light Theme',
@@ -192,6 +374,11 @@ const sideBarOptions: Array<{
         content: encryptionDecryption
       },
       {
+        name: 'Express Server',
+        href: '/docs/expressserver',
+        content: expressServer
+      },
+      {
         name: 'Regex Validations',
         href: '/docs/regexvalidations',
         content: regexValidations
@@ -204,6 +391,8 @@ const sideBarOptions: Array<{
     ]
   }
 ];
+
+export const categories = ['buttons', 'backgrounds', 'texts', 'cards', 'components'];
 
 export const getDocs = (docId: string) => {
   const group = sideBarOptions.filter((tab) =>
@@ -280,4 +469,12 @@ export const searchDocs = (q: string): Array<SearchResult> => {
   });
 
   return results.slice(0, 5);
+};
+
+export const getCategory = (docId: string) => {
+  const group = sideBarOptions.filter((tab) => {
+    return tab.title.toLowerCase().replaceAll(' ', '') === docId.toLowerCase();
+  });
+
+  return group;
 };

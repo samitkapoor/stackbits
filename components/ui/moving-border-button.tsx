@@ -20,7 +20,7 @@ const MovingBorderButton = ({
       type={type}
     >
       <div
-        className={`bg-black rounded-full px-2 py-1 flex items-center justify-center relative ${className}`}
+        className={`bg-black hover:bg-neutral-900 transition-all rounded-full px-2 py-1 flex items-center justify-center relative ${className}`}
       >
         {children}
       </div>

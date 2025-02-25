@@ -43,12 +43,19 @@ body {
 }
 
 .moving-border-btn {
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(var(--angle), transparent, #d0d0d0, transparent);
   animation: moveGradient 2s linear infinite;
+}
+
+.moving-border-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(var(--angle), transparent 90%, #ffffff 90%);
+  animation: moveGradient 4s linear infinite;
 }
 
 @property --angle {
@@ -66,7 +73,7 @@ body {
 .glitch {
   position: relative;
   display: inline-block;
-  animation: glitch 1.5s infinite;
+  animation: glitch 0.7s infinite;
 }
 
 @keyframes glitch {

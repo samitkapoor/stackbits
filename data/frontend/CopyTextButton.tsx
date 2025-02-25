@@ -2,6 +2,13 @@ import CopyTextButton from '@/components/ui/copy-text-button';
 import { Document } from '../main';
 import { Rocket } from 'lucide-react';
 
+export const copyTextButtonPreview = (
+  <div className="h-full w-full flex flex-col items-center justify-center gap-2">
+    <p className="text-center text-xs sm:text-base">Click the button below to copy the text</p>
+    <CopyTextButton handle={'Stackbits is awesome'} icon={<Rocket className="h-5 w-5" />} />
+  </div>
+);
+
 export const copyTextButton: Document = {
   sideBar: {
     group: 'Buttons',
@@ -11,22 +18,15 @@ export const copyTextButton: Document = {
   content: {
     sections: [
       {
-        heading: 'Copy Text Button',
+        heading: '🔍 Copy Text Button',
         content:
-          'A simple button that lets users quickly copy text, making it ideal for links, tags, or any reusable content. It can include visual feedback, such as a tooltip or icon change, to confirm successful copying.',
+          "Make copying text effortless with the Copy Button, a simple yet powerful React component designed for quick text duplication. Ideal for sharing links, copying tags, or grabbing reusable content, this button enhances user experience with instant feedback—whether it's a tooltip, icon change, or subtle animation.",
         sectionType: 'paragraph'
       },
       {
         heading: 'Preview',
         sectionType: 'preview',
-        code: (
-          <div className="h-full w-full flex flex-col items-center justify-center gap-2">
-            <p className="text-center text-xs sm:text-base">
-              Click the button below to copy the text
-            </p>
-            <CopyTextButton handle={'Stackbits is awesome'} icon={<Rocket className="h-5 w-5" />} />
-          </div>
-        )
+        code: copyTextButtonPreview
       },
       {
         heading: 'Follow below steps 👇🏻',
@@ -34,7 +34,7 @@ export const copyTextButton: Document = {
       },
       {
         heading: 'Install dependencies',
-        sectionType: 'component',
+        sectionType: 'dependencies',
         code: `npm i lucide-react`
       },
       {

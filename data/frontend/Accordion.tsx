@@ -1,6 +1,12 @@
 import { Document } from '../main';
 import AccordionDemo from '@/components/accordion-demo';
 
+export const accordionPreview = (
+  <div className="h-full w-full flex items-center justify-center scale-75">
+    <AccordionDemo />
+  </div>
+);
+
 export const accordion: Document = {
   sideBar: {
     group: 'Components',

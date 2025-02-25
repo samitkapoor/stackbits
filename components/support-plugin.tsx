@@ -29,7 +29,7 @@ const SupportPlugin = () => {
   };
 
   return (
-    <div className="flex flex-col gap-2 text-sm max-w-[250px] w-full relative">
+    <div className="flex flex-col gap-2 text-sm max-w-[250px] w-full relative py-[50px] mx-4 sm:mx-10">
       <div className="flex flex-col">
         <div className="flex items-center relative">
           <Search className="absolute right-[8px] z-10 text-neutral-500 h-[19px] w-[19px]" />

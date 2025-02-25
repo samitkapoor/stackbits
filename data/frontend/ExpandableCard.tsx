@@ -1,6 +1,16 @@
 import { Document } from '../main';
 import ExpandableCard from '@/components/ui/expandable-card';
 
+export const expandableCardPreview = (
+  <div className="flex items-center justify-center scale-75">
+    <ExpandableCard
+      title="Explore Beyond Borders"
+      paragraph="The world is full of hidden gems waiting to be discovered. Where will your next adventure take you?"
+      image="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    />
+  </div>
+);
+
 export const expandableCard: Document = {
   sideBar: {
     group: 'Cards',
@@ -10,9 +20,9 @@ export const expandableCard: Document = {
   content: {
     sections: [
       {
-        heading: 'Expandable Card',
+        heading: '🏹 Expandable Card',
         content:
-          'Think of an Expandable Card like a mystery box—compact, stylish, and hiding something exciting inside! Click, tap, or hover, and boom—it expands to reveal extra details, cool insights, or even a secret travel tip.',
+          'Think of an Expandable Card as a mystery box—compact, stylish, and packed with hidden surprises! 🎁 With a simple click, tap, or hover, it smoothly expands to reveal extra details, insights, or even a secret tip. Perfect for modern dashboards, product previews, FAQs, or storytelling elements, this card keeps your UI clean while delivering engaging, interactive content.',
         sectionType: 'paragraph'
       },
       {
@@ -34,7 +44,7 @@ export const expandableCard: Document = {
       },
       {
         heading: 'Install dependencies',
-        sectionType: 'component',
+        sectionType: 'dependencies',
         code: `npm i framer-motion`
       },
       {
