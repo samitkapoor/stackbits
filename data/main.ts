@@ -161,8 +161,7 @@ const sideBarOptions: Array<{
         name: 'Color Cyclone',
         href: '/docs/colorCyclone',
         content: colorCyclone,
-        preview: colorCyclonePreview,
-        isNew: true
+        preview: colorCyclonePreview
       },
       {
         name: 'Glowing Dots Background',
@@ -175,22 +174,19 @@ const sideBarOptions: Array<{
         name: 'Prismatic Haze',
         href: '/docs/prismaticHaze',
         content: prismaticHaze,
-        preview: prismaticHazePreview,
-        isNew: true
+        preview: prismaticHazePreview
       },
       {
         name: 'Texture Background',
         href: '/docs/textureBackground',
         content: textureBackground,
-        preview: textureBackgroundPreview,
-        isNew: true
+        preview: textureBackgroundPreview
       },
       {
         name: 'Topography Background',
         href: '/docs/topographyBackground',
         content: topographyBackground,
-        preview: topographyBackgroundPreview,
-        isNew: true
+        preview: topographyBackgroundPreview
       },
       {
         name: 'Wave Noise Background',
@@ -203,8 +199,7 @@ const sideBarOptions: Array<{
         name: 'Wavy Background',
         href: '/docs/wavybackground',
         content: wavyBackground,
-        preview: wavyBackgroundPreview,
-        isNew: true
+        preview: wavyBackgroundPreview
       }
     ]
   },
@@ -239,8 +234,7 @@ const sideBarOptions: Array<{
         name: 'Moving Border Button',
         href: '/docs/movingborderbutton',
         content: movingBorderButton,
-        preview: movingBorderButtonPreview,
-        isNew: true
+        preview: movingBorderButtonPreview
       },
       {
         name: 'Navigation Button',
@@ -297,8 +291,7 @@ const sideBarOptions: Array<{
         name: 'Trading Card',
         href: '/docs/tradingCard',
         content: tradingCard,
-        preview: tradingCardPreview,
-        isNew: true
+        preview: tradingCardPreview
       }
     ]
   },
@@ -321,8 +314,7 @@ const sideBarOptions: Array<{
         name: 'Epic Name Drop',
         href: '/docs/epicNameDrop',
         content: epicNameDrop,
-        preview: epicNameDropPreview,
-        isNew: true
+        preview: epicNameDropPreview
       },
       // { name: 'CustomScrollbar', href: '/docs/customscrollbar', content: customScrollbar },
       { name: 'Flicker Box', href: '/docs/flickerbox', content: flicker, preview: flickerPreview },
@@ -343,8 +335,7 @@ const sideBarOptions: Array<{
         name: 'Icon Wheel',
         href: '/docs/iconwheel',
         content: iconWheel,
-        preview: iconWheelPreview,
-        isNew: true
+        preview: iconWheelPreview
       },
       {
         name: 'Story Avatar',
