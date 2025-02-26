@@ -32,7 +32,7 @@ const SideBar = ({ isOpen }: { isOpen: boolean }) => {
           className="w-[50%] object-contain"
         />
       </Link>
-      <div className="bg-black h-full overflow-y-auto scrollbar-hide flex flex-col gap-5 w-[350px] z-40">
+      <div className="bg-black h-full overflow-y-auto scrollbar-hide flex flex-col gap-5 w-full z-40">
         {tabs.map((group) => {
           return (
             <div key={group.title} className="flex flex-col items-start gap-2">
