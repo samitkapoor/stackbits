@@ -2,8 +2,8 @@ import { Document } from '../main';
 import GlassCardDemo from '@/components/glass-card-demo';
 
 export const glassCardPreview = (
-  <div className="h-full w-full flex items-center justify-center scale-90">
-    <GlassCardDemo />
+  <div className="h-full w-full flex items-center justify-center scale-75">
+    <GlassCardDemo isPreview={true} />
   </div>
 );
 
