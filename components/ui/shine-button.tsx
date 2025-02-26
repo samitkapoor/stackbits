@@ -1,10 +1,11 @@
 import { motion, MotionProps } from 'framer-motion';
-import React from 'react';
+import React, { ButtonHTMLAttributes } from 'react';
 
 type ShineButtonProps = {
   className?: string;
   children: React.ReactNode;
-} & MotionProps;
+} & MotionProps &
+  ButtonHTMLAttributes<HTMLButtonElement>;
 
 const ShineButton: React.FC<ShineButtonProps> = ({ children, className, ...props }) => {
   return (
