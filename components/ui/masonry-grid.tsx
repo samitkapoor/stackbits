@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
@@ -8,6 +8,8 @@ interface MasonryGridProps {
 }
 
 const MasonryGrid: React.FC<MasonryGridProps> = ({ items, columns = undefined }) => {
+  const [imagesLoaded, setImagesLoaded] = useState<{ [key: string]: boolean }>({});
+
   if (!items || items.length === 0) {
     return <div className="text-center p-4">No items to display</div>;
   }
@@ -51,25 +53,36 @@ const MasonryGrid: React.FC<MasonryGridProps> = ({ items, columns = undefined })
             }}
             whileHover={{ scale: 1.05, rotateZ: 1 }}
           >
-            <div className="relative overflow-hidden">
+            <div className="relative">
               <div className="relative w-full flex gap-1 flex-col items-start justify-start">
+                {!imagesLoaded[item.image] && (
+                  <div className="absolute inset-0 w-full h-[300px] bg-neutral-500/50 animate-pulse rounded-lg" />
+                )}
                 <Image
                   src={item.image}
                   alt={item.title}
                   width={400}
                   height={300}
-                  className="w-full h-auto transition-transform duration-300 rounded-lg"
+                  className={`w-full h-auto transition-transform duration-300 rounded-lg ${
+                    !imagesLoaded[item.image] ? 'opacity-0' : 'opacity-100'
+                  }`}
                   sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  onLoad={() => {
+                    setImagesLoaded((prev) => ({ ...prev, [item.image]: true }));
+                  }}
                   onError={() => {
                     console.error(`Error loading image: ${item.image}`);
+                    setImagesLoaded((prev) => ({ ...prev, [item.image]: true }));
                   }}
                 />
-                <div className="w-full">
-                  <h3 className="text-sm font-medium">{item.title}</h3>
-                  <p className="mt-0 text-xs text-neutral-500 line-clamp-2 overflow-hidden">
-                    {item.description}
-                  </p>
-                </div>
+                {imagesLoaded[item.image] && (
+                  <div className="w-full">
+                    <h3 className="text-sm font-medium">{item.title}</h3>
+                    <p className="mt-0 text-xs text-neutral-500 line-clamp-2 overflow-hidden">
+                      {item.description}
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           </motion.div>
