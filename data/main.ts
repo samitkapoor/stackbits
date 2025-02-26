@@ -112,8 +112,7 @@ const sideBarOptions: Array<{
         name: 'Blur Text',
         href: '/docs/blurtext',
         content: blurText,
-        preview: blurTextPreview,
-        isNew: true
+        preview: blurTextPreview
       },
       {
         name: 'Count Up',
@@ -125,8 +124,7 @@ const sideBarOptions: Array<{
         name: 'Fade In Text',
         href: '/docs/fadeintext',
         content: fadeInText,
-        preview: fadeInTextPreview,
-        isNew: true
+        preview: fadeInTextPreview
       },
       {
         name: 'Glitch Text',
@@ -150,8 +148,7 @@ const sideBarOptions: Array<{
         name: 'Wavy Text',
         href: '/docs/wavytext',
         content: wavyText,
-        preview: wavyTextPreview,
-        isNew: true
+        preview: wavyTextPreview
       }
     ]
   },
@@ -168,8 +165,7 @@ const sideBarOptions: Array<{
         name: 'Glowing Dots Background',
         href: '/docs/glowingDotsBackground',
         content: glowingDotsBackground,
-        preview: glowingDotsBackgroundPreview,
-        isNew: true
+        preview: glowingDotsBackgroundPreview
       },
       {
         name: 'Prismatic Haze',
@@ -193,8 +189,7 @@ const sideBarOptions: Array<{
         name: 'Wave Noise Background',
         href: '/docs/waveNoiseBackground',
         content: waveNoiseBackground,
-        preview: waveNoiseBackgroundPreview,
-        isNew: true
+        preview: waveNoiseBackgroundPreview
       },
       {
         name: 'Wavy Background',
@@ -241,15 +236,13 @@ const sideBarOptions: Array<{
         name: 'Navigation Button',
         href: '/docs/navigationbutton',
         content: navigationButton,
-        preview: navigationButtonPreview,
-        isNew: true
+        preview: navigationButtonPreview
       },
       {
         name: 'Shine Button',
         href: '/docs/shinebutton',
         content: shineButton,
-        preview: shineButtonPreview,
-        isNew: true
+        preview: shineButtonPreview
       },
       {
         name: 'Toggle Button',
@@ -272,8 +265,7 @@ const sideBarOptions: Array<{
         name: 'Flip Reveal Card',
         href: '/docs/fliprevealcard',
         content: flipRevealCard,
-        preview: flipRevealCardPreview,
-        isNew: true
+        preview: flipRevealCardPreview
       },
       {
         name: 'Glass Card',
@@ -285,8 +277,7 @@ const sideBarOptions: Array<{
         name: 'Moving Border Card',
         href: '/docs/movingbordercard',
         content: movingBorderCard,
-        preview: movingBorderCardPreview,
-        isNew: true
+        preview: movingBorderCardPreview
       },
       {
         name: 'Trading Card',
@@ -342,7 +333,8 @@ const sideBarOptions: Array<{
         name: 'Masonry Grid',
         href: '/docs/masonrygrid',
         content: masonryGrid,
-        preview: masonryGridPreview
+        preview: masonryGridPreview,
+        isNew: true
       },
       {
         name: 'Story Avatar',

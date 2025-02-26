@@ -60,7 +60,7 @@ const MasonryGrid: React.FC<MasonryGridProps> = ({ items, columns = undefined })
                   height={300}
                   className="w-full h-auto transition-transform duration-300 rounded-lg"
                   sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  onError={(e) => {
+                  onError={() => {
                     console.error(`Error loading image: ${item.image}`);
                   }}
                 />
