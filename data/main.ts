@@ -53,6 +53,7 @@ import {
   glowingDotsBackgroundPreview
 } from './frontend/GlowingDotsBackground';
 import { footer, footerPreview } from './frontend/Footer';
+import { masonryGrid, masonryGridPreview } from './frontend/MasonryGrid';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -336,6 +337,12 @@ const sideBarOptions: Array<{
         href: '/docs/iconwheel',
         content: iconWheel,
         preview: iconWheelPreview
+      },
+      {
+        name: 'Masonry Grid',
+        href: '/docs/masonrygrid',
+        content: masonryGrid,
+        preview: masonryGridPreview
       },
       {
         name: 'Story Avatar',
