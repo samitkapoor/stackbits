@@ -54,32 +54,55 @@ const AnimatedGradientButton = ({ children, className, ...props }: AnimatedGradi
   return (
     <motion.button
       {...props}
-      initial={{ background: 'linear-gradient(45deg, #84cc16, #ec4899)', scale: 1 }}
-      whileHover={{ scale: 1.05 }}
+      initial={{ scale: 1, boxShadow: '0px 0px 10px rgba(255, 255, 255, 0.6)' }}
+      whileHover={{
+        scale: 1.08,
+        boxShadow: '0px 0px 20px rgba(255, 255, 255, 0.6)'
+      }}
       whileTap={{ scale: 0.95 }}
       animate={{
         background: [
-          'linear-gradient(45deg, #ec4899, #84cc16)',
-          'linear-gradient(45deg, #ff7e5f, #feb47b)',
-          'linear-gradient(45deg, #00b4d8, #90e0ef)',
-          'linear-gradient(45deg, #6a1b9a, #ab47bc)',
-          'linear-gradient(45deg, #009688, #ff5722)',
-          'linear-gradient(45deg, #ff77ff, #00aaff)',
-          'linear-gradient(45deg, #ff3d00, #ffea00)',
-          'linear-gradient(45deg, #2196f3, #4caf50)',
-          'linear-gradient(45deg, #84cc16, #ec4899)',
-          'linear-gradient(45deg, #facc15, #6366f1)'
+          'linear-gradient(135deg, #ff6b6b, #ff8e53, #ffcc00)',
+          'linear-gradient(135deg, #42a5f5, #478ed1, #7b1fa2)',
+          'linear-gradient(135deg, #00c9a7, #2ecc71, #ffeb3b)',
+          'linear-gradient(135deg, #ff4081, #ff80ab, #f48fb1)',
+          'linear-gradient(135deg, #8e44ad, #c0392b, #e74c3c)',
+          'linear-gradient(135deg, #ffcc00, #ff5733, #ff1744)',
+          'linear-gradient(135deg, #009688, #26c6da, #00e5ff)',
+          'linear-gradient(135deg, #e91e63, #9c27b0, #673ab7)',
+          'linear-gradient(135deg, #f57c00, #ffca28, #ffeb3b)',
+          'linear-gradient(135deg, #00bcd4, #03a9f4, #1de9b6)'
         ],
-        transition: { duration: 20, repeat: Infinity, repeatType: 'reverse' }
+        transition: { duration: 15, repeat: Infinity, repeatType: 'mirror' }
       }}
-      className={\`outline-none border-none px-4 py-2 text-white \${className}\`}
+      className={\`relative overflow-hidden rounded-lg border-none px-6 py-3 text-lg font-semibold text-white tracking-wide shadow-md transition-all duration-300 hover:bg-opacity-90 \${className}\`}
     >
-      {children}
+      <motion.div
+        className="absolute inset-0 rounded-lg"
+        animate={{
+          boxShadow: [
+            '0px 0px 10px rgba(255, 255, 255, 0.3)',
+            '0px 0px 20px rgba(255, 255, 255, 0.6)',
+            '0px 0px 10px rgba(255, 255, 255, 0.3)'
+          ],
+          transition: { duration: 2, repeat: Infinity, repeatType: 'mirror' }
+        }}
+      />
+      <motion.span
+        className="absolute inset-0"
+        animate={{
+          background: 'radial-gradient(circle, rgba(255,255,255,0.15) 20%, transparent 80%)',
+          opacity: [0.5, 1, 0.5],
+          transition: { duration: 2, repeat: Infinity, repeatType: 'mirror' }
+        }}
+      />
+      <span className="relative z-10">{children}</span>
     </motion.button>
   );
 };
 
 export default AnimatedGradientButton;
+
 `
       },
       {
