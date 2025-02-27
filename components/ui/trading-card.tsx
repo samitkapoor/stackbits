@@ -6,9 +6,16 @@ interface TradingCardProps {
   rank?: number;
   name: string;
   description: string;
+  className?: string;
 }
 
-const TradingCard: React.FC<TradingCardProps> = ({ illustration, rank, name, description }) => {
+const TradingCard: React.FC<TradingCardProps> = ({
+  illustration,
+  rank,
+  name,
+  description,
+  className
+}) => {
   const cardRef = useRef<HTMLDivElement>(null);
 
   const backgroundControls = useAnimationControls();
@@ -57,7 +64,7 @@ const TradingCard: React.FC<TradingCardProps> = ({ illustration, rank, name, des
         transformStyle: 'preserve-3d'
       }}
       animate={cardControls}
-      className="flex flex-col hover:scale-105 transition-all duration-200 ease-linear items-start justify-end rounded-lg relative shadow-xl overflow-hidden h-[400px] w-[300px] cursor-pointer border-[1px] border-neutral-800"
+      className={`flex flex-col hover:scale-105 transition-all duration-200 ease-linear items-start justify-end rounded-lg relative shadow-xl overflow-hidden h-[400px] w-[300px] cursor-pointer border-[1px] border-neutral-800 ${className}`}
     >
       <motion.div
         className="h-full w-full absolute z-0"

@@ -36,9 +36,9 @@ const HeroSection = () => {
         className="absolute inset-0"
         animate={{
           background: [
-            'radial-gradient(circle at 0% 0%, #2e2e2e 0%, transparent 50%), radial-gradient(circle at 100% 0%, #eab30855 20%, transparent 50%), radial-gradient(circle at 100% 100%, #1e1e1e 0%, transparent 50%), radial-gradient(circle at 0% 100%, #2a1f3d 0%, transparent 50%)',
-            'radial-gradient(circle at 0% 0%, #1e1e1e 0%, transparent 50%), radial-gradient(circle at 100% 0%, #ec489955 20%, transparent 50%), radial-gradient(circle at 100% 100%, #1e1e1e 0%, transparent 50%), radial-gradient(circle at 0% 100%, #331f2d 0%, transparent 50%)',
-            'radial-gradient(circle at 0% 0%, #2e2e2e 0%, transparent 50%), radial-gradient(circle at 100% 0%, #3b82f655 20%, transparent 50%), radial-gradient(circle at 100% 100%, #1e1e1e 0%, transparent 50%), radial-gradient(circle at 0% 100%, #2a1f3d 0%, transparent 50%)'
+            'radial-gradient(circle at 0% 0%, #2e2e2e 0%, transparent 50%), radial-gradient(circle at 100% 0%, #eab30855 20%, transparent 50%), radial-gradient(circle at 0% 100%, #2a1f3d 0%, transparent 50%)',
+            'radial-gradient(circle at 0% 0%, #1e1e1e 0%, transparent 50%), radial-gradient(circle at 100% 0%, #ec489955 20%, transparent 50%), radial-gradient(circle at 0% 100%, #331f2d 0%, transparent 50%)',
+            'radial-gradient(circle at 0% 0%, #2e2e2e 0%, transparent 50%), radial-gradient(circle at 100% 0%, #3b82f655 20%, transparent 50%), radial-gradient(circle at 0% 100%, #2a1f3d 0%, transparent 50%)'
           ]
         }}
         transition={{

@@ -6,6 +6,7 @@ export default function Home() {
     <div className="w-screen overflow-x-hidden overflow-y-scroll flex flex-col p-0 bg-black">
       <HeroSection />
       <FeaturesSection />
+      <div className="w-screen h-64"></div>
     </div>
   );
 }
