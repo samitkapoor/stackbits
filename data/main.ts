@@ -54,6 +54,7 @@ import {
 } from './frontend/GlowingDotsBackground';
 import { footer, footerPreview } from './frontend/Footer';
 import { masonryGrid, masonryGridPreview } from './frontend/MasonryGrid';
+import { fileStack, fileStackPreview } from './frontend/FileStack';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -308,6 +309,13 @@ const sideBarOptions: Array<{
         content: epicNameDrop,
         preview: epicNameDropPreview
       },
+      {
+        name: 'File Stack',
+        href: '/docs/fileStack',
+        content: fileStack,
+        preview: fileStackPreview,
+        isNew: true
+      },
       // { name: 'CustomScrollbar', href: '/docs/customscrollbar', content: customScrollbar },
       { name: 'Flicker Box', href: '/docs/flickerbox', content: flicker, preview: flickerPreview },
       {
@@ -320,8 +328,7 @@ const sideBarOptions: Array<{
         name: 'Footer',
         href: '/docs/footer',
         content: footer,
-        preview: footerPreview,
-        isNew: true
+        preview: footerPreview
       },
       {
         name: 'Icon Wheel',
