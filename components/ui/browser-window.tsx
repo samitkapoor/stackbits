@@ -1,15 +1,25 @@
 import React from 'react';
 
-interface BrowserWindowProps {
+type BrowserWindowProps = {
   children: React.ReactNode;
   url?: string;
-}
+  className?: string;
+  ref?: React.RefObject<HTMLDivElement | null>;
+} & React.HTMLAttributes<HTMLDivElement>;
 
-const BrowserWindow: React.FC<BrowserWindowProps> = ({ children, url }) => {
+const BrowserWindow: React.FC<BrowserWindowProps> = ({
+  children,
+  url,
+  className,
+  ref,
+  ...props
+}) => {
   return (
     <div
-      className="flex flex-col items-center justify-between rounded-lg overflow-hidden border border-neutral-700 shadow-lg bg-neutral-900/60 h-full w-full relative mx-2"
+      ref={ref}
+      className={`flex flex-col items-center justify-between rounded-lg overflow-hidden border border-neutral-700 shadow-lg bg-neutral-900/60 h-full w-full relative mx-2 ${className}`}
       style={{ minWidth: '350px', minHeight: '600px' }}
+      {...props}
     >
       {/* Browser Header */}
       <div className="flex items-center px-4 py-2 bg-neutral-800 border-b border-neutral-700 w-full">

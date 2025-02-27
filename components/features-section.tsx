@@ -9,7 +9,6 @@ import IconWheel from './ui/icon-wheel';
 import WaveNoiseBackground from './ui/wave-noise-background';
 import RainbowText from './ui/rainbow-text';
 import Image from 'next/image';
-import GridBackground from './ui/grid-background';
 import { ClipboardPaste, Copy } from 'lucide-react';
 
 const FeaturesSection = () => {
@@ -136,45 +135,44 @@ const FeaturesSection = () => {
 
   return (
     <div className="flex flex-col w-screen items-center justify-center bg-black">
-      <GridBackground>
-        <div className="flex flex-col items-center justify-center w-full gap-10">
-          <div className="flex flex-col max-w-[65%] w-full mt-20 gap-10">
-            {features.map((feature) => {
-              return (
-                <div key={feature.title + Date.now().toString()}>
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{
-                      opacity: 1,
-                      transition: {
-                        duration: 0.5
-                      }
-                    }}
-                    exit={{
-                      opacity: 0,
-                      transition: {
-                        duration: 0.5
-                      }
-                    }}
-                    className={`flex items-center justify-center text-center w-full text-xl md:text-2xl lg:text-4xl font-semibold`}
-                  >
-                    <p className="max-w-[500px]">{feature.title}</p>
-                  </motion.div>
-                  <div className={`w-full flex items-center justify-center my-10 relative`}>
-                    {feature.illustration}
-                  </div>
+      <div className="flex flex-col items-center justify-center w-full gap-10">
+        <div className="flex flex-col max-w-[65%] w-full mt-20 gap-10">
+          {features.map((feature) => {
+            return (
+              <div key={feature.title + Date.now().toString()}>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{
+                    opacity: 1,
+                    transition: {
+                      duration: 0.5
+                    }
+                  }}
+                  exit={{
+                    opacity: 0,
+                    transition: {
+                      duration: 0.5
+                    }
+                  }}
+                  className={`flex items-center justify-center text-center w-full text-xl md:text-2xl lg:text-4xl font-semibold`}
+                >
+                  <p className="max-w-[500px]">{feature.title}</p>
+                </motion.div>
+                <div className={`w-full flex items-center justify-center my-10 relative`}>
+                  {feature.illustration}
                 </div>
-              );
-            })}
-          </div>
-
-          <Link href="/docs/introduction">
-            <MovingBorderButton className="text-lg md:text-xl lg:text-3xl font-medium !px-5 sm:!px-10 py-4">
-              Join the speedforce
-            </MovingBorderButton>
-          </Link>
+              </div>
+            );
+          })}
         </div>
-      </GridBackground>
+
+        <Link href="/docs/introduction">
+          <MovingBorderButton className="text-lg md:text-xl lg:text-3xl font-medium !px-5 sm:!px-10 py-4">
+            Join the speedforce
+          </MovingBorderButton>
+        </Link>
+      </div>
+
       <BuiltForDevelopers />
     </div>
   );

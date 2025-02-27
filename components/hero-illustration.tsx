@@ -5,13 +5,14 @@ import BrowserWindow from './ui/browser-window';
 
 const HeroIllustration = () => {
   const divRef = useRef<HTMLDivElement | null>(null);
+  const parentRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
-      if (!divRef.current) return;
-      divRef.current.style.opacity = '1';
+      if (!parentRef.current) return;
+      parentRef.current.style.opacity = '1';
     }, 200);
   }, [divRef]);
 
@@ -48,7 +49,11 @@ const HeroIllustration = () => {
   };
 
   return (
-    <BrowserWindow url="https://stackbits.dev/">
+    <BrowserWindow
+      ref={parentRef}
+      url="https://stackbits.dev/"
+      className="opacity-0 transition-all"
+    >
       <div
         ref={divRef}
         onMouseMove={onMouseMove}

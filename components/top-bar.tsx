@@ -47,14 +47,14 @@ const TopBar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="flex items-center justify-between ml-[16px] h-[60px] rounded-md border-[2px] border-white/20 fixed w-[calc(100%-32px)] top-5 z-50 bg-black">
+    <div className="flex items-center justify-between ml-2 sm:ml-[100px] h-[60px] rounded-md border-[1px] border-yellow-500/40 fixed w-[calc(100%-20px)] sm:w-[calc(100%-200px)] top-5 z-50 bg-black/50">
       <div className="overflow-hidden h-[56px]">
         <Link href="/" className="flex items-center gap-2 h-full justify-center ml-4 sm:ml-10">
           <CodeXml />
           Stackbits
         </Link>
       </div>
-      <div className="flex items-center text-white">
+      <div className="flex items-center text-white pr-3 sm:pr-0">
         {links.map((link) => {
           const extraClass =
             pathname === link.href ? 'text-yellow-400 text-black' : 'hover:text-yellow-400';

@@ -32,7 +32,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <div className="flex flex-col w-screen items-center justify-center relative pt-[80px] px-2 sm:px-0">
+    <div className="flex flex-col w-screen items-center justify-center relative pt-[80px] px-2 sm:px-14">
       <motion.div
         className="absolute inset-0"
         animate={{
