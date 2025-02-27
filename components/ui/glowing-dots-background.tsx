@@ -3,12 +3,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
-const GRID_SIZE = 30;
+const DOT_SIZE = 30;
 const FADE_DELAY = 1000;
 
 type GlowingDotsBackgroundProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
+  dotSize?: number;
 };
 
 const getRandomColor = () => {
@@ -16,7 +17,11 @@ const getRandomColor = () => {
   return `${colors[Math.floor(Math.random() * colors.length)]}77`;
 };
 
-const GlowingDotsBackground = ({ children, className }: GlowingDotsBackgroundProps) => {
+const GlowingDotsBackground = ({
+  children,
+  className,
+  dotSize = DOT_SIZE
+}: GlowingDotsBackgroundProps) => {
   const divRef = useRef<HTMLDivElement>(null);
   const activeCells = useRef<Set<number>>(new Set());
   const [gridSize, setGridSize] = useState({ cols: 0, rows: 0 });
@@ -29,8 +34,8 @@ const GlowingDotsBackground = ({ children, className }: GlowingDotsBackgroundPro
       const height = divRef.current!.offsetHeight;
       const width = divRef.current!.offsetWidth;
       setGridSize({
-        rows: Math.ceil(height / GRID_SIZE),
-        cols: Math.ceil(width / GRID_SIZE)
+        rows: Math.ceil(height / dotSize),
+        cols: Math.ceil(width / dotSize)
       });
     };
 
@@ -56,7 +61,7 @@ const GlowingDotsBackground = ({ children, className }: GlowingDotsBackgroundPro
       <div
         id="glowing-dots-background"
         style={{
-          gridTemplateColumns: `repeat(${gridSize.cols}, ${GRID_SIZE}px)`
+          gridTemplateColumns: `repeat(${gridSize.cols}, ${dotSize}px)`
         }}
         className="grid overflow-hidden h-full w-full"
       >
@@ -70,7 +75,7 @@ const GlowingDotsBackground = ({ children, className }: GlowingDotsBackgroundPro
                 boxShadow: hoveredCells.includes(i) ? `1px 1px 20px 2px ${getRandomColor()}` : ''
               }}
               transition={{ duration: 0.3 }}
-              className={`h-[${GRID_SIZE}px] w-[${GRID_SIZE}px] border-[1px] rounded-full border-neutral-800`}
+              className={`h-[${dotSize}px] w-[${dotSize}px] border-[1px] rounded-full border-neutral-800`}
             />
           ))}
       </div>

@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -63,9 +65,9 @@ const MasonryGrid: React.FC<MasonryGridProps> = ({ items, columns = undefined })
                   alt={item.title}
                   width={400}
                   height={300}
-                  className={`w-full h-auto transition-transform duration-300 rounded-lg ${
+                  className={`${
                     !imagesLoaded[item.image] ? 'opacity-0' : 'opacity-100'
-                  }`}
+                  } w-full h-auto transition-transform duration-300 rounded-lg`}
                   sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                   onLoad={() => {
                     setImagesLoaded((prev) => ({ ...prev, [item.image]: true }));

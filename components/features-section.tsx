@@ -8,6 +8,11 @@ import { ClipboardPaste, Copy } from 'lucide-react';
 import BarricadeTape from './ui/barricade-tape';
 import TradingCard from './ui/trading-card';
 import WavyText from './ui/wavy-text';
+import MasonryGrid from './ui/masonry-grid';
+import { dataArray } from '@/data/constants';
+import GlowingDotsBackground from './ui/glowing-dots-background';
+import RainbowText from './ui/rainbow-text';
+import GlitchText from './ui/glitch-text';
 
 const FeaturesSection = () => {
   const features = [
@@ -63,115 +68,71 @@ const FeaturesSection = () => {
     },
     {
       illustration: (
-        <BarricadeTape
-          text={['SKIP SETUP', 'START BUILDING']}
-          delimiter={'•'}
-          entryFrom="right"
-          rotation={0}
-          className="bg-blue-400 mt-2 !w-[3000px]"
-        />
+        <div className="w-full p-4 xl:p-10">
+          <RainbowText className="lg:text-3xl xl:text-5xl opacity-1 flex gap-2 items-center justify-center">
+            Skip the Setup. Start Building.
+          </RainbowText>
+        </div>
       ),
       className: 'col-span-7 row-span-1'
     },
     {
       illustration: (
+        <div className="h-[500px] w-full bg-black">
+          <GlowingDotsBackground dotSize={167} />
+        </div>
+      ),
+      className: 'col-span-12 row-span-1'
+    },
+    {
+      illustration: (
         <div className="relative">
-          <div className="rounded-full border-[1px] h-[48px] w-[48px] absolute flex items-center justify-center top-2 right-2 bg-white text-black font-bold text-2xl">
-            1
-          </div>
           <video autoPlay loop muted playsInline className="w-full h-full object-cover rounded-lg">
             <source src="/demo.mp4" type="video/mp4" />
           </video>
         </div>
       ),
-      className: 'col-span-3 row-span-1'
+      className: 'col-span-6 row-span-1'
     },
     {
       illustration: (
         <div className="relative">
-          <div className="rounded-full border-[1px] h-[48px] w-[48px] absolute flex items-center justify-center top-2 right-2 bg-white text-black font-bold text-2xl">
-            2
-          </div>
           <video autoPlay loop muted playsInline className="w-full h-full object-cover rounded-lg">
             <source src="/demo2.mp4" type="video/mp4" />
           </video>
         </div>
       ),
-      className: 'col-span-3 row-span-1'
-    },
-    {
-      illustration: (
-        <div className="relative w-full flex items-center justify-center">
-          <div className="rounded-full border-[1px] h-[48px] w-[48px] absolute flex items-center justify-center top-2 right-2 bg-white text-black font-bold text-2xl">
-            3
-          </div>
-          <TradingCard
-            illustration={
-              <div
-                className="h-full w-full inset-0 bg-cover bg-center"
-                style={{
-                  backgroundImage: `url(https://i.pinimg.com/736x/9c/fa/15/9cfa15fab5013f15b472f91450be5f01.jpg)`
-                }}
-              ></div>
-            }
-            rank={1}
-            name="Lionel Messi"
-            description="Unstoppable force, unrivaled skill - Messi's legacy is built on precision, perseverance, and a relentless drive to redefine greatness on the field."
-          />
-        </div>
-      ),
-      className: 'col-span-6 row-span-2'
+      className: 'col-span-6 row-span-1'
     },
     {
       illustration: (
         <div className="w-full p-4 xl:p-10">
-          <motion.div
-            initial={{
-              opacity: 0.5
-            }}
-            animate={{
-              opacity: 1,
-              transition: {
-                repeat: Infinity,
-                duration: 0.1,
-                repeatDelay: 0.3,
-                repeatType: 'reverse'
-              }
-            }}
-            className="lg:text-3xl xl:text-5xl opacity-0 flex gap-2 items-center justify-center"
-          >
+          <div className="lg:text-3xl xl:text-5xl opacity-1 flex gap-2 items-center justify-center">
             <Copy className="h-10 w-10 font-bold" />
-            <p>Ctrl + C</p>
-          </motion.div>
+            <GlitchText>Ctrl + C</GlitchText>
+          </div>
         </div>
       ),
-      className: 'col-span-3 row-span-1'
+      className: 'col-span-6 row-span-1'
     },
     {
       illustration: (
         <div className="w-full p-4 xl:p-10">
-          <motion.div
-            initial={{
-              opacity: 0.3
-            }}
-            animate={{
-              opacity: 1,
-              transition: {
-                repeat: Infinity,
-                duration: 0.1,
-                delay: 0.5,
-                repeatDelay: 0.3,
-                repeatType: 'reverse'
-              }
-            }}
-            className="lg:text-3xl xl:text-5xl opacity-0 flex gap-2 items-center justify-center"
-          >
+          <div className="lg:text-3xl xl:text-5xl opacity-1 flex gap-2 items-center justify-center">
             <ClipboardPaste className="h-10 w-10 font-bold" />
-            <p>Ctrl + V</p>
-          </motion.div>
+            <GlitchText>Ctrl + V</GlitchText>
+          </div>
         </div>
       ),
-      className: 'col-span-3 row-span-1'
+      className: 'col-span-6 row-span-1'
+    },
+    {
+      illustration: (
+        <div className="relative w-full h-[800px] overflow-y-auto scrollbar-hide">
+          <MasonryGrid items={dataArray.slice(0, 5)}></MasonryGrid>
+        </div>
+      ),
+      className: 'col-span-12 row-span-2'
     },
     {
       illustration: (
