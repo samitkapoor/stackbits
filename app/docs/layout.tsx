@@ -15,10 +15,10 @@ const DocumentationLayout = ({ children }: { children: React.ReactNode }) => {
   };
 
   return (
-    <div className="flex flex-col w-full h-screen relative pt-[100px]">
+    <div className="flex flex-col w-full h-screen relative">
       <div className={`flex items-start bg-black relative px-[20px] md:px-[50px] h-screen`}>
         <SideBar isOpen={sideBarIsOpen} />
-        <div className="flex flex-col gap-52 xl:gap-0 xl:flex-row w-full h-screen overflow-y-auto scrollbar-hide">
+        <div className="flex flex-col gap-52 xl:gap-0 xl:flex-row w-full h-screen overflow-y-auto scrollbar-hide pt-[100px]">
           {/* Side bar button */}
           <MovingBorderButton
             onClick={toggleSideBar}
