@@ -26,6 +26,10 @@ body {
   outline: none;
 }
 
+* {
+  @apply scrollbar-hide;
+}
+
 @keyframes neon-flicker {
   0%,
   100% {
