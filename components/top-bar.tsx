@@ -1,6 +1,6 @@
 'use client';
 
-import { Command, Component, File, Frame, House, Spade, Square, Text } from 'lucide-react';
+import { Command, Component, File, Frame, House, Spade, Text } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
