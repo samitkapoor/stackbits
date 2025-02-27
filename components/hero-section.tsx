@@ -8,7 +8,6 @@ import MovingBorderButton from './ui/moving-border-button';
 import { ChevronsUp, CircleCheckBig, Gauge, MoveRight, Palette } from 'lucide-react';
 import Link from 'next/link';
 import RainbowText from './ui/rainbow-text';
-import GlitchText from './ui/glitch-text';
 import IconCard from './ui/icon-card';
 
 const HeroSection = () => {
