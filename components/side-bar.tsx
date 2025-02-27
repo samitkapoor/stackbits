@@ -4,8 +4,6 @@ import React from 'react';
 import { usePathname } from 'next/navigation';
 
 import { categories, getSideBarTabs } from '@/data/main';
-import Image from 'next/image';
-import Link from 'next/link';
 import RainbowText from './ui/rainbow-text';
 
 const SideBar = ({ isOpen }: { isOpen: boolean }) => {
@@ -23,16 +21,7 @@ const SideBar = ({ isOpen }: { isOpen: boolean }) => {
         } ` + `bg-black h-full flex flex-col w-[350px] z-40 pt-5`
       }
     >
-      <Link href="/">
-        <Image
-          src="/stackbits-logo.png"
-          alt="logo"
-          height={110}
-          width={110}
-          className="w-[50%] object-contain"
-        />
-      </Link>
-      <div className="bg-black h-full overflow-y-auto scrollbar-hide flex flex-col gap-5 w-[350px] z-40">
+      <div className="bg-black h-full overflow-y-auto scrollbar-hide flex flex-col gap-5 w-full z-40">
         {tabs.map((group) => {
           return (
             <div key={group.title} className="flex flex-col items-start gap-2">

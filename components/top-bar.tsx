@@ -1,7 +1,7 @@
 'use client';
 
-import { File, House } from 'lucide-react';
-import Image from 'next/image';
+import { CodeXml, Command, Component, File, Frame, House, Spade, Text } from 'lucide-react';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
 
@@ -13,6 +13,31 @@ const TopBar = () => {
       icon: <House className="h-[12px] sm:h-[18px] w-[12px] sm:w-[18px]" />
     },
     {
+      name: 'Texts',
+      href: '/docs/texts',
+      icon: <Text className="h-[12px] sm:h-[18px] w-[12px] sm:w-[18px]" />
+    },
+    {
+      name: 'Backgrounds',
+      href: '/docs/backgrounds',
+      icon: <Frame className="h-[12px] sm:h-[18px] w-[12px] sm:w-[18px]" />
+    },
+    {
+      name: 'Buttons',
+      href: '/docs/buttons',
+      icon: <Command className="h-[12px] sm:h-[18px] w-[12px] sm:w-[18px]" />
+    },
+    {
+      name: 'Cards',
+      href: '/docs/cards',
+      icon: <Spade className="h-[12px] sm:h-[18px] w-[12px] sm:w-[18px]" />
+    },
+    {
+      name: 'Components',
+      href: '/docs/components',
+      icon: <Component className="h-[12px] sm:h-[18px] w-[12px] sm:w-[18px]" />
+    },
+    {
       name: 'Documentation',
       href: '/docs',
       icon: <File className="h-[12px] sm:h-[18px] w-[12px] sm:w-[18px]" />
@@ -22,15 +47,12 @@ const TopBar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="w-full flex items-center justify-between px-10 lg:px-40 h-[120px]">
-      <div className="py-3">
-        <Image
-          src="/stackbits-logo.png"
-          alt="logo"
-          height={100}
-          width={150}
-          className="h-[65px] sm:h-[150px] w-[65px] sm:w-[150px] object-contain"
-        />
+    <div className="flex items-center justify-between mx-8 px-2 lg:mx-4 lg:px-4  my-5 h-[60px] rounded-md border-[2px] border-white/20 sticky top-5 z-50 bg-black">
+      <div className="overflow-hidden h-[56px]">
+        <Link href="/" className="flex items-center gap-2 h-full justify-center ml-2">
+          <CodeXml />
+          Stackbits
+        </Link>
       </div>
       <div className="flex items-center text-white">
         {links.map((link) => {
@@ -44,7 +66,7 @@ const TopBar = () => {
               className={`px-1 sm:px-3 py-3 flex items-center gap-1 text-xs sm:text-sm transition-all ${extraClass}`}
             >
               {link.icon}
-              <p>{link.name}</p>
+              <p className="hidden lg:block">{link.name}</p>
             </a>
           );
         })}

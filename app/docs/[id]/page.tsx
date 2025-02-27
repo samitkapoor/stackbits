@@ -11,7 +11,7 @@ const Page = () => {
   const params = useParams();
 
   return (
-    <div id="parent-container" className=" w-full px-4 sm:px-10 pt-[50px] flex flex-col">
+    <div className="w-full px-4 pt-4 flex flex-col">
       {params &&
         params.id &&
         typeof params.id === 'string' &&

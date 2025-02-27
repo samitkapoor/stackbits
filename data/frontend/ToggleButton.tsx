@@ -36,7 +36,7 @@ export const toggleButton: Document = {
       {
         heading: 'Toggle Button',
         content:
-          'A Toggle Button is an interactive UI component that allows users to switch between 2+ states, such as on/off or enabled/disabled.',
+          "A Toggle Button is a sleek, interactive UI component that lets users seamlessly switch between multiple states—like light/dark mode, on/off, or enabled/disabled—with a single click. Perfect for modern web apps, it enhances usability, efficiency, and user experience, making interactions feel smooth and intuitive. Whether you're toggling themes, preferences, or features, this dynamic button keeps your interface clean, functional, and engaging! 🚀",
         sectionType: 'paragraph'
       },
       {
@@ -50,7 +50,7 @@ export const toggleButton: Document = {
       },
       {
         heading: 'Install dependencies',
-        sectionType: 'component',
+        sectionType: 'dependencies',
         code: `npm i framer-motion`
       },
       {
@@ -60,8 +60,8 @@ export const toggleButton: Document = {
           'Create a file toggle-button.tsx in your components folder and paste this code',
         code: `'use client';
 
-import { motion, useAnimationControls } from 'framer-motion';
-import React, { ButtonHTMLAttributes, useState } from 'react';
+import { motion } from 'framer-motion';
+import React, { useState } from 'react';
 
 type ToggleButtonProps = {
   options: Array<{
@@ -73,51 +73,46 @@ type ToggleButtonProps = {
 };
 
 const ToggleButton = ({ options, defaultValue, onChange, ...props }: ToggleButtonProps) => {
-  const controls = useAnimationControls();
+  const [currentIndex, setCurrentIndex] = useState(
+    options.findIndex((option) => option.value === defaultValue) || 0
+  );
 
-  const onClick = (i: number) => {
-    const j = (i + 1) % options.length;
-
-    if (onChange) onChange(options[j].value);
-
-    controls.start({ y: -60 * j });
+  const onClick = () => {
+    const nextIndex = (currentIndex + 1) % options.length;
+    setCurrentIndex(nextIndex);
+    if (onChange) onChange(options[nextIndex].value);
   };
 
-  const height = options.length * 100;
-
   return (
-    <div
-      className="rounded-full border-[2px] border-neutral-600 hover:border-neutral-200 transition-all h-[64px] w-[64px] flex items-start justify-start overflow-hidden relative hover:bg-white/10"
+    <motion.div
+      className="relative h-[64px] w-[64px] overflow-hidden rounded-full border-2 border-neutral-600 hover:border-neutral-200 transition-all hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/30"
       {...props}
+      onClick={onClick}
+      whileTap={{ scale: 0.9 }}
+      transition={{ duration: 0.1, ease: 'backOut' }}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && onClick()}
+      aria-label="Toggle button"
     >
       <motion.div
-        initial={{
-          y: options.findIndex((option) => option.value === defaultValue) * -60
-        }}
-        animate={controls}
-        style={{
-          height: \`\${height}%\`
-        }}
-        className={\`flex flex-col w-full\`}
+        animate={{ y: -currentIndex * 64 }}
+        transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+        className="flex flex-col pb-1"
+        style={{ height: \`\${options.length * 64}px\` }}
       >
-        {options.map((option, i) => {
-          return (
-            <button
-              type="button"
-              key={option.value}
-              onClick={() => onClick(i)}
-              className={\`h-full w-full flex items-center justify-center rounded-full outline-none border-none\`}
-            >
-              {option.icon}
-            </button>
-          );
-        })}
+        {options.map((option) => (
+          <div key={option.value} className="h-[64px] w-full flex items-center justify-center">
+            {option.icon}
+          </div>
+        ))}
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 
 export default ToggleButton;
+
 `
       },
       {

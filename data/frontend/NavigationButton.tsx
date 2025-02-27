@@ -1,4 +1,3 @@
-import { TwitterIcon } from 'lucide-react';
 import { Document } from '../main';
 import NavigationButton from '@/components/ui/navigation-button';
 

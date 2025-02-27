@@ -9,7 +9,7 @@ export const footerPreview = (
       alt="footer"
       width={500}
       height={500}
-      className="w-full h-full object-cover"
+      className="w-full h-full object-contain bg-black"
     />
   </div>
 );
