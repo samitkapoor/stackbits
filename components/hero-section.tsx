@@ -74,12 +74,15 @@ const HeroSection = () => {
               scale: 1,
               transition: { duration: 1.2, ease: 'backOut' }
             }}
-            className="text-[24px] sm:text-[35px] md:text-[45px] lg:text-[55px] text-center lg:text-center font-medium leading-none z-30"
+            className="text-[24px] sm:text-[35px] md:text-[45px] lg:text-[55px] text-center lg:text-center font-medium leading-none z-30 w-full"
           >
-            Ready to use <RainbowText duration={5}>components</RainbowText> for{' '}
-            <GlitchText className="font-extrabold text-black text-[30px] sm:text-[40px] md:text-[50px] lg:text-[60px] leading-tight">
+            Ready to use components for{' '}
+            <RainbowText
+              duration={5}
+              className="text-red-500 text-[30px] sm:text-[40px] md:text-[50px] lg:text-[60px] leading-tight"
+            >
               React.js
-            </GlitchText>
+            </RainbowText>
           </motion.p>
           <div className="flex flex-col xl:flex-row items-center xl:items-start justify-center xl:justify-start gap-10 relative w-full">
             <div className="inline-flex flex-col items-start justify-center lg:justify-start relative w-full lg:w-auto">
