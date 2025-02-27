@@ -81,7 +81,7 @@ const HeroSection = () => {
               React.js
             </GlitchText>
           </motion.p>
-          <div className="flex flex-col xl:flex-row items-center xl:items-start justify-center xl:justify-start gap-32 relative w-full">
+          <div className="flex flex-col xl:flex-row items-center xl:items-start justify-center xl:justify-start gap-10 relative w-full">
             <div className="inline-flex flex-col items-start justify-center lg:justify-start relative w-full lg:w-auto">
               <motion.p
                 initial={{
