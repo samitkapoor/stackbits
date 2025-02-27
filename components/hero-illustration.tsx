@@ -61,7 +61,7 @@ const HeroIllustration = () => {
             ? 'linear-gradient(135deg, transparent 0%, #cbcbcb10 50%, transparent 100%), linear-gradient(45deg, transparent 0%, #cbcbcb10 50%, transparent 100%)'
             : 'linear-gradient(135deg, transparent 0%, #cbcbcb08 50%, transparent 100%), linear-gradient(45deg, transparent 0%, #cbcbcb08 50%, transparent 100%)'
         }}
-        className="flex opacity-0 flex-col gap-2 items-center justify-center border-2 border-neutral-400 hover:border-neutral-300 rounded-xl h-[500px] w-[320px] lg:w-[380px] relative transition-all duration-300 ease-linear scale-90"
+        className="flex flex-col gap-2 items-center justify-center border-2 border-neutral-400 hover:border-neutral-300 rounded-xl h-[500px] w-[320px] lg:w-[380px] relative transition-all duration-300 ease-linear scale-90"
       >
         <button
           ref={buttonRef}
