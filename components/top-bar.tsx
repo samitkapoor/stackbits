@@ -1,7 +1,6 @@
 'use client';
 
-import { Command, Component, File, Frame, House, Spade, Text } from 'lucide-react';
-import Image from 'next/image';
+import { CodeXml, Command, Component, File, Frame, House, Spade, Text } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
@@ -50,14 +49,9 @@ const TopBar = () => {
   return (
     <div className="flex items-center justify-between mx-8 px-2 lg:mx-4 lg:px-4  my-5 h-[60px] rounded-md border-[2px] border-white/20 sticky top-5 z-50 bg-black">
       <div className="overflow-hidden h-[56px]">
-        <Link href="/">
-          <Image
-            src="/stackbits-logo.png"
-            alt="logo"
-            height={100}
-            width={150}
-            className="h-[60px] w-[90px] sm:w-[115px] object-contain"
-          />
+        <Link href="/" className="flex items-center gap-2 h-full justify-center ml-2">
+          <CodeXml />
+          Stackbits
         </Link>
       </div>
       <div className="flex items-center text-white">
