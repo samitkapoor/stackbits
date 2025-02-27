@@ -32,9 +32,38 @@ const HeroSection = () => {
   ];
 
   return (
-    <div className="flex flex-col w-full items-center justify-center">
+    <div className="flex flex-col w-screen items-center justify-center relative pt-[80px] px-2 sm:px-0">
+      <motion.div
+        className="absolute inset-0"
+        animate={{
+          background: [
+            'radial-gradient(circle at 0% 0%, #2e2e2e 0%, transparent 50%), radial-gradient(circle at 100% 0%, #eab30855 20%, transparent 50%), radial-gradient(circle at 100% 100%, #1e1e1e 0%, transparent 50%), radial-gradient(circle at 0% 100%, #2a1f3d 0%, transparent 50%)',
+            'radial-gradient(circle at 0% 0%, #1e1e1e 0%, transparent 50%), radial-gradient(circle at 100% 0%, #ec489955 20%, transparent 50%), radial-gradient(circle at 100% 100%, #1e1e1e 0%, transparent 50%), radial-gradient(circle at 0% 100%, #331f2d 0%, transparent 50%)',
+            'radial-gradient(circle at 0% 0%, #2e2e2e 0%, transparent 50%), radial-gradient(circle at 100% 0%, #3b82f655 20%, transparent 50%), radial-gradient(circle at 100% 100%, #1e1e1e 0%, transparent 50%), radial-gradient(circle at 0% 100%, #2a1f3d 0%, transparent 50%)'
+          ]
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          repeatType: 'reverse',
+          ease: 'linear'
+        }}
+        style={{
+          opacity: 0.5
+        }}
+      />
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage:
+            'linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(0deg, rgba(255,255,255,0.06) 1px, transparent 1px)',
+          backgroundSize: '40px 40px',
+          backgroundPosition: 'center center'
+        }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/50" />
       <div className="flex items-center w-full relative">
-        <div className="sm:gap-10 md:gap-10 py-5 md:p-8 lg:px-32 flex-col relative w-full flex items-start justify-start">
+        <div className="sm:gap-10 md:gap-10 py-5 md:p-8 lg:px-14 flex-col relative w-full flex items-start justify-start gap-10">
           <motion.p
             initial={{
               opacity: 0,
@@ -52,8 +81,8 @@ const HeroSection = () => {
               React.js
             </GlitchText>
           </motion.p>
-          <div className="flex flex-col xl:flex-row items-center xl:items-start justify-center xl:justify-start gap-10 relative">
-            <div className="inline-flex flex-col items-start justify-center lg:justify-start relative lg:max-w-[650px] lg:w-auto">
+          <div className="flex flex-col xl:flex-row items-center xl:items-start justify-center xl:justify-start gap-32 relative w-full">
+            <div className="inline-flex flex-col items-start justify-center lg:justify-start relative w-full lg:w-auto">
               <motion.p
                 initial={{
                   opacity: 0
@@ -67,7 +96,7 @@ const HeroSection = () => {
                 Save time with a library of pre-built components, utility functions, and code
                 snippets, along with templates for quick and efficient development.
               </motion.p>
-              <div className="grid grid-cols-2 gap-2 mt-10">
+              <div className="grid grid-cols-2 gap-5 mt-10">
                 {features.map((feature) => {
                   return <IconCard key={feature.text} icon={feature.icon} text={feature.text} />;
                 })}
