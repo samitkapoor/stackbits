@@ -47,7 +47,7 @@ const TopBar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="flex items-center justify-between ml-2 sm:ml-[100px] h-[60px] rounded-md border-[1px] border-yellow-500/40 fixed w-[calc(100%-20px)] sm:w-[calc(100%-200px)] top-5 z-50 bg-black/50 overflow-hidden">
+    <div className="flex items-center justify-between ml-2 sm:ml-[50px] h-[60px] rounded-md border-[1px] border-yellow-500/40 fixed w-[calc(100%-20px)] sm:w-[calc(100%-100px)] top-5 z-50 bg-black/50 overflow-hidden">
       <div className="w-full h-full absolute inset-0 backdrop-blur-lg z-[-1]"></div>
       <div className="overflow-hidden h-[56px]">
         <Link href="/" className="flex items-center gap-2 h-full justify-center ml-4 sm:ml-10">
