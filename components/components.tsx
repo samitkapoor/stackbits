@@ -1,5 +1,8 @@
+'use client';
+
 import React, { useRef } from 'react';
 import { motion, useTransform, useScroll } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 import WavyText from './ui/wavy-text';
 import PrismaticHazeBackground from './ui/prismatic-haze';
 import TradingCardDemo from './trading-card-demo';
@@ -10,6 +13,7 @@ import AnimatedGradientButton from './ui/animated-gradient-button';
 
 const Components = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
 
   const components = [
     {
@@ -77,7 +81,13 @@ const Components = () => {
           style={{
             width: `${
               components.length *
-              (window.innerWidth < 640 ? 300 : window.innerWidth < 768 ? 450 : 650)
+              (typeof window !== 'undefined'
+                ? window.innerWidth < 640
+                  ? 300
+                  : window.innerWidth < 768
+                  ? 450
+                  : 650
+                : 650)
             }px`
           }}
         >
@@ -95,7 +105,7 @@ const Components = () => {
                 scale: 1.02,
                 transition: { duration: 0.3, ease: 'easeOut' }
               }}
-              onClick={() => (window.location.href = component.link)}
+              onClick={() => router.push(component.link)}
               className="group h-[500px] w-[600px] flex-shrink-0 rounded-2xl sm:rounded-3xl flex flex-col items-center justify-center overflow-hidden cursor-pointer relative"
             >
               {/* Gradient border */}
@@ -138,7 +148,7 @@ const Components = () => {
           Get the good stuff without the grunt work!
         </p>
         <AnimatedGradientButton
-          onClick={() => (window.location.href = '/docs')}
+          onClick={() => router.push('/docs')}
           className="text-lg md:text-xl font-medium !px-5 sm:!px-10 py-4 rounded-lg mt-10"
         >
           Join Stackbits For Free
