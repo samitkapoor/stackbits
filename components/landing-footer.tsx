@@ -128,16 +128,15 @@ const LandingFooter = () => {
             <h3 className="text-base md:text-lg font-semibold">Connect with me</h3>
             <div className="flex flex-wrap gap-2">
               {socialLinks.map(({ href, icon, label, className }, i) => (
-                <>
-                  {i === 3 && <div className="w-full" />}
+                <React.Fragment key={label}>
+                  {i === 3 && <div key={`divider-${label}`} className="w-full" />}
                   <ExpandableIconButton
-                    key={label}
                     onClick={() => (window.location.href = href)}
                     icon={icon}
                     text={label}
                     className={className}
                   />
-                </>
+                </React.Fragment>
               ))}
             </div>
           </div>

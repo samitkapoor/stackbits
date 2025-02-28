@@ -1,5 +1,6 @@
 'use client';
 
+import Components from '@/components/components';
 import Demo from '@/components/demo';
 import HeroSection from '@/components/hero-section';
 import LandingFooter from '@/components/landing-footer';
@@ -90,7 +91,10 @@ export default function Home() {
           <Demo />
         </div>
       </div>
-      <LandingFooter />
+      <Components />
+      <div className="mt-36">
+        <LandingFooter />
+      </div>
     </div>
   );
 }
