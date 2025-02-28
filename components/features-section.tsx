@@ -20,7 +20,7 @@ const FeaturesSection = () => {
       illustration: (
         <div className="w-full p-4 xl:p-10 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-black/20 backdrop-blur-sm"></div>
-          <p className="text-[24px] sm:text-[35px] md:text-[45px] lg:text-[55px] text-center font-medium w-full relative z-10 text-white drop-shadow-lg">
+          <p className="text-[24px] sm:text-[30px] md:text-[40px] lg:text-[50px] text-center font-medium w-full relative z-10 text-white drop-shadow-lg">
             Why reinvent the wheel with every project?
           </p>
         </div>
@@ -198,7 +198,7 @@ const FeaturesSection = () => {
     <div className="flex flex-col w-screen items-center justify-center bg-black relative py-20">
       {/* Main content */}
       <div className="flex flex-col items-center justify-center w-full relative z-10">
-        <div className="grid grid-cols-12 gap-1 w-[calc(100%-200px)] max-w-7xl border-[1px] border-white/30 p-[4px]">
+        <div className="grid grid-cols-12 gap-1 w-[calc(100%-200px)] border-[1px] border-white/30 p-[4px]">
           {features.map((feature, index) => {
             return (
               <motion.div
@@ -210,7 +210,7 @@ const FeaturesSection = () => {
                 viewport={{ once: true }}
               >
                 <div
-                  className={`w-full flex items-center justify-center relative h-full border-[1px] border-white/20 rounded-lg overflow-hidden shadow-lg hover:border-white/40 hover:shadow-zinc-800/50 transition-all duration-300`}
+                  className={`w-full flex items-center justify-center relative h-full border-[1px] border-white/20 rounded-lg overflow-hidden shadow-lg hover:border-white/40 hover:shadow-[inset_0_-20px_30px_rgba(239,68,68,0.2),inset_20px_0_30px_rgba(34,197,94,0.2),inset_-20px_0_30px_rgba(234,179,8,0.2),inset_0_20px_30px_rgba(249,115,22,0.2)] transition-all duration-300`}
                 >
                   {feature.illustration}
                 </div>
