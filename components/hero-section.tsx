@@ -9,7 +9,7 @@ import { Command, MoveRight } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col w-full items-center justify-center text-center px-4 sm:px-6 md:px-8">
+    <div className="flex flex-col w-full items-center justify-center text-center px-0 sm:px-6 md:px-8">
       <p className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold mt-6 sm:mt-8 md:mt-10">
         The Faster Way To Build.
       </p>
