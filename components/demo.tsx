@@ -35,6 +35,7 @@ const GradientBackground = memo(({ gradientStyle, children }: GradientBackground
     {children}
   </div>
 ));
+GradientBackground.displayName = 'GradientBackground';
 
 const NoiseOverlay = memo(() => (
   <div
@@ -45,6 +46,7 @@ const NoiseOverlay = memo(() => (
     }}
   />
 ));
+NoiseOverlay.displayName = 'NoiseOverlay';
 
 const StepTitle = memo(({ children, className = 'mt-8 sm:mt-12 md:mt-16' }: StepTitleProps) => (
   <p
@@ -53,6 +55,7 @@ const StepTitle = memo(({ children, className = 'mt-8 sm:mt-12 md:mt-16' }: Step
     {children}
   </p>
 ));
+StepTitle.displayName = 'StepTitle';
 
 const AnimatedImage = memo(
   ({ src, alt, initial, whileInView, className = '', borderClassName }: AnimatedImageProps) => (
@@ -84,6 +87,7 @@ const AnimatedImage = memo(
     </motion.div>
   )
 );
+AnimatedImage.displayName = 'AnimatedImage';
 
 // Optimized video component with proper cleanup
 const LazyVideo = memo(() => {
@@ -144,6 +148,7 @@ const LazyVideo = memo(() => {
     </motion.div>
   );
 });
+LazyVideo.displayName = 'LazyVideo';
 
 // Gradient styles defined outside component to prevent recreation on each render
 const GRADIENT_STYLES = {
@@ -186,6 +191,7 @@ const Step1 = memo(() => (
     />
   </GradientBackground>
 ));
+Step1.displayName = 'Step1';
 
 const Step2 = memo(() => (
   <GradientBackground gradientStyle={GRADIENT_STYLES.step2}>
@@ -201,6 +207,7 @@ const Step2 = memo(() => (
     </div>
   </GradientBackground>
 ));
+Step2.displayName = 'Step2';
 
 const Step3 = memo(() => (
   <GradientBackground gradientStyle={GRADIENT_STYLES.step3}>
@@ -210,7 +217,7 @@ const Step3 = memo(() => (
     </StepTitle>
   </GradientBackground>
 ));
-
+Step3.displayName = 'Step3';
 // Main component
 const Demo = () => {
   // Define steps using memoization to prevent recreation on each render
