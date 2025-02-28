@@ -149,3 +149,107 @@ body {
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #4caf50;
 }
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes moveLight {
+  0% {
+    transform: translateX(-100px) translateY(0);
+  }
+  25% {
+    transform: translateX(calc(100vw + 100px)) translateY(100px);
+  }
+  50% {
+    transform: translateX(calc(100vw - 100px)) translateY(calc(100vh - 100px));
+  }
+  75% {
+    transform: translateX(-100px) translateY(calc(100vh - 200px));
+  }
+  100% {
+    transform: translateX(-100px) translateY(0);
+  }
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes twinkle-bright {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.animate-gradient-slow {
+  animation: gradient 15s ease infinite;
+}
+
+.animate-gradient-medium {
+  animation: gradient 12s ease infinite;
+}
+
+.animate-gradient-slower {
+  animation: gradient 20s ease infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 10s ease-in-out infinite;
+}
+
+.animate-pulse-medium {
+  animation: pulse 12s ease-in-out infinite;
+}
+
+.animate-pulse-slower {
+  animation: pulse 15s ease-in-out infinite;
+}
+
+.animate-twinkle {
+  animation: twinkle linear infinite;
+}
+
+.animate-twinkle-bright {
+  animation: twinkle-bright linear infinite;
+}
+
+.animate-move-light {
+  animation: moveLight 25s infinite linear;
+  top: 30%;
+  left: 0%;
+}

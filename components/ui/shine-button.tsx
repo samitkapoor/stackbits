@@ -11,7 +11,7 @@ const ShineButton: React.FC<ShineButtonProps> = ({ children, className, ...props
   return (
     <motion.button
       {...props}
-      className={`relative overflow-hidden rounded-lg border border-neutral-700 px-6 py-3 text-white font-semibold transition-all duration-300 hover:border-neutral-400 hover:shadow-[0_0_10px_rgba(255,255,255,0.2)] active:scale-95 ${className}`}
+      className={`relative overflow-hidden rounded-lg border border-neutral-700 px-6 py-3 text-white transition-all duration-300 hover:border-neutral-400 hover:shadow-[0_0_10px_rgba(255,255,255,0.2)] active:scale-95 ${className}`}
       whileHover={{ scale: 1.05 }}
     >
       <motion.span
@@ -29,7 +29,7 @@ const ShineButton: React.FC<ShineButtonProps> = ({ children, className, ...props
         }}
       />
 
-      <span className="relative z-10">{children}</span>
+      <div className="relative z-10 flex items-center">{children}</div>
     </motion.button>
   );
 };
