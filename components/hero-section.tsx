@@ -13,7 +13,7 @@ const HeroSection = () => {
       <p className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold mt-6 sm:mt-8 md:mt-10">
         The Faster Way To Build.
       </p>
-      <p className="text-white/60 text-base sm:text-lg md:text-xl lg:text-2xl my-3 sm:my-4 md:my-5 max-w-3xl">
+      <p className="text-white/60 text-base sm:text-lg md:text-xl lg:text-2xl my-3 sm:my-4 md:my-5">
         Why Start from Scratch When the Code You Need Is Already Here?
       </p>
       <div className="flex flex-col sm:flex-row justify-center items-center gap-1 sm:gap-4 md:gap-5 mt-4 sm:mt-5">
