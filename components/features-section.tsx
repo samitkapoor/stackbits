@@ -52,8 +52,8 @@ const FeaturesSection = () => {
             }}
           />
           <IconWheel
-            size={500}
-            iconSize={64}
+            size={400}
+            iconSize={48}
             icons={[
               '/css.png',
               '/framermotion.png',
