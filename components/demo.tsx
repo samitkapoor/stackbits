@@ -28,9 +28,9 @@ interface AnimatedImageProps {
 const GradientBackground = memo(({ gradientStyle, children }: GradientBackgroundProps) => (
   <div
     style={{ background: gradientStyle }}
-    className="w-full h-full flex flex-col items-center gap-5 justify-center rounded-3xl relative shadow-inner shadow-white/35 overflow-hidden"
+    className="w-full h-full flex flex-col items-center gap-3 sm:gap-4 md:gap-5 justify-center rounded-xl sm:rounded-2xl md:rounded-3xl relative shadow-inner shadow-white/35 overflow-hidden py-4 sm:py-6 md:py-8"
   >
-    <div className="absolute inset-0 rounded-3xl bg-gradient-to-b from-white/5 to-transparent"></div>
+    <div className="absolute inset-0 rounded-xl sm:rounded-2xl md:rounded-3xl bg-gradient-to-b from-white/5 to-transparent"></div>
     <NoiseOverlay />
     {children}
   </div>
@@ -46,9 +46,9 @@ const NoiseOverlay = memo(() => (
   />
 ));
 
-const StepTitle = memo(({ children, className = 'mt-16' }: StepTitleProps) => (
+const StepTitle = memo(({ children, className = 'mt-8 sm:mt-12 md:mt-16' }: StepTitleProps) => (
   <p
-    className={`text-white text-3xl md:text-4xl ${className} text-center bg-clip-text text-transparent bg-gradient-to-r from-white to-white/70 relative z-10`}
+    className={`text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl ${className} text-center bg-clip-text text-transparent bg-gradient-to-r from-white to-white/70 relative z-10 px-4`}
   >
     {children}
   </p>
@@ -65,9 +65,10 @@ const AnimatedImage = memo(
         ease: 'easeInOut'
       }}
       viewport={{
-        once: true
+        once: true,
+        margin: '-50px 0px'
       }}
-      className="relative w-full max-w-[75%] group z-10"
+      className="relative w-full max-w-[85%] sm:max-w-[80%] md:max-w-[75%] group z-10"
     >
       <Image
         src={src}
@@ -77,7 +78,7 @@ const AnimatedImage = memo(
         style={{
           boxShadow: '0 0px 20px 10px rgba(0, 0, 0, 0.4)'
         }}
-        className={`relative w-full max-h-[350px] object-cover ${borderClassName} ${className}`}
+        className={`relative w-full max-h-[200px] sm:max-h-[250px] md:max-h-[300px] lg:max-h-[350px] object-cover ${borderClassName} ${className}`}
         loading="lazy"
       />
     </motion.div>
@@ -115,15 +116,18 @@ const LazyVideo = memo(() => {
 
   return (
     <motion.div
-      initial={{ y: -250 }}
+      initial={{ y: -150 }}
       whileInView={{ y: 0 }}
       transition={{
         duration: 0.5,
         delay: 0.5,
         ease: 'easeInOut'
       }}
-      viewport={{ once: true }}
-      className="relative w-full max-w-[75%] group z-10"
+      viewport={{
+        once: true,
+        margin: '-50px 0px'
+      }}
+      className="relative w-full max-w-[85%] sm:max-w-[80%] md:max-w-[75%] group z-10"
     >
       <video
         ref={videoRef}
@@ -134,7 +138,7 @@ const LazyVideo = memo(() => {
         style={{
           boxShadow: '0 0px 20px 10px rgba(0, 0, 0, 0.4)'
         }}
-        className="relative w-full max-h-[350px] object-cover rounded-ee-3xl rounded-es-3xl border-2 border-t-0 border-white/20"
+        className="relative w-full max-h-[200px] sm:max-h-[250px] md:max-h-[300px] lg:max-h-[350px] object-cover rounded-xl md:rounded-ee-3xl rounded-es-xl md:rounded-es-3xl border-2 md:border-t-0 border-white/20"
         preload="metadata"
       />
     </motion.div>
@@ -176,9 +180,9 @@ const Step1 = memo(() => (
     <AnimatedImage
       src="/step1.png"
       alt="Browse ready-to-use snippets"
-      initial={{ y: 250 }}
-      whileInView={{ y: 70 }}
-      borderClassName="rounded-ss-3xl rounded-se-3xl border-2 border-b-0 border-white/20"
+      initial={{ y: 100 }}
+      whileInView={{ y: 20 }}
+      borderClassName="rounded-xl md:rounded-ss-3xl rounded-se-xl sm:rounded-se-2xl md:rounded-se-3xl border-2 md:border-b-0 border-white/20"
     />
   </GradientBackground>
 ));
@@ -186,13 +190,13 @@ const Step1 = memo(() => (
 const Step2 = memo(() => (
   <GradientBackground gradientStyle={GRADIENT_STYLES.step2}>
     <StepTitle>Copy with a click</StepTitle>
-    <div className="w-full h-full flex items-start gap-5 justify-start">
+    <div className="w-full h-full flex items-start gap-2 sm:gap-3 md:gap-5 justify-center sm:justify-start">
       <AnimatedImage
         src="/step2.png"
         alt="Copy with a click"
-        initial={{ y: 250, x: -100 }}
-        whileInView={{ y: 70, x: 0 }}
-        borderClassName="rounded-se-3xl border-2 border-b-0 border-l-0 border-white/20"
+        initial={{ y: 100, x: -50 }}
+        whileInView={{ y: 20, x: 0 }}
+        borderClassName="rounded-xl md:rounded-se-3xl border-2 md:border-b-0 md:border-l-0 border-white/20 translate-x-[55px] md:translate-x-[0px]"
       />
     </div>
   </GradientBackground>
@@ -201,7 +205,9 @@ const Step2 = memo(() => (
 const Step3 = memo(() => (
   <GradientBackground gradientStyle={GRADIENT_STYLES.step3}>
     <LazyVideo />
-    <StepTitle className="mb-16 mt-10">One Paste & Limitless Possibilities</StepTitle>
+    <StepTitle className="mb-8 sm:mb-12 md:mb-16 mt-4 sm:mt-6 md:mt-10">
+      One Paste & Limitless Possibilities
+    </StepTitle>
   </GradientBackground>
 ));
 
@@ -212,28 +218,31 @@ const Demo = () => {
     () => [
       {
         illustration: <Step1 />,
-        className: 'col-span-12 row-span-1'
+        className: 'col-span-12 md:col-span-12 lg:col-span-12 row-span-1'
       },
       {
         illustration: <Step2 />,
-        className: 'col-span-12 row-span-1'
+        className: 'col-span-12 md:col-span-12 lg:col-span-12 row-span-1'
       },
       {
         illustration: <Step3 />,
-        className: 'col-span-12 row-span-1'
+        className: 'col-span-12 md:col-span-12 lg:col-span-12 row-span-1'
       }
     ],
     []
   );
 
   return (
-    <div className="w-full flex flex-col items-center justify-center mt-20">
-      <p className="text-white text-4xl md:text-6xl lg:text-8xl font-semibold mt-10">
+    <div className="w-full flex flex-col items-center justify-center mt-10 sm:mt-16 md:mt-20 px-4 sm:px-6 md:px-8">
+      <p className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-semibold mt-6 sm:mt-8 md:mt-10 text-center">
         How It Works.
       </p>
-      <div className="w-full grid grid-cols-12 grid-flow-dense items-center justify-center mt-10 max-w-[1100px] gap-5">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-6 md:grid-cols-12 grid-flow-dense items-center justify-center mt-6 sm:mt-8 md:mt-10 max-w-full sm:max-w-[90%] md:max-w-[95%] lg:max-w-[1100px] gap-3 sm:gap-4 md:gap-5">
         {steps.map((step, i) => (
-          <div key={`step-${i}`} className={`w-full ${step.className}`}>
+          <div
+            key={`step-${i}`}
+            className={`w-full h-[350px] sm:h-[400px] md:h-[450px] ${step.className}`}
+          >
             {step.illustration}
           </div>
         ))}

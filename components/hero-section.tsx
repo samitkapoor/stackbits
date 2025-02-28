@@ -9,32 +9,32 @@ import { Command, MoveRight } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col w-full items-center justify-center text-center">
-      <p className="text-white text-4xl md:text-6xl lg:text-8xl font-semibold mt-10">
+    <div className="flex flex-col w-full items-center justify-center text-center px-4 sm:px-6 md:px-8">
+      <p className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold mt-6 sm:mt-8 md:mt-10">
         The Faster Way To Build.
       </p>
-      <p className="text-white/60 text-xl md:text-2xl my-5">
+      <p className="text-white/60 text-base sm:text-lg md:text-xl lg:text-2xl my-3 sm:my-4 md:my-5 max-w-3xl">
         Why Start from Scratch When the Code You Need Is Already Here?
       </p>
-      <div className="flex justify-center items-center gap-5 mt-5">
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-1 sm:gap-4 md:gap-5 mt-4 sm:mt-5">
         <Link href={'/docs/introduction'}>
           <MovingBorderButton
-            wrapperClassName="hover:scale-110 transition-all duration-300 hover:p-[2px]"
-            className="px-4 py-3 text-xl"
+            wrapperClassName="hover:scale-105 sm:hover:scale-110 transition-all duration-300 hover:p-[2px]"
+            className="px-3 py-2 sm:px-4 sm:py-3 text-base sm:text-lg md:text-xl bg-neutral-900"
           >
             Get Started&nbsp;
-            <MoveRight />
+            <MoveRight className="w-4 h-4 sm:w-5 sm:h-5" />
           </MovingBorderButton>
         </Link>
-        <p>or, check out our</p>
+        <p className="my-2 sm:my-0">or, check out our</p>
         <Link href={'/docs/fileStack'}>
-          <ShineButton className="px-4 py-3 text-xl !rounded-full border-2 bg-neutral-900">
-            <Command />
+          <ShineButton className="px-3 py-2 sm:px-4 sm:py-3 text-base sm:text-lg md:text-xl !rounded-full border-2 bg-neutral-900">
+            <Command className="w-4 h-4 sm:w-5 sm:h-5" />
             &nbsp; Latest Component
           </ShineButton>
         </Link>
       </div>
-      <div className="max-w-[1100px] w-full mt-12">
+      <div className="w-full max-w-[1100px] mt-6 sm:mt-8 md:mt-10 lg:mt-12">
         <HeroIllustration />
       </div>
     </div>

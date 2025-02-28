@@ -49,9 +49,11 @@ const TechStack = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col items-center justify-center mt-20">
-      <p className="text-white/60 text-2xl font-semibold mt-10">Built For The Modern Stack.</p>
-      <div className="max-w-[1100px] w-full flex flex-wrap items-center justify-center gap-5 mt-10">
+    <div className="w-full flex flex-col items-center justify-center mt-10 sm:mt-12 md:mt-16 lg:mt-20">
+      <p className="text-white/60 text-lg sm:text-xl md:text-2xl font-semibold mt-5 sm:mt-8 md:mt-10">
+        Built For The Modern Stack.
+      </p>
+      <div className="max-w-full sm:max-w-[90%] md:max-w-[95%] lg:max-w-[1100px] w-full flex flex-wrap items-center justify-center gap-2 sm:gap-3 md:gap-4 lg:gap-5 mt-5 sm:mt-8 md:mt-10 px-2 sm:px-4">
         {techStack.map((tech) => (
           <motion.div
             key={tech.name}
@@ -74,10 +76,18 @@ const TechStack = () => {
             viewport={{
               once: true
             }}
-            className="flex items-center justify-center bg-neutral-600/30 px-5 py-5 rounded-xl border-2 border-neutral-600 gap-5"
+            className="flex items-center justify-center bg-neutral-600/30 px-2 sm:px-3 md:px-4 lg:px-5 py-2 sm:py-3 md:py-4 lg:py-5 rounded-xl border-2 border-neutral-600 gap-2 sm:gap-3 md:gap-4 lg:gap-5"
           >
-            <Image src={tech.image} alt={tech.name} width={48} height={48} />
-            <p className="text-white text-2xl">{tech.name}</p>
+            <Image
+              src={tech.image}
+              alt={tech.name}
+              width={24}
+              height={24}
+              className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12"
+            />
+            <p className="text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+              {tech.name}
+            </p>
           </motion.div>
         ))}
       </div>

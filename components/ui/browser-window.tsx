@@ -19,7 +19,7 @@ const BrowserWindow: React.FC<BrowserWindowProps> = ({
   return (
     <div
       ref={ref}
-      className={`flex flex-col items-center justify-between rounded-lg overflow-hidden border border-neutral-700 shadow-lg bg-neutral-900/60 h-full w-full relative mx-2 ${className}`}
+      className={`flex flex-col items-center justify-between rounded-lg overflow-hidden border border-neutral-700 shadow-lg bg-neutral-900/60 h-full w-full relative ${className}`}
       style={{ minWidth: '350px', minHeight: '600px' }}
       {...props}
     >
