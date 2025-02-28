@@ -4,22 +4,23 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import IconWheel from './ui/icon-wheel';
 import Image from 'next/image';
-import { ClipboardPaste, Copy } from 'lucide-react';
-import BarricadeTape from './ui/barricade-tape';
-import TradingCard from './ui/trading-card';
+import { ClipboardPaste, Copy, Sparkles } from 'lucide-react';
 import WavyText from './ui/wavy-text';
 import MasonryGrid from './ui/masonry-grid';
 import { dataArray } from '@/data/constants';
 import GlowingDotsBackground from './ui/glowing-dots-background';
 import RainbowText from './ui/rainbow-text';
 import GlitchText from './ui/glitch-text';
+import Link from 'next/link';
+import ShineButton from './ui/shine-button';
 
 const FeaturesSection = () => {
   const features = [
     {
       illustration: (
-        <div className="w-full p-4 xl:p-10">
-          <p className="text-[24px] sm:text-[35px] md:text-[45px] lg:text-[55px] text-center lg:text-center font-medium w-full">
+        <div className="w-full p-4 xl:p-10 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-black/20 backdrop-blur-sm"></div>
+          <p className="text-[24px] sm:text-[35px] md:text-[45px] lg:text-[55px] text-center font-medium w-full relative z-10 text-white drop-shadow-lg">
             Why reinvent the wheel with every project?
           </p>
         </div>
@@ -28,7 +29,28 @@ const FeaturesSection = () => {
     },
     {
       illustration: (
-        <div className="h-[600px] w-full flex items-center justify-center">
+        <div className="w-full flex items-center justify-center relative overflow-hidden h-full">
+          <div
+            style={{
+              backgroundImage: `
+                linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px),
+                linear-gradient(0deg, rgba(255,255,255,0.15) 1px, transparent 1px),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 50%)
+              `,
+              rotate: '45deg',
+              translate: '-40% 0',
+              backgroundSize: '10px 10px, 10px 10px, 100% 100%',
+              backgroundPosition: 'center center'
+            }}
+            className="absolute inset-0 h-[400%] w-[400%]"
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(to bottom right, rgba(0,0,0,0.7), rgba(0,0,0,0.3))',
+              backdropFilter: 'blur(1px)'
+            }}
+          />
           <IconWheel
             size={500}
             iconSize={64}
@@ -45,68 +67,80 @@ const FeaturesSection = () => {
           />
         </div>
       ),
-      className: 'col-span-5 row-span-2'
+      className: 'col-span-6 row-span-2'
     },
     {
       illustration: (
-        <div className="flex flex-col items-start justify-start h-full w-full">
-          <div className="w-full h-full bg-white flex flex-col items-start justify-start rounded rounded-se-lg">
-            <Image
-              src="/debounce-code.png"
-              className="w-full rounded-lg md:rounded-ee-none md:rounded-ss-none md:rounded-es-none md:rounded-se-lg"
-              alt="debounce-code-preview"
-              width={1000}
-              height={1000}
-            />
+        <div className="h-full w-full p-4 overflow-hidden">
+          <Image
+            src="/debounce-code.png"
+            className="w-full rounded-xl shadow-xl"
+            alt="debounce-code-preview"
+            width={1000}
+            height={1000}
+          />
+        </div>
+      ),
+      className: 'col-span-6 row-span-1'
+    },
+    {
+      illustration: (
+        <div className="w-full p-4 xl:p-10 bg-gradient-to-br from-purple-900/30 to-blue-900/30 backdrop-blur-sm rounded-lg">
+          <div className="flex flex-col">
+            <RainbowText className="text-3xl opacity-1 flex gap-2 items-center justify-center">
+              Skip the Setup. Start Building.
+            </RainbowText>
+            <p className="text-center text-white/70 text-sm md:text-base">
+              Focus on what matters - creating amazing experiences
+            </p>
           </div>
-          {/* <p className="text-center text-xl md:text-2xl lg:text-4xl font-semibold">
-            Your time is valuable—why waste it on boilerplate?
-          </p> */}
         </div>
       ),
-      className: 'col-span-7 row-span-1'
+      className: 'col-span-6 row-span-1'
     },
     {
       illustration: (
-        <div className="w-full p-4 xl:p-10">
-          <RainbowText className="lg:text-3xl xl:text-5xl opacity-1 flex gap-2 items-center justify-center">
-            Skip the Setup. Start Building.
-          </RainbowText>
-        </div>
-      ),
-      className: 'col-span-7 row-span-1'
-    },
-    {
-      illustration: (
-        <div className="h-[500px] w-full bg-black">
-          <GlowingDotsBackground dotSize={167} />
+        <div className="h-[375px] w-full bg-black relative overflow-hidden rounded-lg">
+          <GlowingDotsBackground dotSize={125} />
         </div>
       ),
       className: 'col-span-12 row-span-1'
     },
     {
       illustration: (
-        <div className="relative">
+        <div className="relative rounded-lg overflow-hidden group">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10 transition-opacity duration-300"></div>
           <video autoPlay loop muted playsInline className="w-full h-full object-cover rounded-lg">
             <source src="/demo.mp4" type="video/mp4" />
           </video>
+          <div className="absolute bottom-0 left-0 right-0 p-4 transform transition-transform duration-300 z-20">
+            <h4 className="text-white text-lg font-medium">Easy Documentation</h4>
+            <p className="text-white/70 text-sm">
+              Effortlessly integrate components into your project
+            </p>
+          </div>
         </div>
       ),
       className: 'col-span-6 row-span-1'
     },
     {
       illustration: (
-        <div className="relative">
+        <div className="relative rounded-lg overflow-hidden group">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10 transition-opacity duration-300"></div>
           <video autoPlay loop muted playsInline className="w-full h-full object-cover rounded-lg">
             <source src="/demo2.mp4" type="video/mp4" />
           </video>
+          <div className="absolute bottom-0 left-0 right-0 p-4 transform transition-transform duration-300 z-20">
+            <h4 className="text-white text-lg font-medium">Instant Integration</h4>
+            <p className="text-white/70 text-sm">No configuration needed - just copy and paste</p>
+          </div>
         </div>
       ),
       className: 'col-span-6 row-span-1'
     },
     {
       illustration: (
-        <div className="w-full p-4 xl:p-10">
+        <div className="w-full p-4 xl:p-10 bg-gradient-to-br from-black/20 to-white/20 backdrop-blur-sm rounded-lg">
           <div className="lg:text-3xl xl:text-5xl opacity-1 flex gap-2 items-center justify-center">
             <Copy className="h-10 w-10 font-bold" />
             <GlitchText>Ctrl + C</GlitchText>
@@ -117,9 +151,9 @@ const FeaturesSection = () => {
     },
     {
       illustration: (
-        <div className="w-full p-4 xl:p-10">
+        <div className="w-full p-4 xl:p-10 bg-gradient-to-br from-white/20 to-black/20 backdrop-blur-sm rounded-lg">
           <div className="lg:text-3xl xl:text-5xl opacity-1 flex gap-2 items-center justify-center">
-            <ClipboardPaste className="h-10 w-10 font-bold" />
+            <ClipboardPaste className="h-10 w-10 font-bold " />
             <GlitchText>Ctrl + V</GlitchText>
           </div>
         </div>
@@ -128,19 +162,32 @@ const FeaturesSection = () => {
     },
     {
       illustration: (
-        <div className="relative w-full h-[800px] overflow-y-auto scrollbar-hide">
-          <MasonryGrid items={dataArray.slice(0, 5)}></MasonryGrid>
+        <div className="relative w-full h-[500px] rounded-lg">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10 pointer-events-none"></div>
+          <MasonryGrid items={dataArray.slice(0, 12)}></MasonryGrid>
+          <div className="absolute bottom-0 left-0 right-0 p-6 z-20 flex justify-center">
+            <Link href="/docs/components">
+              <ShineButton className="px-6 py-3 bg-black/50 rounded-full text-white font-medium hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-blue-500/20 hover:scale-105">
+                Explore All Components
+              </ShineButton>
+            </Link>
+          </div>
         </div>
       ),
       className: 'col-span-12 row-span-2'
     },
     {
       illustration: (
-        <div className="w-full p-4 xl:p-10 lg:text-3xl xl:text-5xl text-center flex items-center justify-center">
+        <div className="w-full p-4 xl:p-10 lg:text-3xl xl:text-5xl text-center flex flex-col items-center justify-center gap-6 bg-gradient-to-br from-white/10 to-black/20 backdrop-blur-sm rounded-lg">
           <WavyText
             text="Yes. It's that easy."
             className="text-[24px] sm:text-[35px] md:text-[45px] lg:text-[55px] font-medium"
           />
+          <Link href="/docs/introduction">
+            <button className="px-8 py-4 bg-white text-black rounded-full text-lg font-medium hover:bg-gray-100 transition-all shadow-lg hover:shadow-white/20 hover:scale-105">
+              Get Started Now
+            </button>
+          </Link>
         </div>
       ),
       className: 'col-span-12 row-span-1'
@@ -148,20 +195,22 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <div className="flex flex-col w-screen items-center justify-center bg-black">
-      <div className="flex flex-col items-center justify-center w-full relative">
-        <div className="grid grid-cols-12 gap-[4px] w-[calc(100%-200px)] border-[1px] border-white/30 rounded-xl p-[4px]">
-          {features.map((feature) => {
+    <div className="flex flex-col w-screen items-center justify-center bg-black relative py-20">
+      {/* Main content */}
+      <div className="flex flex-col items-center justify-center w-full relative z-10">
+        <div className="grid grid-cols-12 gap-1 w-[calc(100%-200px)] max-w-7xl border-[1px] border-white/30 p-[4px]">
+          {features.map((feature, index) => {
             return (
               <motion.div
-                key={Date.now().toString()}
+                key={`feature-${index}`}
                 className={feature.className + ''}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1, transition: { duration: 0.3, delay: 0.2 } }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
                 <div
-                  className={`w-full flex items-center justify-center relative h-full border-[1px] border-white/30 rounded-lg overflow-hidden`}
+                  className={`w-full flex items-center justify-center relative h-full border-[1px] border-white/20 rounded-lg overflow-hidden shadow-lg hover:border-white/40 hover:shadow-zinc-800/50 transition-all duration-300`}
                 >
                   {feature.illustration}
                 </div>
@@ -169,44 +218,7 @@ const FeaturesSection = () => {
             );
           })}
         </div>
-        {/* <div className="flex flex-col max-w-[65%] w-full mt-20 gap-10">
-          {features.map((feature) => {
-            return (
-              <div key={feature.title + Date.now().toString()}>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{
-                    opacity: 1,
-                    transition: {
-                      duration: 0.5
-                    }
-                  }}
-                  exit={{
-                    opacity: 0,
-                    transition: {
-                      duration: 0.5
-                    }
-                  }}
-                  className={`flex items-center justify-center text-center w-full text-xl md:text-2xl lg:text-4xl font-semibold`}
-                >
-                  <p className="max-w-[500px]">{feature.title}</p>
-                </motion.div>
-                <div className={`w-full flex items-center justify-center my-10 relative`}>
-                  {feature.illustration}
-                </div>
-              </div>
-            );
-          })}
-        </div> */}
-
-        {/* <Link href="/docs/introduction">
-          <MovingBorderButton className="text-lg md:text-xl lg:text-3xl font-medium !px-5 sm:!px-10 py-4">
-            Join the speedforce
-          </MovingBorderButton>
-        </Link> */}
       </div>
-
-      {/* <BuiltForDevelopers /> */}
     </div>
   );
 };
