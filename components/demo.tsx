@@ -233,7 +233,7 @@ const Demo = () => {
   );
 
   return (
-    <div className="w-full flex flex-col items-center justify-center mt-10 sm:mt-16 md:mt-20 px-4 sm:px-6 md:px-8 py-6 sm:py-8 md:py-10">
+    <div className="w-full flex flex-col items-center justify-center mt-10 sm:mt-16 md:mt-20 px-4 sm:px-6 md:px-8">
       <p className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-semibold text-center">
         How It Works.
       </p>

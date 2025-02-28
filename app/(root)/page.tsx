@@ -19,7 +19,7 @@ export default function Home() {
   }));
 
   return (
-    <div className="h-full w-full overflow-x-hidden overflow-y-auto flex flex-col gap-44 bg-black relative">
+    <div className="h-full w-full overflow-x-hidden overflow-y-auto flex flex-col gap-20 bg-black relative">
       <div className="relative mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="absolute inset-0 h-full w-full">
           {/* Enhanced grid pattern with CSS animation */}
