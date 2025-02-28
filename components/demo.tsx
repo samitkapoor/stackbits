@@ -201,7 +201,7 @@ const Step2 = memo(() => (
 const Step3 = memo(() => (
   <GradientBackground gradientStyle={GRADIENT_STYLES.step3}>
     <LazyVideo />
-    <StepTitle className="mb-16 mt-10">One Paste, Limitless Possibilities</StepTitle>
+    <StepTitle className="mb-16 mt-10">One Paste & Limitless Possibilities</StepTitle>
   </GradientBackground>
 ));
 

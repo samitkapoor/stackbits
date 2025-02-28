@@ -29,7 +29,7 @@ const ShineButton: React.FC<ShineButtonProps> = ({ children, className, ...props
         }}
       />
 
-      <span className="relative z-10">{children}</span>
+      <div className="relative z-10 flex items-center">{children}</div>
     </motion.button>
   );
 };
