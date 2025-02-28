@@ -71,6 +71,9 @@ const TechStack = () => {
                 delay: 0
               }
             }}
+            viewport={{
+              once: true
+            }}
             className="flex items-center justify-center bg-neutral-600/30 px-5 py-5 rounded-xl border-2 border-neutral-600 gap-5"
           >
             <Image src={tech.image} alt={tech.name} width={48} height={48} />
