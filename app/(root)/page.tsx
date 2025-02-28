@@ -3,9 +3,10 @@ import HeroSection from '@/components/hero-section';
 
 export default function Home() {
   return (
-    <div className="h-full w-screen overflow-x-hidden overflow-y-scroll flex flex-col p-0 bg-black">
+    <div className="h-full w-screen overflow-x-hidden overflow-y-scroll flex flex-col bg-black">
       <HeroSection />
-      <FeaturesSection />
+      {/* <FeaturesSection /> */}
+      <div className="w-full h-96"></div>
     </div>
   );
 }
