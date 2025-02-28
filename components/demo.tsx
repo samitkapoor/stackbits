@@ -233,8 +233,8 @@ const Demo = () => {
   );
 
   return (
-    <div className="w-full flex flex-col items-center justify-center mt-10 sm:mt-16 md:mt-20 px-4 sm:px-6 md:px-8">
-      <p className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-semibold mt-6 sm:mt-8 md:mt-10 text-center">
+    <div className="w-full flex flex-col items-center justify-center mt-10 sm:mt-16 md:mt-20 px-4 sm:px-6 md:px-8 py-6 sm:py-8 md:py-10">
+      <p className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-semibold text-center">
         How It Works.
       </p>
       <div className="w-full grid grid-cols-1 sm:grid-cols-6 md:grid-cols-12 grid-flow-dense items-center justify-center mt-6 sm:mt-8 md:mt-10 max-w-full sm:max-w-[90%] md:max-w-[95%] lg:max-w-[1100px] gap-3 sm:gap-4 md:gap-5">
