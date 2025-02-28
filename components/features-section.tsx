@@ -33,22 +33,20 @@ const FeaturesSection = () => {
           <div
             style={{
               backgroundImage: `
-                linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px),
-                linear-gradient(0deg, rgba(255,255,255,0.15) 1px, transparent 1px),
-                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 50%)
+                linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(0deg, rgba(255,255,255,0.1) 1px, transparent 1px),
+                radial-gradient(circle at 50% 50%, transparent 0%, rgba(255,255,0,0.15) 80%)
               `,
-              rotate: '45deg',
-              translate: '-40% 0',
               backgroundSize: '10px 10px, 10px 10px, 100% 100%',
               backgroundPosition: 'center center'
             }}
-            className="absolute inset-0 h-[400%] w-[400%]"
+            className="absolute inset-0 h-full w-full"
           />
           <div
             className="absolute inset-0"
             style={{
               background: 'linear-gradient(to bottom right, rgba(0,0,0,0.7), rgba(0,0,0,0.3))',
-              backdropFilter: 'blur(1px)'
+              backdropFilter: 'blur(0px)'
             }}
           />
           <IconWheel
