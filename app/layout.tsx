@@ -23,7 +23,9 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={`font-poppins antialiased text-white bg-black overflow-x-hidden relative`}>
+      <body
+        className={`font-poppins antialiased text-white bg-black overflow-x-hidden relative scrollbar-hide`}
+      >
         <TopBar />
         {children}
         <ContactMe />

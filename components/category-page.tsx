@@ -51,6 +51,7 @@ const CategoryPage = ({ docId }: CategoryPageProps) => {
           );
         })}
       </div>
+      <div className="p-36 xl:block hidden"></div>
     </div>
   );
 };
