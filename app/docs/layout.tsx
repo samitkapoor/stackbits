@@ -22,7 +22,7 @@ const DocumentationLayout = ({ children }: { children: React.ReactNode }) => {
           {/* Side bar button */}
           <MovingBorderButton
             onClick={toggleSideBar}
-            wrapperClassName="block lg:hidden w-min absolute top-[50px] right-[50px] z-50"
+            wrapperClassName="block lg:hidden w-min absolute top-32 right-[50px] z-50"
           >
             {sideBarIsOpen ? <X /> : <Menu />}
           </MovingBorderButton>
