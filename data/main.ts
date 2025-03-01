@@ -8,7 +8,7 @@ import { flipBadge, flipBadgePreview } from './frontend/FlipBadge';
 import { encryptionDecryption } from './utilities/EncryptionDecryption';
 import { regexValidations } from './utilities/RegexValidations';
 import { debounce } from './utilities/Debounce';
-import { expandableCard, expandableCardPreview } from './frontend/ExpandableCard';
+import { lumeCard, lumeCardPreview } from './frontend/LumeCard';
 // import { customScrollbar } from './frontend/CustomScrollbar';
 import { glitchText, glitchTextPreview } from './frontend/GlitchText';
 import { yupValidations } from './utilities/YupValidations';
@@ -257,10 +257,10 @@ const sideBarOptions: Array<{
     title: 'Cards',
     children: [
       {
-        name: 'Expandable Card',
-        href: '/docs/expandablecard',
-        content: expandableCard,
-        preview: expandableCardPreview
+        name: 'Lume Card',
+        href: '/docs/lumecard',
+        content: lumeCard,
+        preview: lumeCardPreview
       },
       {
         name: 'Flip Reveal Card',
