@@ -1,6 +1,6 @@
 'use client';
 
-import { CodeXml, Command, Component, File, Frame, House, Spade, Text } from 'lucide-react';
+import { CodeXml, Command, Component, Frame, House, Spade, Text } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
