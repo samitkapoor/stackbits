@@ -257,12 +257,6 @@ const sideBarOptions: Array<{
     title: 'Cards',
     children: [
       {
-        name: 'Lume Card',
-        href: '/docs/lumecard',
-        content: lumeCard,
-        preview: lumeCardPreview
-      },
-      {
         name: 'Flip Reveal Card',
         href: '/docs/fliprevealcard',
         content: flipRevealCard,
@@ -273,6 +267,12 @@ const sideBarOptions: Array<{
         href: '/docs/glasscard',
         content: glassCard,
         preview: glassCardPreview
+      },
+      {
+        name: 'Lume Card',
+        href: '/docs/lumecard',
+        content: lumeCard,
+        preview: lumeCardPreview
       },
       {
         name: 'Moving Border Card',
