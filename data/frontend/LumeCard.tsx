@@ -22,7 +22,7 @@ export const lumeCard: Document = {
       {
         heading: '🏹 Lume Card',
         content:
-          'Think of an Lume Card as a mystery box—compact, stylish, and packed with hidden surprises! 🎁 With a simple click, tap, or hover, it smoothly expands to reveal extra details, insights, or even a secret tip. Perfect for modern dashboards, product previews, FAQs, or storytelling elements, this card keeps your UI clean while delivering engaging, interactive content.',
+          "LumeCard is a sleek, interactive card component that brings your UI to life with smooth hover animations, dynamic scaling, and elegant motion effects. Designed for React & Tailwind CSS, it adds a touch of sophistication to any project—whether you're showcasing products, portfolios, or feature highlights. With its subtle glassmorphic overlay and responsive design, LumeCard ensures your content shines effortlessly.",
         sectionType: 'paragraph'
       },
       {
