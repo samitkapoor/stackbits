@@ -1,6 +1,6 @@
 'use client';
 
-import { CodeXml, Command, Component, File, Frame, House, Spade, Text } from 'lucide-react';
+import { CodeXml, Command, Component, Frame, House, Spade, Text } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
@@ -49,13 +49,6 @@ const TopBar = () => {
       href: '/docs/components',
       icon: (
         <Component className="h-[12px] sm:h-[14px] md:h-[16px] lg:h-[18px] w-[12px] sm:w-[14px] md:w-[16px] lg:w-[18px]" />
-      )
-    },
-    {
-      name: 'Documentation',
-      href: '/docs',
-      icon: (
-        <File className="h-[12px] sm:h-[14px] md:h-[16px] lg:h-[18px] w-[12px] sm:w-[14px] md:w-[16px] lg:w-[18px]" />
       )
     }
   ];
@@ -109,7 +102,7 @@ const TopBar = () => {
                 className={`px-1 sm:px-2 md:px-3 py-2 sm:py-3 flex items-center gap-1 text-xs sm:text-sm transition-all ${extraClass}`}
               >
                 {link.icon}
-                <p className="hidden lg:block">{link.name}</p>
+                <p className="hidden md:block">{link.name}</p>
               </a>
             );
           })}

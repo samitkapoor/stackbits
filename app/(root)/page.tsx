@@ -41,7 +41,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-800/30 via-black/70 to-black/90" />
 
           {/* Star field concentrated in top section - Fixed visibility */}
-          <div className="absolute inset-x-0 top-0 h-[60vh] overflow-hidden z-10">
+          <div className="absolute inset-x-0 top-0 h-[60vh] overflow-hidden z-10 pointer-events-none">
             {stars.map((star) => (
               <div
                 key={star.id}
