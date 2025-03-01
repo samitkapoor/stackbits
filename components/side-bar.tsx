@@ -21,7 +21,7 @@ const SideBar = ({ isOpen }: { isOpen: boolean }) => {
         } ` + `bg-black h-full flex flex-col w-[350px] z-40`
       }
     >
-      <div className="bg-black h-full overflow-y-auto scrollbar-hide flex flex-col gap-5 w-full z-40 pt-32">
+      <div className="bg-black h-full overflow-y-auto scrollbar-hide flex flex-col gap-5 w-full z-40 pt-28">
         {tabs.map((group) => {
           return (
             <div key={group.title} className="flex flex-col items-start gap-2">
@@ -66,6 +66,7 @@ const SideBar = ({ isOpen }: { isOpen: boolean }) => {
             </div>
           );
         })}
+        <div className="p-36"></div>
       </div>
     </div>
   );

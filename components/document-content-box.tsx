@@ -34,6 +34,7 @@ const DocumentContentBox = ({ docId }: { docId: string }) => {
             );
           })}
         </div>
+        <div className="p-36"></div>
       </div>
     )
   );
