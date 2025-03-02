@@ -2,7 +2,7 @@ import { Document } from '../main';
 import MasonryGrid from '@/components/ui/masonry-grid';
 
 export const masonryGridPreview = (
-  <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden relative p-10 gap-5">
+  <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden relative p-0 gap-5">
     <MasonryGrid
       columns={2}
       items={[

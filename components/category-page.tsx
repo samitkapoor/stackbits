@@ -48,12 +48,12 @@ const CategoryPage = ({ docId }: CategoryPageProps) => {
                 whileTap={{
                   scale: 0.98
                 }}
-                className="relative flex flex-col rounded-xl overflow-hidden bg-black/30 backdrop-blur-lg shadow-[0_8px_30px_rgba(0,0,0,0.12)] border border-white/5 h-full"
+                className="relative flex flex-col h-full w-full rounded-xl overflow-hidden bg-black/30 backdrop-blur-lg shadow-[0_8px_30px_rgba(0,0,0,0.12)] border border-white/5"
               >
                 {/* Preview image container */}
                 <div className="relative h-[300px] overflow-hidden border-b border-white/5">
                   <motion.div
-                    className="w-full h-full flex items-center justify-center"
+                    className="w-full h-full"
                     whileHover={{ scale: 1.03 }}
                     transition={{ duration: 0.4 }}
                   >

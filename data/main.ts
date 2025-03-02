@@ -55,6 +55,7 @@ import {
 import { footer, footerPreview } from './frontend/Footer';
 import { masonryGrid, masonryGridPreview } from './frontend/MasonryGrid';
 import { fileStack, fileStackPreview } from './frontend/FileStack';
+import { skeumorphicMusicCard, skeumorphicMusicCardPreview } from './frontend/SkeumorphicMusicCard';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -279,6 +280,12 @@ const sideBarOptions: Array<{
         href: '/docs/movingbordercard',
         content: movingBorderCard,
         preview: movingBorderCardPreview
+      },
+      {
+        name: 'Skeumorphic Card',
+        href: '/docs/skeumorphicCard',
+        content: skeumorphicMusicCard,
+        preview: skeumorphicMusicCardPreview
       },
       {
         name: 'Trading Card',
