@@ -40,10 +40,10 @@ const CategoryPage = ({ docId }: CategoryPageProps) => {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i < 4 ? i * 0.1 : 0.1, duration: 0.5 }}
+                transition={{ delay: i < 4 ? i * 0.1 : 0.1, duration: 0.2 }}
                 whileHover={{
                   y: -10,
-                  transition: { duration: 0.3, ease: 'easeOut' }
+                  transition: { duration: 0.2, ease: 'easeOut' }
                 }}
                 whileTap={{
                   scale: 0.98
@@ -55,7 +55,7 @@ const CategoryPage = ({ docId }: CategoryPageProps) => {
                   <motion.div
                     className="w-full h-full flex items-center justify-center"
                     whileHover={{ scale: 1.03 }}
-                    transition={{ duration: 0.7 }}
+                    transition={{ duration: 0.4 }}
                   >
                     {child?.preview}
                   </motion.div>
