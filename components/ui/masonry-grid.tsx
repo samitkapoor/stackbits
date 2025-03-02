@@ -21,7 +21,7 @@ const MasonryGrid: React.FC<MasonryGridProps> = ({ items, columns = undefined })
       }}
       className={`${
         !columns && 'columns-1 sm:columns-2 md:columns-3 lg:columns-4'
-      } gap-2 overflow-y-auto p-3 w-full`}
+      } gap-2 overflow-y-auto p-3 w-full hide-scrollbar`}
     >
       {items.map((item, index) => {
         // Calculate row number based on screen size and index
