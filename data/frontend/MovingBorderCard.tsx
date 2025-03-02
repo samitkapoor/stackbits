@@ -1,6 +1,5 @@
 import MovingBorderCard from '@/components/ui/moving-border-card';
 import { Document } from '../main';
-import { RefreshCcw } from 'lucide-react';
 import React from 'react';
 
 export const movingBorderCardPreview = () => {
