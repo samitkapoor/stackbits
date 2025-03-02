@@ -50,11 +50,20 @@ body {
   animation: moveGradient 2s linear infinite;
 }
 
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
 .moving-border-card {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(var(--angle), transparent 90%, #ffffff 90%);
+  background: linear-gradient(var(--angle), transparent 50%, #ffffff);
   animation: moveGradient 4s linear infinite;
 }
 

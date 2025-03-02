@@ -75,7 +75,7 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
               ref={codeRef}
               className={`bg-[#2f2f2f6f] overflow-auto p-6 rounded-xl shadow-lg max-w-[800px] ${
                 isExpanded ? 'h-auto' : 'max-h-[300px]'
-              } ${className}`}
+              } ${className} hide-scrollbar`}
             >
               <div className="table-row">
                 <CodeBlock.LineNumber className="table-cell pr-4 text-sm text-gray-500 text-right select-none" />

@@ -1,14 +1,28 @@
 import MovingBorderCard from '@/components/ui/moving-border-card';
 import { Document } from '../main';
 import { RefreshCcw } from 'lucide-react';
+import React from 'react';
 
-export const movingBorderCardPreview = (
-  <div className="h-full w-full flex items-center justify-center scale-90">
-    <MovingBorderCard className="h-[200px] w-[250px] bg-neutral-900 flex gap-1 text-xl">
-      Border <RefreshCcw />
-    </MovingBorderCard>
-  </div>
-);
+export const movingBorderCardPreview = () => {
+  return (
+    <div className="h-full w-full flex items-center justify-center scale-90">
+      <MovingBorderCard
+        wrapperClassName="rounded-xl"
+        className="h-[250px] w-[300px] bg-gradient-to-br from-gray-700 via-gray-800 to-black text-white shadow-xl rounded-lg p-6"
+      >
+        <div className="flex flex-col items-center justify-center h-full">
+          <h2 className="text-2xl font-semibold mb-2">Premium Card</h2>
+          <p className="text-center mb-4 text-gray-300">
+            The dynamic moving border adds a touch of elegance and modernity.
+          </p>
+          <button className="mt-auto bg-white text-black px-4 py-2 rounded-full shadow-md hover:bg-gray-200 transition-colors">
+            Learn More
+          </button>
+        </div>
+      </MovingBorderCard>
+    </div>
+  );
+};
 
 export const movingBorderCard: Document = {
   sideBar: {
@@ -29,8 +43,19 @@ export const movingBorderCard: Document = {
         sectionType: 'preview',
         code: (
           <div className="h-full w-full flex flex-col items-center justify-center gap-2">
-            <MovingBorderCard className="h-[200px] w-[250px] bg-neutral-900 flex gap-1 text-xl">
-              Border <RefreshCcw />
+            <MovingBorderCard
+              wrapperClassName="rounded-xl"
+              className="h-[250px] w-[300px] bg-gradient-to-br from-gray-700 via-gray-800 to-black text-white shadow-xl rounded-lg p-6"
+            >
+              <div className="flex flex-col items-center justify-center h-full">
+                <h2 className="text-2xl font-semibold mb-2">Premium Card</h2>
+                <p className="text-center mb-4 text-gray-300">
+                  The dynamic moving border adds a touch of elegance and modernity.
+                </p>
+                <button className="mt-auto bg-white text-black px-4 py-2 rounded-full shadow-md hover:bg-gray-200 transition-colors">
+                  Learn More
+                </button>
+              </div>
             </MovingBorderCard>
           </div>
         )
@@ -91,9 +116,20 @@ export default MovingBorderCard;
       {
         heading: 'Usage',
         sectionType: 'usage',
-        code: `<GlassCard className="flex flex-col">
-  ...
-</GlassCard>`
+        code: `<MovingBorderCard
+  wrapperClassName="rounded-xl"
+  className="h-[250px] w-[300px] bg-gradient-to-br from-gray-700 via-gray-800 to-black text-white shadow-xl rounded-lg p-6"
+>
+  <div className="flex flex-col items-center justify-center h-full">
+    <h2 className="text-2xl font-semibold mb-2">Premium Card</h2>
+    <p className="text-center mb-4 text-gray-300">
+      The dynamic moving border adds a touch of elegance and modernity.
+    </p>
+    <button className="mt-auto bg-white text-black px-4 py-2 rounded-full shadow-md hover:bg-gray-200 transition-colors">
+      Learn More
+    </button>
+  </div>
+</MovingBorderCard>`
       }
     ]
   }
