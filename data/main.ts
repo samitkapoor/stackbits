@@ -285,7 +285,8 @@ const sideBarOptions: Array<{
         name: 'Skeumorphic Music Card',
         href: '/docs/skeumorphicMusicCard',
         content: skeumorphicMusicCard,
-        preview: skeumorphicMusicCardPreview
+        preview: skeumorphicMusicCardPreview,
+        isNew: true
       },
       {
         name: 'Trading Card',

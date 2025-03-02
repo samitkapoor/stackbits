@@ -122,7 +122,7 @@ const Components = () => {
               </div>
 
               {/* Title bar with gradient */}
-              <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/80 via-black/50 to-transparent pt-12 sm:pt-16 md:pt-20 pb-4 sm:pb-5 md:pb-6 px-4 sm:px-5 md:px-6 z-20">
+              <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/80 via-black/50 to-transparent pt-12 sm:pt-16 md:pt-20 pb-4 sm:pb-5 md:pb-6 px-4 sm:px-5 md:px-6 z-20 pointer-events-none">
                 <h3 className="text-white text-lg sm:text-xl md:text-2xl font-bold tracking-tight">
                   {component.name}
                 </h3>
