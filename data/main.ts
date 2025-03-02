@@ -282,8 +282,8 @@ const sideBarOptions: Array<{
         preview: movingBorderCardPreview
       },
       {
-        name: 'Skeumorphic Card',
-        href: '/docs/skeumorphicCard',
+        name: 'Skeumorphic Music Card',
+        href: '/docs/skeumorphicMusicCard',
         content: skeumorphicMusicCard,
         preview: skeumorphicMusicCardPreview
       },
