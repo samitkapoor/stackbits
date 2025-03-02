@@ -18,10 +18,10 @@ const SideBar = ({ isOpen }: { isOpen: boolean }) => {
           isOpen
             ? `absolute lg:static left-[20px] md:left-[50px] pb-10`
             : `absolute -left-[350px] lg:static`
-        } ` + `bg-black h-full flex flex-col w-[350px] z-40`
+        } ` + `backdrop-blur-md h-full flex flex-col w-[350px] z-40`
       }
     >
-      <div className="bg-black h-full overflow-y-auto scrollbar-hide flex flex-col gap-5 w-full z-40 pt-28">
+      <div className="h-full overflow-y-auto scrollbar-hide flex flex-col gap-5 w-full z-40 pt-28">
         {tabs.map((group) => {
           return (
             <div key={group.title} className="flex flex-col items-start gap-2">

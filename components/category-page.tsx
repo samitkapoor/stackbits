@@ -12,45 +12,71 @@ const CategoryPage = ({ docId }: CategoryPageProps) => {
   const [doc] = getCategory(docId);
 
   if (!doc) {
-    return <div className="max-w-[1000px] w-full">Something went wrong.</div>;
+    return (
+      <div className="max-w-[1000px] w-full p-8 rounded-lg bg-black/20 backdrop-blur-md border border-white/5 text-center">
+        <p className="text-xl text-gray-300">Unable to load category content</p>
+      </div>
+    );
   }
 
   const { title, children } = doc;
 
   return (
     <div className="w-full flex flex-col h-full xl:px-10">
-      <p className="font-semibold text-2xl">{title}</p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 mt-10 gap-5">
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="mb-12"
+      >
+        <p className="font-bold text-3xl text-white tracking-tight">{title}</p>
+        <div className="h-px w-12 bg-white/20 mt-3" />
+      </motion.div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
         {children.map((child, i) => {
           return (
-            <Link href={child.href} key={child.name + i}>
+            <Link href={child.href} key={child.name + i} className="group">
               <motion.div
-                style={{
-                  background: 'radial-gradient(circle at center, transparent 30%, #cbcbcb15)'
-                }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i < 4 ? i * 0.1 : 0.1, duration: 0.5 }}
                 whileHover={{
-                  background: 'radial-gradient(circle at center, transparent 30%, #cbcbcb20)',
-                  boxShadow: '12px 12px 0px -4px #FACC14A5',
                   y: -10,
-                  x: -7,
-                  transition: { duration: 0.3 }
+                  transition: { duration: 0.3, ease: 'easeOut' }
                 }}
                 whileTap={{
-                  y: 0,
-                  x: 0,
-                  boxShadow: 'none'
+                  scale: 0.98
                 }}
-                className="flex flex-col gap-2 rounded-2xl px-2 pt-2 hover:bg-neutral-900 border-[1px] border-neutral-900"
+                className="relative flex flex-col rounded-xl overflow-hidden bg-black/30 backdrop-blur-lg shadow-[0_8px_30px_rgba(0,0,0,0.12)] border border-white/5 h-full"
               >
-                <div className="h-[300px] border-b-[1px] border-neutral-800 rounded-xl flex items-center overflow-hidden justify-center">
-                  {child?.preview}
+                {/* Preview image container */}
+                <div className="relative h-[300px] overflow-hidden border-b border-white/5">
+                  <motion.div
+                    className="w-full h-full flex items-center justify-center"
+                    whileHover={{ scale: 1.03 }}
+                    transition={{ duration: 0.7 }}
+                  >
+                    {child?.preview}
+                  </motion.div>
+                  <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
                 </div>
-                <p className="py-4 px-2">{child.name}</p>
+
+                {/* Content */}
+                <div className="p-6 flex flex-col gap-2 flex-grow">
+                  <p className="text-lg font-medium text-white/90 group-hover:text-white">
+                    {child.name}
+                  </p>
+                </div>
+
+                {/* Subtle indicator */}
+                <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100" />
               </motion.div>
             </Link>
           );
         })}
       </div>
+
       <div className="p-36 xl:block hidden"></div>
     </div>
   );
