@@ -6,14 +6,14 @@ export const iconWheelPreview = (
     <div className="scale-50">
       <IconWheel
         icons={[
-          '/css.png',
+          '/css.svg',
           '/framermotion.png',
-          '/javascript.png',
-          '/nextjs.png',
-          '/nodejs.png',
-          '/reactjs.png',
-          '/tailwindcss.png',
-          '/typescript.png'
+          '/javascript.svg',
+          '/nextjs.svg',
+          '/nodejs.svg',
+          '/react.svg',
+          '/tailwindcss.svg',
+          '/typescript.svg'
         ]}
       />
     </div>
@@ -41,14 +41,14 @@ export const iconWheel: Document = {
           <div className="h-full w-full flex flex-col gap-5 items-center justify-center overflow-y-auto relative p-10">
             <IconWheel
               icons={[
-                '/css.png',
+                '/css.svg',
                 '/framermotion.png',
-                '/javascript.png',
-                '/nextjs.png',
-                '/nodejs.png',
-                '/reactjs.png',
-                '/tailwindcss.png',
-                '/typescript.png'
+                '/javascript.svg',
+                '/nextjs.svg',
+                '/nodejs.svg',
+                '/react.svg',
+                '/tailwindcss.svg',
+                '/typescript.svg'
               ]}
             />
           </div>

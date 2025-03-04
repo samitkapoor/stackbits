@@ -4,12 +4,14 @@ import { Globe, InstagramIcon, Mail, TwitterIcon } from 'lucide-react';
 import RainbowText from '@/components/ui/rainbow-text';
 
 export const expandableIconButtonPreview = (
-  <ExpandableIconButton
-    onClick={() => (window.location.href = 'https://twitter.com/samitkapoorr')}
-    icon={<TwitterIcon />}
-    text={'samitkapoorr'}
-    className="rounded-full p-[16px] text-lg md:text-xl font-medium hover:bg-blue-500"
-  />
+  <div className="flex items-center justify-center gap-2 h-full w-full">
+    <ExpandableIconButton
+      onClick={() => (window.location.href = 'https://twitter.com/samitkapoorr')}
+      icon={<TwitterIcon />}
+      text={'samitkapoorr'}
+      className="rounded-full p-[16px] text-lg md:text-xl font-medium hover:bg-blue-500"
+    />
+  </div>
 );
 
 export const expandableIconButton: Document = {
