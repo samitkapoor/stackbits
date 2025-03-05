@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<img width="200" alt="4" src="public/stackbits-logo.png" />
 
-## Getting Started
+# StackBits
 
-First, run the development server:
+A collection of high-quality, reusable **frontend and backend components** to speed up development. Built with **Next.js, Tailwind CSS, and TypeScript**, StackBits provides ready-to-use UI elements and utility functions to simplify your workflow.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Enhance your projects with **modern design, optimized performance, and developer-friendly components**—so you can focus on building, not reinventing the wheel.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🔗 **Live Demo:** https://stackbits.dev <br/>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<img width="1704" alt="4" src="public/preview.png" />
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ✨ Features
 
-To learn more about Next.js, take a look at the following resources:
+- ⚡ **Write Less Code, Build More** - Pre-built components to speed up development
+- 🎨 **Tailwind-Powered Styling** - Clean, modern, and fully customizable
+- 🚀 **Optimized for Performance** - Fast-loading and lightweight components
+- 📦 **Reusable & Scalable** - Designed for easy integration in any project
+- 🔧 **Backend Utilities** - Essential functions like authentication, encryption, and API handlers
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Tech Stack
 
-## Deploy on Vercel
+- ⚛️ **[React](https://react.dev/)** - Component-based UI development
+- 🚀 **[Next.js](https://nextjs.org/)** - Optimized rendering and performance
+- 🎨 **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first styling for rapid design
+- 💫 **[Framer Motion](https://www.framer.com/motion/)** - Smooth animations and transitions
+- 📜 **[TypeScript](https://www.typescriptlang.org/)** - Type-safe and scalable codebase
+- 🛠️ **[Node.js](https://nodejs.org/)** - Backend support for server-side utilities
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📸 Project Gallery
+
+| <img width="1707" alt="3" src="public/previews/1.png" />  | <img width="1702" alt="5" src="public/previews/2.png" /> | <img width="1702" alt="6" src="public/previews/3.png" /> |
+| --------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| <img width="1707" alt="7" src="public/previews/4.png" />  | <img width="1705" alt="8" src="public/previews/5.png" /> | <img width="1706" alt="9" src="public/previews/6.png" /> |
+| <img width="1707" alt="10" src="public/previews/7.png" /> | <img width="1705" alt="1" src="public/previews/8.png" /> | <img width="1706" alt="2" src="public/previews/9.png" /> |
+
+---
+
+## ⭐ Like This Project?
+
+If you found this project useful or inspiring, consider giving it a **⭐ star!**
+
+📌 You can check out more of my projects on my **[GitHub profile](https://github.com/samitkapoor)**.  
+🌍 Visit my **[portfolio](https://samitkapoor.com)** to see my work and get in touch!
+
+---
