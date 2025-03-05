@@ -22,9 +22,9 @@ const HeroSection = () => {
           height="54"
         />
       </a>
-      <p className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold mt-6 sm:mt-8 md:mt-10">
+      <h1 className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold mt-6 sm:mt-8 md:mt-10">
         The Faster Way To Build.
-      </p>
+      </h1>
       <p className="text-white/60 text-base sm:text-lg md:text-xl lg:text-2xl my-3 sm:my-4 md:my-5">
         Why Start from Scratch When the Code You Need Is Already Here?
       </p>

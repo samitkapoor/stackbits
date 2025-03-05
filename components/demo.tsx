@@ -181,7 +181,12 @@ const GRADIENT_STYLES = {
 // Step components
 const Step1 = memo(() => (
   <GradientBackground gradientStyle={GRADIENT_STYLES.step1}>
-    <StepTitle>Browse ready-to-use snippets</StepTitle>
+    <div className="mt-10">
+      <StepTitle>Browse ready-to-use snippets</StepTitle>
+      <p className="text-white/70 text-xs sm:text-sm md:text-base text-center mb-2 sm:mb-3 md:mb-4 px-4 ">
+        Explore our React & Tailwind UI components and full-stack code. Pick the snippet you need!
+      </p>
+    </div>
     <AnimatedImage
       src="/step1.png"
       alt="Browse ready-to-use snippets"
@@ -195,7 +200,12 @@ Step1.displayName = 'Step1';
 
 const Step2 = memo(() => (
   <GradientBackground gradientStyle={GRADIENT_STYLES.step2}>
-    <StepTitle>Copy with a click</StepTitle>
+    <div className="mt-10">
+      <StepTitle>Copy with a click</StepTitle>
+      <p className="text-white/70 text-xs sm:text-sm md:text-base text-center mb-2 sm:mb-3 md:mb-4 px-4">
+        Instantly copy snippets in a single click for free!
+      </p>
+    </div>
     <div className="w-full h-full flex items-start gap-2 sm:gap-3 md:gap-5 justify-center sm:justify-start">
       <AnimatedImage
         src="/step2.png"

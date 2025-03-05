@@ -4,9 +4,9 @@ import ContactMe from '@/components/contact-me';
 import TopBar from '@/components/top-bar';
 
 export const metadata: Metadata = {
-  title: 'StackBits - Full-Stack Code & UI Components for React & Tailwind',
+  title: 'StackBits - React UI & Full-Stack Code Library',
   description:
-    'StackBits provides a collection of full-stack code snippets, React components, and Tailwind CSS UI elements to speed up development. Build modern web apps with reusable frontend and backend solutions.',
+    'Ready-to-use React components, Tailwind UI elements, and full-stack code snippets to accelerate your web development. Build modern apps faster with StackBits.',
   keywords: [
     'React components',
     'Tailwind CSS',
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
   ],
   robots: 'index, follow',
   openGraph: {
-    title: 'StackBits - Full-Stack Code & UI Components for React & Tailwind',
+    title: 'StackBits - React UI & Full-Stack Code Library',
     description:
-      'Discover a library of full-stack code snippets, React components, and Tailwind CSS elements for faster development. Build scalable web apps with reusable frontend and backend solutions.',
+      'Ready-to-use React components, Tailwind UI elements, and full-stack code snippets to accelerate your web development. Build modern apps faster with StackBits.',
     url: 'https://stackbits.dev',
     siteName: 'StackBits',
     images: [
@@ -41,9 +41,9 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@samitkapoorr',
-    title: 'StackBits - Full-Stack Code & UI Components for React & Tailwind',
+    title: 'StackBits - React UI & Full-Stack Code Library',
     description:
-      'Boost your development speed with full-stack snippets, React components, and Tailwind UI elements. Simplify frontend and backend development with StackBits.',
+      'Ready-to-use React components, Tailwind UI elements, and full-stack code snippets to accelerate your web development. Build modern apps faster with StackBits.',
     images: ['https://pbs.twimg.com/profile_images/1891031509236109312/-m7SP1ag_400x400.jpg']
   },
   alternates: {
