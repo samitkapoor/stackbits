@@ -101,14 +101,26 @@ const LandingFooter = () => {
       <div className="container px-4 md:px-6 py-8 md:py-16 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {/* Brand Section */}
-          <div className="space-y-4">
+          <div className="flex flex-col">
             <div className="flex text-white items-center gap-2">
               <Code2Icon className="w-6 h-6 md:w-8 md:h-8" />
               <h2 className="text-2xl md:text-3xl font-bold tracking-tighter">stackbits</h2>
             </div>
-            <p className="text-sm md:text-base text-muted-foreground max-w-xs">
+            <p className="text-sm md:text-base text-muted-foreground max-w-xs mb-5">
               Building beautiful interfaces with reusable components, one bit at a time.
             </p>
+            <a
+              href="https://www.producthunt.com/products/stackbits/reviews?utm_source=badge-product_review&utm_medium=badge&utm_souce=badge-stackbits"
+              target="_blank"
+            >
+              <img
+                src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1043693&theme=dark"
+                alt="StackBits - Full&#0045;stack&#0032;code&#0032;&#0038;&#0032;UI&#0032;components&#0032;for&#0032;react&#0032;&#0038;&#0032;tailwind | Product Hunt"
+                style={{ width: '250px', height: '54px' }}
+                width="250"
+                height="54"
+              />
+            </a>
           </div>
 
           {/* Navigation Links */}

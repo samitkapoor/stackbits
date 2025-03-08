@@ -10,18 +10,6 @@ import { Command, MoveRight } from 'lucide-react';
 const HeroSection = () => {
   return (
     <div className="flex flex-col w-full items-center justify-center text-center px-0 sm:px-6 md:px-8">
-      <a
-        href="https://www.producthunt.com/posts/stackbits?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-stackbits"
-        target="_blank"
-      >
-        <img
-          src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=938477&theme=dark&t=1741166823476"
-          alt="StackBits - Full&#0045;stack&#0032;code&#0032;&#0038;&#0032;UI&#0032;components&#0032;for&#0032;react&#0032;&#0038;&#0032;tailwind | Product Hunt"
-          style={{ width: '250px', height: '54px' }}
-          width="250"
-          height="54"
-        />
-      </a>
       <h1 className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold mt-6 sm:mt-8 md:mt-10">
         The Faster Way To Build.
       </h1>
