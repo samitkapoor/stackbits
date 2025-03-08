@@ -56,6 +56,7 @@ import { footer, footerPreview } from './frontend/Footer';
 import { masonryGrid, masonryGridPreview } from './frontend/MasonryGrid';
 import { fileStack, fileStackPreview } from './frontend/FileStack';
 import { skeumorphicMusicCard, skeumorphicMusicCardPreview } from './frontend/SkeumorphicMusicCard';
+import { imagePile, imagePilePreview } from './frontend/ImagePile';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -343,6 +344,13 @@ const sideBarOptions: Array<{
         href: '/docs/iconwheel',
         content: iconWheel,
         preview: iconWheelPreview
+      },
+      {
+        name: 'Image Pile',
+        href: '/docs/imagepile',
+        content: imagePile,
+        preview: imagePilePreview,
+        isNew: true
       },
       {
         name: 'Masonry Grid',
