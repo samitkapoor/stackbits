@@ -57,6 +57,8 @@ import { masonryGrid, masonryGridPreview } from './frontend/MasonryGrid';
 import { fileStack, fileStackPreview } from './frontend/FileStack';
 import { skeumorphicMusicCard, skeumorphicMusicCardPreview } from './frontend/SkeumorphicMusicCard';
 import { imagePile, imagePilePreview } from './frontend/ImagePile';
+import { dottedText } from './frontend/DottedText';
+import { dottedTextPreview } from './frontend/DottedText';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -122,6 +124,13 @@ const sideBarOptions: Array<{
         href: '/docs/countup',
         content: countUp,
         preview: countUpPreview
+      },
+      {
+        name: 'Dotted Text',
+        href: '/docs/dottedtext',
+        content: dottedText,
+        preview: dottedTextPreview,
+        isNew: true
       },
       {
         name: 'Fade In Text',
