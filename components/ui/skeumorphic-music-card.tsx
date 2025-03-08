@@ -2,7 +2,7 @@
 
 import { Play, Pause, SkipForward, SkipBack } from 'lucide-react';
 import { useState } from 'react';
-
+import Image from 'next/image';
 interface SkeumorphicMusicCardProps {
   title: string;
   artist: string;
@@ -113,7 +113,13 @@ const SkeumorphicMusicCard = ({ title, artist, cover, className }: SkeumorphicMu
           }}
           className="w-40 h-40 rounded-xl overflow-hidden"
         >
-          <img src={cover} alt={title} className="w-full h-full object-cover" />
+          <Image
+            src={cover}
+            alt={title}
+            height={1080}
+            width={1080}
+            className="w-full h-full object-cover"
+          />
         </div>
 
         {/* Song Info */}

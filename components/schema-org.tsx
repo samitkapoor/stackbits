@@ -16,7 +16,6 @@ interface SchemaOrgProps {
 const SchemaOrg: React.FC<SchemaOrgProps> = ({
   title,
   description,
-  canonicalUrl,
   imageUrl,
   logoUrl,
   organizationName,
