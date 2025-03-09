@@ -6,7 +6,7 @@ export const skeumorphicMusicCardPreview = (
     <SkeumorphicMusicCard
       title="Sideline"
       artist="David Dallas"
-      cover="https://t2.genius.com/unsafe/680x680/https%3A%2F%2Fimages.genius.com%2Fcd9ba63203bb2d02e141581abf7beeb7.640x640x1.jpg"
+      cover="https://i.ytimg.com/vi/LDRoODD8cz0/hqdefault.jpg"
       className="scale-50"
     />
   </div>
@@ -40,7 +40,7 @@ export const skeumorphicMusicCard: Document = {
             <SkeumorphicMusicCard
               title="Sideline"
               artist="David Dallas"
-              cover="https://t2.genius.com/unsafe/680x680/https%3A%2F%2Fimages.genius.com%2Fcd9ba63203bb2d02e141581abf7beeb7.640x640x1.jpg"
+              cover="https://i.ytimg.com/vi/LDRoODD8cz0/hqdefault.jpg"
             />
           </div>
         )
