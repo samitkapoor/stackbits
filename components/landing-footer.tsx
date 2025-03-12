@@ -97,7 +97,7 @@ const LandingFooter = () => {
   ];
 
   return (
-    <footer className="border-t bg-background text-white/60">
+    <footer className="border-t border-white/30 bg-background text-white/60 -mt-20">
       <div className="container px-4 md:px-6 py-8 md:py-16 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {/* Brand Section */}

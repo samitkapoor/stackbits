@@ -1,5 +1,6 @@
 'use client';
 
+import Comments from '@/components/comments';
 import Components from '@/components/components';
 import Demo from '@/components/demo';
 import HeroSection from '@/components/hero-section';
@@ -92,9 +93,8 @@ export default function Home() {
         </div>
       </div>
       <Components />
-      <div className="mt-36">
-        <LandingFooter />
-      </div>
+      <Comments />
+      <LandingFooter />
     </div>
   );
 }
