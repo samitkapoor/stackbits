@@ -69,5 +69,10 @@ export const comments: Comment[] = [
     id: 8,
     image: '/comments/8.png',
     href: 'https://x.com/SujanGoud12/status/1898620593102352556'
+  },
+  {
+    id: 13,
+    image: '/comments/13.png',
+    href: 'https://x.com/ArcticNilesh/status/1900067943448535532'
   }
 ];
