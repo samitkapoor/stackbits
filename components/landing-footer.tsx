@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Github, Mail, Twitter, Instagram, LucideIcon, Code2Icon, Globe } from 'lucide-react';
 import ExpandableIconButton from './ui/expandable-icon-button';
+import Image from 'next/image';
 
 interface NavLinkProps {
   href: string;
@@ -93,6 +94,22 @@ const LandingFooter = () => {
       label: 'Website',
       className:
         'rounded-full p-[16px] text-lg md:text-xl font-medium hover:bg-gradient-to-tr hover:from-neutral-400 hover:to-green-500'
+    },
+    {
+      href: 'https://peerlist.io/samitkapoor',
+      icon: (
+        <div className="w-[24px] h-[24px]">
+          <Image
+            src="/peerlist.svg"
+            alt="Peerlist"
+            width={24}
+            height={24}
+            className="w-full h-full"
+          />
+        </div>
+      ),
+      label: 'Peerlist',
+      className: 'rounded-full p-[16px] text-lg md:text-xl font-medium hover:bg-[#05AA44]'
     }
   ];
 
