@@ -4,6 +4,7 @@ import { CodeXml, Command, Component, Frame, House, Spade, Text } from 'lucide-r
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
+import AnimatedGradientButton from './ui/animated-gradient-button';
 
 const TopBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -107,6 +108,11 @@ const TopBar = () => {
             );
           })}
         </div>
+        <Link href="/prompt">
+          <AnimatedGradientButton className="!px-4 !py-1 md:!py-2 text-sm">
+            Request
+          </AnimatedGradientButton>
+        </Link>
       </div>
 
       {/* Mobile navigation menu */}
