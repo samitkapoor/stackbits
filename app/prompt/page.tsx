@@ -125,7 +125,7 @@ const PromptPage = () => {
             ref={dialogRef}
             className="bg-gradient-to-r from-purple-900/80 to-black/80 p-6 rounded-lg border border-purple-500/40 backdrop-blur-xl max-w-md w-full"
           >
-            <h2 className="text-white text-xl font-semibold mb-4">Who's asking?</h2>
+            <h2 className="text-white text-xl font-semibold mb-4">Who&apos;s asking?</h2>
             <div className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-white text-sm mb-1">
