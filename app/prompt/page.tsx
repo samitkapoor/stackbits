@@ -49,7 +49,7 @@ const PromptPage = () => {
           Got an idea? Just ask.
         </h1>
         <p className="text-white/60 text-base sm:text-lg md:text-xl lg:text-2xl my-3 sm:my-4 md:my-5 text-center">
-          Need a UI element or backend feature? Submit a prompt, and we'll build it for you!
+          Need a UI element or backend feature? Submit a prompt, and we&apos;ll build it for you!
         </p>
 
         <div className="p-3 max-w-3xl w-full">
