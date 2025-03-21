@@ -1,11 +1,8 @@
 import type { Metadata } from 'next';
-import Clarity from '@microsoft/clarity';
 import './globals.css';
 import ContactMe from '@/components/contact-me';
 import TopBar from '@/components/top-bar';
 import SchemaOrgWrapper from '@/components/schema-org-wrapper';
-
-Clarity.init('qrkwcfhjk3');
 
 export const metadata: Metadata = {
   title: 'StackBits - React UI & Full-Stack Code Library',
