@@ -60,6 +60,7 @@ import { imagePile, imagePilePreview } from './frontend/ImagePile';
 import { dottedText } from './frontend/DottedText';
 import { dottedTextPreview } from './frontend/DottedText';
 import { gaugeChart, gaugeChartPreview } from './frontend/GaugeChart';
+import { browserWindow, browserWindowPreview } from './frontend/BrowserWIndow';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -321,6 +322,12 @@ const sideBarOptions: Array<{
         href: '/docs/barricadeTape',
         content: barricadeTape,
         preview: barricadeTapePreview
+      },
+      {
+        name: 'Browser Window',
+        href: '/docs/browserwindow',
+        content: browserWindow,
+        preview: browserWindowPreview
       },
       {
         name: 'Epic Name Drop',
