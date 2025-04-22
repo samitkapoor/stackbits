@@ -106,6 +106,7 @@ const Letter = memo(
     );
   }
 );
+Letter.displayName = 'Letter';
 
 const GooeyWords = ({ words, speed = 2 }: { words: string[]; speed?: number }) => {
   const [index, setIndex] = useState(0);
