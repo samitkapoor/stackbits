@@ -61,6 +61,7 @@ import { dottedText } from './frontend/DottedText';
 import { dottedTextPreview } from './frontend/DottedText';
 import { gaugeChart, gaugeChartPreview } from './frontend/GaugeChart';
 import { browserWindow, browserWindowPreview } from './frontend/BrowserWIndow';
+import { gooeyWords, gooeyWordsPreview } from './frontend/GooeyWords';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -145,6 +146,13 @@ const sideBarOptions: Array<{
         href: '/docs/glitchtext',
         content: glitchText,
         preview: glitchTextPreview
+      },
+      {
+        name: 'Gooey Text',
+        href: '/docs/gooeytext',
+        content: gooeyWords,
+        preview: gooeyWordsPreview,
+        isNew: true
       },
       {
         name: 'Rainbow Text',
