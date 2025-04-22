@@ -148,8 +148,8 @@ const sideBarOptions: Array<{
         preview: glitchTextPreview
       },
       {
-        name: 'Gooey Text',
-        href: '/docs/gooeytext',
+        name: 'Gooey Words',
+        href: '/docs/gooeywords',
         content: gooeyWords,
         preview: gooeyWordsPreview,
         isNew: true
