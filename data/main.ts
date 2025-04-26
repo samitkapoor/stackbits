@@ -77,6 +77,7 @@ export type SectionInDocument = {
   code?: ReactNode | string;
   preview?: ReactNode;
   description?: string;
+  designer?: Array<{ name: string; link: string }>;
   sectionType: string;
 };
 

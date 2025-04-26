@@ -23,7 +23,7 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
   const [copy, setCopy] = useState(false);
 
   // Extract commonly used props
-  const { content, code } = section;
+  const { content, code, designer, description } = section;
 
   /**
    * Copies code to clipboard and shows feedback
@@ -107,6 +107,27 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
         return <p className="max-w-[800px] text-sm md:text-[16px]">{content}</p>;
       }
       break;
+
+    case 'credits':
+      return (
+        <div className="flex gap-1">
+          {description}
+          {designer?.map((item) => {
+            return (
+              <div key={item.name}>
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-yellow-500 underline"
+                >
+                  {item.name}
+                </a>
+              </div>
+            );
+          })}
+        </div>
+      );
 
     case 'ordered-list':
       if (typeof content === 'object') {

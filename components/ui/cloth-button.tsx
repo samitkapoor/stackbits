@@ -11,16 +11,8 @@ const ClothButton = ({ children, className, ...props }: ClothButtonProps) => {
   return (
     <button
       {...props}
-      className={cn('bg-slate-300/80 rounded-full overflow-hidden relative', className)}
+      className={cn('bg-slate-100/95 rounded-full overflow-hidden relative', className)}
     >
-      <div
-        style={{
-          backgroundImage: 'url(/cloth-texture.svg)',
-          backgroundColor: 'transparent'
-        }}
-        className="absolute inset-0 rounded-full"
-      ></div>
-
       <div
         className={cn(
           'absolute inset-0',
@@ -66,7 +58,12 @@ const ClothButton = ({ children, className, ...props }: ClothButtonProps) => {
         className="absolute inset-0 rounded-full"
       />
 
-      <div className={cn('m-0.5 px-6 py-3 rounded-full relative overflow-hidden', 'group')}>
+      <div
+        className={cn(
+          'm-0.5 px-6 py-3 rounded-full relative overflow-hidden',
+          'group hover:shadow-black/50 hover:shadow-md transition-all duration-200'
+        )}
+      >
         <div
           className={cn(
             'absolute inset-0',
@@ -98,14 +95,6 @@ const ClothButton = ({ children, className, ...props }: ClothButtonProps) => {
         />
 
         <div
-          style={{
-            backgroundImage: 'url(/cloth-texture.svg)',
-            backgroundColor: 'transparent'
-          }}
-          className="absolute inset-0 rounded-full"
-        ></div>
-
-        <div
           className={cn(
             'absolute inset-0',
             '[background-size:3px_3px]',
@@ -113,7 +102,7 @@ const ClothButton = ({ children, className, ...props }: ClothButtonProps) => {
           )}
         />
 
-        <div className="absolute inset-0 rounded-full shadow-inner shadow-black/40 group-active:shadow-black/80 transition-all duration-200 bg-gradient-to-r from-[#111e29]/60 to-[#041624]/60" />
+        <div className="absolute inset-0 rounded-full shadow-inner shadow-black/30 border-[1px] border-transparent border-dashed group-hover:border-white/10 group-hover:shadow-white/40 group-active:shadow-black transition-all duration-200 bg-gradient-to-r from-[#111e29]/60 to-[#041624]/60" />
 
         <div className="absolute inset-0 rounded-full border-[1px] border-dashed border-white/10" />
 
@@ -150,7 +139,7 @@ const ClothButton = ({ children, className, ...props }: ClothButtonProps) => {
               position: 'relative',
               zIndex: 3
             }}
-            className="bg-clip-text text-transparent bg-gradient-to-r from-[#d7e3ef] via-[#6E818F] to-[#344049] font-semibold"
+            className="bg-clip-text text-transparent bg-gradient-to-r from-[#d7e3ef] via-[#6E818F] to-[#4e606e] font-semibold"
           >
             {children}
           </div>
