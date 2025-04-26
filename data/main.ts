@@ -62,6 +62,7 @@ import { dottedTextPreview } from './frontend/DottedText';
 import { gaugeChart, gaugeChartPreview } from './frontend/GaugeChart';
 import { browserWindow, browserWindowPreview } from './frontend/BrowserWIndow';
 import { gooeyWords, gooeyWordsPreview } from './frontend/GooeyWords';
+import { clothButton, clothButtonPreview } from './frontend/ClothButton';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -229,6 +230,12 @@ const sideBarOptions: Array<{
         href: '/docs/animatedgradientbutton',
         content: animatedGradientButton,
         preview: animatedGradientButtonPreview
+      },
+      {
+        name: 'Cloth Button',
+        href: '/docs/clothbutton',
+        content: clothButton,
+        preview: clothButtonPreview
       },
       {
         name: 'Copy Text Button',
