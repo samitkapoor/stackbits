@@ -236,7 +236,8 @@ const sideBarOptions: Array<{
         name: 'Cloth Button',
         href: '/docs/clothbutton',
         content: clothButton,
-        preview: clothButtonPreview
+        preview: clothButtonPreview,
+        isNew: true
       },
       {
         name: 'Copy Text Button',
