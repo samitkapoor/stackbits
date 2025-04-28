@@ -179,12 +179,12 @@ const sideBarOptions: Array<{
   {
     title: 'Backgrounds',
     children: [
-      {
-        name: 'Color Cyclone',
-        href: '/docs/colorCyclone',
-        content: colorCyclone,
-        preview: colorCyclonePreview
-      },
+      // {
+      //   name: 'Color Cyclone',
+      //   href: '/docs/colorCyclone',
+      //   content: colorCyclone,
+      //   preview: colorCyclonePreview
+      // },
       {
         name: 'Glowing Dots Background',
         href: '/docs/glowingDotsBackground',
@@ -197,12 +197,12 @@ const sideBarOptions: Array<{
         content: prismaticHaze,
         preview: prismaticHazePreview
       },
-      {
-        name: 'Texture Background',
-        href: '/docs/textureBackground',
-        content: textureBackground,
-        preview: textureBackgroundPreview
-      },
+      // {
+      //   name: 'Texture Background',
+      //   href: '/docs/textureBackground',
+      //   content: textureBackground,
+      //   preview: textureBackgroundPreview
+      // },
       {
         name: 'Topography Background',
         href: '/docs/topographyBackground',
@@ -286,12 +286,12 @@ const sideBarOptions: Array<{
   {
     title: 'Cards',
     children: [
-      {
-        name: 'Flip Reveal Card',
-        href: '/docs/fliprevealcard',
-        content: flipRevealCard,
-        preview: flipRevealCardPreview
-      },
+      // {
+      //   name: 'Flip Reveal Card',
+      //   href: '/docs/fliprevealcard',
+      //   content: flipRevealCard,
+      //   preview: flipRevealCardPreview
+      // },
       {
         name: 'Glass Card',
         href: '/docs/glasscard',
@@ -360,19 +360,19 @@ const sideBarOptions: Array<{
         isNew: true
       },
       // { name: 'CustomScrollbar', href: '/docs/customscrollbar', content: customScrollbar },
-      { name: 'Flicker Box', href: '/docs/flickerbox', content: flicker, preview: flickerPreview },
-      {
-        name: 'Flip Badge',
-        href: '/docs/flipbadge',
-        content: flipBadge,
-        preview: flipBadgePreview
-      },
-      {
-        name: 'Footer',
-        href: '/docs/footer',
-        content: footer,
-        preview: footerPreview
-      },
+      // { name: 'Flicker Box', href: '/docs/flickerbox', content: flicker, preview: flickerPreview },
+      // {
+      //   name: 'Flip Badge',
+      //   href: '/docs/flipbadge',
+      //   content: flipBadge,
+      //   preview: flipBadgePreview
+      // },
+      // {
+      //   name: 'Footer',
+      //   href: '/docs/footer',
+      //   content: footer,
+      //   preview: footerPreview
+      // },
       {
         name: 'Gauge Chart',
         href: '/docs/gaugechart',
@@ -398,13 +398,13 @@ const sideBarOptions: Array<{
         content: masonryGrid,
         preview: masonryGridPreview,
         isNew: true
-      },
-      {
-        name: 'Story Avatar',
-        href: '/docs/storyavatar',
-        content: storyAvatar,
-        preview: storyAvatarPreview
       }
+      // {
+      //   name: 'Story Avatar',
+      //   href: '/docs/storyavatar',
+      //   content: storyAvatar,
+      //   preview: storyAvatarPreview
+      // }
     ]
   },
   {
