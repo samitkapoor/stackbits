@@ -1,10 +1,10 @@
 import { ReactNode } from 'react';
 
-import { flicker, flickerPreview } from './frontend/Flicker';
+// import { flicker, flickerPreview } from './frontend/Flicker';
 import { installation } from './getting-started/installation';
 import { introduction } from './getting-started/introduction';
-import { storyAvatar, storyAvatarPreview } from './frontend/StoryAvatar';
-import { flipBadge, flipBadgePreview } from './frontend/FlipBadge';
+// import { storyAvatar, storyAvatarPreview } from './frontend/StoryAvatar';
+// import { flipBadge, flipBadgePreview } from './frontend/FlipBadge';
 import { encryptionDecryption } from './utilities/EncryptionDecryption';
 import { regexValidations } from './utilities/RegexValidations';
 import { debounce } from './utilities/Debounce';
@@ -33,7 +33,7 @@ import { SearchResult } from '@/components/support-plugin';
 import { expressServer } from './utilities/ExpressServer';
 import { axiosInterceptor } from './utilities/AxiosInterceptor';
 import { prismaticHaze, prismaticHazePreview } from './frontend/PrismaticHaze';
-import { colorCyclone, colorCyclonePreview } from './frontend/ColorCyclone';
+// import { colorCyclone, colorCyclonePreview } from './frontend/ColorCyclone';
 import { movingBorderButton, movingBorderButtonPreview } from './frontend/MovingBorderButton';
 import { wavyBackgroundPreview, wavyBackground } from './frontend/WavyBackground';
 import { navigationButton, navigationButtonPreview } from './frontend/NavigationButton';
@@ -41,18 +41,18 @@ import { shineButton, shineButtonPreview } from './frontend/ShineButton';
 import { fadeInText, fadeInTextPreview } from './frontend/FadeInText';
 import { wavyText, wavyTextPreview } from './frontend/WavyText';
 import { blurText, blurTextPreview } from './frontend/BlurText';
-import { flipRevealCard, flipRevealCardPreview } from './frontend/FlipRevealCard';
+// import { flipRevealCard, flipRevealCardPreview } from './frontend/FlipRevealCard';
 import { movingBorderCard, movingBorderCardPreview } from './frontend/MovingBorderCard';
 import { iconWheel, iconWheelPreview } from './frontend/IconWheel';
 import { waveNoiseBackground, waveNoiseBackgroundPreview } from './frontend/WaveNoiseBackground';
 import { topographyBackground, topographyBackgroundPreview } from './frontend/TopographyBackground';
-import { textureBackground, textureBackgroundPreview } from './frontend/TextureBackground';
+// import { textureBackground, textureBackgroundPreview } from './frontend/TextureBackground';
 import { epicNameDrop, epicNameDropPreview } from './frontend/EpicNameDrop';
 import {
   glowingDotsBackground,
   glowingDotsBackgroundPreview
 } from './frontend/GlowingDotsBackground';
-import { footer, footerPreview } from './frontend/Footer';
+// import { footer, footerPreview } from './frontend/Footer';
 import { masonryGrid, masonryGridPreview } from './frontend/MasonryGrid';
 import { fileStack, fileStackPreview } from './frontend/FileStack';
 import { skeumorphicMusicCard, skeumorphicMusicCardPreview } from './frontend/SkeumorphicMusicCard';
@@ -63,6 +63,8 @@ import { gaugeChart, gaugeChartPreview } from './frontend/GaugeChart';
 import { browserWindow, browserWindowPreview } from './frontend/BrowserWIndow';
 import { gooeyWords, gooeyWordsPreview } from './frontend/GooeyWords';
 import { clothButton, clothButtonPreview } from './frontend/ClothButton';
+import { playingCardsPreview } from './frontend/PlayingCards';
+import { playingCards } from './frontend/PlayingCards';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -397,6 +399,13 @@ const sideBarOptions: Array<{
         href: '/docs/masonrygrid',
         content: masonryGrid,
         preview: masonryGridPreview,
+        isNew: true
+      },
+      {
+        name: 'Playing Cards',
+        href: '/docs/playingcards',
+        content: playingCards,
+        preview: playingCardsPreview,
         isNew: true
       }
       // {
