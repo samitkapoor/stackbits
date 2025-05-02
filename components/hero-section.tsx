@@ -27,7 +27,7 @@ const HeroSection = () => {
           </MovingBorderButton>
         </Link>
         <p className="my-2 sm:my-0">or, check out our</p>
-        <Link href={'/docs/playingcards'}>
+        <Link href={'/docs/spotlightgrid'}>
           <ShineButton className="px-3 py-2 sm:px-4 sm:py-3 text-base sm:text-lg md:text-xl !rounded-full border-2 bg-neutral-900">
             <Command className="w-4 h-4 sm:w-5 sm:h-5" />
             &nbsp; Latest Component
