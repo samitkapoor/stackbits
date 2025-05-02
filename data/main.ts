@@ -65,6 +65,7 @@ import { gooeyWords, gooeyWordsPreview } from './frontend/GooeyWords';
 import { clothButton, clothButtonPreview } from './frontend/ClothButton';
 import { playingCardsPreview } from './frontend/PlayingCards';
 import { playingCards } from './frontend/PlayingCards';
+import { spotlightGrid, spotlightGridPreview } from './frontend/SpotlightGrid';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -406,6 +407,13 @@ const sideBarOptions: Array<{
         href: '/docs/playingcards',
         content: playingCards,
         preview: playingCardsPreview,
+        isNew: true
+      },
+      {
+        name: 'Spotlight Grid',
+        href: '/docs/spotlightgrid',
+        content: spotlightGrid,
+        preview: spotlightGridPreview,
         isNew: true
       }
       // {
