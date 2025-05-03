@@ -66,6 +66,7 @@ import { clothButton, clothButtonPreview } from './frontend/ClothButton';
 import { playingCardsPreview } from './frontend/PlayingCards';
 import { playingCards } from './frontend/PlayingCards';
 import { spotlightGrid, spotlightGridPreview } from './frontend/SpotlightGrid';
+import { projectsSection, projectsSectionPreview } from './frontend/ProjectsSection';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -239,8 +240,7 @@ const sideBarOptions: Array<{
         name: 'Cloth Button',
         href: '/docs/clothbutton',
         content: clothButton,
-        preview: clothButtonPreview,
-        isNew: true
+        preview: clothButtonPreview
       },
       {
         name: 'Copy Text Button',
@@ -359,8 +359,7 @@ const sideBarOptions: Array<{
         name: 'File Stack',
         href: '/docs/fileStack',
         content: fileStack,
-        preview: fileStackPreview,
-        isNew: true
+        preview: fileStackPreview
       },
       // { name: 'CustomScrollbar', href: '/docs/customscrollbar', content: customScrollbar },
       // { name: 'Flicker Box', href: '/docs/flickerbox', content: flicker, preview: flickerPreview },
@@ -392,21 +391,26 @@ const sideBarOptions: Array<{
         name: 'Image Pile',
         href: '/docs/imagepile',
         content: imagePile,
-        preview: imagePilePreview,
-        isNew: true
+        preview: imagePilePreview
       },
       {
         name: 'Masonry Grid',
         href: '/docs/masonrygrid',
         content: masonryGrid,
-        preview: masonryGridPreview,
-        isNew: true
+        preview: masonryGridPreview
       },
       {
         name: 'Playing Cards',
         href: '/docs/playingcards',
         content: playingCards,
         preview: playingCardsPreview,
+        isNew: true
+      },
+      {
+        name: 'Projects Section',
+        href: '/docs/projectssection',
+        content: projectsSection,
+        preview: projectsSectionPreview,
         isNew: true
       },
       {
