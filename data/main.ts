@@ -67,6 +67,7 @@ import { playingCardsPreview } from './frontend/PlayingCards';
 import { playingCards } from './frontend/PlayingCards';
 import { spotlightGrid, spotlightGridPreview } from './frontend/SpotlightGrid';
 import { projectsSection, projectsSectionPreview } from './frontend/ProjectsSection';
+import { contactSection, contactSectionPreview } from './frontend/ContactSection';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -348,6 +349,13 @@ const sideBarOptions: Array<{
         href: '/docs/browserwindow',
         content: browserWindow,
         preview: browserWindowPreview
+      },
+      {
+        name: 'Contact Section',
+        href: '/docs/contactsection',
+        content: contactSection,
+        preview: contactSectionPreview,
+        isNew: true
       },
       {
         name: 'Epic Name Drop',
