@@ -68,6 +68,8 @@ import { playingCards } from './frontend/PlayingCards';
 import { spotlightGrid, spotlightGridPreview } from './frontend/SpotlightGrid';
 import { projectsSection, projectsSectionPreview } from './frontend/ProjectsSection';
 import { contactSection, contactSectionPreview } from './frontend/ContactSection';
+import { magnetTabs } from './frontend/MagnetTabs';
+import { magnetTabsPreview } from './frontend/MagnetTabs';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -400,6 +402,13 @@ const sideBarOptions: Array<{
         href: '/docs/imagepile',
         content: imagePile,
         preview: imagePilePreview
+      },
+      {
+        name: 'Magnet Tabs',
+        href: '/docs/magnettabs',
+        content: magnetTabs,
+        preview: magnetTabsPreview,
+        isNew: true
       },
       {
         name: 'Masonry Grid',
