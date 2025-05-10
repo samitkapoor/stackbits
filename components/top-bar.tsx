@@ -25,13 +25,6 @@ const TopBar = () => {
       )
     },
     {
-      name: 'Backgrounds',
-      href: '/docs/backgrounds',
-      icon: (
-        <Frame className="h-[12px] sm:h-[14px] md:h-[16px] lg:h-[18px] w-[12px] sm:w-[14px] md:w-[16px] lg:w-[18px]" />
-      )
-    },
-    {
       name: 'Buttons',
       href: '/docs/buttons',
       icon: (

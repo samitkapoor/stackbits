@@ -184,53 +184,6 @@ const sideBarOptions: Array<{
     ]
   },
   {
-    title: 'Backgrounds',
-    children: [
-      // {
-      //   name: 'Color Cyclone',
-      //   href: '/docs/colorCyclone',
-      //   content: colorCyclone,
-      //   preview: colorCyclonePreview
-      // },
-      {
-        name: 'Glowing Dots Background',
-        href: '/docs/glowingDotsBackground',
-        content: glowingDotsBackground,
-        preview: glowingDotsBackgroundPreview
-      },
-      {
-        name: 'Prismatic Haze',
-        href: '/docs/prismaticHaze',
-        content: prismaticHaze,
-        preview: prismaticHazePreview
-      },
-      // {
-      //   name: 'Texture Background',
-      //   href: '/docs/textureBackground',
-      //   content: textureBackground,
-      //   preview: textureBackgroundPreview
-      // },
-      {
-        name: 'Topography Background',
-        href: '/docs/topographyBackground',
-        content: topographyBackground,
-        preview: topographyBackgroundPreview
-      },
-      {
-        name: 'Wave Noise Background',
-        href: '/docs/waveNoiseBackground',
-        content: waveNoiseBackground,
-        preview: waveNoiseBackgroundPreview
-      },
-      {
-        name: 'Wavy Background',
-        href: '/docs/wavybackground',
-        content: wavyBackground,
-        preview: wavyBackgroundPreview
-      }
-    ]
-  },
-  {
     title: 'Buttons',
     children: [
       {
@@ -334,12 +287,37 @@ const sideBarOptions: Array<{
   {
     title: 'Components',
     children: [
-      {
-        name: 'Accordion',
-        href: '/docs/accordion',
-        content: accordion,
-        preview: accordionPreview
-      },
+      // {
+      //   name: 'Accordion',
+      //   href: '/docs/accordion',
+      //   content: accordion,
+      //   preview: accordionPreview
+      // },
+      // {
+      //   name: 'Color Cyclone',
+      //   href: '/docs/colorCyclone',
+      //   content: colorCyclone,
+      //   preview: colorCyclonePreview
+      // },
+      // {
+      //   name: 'Texture Background',
+      //   href: '/docs/textureBackground',
+      //   content: textureBackground,
+      //   preview: textureBackgroundPreview
+      // },
+      // {
+      //   name: 'Topography Background',
+      //   href: '/docs/topographyBackground',
+      //   content: topographyBackground,
+      //   preview: topographyBackgroundPreview
+      // },
+      // {
+      //   name: 'Wave Noise Background',
+      //   href: '/docs/waveNoiseBackground',
+      //   content: waveNoiseBackground,
+      //   preview: waveNoiseBackgroundPreview
+      // },
+
       {
         name: 'Barricade Tape',
         href: '/docs/barricadeTape',
@@ -392,6 +370,12 @@ const sideBarOptions: Array<{
         preview: gaugeChartPreview
       },
       {
+        name: 'Glowing Dots Background',
+        href: '/docs/glowingDotsBackground',
+        content: glowingDotsBackground,
+        preview: glowingDotsBackgroundPreview
+      },
+      {
         name: 'Icon Wheel',
         href: '/docs/iconwheel',
         content: iconWheel,
@@ -431,6 +415,12 @@ const sideBarOptions: Array<{
         isNew: true
       },
       {
+        name: 'Prismatic Haze Background',
+        href: '/docs/prismaticHaze',
+        content: prismaticHaze,
+        preview: prismaticHazePreview
+      },
+      {
         name: 'Projects Section',
         href: '/docs/projectssection',
         content: projectsSection,
@@ -443,13 +433,19 @@ const sideBarOptions: Array<{
         content: spotlightGrid,
         preview: spotlightGridPreview,
         isNew: true
-      }
+      },
       // {
       //   name: 'Story Avatar',
       //   href: '/docs/storyavatar',
       //   content: storyAvatar,
       //   preview: storyAvatarPreview
       // }
+      {
+        name: 'Wavy Background',
+        href: '/docs/wavybackground',
+        content: wavyBackground,
+        preview: wavyBackgroundPreview
+      }
     ]
   },
   {
@@ -499,7 +495,7 @@ const sideBarOptions: Array<{
   }
 ];
 
-export const categories = ['buttons', 'backgrounds', 'texts', 'cards', 'components'];
+export const categories = ['buttons', 'texts', 'cards', 'components'];
 
 export const getDocs = (docId: string) => {
   const group = sideBarOptions.filter((tab) =>

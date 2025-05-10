@@ -5,7 +5,7 @@ const BarricadeTapeDemo = () => {
   return (
     <div className="w-full h-full relative">
       <div className="overflow-y-auto overflow-x-hidden w-full h-full flex flex-col items-center justify-center">
-        <div className="h-[100px]"></div>
+        <div className="h-[50px]"></div>
         <EndToEndBanner text={'STACKBITS TRICK'} delimiter={'•'} />
         <EndToEndBanner
           text={['BUILD QUICK', 'COPY PASTE']}
