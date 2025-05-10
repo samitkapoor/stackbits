@@ -123,126 +123,6 @@ const sideBarOptions: Array<{
     ]
   },
   {
-    title: 'Texts',
-    children: [
-      {
-        name: 'Blur Text',
-        href: '/docs/blurtext',
-        content: blurText,
-        preview: blurTextPreview
-      },
-      {
-        name: 'Count Up',
-        href: '/docs/countup',
-        content: countUp,
-        preview: countUpPreview
-      },
-      {
-        name: 'Dotted Text',
-        href: '/docs/dottedtext',
-        content: dottedText,
-        preview: dottedTextPreview,
-        isNew: true
-      },
-      {
-        name: 'Fade In Text',
-        href: '/docs/fadeintext',
-        content: fadeInText,
-        preview: fadeInTextPreview
-      },
-      {
-        name: 'Glitch Text',
-        href: '/docs/glitchtext',
-        content: glitchText,
-        preview: glitchTextPreview
-      },
-      {
-        name: 'Gooey Words',
-        href: '/docs/gooeywords',
-        content: gooeyWords,
-        preview: gooeyWordsPreview,
-        isNew: true
-      },
-      {
-        name: 'Rainbow Text',
-        href: '/docs/rainbowtext',
-        content: rainbowText,
-        preview: rainbowTextPreview
-      },
-      {
-        name: 'Skewed Text',
-        href: '/docs/skewedtext',
-        content: skewedText,
-        preview: skewedTextPreview
-      },
-      {
-        name: 'Wavy Text',
-        href: '/docs/wavytext',
-        content: wavyText,
-        preview: wavyTextPreview
-      }
-    ]
-  },
-  {
-    title: 'Buttons',
-    children: [
-      {
-        name: 'Animated Gradient Button',
-        href: '/docs/animatedgradientbutton',
-        content: animatedGradientButton,
-        preview: animatedGradientButtonPreview
-      },
-      {
-        name: 'Cloth Button',
-        href: '/docs/clothbutton',
-        content: clothButton,
-        preview: clothButtonPreview
-      },
-      {
-        name: 'Copy Text Button',
-        href: '/docs/copytextbutton',
-        content: copyTextButton,
-        preview: copyTextButtonPreview
-      },
-      {
-        name: 'Glass Button',
-        href: '/docs/glassbutton',
-        content: glassButton,
-        preview: glassButtonPreview
-      },
-      {
-        name: 'Expandable Icon Button',
-        href: '/docs/expandableiconbutton',
-        content: expandableIconButton,
-        preview: expandableIconButtonPreview
-      },
-      {
-        name: 'Moving Border Button',
-        href: '/docs/movingborderbutton',
-        content: movingBorderButton,
-        preview: movingBorderButtonPreview
-      },
-      {
-        name: 'Navigation Button',
-        href: '/docs/navigationbutton',
-        content: navigationButton,
-        preview: navigationButtonPreview
-      },
-      {
-        name: 'Shine Button',
-        href: '/docs/shinebutton',
-        content: shineButton,
-        preview: shineButtonPreview
-      },
-      {
-        name: 'Toggle Button',
-        href: '/docs/togglebutton',
-        content: toggleButton,
-        preview: toggleButtonPreview
-      }
-    ]
-  },
-  {
     title: 'Components',
     children: [
       // {
@@ -440,6 +320,126 @@ const sideBarOptions: Array<{
         href: '/docs/wavybackground',
         content: wavyBackground,
         preview: wavyBackgroundPreview
+      }
+    ]
+  },
+  {
+    title: 'Texts',
+    children: [
+      {
+        name: 'Blur Text',
+        href: '/docs/blurtext',
+        content: blurText,
+        preview: blurTextPreview
+      },
+      {
+        name: 'Count Up',
+        href: '/docs/countup',
+        content: countUp,
+        preview: countUpPreview
+      },
+      {
+        name: 'Dotted Text',
+        href: '/docs/dottedtext',
+        content: dottedText,
+        preview: dottedTextPreview,
+        isNew: true
+      },
+      {
+        name: 'Fade In Text',
+        href: '/docs/fadeintext',
+        content: fadeInText,
+        preview: fadeInTextPreview
+      },
+      {
+        name: 'Glitch Text',
+        href: '/docs/glitchtext',
+        content: glitchText,
+        preview: glitchTextPreview
+      },
+      {
+        name: 'Gooey Words',
+        href: '/docs/gooeywords',
+        content: gooeyWords,
+        preview: gooeyWordsPreview,
+        isNew: true
+      },
+      {
+        name: 'Rainbow Text',
+        href: '/docs/rainbowtext',
+        content: rainbowText,
+        preview: rainbowTextPreview
+      },
+      {
+        name: 'Skewed Text',
+        href: '/docs/skewedtext',
+        content: skewedText,
+        preview: skewedTextPreview
+      },
+      {
+        name: 'Wavy Text',
+        href: '/docs/wavytext',
+        content: wavyText,
+        preview: wavyTextPreview
+      }
+    ]
+  },
+  {
+    title: 'Buttons',
+    children: [
+      {
+        name: 'Animated Gradient Button',
+        href: '/docs/animatedgradientbutton',
+        content: animatedGradientButton,
+        preview: animatedGradientButtonPreview
+      },
+      {
+        name: 'Cloth Button',
+        href: '/docs/clothbutton',
+        content: clothButton,
+        preview: clothButtonPreview
+      },
+      {
+        name: 'Copy Text Button',
+        href: '/docs/copytextbutton',
+        content: copyTextButton,
+        preview: copyTextButtonPreview
+      },
+      {
+        name: 'Glass Button',
+        href: '/docs/glassbutton',
+        content: glassButton,
+        preview: glassButtonPreview
+      },
+      {
+        name: 'Expandable Icon Button',
+        href: '/docs/expandableiconbutton',
+        content: expandableIconButton,
+        preview: expandableIconButtonPreview
+      },
+      {
+        name: 'Moving Border Button',
+        href: '/docs/movingborderbutton',
+        content: movingBorderButton,
+        preview: movingBorderButtonPreview
+      },
+      {
+        name: 'Navigation Button',
+        href: '/docs/navigationbutton',
+        content: navigationButton,
+        preview: navigationButtonPreview
+      },
+      {
+        name: 'Shine Button',
+        href: '/docs/shinebutton',
+        content: shineButton,
+        preview: shineButtonPreview
+      },
+      {
+        name: 'Toggle Button',
+        href: '/docs/togglebutton',
+        content: toggleButton,
+        preview: toggleButtonPreview
       }
     ]
   },

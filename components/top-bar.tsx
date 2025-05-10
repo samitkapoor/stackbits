@@ -18,6 +18,13 @@ const TopBar = () => {
       )
     },
     {
+      name: 'Components',
+      href: '/docs/components',
+      icon: (
+        <Component className="h-[12px] sm:h-[14px] md:h-[16px] lg:h-[18px] w-[12px] sm:w-[14px] md:w-[16px] lg:w-[18px]" />
+      )
+    },
+    {
       name: 'Texts',
       href: '/docs/texts',
       icon: (
@@ -29,13 +36,6 @@ const TopBar = () => {
       href: '/docs/buttons',
       icon: (
         <Command className="h-[12px] sm:h-[14px] md:h-[16px] lg:h-[18px] w-[12px] sm:w-[14px] md:w-[16px] lg:w-[18px]" />
-      )
-    },
-    {
-      name: 'Components',
-      href: '/docs/components',
-      icon: (
-        <Component className="h-[12px] sm:h-[14px] md:h-[16px] lg:h-[18px] w-[12px] sm:w-[14px] md:w-[16px] lg:w-[18px]" />
       )
     }
   ];
