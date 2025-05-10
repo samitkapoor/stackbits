@@ -1,6 +1,6 @@
 'use client';
 
-import { CodeXml, Command, Component, Frame, House, Spade, Text } from 'lucide-react';
+import { CodeXml, Command, Component, House, Text } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
@@ -29,13 +29,6 @@ const TopBar = () => {
       href: '/docs/buttons',
       icon: (
         <Command className="h-[12px] sm:h-[14px] md:h-[16px] lg:h-[18px] w-[12px] sm:w-[14px] md:w-[16px] lg:w-[18px]" />
-      )
-    },
-    {
-      name: 'Cards',
-      href: '/docs/cards',
-      icon: (
-        <Spade className="h-[12px] sm:h-[14px] md:h-[16px] lg:h-[18px] w-[12px] sm:w-[14px] md:w-[16px] lg:w-[18px]" />
       )
     },
     {

@@ -243,7 +243,7 @@ const sideBarOptions: Array<{
     ]
   },
   {
-    title: 'Cards',
+    title: 'Components',
     children: [
       // {
       //   name: 'Flip Reveal Card',
@@ -251,42 +251,6 @@ const sideBarOptions: Array<{
       //   content: flipRevealCard,
       //   preview: flipRevealCardPreview
       // },
-      {
-        name: 'Glass Card',
-        href: '/docs/glasscard',
-        content: glassCard,
-        preview: glassCardPreview
-      },
-      {
-        name: 'Lume Card',
-        href: '/docs/lumecard',
-        content: lumeCard,
-        preview: lumeCardPreview
-      },
-      {
-        name: 'Moving Border Card',
-        href: '/docs/movingbordercard',
-        content: movingBorderCard,
-        preview: movingBorderCardPreview
-      },
-      {
-        name: 'Skeumorphic Music Card',
-        href: '/docs/skeumorphicMusicCard',
-        content: skeumorphicMusicCard,
-        preview: skeumorphicMusicCardPreview,
-        isNew: true
-      },
-      {
-        name: 'Trading Card',
-        href: '/docs/tradingCard',
-        content: tradingCard,
-        preview: tradingCardPreview
-      }
-    ]
-  },
-  {
-    title: 'Components',
-    children: [
       // {
       //   name: 'Accordion',
       //   href: '/docs/accordion',
@@ -370,6 +334,12 @@ const sideBarOptions: Array<{
         preview: gaugeChartPreview
       },
       {
+        name: 'Glass Card',
+        href: '/docs/glasscard',
+        content: glassCard,
+        preview: glassCardPreview
+      },
+      {
         name: 'Glowing Dots Background',
         href: '/docs/glowingDotsBackground',
         content: glowingDotsBackground,
@@ -388,6 +358,12 @@ const sideBarOptions: Array<{
         preview: imagePilePreview
       },
       {
+        name: 'Lume Card',
+        href: '/docs/lumecard',
+        content: lumeCard,
+        preview: lumeCardPreview
+      },
+      {
         name: 'Magnet Tabs',
         href: '/docs/magnettabs',
         content: magnetTabs,
@@ -399,6 +375,12 @@ const sideBarOptions: Array<{
         href: '/docs/masonrygrid',
         content: masonryGrid,
         preview: masonryGridPreview
+      },
+      {
+        name: 'Moving Border Card',
+        href: '/docs/movingbordercard',
+        content: movingBorderCard,
+        preview: movingBorderCardPreview
       },
       {
         name: 'NavBar',
@@ -428,11 +410,24 @@ const sideBarOptions: Array<{
         isNew: true
       },
       {
+        name: 'Skeumorphic Music Card',
+        href: '/docs/skeumorphicMusicCard',
+        content: skeumorphicMusicCard,
+        preview: skeumorphicMusicCardPreview,
+        isNew: true
+      },
+      {
         name: 'Spotlight Grid',
         href: '/docs/spotlightgrid',
         content: spotlightGrid,
         preview: spotlightGridPreview,
         isNew: true
+      },
+      {
+        name: 'Trading Card',
+        href: '/docs/tradingCard',
+        content: tradingCard,
+        preview: tradingCardPreview
       },
       // {
       //   name: 'Story Avatar',
