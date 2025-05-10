@@ -68,8 +68,8 @@ import { playingCards } from './frontend/PlayingCards';
 import { spotlightGrid, spotlightGridPreview } from './frontend/SpotlightGrid';
 import { projectsSection, projectsSectionPreview } from './frontend/ProjectsSection';
 import { contactSection, contactSectionPreview } from './frontend/ContactSection';
-import { magnetTabs } from './frontend/MagnetTabs';
-import { magnetTabsPreview } from './frontend/MagnetTabs';
+import { magnetTabs, magnetTabsPreview } from './frontend/MagnetTabs';
+import { navBarPreview, navBar } from './frontend/NavBar';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -415,6 +415,13 @@ const sideBarOptions: Array<{
         href: '/docs/masonrygrid',
         content: masonryGrid,
         preview: masonryGridPreview
+      },
+      {
+        name: 'NavBar',
+        href: '/docs/navbar',
+        content: navBar,
+        preview: navBarPreview,
+        isNew: true
       },
       {
         name: 'Playing Cards',
