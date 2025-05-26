@@ -44,7 +44,7 @@ const TopBar = () => {
 
   return (
     <>
-      <div className="flex items-center justify-between mx-2 w-[calc(100%-1rem)] sm:mx-4 sm:w-[calc(100%-2rem)] md:mx-6 md:w-[calc(100%-3rem)] lg:mx-8 lg:w-[calc(100%-4rem)] px-2 sm:px-3 md:px-4 h-[40px] sm:h-[50px] md:h-[70px] rounded-md fixed top-4 z-[200]">
+      <div className="flex items-center justify-between w-full px-2 sm:px-4 md:px-6 h-[40px] sm:h-[50px] md:h-[70px] rounded-md fixed z-[200]">
         <div className="overflow-hidden h-full">
           <Link
             href="/"
