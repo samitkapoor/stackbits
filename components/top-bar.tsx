@@ -25,9 +25,9 @@ const TopBar = () => {
       <div className="overflow-hidden h-full">
         <Link
           href="/"
-          className="flex items-center gap-1 sm:gap-2 h-full justify-center ml-1 sm:ml-2 text-xs sm:text-sm md:text-base"
+          className="flex items-center gap-1 sm:gap-2 h-full justify-center ml-1 sm:ml-2 text-sm md:text-base"
         >
-          <CodeXml className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+          <CodeXml className="w-5 h-5 md:w-6 md:h-6" />
           Stackbits
         </Link>
       </div>
