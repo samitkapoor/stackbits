@@ -1,19 +1,21 @@
+import { cn } from '@/lib/utils';
 import { HTMLMotionProps, motion } from 'framer-motion';
 import React from 'react';
 
 type GlassButtonProps = HTMLMotionProps<'button'> & {
   children?: React.ReactNode;
   className?: string;
+  wrapperClassName?: string;
 };
 
-const GlassButton = ({ children, className, ...props }: GlassButtonProps) => {
+const GlassButton = ({ children, className, wrapperClassName, ...props }: GlassButtonProps) => {
   return (
     <motion.button
       {...props}
       className={`relative overflow-hidden rounded-xl px-6 py-3 text-white font-semibold
         bg-gradient-to-tr from-[#46C0F780] to-[#E3E8EA80] backdrop-blur-lg 
         shadow-inner shadow-white/20 transition-all duration-300 
-        hover:shadow-lg hover:shadow-cyan-200/30 ${className}`}
+        hover:shadow-lg hover:shadow-cyan-200/30 ${wrapperClassName}`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
@@ -35,7 +37,7 @@ const GlassButton = ({ children, className, ...props }: GlassButtonProps) => {
       />
 
       {/* Button Content */}
-      <div className="relative">{children}</div>
+      <div className={cn('relative', className)}>{children}</div>
     </motion.button>
   );
 };
