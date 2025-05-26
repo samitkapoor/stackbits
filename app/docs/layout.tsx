@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 
 import SideBar from '@/components/side-bar';
-import SupportPlugin from '@/components/support-plugin';
 import MovingBorderButton from '@/components/ui/moving-border-button';
 import { Menu, X } from 'lucide-react';
 
