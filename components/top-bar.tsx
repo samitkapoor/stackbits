@@ -38,17 +38,17 @@ const TopBar = () => {
           return (
             <Link key={link.name} href={link.href}>
               <GlassButton
-                wrapperClassName={`px-1 sm:px-2 md:px-3 py-1 sm:py-2 !rounded-md`}
+                wrapperClassName={`!px-2 md:!px-3 !py-2 !rounded-md`}
                 className={`flex items-center gap-1 text-xs sm:text-sm transition-all`}
               >
                 {link.icon}
-                <p className="">{link.name}</p>
+                <p className="text-xs sm:text-sm">{link.name}</p>
               </GlassButton>
             </Link>
           );
         })}
         <Link href="/prompt">
-          <AnimatedGradientButton className="!px-4 !py-1 md:!py-2 text-sm">
+          <AnimatedGradientButton className="!px-2 md:!px-3 !py-2 !rounded-md text-xs sm:text-sm">
             Request
           </AnimatedGradientButton>
         </Link>

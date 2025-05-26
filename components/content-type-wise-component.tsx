@@ -59,7 +59,7 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
     }, [code]);
 
     return (
-      <div className="max-w-[800px] relative w-full">
+      <div className="relative w-full">
         <div className="absolute top-4 right-4 flex gap-2 z-10">
           <button onClick={() => handleCopy(code)}>
             {!copy ? (
@@ -73,7 +73,7 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
           <CodeBlock code={code} language={language}>
             <CodeBlock.Code
               ref={codeRef}
-              className={`bg-[#2f2f2f6f] overflow-auto p-6 rounded-xl shadow-lg max-w-[800px] ${
+              className={`bg-[#2f2f2f6f] overflow-auto p-6 rounded-xl shadow-lg w-full ${
                 isExpanded ? 'h-auto' : 'max-h-[300px]'
               } ${className} hide-scrollbar`}
             >
@@ -104,7 +104,7 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
   switch (sectionType) {
     case 'paragraph':
       if (typeof content === 'string') {
-        return <p className="max-w-[800px] text-sm md:text-[16px]">{content}</p>;
+        return <p className="w-full text-sm md:text-[16px] text-white/80">{content}</p>;
       }
       break;
 
@@ -159,7 +159,7 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
           <div className="flex flex-col md:flex-row items-start md:items-center gap-10 md:gap-2 mt-5 w-full">
             {content.map((item, i: number) => (
               <div className="flex items-center gap-2" key={item.heading + item.content}>
-                <div className="flex flex-col max-w-[200px] w-full items-center justify-center">
+                <div className="flex flex-col w-full items-center justify-center">
                   <div className="border-[1px] rounded-full h-[20px] w-[20px] md:h-[25px] md:w-[25px] text-center flex items-center justify-center select-none hover:border-yellow-400 hover:text-yellow-400 transition-all">
                     {item.id}
                   </div>
@@ -183,7 +183,7 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
 
     case 'preview':
       return (
-        <div className="h-[700px] max-w-[700px] backdrop-blur-lg bg-black/30 md:max-w-[90%] rounded-lg border-[2px] border-[#2f2f2fdf] flex items-start justify-start overflow-x-hidden relative">
+        <div className="w-full backdrop-blur-lg bg-black/30 rounded-lg border-[2px] border-[#2f2f2fdf] flex items-start justify-start overflow-x-hidden relative">
           {code}
         </div>
       );
@@ -215,7 +215,7 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
         return (
           <div className="flex flex-col">
             {section.description && (
-              <p className="text-sm md:text-[16px] mb-2 max-w-[800px]">{section.description}</p>
+              <p className="text-sm md:text-[16px] mb-2 w-full">{section.description}</p>
             )}
             <CodeBlockWithCopy
               code={code}

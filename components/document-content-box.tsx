@@ -15,20 +15,13 @@ const DocumentContentBox = ({ docId }: { docId: string }) => {
 
   return (
     doc && (
-      <div className="max-w-[1000px] h-full w-full">
+      <div className="h-full w-full">
         <AddressBar sideBarGroup={sideBar.group} name={sideBar.name} />
         <div className="flex flex-col gap-[50px] mt-[30px]">
           {content.sections.map((section) => {
             return (
               <div key={section.heading + Date.now().toString()} className="flex flex-col gap-2">
-                <p
-                  className={
-                    'font-semibold text-2xl ' +
-                    (section.sectionType === 'heading' && ' text-yellow-400')
-                  }
-                >
-                  {section.heading}
-                </p>
+                <p className={'font-semibold text-2xl'}>{section.heading}</p>
                 <ContentTypeWiseComponent section={section} sectionType={section.sectionType} />
               </div>
             );

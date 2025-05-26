@@ -27,7 +27,6 @@ const DocumentationLayout = ({ children }: { children: React.ReactNode }) => {
             {sideBarIsOpen ? <X /> : <Menu />}
           </MovingBorderButton>
           {children}
-          <SupportPlugin />
         </div>
       </div>
     </div>
