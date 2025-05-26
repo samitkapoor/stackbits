@@ -36,14 +36,11 @@ const TopBar = () => {
         {/* Desktop navigation */}
         <div className="flex items-center text-white gap-4">
           {links.map((link) => {
-            const extraClass =
-              pathname === link.href ? 'text-yellow-400 text-black' : 'hover:text-yellow-400';
-
             return (
               <Link key={link.name} href={link.href}>
                 <GlassButton
                   wrapperClassName={`px-1 sm:px-2 md:px-3 py-1 sm:py-2 !rounded-md`}
-                  className={`flex items-center gap-1 text-xs sm:text-sm transition-all ${extraClass}`}
+                  className={`flex items-center gap-1 text-xs sm:text-sm transition-all`}
                 >
                   {link.icon}
                   <p className="">{link.name}</p>
