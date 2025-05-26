@@ -30,47 +30,30 @@ const CategoryPage = ({ docId }: CategoryPageProps) => {
         className="mb-12"
       >
         <p className="font-bold text-3xl text-white tracking-tight">{title}</p>
-        <div className="h-px w-12 bg-white/20 mt-3" />
       </motion.div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
         {children.map((child, i) => {
           return (
-            <Link href={child.href} key={child.name + i} className="group">
+            <Link href={child.href} key={child.name + i} className="group transition-all">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i < 4 ? i * 0.1 : 0.1, duration: 0.2 }}
-                whileHover={{
-                  y: -10,
-                  transition: { duration: 0.2, ease: 'easeOut' }
-                }}
-                whileTap={{
-                  scale: 0.98
-                }}
-                className="relative flex flex-col h-full w-full rounded-xl overflow-hidden bg-black/30 backdrop-blur-lg shadow-[0_8px_30px_rgba(0,0,0,0.12)] border border-white/5"
+                className="relative flex flex-col gap-4 overflow-visible h-full w-full rounded-xl bg-black/30 backdrop-blur-lg shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
               >
                 {/* Preview image container */}
-                <div className="relative h-[300px] overflow-hidden border-b border-white/5">
-                  <motion.div
-                    className="w-full h-full"
-                    whileHover={{ scale: 1.03 }}
-                    transition={{ duration: 0.4 }}
-                  >
-                    {child?.preview}
-                  </motion.div>
+                <div className="relative group-hover:scale-110 transition-all duration-300 h-[300px] overflow-visible">
+                  <div className="rounded-xl overflow-hidden w-full h-full">{child?.preview}</div>
                   <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
                 </div>
 
                 {/* Content */}
-                <div className="p-6 flex flex-col gap-2 flex-grow">
+                <div className="flex flex-col gap-2 flex-grow">
                   <p className="text-lg font-medium text-white/90 group-hover:text-white">
                     {child.name}
                   </p>
                 </div>
-
-                {/* Subtle indicator */}
-                <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100" />
               </motion.div>
             </Link>
           );

@@ -81,7 +81,6 @@ export default function RootLayout({
       >
         <TopBar />
         {children}
-        <ContactMe />
       </body>
     </html>
   );
