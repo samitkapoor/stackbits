@@ -3,6 +3,12 @@ import './globals.css';
 import ContactMe from '@/components/contact-me';
 import TopBar from '@/components/top-bar';
 import SchemaOrgWrapper from '@/components/schema-org-wrapper';
+import { Inter } from 'next/font/google';
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700']
+});
 
 export const metadata: Metadata = {
   title: 'StackBits - React UI & Full-Stack Code Library',
@@ -61,12 +67,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" type="image/x-icon" href="/stackbits-favicon.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-          rel="stylesheet"
-        />
         <script
           src="https://script.refix.ai/script.min.js"
           type="text/javascript"
@@ -77,7 +77,7 @@ export default function RootLayout({
         <SchemaOrgWrapper />
       </head>
       <body
-        className={`font-poppins antialiased text-white bg-black overflow-x-hidden relative scrollbar-hide`}
+        className={`${inter.className} antialiased text-white bg-black overflow-x-hidden relative scrollbar-hide`}
       >
         <TopBar />
         {children}
