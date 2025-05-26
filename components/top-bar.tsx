@@ -33,7 +33,7 @@ const TopBar = () => {
       </div>
 
       {/* Desktop navigation */}
-      <div className="flex items-center text-white gap-4">
+      <div className="flex items-center text-white gap-2 sm:gap-4">
         {links.map((link) => {
           return (
             <Link key={link.name} href={link.href}>
