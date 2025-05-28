@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
 const BarricadeTape = ({
   text,
@@ -21,13 +22,23 @@ const BarricadeTape = ({
   className?: string;
 }) => {
   let sentence = '';
-  if (typeof text === 'string') sentence = Array(10).fill(text).join(delimiter);
-  else sentence = Array(10).fill(text.join(delimiter)).join(delimiter);
+  if (typeof text === 'string') {
+    sentence = Array(10)
+      .fill(text)
+      .map((item) => ` ${item} `)
+      .join(delimiter);
+  } else {
+    sentence = Array(10)
+      .fill(text.map((item) => ` ${item} `).join(delimiter))
+      .join(delimiter);
+  }
 
   return (
     <motion.div
       initial={{
-        transform: `translateX(${entryFrom === 'left' ? '-50vw' : '50vw'}) rotateZ(${rotation}deg)`,
+        transform: `translateX(${
+          entryFrom === 'left' ? '-100vw' : '100vw'
+        }) rotateZ(${rotation}deg)`,
         scale: 1,
         y: -5
       }}
@@ -38,7 +49,10 @@ const BarricadeTape = ({
         transition: { duration, ease, delay }
       }}
       viewport={{ once: true }}
-      className={`text-black font-bold text-3xl md:text-5xl w-screen flex items-center justify-center gap-5 h-[50px] md:h-[80px] bg-yellow-500 overflow-hidden whitespace-nowrap border-[5px] md:border-[10px] border-black border-dashed ${className}`}
+      className={cn(
+        'text-black font-bold text-3xl md:text-5xl w-[100vw+100vw] flex items-center justify-center gap-5 h-[50px] md:h-[80px] bg-yellow-500 overflow-hidden whitespace-nowrap border-[5px] md:border-[10px] border-black border-dashed',
+        className
+      )}
     >
       {sentence}
     </motion.div>

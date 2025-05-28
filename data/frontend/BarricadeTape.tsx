@@ -37,7 +37,19 @@ export const barricadeTape: Document = {
       {
         heading: 'Install dependencies',
         sectionType: 'component',
-        code: `npm i framer-motion`
+        code: `npm i framer-motion tailwindcss tailwind-merge clsx`
+      },
+      {
+        heading: 'Component',
+        sectionType: 'component',
+        description: 'Create a file lib/utils.ts and paste this code',
+        code: `import { ClassValue, clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+`
       },
       {
         heading: 'Component',
@@ -46,6 +58,7 @@ export const barricadeTape: Document = {
           'Create a file barricade-tape.tsx in your components folder and paste this code',
         code: `import React from 'react';
 import { motion } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
 const BarricadeTape = ({
   text,
@@ -67,13 +80,23 @@ const BarricadeTape = ({
   className?: string;
 }) => {
   let sentence = '';
-  if (typeof text === 'string') sentence = Array(10).fill(text).join(delimiter);
-  else sentence = Array(10).fill(text.join(delimiter)).join(delimiter);
+  if (typeof text === 'string') {
+    sentence = Array(10)
+      .fill(text)
+      .map((item) => \` \${item} \`)
+      .join(delimiter);
+  } else {
+    sentence = Array(10)
+      .fill(text.map((item) => \` \${item} \`).join(delimiter))
+      .join(delimiter);
+  }
 
   return (
     <motion.div
       initial={{
-        transform: \`translateX(\${entryFrom === 'left' ? '-50vw' : '50vw'}) rotateZ(\${rotation}deg)\`,
+        transform: \`translateX(\${
+          entryFrom === 'left' ? '-100vw' : '100vw'
+        }) rotateZ(\${rotation}deg)\`,
         scale: 1,
         y: -5
       }}
@@ -84,7 +107,10 @@ const BarricadeTape = ({
         transition: { duration, ease, delay }
       }}
       viewport={{ once: true }}
-      className={\`text-black font-bold text-3xl md:text-5xl w-screen flex items-center justify-center gap-5 h-[50px] md:h-[80px] bg-yellow-500 overflow-hidden whitespace-nowrap border-[5px] md:border-[10px] border-black border-dashed \${className}\`}
+      className={cn(
+        'text-black font-bold text-3xl md:text-5xl w-[100vw+100vw] flex items-center justify-center gap-5 h-[50px] md:h-[80px] bg-yellow-500 overflow-hidden whitespace-nowrap border-[5px] md:border-[10px] border-black border-dashed',
+        className
+      )}
     >
       {sentence}
     </motion.div>
@@ -97,14 +123,42 @@ export default BarricadeTape;
       {
         heading: 'Usage',
         sectionType: 'usage',
-        code: `<EndToEndBanner
-  text={['BUILD QUICK', 'COPY PASTE']}
-  delimiter={'•'}
-  entryFrom="right"
-  rotation={10}
-  className="bg-yellow-400 mt-2"
-/>
-`
+        code: `<div className="w-full relative h-[500px]">
+<div className="overflow-y-auto overflow-x-hidden w-full flex flex-col gap-5 items-center justify-start h-[1200px]">
+  <div className="h-[500px] flex items-center justify-center text-5xl font-bold">
+    Scroll to see the tape
+  </div>
+  <EndToEndBanner
+    text={['CRIME SCENE', 'DO NOT CROSS']}
+    delimiter={'•'}
+    rotation={2}
+    delay={0.5}
+  />
+  <EndToEndBanner
+    text={['BUILD QUICK', 'COPY PASTE']}
+    delimiter={'•'}
+    entryFrom="right"
+    rotation={-2}
+    className="bg-green-400"
+    delay={0.5}
+  />
+  <EndToEndBanner
+    text={['Stackbits']}
+    delimiter={'•'}
+    entryFrom="right"
+    rotation={2}
+    className="bg-orange-400 mt-10"
+  />
+  <EndToEndBanner
+    text={['GET IT NOW 👇🏻']}
+    delimiter={'•'}
+    entryFrom="left"
+    rotation={-5}
+    className="bg-white mt-10"
+  />
+  <div className="h-[150px] mt-10 w-full"></div>
+</div>
+</div>`
       }
     ]
   }
