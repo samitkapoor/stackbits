@@ -20,8 +20,8 @@ const TopBar = () => {
   return (
     <div className="flex flex-col w-full fixed h-[40px] sm:h-[50px] md:h-[70px] z-[200]">
       <div className="w-full h-[24px] flex items-center justify-center bg-gradient-to-r font-medium from-purple-500 via-indigo-500 to-red-500 text-xs">
-        Stackbits is going through a refresh! Some features may not work as expected. Follow
-        @stackbitss on twitter for updates.
+        Stackbits is going through a refresh! Some features may not be available. Follow @stackbitss
+        on twitter for updates.
       </div>
       <div className="flex items-center justify-between w-full px-4 sm:px-6 md:px-8 h-full bg-gradient-to-b from-black to-transparent">
         <div className="overflow-hidden h-full">
