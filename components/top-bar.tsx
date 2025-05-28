@@ -2,7 +2,6 @@
 
 import { CodeXml, Component } from 'lucide-react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import React from 'react';
 import AnimatedGradientButton from './ui/animated-gradient-button';
 import GlassButton from './ui/glass-button';
@@ -17,8 +16,6 @@ const TopBar = () => {
       )
     }
   ];
-
-  const pathname = usePathname();
 
   return (
     <div className="flex flex-col w-full fixed h-[40px] sm:h-[50px] md:h-[70px] z-[200]">

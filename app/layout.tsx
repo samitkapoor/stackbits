@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import ContactMe from '@/components/contact-me';
 import TopBar from '@/components/top-bar';
 import SchemaOrgWrapper from '@/components/schema-org-wrapper';
 import { Inter } from 'next/font/google';
