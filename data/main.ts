@@ -70,6 +70,7 @@ import { projectsSection, projectsSectionPreview } from './frontend/ProjectsSect
 import { contactSection, contactSectionPreview } from './frontend/ContactSection';
 import { magnetTabs, magnetTabsPreview } from './frontend/MagnetTabs';
 import { navBarPreview, navBar } from './frontend/NavBar';
+import { hiddenTextPreview, hiddenText } from './frontend/HiddenText';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -362,6 +363,13 @@ const sideBarOptions: Array<{
         href: '/docs/gooeywords',
         content: gooeyWords,
         preview: gooeyWordsPreview,
+        isNew: true
+      },
+      {
+        name: 'Hidden Text',
+        href: '/docs/hiddentext',
+        content: hiddenText,
+        preview: hiddenTextPreview,
         isNew: true
       },
       {

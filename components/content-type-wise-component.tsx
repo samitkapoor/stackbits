@@ -183,7 +183,7 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
 
     case 'preview':
       return (
-        <div className="w-full backdrop-blur-lg bg-black/30 rounded-lg border-[2px] border-[#2f2f2fdf] flex items-start justify-start overflow-x-hidden relative">
+        <div className="w-full backdrop-blur-lg bg-black/30 rounded-lg border-[2px] border-[#2f2f2fdf] flex items-start justify-start overflow-x-hidden relative min-h-[500px]">
           {code}
         </div>
       );
