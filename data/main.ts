@@ -54,7 +54,7 @@ import { SearchResult } from '@/components/support-plugin';
 // } from './frontend/GlowingDotsBackground';
 // // import { footer, footerPreview } from './frontend/Footer';
 // import { masonryGrid, masonryGridPreview } from './frontend/MasonryGrid';
-// import { fileStack, fileStackPreview } from './frontend/FileStack';
+import { fileStack, fileStackPreview } from './frontend/FileStack';
 // import { skeumorphicMusicCard, skeumorphicMusicCardPreview } from './frontend/SkeumorphicMusicCard';
 // import { imagePile, imagePilePreview } from './frontend/ImagePile';
 // import { dottedText } from './frontend/DottedText';
@@ -189,12 +189,13 @@ const sideBarOptions: Array<{
       //   content: epicNameDrop,
       //   preview: epicNameDropPreview
       // },
-      // {
-      //   name: 'File Stack',
-      //   href: '/docs/fileStack',
-      //   content: fileStack,
-      //   preview: fileStackPreview
-      // },
+      {
+        name: 'File Stack',
+        href: '/docs/fileStack',
+        content: fileStack,
+        preview: fileStackPreview,
+        isNew: true
+      },
       // { name: 'CustomScrollbar', href: '/docs/customscrollbar', content: customScrollbar },
       // { name: 'Flicker Box', href: '/docs/flickerbox', content: flicker, preview: flickerPreview },
       // {
