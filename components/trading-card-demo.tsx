@@ -31,8 +31,8 @@ const TradingCardDemo = () => {
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-row w-full items-center justify-center gap-6">
         {cards.map((card, index) => (
-          <div className="w-full lg:w-fit flex items-center justify-center">
-            <TradingCard key={index} {...card} />
+          <div key={index} className="w-full lg:w-fit flex items-center justify-center">
+            <TradingCard {...card} />
           </div>
         ))}
       </div>

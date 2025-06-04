@@ -2,9 +2,11 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { SectionInDocument } from '@/data/main';
-import { CodeBlock } from 'react-code-block';
 import { Check, Copy } from 'lucide-react';
 import ShineButton from './ui/shine-button';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { cn } from '@/lib/utils';
 
 interface ContentTypeWiseComponentProps {
   section: SectionInDocument;
@@ -19,38 +21,25 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
   section,
   sectionType
 }) => {
-  // State for copy button feedback
-  const [copy, setCopy] = useState(false);
-
   // Extract commonly used props
   const { content, code, designer, description } = section;
 
   /**
-   * Copies code to clipboard and shows feedback
-   */
-  const handleCopy = (code: string) => {
-    navigator.clipboard.writeText(code);
-    setCopy(true);
-    setTimeout(() => {
-      setCopy(false);
-    }, 500);
-  };
-
-  /**
    * Reusable code block component with copy button
    */
-  const CodeBlockWithCopy = ({
-    code,
-    language,
-    className
-  }: {
-    code: string;
-    language: string;
-    className?: string;
-  }) => {
+  const CodeBlockWithCopy = ({ code, language }: { code: string; language: string }) => {
     const [isExpanded, setIsExpanded] = useState(false);
-    const codeRef = useRef<HTMLDivElement>(null);
     const [isOverflowing, setIsOverflowing] = useState(false);
+    const [isCopied, setIsCopied] = useState(false);
+    const codeRef = useRef<HTMLDivElement>(null);
+
+    const handleCopy = (code: string) => {
+      navigator.clipboard.writeText(code);
+      setIsCopied(true);
+      setTimeout(() => {
+        setIsCopied(false);
+      }, 500);
+    };
 
     useEffect(() => {
       if (codeRef.current) {
@@ -60,9 +49,13 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
 
     return (
       <div className="relative w-full">
-        <div className="absolute top-4 right-4 flex gap-2 z-10">
-          <button onClick={() => handleCopy(code)}>
-            {!copy ? (
+        <div className="absolute top-8 right-6 flex gap-2 z-10">
+          <button
+            onClick={() => {
+              handleCopy(code);
+            }}
+          >
+            {!isCopied ? (
               <Copy className="h-[20px] w-[20px] cursor-pointer opacity-50 hover:opacity-100" />
             ) : (
               <Check className="h-[20px] w-[20px] text-green-500 rounded-full cursor-pointer opacity-50 hover:opacity-100" />
@@ -70,21 +63,38 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
           </button>
         </div>
         <div className="relative">
-          <CodeBlock code={code} language={language}>
-            <CodeBlock.Code
-              ref={codeRef}
-              className={`bg-[#2f2f2f6f] overflow-auto p-6 rounded-xl shadow-lg w-full ${
-                isExpanded ? 'h-auto' : 'max-h-[300px]'
-              } ${className} hide-scrollbar`}
+          <div
+            ref={codeRef}
+            className={cn('relative overflow-hidden', isExpanded ? 'h-auto' : 'max-h-[400px]')}
+          >
+            <SyntaxHighlighter
+              style={oneDark}
+              language={language}
+              PreTag="div"
+              customStyle={{
+                background: '#ffffff11',
+                border: '1px solid #ffffff22',
+                borderRadius: '0.75rem',
+                padding: '1.5rem',
+                fontSize: '0.875rem',
+                lineHeight: '1.5',
+                fontFamily:
+                  "'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', monospace",
+                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
+              }}
+              codeTagProps={{
+                style: {
+                  background: 'transparent',
+                  padding: '0',
+                  fontSize: '0.875rem',
+                  fontFamily:
+                    "'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', monospace"
+                }
+              }}
             >
-              <div className="table-row">
-                <CodeBlock.LineNumber className="table-cell pr-4 text-sm text-gray-500 text-right select-none" />
-                <CodeBlock.LineContent className="table-cell text-sm">
-                  <CodeBlock.Token className={className} />
-                </CodeBlock.LineContent>
-              </div>
-            </CodeBlock.Code>
-          </CodeBlock>
+              {String(code).replace(/\n$/, '')}
+            </SyntaxHighlighter>
+          </div>
           {isOverflowing && !isExpanded && (
             <div className="absolute bottom-10 right-0 left-0 z-20 w-full flex justify-center">
               <ShineButton onClick={() => setIsExpanded(!isExpanded)} className="text-sm">
@@ -219,11 +229,7 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
                 {section.description}
               </p>
             )}
-            <CodeBlockWithCopy
-              code={code}
-              language="javascript"
-              className={sectionType === 'dependencies' ? 'text-gray-300' : ''}
-            />
+            <CodeBlockWithCopy code={code} language="javascript" />
             {section.sentence && <p className="text-sm md:text-[16px] mt-4">{section.sentence}</p>}
           </div>
         );
