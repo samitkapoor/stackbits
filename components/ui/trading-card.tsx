@@ -1,14 +1,15 @@
 import { motion, useAnimationControls } from 'framer-motion';
+import Image from 'next/image';
 import React, { useRef } from 'react';
 
 interface TradingCardProps {
-  illustration: React.ReactNode;
-  rank?: number;
+  imageUrl: string;
+  rank: number;
   name: string;
   description: string;
 }
 
-const TradingCard: React.FC<TradingCardProps> = ({ illustration, rank, name, description }) => {
+const TradingCard: React.FC<TradingCardProps> = ({ imageUrl, rank, name, description }) => {
   const cardRef = useRef<HTMLDivElement>(null);
 
   const backgroundControls = useAnimationControls();
@@ -68,9 +69,11 @@ const TradingCard: React.FC<TradingCardProps> = ({ illustration, rank, name, des
         animate={backgroundControls}
         transition={{ duration: 0.7, ease: 'backOut' }}
       >
-        {illustration}
+        <div className="h-full w-full inset-0 bg-cover bg-center">
+          <Image src={imageUrl} alt={name} fill className="object-cover" />
+        </div>
       </motion.div>
-      {rank && <div className="font-semibold absolute top-5 right-5 z-10">#{rank}</div>}
+      <div className="font-semibold absolute top-5 right-5 z-10 text-white/70">#{rank}</div>
       <motion.div
         animate={contentControls}
         transition={{ duration: 0.5, ease: 'backOut' }}
@@ -88,7 +91,7 @@ const TradingCard: React.FC<TradingCardProps> = ({ illustration, rank, name, des
             );
           })}
         </div>
-        <p className="text-sm">{description}</p>
+        <p className="text-sm text-white/90">{description}</p>
       </motion.div>
     </motion.div>
   );

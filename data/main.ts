@@ -28,7 +28,7 @@ import { barricadeTape, barricadeTapePreview } from './frontend/BarricadeTape';
 // import { glassButton, glassButtonPreview } from './frontend/GlassButton';
 // import { toggleButton, toggleButtonPreview } from './frontend/ToggleButton';
 // import { glassCard, glassCardPreview } from './frontend/GlassCard';
-// import { tradingCard, tradingCardPreview } from './frontend/TradingCard';
+import { tradingCard, tradingCardPreview } from './frontend/TradingCard';
 import { SearchResult } from '@/components/support-plugin';
 // import { expressServer } from './utilities/ExpressServer';
 // import { axiosInterceptor } from './utilities/AxiosInterceptor';
@@ -169,7 +169,7 @@ const sideBarOptions: Array<{
         content: barricadeTape,
         preview: barricadeTapePreview,
         isNew: true
-      }
+      },
       // {
       //   name: 'Browser Window',
       //   href: '/docs/browserwindow',
@@ -305,12 +305,13 @@ const sideBarOptions: Array<{
       //   preview: spotlightGridPreview,
       //   isNew: true
       // },
-      // {
-      //   name: 'Trading Card',
-      //   href: '/docs/tradingCard',
-      //   content: tradingCard,
-      //   preview: tradingCardPreview
-      // },
+      {
+        name: 'Trading Card',
+        href: '/docs/tradingCard',
+        content: tradingCard,
+        preview: tradingCardPreview,
+        isNew: true
+      }
       // {
       //   name: 'Story Avatar',
       //   href: '/docs/storyavatar',

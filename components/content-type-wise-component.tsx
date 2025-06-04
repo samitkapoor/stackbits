@@ -183,7 +183,7 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
 
     case 'preview':
       return (
-        <div className="w-full backdrop-blur-lg bg-black/30 rounded-lg border-[2px] border-[#2f2f2fdf] flex items-start justify-start overflow-x-hidden relative min-h-[500px]">
+        <div className="w-full backdrop-blur-lg bg-black/30 rounded-lg border-[2px] border-[#2f2f2fdf] flex items-center justify-center overflow-x-hidden relative min-h-[500px]">
           {code}
         </div>
       );
@@ -215,7 +215,9 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
         return (
           <div className="flex flex-col">
             {section.description && (
-              <p className="text-sm md:text-[16px] mb-2 w-full">{section.description}</p>
+              <p className="text-sm text-white/80 md:text-[16px] mb-2 w-full">
+                {section.description}
+              </p>
             )}
             <CodeBlockWithCopy
               code={code}

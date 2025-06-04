@@ -42,14 +42,10 @@ export const barricadeTape: Document = {
         heading: 'Preview',
         sectionType: 'preview',
         code: (
-          <div className="w-full h-full flex items-center justify-center">
+          <div className="w-full h-[500px] flex items-center justify-center">
             <BarricadeTapeDemo />
           </div>
         )
-      },
-      {
-        heading: 'Follow below steps 👇🏻',
-        sectionType: 'heading'
       },
       {
         heading: 'Install dependencies',
