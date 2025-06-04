@@ -1,5 +1,5 @@
 import React from 'react';
-import EndToEndBanner from './ui/barricade-tape';
+import BarricadeTape from './ui/barricade-tape';
 
 const BarricadeTapeDemo = () => {
   return (
@@ -8,13 +8,13 @@ const BarricadeTapeDemo = () => {
         <div className="h-[500px] flex items-center justify-center text-5xl font-bold">
           Scroll to see the tape
         </div>
-        <EndToEndBanner
+        <BarricadeTape
           text={['CRIME SCENE', 'DO NOT CROSS']}
           delimiter={'•'}
           rotation={2}
           delay={0.5}
         />
-        <EndToEndBanner
+        <BarricadeTape
           text={['BUILD QUICK', 'COPY PASTE']}
           delimiter={'•'}
           entryFrom="right"
@@ -22,14 +22,14 @@ const BarricadeTapeDemo = () => {
           className="bg-green-400"
           delay={0.5}
         />
-        <EndToEndBanner
+        <BarricadeTape
           text={['Stackbits']}
           delimiter={'•'}
           entryFrom="right"
           rotation={2}
           className="bg-orange-400 mt-10"
         />
-        <EndToEndBanner
+        <BarricadeTape
           text={['GET IT NOW 👇🏻']}
           delimiter={'•'}
           entryFrom="left"

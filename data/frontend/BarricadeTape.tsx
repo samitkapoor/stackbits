@@ -1,9 +1,26 @@
 import BarricadeTapeDemo from '@/components/barricade-tape-demo';
 import { Document } from '../main';
+import BarricadeTape from '@/components/ui/barricade-tape';
 
 export const barricadeTapePreview = (
-  <div className="pt-20 flex items-center justify-center">
-    <BarricadeTapeDemo />
+  <div className="flex items-center justify-center = h-[300px]">
+    <div>
+      <BarricadeTape
+        text={['WELCOME TO THE FUTURE']}
+        delimiter={'🚀'}
+        rotation={3}
+        delay={0.2}
+        className="bg-blue-500"
+      />
+      <BarricadeTape
+        text={['INNOVATE TODAY']}
+        delimiter={'✨'}
+        rotation={-3}
+        entryFrom="right"
+        delay={0.2}
+        className="bg-purple-500"
+      />
+    </div>
   </div>
 );
 
@@ -128,13 +145,13 @@ export default BarricadeTape;
   <div className="h-[500px] flex items-center justify-center text-5xl font-bold">
     Scroll to see the tape
   </div>
-  <EndToEndBanner
+  <BarricadeTape
     text={['CRIME SCENE', 'DO NOT CROSS']}
     delimiter={'•'}
     rotation={2}
     delay={0.5}
   />
-  <EndToEndBanner
+  <BarricadeTape
     text={['BUILD QUICK', 'COPY PASTE']}
     delimiter={'•'}
     entryFrom="right"
@@ -142,14 +159,14 @@ export default BarricadeTape;
     className="bg-green-400"
     delay={0.5}
   />
-  <EndToEndBanner
+  <BarricadeTape
     text={['Stackbits']}
     delimiter={'•'}
     entryFrom="right"
     rotation={2}
     className="bg-orange-400 mt-10"
   />
-  <EndToEndBanner
+  <BarricadeTape
     text={['GET IT NOW 👇🏻']}
     delimiter={'•'}
     entryFrom="left"
