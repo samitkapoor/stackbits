@@ -48,10 +48,10 @@ import { SearchResult } from '@/components/support-plugin';
 // import { topographyBackground, topographyBackgroundPreview } from './frontend/TopographyBackground';
 // // import { textureBackground, textureBackgroundPreview } from './frontend/TextureBackground';
 // import { epicNameDrop, epicNameDropPreview } from './frontend/EpicNameDrop';
-// import {
-//   glowingDotsBackground,
-//   glowingDotsBackgroundPreview
-// } from './frontend/GlowingDotsBackground';
+import {
+  glowingDotsBackground,
+  glowingDotsBackgroundPreview
+} from './frontend/GlowingDotsBackground';
 // // import { footer, footerPreview } from './frontend/Footer';
 // import { masonryGrid, masonryGridPreview } from './frontend/MasonryGrid';
 import { fileStack, fileStackPreview } from './frontend/FileStack';
@@ -196,6 +196,7 @@ const sideBarOptions: Array<{
         preview: fileStackPreview,
         isNew: true
       },
+
       // { name: 'CustomScrollbar', href: '/docs/customscrollbar', content: customScrollbar },
       // { name: 'Flicker Box', href: '/docs/flickerbox', content: flicker, preview: flickerPreview },
       // {
@@ -222,12 +223,13 @@ const sideBarOptions: Array<{
       //   content: glassCard,
       //   preview: glassCardPreview
       // },
-      // {
-      //   name: 'Glowing Dots Background',
-      //   href: '/docs/glowingDotsBackground',
-      //   content: glowingDotsBackground,
-      //   preview: glowingDotsBackgroundPreview
-      // },
+      {
+        name: 'Glowing Dots Background',
+        href: '/docs/glowingDotsBackground',
+        content: glowingDotsBackground,
+        preview: glowingDotsBackgroundPreview,
+        isNew: true
+      },
       // {
       //   name: 'Icon Wheel',
       //   href: '/docs/iconwheel',

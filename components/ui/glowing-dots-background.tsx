@@ -3,12 +3,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
-const GRID_SIZE = 30;
-const FADE_DELAY = 1000;
-
 type GlowingDotsBackgroundProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
+  diameter?: number;
+  fadeDelay?: number;
 };
 
 const getRandomColor = () => {
@@ -16,7 +15,12 @@ const getRandomColor = () => {
   return `${colors[Math.floor(Math.random() * colors.length)]}77`;
 };
 
-const GlowingDotsBackground = ({ children, className }: GlowingDotsBackgroundProps) => {
+const GlowingDotsBackground = ({
+  children,
+  className,
+  diameter = 50,
+  fadeDelay = 1000
+}: GlowingDotsBackgroundProps) => {
   const divRef = useRef<HTMLDivElement>(null);
   const activeCells = useRef<Set<number>>(new Set());
   const [gridSize, setGridSize] = useState({ cols: 0, rows: 0 });
@@ -29,8 +33,8 @@ const GlowingDotsBackground = ({ children, className }: GlowingDotsBackgroundPro
       const height = divRef.current!.offsetHeight;
       const width = divRef.current!.offsetWidth;
       setGridSize({
-        rows: Math.ceil(height / GRID_SIZE),
-        cols: Math.ceil(width / GRID_SIZE)
+        rows: Math.ceil(height / diameter),
+        cols: Math.ceil(width / diameter)
       });
     };
 
@@ -48,7 +52,7 @@ const GlowingDotsBackground = ({ children, className }: GlowingDotsBackgroundPro
     setTimeout(() => {
       activeCells.current.delete(index);
       setHoveredCells((prev) => prev.filter((i) => i !== index));
-    }, FADE_DELAY);
+    }, fadeDelay);
   };
 
   return (
@@ -56,7 +60,7 @@ const GlowingDotsBackground = ({ children, className }: GlowingDotsBackgroundPro
       <div
         id="glowing-dots-background"
         style={{
-          gridTemplateColumns: `repeat(${gridSize.cols}, ${GRID_SIZE}px)`
+          gridTemplateColumns: `repeat(${gridSize.cols}, ${diameter}px)`
         }}
         className="grid overflow-hidden h-full w-full"
       >
@@ -70,7 +74,7 @@ const GlowingDotsBackground = ({ children, className }: GlowingDotsBackgroundPro
                 boxShadow: hoveredCells.includes(i) ? `1px 1px 20px 2px ${getRandomColor()}` : ''
               }}
               transition={{ duration: 0.3 }}
-              className={`h-[${GRID_SIZE}px] w-[${GRID_SIZE}px] border-[1px] rounded-full border-neutral-800`}
+              className={`h-[${diameter}px] w-[${diameter}px] border-[1px] rounded-full border-neutral-800`}
             />
           ))}
       </div>

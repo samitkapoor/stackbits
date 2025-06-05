@@ -20,15 +20,18 @@ export const glowingDotsBackground: Document = {
       {
         heading: '💡 Glowing Dots Background',
         content:
-          "Bring your UI to life with Glowing Graph Background, a high-performance React component that creates a mesmerizing, interactive grid glow effect! 🔥✨ As users hover, random grid cells illuminate with neon colors, smoothly fading out for a futuristic, cyberpunk-inspired aesthetic. Perfect for dashboards, landing pages, hero sections, and modern web designs, this Next.js & Tailwind CSS-powered effect adds a dynamic, lightweight animation without compromising performance. Whether you're building a tech-inspired UI, a sci-fi interface, or an engaging user experience, this glowing grid background makes every interaction feel next-level. 🚀💡",
+          'A stunning interactive React background component featuring a responsive grid of glowing dots. Built with Framer Motion, dots illuminate with vibrant colors on hover, creating an engaging visual effect perfect for modern web applications and landing pages.',
         sectionType: 'paragraph'
       },
       {
         heading: 'Preview',
         sectionType: 'preview',
         code: (
-          <div className="h-full w-full flex flex-col items-center justify-center gap-2">
-            <GlowingDotsBackground className=" text-5xl font-extrabold text-white  rounded-xl flex items-center justify-center h-full w-full">
+          <div className="w-full h-[700px] flex flex-col items-center justify-center gap-2">
+            <GlowingDotsBackground
+              diameter={80}
+              className=" text-5xl font-extrabold text-white  rounded-xl flex items-center justify-center h-full w-full"
+            >
               Glowing Dots Background
             </GlowingDotsBackground>
           </div>
@@ -53,12 +56,11 @@ export const glowingDotsBackground: Document = {
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
-const GRID_SIZE = 30;
-const FADE_DELAY = 1000;
-
 type GlowingDotsBackgroundProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
+  diameter?: number;
+  fadeDelay?: number;
 };
 
 const getRandomColor = () => {
@@ -66,7 +68,12 @@ const getRandomColor = () => {
   return \`\${colors[Math.floor(Math.random() * colors.length)]}77\`;
 };
 
-const GlowingDotsBackground = ({ children, className }: GlowingDotsBackgroundProps) => {
+const GlowingDotsBackground = ({
+  children,
+  className,
+  diameter = 50,
+  fadeDelay = 1000
+}: GlowingDotsBackgroundProps) => {
   const divRef = useRef<HTMLDivElement>(null);
   const activeCells = useRef<Set<number>>(new Set());
   const [gridSize, setGridSize] = useState({ cols: 0, rows: 0 });
@@ -79,8 +86,8 @@ const GlowingDotsBackground = ({ children, className }: GlowingDotsBackgroundPro
       const height = divRef.current!.offsetHeight;
       const width = divRef.current!.offsetWidth;
       setGridSize({
-        rows: Math.ceil(height / GRID_SIZE),
-        cols: Math.ceil(width / GRID_SIZE)
+        rows: Math.ceil(height / diameter),
+        cols: Math.ceil(width / diameter)
       });
     };
 
@@ -98,7 +105,7 @@ const GlowingDotsBackground = ({ children, className }: GlowingDotsBackgroundPro
     setTimeout(() => {
       activeCells.current.delete(index);
       setHoveredCells((prev) => prev.filter((i) => i !== index));
-    }, FADE_DELAY);
+    }, fadeDelay);
   };
 
   return (
@@ -106,7 +113,7 @@ const GlowingDotsBackground = ({ children, className }: GlowingDotsBackgroundPro
       <div
         id="glowing-dots-background"
         style={{
-          gridTemplateColumns: \`repeat(\${gridSize.cols}, \${GRID_SIZE}px)\`
+          gridTemplateColumns: \`repeat(\${gridSize.cols}, \${diameter}px)\`
         }}
         className="grid overflow-hidden h-full w-full"
       >
@@ -120,7 +127,7 @@ const GlowingDotsBackground = ({ children, className }: GlowingDotsBackgroundPro
                 boxShadow: hoveredCells.includes(i) ? \`1px 1px 20px 2px \${getRandomColor()}\` : ''
               }}
               transition={{ duration: 0.3 }}
-              className={\`h-[\${GRID_SIZE}px] w-[\${GRID_SIZE}px] border-[1px] rounded-full border-neutral-800\`}
+              className={\`h-[\${diameter}px] w-[\${diameter}px] border-[1px] rounded-full border-neutral-800\`}
             />
           ))}
       </div>
@@ -139,12 +146,16 @@ const GlowingDotsBackground = ({ children, className }: GlowingDotsBackgroundPro
   );
 };
 
-export default GlowingDotsBackground;`
+export default GlowingDotsBackground;
+`
       },
       {
         heading: 'Usage',
         sectionType: 'usage',
-        code: `<GlowingDotsBackground className=" text-5xl font-extrabold text-white  rounded-xl flex items-center justify-center h-full w-full">
+        code: ` <GlowingDotsBackground
+  diameter={80}
+  className=" text-5xl font-extrabold text-white  rounded-xl flex items-center justify-center h-full w-full"
+>
   Glowing Dots Background
 </GlowingDotsBackground>`
       }
