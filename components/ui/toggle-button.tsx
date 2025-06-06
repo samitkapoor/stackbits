@@ -1,53 +1,84 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { cn } from '@/lib/utils';
+import { AnimatePresence, motion } from 'framer-motion';
 import React, { useState } from 'react';
 
 type ToggleButtonProps = {
   options: Array<{
-    icon: React.ReactNode;
+    label: React.ReactNode;
     value: string;
   }>;
   defaultValue?: string;
-  onChange?: (value: string) => void;
+  className?: string;
+  onClick?: (value: string) => void;
 };
 
-const ToggleButton = ({ options, defaultValue, onChange, ...props }: ToggleButtonProps) => {
-  const [currentIndex, setCurrentIndex] = useState(
-    options.findIndex((option) => option.value === defaultValue) || 0
-  );
+const ToggleButton = ({
+  options,
+  defaultValue,
+  onClick,
+  className,
+  ...props
+}: ToggleButtonProps) => {
+  const [activeValue, setActiveValue] = useState(defaultValue || options[0].value);
 
-  const onClick = () => {
+  const handleClick = (value: string) => {
+    const currentIndex = options.findIndex((option) => option.value === value);
     const nextIndex = (currentIndex + 1) % options.length;
-    setCurrentIndex(nextIndex);
-    if (onChange) onChange(options[nextIndex].value);
+    const newValue = options[nextIndex].value;
+    setActiveValue(newValue);
+
+    if (onClick) onClick(newValue);
   };
 
   return (
-    <motion.div
-      className="relative h-[64px] w-[64px] overflow-hidden rounded-full border-2 border-neutral-600 hover:border-neutral-200 transition-all hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/30"
-      {...props}
-      onClick={onClick}
-      whileTap={{ scale: 0.9 }}
-      transition={{ duration: 0.1, ease: 'backOut' }}
-      role="button"
-      tabIndex={0}
-      onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && onClick()}
-      aria-label="Toggle button"
+    <button
+      onClick={() => handleClick(activeValue)}
+      className={cn(
+        'relative border flex items-center justify-center h-[45px] w-[45px] rounded-full overflow-hidden',
+        className
+      )}
     >
       <motion.div
-        animate={{ y: -currentIndex * 64 }}
-        transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-        className="flex flex-col pb-1"
-        style={{ height: `${options.length * 64}px` }}
+        whileHover={{
+          x: [0, 2, -2, 2, -2, 2, -2, 0]
+        }}
+        transition={{
+          duration: 0.1
+        }}
+        className="relative overflow-hidden h-full w-full flex items-center justify-center"
       >
-        {options.map((option) => (
-          <div key={option.value} className="h-[64px] w-full flex items-center justify-center">
-            {option.icon}
-          </div>
-        ))}
+        <AnimatePresence mode="popLayout">
+          {options.map((option) => {
+            if (option.value !== activeValue) return null;
+
+            return (
+              <motion.div
+                key={option.value}
+                className="absolute flex items-center justify-center"
+                initial={{
+                  y: 40
+                }}
+                animate={{
+                  y: 0
+                }}
+                exit={{
+                  y: -40
+                }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 300,
+                  damping: 20
+                }}
+              >
+                {option.label}
+              </motion.div>
+            );
+          })}
+        </AnimatePresence>
       </motion.div>
-    </motion.div>
+    </button>
   );
 };
 

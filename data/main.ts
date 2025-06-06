@@ -18,15 +18,7 @@ import { introduction } from './getting-started/introduction';
 // import { customLogger } from './utilities/CustomLogger';
 // import { skewedText, skewedTextPreview } from './frontend/SkewedText';
 import { barricadeTape, barricadeTapePreview } from './frontend/BarricadeTape';
-// import { expandableIconButton, expandableIconButtonPreview } from './frontend/ExpandableIconButton';
 // import { countUp, countUpPreview } from './frontend/CountUp';
-// import { copyTextButton, copyTextButtonPreview } from './frontend/CopyTextButton';
-// import {
-//   animatedGradientButton,
-//   animatedGradientButtonPreview
-// } from './frontend/AnimatedGradientButton';
-// import { glassButton, glassButtonPreview } from './frontend/GlassButton';
-// import { toggleButton, toggleButtonPreview } from './frontend/ToggleButton';
 // import { glassCard, glassCardPreview } from './frontend/GlassCard';
 import { tradingCard, tradingCardPreview } from './frontend/TradingCard';
 import { SearchResult } from '@/components/support-plugin';
@@ -34,10 +26,7 @@ import { SearchResult } from '@/components/support-plugin';
 // import { axiosInterceptor } from './utilities/AxiosInterceptor';
 // import { prismaticHaze, prismaticHazePreview } from './frontend/PrismaticHaze';
 // // import { colorCyclone, colorCyclonePreview } from './frontend/ColorCyclone';
-// import { movingBorderButton, movingBorderButtonPreview } from './frontend/MovingBorderButton';
 // import { wavyBackgroundPreview, wavyBackground } from './frontend/WavyBackground';
-// import { navigationButton, navigationButtonPreview } from './frontend/NavigationButton';
-// import { shineButton, shineButtonPreview } from './frontend/ShineButton';
 // import { fadeInText, fadeInTextPreview } from './frontend/FadeInText';
 // import { wavyText, wavyTextPreview } from './frontend/WavyText';
 // import { blurText, blurTextPreview } from './frontend/BlurText';
@@ -55,6 +44,7 @@ import {
 // // import { footer, footerPreview } from './frontend/Footer';
 // import { masonryGrid, masonryGridPreview } from './frontend/MasonryGrid';
 import { fileStack, fileStackPreview } from './frontend/FileStack';
+import { buttons, buttonsPreview } from './frontend/Buttons';
 // import { skeumorphicMusicCard, skeumorphicMusicCardPreview } from './frontend/SkeumorphicMusicCard';
 // import { imagePile, imagePilePreview } from './frontend/ImagePile';
 // import { dottedText } from './frontend/DottedText';
@@ -62,7 +52,6 @@ import { fileStack, fileStackPreview } from './frontend/FileStack';
 // import { gaugeChart, gaugeChartPreview } from './frontend/GaugeChart';
 // import { browserWindow, browserWindowPreview } from './frontend/BrowserWIndow';
 // import { gooeyWords, gooeyWordsPreview } from './frontend/GooeyWords';
-// import { clothButton, clothButtonPreview } from './frontend/ClothButton';
 // import { playingCardsPreview } from './frontend/PlayingCards';
 // import { playingCards } from './frontend/PlayingCards';
 // import { spotlightGrid, spotlightGridPreview } from './frontend/SpotlightGrid';
@@ -168,6 +157,13 @@ const sideBarOptions: Array<{
         href: '/docs/barricadeTape',
         content: barricadeTape,
         preview: barricadeTapePreview,
+        isNew: true
+      },
+      {
+        name: 'Buttons',
+        href: '/docs/buttons',
+        content: buttons,
+        preview: buttonsPreview,
         isNew: true
       },
       // {
@@ -398,65 +394,6 @@ const sideBarOptions: Array<{
   //   ]
   // },
   // {
-  //   title: 'Buttons',
-  //   children: [
-  //     {
-  //       name: 'Animated Gradient Button',
-  //       href: '/docs/animatedgradientbutton',
-  //       content: animatedGradientButton,
-  //       preview: animatedGradientButtonPreview
-  //     },
-  //     {
-  //       name: 'Cloth Button',
-  //       href: '/docs/clothbutton',
-  //       content: clothButton,
-  //       preview: clothButtonPreview
-  //     },
-  //     {
-  //       name: 'Copy Text Button',
-  //       href: '/docs/copytextbutton',
-  //       content: copyTextButton,
-  //       preview: copyTextButtonPreview
-  //     },
-  //     {
-  //       name: 'Glass Button',
-  //       href: '/docs/glassbutton',
-  //       content: glassButton,
-  //       preview: glassButtonPreview
-  //     },
-  //     {
-  //       name: 'Expandable Icon Button',
-  //       href: '/docs/expandableiconbutton',
-  //       content: expandableIconButton,
-  //       preview: expandableIconButtonPreview
-  //     },
-  //     {
-  //       name: 'Moving Border Button',
-  //       href: '/docs/movingborderbutton',
-  //       content: movingBorderButton,
-  //       preview: movingBorderButtonPreview
-  //     },
-  //     {
-  //       name: 'Navigation Button',
-  //       href: '/docs/navigationbutton',
-  //       content: navigationButton,
-  //       preview: navigationButtonPreview
-  //     },
-  //     {
-  //       name: 'Shine Button',
-  //       href: '/docs/shinebutton',
-  //       content: shineButton,
-  //       preview: shineButtonPreview
-  //     },
-  //     {
-  //       name: 'Toggle Button',
-  //       href: '/docs/togglebutton',
-  //       content: toggleButton,
-  //       preview: toggleButtonPreview
-  //     }
-  //   ]
-  // },
-  // {
   //   title: 'Utilities',
   //   children: [
   //     {
@@ -503,7 +440,7 @@ const sideBarOptions: Array<{
   // }
 ];
 
-export const categories = ['buttons', 'texts', 'cards', 'components'];
+export const categories = ['components'];
 
 export const getDocs = (docId: string) => {
   const group = sideBarOptions.filter((tab) =>

@@ -1,5 +1,5 @@
 export const cnCode = {
-  heading: 'Component',
+  heading: 'Utility function',
   sectionType: 'component',
   description: 'Create a file lib/utils.ts and paste this code',
   code: `import { ClassValue, clsx } from 'clsx';

@@ -1,30 +1,96 @@
-import React from 'react';
-import { ArrowUpRight } from 'lucide-react';
+'use client';
+
+import { ArrowUpRight, Eye } from 'lucide-react';
+import Link from 'next/link';
+import React, { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
 interface ButtonProps {
-  children: React.ReactNode;
+  text: string;
   href: string;
   target?: '_self' | '_blank' | '_parent' | '_top';
   className?: string;
   icon?: React.ReactNode;
 }
 
-const NavigationButton: React.FC<ButtonProps> = ({
-  children,
+const NavigationButton = ({
   href,
-  target = '_self',
-  className,
-  icon
-}) => {
+  text = 'Open',
+  icon = undefined,
+  target = '_blank',
+  className = ''
+}: ButtonProps) => {
+  const [hovered, setHovered] = useState(false);
   return (
-    <a
-      href={href}
-      target={target}
-      className={`w-min inline-flex items-center gap-2 px-6 py-3 font-semibold text-white bg-gray-900 border border-gray-700 shadow-lg transition-all duration-200 ease-in-out hover:bg-gray-800 active:scale-95 focus:outline-none ${className}`}
-    >
-      {children}
-      {icon || <ArrowUpRight size={20} />}
-    </a>
+    <div className="flex items-start">
+      <Link href={href} target={target}>
+        <AnimatePresence mode="popLayout">
+          <button
+            className={cn(
+              'flex items-center gap-1 outline-none cursor-pointer text-blue-500 font-semibold bg-slate-900 shadow-sm py-2 px-4 hover:brightness-125 active:brightness-105 transition-opacity duration-100 rounded-md',
+              className
+            )}
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+          >
+            {!hovered && (
+              <motion.div
+                key={'eye-btn' + href}
+                initial={{
+                  x: -10,
+                  opacity: 0
+                }}
+                animate={{
+                  x: 0,
+                  opacity: 1
+                }}
+                exit={{
+                  x: -10,
+                  opacity: 0
+                }}
+                transition={{
+                  ease: 'linear',
+                  duration: 0.1
+                }}
+              >
+                {icon ? icon : <Eye size={14} />}
+              </motion.div>
+            )}
+            <motion.p
+              layout
+              transition={{ duration: 0.1, ease: 'linear' }}
+              className="text-xs sm:text-sm whitespace-nowrap"
+            >
+              {text}
+            </motion.p>
+            {hovered && (
+              <motion.div
+                key={'arrow-btn' + href}
+                initial={{
+                  x: 10,
+                  opacity: 0
+                }}
+                animate={{
+                  x: 0,
+                  opacity: 1
+                }}
+                exit={{
+                  x: 10,
+                  opacity: 0
+                }}
+                transition={{
+                  ease: 'linear',
+                  duration: 0.1
+                }}
+              >
+                <ArrowUpRight size={14} />
+              </motion.div>
+            )}
+          </button>
+        </AnimatePresence>
+      </Link>
+    </div>
   );
 };
 

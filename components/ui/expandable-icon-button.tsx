@@ -1,7 +1,8 @@
 'use client';
 
-import { motion, useAnimationControls } from 'framer-motion';
-import { MouseEventHandler, useEffect, useRef, useState } from 'react';
+import { cn } from '@/lib/utils';
+import { motion } from 'framer-motion';
+import { MouseEventHandler, useRef, useState, useLayoutEffect } from 'react';
 
 type ExpandableIconButtonProps = {
   onClick?: MouseEventHandler<HTMLButtonElement>;
@@ -11,63 +12,75 @@ type ExpandableIconButtonProps = {
 };
 
 const ExpandableIconButton = ({ onClick, icon, text, className }: ExpandableIconButtonProps) => {
-  const buttonControls = useAnimationControls();
-  const textControls = useAnimationControls();
+  const [isHovering, setIsHovering] = useState(false);
+  const [textWidth, setTextWidth] = useState(0);
+  const textRef = useRef<HTMLSpanElement>(null);
 
-  const textRef = useRef<HTMLParagraphElement>(null);
-  const [textWidth, setTextWidth] = useState<number>(0);
-  const iconRef = useRef<HTMLDivElement>(null);
-  const [iconWidth, setIconWidth] = useState<number>(0);
-
-  // ? Measure text width on mount
-  useEffect(() => {
-    if (iconRef.current) {
-      setIconWidth(iconRef.current.offsetWidth);
-    }
+  useLayoutEffect(() => {
     if (textRef.current) {
-      setTextWidth(textRef.current.offsetWidth);
+      setTextWidth(textRef.current.scrollWidth);
     }
-  }, [iconRef, textRef]);
+  }, [text]);
 
-  const onMouseEnter = () => {
-    buttonControls.start({ width: iconWidth + textWidth + 40 });
-    textControls.start('visible');
-  };
-
-  const onMouseLeave = () => {
-    buttonControls.start({ width: iconWidth + 32 });
-    textControls.start('hide');
-  };
+  const collapsedWidth = 52;
+  const expandedWidth = collapsedWidth + textWidth + 8; // 8px for gap
 
   return (
-    <motion.button
+    <button
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
       onClick={onClick}
-      animate={buttonControls}
-      transition={{ duration: 0.4, ease: 'backOut' }}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-      style={{
-        gridTemplateColumns: 'auto 1fr',
-        width: iconWidth + 32,
-        opacity: iconWidth <= 0 ? 0 : 1
-      }}
-      className={`grid grid-cols-2 items-center justify-start gap-[8px] overflow-hidden border-[1px] ${className}`}
+      className="outline-none"
     >
-      <div ref={iconRef} className="p-0 flex items-center justify-center">
-        {icon}
-      </div>
-      <motion.p
-        ref={textRef}
-        initial={{ opacity: 0, scale: 0 }}
-        variants={{
-          visible: { opacity: 1, scale: 1 },
-          hide: { opacity: 0, scale: 0 }
+      <motion.div
+        animate={{
+          width: isHovering ? expandedWidth : collapsedWidth
         }}
-        animate={textControls}
+        transition={{
+          duration: 0.25,
+          ease: [0.4, 0.0, 0.2, 1]
+        }}
+        className={cn(
+          'h-[42px] rounded-full border flex gap-2 px-4 py-3 items-center justify-center overflow-hidden',
+          className
+        )}
       >
+        <div className="shrink-0 whitespace-nowrap">{icon}</div>
+        {isHovering && (
+          <motion.span
+            ref={textRef}
+            initial={{
+              opacity: 0,
+              scale: 0.8,
+              x: -10
+            }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+              x: 0
+            }}
+            exit={{
+              opacity: 0,
+              scale: 0.8,
+              x: -10
+            }}
+            transition={{
+              duration: 0.25,
+              ease: [0.4, 0.0, 0.2, 1],
+              delay: 0.05
+            }}
+            className="whitespace-nowrap"
+          >
+            {text}
+          </motion.span>
+        )}
+      </motion.div>
+
+      {/* Hidden text element for measuring width */}
+      <span ref={textRef} className="absolute invisible whitespace-nowrap" aria-hidden="true">
         {text}
-      </motion.p>
-    </motion.button>
+      </span>
+    </button>
   );
 };
 
