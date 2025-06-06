@@ -30,7 +30,7 @@ export const skeumorphicMusicCard: Document = {
         heading: 'Preview',
         sectionType: 'preview',
         code: (
-          <div className="h-full w-full flex flex-col items-center justify-center gap-2 bg-blue-100 relative">
+          <div className="h-[500px] w-full flex flex-col items-center justify-center gap-2 bg-blue-100 relative">
             <div
               style={{
                 background: 'radial-gradient(circle at center, transparent 60%, #00000028)'

@@ -35,13 +35,13 @@ import {
   glowingDotsBackgroundPreview
 } from './frontend/GlowingDotsBackground';
 // // import { footer, footerPreview } from './frontend/Footer';
-// import { masonryGrid, masonryGridPreview } from './frontend/MasonryGrid';
+import { masonryGrid, masonryGridPreview } from './frontend/MasonryGrid';
 import { fileStack, fileStackPreview } from './frontend/FileStack';
 import { buttons, buttonsPreview } from './frontend/Buttons';
 import { texts, textsPreview } from './frontend/Texts';
 import { gooeyWords, gooeyWordsPreview } from './frontend/GooeyWords';
-// import { skeumorphicMusicCard, skeumorphicMusicCardPreview } from './frontend/SkeumorphicMusicCard';
-// import { imagePile, imagePilePreview } from './frontend/ImagePile';
+import { skeumorphicMusicCard, skeumorphicMusicCardPreview } from './frontend/SkeumorphicMusicCard';
+import { imagePile, imagePilePreview } from './frontend/ImagePile';
 // import { dottedText } from './frontend/DottedText';
 // import { dottedTextPreview } from './frontend/DottedText';
 // import { gaugeChart, gaugeChartPreview } from './frontend/GaugeChart';
@@ -49,12 +49,11 @@ import { gooeyWords, gooeyWordsPreview } from './frontend/GooeyWords';
 // import { gooeyWords, gooeyWordsPreview } from './frontend/GooeyWords';
 // import { playingCardsPreview } from './frontend/PlayingCards';
 // import { playingCards } from './frontend/PlayingCards';
-// import { spotlightGrid, spotlightGridPreview } from './frontend/SpotlightGrid';
+import { spotlightGrid, spotlightGridPreview } from './frontend/SpotlightGrid';
 // import { projectsSection, projectsSectionPreview } from './frontend/ProjectsSection';
 // import { contactSection, contactSectionPreview } from './frontend/ContactSection';
-// import { magnetTabs, magnetTabsPreview } from './frontend/MagnetTabs';
+import { magnetTabs, magnetTabsPreview } from './frontend/MagnetTabs';
 // import { navBarPreview, navBar } from './frontend/NavBar';
-// import { hiddenTextPreview, hiddenText } from './frontend/HiddenText';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -235,31 +234,33 @@ const sideBarOptions: Array<{
       //   content: iconWheel,
       //   preview: iconWheelPreview
       // },
-      // {
-      //   name: 'Image Pile',
-      //   href: '/docs/imagepile',
-      //   content: imagePile,
-      //   preview: imagePilePreview
-      // },
+      {
+        name: 'Image Pile',
+        href: '/docs/imagepile',
+        content: imagePile,
+        preview: imagePilePreview,
+        isNew: true
+      },
       // {
       //   name: 'Lume Card',
       //   href: '/docs/lumecard',
       //   content: lumeCard,
       //   preview: lumeCardPreview
       // },
-      // {
-      //   name: 'Magnet Tabs',
-      //   href: '/docs/magnettabs',
-      //   content: magnetTabs,
-      //   preview: magnetTabsPreview,
-      //   isNew: true
-      // },
-      // {
-      //   name: 'Masonry Grid',
-      //   href: '/docs/masonrygrid',
-      //   content: masonryGrid,
-      //   preview: masonryGridPreview
-      // },
+      {
+        name: 'Magnet Tabs',
+        href: '/docs/magnettabs',
+        content: magnetTabs,
+        preview: magnetTabsPreview,
+        isNew: true
+      },
+      {
+        name: 'Masonry Grid',
+        href: '/docs/masonrygrid',
+        content: masonryGrid,
+        preview: masonryGridPreview,
+        isNew: true
+      },
       // {
       //   name: 'Moving Border Card',
       //   href: '/docs/movingbordercard',
@@ -294,20 +295,20 @@ const sideBarOptions: Array<{
       //   preview: projectsSectionPreview,
       //   isNew: true
       // },
-      // {
-      //   name: 'Skeumorphic Music Card',
-      //   href: '/docs/skeumorphicMusicCard',
-      //   content: skeumorphicMusicCard,
-      //   preview: skeumorphicMusicCardPreview,
-      //   isNew: true
-      // },
-      // {
-      //   name: 'Spotlight Grid',
-      //   href: '/docs/spotlightgrid',
-      //   content: spotlightGrid,
-      //   preview: spotlightGridPreview,
-      //   isNew: true
-      // },
+      {
+        name: 'Skeumorphic Music Card',
+        href: '/docs/skeumorphicMusicCard',
+        content: skeumorphicMusicCard,
+        preview: skeumorphicMusicCardPreview,
+        isNew: true
+      },
+      {
+        name: 'Spotlight Grid',
+        href: '/docs/spotlightgrid',
+        content: spotlightGrid,
+        preview: spotlightGridPreview,
+        isNew: true
+      },
       {
         name: 'Texts',
         href: '/docs/texts',

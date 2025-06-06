@@ -33,7 +33,7 @@ export const imagePile: Document = {
         heading: 'Preview',
         sectionType: 'preview',
         code: (
-          <div className="h-full w-full flex items-center justify-center">
+          <div className="h-[800px] w-full flex items-center justify-center">
             <div className="flex flex-wrap items-center gap-10 justify-center w-[600px]">
               <ImagePile
                 images={[

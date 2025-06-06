@@ -6,11 +6,9 @@ import { useRouter } from 'next/navigation';
 import WavyText from './ui/wavy-text';
 import PrismaticHazeBackground from './ui/prismatic-haze';
 import TradingCardDemo from './trading-card-demo';
-import FileStack from './ui/file-stack';
-import { dataArray } from '@/data/constants';
-import GlassCardDemo from './glass-card-demo';
 import AnimatedGradientButton from './ui/animated-gradient-button';
 import ImagePile from './ui/image-pile';
+import { gooeyWordsPreview } from '@/data/frontend/GooeyWords';
 
 const Components = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -32,11 +30,6 @@ const Components = () => {
       )
     },
     {
-      name: 'File Stack',
-      link: '/docs/filestack',
-      live: <FileStack items={dataArray.slice(21, dataArray.length - 1)}></FileStack>
-    },
-    {
       name: 'Image Pile',
       link: '/docs/imagepile',
       live: (
@@ -54,11 +47,6 @@ const Components = () => {
       )
     },
     {
-      name: 'Glass Card',
-      link: '/docs/glasscard',
-      live: <GlassCardDemo />
-    },
-    {
       name: 'Wavy Text',
       link: '/docs/wavytext',
       live: (
@@ -67,6 +55,11 @@ const Components = () => {
           className="text-blue-500 text-xl sm:text-2xl md:text-3xl font-extrabold"
         />
       )
+    },
+    {
+      name: 'Gooey Words',
+      link: '/docs/gooeywords',
+      live: gooeyWordsPreview
     }
   ];
 
