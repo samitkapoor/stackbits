@@ -27,7 +27,7 @@ export const prismaticHaze: Document = {
         heading: 'Preview',
         sectionType: 'preview',
         code: (
-          <div className="h-full w-full flex flex-col items-center justify-center gap-2">
+          <div className="h-[500px] w-full flex flex-col items-center justify-center gap-2">
             <PrismaticHazeBackground className="flex items-center justify-center">
               <p className="text-black font-extrabold text-5xl">Prismatic Haze Background</p>
             </PrismaticHazeBackground>

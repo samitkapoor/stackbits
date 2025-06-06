@@ -20,7 +20,7 @@ import { tradingCard, tradingCardPreview } from './frontend/TradingCard';
 import { SearchResult } from '@/components/support-plugin';
 // import { expressServer } from './utilities/ExpressServer';
 // import { axiosInterceptor } from './utilities/AxiosInterceptor';
-// import { prismaticHaze, prismaticHazePreview } from './frontend/PrismaticHaze';
+import { prismaticHaze, prismaticHazePreview } from './frontend/PrismaticHaze';
 // // import { colorCyclone, colorCyclonePreview } from './frontend/ColorCyclone';
 // import { wavyBackgroundPreview, wavyBackground } from './frontend/WavyBackground';
 // // import { flipRevealCard, flipRevealCardPreview } from './frontend/FlipRevealCard';
@@ -280,12 +280,13 @@ const sideBarOptions: Array<{
       //   preview: playingCardsPreview,
       //   isNew: true
       // },
-      // {
-      //   name: 'Prismatic Haze Background',
-      //   href: '/docs/prismaticHaze',
-      //   content: prismaticHaze,
-      //   preview: prismaticHazePreview
-      // },
+      {
+        name: 'Prismatic Haze Background',
+        href: '/docs/prismaticHazeBackground',
+        content: prismaticHaze,
+        preview: prismaticHazePreview,
+        isNew: true
+      },
       // {
       //   name: 'Projects Section',
       //   href: '/docs/projectssection',
