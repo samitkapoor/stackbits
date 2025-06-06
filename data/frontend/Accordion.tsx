@@ -37,7 +37,7 @@ export const accordion: Document = {
       {
         heading: 'Install dependencies',
         sectionType: 'component',
-        code: `npm i framer-motion lucide-react`
+        code: `npm i framer-motion lucide-react tailwindcss`
       },
       {
         heading: 'Component',
@@ -75,9 +75,9 @@ const Accordion = ({
         height: isOpen ? 'auto' : '60px', // ? height of the accordion increases when it is open
         background: isOpen
           ? 'linear-gradient(90deg, rgba(255, 99, 71, 1) 50%, rgba(255, 165, 0, 0.8) 100%)'
-          : 'linear-gradient(90deg, rgba(38, 38, 66, 1) 59%, rgba(69, 67, 89, 1) 100%)'
+          : 'linear-gradient(90deg, rgba(38, 38, 66, 0.4) 59%, rgba(69, 67, 89, 0.4) 100%)'
       }}
-      className="shadow-lg rounded-xl overflow-hidden border border-gray-300 w-full relative"
+      className="shadow-lg rounded-xl border border-white/15 overflow-hidden w-full relative"
     >
       <button
         className="text-sm sm:text-[16px] w-full flex justify-between items-center p-5 h-[60px] text-left font-semibold text-white"

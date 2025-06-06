@@ -31,7 +31,6 @@ const AccordionDemo = () => {
 
   return (
     <div className="max-w-md w-full mx-auto p-6 space-y-4">
-      <p>Why use stackbits?</p>
       {accordionItems.map((item, index) => (
         <Accordion
           key={index}
@@ -39,7 +38,6 @@ const AccordionDemo = () => {
           selectAccordion={toggleAccordion}
           item={item}
           index={index}
-          // toggleIcon={<ChevronDown className="text-white h-4 w-4" />} // ? Optional icon to toggle the accordion
         />
       ))}
     </div>

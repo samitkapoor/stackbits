@@ -12,7 +12,7 @@ import { introduction } from './getting-started/introduction';
 // // import { customScrollbar } from './frontend/CustomScrollbar';
 // import { yupValidations } from './utilities/YupValidations';
 // import { darkThemeLightTheme } from './utilities/DarkThemeLightTheme';
-// import { accordion, accordionPreview } from './frontend/Accordion';
+import { accordion, accordionPreview } from './frontend/Accordion';
 // import { customLogger } from './utilities/CustomLogger';
 import { barricadeTape, barricadeTapePreview } from './frontend/BarricadeTape';
 // import { glassCard, glassCardPreview } from './frontend/GlassCard';
@@ -42,11 +42,8 @@ import { texts, textsPreview } from './frontend/Texts';
 import { gooeyWords, gooeyWordsPreview } from './frontend/GooeyWords';
 import { skeumorphicMusicCard, skeumorphicMusicCardPreview } from './frontend/SkeumorphicMusicCard';
 import { imagePile, imagePilePreview } from './frontend/ImagePile';
-// import { dottedText } from './frontend/DottedText';
-// import { dottedTextPreview } from './frontend/DottedText';
 // import { gaugeChart, gaugeChartPreview } from './frontend/GaugeChart';
 // import { browserWindow, browserWindowPreview } from './frontend/BrowserWIndow';
-// import { gooeyWords, gooeyWordsPreview } from './frontend/GooeyWords';
 // import { playingCardsPreview } from './frontend/PlayingCards';
 // import { playingCards } from './frontend/PlayingCards';
 import { spotlightGrid, spotlightGridPreview } from './frontend/SpotlightGrid';
@@ -115,12 +112,13 @@ const sideBarOptions: Array<{
       //   content: flipRevealCard,
       //   preview: flipRevealCardPreview
       // },
-      // {
-      //   name: 'Accordion',
-      //   href: '/docs/accordion',
-      //   content: accordion,
-      //   preview: accordionPreview
-      // },
+      {
+        name: 'Accordion',
+        href: '/docs/accordion',
+        content: accordion,
+        preview: accordionPreview,
+        isNew: true
+      },
       // {
       //   name: 'Color Cyclone',
       //   href: '/docs/colorCyclone',
