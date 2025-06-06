@@ -81,30 +81,6 @@ body {
   }
 }
 
-.glitch {
-  position: relative;
-  display: inline-block;
-  animation: glitch 0.7s infinite;
-}
-
-@keyframes glitch {
-  0% {
-    text-shadow: 3px 3px 0 #ff0d00, -3px -3px 0 #00ffff;
-  }
-  25% {
-    text-shadow: -3px -3px 0 #ff00ff, 3px 3px 0 #00ffff;
-  }
-  50% {
-    text-shadow: 3px -3px 0 #0400ff, -3px 3px 0 #00ffff;
-  }
-  75% {
-    text-shadow: -3px 3px 0 #00ff00, 3px -3px 0 #00ffff;
-  }
-  100% {
-    text-shadow: 3px 3px 0 #ff0d00, -3px -3px 0 #00ffff;
-  }
-}
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);

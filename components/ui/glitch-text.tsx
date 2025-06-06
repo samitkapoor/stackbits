@@ -5,25 +5,39 @@ const GlitchText = ({ children, className }: { children: React.ReactNode; classN
   return (
     <motion.span
       animate={{
-        scale: [1, 1, 1.3, 1, 1, 1, 1],
         x: [0, 0, 0, 2, 0, 2, 2],
         y: [2, -2, -2, 0, 0, 2, 0],
         filter: [
+          'blur(0px)',
+          'blur(0px)',
           'blur(0px)',
           'blur(2px)',
           'blur(4px)',
           'blur(0px)',
           'blur(0px)',
           'blur(0px)',
+          'blur(0px)',
+          'blur(0px)',
+          'blur(4px)',
           'blur(0px)'
+        ],
+        textShadow: [
+          '3px 3px 0 #ff0d00, -3px -3px 0 #00ffff',
+          '-3px -3px 0 #ff00ff, 3px 3px 0 #00ffff',
+          '0px -0px 0 #0400ff, -0px 0px 0 #00ffff',
+          '-0px 0px 0 #00ff00, 0px -0px 0 #00ffff',
+          '0px -0px 0 #0400ff, -0px 0px 0 #00ffff',
+          '-0px 0px 0 #00ff00, 0px -0px 0 #00ffff',
+          '0px -0px 0 #0400ff, -0px 0px 0 #00ffff',
+          '-0px 0px 0 #00ff00, 0px -0px 0 #00ffff',
+          '0px 0px 0 #ff0d00, -3px -3px 0 #00ffff'
         ],
         transition: {
           repeat: Infinity,
-          duration: 0.3,
-          repeatDelay: 1
+          duration: 0.5
         }
       }}
-      className={`glitch ${className}`}
+      className={className}
     >
       {children}
     </motion.span>

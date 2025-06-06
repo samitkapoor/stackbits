@@ -8,16 +8,17 @@ type WavyTextProps = {
 
 const WavyText: FC<WavyTextProps> = ({ text, className }) => {
   return (
-    <div className={`flex flex-wrap overflow-visible ${className}`}>
+    <div className={`flex flex-wrap overflow-visible p-4 ${className}`}>
       {text.split('').map((char, index) => (
         <motion.span
           key={index}
           initial={{ y: '100%' }}
           animate={{ y: [0, -15] }}
           transition={{
-            duration: 1,
+            type: 'spring',
+            stiffness: 100,
+            damping: 20,
             delay: index * 0.1,
-            ease: 'backIn',
             repeat: Infinity,
             repeatType: 'reverse'
           }}

@@ -2,15 +2,18 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
 const HiddenText = ({
   text,
   symbol = '*',
-  delaySpeed = 0.025
+  delaySpeed = 0.025,
+  className = ''
 }: {
   text: string;
   symbol?: string;
   delaySpeed?: number;
+  className?: string;
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [firstTime, setFirstTime] = useState(true);
@@ -31,7 +34,10 @@ const HiddenText = ({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={handleCopy}
-      className="group flex gap-1 overflow-hidden items-center p-0 m-0 cursor-pointer"
+      className={cn(
+        'group flex gap-1 overflow-hidden items-center p-0 m-0 cursor-pointer',
+        className
+      )}
     >
       {displayValue.split(' ').map((word, i) => {
         return (

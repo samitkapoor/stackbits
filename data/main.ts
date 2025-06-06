@@ -10,15 +10,11 @@ import { introduction } from './getting-started/introduction';
 // import { debounce } from './utilities/Debounce';
 // import { lumeCard, lumeCardPreview } from './frontend/LumeCard';
 // // import { customScrollbar } from './frontend/CustomScrollbar';
-// import { glitchText, glitchTextPreview } from './frontend/GlitchText';
 // import { yupValidations } from './utilities/YupValidations';
 // import { darkThemeLightTheme } from './utilities/DarkThemeLightTheme';
 // import { accordion, accordionPreview } from './frontend/Accordion';
-// import { rainbowText, rainbowTextPreview } from './frontend/RainbowText';
 // import { customLogger } from './utilities/CustomLogger';
-// import { skewedText, skewedTextPreview } from './frontend/SkewedText';
 import { barricadeTape, barricadeTapePreview } from './frontend/BarricadeTape';
-// import { countUp, countUpPreview } from './frontend/CountUp';
 // import { glassCard, glassCardPreview } from './frontend/GlassCard';
 import { tradingCard, tradingCardPreview } from './frontend/TradingCard';
 import { SearchResult } from '@/components/support-plugin';
@@ -27,9 +23,6 @@ import { SearchResult } from '@/components/support-plugin';
 // import { prismaticHaze, prismaticHazePreview } from './frontend/PrismaticHaze';
 // // import { colorCyclone, colorCyclonePreview } from './frontend/ColorCyclone';
 // import { wavyBackgroundPreview, wavyBackground } from './frontend/WavyBackground';
-// import { fadeInText, fadeInTextPreview } from './frontend/FadeInText';
-// import { wavyText, wavyTextPreview } from './frontend/WavyText';
-// import { blurText, blurTextPreview } from './frontend/BlurText';
 // // import { flipRevealCard, flipRevealCardPreview } from './frontend/FlipRevealCard';
 // import { movingBorderCard, movingBorderCardPreview } from './frontend/MovingBorderCard';
 // import { iconWheel, iconWheelPreview } from './frontend/IconWheel';
@@ -45,6 +38,7 @@ import {
 // import { masonryGrid, masonryGridPreview } from './frontend/MasonryGrid';
 import { fileStack, fileStackPreview } from './frontend/FileStack';
 import { buttons, buttonsPreview } from './frontend/Buttons';
+import { texts, textsPreview } from './frontend/Texts';
 // import { skeumorphicMusicCard, skeumorphicMusicCardPreview } from './frontend/SkeumorphicMusicCard';
 // import { imagePile, imagePilePreview } from './frontend/ImagePile';
 // import { dottedText } from './frontend/DottedText';
@@ -304,6 +298,13 @@ const sideBarOptions: Array<{
       //   preview: spotlightGridPreview,
       //   isNew: true
       // },
+      {
+        name: 'Texts',
+        href: '/docs/texts',
+        content: texts,
+        preview: textsPreview,
+        isNew: true
+      },
       {
         name: 'Trading Card',
         href: '/docs/tradingCard',
