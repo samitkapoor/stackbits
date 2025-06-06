@@ -15,8 +15,8 @@ import HiddenText from '@/components/ui/hidden-text';
 export const textsPreview = (
   <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden bg-black relative gap-5">
     <Image
-      src="/buttons.png"
-      alt="buttons"
+      src="/texts.png"
+      alt="texts"
       width={800}
       height={800}
       className="w-full h-full object-contain bg-black"
