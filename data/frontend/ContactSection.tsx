@@ -27,42 +27,42 @@ export const contactSection: Document = {
         heading: 'Preview',
         sectionType: 'preview',
         code: (
-          <div className="h-full w-full flex flex-col items-center justify-center gap-2 relative">
+          <div className="h-[650px] w-full flex flex-col items-center justify-center gap-2 relative">
             <ContactSection
               contacts={[
                 {
                   name: 'Gmail',
                   id: 'samitkapoor77@gmail.com',
                   link: 'mailto:samitkapoor77@gmail.com',
-                  logo: <Mail />,
+                  logo: <Mail className="text-red-500" strokeWidth={1} />,
                   message: '100% chance I respond.'
                 },
                 {
                   name: 'X',
                   id: 'samitkapoorr',
                   link: 'https://x.com/samitkapoorr',
-                  logo: <Twitter />,
+                  logo: <Twitter className="text-blue-500" strokeWidth={1} />,
                   message: '100% chance I respond.'
                 },
                 {
                   name: 'Linkedin',
                   id: 'Samit Kapoor',
                   link: 'https://linkedin.com/in/samit-kapoor',
-                  logo: <Linkedin />,
+                  logo: <Linkedin className="text-blue-500" strokeWidth={1} />,
                   message: "Can't promise a timely reply."
                 },
                 {
                   name: 'Instagram',
                   id: 'im_samit',
                   link: 'https://instagram.com/im_samit',
-                  logo: <Instagram />,
+                  logo: <Instagram className="text-pink-500" strokeWidth={1} />,
                   message: "If I see it, I'll respond."
                 },
                 {
                   name: 'Github',
                   id: 'samitkapoor',
                   link: 'https://github.com/samitkapoor',
-                  logo: <Github />,
+                  logo: <Github className="text-green-500" strokeWidth={1} />,
                   message: "You can't text me here, but maybe follow?"
                 }
               ]}

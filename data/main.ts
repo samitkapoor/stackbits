@@ -48,7 +48,7 @@ import { imagePile, imagePilePreview } from './frontend/ImagePile';
 // import { playingCards } from './frontend/PlayingCards';
 import { spotlightGrid, spotlightGridPreview } from './frontend/SpotlightGrid';
 // import { projectsSection, projectsSectionPreview } from './frontend/ProjectsSection';
-// import { contactSection, contactSectionPreview } from './frontend/ContactSection';
+import { contactSection, contactSectionPreview } from './frontend/ContactSection';
 import { magnetTabs, magnetTabsPreview } from './frontend/MagnetTabs';
 // import { navBarPreview, navBar } from './frontend/NavBar';
 
@@ -164,13 +164,13 @@ const sideBarOptions: Array<{
       //   content: browserWindow,
       //   preview: browserWindowPreview
       // },
-      // {
-      //   name: 'Contact Section',
-      //   href: '/docs/contactsection',
-      //   content: contactSection,
-      //   preview: contactSectionPreview,
-      //   isNew: true
-      // },
+      {
+        name: 'Contact Section',
+        href: '/docs/contactsection',
+        content: contactSection,
+        preview: contactSectionPreview,
+        isNew: true
+      },
       // {
       //   name: 'Epic Name Drop',
       //   href: '/docs/epicNameDrop',
