@@ -39,6 +39,7 @@ const ToggleButton = ({
         'relative border flex items-center justify-center h-[45px] w-[45px] rounded-full overflow-hidden',
         className
       )}
+      {...props}
     >
       <motion.div
         whileHover={{

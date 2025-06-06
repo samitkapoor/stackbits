@@ -1,6 +1,6 @@
 import React from 'react';
 import ExpandableIconButton from './ui/expandable-icon-button';
-import { Copy, Mail, Sun, Moon, Rocket, TwitterIcon } from 'lucide-react';
+import { Copy, Sun, Moon, Rocket, TwitterIcon } from 'lucide-react';
 import CopyTextButton from './ui/copy-text-button';
 import AnimatedGradientButton from './ui/animated-gradient-button';
 import GlassButton from './ui/glass-button';
