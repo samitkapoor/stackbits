@@ -11,12 +11,17 @@ import { Rocket } from 'lucide-react';
 import MovingBorderButton from '@/components/ui/moving-border-button';
 import NavigationButton from '@/components/ui/navigation-button';
 import ShineButton from '@/components/ui/shine-button';
+import Image from 'next/image';
 
 export const buttonsPreview = (
-  <div className="h-full w-full flex flex-col items-center justify-center gap-2">
-    <AnimatedGradientButton className="text-lg md:text-xl font-medium !px-5 sm:!px-10 py-4 rounded-lg">
-      Gradient
-    </AnimatedGradientButton>
+  <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden bg-black relative gap-5">
+    <Image
+      src="/buttons.png"
+      alt="buttons"
+      width={800}
+      height={800}
+      className="w-full h-full object-contain bg-black"
+    />
   </div>
 );
 
