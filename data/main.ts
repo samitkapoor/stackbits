@@ -39,6 +39,7 @@ import {
 import { fileStack, fileStackPreview } from './frontend/FileStack';
 import { buttons, buttonsPreview } from './frontend/Buttons';
 import { texts, textsPreview } from './frontend/Texts';
+import { gooeyWords, gooeyWordsPreview } from './frontend/GooeyWords';
 // import { skeumorphicMusicCard, skeumorphicMusicCardPreview } from './frontend/SkeumorphicMusicCard';
 // import { imagePile, imagePilePreview } from './frontend/ImagePile';
 // import { dottedText } from './frontend/DottedText';
@@ -213,6 +214,14 @@ const sideBarOptions: Array<{
       //   content: glassCard,
       //   preview: glassCardPreview
       // },
+      //   name: 'Gooey Words',
+      {
+        name: 'Gooey Words',
+        href: '/docs/gooeywords',
+        content: gooeyWords,
+        preview: gooeyWordsPreview,
+        isNew: true
+      },
       {
         name: 'Glowing Dots Background',
         href: '/docs/glowingDotsBackground',
@@ -326,74 +335,7 @@ const sideBarOptions: Array<{
       // }
     ]
   }
-  // {
-  //   title: 'Texts',
-  //   children: [
-  //     // {
-  //     //   name: 'Blur Text',
-  //     //   href: '/docs/blurtext',
-  //     //   content: blurText,
-  //     //   preview: blurTextPreview
-  //     // },
-  //     // {
-  //     //   name: 'Count Up',
-  //     //   href: '/docs/countup',
-  //     //   content: countUp,
-  //     //   preview: countUpPreview
-  //     // },
-  //     // {
-  //     //   name: 'Dotted Text',
-  //     //   href: '/docs/dottedtext',
-  //     //   content: dottedText,
-  //     //   preview: dottedTextPreview,
-  //     //   isNew: true
-  //     // },
-  //     // {
-  //     //   name: 'Fade In Text',
-  //     //   href: '/docs/fadeintext',
-  //     //   content: fadeInText,
-  //     //   preview: fadeInTextPreview
-  //     // },
-  //     // {
-  //     //   name: 'Glitch Text',
-  //     //   href: '/docs/glitchtext',
-  //     //   content: glitchText,
-  //     //   preview: glitchTextPreview
-  //     // },
-  //     // {
-  //     //   name: 'Gooey Words',
-  //     //   href: '/docs/gooeywords',
-  //     //   content: gooeyWords,
-  //     //   preview: gooeyWordsPreview,
-  //     //   isNew: true
-  //     // },
-  //     // {
-  //     //   name: 'Hidden Text',
-  //     //   href: '/docs/hiddentext',
-  //     //   content: hiddenText,
-  //     //   preview: hiddenTextPreview,
-  //     //   isNew: true
-  //     // },
-  //     // {
-  //     //   name: 'Rainbow Text',
-  //     //   href: '/docs/rainbowtext',
-  //     //   content: rainbowText,
-  //     //   preview: rainbowTextPreview
-  //     // },
-  //     // {
-  //     //   name: 'Skewed Text',
-  //     //   href: '/docs/skewedtext',
-  //     //   content: skewedText,
-  //     //   preview: skewedTextPreview
-  //     // },
-  //     // {
-  //     //   name: 'Wavy Text',
-  //     //   href: '/docs/wavytext',
-  //     //   content: wavyText,
-  //     //   preview: wavyTextPreview
-  //     // }
-  //   ]
-  // },
+
   // {
   //   title: 'Utilities',
   //   children: [
