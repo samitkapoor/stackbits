@@ -3,8 +3,8 @@
 import { CodeXml, Component } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
-import AnimatedGradientButton from './ui/animated-gradient-button';
-import GlassButton from './ui/glass-button';
+import ShineButton from './ui/shine-button';
+import MovingBorderButton from './ui/moving-border-button';
 
 const TopBar = () => {
   const links = [
@@ -35,24 +35,23 @@ const TopBar = () => {
         </div>
 
         {/* Desktop navigation */}
-        <div className="flex items-center text-white gap-2 sm:gap-4">
+        <div className="flex items-center text-white gap-2 ">
           {links.map((link) => {
             return (
               <Link key={link.name} href={link.href}>
-                <GlassButton
-                  wrapperClassName={`!px-2 md:!px-3 !py-2 !rounded-md`}
+                <MovingBorderButton
                   className={`flex items-center gap-1 text-xs sm:text-sm transition-all`}
                 >
                   {link.icon}
                   <p className="text-xs sm:text-sm">{link.name}</p>
-                </GlassButton>
+                </MovingBorderButton>
               </Link>
             );
           })}
           <Link href="/prompt">
-            <AnimatedGradientButton className="!px-2 md:!px-3 !py-2 !rounded-md text-xs sm:text-sm">
+            <ShineButton className="!px-2 md:!px-3 !py-2 !rounded-md text-xs sm:text-sm">
               Request
-            </AnimatedGradientButton>
+            </ShineButton>
           </Link>
         </div>
       </div>
