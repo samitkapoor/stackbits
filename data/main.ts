@@ -394,7 +394,7 @@ export const getDocs = (docId: string) => {
     })
   );
 
-  return group[0].children.filter(
+  return group[0]?.children.filter(
     (child) =>
       child.name.toLowerCase().replaceAll(' ', '') === decodeURIComponent(docId.toLowerCase())
   )[0].content;
