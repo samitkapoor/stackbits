@@ -3,6 +3,7 @@ import './globals.css';
 import TopBar from '@/components/top-bar';
 import SchemaOrgWrapper from '@/components/schema-org-wrapper';
 import { Inter } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -66,12 +67,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" type="image/x-icon" href="/stackbits-favicon.png" />
-        <script
-          src="https://script.refix.ai/script.min.js"
-          type="text/javascript"
-          data-refix-token="21e99321-89fd-4286-9d23-1d9c70fabbd8"
-          defer
-        ></script>
+        <Analytics />
 
         <SchemaOrgWrapper />
       </head>
