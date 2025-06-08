@@ -8,7 +8,11 @@ const DocumentContentBox = ({ docId }: { docId: string }) => {
   const doc = getDocs(docId);
 
   if (!doc) {
-    return <div className="max-w-[1000px] w-full">Couldn't find the page you're looking for.</div>;
+    return (
+      <div className="max-w-[1000px] w-full">
+        Couldn&apos;t find the page you&apos;re looking for.
+      </div>
+    );
   }
 
   const { sideBar, content } = doc;
