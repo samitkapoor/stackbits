@@ -5,21 +5,21 @@ import { installation } from './getting-started/installation';
 import { introduction } from './getting-started/introduction';
 // import { storyAvatar, storyAvatarPreview } from './frontend/StoryAvatar';
 // import { flipBadge, flipBadgePreview } from './frontend/FlipBadge';
-// import { encryptionDecryption } from './utilities/EncryptionDecryption';
-// import { regexValidations } from './utilities/RegexValidations';
-// import { debounce } from './utilities/Debounce';
+import { encryptionDecryption } from './utilities/EncryptionDecryption';
+import { regexValidations } from './utilities/RegexValidations';
+import { debounce } from './utilities/Debounce';
 // import { lumeCard, lumeCardPreview } from './frontend/LumeCard';
 // // import { customScrollbar } from './frontend/CustomScrollbar';
-// import { yupValidations } from './utilities/YupValidations';
-// import { darkThemeLightTheme } from './utilities/DarkThemeLightTheme';
+import { yupValidations } from './utilities/YupValidations';
+import { darkThemeLightTheme } from './utilities/DarkThemeLightTheme';
 import { accordion, accordionPreview } from './frontend/Accordion';
-// import { customLogger } from './utilities/CustomLogger';
+import { customLogger } from './utilities/CustomLogger';
 import { barricadeTape, barricadeTapePreview } from './frontend/BarricadeTape';
 // import { glassCard, glassCardPreview } from './frontend/GlassCard';
 import { tradingCard, tradingCardPreview } from './frontend/TradingCard';
 import { SearchResult } from '@/components/support-plugin';
-// import { expressServer } from './utilities/ExpressServer';
-// import { axiosInterceptor } from './utilities/AxiosInterceptor';
+import { expressServer } from './utilities/ExpressServer';
+import { axiosInterceptor } from './utilities/AxiosInterceptor';
 import { prismaticHaze, prismaticHazePreview } from './frontend/PrismaticHaze';
 // // import { colorCyclone, colorCyclonePreview } from './frontend/ColorCyclone';
 // import { wavyBackgroundPreview, wavyBackground } from './frontend/WavyBackground';
@@ -342,53 +342,53 @@ const sideBarOptions: Array<{
       //   preview: wavyBackgroundPreview
       // }
     ]
-  }
+  },
 
-  // {
-  //   title: 'Utilities',
-  //   children: [
-  //     {
-  //       name: 'Axios Interceptor',
-  //       href: '/docs/axiosinterceptor',
-  //       content: axiosInterceptor
-  //     },
-  //     {
-  //       name: 'Custom Logger',
-  //       href: '/docs/customlogger',
-  //       content: customLogger
-  //     },
-  //     {
-  //       name: 'Dark & Light Theme',
-  //       href: '/docs/dark&lighttheme',
-  //       content: darkThemeLightTheme
-  //     },
-  //     {
-  //       name: 'Debounce',
-  //       href: '/docs/debounce',
-  //       content: debounce
-  //     },
-  //     {
-  //       name: 'Encryption Decryption',
-  //       href: '/docs/encryptiondecryption',
-  //       content: encryptionDecryption
-  //     },
-  //     {
-  //       name: 'Express Server',
-  //       href: '/docs/expressserver',
-  //       content: expressServer
-  //     },
-  //     {
-  //       name: 'Regex Validations',
-  //       href: '/docs/regexvalidations',
-  //       content: regexValidations
-  //     },
-  //     {
-  //       name: 'Yup Validations',
-  //       href: '/docs/yupvalidations',
-  //       content: yupValidations
-  //     }
-  //   ]
-  // }
+  {
+    title: 'Utilities',
+    children: [
+      {
+        name: 'Axios Interceptor',
+        href: '/docs/axiosinterceptor',
+        content: axiosInterceptor
+      },
+      {
+        name: 'Custom Logger',
+        href: '/docs/customlogger',
+        content: customLogger
+      },
+      {
+        name: 'Dark & Light Theme',
+        href: '/docs/dark&lighttheme',
+        content: darkThemeLightTheme
+      },
+      {
+        name: 'Debounce',
+        href: '/docs/debounce',
+        content: debounce
+      },
+      {
+        name: 'Encryption Decryption',
+        href: '/docs/encryptiondecryption',
+        content: encryptionDecryption
+      },
+      {
+        name: 'Express Server',
+        href: '/docs/expressserver',
+        content: expressServer
+      },
+      {
+        name: 'Regex Validations',
+        href: '/docs/regexvalidations',
+        content: regexValidations
+      },
+      {
+        name: 'Yup Validations',
+        href: '/docs/yupvalidations',
+        content: yupValidations
+      }
+    ]
+  }
 ];
 
 export const categories = ['components'];
