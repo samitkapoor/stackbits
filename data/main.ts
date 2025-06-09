@@ -50,6 +50,7 @@ import { spotlightGrid, spotlightGridPreview } from './frontend/SpotlightGrid';
 // import { projectsSection, projectsSectionPreview } from './frontend/ProjectsSection';
 import { contactSection, contactSectionPreview } from './frontend/ContactSection';
 import { magnetTabs, magnetTabsPreview } from './frontend/MagnetTabs';
+import { jellyLoader, jellyLoaderPreview } from './frontend/JellyLoader';
 // import { navBarPreview, navBar } from './frontend/NavBar';
 
 export type SideBarSectionInDocument = {
@@ -250,6 +251,13 @@ const sideBarOptions: Array<{
         href: '/docs/magnettabs',
         content: magnetTabs,
         preview: magnetTabsPreview,
+        isNew: true
+      },
+      {
+        name: 'Jelly Loader',
+        href: '/docs/jellyloader',
+        content: jellyLoader,
+        preview: jellyLoaderPreview,
         isNew: true
       },
       {

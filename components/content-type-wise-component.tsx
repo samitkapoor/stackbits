@@ -120,7 +120,7 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
 
     case 'credits':
       return (
-        <div className="flex gap-1">
+        <div className="flex gap-1 text-white/80">
           {description}
           {designer?.map((item) => {
             return (
