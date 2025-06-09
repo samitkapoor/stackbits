@@ -141,7 +141,7 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
             <div className="flex flex-col items-start justify-between w-full sm:w-[calc(100%-320px)]">
               <div className="flex flex-col items-start justify-start">
                 <p className="font-bold text-white">{project.title}</p>
-                <p>{project.tagLine}</p>
+                <p className="text-sm text-white/80">{project.tagLine}</p>
               </div>
               <div className="flex items-center gap-5 mt-2">
                 {project.hostedLink && (
@@ -171,7 +171,7 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
               <Image src={project.src || ''} alt={project.title} fill className="object-cover" />
             </div>
           </div>
-          <div className="flex flex-col items-start justify-start gap-4 text-justify mt-4">
+          <div className="flex flex-col items-start justify-start gap-4 text-justify mt-4 text-sm text-white/80">
             {project.description.map((description) => {
               return <p key={description}>{description}</p>;
             })}

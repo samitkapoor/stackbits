@@ -47,7 +47,7 @@ import { imagePile, imagePilePreview } from './frontend/ImagePile';
 // import { playingCardsPreview } from './frontend/PlayingCards';
 // import { playingCards } from './frontend/PlayingCards';
 import { spotlightGrid, spotlightGridPreview } from './frontend/SpotlightGrid';
-// import { projectsSection, projectsSectionPreview } from './frontend/ProjectsSection';
+import { projectsSection, projectsSectionPreview } from './frontend/ProjectsSection';
 import { contactSection, contactSectionPreview } from './frontend/ContactSection';
 import { magnetTabs, magnetTabsPreview } from './frontend/MagnetTabs';
 import { jellyLoader, jellyLoaderPreview } from './frontend/JellyLoader';
@@ -294,13 +294,13 @@ const sideBarOptions: Array<{
         preview: prismaticHazePreview,
         isNew: true
       },
-      // {
-      //   name: 'Projects Section',
-      //   href: '/docs/projectssection',
-      //   content: projectsSection,
-      //   preview: projectsSectionPreview,
-      //   isNew: true
-      // },
+      {
+        name: 'Projects Section',
+        href: '/docs/projectssection',
+        content: projectsSection,
+        preview: projectsSectionPreview,
+        isNew: true
+      },
       {
         name: 'Skeumorphic Music Card',
         href: '/docs/skeumorphicMusicCard',

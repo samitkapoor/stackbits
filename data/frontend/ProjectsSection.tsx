@@ -27,7 +27,7 @@ export const projectsSection: Document = {
         heading: 'Preview',
         sectionType: 'preview',
         code: (
-          <div className="h-full w-full flex flex-col items-center justify-center gap-2 relative">
+          <div className="h-[800px] w-full flex flex-col items-center justify-center gap-2 relative">
             <div className="max-w-xl">
               <ProjectsSection
                 projects={[
