@@ -12,10 +12,9 @@ type ProximityLiftGridItem = {
 
 type ProximityLiftGridItemProps = {
   item: ProximityLiftGridItem;
-  index: number;
 };
 
-const ProximityLiftGridItem = ({ item, index }: ProximityLiftGridItemProps) => {
+const ProximityLiftGridItem = ({ item }: ProximityLiftGridItemProps) => {
   const distance = useMotionValue(0);
   const grayScale = useTransform(distance, [0, 100], [0, 1]);
   const scale = useTransform(distance, [0, 100], [1.1, 1]);
@@ -95,8 +94,8 @@ type ProximityLiftGridProps = {
 const ProximityLiftGrid = ({ items = [] }: ProximityLiftGridProps) => {
   return (
     <div className="flex items-center justify-center flex-wrap gap-8 mx-12">
-      {items.map((item, index) => (
-        <ProximityLiftGridItem key={item.image} item={item} index={index} />
+      {items.map((item) => (
+        <ProximityLiftGridItem key={item.image} item={item} />
       ))}
     </div>
   );
