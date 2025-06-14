@@ -51,6 +51,7 @@ import { projectsSection, projectsSectionPreview } from './frontend/ProjectsSect
 import { contactSection, contactSectionPreview } from './frontend/ContactSection';
 import { magnetTabs, magnetTabsPreview } from './frontend/MagnetTabs';
 import { jellyLoader, jellyLoaderPreview } from './frontend/JellyLoader';
+import { proximityLiftGrid, proximityLiftGridPreview } from './frontend/ProximityLiftGrid';
 // import { navBarPreview, navBar } from './frontend/NavBar';
 
 export type SideBarSectionInDocument = {
@@ -227,6 +228,7 @@ const sideBarOptions: Array<{
         preview: glowingDotsBackgroundPreview,
         isNew: true
       },
+
       // {
       //   name: 'Icon Wheel',
       //   href: '/docs/iconwheel',
@@ -238,6 +240,13 @@ const sideBarOptions: Array<{
         href: '/docs/imagepile',
         content: imagePile,
         preview: imagePilePreview,
+        isNew: true
+      },
+      {
+        name: 'Jelly Loader',
+        href: '/docs/jellyloader',
+        content: jellyLoader,
+        preview: jellyLoaderPreview,
         isNew: true
       },
       // {
@@ -253,13 +262,7 @@ const sideBarOptions: Array<{
         preview: magnetTabsPreview,
         isNew: true
       },
-      {
-        name: 'Jelly Loader',
-        href: '/docs/jellyloader',
-        content: jellyLoader,
-        preview: jellyLoaderPreview,
-        isNew: true
-      },
+
       {
         name: 'Masonry Grid',
         href: '/docs/masonrygrid',
@@ -287,6 +290,7 @@ const sideBarOptions: Array<{
       //   preview: playingCardsPreview,
       //   isNew: true
       // },
+
       {
         name: 'Prismatic Haze Background',
         href: '/docs/prismaticHazeBackground',
@@ -299,6 +303,13 @@ const sideBarOptions: Array<{
         href: '/docs/projectssection',
         content: projectsSection,
         preview: projectsSectionPreview,
+        isNew: true
+      },
+      {
+        name: 'Proximity Lift Grid',
+        href: '/docs/proximityliftgrid',
+        content: proximityLiftGrid,
+        preview: proximityLiftGridPreview,
         isNew: true
       },
       {
@@ -343,7 +354,6 @@ const sideBarOptions: Array<{
       // }
     ]
   },
-
   {
     title: 'Utilities',
     children: [
