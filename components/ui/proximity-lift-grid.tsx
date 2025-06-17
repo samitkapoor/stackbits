@@ -45,7 +45,7 @@ const ProximityLiftGridItem = ({ item }: ProximityLiftGridItemProps) => {
       if (distanceFromBottom > 0) positiveDistances.push(distanceFromBottom);
 
       dist = positiveDistances.length > 0 ? Math.max(...positiveDistances) : 0;
-      const maxDistance = 100;
+      const maxDistance = 50;
       const clampedDistance = Math.min(Math.max(dist, 0), maxDistance);
 
       distance.set(clampedDistance);
