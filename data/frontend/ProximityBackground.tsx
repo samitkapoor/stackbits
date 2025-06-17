@@ -1,4 +1,52 @@
-'use client';
+import ProximityBackground from '@/components/ui/proximity-background';
+import { Document } from '../main';
+import { cnCode } from '@/constants/code';
+
+export const proximityBackgroundPreview = (
+  <div className="flex flex-wrap items-center gap-10 p-5 justify-center w-full h-full scale-75">
+    <ProximityBackground circles={40} columns={8} diameter={50} />
+  </div>
+);
+
+export const proximityBackground: Document = {
+  sideBar: {
+    group: 'Components',
+    name: 'Proximity Background',
+    order: 2
+  },
+  content: {
+    sections: [
+      {
+        heading: 'Proximity Background',
+        content:
+          'An interactive background component that creates a grid of colorful circles that respond to mouse movement. This component uses Framer Motion for smooth animations and real-time distance calculations to create an engaging interactive experience.',
+        sectionType: 'paragraph'
+      },
+      {
+        heading: 'Preview',
+        sectionType: 'preview',
+        code: (
+          <div className="h-[800px] w-full flex items-center justify-center">
+            <ProximityBackground circles={90} columns={15} diameter={50} />
+          </div>
+        )
+      },
+      {
+        heading: 'Follow below steps 👇🏻',
+        sectionType: 'heading'
+      },
+      {
+        heading: 'Install dependencies',
+        sectionType: 'dependencies',
+        code: `npm i framer-motion`
+      },
+      cnCode,
+      {
+        heading: 'Component',
+        sectionType: 'component',
+        description:
+          'Create a file proximity-background.tsx in your components folder and paste this code',
+        code: `'use client';
 
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
@@ -61,7 +109,7 @@ const ProximityLiftGridItem = ({ item }: ProximityLiftGridItemProps) => {
   return (
     <motion.div
       style={{
-        filter: useTransform(grayScale, (value) => `grayscale(${value})`),
+        filter: useTransform(grayScale, (value) => \`grayscale(\${value})\`),
         scale
       }}
       ref={ref}
@@ -73,7 +121,7 @@ const ProximityLiftGridItem = ({ item }: ProximityLiftGridItemProps) => {
           alt={item.title}
           width={200}
           height={300}
-          className={`w-full h-[200px] object-cover transition-transform duration-300`}
+          className={\`w-full h-[200px] object-cover transition-transform duration-300\`}
           sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
         />
       </div>
@@ -102,3 +150,13 @@ const ProximityLiftGrid = ({ items = [] }: ProximityLiftGridProps) => {
 };
 
 export default ProximityLiftGrid;
+`
+      },
+      {
+        heading: 'Usage',
+        sectionType: 'usage',
+        code: `<ProximityBackground circles={90} columns={15} diameter={50} />`
+      }
+    ]
+  }
+};

@@ -52,6 +52,7 @@ import { contactSection, contactSectionPreview } from './frontend/ContactSection
 import { magnetTabs, magnetTabsPreview } from './frontend/MagnetTabs';
 import { jellyLoader, jellyLoaderPreview } from './frontend/JellyLoader';
 import { proximityLiftGrid, proximityLiftGridPreview } from './frontend/ProximityLiftGrid';
+import { proximityBackground, proximityBackgroundPreview } from './frontend/ProximityBackground';
 // import { navBarPreview, navBar } from './frontend/NavBar';
 
 export type SideBarSectionInDocument = {
@@ -303,6 +304,13 @@ const sideBarOptions: Array<{
         href: '/docs/projectssection',
         content: projectsSection,
         preview: projectsSectionPreview,
+        isNew: true
+      },
+      {
+        name: 'Proximity Background',
+        href: '/docs/proximitybackground',
+        content: proximityBackground,
+        preview: proximityBackgroundPreview,
         isNew: true
       },
       {
