@@ -48,9 +48,9 @@ const TopBar = () => {
               </Link>
             );
           })}
-          <Link href="/prompt">
+          <Link href="https://github.com/samitkapoor/stackbits">
             <ShineButton className="!px-2 md:!px-3 !py-2 !rounded-md text-xs sm:text-sm">
-              Request
+              Github
             </ShineButton>
           </Link>
         </div>
