@@ -4,7 +4,7 @@
 
 A collection of high-quality, reusable **frontend and backend components** to speed up development. Built with **Next.js, Tailwind CSS, and TypeScript**, StackBits provides ready-to-use UI elements and utility functions to simplify your workflow.
 
-Enhance your projects with **modern design, optimized performance, and developer-friendly components**—so you can focus on building, not reinventing the wheel.
+Enhance your projects with **modern design, optimized performance, and developer-friendly components** so you can focus on building, not reinventing the wheel.
 
 🔗 **Live Demo:** https://stackbits.dev <br/>
 
@@ -41,6 +41,18 @@ Enhance your projects with **modern design, optimized performance, and developer
 | <img width="1707" alt="10" src="public/previews/7.png" /> | <img width="1705" alt="1" src="public/previews/8.png" /> | <img width="1706" alt="2" src="public/previews/9.png" /> |
 
 ---
+
+## 🤝 Contributing
+
+Contributions are welcome! Here's how you can contribute:
+
+- Open an issue and get assigned to it.
+- Fork the repository.
+- Create a new branch for your feature or bug fix.
+- Make your changes and commit them with descriptive messages.
+- Push your changes to your fork.
+- Submit a pull request to the main branch of the original repository.
+  Please ensure your code adheres to the project's coding standards and includes appropriate tests
 
 ## ⭐ Like This Project?
 
