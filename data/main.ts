@@ -53,6 +53,7 @@ import { magnetTabs, magnetTabsPreview } from './frontend/MagnetTabs';
 import { jellyLoader, jellyLoaderPreview } from './frontend/JellyLoader';
 import { proximityLiftGrid, proximityLiftGridPreview } from './frontend/ProximityLiftGrid';
 import { proximityBackground, proximityBackgroundPreview } from './frontend/ProximityBackground';
+import { maskCursorEffect, maskCursorEffectPreview } from './frontend/MaskCursorEffect';
 // import { navBarPreview, navBar } from './frontend/NavBar';
 
 export type SideBarSectionInDocument = {
@@ -256,6 +257,13 @@ const sideBarOptions: Array<{
       //   content: lumeCard,
       //   preview: lumeCardPreview
       // },
+      {
+        name: 'Mask Cursor Effect',
+        href: '/docs/maskcursoreffect',
+        content: maskCursorEffect,
+        preview: maskCursorEffectPreview,
+        isNew: true
+      },
       {
         name: 'Magnet Tabs',
         href: '/docs/magnettabs',
