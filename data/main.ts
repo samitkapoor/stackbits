@@ -54,6 +54,7 @@ import { jellyLoader, jellyLoaderPreview } from './frontend/JellyLoader';
 import { proximityLiftGrid, proximityLiftGridPreview } from './frontend/ProximityLiftGrid';
 import { proximityBackground, proximityBackgroundPreview } from './frontend/ProximityBackground';
 import { maskCursorEffect, maskCursorEffectPreview } from './frontend/MaskCursorEffect';
+import { pixelatedCarousel, pixelatedCarouselPreview } from './frontend/PixelatedCarousel';
 // import { navBarPreview, navBar } from './frontend/NavBar';
 
 export type SideBarSectionInDocument = {
@@ -121,7 +122,7 @@ const sideBarOptions: Array<{
         href: '/docs/accordion',
         content: accordion,
         preview: accordionPreview,
-        isNew: true
+        isNew: false
       },
       // {
       //   name: 'Color Cyclone',
@@ -153,14 +154,14 @@ const sideBarOptions: Array<{
         href: '/docs/barricadeTape',
         content: barricadeTape,
         preview: barricadeTapePreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Buttons',
         href: '/docs/buttons',
         content: buttons,
         preview: buttonsPreview,
-        isNew: true
+        isNew: false
       },
       // {
       //   name: 'Browser Window',
@@ -173,7 +174,7 @@ const sideBarOptions: Array<{
         href: '/docs/contactsection',
         content: contactSection,
         preview: contactSectionPreview,
-        isNew: true
+        isNew: false
       },
       // {
       //   name: 'Epic Name Drop',
@@ -186,7 +187,7 @@ const sideBarOptions: Array<{
         href: '/docs/fileStack',
         content: fileStack,
         preview: fileStackPreview,
-        isNew: true
+        isNew: false
       },
 
       // { name: 'CustomScrollbar', href: '/docs/customscrollbar', content: customScrollbar },
@@ -221,14 +222,14 @@ const sideBarOptions: Array<{
         href: '/docs/gooeywords',
         content: gooeyWords,
         preview: gooeyWordsPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Glowing Dots Background',
         href: '/docs/glowingDotsBackground',
         content: glowingDotsBackground,
         preview: glowingDotsBackgroundPreview,
-        isNew: true
+        isNew: false
       },
 
       // {
@@ -242,14 +243,14 @@ const sideBarOptions: Array<{
         href: '/docs/imagepile',
         content: imagePile,
         preview: imagePilePreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Jelly Loader',
         href: '/docs/jellyloader',
         content: jellyLoader,
         preview: jellyLoaderPreview,
-        isNew: true
+        isNew: false
       },
       // {
       //   name: 'Lume Card',
@@ -269,7 +270,7 @@ const sideBarOptions: Array<{
         href: '/docs/magnettabs',
         content: magnetTabs,
         preview: magnetTabsPreview,
-        isNew: true
+        isNew: false
       },
 
       {
@@ -277,7 +278,7 @@ const sideBarOptions: Array<{
         href: '/docs/masonrygrid',
         content: masonryGrid,
         preview: masonryGridPreview,
-        isNew: true
+        isNew: false
       },
       // {
       //   name: 'Moving Border Card',
@@ -290,71 +291,77 @@ const sideBarOptions: Array<{
       //   href: '/docs/navbar',
       //   content: navBar,
       //   preview: navBarPreview,
-      //   isNew: true
+      //   isNew: false
       // },
       // {
       //   name: 'Playing Cards',
       //   href: '/docs/playingcards',
       //   content: playingCards,
       //   preview: playingCardsPreview,
-      //   isNew: true
+      //   isNew: false
       // },
-
+      {
+        name: 'Pixelated Carousel',
+        href: '/docs/pixelatedcarousel',
+        content: pixelatedCarousel,
+        preview: pixelatedCarouselPreview,
+        isNew: true
+      },
       {
         name: 'Prismatic Haze Background',
         href: '/docs/prismaticHazeBackground',
         content: prismaticHaze,
         preview: prismaticHazePreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Projects Section',
         href: '/docs/projectssection',
         content: projectsSection,
         preview: projectsSectionPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Proximity Background',
         href: '/docs/proximitybackground',
         content: proximityBackground,
         preview: proximityBackgroundPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Proximity Lift Grid',
         href: '/docs/proximityliftgrid',
         content: proximityLiftGrid,
         preview: proximityLiftGridPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Skeumorphic Music Card',
         href: '/docs/skeumorphicMusicCard',
         content: skeumorphicMusicCard,
         preview: skeumorphicMusicCardPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Spotlight Grid',
         href: '/docs/spotlightgrid',
         content: spotlightGrid,
         preview: spotlightGridPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Texts',
         href: '/docs/texts',
         content: texts,
         preview: textsPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Trading Card',
         href: '/docs/tradingCard',
         content: tradingCard,
         preview: tradingCardPreview,
-        isNew: true
+        isNew: false
       }
       // {
       //   name: 'Story Avatar',
