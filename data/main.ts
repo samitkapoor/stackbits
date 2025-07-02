@@ -55,6 +55,7 @@ import { proximityLiftGrid, proximityLiftGridPreview } from './frontend/Proximit
 import { proximityBackground, proximityBackgroundPreview } from './frontend/ProximityBackground';
 import { maskCursorEffect, maskCursorEffectPreview } from './frontend/MaskCursorEffect';
 import { pixelatedCarousel, pixelatedCarouselPreview } from './frontend/PixelatedCarousel';
+import { pixelatedText, pixelatedTextPreview } from './frontend/PixelatedText';
 // import { navBarPreview, navBar } from './frontend/NavBar';
 
 export type SideBarSectionInDocument = {
@@ -305,6 +306,13 @@ const sideBarOptions: Array<{
         href: '/docs/pixelatedcarousel',
         content: pixelatedCarousel,
         preview: pixelatedCarouselPreview,
+        isNew: true
+      },
+      {
+        name: 'Pixelated Text',
+        href: '/docs/pixelatedtext',
+        content: pixelatedText,
+        preview: pixelatedTextPreview,
         isNew: true
       },
       {
