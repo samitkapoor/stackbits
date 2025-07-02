@@ -43,7 +43,7 @@ import { gooeyWords, gooeyWordsPreview } from './frontend/GooeyWords';
 import { skeumorphicMusicCard, skeumorphicMusicCardPreview } from './frontend/SkeumorphicMusicCard';
 import { imagePile, imagePilePreview } from './frontend/ImagePile';
 // import { gaugeChart, gaugeChartPreview } from './frontend/GaugeChart';
-// import { browserWindow, browserWindowPreview } from './frontend/BrowserWIndow';
+import { browserWindow, browserWindowPreview } from './frontend/BrowserWIndow';
 // import { playingCardsPreview } from './frontend/PlayingCards';
 // import { playingCards } from './frontend/PlayingCards';
 import { spotlightGrid, spotlightGridPreview } from './frontend/SpotlightGrid';
@@ -163,12 +163,12 @@ const sideBarOptions: Array<{
         preview: buttonsPreview,
         isNew: false
       },
-      // {
-      //   name: 'Browser Window',
-      //   href: '/docs/browserwindow',
-      //   content: browserWindow,
-      //   preview: browserWindowPreview
-      // },
+      {
+        name: 'Browser Window',
+        href: '/docs/browserwindow',
+        content: browserWindow,
+        preview: browserWindowPreview
+      },
       {
         name: 'Contact Section',
         href: '/docs/contactsection',
