@@ -22,7 +22,7 @@ import { expressServer } from './utilities/ExpressServer';
 import { axiosInterceptor } from './utilities/AxiosInterceptor';
 import { prismaticHaze, prismaticHazePreview } from './frontend/PrismaticHaze';
 // // import { colorCyclone, colorCyclonePreview } from './frontend/ColorCyclone';
-// import { wavyBackgroundPreview, wavyBackground } from './frontend/WavyBackground';
+import { wavyBackgroundPreview, wavyBackground } from './frontend/WavyBackground';
 // // import { flipRevealCard, flipRevealCardPreview } from './frontend/FlipRevealCard';
 // import { movingBorderCard, movingBorderCardPreview } from './frontend/MovingBorderCard';
 // import { iconWheel, iconWheelPreview } from './frontend/IconWheel';
@@ -370,19 +370,20 @@ const sideBarOptions: Array<{
         content: tradingCard,
         preview: tradingCardPreview,
         isNew: false
-      }
+      },
       // {
       //   name: 'Story Avatar',
       //   href: '/docs/storyavatar',
       //   content: storyAvatar,
       //   preview: storyAvatarPreview
       // }
-      // {
-      //   name: 'Wavy Background',
-      //   href: '/docs/wavybackground',
-      //   content: wavyBackground,
-      //   preview: wavyBackgroundPreview
-      // }
+      {
+        name: 'Wavy Background',
+        href: '/docs/wavybackground',
+        content: wavyBackground,
+        preview: wavyBackgroundPreview,
+        isNew: true
+      }
     ]
   },
   {
