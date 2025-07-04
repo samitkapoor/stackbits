@@ -15,7 +15,6 @@ import { darkThemeLightTheme } from './utilities/DarkThemeLightTheme';
 import { accordion, accordionPreview } from './frontend/Accordion';
 import { customLogger } from './utilities/CustomLogger';
 import { barricadeTape, barricadeTapePreview } from './frontend/BarricadeTape';
-// import { glassCard, glassCardPreview } from './frontend/GlassCard';
 import { tradingCard, tradingCardPreview } from './frontend/TradingCard';
 import { SearchResult } from '@/components/support-plugin';
 import { expressServer } from './utilities/ExpressServer';
@@ -56,6 +55,7 @@ import { proximityBackground, proximityBackgroundPreview } from './frontend/Prox
 import { maskCursorEffect, maskCursorEffectPreview } from './frontend/MaskCursorEffect';
 import { pixelatedCarousel, pixelatedCarouselPreview } from './frontend/PixelatedCarousel';
 import { pixelatedText, pixelatedTextPreview } from './frontend/PixelatedText';
+import { glassGrid, glassGridPreview } from './frontend/GlassGrid';
 // import { navBarPreview, navBar } from './frontend/NavBar';
 
 export type SideBarSectionInDocument = {
@@ -211,13 +211,13 @@ const sideBarOptions: Array<{
       //   content: gaugeChart,
       //   preview: gaugeChartPreview
       // },
-      // {
-      //   name: 'Glass Card',
-      //   href: '/docs/glasscard',
-      //   content: glassCard,
-      //   preview: glassCardPreview
-      // },
-      //   name: 'Gooey Words',
+      {
+        name: 'Glass Grid',
+        href: '/docs/glassGrid',
+        content: glassGrid,
+        preview: glassGridPreview,
+        isNew: true
+      },
       {
         name: 'Gooey Words',
         href: '/docs/gooeywords',
