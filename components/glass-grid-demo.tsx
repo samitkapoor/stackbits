@@ -74,7 +74,11 @@ const ExecutiveCard = () => {
 };
 
 const GlassGridDemo = ({ isPreview }: { isPreview?: boolean }) => {
-  const items = [<PortfolioCard />, <AnalyticsCard />, <ExecutiveCard />];
+  const items = [
+    <PortfolioCard key="portfolio" />,
+    <AnalyticsCard key="analytics" />,
+    <ExecutiveCard key="executive" />
+  ];
 
   return (
     <div className={`gap-4 p-4 w-full max-w-4xl h-[800px] flex items-center justify-center`}>
