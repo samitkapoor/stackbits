@@ -56,6 +56,7 @@ import { maskCursorEffect, maskCursorEffectPreview } from './frontend/MaskCursor
 import { pixelatedCarousel, pixelatedCarouselPreview } from './frontend/PixelatedCarousel';
 import { pixelatedText, pixelatedTextPreview } from './frontend/PixelatedText';
 import { glassGrid, glassGridPreview } from './frontend/GlassGrid';
+import { spiderLoader, spiderLoaderPreview } from './frontend/SpiderLoader';
 // import { navBarPreview, navBar } from './frontend/NavBar';
 
 export type SideBarSectionInDocument = {
@@ -349,6 +350,13 @@ const sideBarOptions: Array<{
         content: skeumorphicMusicCard,
         preview: skeumorphicMusicCardPreview,
         isNew: false
+      },
+      {
+        name: 'Spider Loader',
+        href: '/docs/spiderloader',
+        content: spiderLoader,
+        preview: spiderLoaderPreview,
+        isNew: true
       },
       {
         name: 'Spotlight Grid',
