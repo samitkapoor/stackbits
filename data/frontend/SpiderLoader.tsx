@@ -26,7 +26,7 @@ export const spiderLoader: Document = {
         sectionType: 'preview',
         code: (
           <div className="h-[1000px] w-full flex items-center justify-center">
-            <SpiderLoader />
+            <SpiderLoader spiderCount={10} />
           </div>
         )
       },
