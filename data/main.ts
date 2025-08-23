@@ -57,6 +57,7 @@ import { pixelatedCarousel, pixelatedCarouselPreview } from './frontend/Pixelate
 import { pixelatedText, pixelatedTextPreview } from './frontend/PixelatedText';
 import { glassGrid, glassGridPreview } from './frontend/GlassGrid';
 import { spiderLoader, spiderLoaderPreview } from './frontend/SpiderLoader';
+import { sentenceFlip, sentenceFlipPreview } from './frontend/SentenceFlip';
 // import { navBarPreview, navBar } from './frontend/NavBar';
 
 export type SideBarSectionInDocument = {
@@ -343,6 +344,13 @@ const sideBarOptions: Array<{
         content: proximityLiftGrid,
         preview: proximityLiftGridPreview,
         isNew: false
+      },
+      {
+        name: 'Sentence Flip',
+        href: '/docs/sentenceflip',
+        content: sentenceFlip,
+        preview: sentenceFlipPreview,
+        isNew: true
       },
       {
         name: 'Skeumorphic Music Card',
