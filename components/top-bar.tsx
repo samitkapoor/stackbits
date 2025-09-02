@@ -1,6 +1,6 @@
 'use client';
 
-import { CodeXml, Component } from 'lucide-react';
+import { CodeXml, Component, Heading, Joystick, Puzzle } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -10,22 +10,20 @@ const TopBar = () => {
     {
       name: 'Components',
       href: '/docs/components',
-      icon: (
-        <Component className="h-[12px] sm:h-[14px] md:h-[16px] lg:h-[18px] w-[12px] sm:w-[14px] md:w-[16px] lg:w-[18px]" />
-      )
+      icon: <Puzzle className="h-[12px] sm:h-[14px] md:h-[16px] w-[12px] sm:w-[14px] md:w-[16px]" />
     },
     {
       name: 'Buttons',
       href: '/docs/buttons',
       icon: (
-        <Component className="h-[12px] sm:h-[14px] md:h-[16px] lg:h-[18px] w-[12px] sm:w-[14px] md:w-[16px] lg:w-[18px]" />
+        <Joystick className="h-[12px] sm:h-[14px] md:h-[16px] w-[12px] sm:w-[14px] md:w-[16px]" />
       )
     },
     {
       name: 'Texts',
       href: '/docs/text',
       icon: (
-        <Component className="h-[12px] sm:h-[14px] md:h-[16px] lg:h-[18px] w-[12px] sm:w-[14px] md:w-[16px] lg:w-[18px]" />
+        <Heading className="h-[12px] sm:h-[14px] md:h-[16px] w-[12px] sm:w-[14px] md:w-[16px]" />
       )
     }
   ];
@@ -78,7 +76,7 @@ const TopBar = () => {
           {links.map((link) => {
             return (
               <Link key={link.name} href={link.href}>
-                <button className="rounded-md bg-black h-9 w-min px-2 flex items-center justify-center gap-1 text-sm">
+                <button className="rounded-md bg-black hover:bg-[color-mix(in_srgb,black_90%,white)] 0 h-9 w-min px-2 flex items-center justify-center gap-1.5 text-sm">
                   {link.icon}
                   <p className="text-xs sm:text-sm">{link.name}</p>
                 </button>
@@ -86,7 +84,7 @@ const TopBar = () => {
             );
           })}
           <Link href="https://github.com/samitkapoor/stackbits" target="_blank">
-            <button className="rounded-md bg-black h-9 w-min px-2 flex items-center justify-center text-sm">
+            <button className="rounded-md bg-black hover:bg-[color-mix(in_srgb,black_90%,white)] h-9 w-min px-2 flex items-center justify-center text-sm">
               Github
             </button>
           </Link>
