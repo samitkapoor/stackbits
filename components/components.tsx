@@ -18,7 +18,7 @@ const Components = () => {
     {
       name: 'Trading Card',
       link: '/docs/tradingcard',
-      live: <TradingCardDemo />
+      live: <TradingCardDemo variant="minimized" />
     },
     {
       name: 'Prismatic Haze Background',
