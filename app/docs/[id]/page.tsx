@@ -12,16 +12,16 @@ const Page = () => {
 
   return (
     <div className="w-full px-4 pt-4 flex flex-col mt-14">
-      <div className="max-w-3xl place-self-center h-full flex flex-col">
-        {params &&
-          params.id &&
-          typeof params.id === 'string' &&
-          (categories.includes(params.id.toLowerCase()) ? (
-            <CategoryPage docId={params.id} />
-          ) : (
+      {params &&
+        params.id &&
+        typeof params.id === 'string' &&
+        (categories.includes(params.id.toLowerCase()) ? (
+          <CategoryPage docId={params.id} />
+        ) : (
+          <div className="max-w-3xl place-self-start h-full flex flex-col">
             <DocumentContentBox docId={params.id} />
-          ))}
-      </div>
+          </div>
+        ))}
     </div>
   );
 };
