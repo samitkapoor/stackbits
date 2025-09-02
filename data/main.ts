@@ -208,6 +208,13 @@ const sideBarOptions: Array<{
         isNew: false
       },
       {
+        name: 'Gooey Words',
+        href: '/docs/gooeywords',
+        content: gooeyWords,
+        preview: gooeyWordsPreview,
+        isNew: false
+      },
+      {
         name: 'Rainbow Text',
         href: '/docs/rainbowText',
         content: rainbowText,
@@ -255,6 +262,13 @@ const sideBarOptions: Array<{
         content: hiddenText,
         preview: hiddenTextPreview,
         isNew: false
+      },
+      {
+        name: 'Pixelated Text',
+        href: '/docs/pixelatedtext',
+        content: pixelatedText,
+        preview: pixelatedTextPreview,
+        isNew: true
       }
     ]
   },
@@ -360,13 +374,6 @@ const sideBarOptions: Array<{
         isNew: true
       },
       {
-        name: 'Gooey Words',
-        href: '/docs/gooeywords',
-        content: gooeyWords,
-        preview: gooeyWordsPreview,
-        isNew: false
-      },
-      {
         name: 'Glowing Dots Background',
         href: '/docs/glowingDotsBackground',
         content: glowingDotsBackground,
@@ -447,13 +454,6 @@ const sideBarOptions: Array<{
         href: '/docs/pixelatedcarousel',
         content: pixelatedCarousel,
         preview: pixelatedCarouselPreview,
-        isNew: true
-      },
-      {
-        name: 'Pixelated Text',
-        href: '/docs/pixelatedtext',
-        content: pixelatedText,
-        preview: pixelatedTextPreview,
         isNew: true
       },
       {
