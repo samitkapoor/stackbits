@@ -5,6 +5,7 @@ import Link from 'next/link';
 import React from 'react';
 import ShineButton from './ui/shine-button';
 import MovingBorderButton from './ui/moving-border-button';
+import { motion } from 'framer-motion';
 
 const TopBar = () => {
   const links = [
@@ -19,7 +20,28 @@ const TopBar = () => {
 
   return (
     <div className="flex flex-col w-full fixed h-[40px] sm:h-[50px] md:h-[70px] z-[200]">
-      <div className="w-full h-[24px] flex items-center justify-center bg-gradient-to-r font-medium from-purple-500 via-indigo-500 to-red-500 text-xs">
+      <div className="fixed top-0 w-full flex items-start justify-center h-[50px] z-10">
+        <motion.div
+          animate={{
+            background: [
+              'linear-gradient(to right, transparent, #9370DB, #4B0082, #FF6347, transparent)',
+              'linear-gradient(to right, transparent, #4B0082, #FF6347, #9370DB, transparent)',
+              'linear-gradient(to right, transparent, #FF6347, #9370DB, #4B0082, transparent)',
+              'linear-gradient(to right, transparent, #9370DB, #FF6347, #4B0082, transparent)',
+              'linear-gradient(to right, transparent, #4B0082, #9370DB, #FF6347, transparent)',
+              'linear-gradient(to right, transparent, #FF6347, #4B0082, #9370DB, transparent)'
+            ]
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            repeatType: 'reverse'
+          }}
+          className="w-full h-full absolute bottom-8 pointer-events-none left-0 z-0 blur-3xl"
+        />
+      </div>
+
+      <div className="z-10 w-full flex gap-2 items-center justify-center border-b border-black text-xs bg-black">
         Stackbits is going through a refresh! Some features may not be available. Follow @stackbitss
         on twitter for updates.
       </div>
