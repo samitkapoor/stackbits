@@ -26,7 +26,7 @@ export const clothButton: Document = {
       {
         heading: 'Meet the Designer',
         sectionType: 'credits',
-        description: 'All the design credits goes to',
+        description: 'Designed by',
         designer: [{ name: 'Wow Rakibul', link: 'https://www.linkedin.com/in/wowrakibul02' }]
       },
       {

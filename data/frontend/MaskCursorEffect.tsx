@@ -31,7 +31,7 @@ export const maskCursorEffect: Document = {
       {
         heading: 'Meet the Designer',
         sectionType: 'credits',
-        description: 'All the design credits goes to',
+        description: 'Designed by',
         designer: [{ name: 'Minh Pham', link: 'https://minhpham.design' }]
       },
       {
