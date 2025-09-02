@@ -27,10 +27,10 @@ export const glowingDotsBackground: Document = {
         heading: 'Preview',
         sectionType: 'preview',
         code: (
-          <div className="w-full h-[700px] flex flex-col items-center justify-center gap-2">
+          <div className="w-full h-[500px] flex flex-col items-center justify-center gap-2">
             <GlowingDotsBackground
-              diameter={80}
-              className=" text-5xl font-extrabold text-white  rounded-xl flex items-center justify-center h-full w-full"
+              diameter={50}
+              className=" text-5xl font-extrabold text-white rounded-xl flex items-center justify-center h-full w-full"
             >
               Glowing Dots Background
             </GlowingDotsBackground>
