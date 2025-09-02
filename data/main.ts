@@ -36,8 +36,14 @@ import {
 // // import { footer, footerPreview } from './frontend/Footer';
 import { masonryGrid, masonryGridPreview } from './frontend/MasonryGrid';
 import { fileStack, fileStackPreview } from './frontend/FileStack';
-import { buttons, buttonsPreview } from './frontend/Buttons';
-import { texts, textsPreview } from './frontend/Texts';
+import { glitchText, glitchTextPreview } from './text/GlitchText';
+import { rainbowText, rainbowTextPreview } from './text/RainbowText';
+import { skewedText, skewedTextPreview } from './text/SkewedText';
+import { countUp, countUpPreview } from './text/CountUp';
+import { wavyText, wavyTextPreview } from './text/WavyText';
+import { blurText, blurTextPreview } from './text/BlurText';
+import { dottedText, dottedTextPreview } from './text/DottedText';
+import { hiddenText, hiddenTextPreview } from './text/HiddenText';
 import { gooeyWords, gooeyWordsPreview } from './frontend/GooeyWords';
 import { skeumorphicMusicCard, skeumorphicMusicCardPreview } from './frontend/SkeumorphicMusicCard';
 import { imagePile, imagePilePreview } from './frontend/ImagePile';
@@ -58,6 +64,18 @@ import { pixelatedText, pixelatedTextPreview } from './frontend/PixelatedText';
 import { glassGrid, glassGridPreview } from './frontend/GlassGrid';
 import { spiderLoader, spiderLoaderPreview } from './frontend/SpiderLoader';
 import { sentenceFlip, sentenceFlipPreview } from './frontend/SentenceFlip';
+import { expandableIconButton, expandableIconButtonPreview } from './buttons/ExpandableIconButton';
+import { copyButton, copyButtonPreview } from './buttons/CopyButton';
+import {
+  animatedGradientButton,
+  animatedGradientButtonPreview
+} from './buttons/AnimatedGradientButton';
+import { glassButton, glassButtonPreview } from './buttons/GlassButton';
+import { toggleButton, toggleButtonPreview } from './buttons/ToggleButton';
+import { movingBorderButton, movingBorderButtonPreview } from './buttons/MovingBorderButton';
+import { navigationButton, navigationButtonPreview } from './buttons/NavigationButton';
+import { shineButton, shineButtonPreview } from './buttons/ShineButton';
+import { fadeInText, fadeInTextPreview } from './text/FadeInText';
 // import { navBarPreview, navBar } from './frontend/NavBar';
 
 export type SideBarSectionInDocument = {
@@ -112,6 +130,149 @@ const sideBarOptions: Array<{
     ]
   },
   {
+    title: 'Buttons',
+    children: [
+      {
+        name: 'Copy Button',
+        href: '/docs/copyButton',
+        content: copyButton,
+        preview: copyButtonPreview,
+        isNew: false
+      },
+      {
+        name: 'Expandable Icon Button',
+        href: '/docs/expandableIconButton',
+        content: expandableIconButton,
+        preview: expandableIconButtonPreview,
+        isNew: false
+      },
+      {
+        name: 'Animated Gradient Button',
+        href: '/docs/animatedGradientButton',
+        content: animatedGradientButton,
+        preview: animatedGradientButtonPreview,
+        isNew: false
+      },
+      {
+        name: 'Glass Button',
+        href: '/docs/glassButton',
+        content: glassButton,
+        preview: glassButtonPreview,
+        isNew: false
+      },
+      {
+        name: 'Toggle Button',
+        href: '/docs/toggleButton',
+        content: toggleButton,
+        preview: toggleButtonPreview,
+        isNew: false
+      },
+      {
+        name: 'Moving Border Button',
+        href: '/docs/movingBorderButton',
+        content: movingBorderButton,
+        preview: movingBorderButtonPreview,
+        isNew: false
+      },
+      {
+        name: 'Navigation Button',
+        href: '/docs/navigationButton',
+        content: navigationButton,
+        preview: navigationButtonPreview,
+        isNew: false
+      },
+      {
+        name: 'Shine Button',
+        href: '/docs/shineButton',
+        content: shineButton,
+        preview: shineButtonPreview,
+        isNew: false
+      }
+    ]
+  },
+  {
+    title: 'Text',
+    children: [
+      {
+        name: 'Fade In Text',
+        href: '/docs/fadeInText',
+        content: fadeInText,
+        preview: fadeInTextPreview,
+        isNew: false
+      },
+      {
+        name: 'Glitch Text',
+        href: '/docs/glitchText',
+        content: glitchText,
+        preview: glitchTextPreview,
+        isNew: false
+      },
+      {
+        name: 'Gooey Words',
+        href: '/docs/gooeywords',
+        content: gooeyWords,
+        preview: gooeyWordsPreview,
+        isNew: false
+      },
+      {
+        name: 'Rainbow Text',
+        href: '/docs/rainbowText',
+        content: rainbowText,
+        preview: rainbowTextPreview,
+        isNew: false
+      },
+      {
+        name: 'Skewed Text',
+        href: '/docs/skewedText',
+        content: skewedText,
+        preview: skewedTextPreview,
+        isNew: false
+      },
+      {
+        name: 'Count Up',
+        href: '/docs/countUp',
+        content: countUp,
+        preview: countUpPreview,
+        isNew: false
+      },
+      {
+        name: 'Wavy Text',
+        href: '/docs/wavyText',
+        content: wavyText,
+        preview: wavyTextPreview,
+        isNew: false
+      },
+      {
+        name: 'Blur Text',
+        href: '/docs/blurText',
+        content: blurText,
+        preview: blurTextPreview,
+        isNew: false
+      },
+      {
+        name: 'Dotted Text',
+        href: '/docs/dottedText',
+        content: dottedText,
+        preview: dottedTextPreview,
+        isNew: false
+      },
+      {
+        name: 'Hidden Text',
+        href: '/docs/hiddenText',
+        content: hiddenText,
+        preview: hiddenTextPreview,
+        isNew: false
+      },
+      {
+        name: 'Pixelated Text',
+        href: '/docs/pixelatedtext',
+        content: pixelatedText,
+        preview: pixelatedTextPreview,
+        isNew: true
+      }
+    ]
+  },
+  {
     title: 'Components',
     children: [
       // {
@@ -151,19 +312,11 @@ const sideBarOptions: Array<{
       //   content: waveNoiseBackground,
       //   preview: waveNoiseBackgroundPreview
       // },
-
       {
         name: 'Barricade Tape',
         href: '/docs/barricadeTape',
         content: barricadeTape,
         preview: barricadeTapePreview,
-        isNew: false
-      },
-      {
-        name: 'Buttons',
-        href: '/docs/buttons',
-        content: buttons,
-        preview: buttonsPreview,
         isNew: false
       },
       {
@@ -219,13 +372,6 @@ const sideBarOptions: Array<{
         content: glassGrid,
         preview: glassGridPreview,
         isNew: true
-      },
-      {
-        name: 'Gooey Words',
-        href: '/docs/gooeywords',
-        content: gooeyWords,
-        preview: gooeyWordsPreview,
-        isNew: false
       },
       {
         name: 'Glowing Dots Background',
@@ -311,13 +457,6 @@ const sideBarOptions: Array<{
         isNew: true
       },
       {
-        name: 'Pixelated Text',
-        href: '/docs/pixelatedtext',
-        content: pixelatedText,
-        preview: pixelatedTextPreview,
-        isNew: true
-      },
-      {
         name: 'Prismatic Haze Background',
         href: '/docs/prismaticHazeBackground',
         content: prismaticHaze,
@@ -373,13 +512,7 @@ const sideBarOptions: Array<{
         preview: spotlightGridPreview,
         isNew: false
       },
-      {
-        name: 'Texts',
-        href: '/docs/texts',
-        content: texts,
-        preview: textsPreview,
-        isNew: false
-      },
+
       {
         name: 'Trading Card',
         href: '/docs/tradingCard',
