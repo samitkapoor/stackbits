@@ -28,7 +28,7 @@ const DocumentContentBox = ({ docId }: { docId: string }) => {
                 key={(section?.heading || '') + index + Date.now().toString()}
                 className="flex flex-col gap-2"
               >
-                <p className={'font-semibold text-2xl'}>{section.heading}</p>
+                <p className={'font-medium text-2xl'}>{section.heading}</p>
                 <ContentTypeWiseComponent section={section} sectionType={section.sectionType} />
               </div>
             );
