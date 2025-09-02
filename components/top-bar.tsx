@@ -19,17 +19,17 @@ const TopBar = () => {
   ];
 
   return (
-    <div className="flex flex-col w-full fixed h-[40px] sm:h-[50px] md:h-[70px] z-[200]">
-      <div className="fixed top-0 w-full flex items-start justify-center h-[30px] z-0">
+    <div className="flex flex-col w-full fixed h-[40px] sm:h-[50px] md:h-[50px] z-[200]">
+      <div className="fixed top-0 w-full flex items-start justify-center h-[60px] z-0 pointer-events-none">
         <motion.div
           animate={{
             background: [
-              'linear-gradient(to right, transparent, #9370DB, #4B0082, #FF6347, transparent)',
-              'linear-gradient(to right, transparent, #4B0082, #FF6347, #9370DB, transparent)',
-              'linear-gradient(to right, transparent, #FF6347, #9370DB, #4B0082, transparent)',
-              'linear-gradient(to right, transparent, #9370DB, #FF6347, #4B0082, transparent)',
-              'linear-gradient(to right, transparent, #4B0082, #9370DB, #FF6347, transparent)',
-              'linear-gradient(to right, transparent, #FF6347, #4B0082, #9370DB, transparent)'
+              'linear-gradient(to right, transparent, #8A2BE2, #00CED1, #FF4500, transparent)',
+              'linear-gradient(to right, transparent, #00CED1, #FF4500, #8A2BE2, transparent)',
+              'linear-gradient(to right, transparent, #FF4500, #8A2BE2, #00CED1, transparent)',
+              'linear-gradient(to right, transparent, #8A2BE2, #FF4500, #00CED1, transparent)',
+              'linear-gradient(to right, transparent, #00CED1, #8A2BE2, #FF4500, transparent)',
+              'linear-gradient(to right, transparent, #FF4500, #00CED1, #8A2BE2, transparent)'
             ]
           }}
           transition={{
@@ -37,7 +37,7 @@ const TopBar = () => {
             repeat: Infinity,
             repeatType: 'reverse'
           }}
-          className="w-full h-full absolute bottom-8 pointer-events-none left-0 z-0 blur-3xl"
+          className="w-full h-full absolute bottom-8 pointer-events-none left-0 z-0 blur-xl opacity-40"
         />
       </div>
       <div
@@ -47,14 +47,10 @@ const TopBar = () => {
           maskImage: 'linear-gradient(to top, transparent, black)',
           WebkitMaskImage: 'linear-gradient(to top, transparent, black)'
         }}
-        className="fixed top-0 w-full flex items-start justify-center h-[40px] sm:h-[50px] md:h-[70px] z-0"
+        className="fixed top-0 w-full flex items-start justify-center h-[40px] sm:h-[50px] md:h-[50px] z-0"
       ></div>
 
-      <div className="z-10 w-full gap-2 items-center justify-center border-b border-black text-xs bg-black hidden md:flex">
-        Stackbits is going through a refresh! Some features may not be available. Follow @stackbitss
-        on twitter for updates.
-      </div>
-      <div className="flex items-center justify-between w-full px-3 pt-5 md:pt-0 h-full bg-gradient-to-b from-black to-transparent z-10">
+      <div className="flex items-center justify-between w-full px-3 pt-5 md:pt-0 h-full z-10">
         <div className="overflow-hidden h-full">
           <Link
             href="/"
