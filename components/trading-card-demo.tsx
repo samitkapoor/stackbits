@@ -1,6 +1,7 @@
+import { cn } from '@/lib/utils';
 import TradingCard from './ui/trading-card';
 
-const TradingCardDemo = () => {
+const TradingCardDemo = ({ variant = 'default' }: { variant?: 'default' | 'minimized' }) => {
   const cards = [
     {
       imageUrl: 'https://ky008ymy6s.ufs.sh/f/NFGlOqM3XnMdo7u44DpEAkCcBT6MsuPK2yhGzx8aIU5obVlp',
@@ -25,11 +26,13 @@ const TradingCardDemo = () => {
     }
   ];
   return (
-    <div className="h-[700px] flex flex-col items-start justify-start lg:items-center lg:justify-center w-full gap-6">
-      <p className="md:text-2xl font-bold w-full text-center lg:mt-0 mt-10 ">
-        The greatest to have ever played
-      </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-row w-full items-center justify-center gap-6">
+    <div className="flex flex-col items-start justify-start lg:items-center lg:justify-center w-full gap-6">
+      <div
+        className={cn(
+          'w-full items-center justify-center gap-6',
+          variant === 'minimized' ? 'py-0 flex flex-row' : 'py-10 flex flex-col'
+        )}
+      >
         {cards.map((card, index) => (
           <div key={index} className="w-full lg:w-fit flex items-center justify-center">
             <TradingCard {...card} />

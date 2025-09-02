@@ -15,7 +15,7 @@ import { darkThemeLightTheme } from './utilities/DarkThemeLightTheme';
 // import { accordion, accordionPreview } from './frontend/Accordion';
 import { customLogger } from './utilities/CustomLogger';
 // import { barricadeTape, barricadeTapePreview } from './frontend/BarricadeTape';
-// import { tradingCard, tradingCardPreview } from './frontend/TradingCard';
+import { tradingCard, tradingCardPreview } from './frontend/TradingCard';
 import { SearchResult } from '@/components/support-plugin';
 import { expressServer } from './utilities/ExpressServer';
 import { axiosInterceptor } from './utilities/AxiosInterceptor';
@@ -512,13 +512,13 @@ const sideBarOptions: Array<{
       //   preview: spotlightGridPreview,
       //   isNew: false
       // },
-      // {
-      //   name: 'Trading Card',
-      //   href: '/docs/tradingCard',
-      //   content: tradingCard,
-      //   preview: tradingCardPreview,
-      //   isNew: false
-      // },
+      {
+        name: 'Trading Card',
+        href: '/docs/tradingCard',
+        content: tradingCard,
+        preview: tradingCardPreview,
+        isNew: false
+      },
       // {
       //   name: 'Story Avatar',
       //   href: '/docs/storyavatar',
