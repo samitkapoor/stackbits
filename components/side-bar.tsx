@@ -58,7 +58,7 @@ const SideBar = ({ isOpen }: { isOpen: boolean }) => {
                         onMouseEnter={() => setHovered(child.href)}
                         onMouseLeave={() => setHovered(false)}
                         key={j}
-                        className="flex items-center gap-1 relative py-1 "
+                        className="flex items-center gap-1 relative py-1 group"
                       >
                         {isActive && (
                           <motion.div
@@ -74,7 +74,7 @@ const SideBar = ({ isOpen }: { isOpen: boolean }) => {
                             'z-20 relative pl-4 text-sm',
                             pathname === child.href
                               ? 'text-white font-medium'
-                              : 'text-white/70 hover:text-white transition-all'
+                              : 'text-white/70 group-hover:text-white transition-all'
                           )}
                         >
                           {child.name}
