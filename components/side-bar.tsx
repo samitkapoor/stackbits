@@ -65,10 +65,10 @@ const SideBar = ({ isOpen }: { isOpen: boolean }) => {
                             layout
                             layoutId="side-bar-highlight"
                             transition={{ duration: 0.2 }}
-                            className="w-px bg-yellow-500 z-0 absolute top-[0px] h-full"
+                            className="w-[4px] bg-yellow-500 absolute top-[0px] h-full z-10"
                           />
                         )}
-                        <div className="border-l-[2px] border-white/10 z-0 absolute inset-0" />
+                        <div className="border-l-[4px] border-zinc-800 z-0 absolute inset-0" />
                         <p
                           className={cn(
                             'z-20 relative pl-4 text-sm',
