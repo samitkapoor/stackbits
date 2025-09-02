@@ -1,6 +1,6 @@
 'use client';
 
-import { CodeXml, Component, Heading, Joystick, Puzzle } from 'lucide-react';
+import { CodeXml, Heading, Joystick, Puzzle } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 import { motion } from 'framer-motion';

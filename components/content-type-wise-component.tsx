@@ -114,13 +114,13 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
   switch (sectionType) {
     case 'paragraph':
       if (typeof content === 'string') {
-        return <p className="w-full text-sm md:text-[16px] text-white/80">{content}</p>;
+        return <p className="w-full text-sm mt-4 text-white/80">{content}</p>;
       }
       break;
 
     case 'credits':
       return (
-        <div className="flex gap-1 text-white/80">
+        <div className="flex gap-1 text-white/80 mt-6 text-xs md:text-sm">
           {description}
           {designer?.map((item) => {
             return (
@@ -193,7 +193,7 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
 
     case 'preview':
       return (
-        <div className="w-full rounded-lg p-[12px] bg-[#131313]">
+        <div className="w-full rounded-lg p-[12px] bg-[#131313] mt-6">
           <div className="h-full w-full bg-[#040404] border border-white/15 rounded-lg flex items-center justify-center min-h-[500px] relative overflow-x-hidden">
             {code}
           </div>
@@ -217,7 +217,11 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
 
     case 'usage':
       if (typeof code === 'string') {
-        return <CodeBlockWithCopy code={code} language="javascript" />;
+        return (
+          <div className="mt-6">
+            <CodeBlockWithCopy code={code} language="javascript" />
+          </div>
+        );
       }
       break;
 
@@ -227,12 +231,14 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
         return (
           <div className="flex flex-col">
             {section.description && (
-              <p className="text-sm text-white/80 md:text-[16px] mb-2 w-full">
-                {section.description}
-              </p>
+              <p className="text-xs md:text-sm text-white/80 w-full">{section.description}</p>
             )}
-            <CodeBlockWithCopy code={code} language="javascript" />
-            {section.sentence && <p className="text-sm md:text-[16px] mt-4">{section.sentence}</p>}
+            <div className="mt-6">
+              <CodeBlockWithCopy code={code} language="javascript" />
+            </div>
+            {section.sentence && (
+              <p className="text-xs md:text-sm text-white/80 mt-4">{section.sentence}</p>
+            )}
           </div>
         );
       }
