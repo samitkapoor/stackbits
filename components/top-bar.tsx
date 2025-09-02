@@ -3,8 +3,6 @@
 import { CodeXml, Component } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
-import ShineButton from './ui/shine-button';
-import MovingBorderButton from './ui/moving-border-button';
 import { motion } from 'framer-motion';
 
 const TopBar = () => {
