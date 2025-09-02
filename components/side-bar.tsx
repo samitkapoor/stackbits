@@ -26,7 +26,7 @@ const SideBar = ({ isOpen }: { isOpen: boolean }) => {
         } ` + `backdrop-blur-md h-full flex flex-col w-[350px] z-40 px-3`
       }
     >
-      <div className="h-full overflow-y-auto scrollbar-hide flex flex-col gap-8 w-full z-40 pt-10 md:pt-20">
+      <div className="h-full overflow-y-auto scrollbar-hide flex flex-col gap-8 md:pl-4 w-full z-40 pt-10 md:pt-20">
         {tabs.map((group) => {
           return (
             <div key={group.title} className="flex gap-2 flex-col items-start">
@@ -73,7 +73,7 @@ const SideBar = ({ isOpen }: { isOpen: boolean }) => {
                           className={cn(
                             'z-20 relative pl-4 text-sm',
                             pathname === child.href
-                              ? 'text-white font-medium'
+                              ? 'text-yellow-500 font-medium'
                               : 'text-white/70 group-hover:text-white transition-all'
                           )}
                         >

@@ -18,7 +18,7 @@ const DocumentationLayout = ({ children }: { children: React.ReactNode }) => {
         <SideBar isOpen={sideBarIsOpen} />
         <button
           onClick={toggleSideBar}
-          className="lg:hidden absolute top-3 sm:top-4 md:top-6 right-3 z-[1001] rounded-md bg-black h-9 w-9 flex items-center justify-center"
+          className="lg:hidden absolute top-3 sm:top-4 md:top-2 lg:top-6 right-3 z-[1001] rounded-md bg-black h-9 w-9 flex items-center justify-center"
         >
           {sideBarIsOpen ? <X size={16} /> : <Menu size={16} />}
         </button>

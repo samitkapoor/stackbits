@@ -581,7 +581,7 @@ const sideBarOptions: Array<{
   }
 ];
 
-export const categories = ['components'];
+export const categories = ['components', 'buttons', 'text'];
 
 export const getDocs = (docId: string) => {
   const group = sideBarOptions.filter((tab) =>

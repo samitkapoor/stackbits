@@ -13,11 +13,25 @@ const TopBar = () => {
       icon: (
         <Component className="h-[12px] sm:h-[14px] md:h-[16px] lg:h-[18px] w-[12px] sm:w-[14px] md:w-[16px] lg:w-[18px]" />
       )
+    },
+    {
+      name: 'Buttons',
+      href: '/docs/buttons',
+      icon: (
+        <Component className="h-[12px] sm:h-[14px] md:h-[16px] lg:h-[18px] w-[12px] sm:w-[14px] md:w-[16px] lg:w-[18px]" />
+      )
+    },
+    {
+      name: 'Texts',
+      href: '/docs/text',
+      icon: (
+        <Component className="h-[12px] sm:h-[14px] md:h-[16px] lg:h-[18px] w-[12px] sm:w-[14px] md:w-[16px] lg:w-[18px]" />
+      )
     }
   ];
 
   return (
-    <div className="flex flex-col w-full fixed h-[40px] sm:h-[50px] md:h-[50px] z-[200]">
+    <div className="flex flex-col w-full fixed h-[40px] sm:h-[50px] md:h-[50px] px-2 z-[200]">
       <div className="fixed top-0 w-full flex items-start justify-center h-[60px] z-0 pointer-events-none">
         <motion.div
           animate={{
@@ -60,7 +74,7 @@ const TopBar = () => {
         </div>
 
         {/* Desktop navigation */}
-        <div className="flex items-center text-white gap-2 pr-11 lg:pr-0 z-10">
+        <div className="hidden md:flex items-center text-white gap-2 pr-11 lg:pr-0 z-10">
           {links.map((link) => {
             return (
               <Link key={link.name} href={link.href}>
