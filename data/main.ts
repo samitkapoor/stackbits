@@ -36,7 +36,14 @@ import {
 // // import { footer, footerPreview } from './frontend/Footer';
 import { masonryGrid, masonryGridPreview } from './frontend/MasonryGrid';
 import { fileStack, fileStackPreview } from './frontend/FileStack';
-import { texts, textsPreview } from './frontend/Texts';
+import { glitchText, glitchTextPreview } from './text/GlitchText';
+import { rainbowText, rainbowTextPreview } from './text/RainbowText';
+import { skewedText, skewedTextPreview } from './text/SkewedText';
+import { countUp, countUpPreview } from './text/CountUp';
+import { wavyText, wavyTextPreview } from './text/WavyText';
+import { blurText, blurTextPreview } from './text/BlurText';
+import { dottedText, dottedTextPreview } from './text/DottedText';
+import { hiddenText, hiddenTextPreview } from './text/HiddenText';
 import { gooeyWords, gooeyWordsPreview } from './frontend/GooeyWords';
 import { skeumorphicMusicCard, skeumorphicMusicCardPreview } from './frontend/SkeumorphicMusicCard';
 import { imagePile, imagePilePreview } from './frontend/ImagePile';
@@ -68,6 +75,7 @@ import { toggleButton, toggleButtonPreview } from './buttons/ToggleButton';
 import { movingBorderButton, movingBorderButtonPreview } from './buttons/MovingBorderButton';
 import { navigationButton, navigationButtonPreview } from './buttons/NavigationButton';
 import { shineButton, shineButtonPreview } from './buttons/ShineButton';
+import { fadeInText, fadeInTextPreview } from './text/FadeInText';
 // import { navBarPreview, navBar } from './frontend/NavBar';
 
 export type SideBarSectionInDocument = {
@@ -178,6 +186,74 @@ const sideBarOptions: Array<{
         href: '/docs/shineButton',
         content: shineButton,
         preview: shineButtonPreview,
+        isNew: false
+      }
+    ]
+  },
+  {
+    title: 'Text',
+    children: [
+      {
+        name: 'Fade In Text',
+        href: '/docs/fadeInText',
+        content: fadeInText,
+        preview: fadeInTextPreview,
+        isNew: false
+      },
+      {
+        name: 'Glitch Text',
+        href: '/docs/glitchText',
+        content: glitchText,
+        preview: glitchTextPreview,
+        isNew: false
+      },
+      {
+        name: 'Rainbow Text',
+        href: '/docs/rainbowText',
+        content: rainbowText,
+        preview: rainbowTextPreview,
+        isNew: false
+      },
+      {
+        name: 'Skewed Text',
+        href: '/docs/skewedText',
+        content: skewedText,
+        preview: skewedTextPreview,
+        isNew: false
+      },
+      {
+        name: 'Count Up',
+        href: '/docs/countUp',
+        content: countUp,
+        preview: countUpPreview,
+        isNew: false
+      },
+      {
+        name: 'Wavy Text',
+        href: '/docs/wavyText',
+        content: wavyText,
+        preview: wavyTextPreview,
+        isNew: false
+      },
+      {
+        name: 'Blur Text',
+        href: '/docs/blurText',
+        content: blurText,
+        preview: blurTextPreview,
+        isNew: false
+      },
+      {
+        name: 'Dotted Text',
+        href: '/docs/dottedText',
+        content: dottedText,
+        preview: dottedTextPreview,
+        isNew: false
+      },
+      {
+        name: 'Hidden Text',
+        href: '/docs/hiddenText',
+        content: hiddenText,
+        preview: hiddenTextPreview,
         isNew: false
       }
     ]
@@ -436,13 +512,7 @@ const sideBarOptions: Array<{
         preview: spotlightGridPreview,
         isNew: false
       },
-      {
-        name: 'Texts',
-        href: '/docs/texts',
-        content: texts,
-        preview: textsPreview,
-        isNew: false
-      },
+
       {
         name: 'Trading Card',
         href: '/docs/tradingCard',
