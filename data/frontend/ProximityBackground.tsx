@@ -26,8 +26,8 @@ export const proximityBackground: Document = {
         heading: 'Preview',
         sectionType: 'preview',
         code: (
-          <div className="h-[800px] w-full flex items-center justify-center">
-            <ProximityBackground circles={90} columns={15} diameter={50} />
+          <div className="w-full flex items-center justify-center">
+            <ProximityBackground circles={40} columns={8} diameter={50} />
           </div>
         )
       },

@@ -31,8 +31,8 @@ export const pixelatedCarousel: Document = {
         heading: 'Preview',
         sectionType: 'preview',
         code: (
-          <div className="h-[1000px] w-full flex items-center justify-center">
-            <div className="h-[500px] w-[800px]">
+          <div className="w-full flex items-center justify-center">
+            <div className="h-[300px] w-[500px]">
               <PixelatedCarousel
                 pixelSize={50}
                 pixelTransitionDuration={0.01}

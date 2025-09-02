@@ -12,10 +12,10 @@ import { debounce } from './utilities/Debounce';
 // // import { customScrollbar } from './frontend/CustomScrollbar';
 import { yupValidations } from './utilities/YupValidations';
 import { darkThemeLightTheme } from './utilities/DarkThemeLightTheme';
-import { accordion, accordionPreview } from './frontend/Accordion';
+// import { accordion, accordionPreview } from './frontend/Accordion';
 import { customLogger } from './utilities/CustomLogger';
-import { barricadeTape, barricadeTapePreview } from './frontend/BarricadeTape';
-import { tradingCard, tradingCardPreview } from './frontend/TradingCard';
+// import { barricadeTape, barricadeTapePreview } from './frontend/BarricadeTape';
+// import { tradingCard, tradingCardPreview } from './frontend/TradingCard';
 import { SearchResult } from '@/components/support-plugin';
 import { expressServer } from './utilities/ExpressServer';
 import { axiosInterceptor } from './utilities/AxiosInterceptor';
@@ -35,10 +35,10 @@ import {
 } from './frontend/GlowingDotsBackground';
 // // import { footer, footerPreview } from './frontend/Footer';
 import { masonryGrid, masonryGridPreview } from './frontend/MasonryGrid';
-import { fileStack, fileStackPreview } from './frontend/FileStack';
+// import { fileStack, fileStackPreview } from './frontend/FileStack';
 import { glitchText, glitchTextPreview } from './text/GlitchText';
 import { rainbowText, rainbowTextPreview } from './text/RainbowText';
-import { skewedText, skewedTextPreview } from './text/SkewedText';
+// import { skewedText, skewedTextPreview } from './text/SkewedText';
 import { countUp, countUpPreview } from './text/CountUp';
 import { wavyText, wavyTextPreview } from './text/WavyText';
 import { blurText, blurTextPreview } from './text/BlurText';
@@ -48,23 +48,23 @@ import { gooeyWords, gooeyWordsPreview } from './frontend/GooeyWords';
 import { skeumorphicMusicCard, skeumorphicMusicCardPreview } from './frontend/SkeumorphicMusicCard';
 import { imagePile, imagePilePreview } from './frontend/ImagePile';
 // import { gaugeChart, gaugeChartPreview } from './frontend/GaugeChart';
-import { browserWindow, browserWindowPreview } from './frontend/BrowserWIndow';
+// import { browserWindow, browserWindowPreview } from './frontend/BrowserWIndow';
 // import { playingCardsPreview } from './frontend/PlayingCards';
 // import { playingCards } from './frontend/PlayingCards';
-import { spotlightGrid, spotlightGridPreview } from './frontend/SpotlightGrid';
-import { projectsSection, projectsSectionPreview } from './frontend/ProjectsSection';
-import { contactSection, contactSectionPreview } from './frontend/ContactSection';
+// import { spotlightGrid, spotlightGridPreview } from './frontend/SpotlightGrid';
+// import { projectsSection, projectsSectionPreview } from './frontend/ProjectsSection';
+// import { contactSection, contactSectionPreview } from './frontend/ContactSection';
 import { magnetTabs, magnetTabsPreview } from './frontend/MagnetTabs';
 import { jellyLoader, jellyLoaderPreview } from './frontend/JellyLoader';
-import { proximityLiftGrid, proximityLiftGridPreview } from './frontend/ProximityLiftGrid';
+// import { proximityLiftGrid, proximityLiftGridPreview } from './frontend/ProximityLiftGrid';
 import { proximityBackground, proximityBackgroundPreview } from './frontend/ProximityBackground';
 import { maskCursorEffect, maskCursorEffectPreview } from './frontend/MaskCursorEffect';
 import { pixelatedCarousel, pixelatedCarouselPreview } from './frontend/PixelatedCarousel';
 import { pixelatedText, pixelatedTextPreview } from './frontend/PixelatedText';
-import { glassGrid, glassGridPreview } from './frontend/GlassGrid';
-import { spiderLoader, spiderLoaderPreview } from './frontend/SpiderLoader';
+// import { glassGrid, glassGridPreview } from './frontend/GlassGrid';
+// import { spiderLoader, spiderLoaderPreview } from './frontend/SpiderLoader';
 import { sentenceFlip, sentenceFlipPreview } from './frontend/SentenceFlip';
-import { expandableIconButton, expandableIconButtonPreview } from './buttons/ExpandableIconButton';
+// import { expandableIconButton, expandableIconButtonPreview } from './buttons/ExpandableIconButton';
 import { copyButton, copyButtonPreview } from './buttons/CopyButton';
 import {
   animatedGradientButton,
@@ -75,7 +75,7 @@ import { toggleButton, toggleButtonPreview } from './buttons/ToggleButton';
 import { movingBorderButton, movingBorderButtonPreview } from './buttons/MovingBorderButton';
 import { navigationButton, navigationButtonPreview } from './buttons/NavigationButton';
 import { shineButton, shineButtonPreview } from './buttons/ShineButton';
-import { fadeInText, fadeInTextPreview } from './text/FadeInText';
+// import { fadeInText, fadeInTextPreview } from './text/FadeInText';
 // import { navBarPreview, navBar } from './frontend/NavBar';
 
 export type SideBarSectionInDocument = {
@@ -139,13 +139,13 @@ const sideBarOptions: Array<{
         preview: copyButtonPreview,
         isNew: false
       },
-      {
-        name: 'Expandable Icon Button',
-        href: '/docs/expandableIconButton',
-        content: expandableIconButton,
-        preview: expandableIconButtonPreview,
-        isNew: false
-      },
+      // {
+      //   name: 'Expandable Icon Button',
+      //   href: '/docs/expandableIconButton',
+      //   content: expandableIconButton,
+      //   preview: expandableIconButtonPreview,
+      //   isNew: false
+      // },
       {
         name: 'Animated Gradient Button',
         href: '/docs/animatedGradientButton',
@@ -193,13 +193,13 @@ const sideBarOptions: Array<{
   {
     title: 'Text',
     children: [
-      {
-        name: 'Fade In Text',
-        href: '/docs/fadeInText',
-        content: fadeInText,
-        preview: fadeInTextPreview,
-        isNew: false
-      },
+      // {
+      //   name: 'Fade In Text',
+      //   href: '/docs/fadeInText',
+      //   content: fadeInText,
+      //   preview: fadeInTextPreview,
+      //   isNew: false
+      // },
       {
         name: 'Glitch Text',
         href: '/docs/glitchText',
@@ -221,13 +221,13 @@ const sideBarOptions: Array<{
         preview: rainbowTextPreview,
         isNew: false
       },
-      {
-        name: 'Skewed Text',
-        href: '/docs/skewedText',
-        content: skewedText,
-        preview: skewedTextPreview,
-        isNew: false
-      },
+      // {
+      //   name: 'Skewed Text',
+      //   href: '/docs/skewedText',
+      //   content: skewedText,
+      //   preview: skewedTextPreview,
+      //   isNew: false
+      // },
       {
         name: 'Count Up',
         href: '/docs/countUp',
@@ -269,6 +269,13 @@ const sideBarOptions: Array<{
         content: pixelatedText,
         preview: pixelatedTextPreview,
         isNew: true
+      },
+      {
+        name: 'Sentence Flip',
+        href: '/docs/sentenceflip',
+        content: sentenceFlip,
+        preview: sentenceFlipPreview,
+        isNew: true
       }
     ]
   },
@@ -281,13 +288,13 @@ const sideBarOptions: Array<{
       //   content: flipRevealCard,
       //   preview: flipRevealCardPreview
       // },
-      {
-        name: 'Accordion',
-        href: '/docs/accordion',
-        content: accordion,
-        preview: accordionPreview,
-        isNew: false
-      },
+      // {
+      //   name: 'Accordion',
+      //   href: '/docs/accordion',
+      //   content: accordion,
+      //   preview: accordionPreview,
+      //   isNew: false
+      // },
       // {
       //   name: 'Color Cyclone',
       //   href: '/docs/colorCyclone',
@@ -312,39 +319,39 @@ const sideBarOptions: Array<{
       //   content: waveNoiseBackground,
       //   preview: waveNoiseBackgroundPreview
       // },
-      {
-        name: 'Barricade Tape',
-        href: '/docs/barricadeTape',
-        content: barricadeTape,
-        preview: barricadeTapePreview,
-        isNew: false
-      },
-      {
-        name: 'Browser Window',
-        href: '/docs/browserwindow',
-        content: browserWindow,
-        preview: browserWindowPreview
-      },
-      {
-        name: 'Contact Section',
-        href: '/docs/contactsection',
-        content: contactSection,
-        preview: contactSectionPreview,
-        isNew: false
-      },
+      // {
+      //   name: 'Barricade Tape',
+      //   href: '/docs/barricadeTape',
+      //   content: barricadeTape,
+      //   preview: barricadeTapePreview,
+      //   isNew: false
+      // },
+      // {
+      //   name: 'Browser Window',
+      //   href: '/docs/browserwindow',
+      //   content: browserWindow,
+      //   preview: browserWindowPreview
+      // },
+      // {
+      //   name: 'Contact Section',
+      //   href: '/docs/contactsection',
+      //   content: contactSection,
+      //   preview: contactSectionPreview,
+      //   isNew: false
+      // },
       // {
       //   name: 'Epic Name Drop',
       //   href: '/docs/epicNameDrop',
       //   content: epicNameDrop,
       //   preview: epicNameDropPreview
       // },
-      {
-        name: 'File Stack',
-        href: '/docs/fileStack',
-        content: fileStack,
-        preview: fileStackPreview,
-        isNew: false
-      },
+      // {
+      //   name: 'File Stack',
+      //   href: '/docs/fileStack',
+      //   content: fileStack,
+      //   preview: fileStackPreview,
+      //   isNew: false
+      // },
 
       // { name: 'CustomScrollbar', href: '/docs/customscrollbar', content: customScrollbar },
       // { name: 'Flicker Box', href: '/docs/flickerbox', content: flicker, preview: flickerPreview },
@@ -366,13 +373,13 @@ const sideBarOptions: Array<{
       //   content: gaugeChart,
       //   preview: gaugeChartPreview
       // },
-      {
-        name: 'Glass Grid',
-        href: '/docs/glassGrid',
-        content: glassGrid,
-        preview: glassGridPreview,
-        isNew: true
-      },
+      // {
+      //   name: 'Glass Grid',
+      //   href: '/docs/glassGrid',
+      //   content: glassGrid,
+      //   preview: glassGridPreview,
+      //   isNew: true
+      // },
       {
         name: 'Glowing Dots Background',
         href: '/docs/glowingDotsBackground',
@@ -463,13 +470,13 @@ const sideBarOptions: Array<{
         preview: prismaticHazePreview,
         isNew: false
       },
-      {
-        name: 'Projects Section',
-        href: '/docs/projectssection',
-        content: projectsSection,
-        preview: projectsSectionPreview,
-        isNew: false
-      },
+      // {
+      //   name: 'Projects Section',
+      //   href: '/docs/projectssection',
+      //   content: projectsSection,
+      //   preview: projectsSectionPreview,
+      //   isNew: false
+      // },
       {
         name: 'Proximity Background',
         href: '/docs/proximitybackground',
@@ -477,20 +484,13 @@ const sideBarOptions: Array<{
         preview: proximityBackgroundPreview,
         isNew: false
       },
-      {
-        name: 'Proximity Lift Grid',
-        href: '/docs/proximityliftgrid',
-        content: proximityLiftGrid,
-        preview: proximityLiftGridPreview,
-        isNew: false
-      },
-      {
-        name: 'Sentence Flip',
-        href: '/docs/sentenceflip',
-        content: sentenceFlip,
-        preview: sentenceFlipPreview,
-        isNew: true
-      },
+      // {
+      //   name: 'Proximity Lift Grid',
+      //   href: '/docs/proximityliftgrid',
+      //   content: proximityLiftGrid,
+      //   preview: proximityLiftGridPreview,
+      //   isNew: false
+      // },
       {
         name: 'Skeumorphic Music Card',
         href: '/docs/skeumorphicMusicCard',
@@ -498,28 +498,27 @@ const sideBarOptions: Array<{
         preview: skeumorphicMusicCardPreview,
         isNew: false
       },
-      {
-        name: 'Spider Loader',
-        href: '/docs/spiderloader',
-        content: spiderLoader,
-        preview: spiderLoaderPreview,
-        isNew: true
-      },
-      {
-        name: 'Spotlight Grid',
-        href: '/docs/spotlightgrid',
-        content: spotlightGrid,
-        preview: spotlightGridPreview,
-        isNew: false
-      },
-
-      {
-        name: 'Trading Card',
-        href: '/docs/tradingCard',
-        content: tradingCard,
-        preview: tradingCardPreview,
-        isNew: false
-      },
+      // {
+      //   name: 'Spider Loader',
+      //   href: '/docs/spiderloader',
+      //   content: spiderLoader,
+      //   preview: spiderLoaderPreview,
+      //   isNew: true
+      // },
+      // {
+      //   name: 'Spotlight Grid',
+      //   href: '/docs/spotlightgrid',
+      //   content: spotlightGrid,
+      //   preview: spotlightGridPreview,
+      //   isNew: false
+      // },
+      // {
+      //   name: 'Trading Card',
+      //   href: '/docs/tradingCard',
+      //   content: tradingCard,
+      //   preview: tradingCardPreview,
+      //   isNew: false
+      // },
       // {
       //   name: 'Story Avatar',
       //   href: '/docs/storyavatar',

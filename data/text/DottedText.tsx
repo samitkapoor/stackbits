@@ -18,7 +18,12 @@ export const dottedText: Document = {
       {
         heading: 'Preview',
         sectionType: 'preview',
-        code: <DottedText text="LIONEL MESSI" />
+        code: (
+          <div className="flex flex-col gap-5">
+            <DottedText text="LIONEL" />
+            <DottedText text="MESSI" />
+          </div>
+        )
       },
       {
         heading: 'Dotted Text',
