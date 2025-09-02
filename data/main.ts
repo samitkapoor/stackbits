@@ -36,7 +36,6 @@ import {
 // // import { footer, footerPreview } from './frontend/Footer';
 import { masonryGrid, masonryGridPreview } from './frontend/MasonryGrid';
 import { fileStack, fileStackPreview } from './frontend/FileStack';
-import { buttons, buttonsPreview } from './frontend/Buttons';
 import { texts, textsPreview } from './frontend/Texts';
 import { gooeyWords, gooeyWordsPreview } from './frontend/GooeyWords';
 import { skeumorphicMusicCard, skeumorphicMusicCardPreview } from './frontend/SkeumorphicMusicCard';
@@ -58,6 +57,17 @@ import { pixelatedText, pixelatedTextPreview } from './frontend/PixelatedText';
 import { glassGrid, glassGridPreview } from './frontend/GlassGrid';
 import { spiderLoader, spiderLoaderPreview } from './frontend/SpiderLoader';
 import { sentenceFlip, sentenceFlipPreview } from './frontend/SentenceFlip';
+import { expandableIconButton, expandableIconButtonPreview } from './buttons/ExpandableIconButton';
+import { copyButton, copyButtonPreview } from './buttons/CopyButton';
+import {
+  animatedGradientButton,
+  animatedGradientButtonPreview
+} from './buttons/AnimatedGradientButton';
+import { glassButton, glassButtonPreview } from './buttons/GlassButton';
+import { toggleButton, toggleButtonPreview } from './buttons/ToggleButton';
+import { movingBorderButton, movingBorderButtonPreview } from './buttons/MovingBorderButton';
+import { navigationButton, navigationButtonPreview } from './buttons/NavigationButton';
+import { shineButton, shineButtonPreview } from './buttons/ShineButton';
 // import { navBarPreview, navBar } from './frontend/NavBar';
 
 export type SideBarSectionInDocument = {
@@ -112,6 +122,67 @@ const sideBarOptions: Array<{
     ]
   },
   {
+    title: 'Buttons',
+    children: [
+      {
+        name: 'Copy Button',
+        href: '/docs/copyButton',
+        content: copyButton,
+        preview: copyButtonPreview,
+        isNew: false
+      },
+      {
+        name: 'Expandable Icon Button',
+        href: '/docs/expandableIconButton',
+        content: expandableIconButton,
+        preview: expandableIconButtonPreview,
+        isNew: false
+      },
+      {
+        name: 'Animated Gradient Button',
+        href: '/docs/animatedGradientButton',
+        content: animatedGradientButton,
+        preview: animatedGradientButtonPreview,
+        isNew: false
+      },
+      {
+        name: 'Glass Button',
+        href: '/docs/glassButton',
+        content: glassButton,
+        preview: glassButtonPreview,
+        isNew: false
+      },
+      {
+        name: 'Toggle Button',
+        href: '/docs/toggleButton',
+        content: toggleButton,
+        preview: toggleButtonPreview,
+        isNew: false
+      },
+      {
+        name: 'Moving Border Button',
+        href: '/docs/movingBorderButton',
+        content: movingBorderButton,
+        preview: movingBorderButtonPreview,
+        isNew: false
+      },
+      {
+        name: 'Navigation Button',
+        href: '/docs/navigationButton',
+        content: navigationButton,
+        preview: navigationButtonPreview,
+        isNew: false
+      },
+      {
+        name: 'Shine Button',
+        href: '/docs/shineButton',
+        content: shineButton,
+        preview: shineButtonPreview,
+        isNew: false
+      }
+    ]
+  },
+  {
     title: 'Components',
     children: [
       // {
@@ -151,19 +222,11 @@ const sideBarOptions: Array<{
       //   content: waveNoiseBackground,
       //   preview: waveNoiseBackgroundPreview
       // },
-
       {
         name: 'Barricade Tape',
         href: '/docs/barricadeTape',
         content: barricadeTape,
         preview: barricadeTapePreview,
-        isNew: false
-      },
-      {
-        name: 'Buttons',
-        href: '/docs/buttons',
-        content: buttons,
-        preview: buttonsPreview,
         isNew: false
       },
       {
