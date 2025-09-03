@@ -54,10 +54,10 @@ const SocialLink = ({ href, icon: Icon, label }: SocialLinkProps) => (
 
 const LandingFooter = () => {
   const navigationLinks: NavigationLink[] = [
-    { href: '/docs/texts', label: 'Texts' },
+    { href: '/docs/text', label: 'Texts' },
     { href: '/docs/backgrounds', label: 'Backgrounds' },
     { href: '/docs/buttons', label: 'Buttons' },
-    { href: '/docs/cards', label: 'Cards' },
+    // { href: '/docs/cards', label: 'Cards' },
     { href: '/docs/components', label: 'Components' },
     { href: '/docs', label: 'Documentation' }
   ];

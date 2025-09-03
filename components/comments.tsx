@@ -4,15 +4,18 @@ import Testimonies from './ui/testimonies';
 
 const Comments = () => {
   return (
-    <div
-      style={{
-        background: 'url(/comments/grainy-bg.jpg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
-      className="w-full flex flex-col items-center justify-center py-10 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 relative"
-    >
+    <div className="w-full flex flex-col items-center justify-center py-10 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 relative">
+      <div
+        style={{
+          background: 'url(/comments/grainy-bg.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          maskImage: 'linear-gradient(to bottom, transparent, black)',
+          WebkitMaskImage: 'linear-gradient(to bottom, transparent, black)'
+        }}
+        className="absolute inset-0"
+      ></div>
       <div
         style={{
           background: 'radial-gradient(circle at center, transparent, #000000)'

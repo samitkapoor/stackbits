@@ -92,8 +92,8 @@ const TechStack = () => {
         ))}
       </div>
       <p className="text-white/60 text-base sm:text-lg lg:text-xl my-3 sm:my-4 md:my-5 max-w-3xl text-center">
-        StackBits is your ultimate developer toolkit—offering ready-to-use UI components and backend
-        utilities that snap into your projects seamlessly. Stop rewriting the same code—just copy,
+        StackBits is your ultimate developer toolkit offering ready-to-use UI components and backend
+        utilities that snap into your projects seamlessly. Stop rewriting the same code. Just copy,
         paste, and build faster!
       </p>
     </div>

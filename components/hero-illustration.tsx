@@ -2,6 +2,7 @@
 
 import React, { MouseEvent, useEffect, useRef, useState } from 'react';
 import BrowserWindow from './ui/browser-window';
+
 const HeroIllustration = () => {
   const divRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
