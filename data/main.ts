@@ -39,7 +39,7 @@ import { masonryGrid, masonryGridPreview } from './frontend/MasonryGrid';
 import { glitchText, glitchTextPreview } from './text/GlitchText';
 import { rainbowText, rainbowTextPreview } from './text/RainbowText';
 // import { skewedText, skewedTextPreview } from './text/SkewedText';
-import { countUp, countUpPreview } from './text/CountUp';
+// import { countUp, countUpPreview } from './text/CountUp';
 import { wavyText, wavyTextPreview } from './text/WavyText';
 import { blurText, blurTextPreview } from './text/BlurText';
 import { dottedText, dottedTextPreview } from './text/DottedText';
@@ -79,6 +79,7 @@ import { circleMenu, circleMenuPreview } from './frontend/CircleMenu';
 import { stackedInputForm, stackedInputFormPreview } from './frontend/StackedInputForm';
 // import { fadeInText, fadeInTextPreview } from './text/FadeInText';
 // import { navBarPreview, navBar } from './frontend/NavBar';
+import { interactiveFolder, interactiveFolderPreview } from './frontend/InteractiveFolder';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -221,7 +222,7 @@ const sideBarOptions: Array<{
         href: '/docs/wavybackground',
         content: wavyBackground,
         preview: wavyBackgroundPreview,
-        isNew: true
+        isNew: false
       }
     ]
   },
@@ -348,6 +349,13 @@ const sideBarOptions: Array<{
         isNew: false
       },
       {
+        name: 'Interactive Folder',
+        href: '/docs/interactivefolder',
+        content: interactiveFolder,
+        preview: interactiveFolderPreview,
+        isNew: true
+      },
+      {
         name: 'Jelly Loader',
         href: '/docs/jellyloader',
         content: jellyLoader,
@@ -365,7 +373,7 @@ const sideBarOptions: Array<{
         href: '/docs/maskcursoreffect',
         content: maskCursorEffect,
         preview: maskCursorEffectPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Magnet Tabs',
@@ -526,7 +534,7 @@ const sideBarOptions: Array<{
         href: '/docs/pixelatedtext',
         content: pixelatedText,
         preview: pixelatedTextPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Rainbow Text',
