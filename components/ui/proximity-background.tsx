@@ -15,16 +15,8 @@ const getRandomColor = () => {
   return `${colors[Math.floor(Math.random() * colors.length)]}`;
 };
 
-const Dot = ({
-  className,
-  style,
-  index
-}: {
-  className?: string;
-  style?: React.CSSProperties;
-  index: number;
-}) => {
-  const distance = useMotionValue(0);
+const Dot = ({ className, style }: { className?: string; style?: React.CSSProperties }) => {
+  const distance = useMotionValue(100);
   const scale = useTransform(distance, [0, MAX_DISTANCE], [1.5, 1]);
   const grayScale = useTransform(distance, [0, MAX_DISTANCE], [0, 1]);
   const opacity = useTransform(distance, [0, MAX_DISTANCE], [0.8, 0.2]);
@@ -57,10 +49,6 @@ const Dot = ({
       dist = positiveDistances.length > 0 ? Math.max(...positiveDistances) : 0;
 
       const clampedDistance = Math.min(Math.max(dist, 0), MAX_DISTANCE);
-
-      if (index === 0) {
-        console.log({ clampedDistance });
-      }
 
       distance.set(clampedDistance);
     };
@@ -106,12 +94,11 @@ const ProximityBackground = ({
           display: 'grid',
           gridTemplateColumns: `repeat(${columns}, ${diameter}px)`
         }}
-        className="gap-4 "
+        className="gap-4"
       >
         {Array.from({ length: circles }).map((_, index) => (
           <Dot
-            key={index}
-            index={index}
+            key={'dot' + index}
             style={{
               width: `${diameter}px`,
               height: `${diameter}px`

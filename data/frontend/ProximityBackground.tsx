@@ -48,24 +48,26 @@ export const proximityBackground: Document = {
           'Create a file proximity-background.tsx in your components folder and paste this code',
         code: `'use client';
 
+import { cn } from '@/lib/utils';
+import { motion, useTransform } from 'framer-motion';
+import { useMotionValue } from 'framer-motion';
 import React, { useEffect, useRef } from 'react';
-import Image from 'next/image';
-import { motion, useMotionValue, useTransform } from 'framer-motion';
 
-type ProximityLiftGridItem = {
-  image: string;
-  title: string;
-  description: string;
+const DEFAULT_DIAMETER = 50;
+const DEFAULT_CIRCLES = 90;
+const DEFAULT_COLUMNS = 15;
+const MAX_DISTANCE = 100;
+
+const getRandomColor = () => {
+  const colors = ['#E91E63', '#9C27B0', '#3F51B5', '#03A9F4', '#4CAF50', '#FFEB3B', '#FF5722'];
+  return \`\${colors[Math.floor(Math.random() * colors.length)]}\`;
 };
 
-type ProximityLiftGridItemProps = {
-  item: ProximityLiftGridItem;
-};
-
-const ProximityLiftGridItem = ({ item }: ProximityLiftGridItemProps) => {
-  const distance = useMotionValue(0);
-  const grayScale = useTransform(distance, [0, 50], [0, 1]);
-  const scale = useTransform(distance, [0, 50], [1.1, 1]);
+const Dot = ({ className, style }: { className?: string; style?: React.CSSProperties }) => {
+  const distance = useMotionValue(100);
+  const scale = useTransform(distance, [0, MAX_DISTANCE], [1.5, 1]);
+  const grayScale = useTransform(distance, [0, MAX_DISTANCE], [0, 1]);
+  const opacity = useTransform(distance, [0, MAX_DISTANCE], [0.8, 0.2]);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -93,8 +95,8 @@ const ProximityLiftGridItem = ({ item }: ProximityLiftGridItemProps) => {
       if (distanceFromBottom > 0) positiveDistances.push(distanceFromBottom);
 
       dist = positiveDistances.length > 0 ? Math.max(...positiveDistances) : 0;
-      const maxDistance = 50;
-      const clampedDistance = Math.min(Math.max(dist, 0), maxDistance);
+
+      const clampedDistance = Math.min(Math.max(dist, 0), MAX_DISTANCE);
 
       distance.set(clampedDistance);
     };
@@ -107,49 +109,56 @@ const ProximityLiftGridItem = ({ item }: ProximityLiftGridItemProps) => {
   }, [ref]);
 
   return (
-    <motion.div
-      style={{
-        filter: useTransform(grayScale, (value) => \`grayscale(\${value})\`),
-        scale
-      }}
+    <motion.span
       ref={ref}
-      className="flex relative gap-1 flex-col items-start justify-start w-[200px]"
-    >
-      <div className="w-full h-[200px] rounded-lg overflow-hidden">
-        <Image
-          src={item.image}
-          alt={item.title}
-          width={200}
-          height={300}
-          className={\`w-full h-[200px] object-cover transition-transform duration-300\`}
-          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-        />
-      </div>
-      <div>
-        <h3 className="text-sm font-medium">{item.title}</h3>
-        <p className="mt-0 text-xs text-neutral-500 line-clamp-2 overflow-hidden">
-          {item.description}
-        </p>
-      </div>
-    </motion.div>
+      className={cn(\`rounded-full\`, className)}
+      style={{
+        ...style,
+        background: getRandomColor(),
+        scale,
+        filter: useTransform(
+          grayScale,
+          (value) => \`grayscale(\${value}) blur(\${Math.min(value, 2)}px)\`
+        ),
+        opacity
+      }}
+    />
   );
 };
 
-type ProximityLiftGridProps = {
-  items?: ProximityLiftGridItem[];
-};
-
-const ProximityLiftGrid = ({ items = [] }: ProximityLiftGridProps) => {
+const ProximityBackground = ({
+  circles = DEFAULT_CIRCLES,
+  columns = DEFAULT_COLUMNS,
+  diameter = DEFAULT_DIAMETER
+}: {
+  circles?: number;
+  columns?: number;
+  diameter?: number;
+}) => {
   return (
-    <div className="flex items-center justify-center flex-wrap gap-8 mx-12">
-      {items.map((item) => (
-        <ProximityLiftGridItem key={item.image} item={item} />
-      ))}
-    </div>
+    <section className="relative overflow-visible flex items-center justify-center">
+      <span
+        style={{
+          display: 'grid',
+          gridTemplateColumns: \`repeat(\${columns}, \${diameter}px)\`
+        }}
+        className="gap-4"
+      >
+        {Array.from({ length: circles }).map((_, index) => (
+          <Dot
+            key={'dot' + index}
+            style={{
+              width: \`\${diameter}px\`,
+              height: \`\${diameter}px\`
+            }}
+          />
+        ))}
+      </span>
+    </section>
   );
 };
 
-export default ProximityLiftGrid;
+export default ProximityBackground;
 `
       },
       {
