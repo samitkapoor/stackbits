@@ -10,3 +10,11 @@ export function cn(...inputs: ClassValue[]) {
 }
 `
 };
+
+export const installDependenciesCode = ({ framerMotion = false }: { framerMotion?: boolean }) => {
+  return {
+    heading: 'Install dependencies',
+    sectionType: 'dependencies',
+    code: `npm i ${framerMotion ? 'framer-motion' : ''}`
+  };
+};

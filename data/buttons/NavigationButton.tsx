@@ -1,3 +1,4 @@
+import { cnCode, installDependenciesCode } from '@/constants/code';
 import { Document } from '../main';
 import NavigationButton from '@/components/ui/navigation-button';
 
@@ -20,6 +21,8 @@ export const navigationButton: Document = {
         sectionType: 'preview',
         code: <NavigationButton href="https://twitter.com/samitkapoorr" text="Open twitter" />
       },
+      installDependenciesCode({ framerMotion: true }),
+      cnCode,
       {
         heading: 'Navigation Button',
         sectionType: 'component',
@@ -55,7 +58,7 @@ const NavigationButton = ({
         <AnimatePresence mode="popLayout">
           <button
             className={cn(
-              'flex items-center gap-1 outline-none cursor-pointer text-blue-500 font-semibold bg-slate-900 shadow-sm py-2 px-4 hover:brightness-125 active:brightness-105 transition-opacity duration-100 rounded-md',
+              'flex items-center gap-1 outline-none cursor-pointer text-zinc-400 hover:text-blue-400 font-semibold shadow-sm py-2 px-4 hover:brightness-125 active:brightness-105 transition-opacity duration-100 rounded-lg',
               className
             )}
             onMouseEnter={() => setHovered(true)}

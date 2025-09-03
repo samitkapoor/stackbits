@@ -1,3 +1,4 @@
+import { cnCode, installDependenciesCode } from '@/constants/code';
 import { Document } from '../main';
 import ShineButton from '@/components/ui/shine-button';
 
@@ -20,6 +21,8 @@ export const shineButton: Document = {
         sectionType: 'preview',
         code: <ShineButton>Continue</ShineButton>
       },
+      installDependenciesCode({ framerMotion: true }),
+      cnCode,
       {
         heading: 'Shine Button',
         sectionType: 'component',
@@ -39,8 +42,9 @@ const ShineButton: React.FC<ShineButtonProps> = ({ children, className, ...props
     <button
       {...props}
       className={cn(
-        \`relative overflow-hidden rounded-lg border border-neutral-700 px-4 py-2 text-white transition-all duration-300 hover:border-neutral-400 hover:shadow-[0_0_10px_rgba(255,255,255,0.2)]\`,
-        \`hover:shadow-lg hover:shadow-white/30\`,
+        \`relative overflow-hidden rounded-xl border border-neutral-700 px-4 py-2 text-white transition-all duration-300 hover:border-neutral-400 hover:shadow-[0_0_10px_rgba(255,255,255,0.2)]\`,
+        \`hover:shadow-sm hover:shadow-white/30\`,
+        'hover:bg-zinc-900',
         className
       )}
     >

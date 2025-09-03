@@ -153,13 +153,13 @@ const sideBarOptions: Array<{
       //   preview: expandableIconButtonPreview,
       //   isNew: false
       // },
-      {
-        name: 'Glass Button',
-        href: '/docs/glassButton',
-        content: glassButton,
-        preview: glassButtonPreview,
-        isNew: false
-      },
+      // {
+      //   name: 'Glass Button',
+      //   href: '/docs/glassButton',
+      //   content: glassButton,
+      //   preview: glassButtonPreview,
+      //   isNew: false
+      // },
       {
         name: 'Toggle Button',
         href: '/docs/toggleButton',

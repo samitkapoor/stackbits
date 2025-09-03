@@ -36,20 +36,12 @@ const ToggleButton = ({
     <button
       onClick={() => handleClick(activeValue)}
       className={cn(
-        'relative border flex items-center justify-center h-[45px] w-[45px] rounded-full overflow-hidden',
+        'relative border-2 border-zinc-700 hover:border-zinc-500 hover:bg-zinc-900 flex items-center justify-center h-[45px] w-[45px] rounded-full overflow-hidden',
         className
       )}
       {...props}
     >
-      <motion.div
-        whileHover={{
-          x: [0, 2, -2, 2, -2, 2, -2, 0]
-        }}
-        transition={{
-          duration: 0.1
-        }}
-        className="relative overflow-hidden h-full w-full flex items-center justify-center"
-      >
+      <div className="relative overflow-hidden h-full w-full flex items-center justify-center">
         <AnimatePresence mode="popLayout">
           {options.map((option) => {
             if (option.value !== activeValue) return null;
@@ -70,7 +62,7 @@ const ToggleButton = ({
                 transition={{
                   type: 'spring',
                   stiffness: 300,
-                  damping: 20
+                  damping: 30
                 }}
               >
                 {option.label}
@@ -78,7 +70,7 @@ const ToggleButton = ({
             );
           })}
         </AnimatePresence>
-      </motion.div>
+      </div>
     </button>
   );
 };
