@@ -75,6 +75,7 @@ import { toggleButton, toggleButtonPreview } from './buttons/ToggleButton';
 import { movingBorderButton, movingBorderButtonPreview } from './buttons/MovingBorderButton';
 import { navigationButton, navigationButtonPreview } from './buttons/NavigationButton';
 import { shineButton, shineButtonPreview } from './buttons/ShineButton';
+import { circleMenu, circleMenuPreview } from './frontend/CircleMenu';
 // import { fadeInText, fadeInTextPreview } from './text/FadeInText';
 // import { navBarPreview, navBar } from './frontend/NavBar';
 
@@ -213,12 +214,26 @@ const sideBarOptions: Array<{
         content: proximityBackground,
         preview: proximityBackgroundPreview,
         isNew: false
+      },
+      {
+        name: 'Wavy Background',
+        href: '/docs/wavybackground',
+        content: wavyBackground,
+        preview: wavyBackgroundPreview,
+        isNew: true
       }
     ]
   },
   {
     title: 'Components',
     children: [
+      {
+        name: 'Circle Menu',
+        href: '/docs/circleMenu',
+        content: circleMenu,
+        preview: circleMenuPreview,
+        isNew: true
+      },
       // {
       //   name: 'Flip Reveal Card',
       //   href: '/docs/fliprevealcard',
@@ -436,20 +451,13 @@ const sideBarOptions: Array<{
         content: tradingCard,
         preview: tradingCardPreview,
         isNew: false
-      },
+      }
       // {
       //   name: 'Story Avatar',
       //   href: '/docs/storyavatar',
       //   content: storyAvatar,
       //   preview: storyAvatarPreview
       // }
-      {
-        name: 'Wavy Background',
-        href: '/docs/wavybackground',
-        content: wavyBackground,
-        preview: wavyBackgroundPreview,
-        isNew: true
-      }
     ]
   },
   {
