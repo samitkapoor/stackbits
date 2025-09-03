@@ -47,7 +47,7 @@ const MovingBorderButton = ({
 
   return (
     <button
-      className={cn(\`rounded-full overflow-hidden relative p-[1.5px]\`, wrapperClassName)}
+      className={cn(\`rounded-full overflow-hidden relative p-[2px]\`, wrapperClassName)}
       onClick={onClick}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}

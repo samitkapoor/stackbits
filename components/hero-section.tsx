@@ -18,17 +18,14 @@ const HeroSection = () => {
       </p>
       <div className="flex flex-col sm:flex-row justify-center items-center gap-1 sm:gap-4 md:gap-5 mt-4 sm:mt-5">
         <Link href={'/docs/introduction'}>
-          <MovingBorderButton
-            wrapperClassName="hover:scale-105 sm:hover:scale-110 transition-all duration-300 hover:p-[2px]"
-            className="px-3 py-2 sm:px-4 sm:py-3 text-base sm:text-lg md:text-xl bg-neutral-900"
-          >
+          <MovingBorderButton className="px-3 py-2 sm:px-4 sm:py-3 text-base sm:text-lg md:text-xl">
             Get Started&nbsp;
             <MoveRight className="w-4 h-4 sm:w-5 sm:h-5" />
           </MovingBorderButton>
         </Link>
         <p className="my-2 sm:my-0">or, check out our</p>
         <Link href={'/docs/sentenceflip'}>
-          <ShineButton className="px-3 py-2 sm:px-4 sm:py-3 text-base sm:text-lg md:text-xl !rounded-full border-2 bg-neutral-900">
+          <ShineButton className="px-3 py-2 sm:px-4 sm:py-3 text-base sm:text-lg md:text-xl !rounded-full border-2 bg-zinc-950">
             <Command className="w-4 h-4 sm:w-5 sm:h-5" />
             &nbsp; Latest Component
           </ShineButton>
