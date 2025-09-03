@@ -67,10 +67,10 @@ const HeroIllustration = () => {
           onMouseMove={onMouseMove}
           style={{
             background:
-              'linear-gradient(61deg, rgba(255,106,0,1) 0%, rgba(255,210,0,1) 20%, rgba(224,255,0,1) 40%, rgba(70,255,0,1) 60%, rgba(0,255,175,1) 80%, rgba(0,245,255,1) 100%)'
+              'linear-gradient(61deg, rgba(255,106,0,1), rgba(255,210,0,1), rgba(224,255,0,1), rgba(70,255,0,1))'
           }}
           type="button"
-          className="px-4 py-2  flicker absolute top-1/3 z-10 rounded-xl text-black sm:text-xl border-[2px] border-white transition-all duration-1000"
+          className="px-4 py-2 absolute top-1/3 z-10 rounded-xl text-black sm:text-xl border-[2px] border-white transition-all duration-1000"
         >
           Hover over me!
         </button>
