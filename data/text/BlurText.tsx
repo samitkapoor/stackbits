@@ -19,7 +19,7 @@ export const blurText: Document = {
       {
         heading: 'Blur Text',
         content:
-          'Text that starts blurry and becomes clear when it comes into view. Each letter appears with a smooth animation, starting from a blurred state and sharpening into focus.',
+          'Text that starts blurry and becomes clear when you see it. Each letter appears with a smooth focus effect.',
         sectionType: 'paragraph'
       },
       {

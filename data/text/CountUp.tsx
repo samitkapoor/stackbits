@@ -18,7 +18,7 @@ export const countUp: Document = {
       {
         heading: 'Count Up',
         content:
-          'A number that counts up from zero to a target value with a smooth animation. When it reaches the target, it shows confetti and scales up for a celebration effect.',
+          'A number that counts up from zero to a target value. When it reaches the target, it celebrates with confetti and a scale effect.',
         sectionType: 'paragraph'
       },
       {

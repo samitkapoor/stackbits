@@ -19,7 +19,7 @@ export const shineButton: Document = {
       {
         heading: 'Shine Button',
         content:
-          'A button with a shining light effect that sweeps across the surface. Built with Framer Motion, it creates a smooth light animation that moves from left to right.',
+          'A button with a shining light that sweeps across the surface. Creates a polished, premium look for your interface.',
         sectionType: 'paragraph'
       },
       {

@@ -18,7 +18,7 @@ export const skewedText: Document = {
       {
         heading: 'Skewed Text',
         content:
-          'Text that moves and rotates in 3D space when you move your mouse over it. It responds to mouse movement and creates a dynamic, interactive 3D effect.',
+          'Text that moves and tilts in 3D when you hover over it with your mouse. Creates an interactive, dynamic feel.',
         sectionType: 'paragraph'
       },
       {

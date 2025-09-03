@@ -20,7 +20,7 @@ export const gooeyWords: Document = {
       {
         heading: 'Gooey Words',
         content:
-          'Text that morphs between different words with a smooth, liquid-like animation. Each word is drawn using SVG paths and smoothly transforms into the next word with flowing transitions.',
+          'Text that smoothly changes between different words with a liquid-like effect. Each word flows into the next one.',
         sectionType: 'paragraph'
       },
       {

@@ -19,7 +19,7 @@ export const hiddenText: Document = {
       {
         heading: 'Hidden Text',
         content:
-          'Text that shows as symbols until you hover over it. When you hover, the real text appears with a smooth animation, and you can click to copy it to your clipboard.',
+          'Text that hides behind symbols until you hover over it. Perfect for creating mystery and surprise in your interface.',
         sectionType: 'paragraph'
       },
       {

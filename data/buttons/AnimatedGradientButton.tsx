@@ -19,7 +19,7 @@ export const animatedGradientButton: Document = {
       {
         heading: 'Animated Gradient Button',
         content:
-          'A colorful animated button that changes colors smoothly. Built with React and Framer Motion, it cycles through 10 different color combinations with smooth transitions.',
+          'A button that continuously changes colors like a rainbow. Perfect for adding eye-catching, colorful elements to your interface.',
         sectionType: 'paragraph'
       },
       {

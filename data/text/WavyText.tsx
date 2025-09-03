@@ -19,7 +19,7 @@ export const wavyText: Document = {
       {
         heading: 'Wavy Text',
         content:
-          'Text where each letter moves up and down in a wave pattern. The letters animate one after another, creating a flowing wave effect that repeats continuously.',
+          'Text where each letter moves up and down like a wave. Creates a flowing, ocean-like animation effect.',
         sectionType: 'paragraph'
       },
       {

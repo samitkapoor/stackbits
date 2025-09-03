@@ -25,7 +25,7 @@ export const pixelatedText: Document = {
       {
         heading: 'Pixelated Text',
         content:
-          "Text that looks like it's displayed on an LED screen with pixelated characters. The text scrolls across the screen and can have different color effects like solid, disco, wave, or retro styles.",
+          "Text that looks like it's on an old LED display with blocky characters. Scrolls across the screen with different color themes.",
         sectionType: 'paragraph'
       },
       {

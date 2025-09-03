@@ -20,7 +20,7 @@ export const expandableIconButton: Document = {
       {
         heading: 'Expandable Icon Button',
         content:
-          'A button that grows wider when you hover over it. Starts as a small icon button and expands to show text alongside the icon on hover.',
+          'A button that grows wider when you hover over it. Starts small and expands to show text alongside the icon.',
         sectionType: 'paragraph'
       },
       {

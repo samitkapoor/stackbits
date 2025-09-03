@@ -19,7 +19,7 @@ export const rainbowText: Document = {
       {
         heading: 'Rainbow Text',
         content:
-          'Text that cycles through different colors like a rainbow. The colors smoothly transition from one to another, creating a colorful animated effect that repeats continuously.',
+          'Text that changes colors like a rainbow, cycling through different hues continuously. Adds a fun, colorful touch to any design.',
         sectionType: 'paragraph'
       },
       {

@@ -19,7 +19,7 @@ export const glitchText: Document = {
       {
         heading: 'Glitch Text',
         content:
-          'Text that looks like it has a glitch effect with random movements and color changes. It constantly shifts position and changes colors to create a broken, digital appearance.',
+          'Text that looks broken and glitchy, like a computer screen with errors. Perfect for creating a digital, futuristic feel.',
         sectionType: 'paragraph'
       },
       {

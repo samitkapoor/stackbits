@@ -20,7 +20,7 @@ export const copyButton: Document = {
       {
         heading: 'Copy Button',
         content:
-          'A button that copies text to your clipboard when clicked. Shows a check mark icon after copying and comes in different sizes for various use cases.',
+          'A button that copies text to your clipboard when clicked. Shows a check mark after copying and comes in different sizes.',
         sectionType: 'paragraph'
       },
       {
