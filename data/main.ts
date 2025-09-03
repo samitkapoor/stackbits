@@ -70,7 +70,7 @@ import {
   animatedGradientButton,
   animatedGradientButtonPreview
 } from './buttons/AnimatedGradientButton';
-import { glassButton, glassButtonPreview } from './buttons/GlassButton';
+// import { glassButton, glassButtonPreview } from './buttons/GlassButton';
 import { toggleButton, toggleButtonPreview } from './buttons/ToggleButton';
 import { movingBorderButton, movingBorderButtonPreview } from './buttons/MovingBorderButton';
 import { navigationButton, navigationButtonPreview } from './buttons/NavigationButton';
@@ -80,6 +80,7 @@ import { stackedInputForm, stackedInputFormPreview } from './frontend/StackedInp
 // import { fadeInText, fadeInTextPreview } from './text/FadeInText';
 // import { navBarPreview, navBar } from './frontend/NavBar';
 import { interactiveFolder, interactiveFolderPreview } from './frontend/InteractiveFolder';
+import { otpInput, otpInputPreview } from './frontend/OTPInput';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -410,6 +411,13 @@ const sideBarOptions: Array<{
       //   preview: playingCardsPreview,
       //   isNew: false
       // },
+      {
+        name: 'OTP Input',
+        href: '/docs/otpinput',
+        content: otpInput,
+        preview: otpInputPreview,
+        isNew: true
+      },
       {
         name: 'Pixelated Carousel',
         href: '/docs/pixelatedcarousel',

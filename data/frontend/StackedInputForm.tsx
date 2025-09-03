@@ -3,7 +3,7 @@ import { Document } from '../main';
 import StackedInputForm from '@/components/ui/input-stack-form';
 
 export const stackedInputFormPreview = (
-  <div className="h-full w-full flex flex-col items-center justify-center gap-2">
+  <div className="h-full w-full flex flex-col items-center justify-center gap-2 bg-white/10">
     <StackedInputForm
       fields={[
         {
