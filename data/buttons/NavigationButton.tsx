@@ -17,6 +17,12 @@ export const navigationButton: Document = {
   content: {
     sections: [
       {
+        heading: 'Navigation Button',
+        content:
+          'A smart button that changes its icon when you hover over it. Shows an eye icon by default and switches to an arrow icon on hover, perfect for external links.',
+        sectionType: 'paragraph'
+      },
+      {
         heading: 'Preview',
         sectionType: 'preview',
         code: <NavigationButton href="https://twitter.com/samitkapoorr" text="Open twitter" />

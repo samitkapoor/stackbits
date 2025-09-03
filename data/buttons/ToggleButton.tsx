@@ -34,6 +34,12 @@ export const toggleButton: Document = {
   content: {
     sections: [
       {
+        heading: 'Toggle Button',
+        content:
+          'A button that cycles through different options when clicked. Each click moves to the next option in the list, with smooth animations between states.',
+        sectionType: 'paragraph'
+      },
+      {
         heading: 'Preview',
         sectionType: 'preview',
         code: (

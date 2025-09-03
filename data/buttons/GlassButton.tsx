@@ -16,6 +16,12 @@ export const glassButton: Document = {
   content: {
     sections: [
       {
+        heading: 'Glass Button',
+        content:
+          'A button with a glass-like appearance that looks see-through. Has a subtle light reflection that moves across the surface and creates a modern, elegant look.',
+        sectionType: 'paragraph'
+      },
+      {
         heading: 'Preview',
         sectionType: 'preview',
         code: <GlassButton>Continue</GlassButton>
