@@ -21,7 +21,7 @@ export const glowingDotsBackground: Document = {
       {
         heading: 'Glowing Dots Background',
         content:
-          'A stunning interactive React background component featuring a responsive grid of glowing dots. Built with Framer Motion, dots illuminate with vibrant colors on hover, creating an engaging visual effect perfect for modern web applications and landing pages.',
+          'A background with dots that light up when you hover over them. Creates an interactive grid of glowing elements.',
         sectionType: 'paragraph'
       },
       {

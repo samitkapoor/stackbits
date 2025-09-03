@@ -27,7 +27,7 @@ export const imagePile: Document = {
       {
         heading: 'Image Pile',
         content:
-          'ImagePile shuffles and layers images dynamically, creating a stylish, ever-changing visual effect. Built with React, Next.js, Framer Motion, and Tailwind CSS, it’s perfect for portfolios, galleries, and landing pages. Add motion and personality to your UI effortlessly! 🚀🎨',
+          'A stack of images that shuffle and change positions automatically. Perfect for creating dynamic image galleries and portfolios.',
         sectionType: 'paragraph'
       },
       {

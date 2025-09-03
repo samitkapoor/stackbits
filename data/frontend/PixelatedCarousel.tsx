@@ -24,7 +24,7 @@ export const pixelatedCarousel: Document = {
       {
         heading: 'Pixelated Carousel',
         content:
-          'The Pixelated Carousel is a React component that transforms image galleries with a pixelated animation effect. Built with Next.js and Framer Motion, it cycles through images with a dynamic grid overlay. Ideal for portfolios and product showcases, it offers customizable pixel size and transition duration, enhancing user engagement and visual appeal.',
+          'A carousel that shows images with a pixelated effect. Images change with a grid animation that makes them look blocky.',
         sectionType: 'paragraph'
       },
       {

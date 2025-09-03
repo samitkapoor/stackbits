@@ -19,7 +19,7 @@ export const tradingCard: Document = {
       {
         heading: 'Trading Card',
         content:
-          'Interactive React Trading Card component with 3D hover animations. Built with Framer Motion and TypeScript, featuring dynamic mouse tracking, smooth transitions, and responsive design. Perfect for showcasing profiles, characters, or products with engaging visual effects.',
+          'A card that moves in 3D when you hover over it. Perfect for showcasing profiles, characters, or products with engaging effects.',
         sectionType: 'paragraph'
       },
       {

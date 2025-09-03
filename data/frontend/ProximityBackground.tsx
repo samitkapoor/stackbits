@@ -19,7 +19,7 @@ export const proximityBackground: Document = {
       {
         heading: 'Proximity Background',
         content:
-          'An interactive background component that creates a grid of colorful circles that respond to mouse movement. This component uses Framer Motion for smooth animations and real-time distance calculations to create an engaging interactive experience.',
+          'A background with colorful circles that respond to your mouse movement. The circles change size and color based on how close your cursor is.',
         sectionType: 'paragraph'
       },
       {

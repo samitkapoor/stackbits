@@ -78,7 +78,7 @@ export const masonryGrid: Document = {
       {
         heading: 'Masonry Grid',
         content:
-          'Masonry Grid is the perfect solution for dynamic, Pinterest-style layouts that adapt beautifully to any screen size. Built with React, Next.js, and Tailwind CSS, this grid intelligently arranges elements into an optimized, gap-free layout, making it ideal for image galleries, portfolios, and product listings. Say goodbye to rigid rows and columns—Masonry Grid ensures your content flows seamlessly, no matter the shape or size. Fully responsive, lightweight, and easy to customize, this component helps you create visually stunning layouts without the hassle. Get started with StackBits and elevate your UI with effortless grid magic! 🚀',
+          'A grid layout that arranges items like Pinterest, automatically fitting them together without gaps. Perfect for image galleries and portfolios.',
         sectionType: 'paragraph'
       },
       {

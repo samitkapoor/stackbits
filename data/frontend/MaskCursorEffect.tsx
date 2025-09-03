@@ -26,7 +26,7 @@ export const maskCursorEffect: Document = {
       {
         heading: 'Mask Cursor Effect',
         content:
-          'A dynamic and interactive React component that creates an engaging cursor-following mask effect using Framer Motion animations. This TypeScript component reveals hidden content through a smooth circular mask that tracks mouse movement, expanding on hover to create stunning reveal animations. Perfect for modern web applications seeking to enhance user engagement with creative UI interactions, spotlight effects, or content reveals. Built with performance in mind using CSS masks and optimized animations.',
+          'A component that reveals hidden content through a circular mask that follows your mouse. Perfect for creating interactive reveal effects.',
         sectionType: 'paragraph'
       },
       {

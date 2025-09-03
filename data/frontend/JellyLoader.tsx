@@ -19,7 +19,7 @@ export const jellyLoader: Document = {
       {
         heading: 'Jelly Loader',
         content:
-          'A smooth, animated loading component that creates a mesmerizing jelly-like effect with rotating and scaling circles. Built with Framer Motion, this customizable loader features a beautiful gradient transition from light pink to deep magenta, perfect for enhancing user experience during loading states in modern web applications.',
+          'A loading animation with circles that move and scale like jelly. Perfect for showing that something is loading on your website.',
         sectionType: 'paragraph'
       },
       {

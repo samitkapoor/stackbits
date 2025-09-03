@@ -22,9 +22,9 @@ export const skeumorphicMusicCard: Document = {
   content: {
     sections: [
       {
-        heading: '🎵 Skeumorphic Music Card',
+        heading: 'Skeumorphic Music Card',
         content:
-          "The Skeumorphic Music Card is a stylish React.js + Tailwind CSS music player with realistic shadows, beveled edges, and tactile buttons. Featuring play, pause, skip, and progress tracking, it's perfect for music apps, audio players, or portfolio projects. 🎵✨",
+          'A music player card with realistic shadows and 3D effects. Includes play, pause, and skip controls for music apps.',
         sectionType: 'paragraph'
       },
       {

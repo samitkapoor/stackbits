@@ -18,9 +18,9 @@ export const prismaticHaze: Document = {
   content: {
     sections: [
       {
-        heading: '🌠 Prismatic Haze Background',
+        heading: 'Prismatic Haze Background',
         content:
-          'Step into a world of dreamy, shifting colors with Prismatic Haze, a React animation effect that blends cosmic swirls, neon hues, and soft grain textures to create an immersive, hypnotic ambiance. ✨🌠 This dynamic, iridescent mist flows like a living nebula, making it perfect for futuristic UIs, music visualizers, landing pages, and eye-catching web designs. Whether you’re aiming for a trippy, cyberpunk-inspired aesthetic or a soft, atmospheric glow, Prismatic Haze adds that effortlessly cool, next-gen vibe to your project. 🚀💫',
+          'A background with dreamy, shifting colors that blend together like cosmic swirls. Perfect for creating futuristic and atmospheric designs.',
         sectionType: 'paragraph'
       },
       {
