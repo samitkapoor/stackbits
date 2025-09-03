@@ -81,6 +81,7 @@ import { stackedInputForm, stackedInputFormPreview } from './frontend/StackedInp
 // import { navBarPreview, navBar } from './frontend/NavBar';
 import { interactiveFolder, interactiveFolderPreview } from './frontend/InteractiveFolder';
 import { otpInput, otpInputPreview } from './frontend/OTPInput';
+import { rubikCube, rubikCubePreview } from './frontend/RubikCube';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -423,6 +424,13 @@ const sideBarOptions: Array<{
         href: '/docs/pixelatedcarousel',
         content: pixelatedCarousel,
         preview: pixelatedCarouselPreview,
+        isNew: true
+      },
+      {
+        name: 'Rubik Cube',
+        href: '/docs/rubikcube',
+        content: rubikCube,
+        preview: rubikCubePreview,
         isNew: true
       },
 
