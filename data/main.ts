@@ -191,91 +191,27 @@ const sideBarOptions: Array<{
     ]
   },
   {
-    title: 'Text',
+    title: 'Backgrounds',
     children: [
       {
-        name: 'Blur Text',
-        href: '/docs/blurText',
-        content: blurText,
-        preview: blurTextPreview,
+        name: 'Glowing Dots Background',
+        href: '/docs/glowingDotsBackground',
+        content: glowingDotsBackground,
+        preview: glowingDotsBackgroundPreview,
         isNew: false
       },
       {
-        name: 'Dotted Text',
-        href: '/docs/dottedText',
-        content: dottedText,
-        preview: dottedTextPreview,
-        isNew: false
-      },
-      // {
-      //   name: 'Count Up',
-      //   href: '/docs/countUp',
-      //   content: countUp,
-      //   preview: countUpPreview,
-      //   isNew: false
-      // },
-      // {
-      //   name: 'Fade In Text',
-      //   href: '/docs/fadeInText',
-      //   content: fadeInText,
-      //   preview: fadeInTextPreview,
-      //   isNew: false
-      // },
-      {
-        name: 'Glitch Text',
-        href: '/docs/glitchText',
-        content: glitchText,
-        preview: glitchTextPreview,
+        name: 'Prismatic Haze Background',
+        href: '/docs/prismaticHazeBackground',
+        content: prismaticHaze,
+        preview: prismaticHazePreview,
         isNew: false
       },
       {
-        name: 'Gooey Words',
-        href: '/docs/gooeywords',
-        content: gooeyWords,
-        preview: gooeyWordsPreview,
-        isNew: false
-      },
-      {
-        name: 'Hidden Text',
-        href: '/docs/hiddenText',
-        content: hiddenText,
-        preview: hiddenTextPreview,
-        isNew: false
-      },
-      {
-        name: 'Pixelated Text',
-        href: '/docs/pixelatedtext',
-        content: pixelatedText,
-        preview: pixelatedTextPreview,
-        isNew: true
-      },
-      {
-        name: 'Rainbow Text',
-        href: '/docs/rainbowText',
-        content: rainbowText,
-        preview: rainbowTextPreview,
-        isNew: false
-      },
-      // {
-      //   name: 'Skewed Text',
-      //   href: '/docs/skewedText',
-      //   content: skewedText,
-      //   preview: skewedTextPreview,
-      //   isNew: false
-      // },
-
-      {
-        name: 'Sentence Flip',
-        href: '/docs/sentenceflip',
-        content: sentenceFlip,
-        preview: sentenceFlipPreview,
-        isNew: true
-      },
-      {
-        name: 'Wavy Text',
-        href: '/docs/wavyText',
-        content: wavyText,
-        preview: wavyTextPreview,
+        name: 'Proximity Background',
+        href: '/docs/proximitybackground',
+        content: proximityBackground,
+        preview: proximityBackgroundPreview,
         isNew: false
       }
     ]
@@ -381,13 +317,6 @@ const sideBarOptions: Array<{
       //   preview: glassGridPreview,
       //   isNew: true
       // },
-      {
-        name: 'Glowing Dots Background',
-        href: '/docs/glowingDotsBackground',
-        content: glowingDotsBackground,
-        preview: glowingDotsBackgroundPreview,
-        isNew: false
-      },
 
       // {
       //   name: 'Icon Wheel',
@@ -464,13 +393,7 @@ const sideBarOptions: Array<{
         preview: pixelatedCarouselPreview,
         isNew: true
       },
-      {
-        name: 'Prismatic Haze Background',
-        href: '/docs/prismaticHazeBackground',
-        content: prismaticHaze,
-        preview: prismaticHazePreview,
-        isNew: false
-      },
+
       // {
       //   name: 'Projects Section',
       //   href: '/docs/projectssection',
@@ -478,13 +401,7 @@ const sideBarOptions: Array<{
       //   preview: projectsSectionPreview,
       //   isNew: false
       // },
-      {
-        name: 'Proximity Background',
-        href: '/docs/proximitybackground',
-        content: proximityBackground,
-        preview: proximityBackgroundPreview,
-        isNew: false
-      },
+
       // {
       //   name: 'Proximity Lift Grid',
       //   href: '/docs/proximityliftgrid',
@@ -536,6 +453,96 @@ const sideBarOptions: Array<{
     ]
   },
   {
+    title: 'Texts',
+    children: [
+      {
+        name: 'Blur Text',
+        href: '/docs/blurText',
+        content: blurText,
+        preview: blurTextPreview,
+        isNew: false
+      },
+      {
+        name: 'Dotted Text',
+        href: '/docs/dottedText',
+        content: dottedText,
+        preview: dottedTextPreview,
+        isNew: false
+      },
+      // {
+      //   name: 'Count Up',
+      //   href: '/docs/countUp',
+      //   content: countUp,
+      //   preview: countUpPreview,
+      //   isNew: false
+      // },
+      // {
+      //   name: 'Fade In Text',
+      //   href: '/docs/fadeInText',
+      //   content: fadeInText,
+      //   preview: fadeInTextPreview,
+      //   isNew: false
+      // },
+      {
+        name: 'Glitch Text',
+        href: '/docs/glitchText',
+        content: glitchText,
+        preview: glitchTextPreview,
+        isNew: false
+      },
+      {
+        name: 'Gooey Words',
+        href: '/docs/gooeywords',
+        content: gooeyWords,
+        preview: gooeyWordsPreview,
+        isNew: false
+      },
+      {
+        name: 'Hidden Text',
+        href: '/docs/hiddenText',
+        content: hiddenText,
+        preview: hiddenTextPreview,
+        isNew: false
+      },
+      {
+        name: 'Pixelated Text',
+        href: '/docs/pixelatedtext',
+        content: pixelatedText,
+        preview: pixelatedTextPreview,
+        isNew: true
+      },
+      {
+        name: 'Rainbow Text',
+        href: '/docs/rainbowText',
+        content: rainbowText,
+        preview: rainbowTextPreview,
+        isNew: false
+      },
+      // {
+      //   name: 'Skewed Text',
+      //   href: '/docs/skewedText',
+      //   content: skewedText,
+      //   preview: skewedTextPreview,
+      //   isNew: false
+      // },
+
+      {
+        name: 'Sentence Flip',
+        href: '/docs/sentenceflip',
+        content: sentenceFlip,
+        preview: sentenceFlipPreview,
+        isNew: true
+      },
+      {
+        name: 'Wavy Text',
+        href: '/docs/wavyText',
+        content: wavyText,
+        preview: wavyTextPreview,
+        isNew: false
+      }
+    ]
+  },
+  {
     title: 'Utilities',
     children: [
       {
@@ -582,7 +589,7 @@ const sideBarOptions: Array<{
   }
 ];
 
-export const categories = ['components', 'buttons', 'text'];
+export const categories = ['components', 'buttons', 'texts', 'backgrounds'];
 
 export const getDocs = (docId: string) => {
   const group = sideBarOptions.filter((tab) =>
