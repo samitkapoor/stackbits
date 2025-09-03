@@ -133,6 +133,13 @@ const sideBarOptions: Array<{
     title: 'Buttons',
     children: [
       {
+        name: 'Animated Gradient Button',
+        href: '/docs/animatedGradientButton',
+        content: animatedGradientButton,
+        preview: animatedGradientButtonPreview,
+        isNew: false
+      },
+      {
         name: 'Copy Button',
         href: '/docs/copyButton',
         content: copyButton,
@@ -146,13 +153,6 @@ const sideBarOptions: Array<{
       //   preview: expandableIconButtonPreview,
       //   isNew: false
       // },
-      {
-        name: 'Animated Gradient Button',
-        href: '/docs/animatedGradientButton',
-        content: animatedGradientButton,
-        preview: animatedGradientButtonPreview,
-        isNew: false
-      },
       {
         name: 'Glass Button',
         href: '/docs/glassButton',
