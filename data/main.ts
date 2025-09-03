@@ -76,6 +76,7 @@ import { movingBorderButton, movingBorderButtonPreview } from './buttons/MovingB
 import { navigationButton, navigationButtonPreview } from './buttons/NavigationButton';
 import { shineButton, shineButtonPreview } from './buttons/ShineButton';
 import { circleMenu, circleMenuPreview } from './frontend/CircleMenu';
+import { stackedInputForm, stackedInputFormPreview } from './frontend/StackedInputForm';
 // import { fadeInText, fadeInTextPreview } from './text/FadeInText';
 // import { navBarPreview, navBar } from './frontend/NavBar';
 
@@ -445,6 +446,14 @@ const sideBarOptions: Array<{
       //   preview: spotlightGridPreview,
       //   isNew: false
       // },
+
+      {
+        name: 'Stacked Input Form',
+        href: '/docs/stackedInputForm',
+        content: stackedInputForm,
+        preview: stackedInputFormPreview,
+        isNew: true
+      },
       {
         name: 'Trading Card',
         href: '/docs/tradingCard',
