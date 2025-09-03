@@ -48,7 +48,7 @@ export const encryptionDecryption: Document = {
             </p>
             <CopyTextButton
               icon={<Copy className="w-4 h-4" />}
-              handle="Copy a new secret"
+              label="Copy a new secret"
               onCopy={generateCryptoSecret}
             />
           </div>

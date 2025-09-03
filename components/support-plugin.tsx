@@ -66,12 +66,12 @@ const SupportPlugin = () => {
         </p>
 
         <CopyTextButton
-          handle="samitkapoorr"
+          label="samitkapoorr"
           icon={<Twitter className="w-4 h-4" />}
           variant="small"
         />
         <CopyTextButton
-          handle="samitkapoor77@gmail.com"
+          label="samitkapoor77@gmail.com"
           icon={<Mail className="w-4 h-4" />}
           variant="small"
         />
