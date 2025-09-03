@@ -1,5 +1,6 @@
 import TradingCardDemo from '@/components/trading-card-demo';
 import { Document } from '../main';
+import { installDependenciesCode } from '@/constants/code';
 
 export const tradingCardPreview = (
   <div className="h-full w-full flex items-center justify-center scale-50">
@@ -30,11 +31,7 @@ export const tradingCard: Document = {
           </div>
         )
       },
-      {
-        heading: 'Install dependencies',
-        sectionType: 'component',
-        code: `npm i framer-motion tailwindcss`
-      },
+      installDependenciesCode({ framerMotion: true, tailwindcss: true }),
       {
         heading: 'Component',
         sectionType: 'component',

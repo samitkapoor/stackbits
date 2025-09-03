@@ -1,3 +1,4 @@
+import { installDependenciesCode } from '@/constants/code';
 import { Document } from '../main';
 import MagnetTabsDemo from '@/components/magnet-tabs-demo';
 
@@ -30,15 +31,7 @@ export const magnetTabs: Document = {
           </div>
         )
       },
-      {
-        heading: 'Follow below steps 👇🏻',
-        sectionType: 'heading'
-      },
-      {
-        heading: 'Install dependencies',
-        sectionType: 'component',
-        code: `npm i framer-motion`
-      },
+      installDependenciesCode({ framerMotion: true }),
       {
         heading: 'Component',
         sectionType: 'component',

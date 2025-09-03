@@ -374,10 +374,6 @@ export const masonryGrid: Document = {
         )
       },
       {
-        heading: 'Follow below steps 👇🏻',
-        sectionType: 'heading'
-      },
-      {
         heading: 'Install dependencies',
         sectionType: 'dependencies',
         code: `npm i framer-motion tailwindcss-animate`

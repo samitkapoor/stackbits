@@ -1,5 +1,6 @@
 import { Document } from '../main';
 import ImagePile from '@/components/ui/image-pile';
+import { installDependenciesCode } from '@/constants/code';
 
 export const imagePilePreview = (
   <div className="flex flex-wrap items-center gap-10 p-5 justify-center w-full h-full scale-75">
@@ -33,7 +34,7 @@ export const imagePile: Document = {
         heading: 'Preview',
         sectionType: 'preview',
         code: (
-          <div className="h-[800px] w-full flex items-center justify-center">
+          <div className="h-[700px] w-full flex items-center justify-center">
             <div className="flex flex-wrap items-center gap-10 justify-center w-[600px]">
               <ImagePile
                 images={[
@@ -48,15 +49,7 @@ export const imagePile: Document = {
           </div>
         )
       },
-      {
-        heading: 'Follow below steps 👇🏻',
-        sectionType: 'heading'
-      },
-      {
-        heading: 'Install dependencies',
-        sectionType: 'dependencies',
-        code: `npm i framer-motion`
-      },
+      installDependenciesCode({ framerMotion: true }),
       {
         heading: 'Component',
         sectionType: 'component',

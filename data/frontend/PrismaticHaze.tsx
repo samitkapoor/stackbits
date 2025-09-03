@@ -35,10 +35,6 @@ export const prismaticHaze: Document = {
         )
       },
       {
-        heading: 'Follow below steps 👇🏻',
-        sectionType: 'heading'
-      },
-      {
         heading: 'Install dependencies',
         sectionType: 'dependencies',
         code: `npm i @react-three/fiber @react-three/drei three`

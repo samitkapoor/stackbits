@@ -43,10 +43,6 @@ export const pixelatedCarousel: Document = {
         )
       },
       {
-        heading: 'Follow below steps 👇🏻',
-        sectionType: 'heading'
-      },
-      {
         heading: 'Component',
         sectionType: 'dependencies',
         description:

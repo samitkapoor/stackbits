@@ -1,6 +1,6 @@
 import ProximityBackground from '@/components/ui/proximity-background';
 import { Document } from '../main';
-import { cnCode } from '@/constants/code';
+import { cnCode, installDependenciesCode } from '@/constants/code';
 
 export const proximityBackgroundPreview = (
   <div className="flex flex-wrap items-center gap-10 p-5 justify-center w-full h-full scale-75">
@@ -31,15 +31,7 @@ export const proximityBackground: Document = {
           </div>
         )
       },
-      {
-        heading: 'Follow below steps 👇🏻',
-        sectionType: 'heading'
-      },
-      {
-        heading: 'Install dependencies',
-        sectionType: 'dependencies',
-        code: `npm i framer-motion`
-      },
+      installDependenciesCode({ framerMotion: true }),
       cnCode,
       {
         heading: 'Component',

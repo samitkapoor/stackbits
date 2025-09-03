@@ -1,5 +1,6 @@
 import JellyLoader from '@/components/ui/jelly-loader';
 import { Document } from '../main';
+import { installDependenciesCode } from '@/constants/code';
 
 export const jellyLoaderPreview = (
   <div className="flex flex-wrap items-center gap-10 p-5 justify-center w-full h-full scale-75">
@@ -22,9 +23,8 @@ export const jellyLoader: Document = {
         sectionType: 'paragraph'
       },
       {
-        heading: 'Meet the Designer',
+        heading: 'Original Designer',
         sectionType: 'credits',
-        description: 'Designed by',
         designer: [{ name: 'Lovish Saini', link: 'https://x.com/lovishotherdays' }]
       },
       {
@@ -38,11 +38,7 @@ export const jellyLoader: Document = {
           </div>
         )
       },
-      {
-        heading: 'Install dependencies',
-        sectionType: 'dependencies',
-        code: `npm i framer-motion`
-      },
+      installDependenciesCode({ framerMotion: true }),
       {
         heading: 'Component',
         sectionType: 'component',

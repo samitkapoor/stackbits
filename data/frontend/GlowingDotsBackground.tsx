@@ -1,5 +1,6 @@
 import GlowingDotsBackground from '@/components/ui/glowing-dots-background';
 import { Document } from '../main';
+import { installDependenciesCode } from '@/constants/code';
 
 export const glowingDotsBackgroundPreview = (
   <div className="h-full w-full relative flex items-center justify-center">
@@ -18,7 +19,7 @@ export const glowingDotsBackground: Document = {
   content: {
     sections: [
       {
-        heading: '💡 Glowing Dots Background',
+        heading: 'Glowing Dots Background',
         content:
           'A stunning interactive React background component featuring a responsive grid of glowing dots. Built with Framer Motion, dots illuminate with vibrant colors on hover, creating an engaging visual effect perfect for modern web applications and landing pages.',
         sectionType: 'paragraph'
@@ -30,22 +31,14 @@ export const glowingDotsBackground: Document = {
           <div className="w-full h-[500px] flex flex-col items-center justify-center gap-2">
             <GlowingDotsBackground
               diameter={50}
-              className=" text-5xl font-extrabold text-white rounded-xl flex items-center justify-center h-full w-full"
+              className="text-2xl text-white rounded-xl flex items-center justify-center h-full w-full"
             >
               Glowing Dots Background
             </GlowingDotsBackground>
           </div>
         )
       },
-      {
-        heading: 'Follow below steps 👇🏻',
-        sectionType: 'heading'
-      },
-      {
-        heading: 'Install dependencies',
-        sectionType: 'dependencies',
-        code: `npm i framer-motion`
-      },
+      installDependenciesCode({ framerMotion: true }),
       {
         heading: 'Component',
         sectionType: 'component',
@@ -152,7 +145,7 @@ export default GlowingDotsBackground;
       {
         heading: 'Usage',
         sectionType: 'usage',
-        code: ` <GlowingDotsBackground
+        code: `<GlowingDotsBackground
   diameter={80}
   className=" text-5xl font-extrabold text-white  rounded-xl flex items-center justify-center h-full w-full"
 >

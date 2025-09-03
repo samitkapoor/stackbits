@@ -1,5 +1,6 @@
 import WavyBackground from '@/components/ui/wavy-background';
 import { Document } from '../main';
+import { installDependenciesCode } from '@/constants/code';
 
 export const wavyBackgroundPreview = (
   <div className="h-full w-full flex flex-col items-center justify-center gap-2">
@@ -38,15 +39,7 @@ export const wavyBackground: Document = {
           </div>
         )
       },
-      {
-        heading: 'Follow below steps 👇🏻',
-        sectionType: 'heading'
-      },
-      {
-        heading: 'Install dependencies',
-        sectionType: 'dependencies',
-        code: `npm i framer-motion`
-      },
+      installDependenciesCode({ framerMotion: true }),
       {
         heading: 'Component',
         sectionType: 'component',

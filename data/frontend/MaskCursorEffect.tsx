@@ -1,5 +1,6 @@
 import MaskCursorEffect from '@/components/ui/mask-cursor-effect';
 import { Document } from '../main';
+import { cnCode, installDependenciesCode } from '@/constants/code';
 
 export const maskCursorEffectPreview = (
   <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden relative p-10 gap-5">
@@ -29,9 +30,8 @@ export const maskCursorEffect: Document = {
         sectionType: 'paragraph'
       },
       {
-        heading: 'Meet the Designer',
+        heading: 'Original Designer',
         sectionType: 'credits',
-        description: 'Designed by',
         designer: [{ name: 'Minh Pham', link: 'https://minhpham.design' }]
       },
       {
@@ -55,15 +55,8 @@ export const maskCursorEffect: Document = {
           </div>
         )
       },
-      {
-        heading: 'Follow below steps 👇🏻',
-        sectionType: 'heading'
-      },
-      {
-        heading: 'Install dependencies',
-        sectionType: 'component',
-        code: `npm i framer-motion`
-      },
+      installDependenciesCode({ framerMotion: true }),
+      cnCode,
       {
         heading: 'Component',
         sectionType: 'component',

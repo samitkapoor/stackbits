@@ -1,3 +1,4 @@
+import { installDependenciesCode } from '@/constants/code';
 import { Document } from '../main';
 import SkeumorphicMusicCard from '@/components/ui/skeumorphic-music-card';
 
@@ -45,15 +46,7 @@ export const skeumorphicMusicCard: Document = {
           </div>
         )
       },
-      {
-        heading: 'Follow below steps 👇🏻',
-        sectionType: 'heading'
-      },
-      {
-        heading: 'Install dependencies',
-        sectionType: 'dependencies',
-        code: `npm i lucide-react`
-      },
+      installDependenciesCode({ lucide: true }),
       {
         heading: 'Component',
         sectionType: 'component',
