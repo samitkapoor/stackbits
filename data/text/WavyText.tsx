@@ -16,6 +16,12 @@ export const wavyText: Document = {
   content: {
     sections: [
       {
+        heading: 'Wavy Text',
+        content:
+          'Text where each letter moves up and down in a wave pattern. The letters animate one after another, creating a flowing wave effect that repeats continuously.',
+        sectionType: 'paragraph'
+      },
+      {
         heading: 'Preview',
         sectionType: 'preview',
         code: <WavyText text="Wavy Text" className="text-4xl" />

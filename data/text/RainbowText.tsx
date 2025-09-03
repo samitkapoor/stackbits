@@ -16,6 +16,12 @@ export const rainbowText: Document = {
   content: {
     sections: [
       {
+        heading: 'Rainbow Text',
+        content:
+          'Text that cycles through different colors like a rainbow. The colors smoothly transition from one to another, creating a colorful animated effect that repeats continuously.',
+        sectionType: 'paragraph'
+      },
+      {
         heading: 'Preview',
         sectionType: 'preview',
         code: <RainbowText className="text-4xl">Rainbow Text</RainbowText>

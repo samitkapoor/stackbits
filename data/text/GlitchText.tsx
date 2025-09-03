@@ -16,6 +16,12 @@ export const glitchText: Document = {
   content: {
     sections: [
       {
+        heading: 'Glitch Text',
+        content:
+          'Text that looks like it has a glitch effect with random movements and color changes. It constantly shifts position and changes colors to create a broken, digital appearance.',
+        sectionType: 'paragraph'
+      },
+      {
         heading: 'Preview',
         sectionType: 'preview',
         code: <GlitchText className="text-4xl">Glitch Text</GlitchText>

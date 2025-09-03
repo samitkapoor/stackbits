@@ -25,7 +25,7 @@ const ButtonsDemo = () => {
         <ExpandableIconButton icon={<TwitterIcon size={18} />} text={'samitkapoorr'} />
       </ButtonDisplay>
       <ButtonDisplay name="Copy Text Button">
-        <CopyTextButton handle="Copy some text" icon={<Copy className="w-4 h-4" />} />
+        <CopyTextButton label="Copy some text" icon={<Copy className="w-4 h-4" />} />
       </ButtonDisplay>
       <ButtonDisplay name="Animated Gradient Button">
         <AnimatedGradientButton>Continue</AnimatedGradientButton>

@@ -16,6 +16,12 @@ export const dottedText: Document = {
   content: {
     sections: [
       {
+        heading: 'Dotted Text',
+        content:
+          'Text made up of dots arranged in a grid pattern. Each letter is created using dots that can change colors and animate with different effects and timing.',
+        sectionType: 'paragraph'
+      },
+      {
         heading: 'Preview',
         sectionType: 'preview',
         code: (

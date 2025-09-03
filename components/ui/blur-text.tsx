@@ -1,23 +1,30 @@
+import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import { FC } from 'react';
 
 type BlurTextProps = {
   text: string;
+  repeat?: boolean;
   className?: string;
 };
 
-const BlurText: FC<BlurTextProps> = ({ text, className }) => {
+const BlurText: FC<BlurTextProps> = ({ text, repeat = false, className }) => {
   return (
-    <div className={`flex flex-wrap overflow-visible ${className}`}>
+    <div className={cn('flex flex-wrap overflow-visible', className)}>
       {text.split('').map((char, index) => (
         <motion.span
           key={index}
-          initial={{ y: 10, filter: 'blur(10px)' }}
-          whileInView={{ y: 0, filter: 'blur(0px)' }}
+          initial={{ filter: 'blur(10px)' }}
+          whileInView={{ filter: 'blur(0px)' }}
           transition={{
-            duration: 0.2,
-            delay: index * 0.1,
-            ease: 'backOut'
+            duration: 0.05,
+            delay: index * 0.05,
+            ease: 'backOut',
+            ...(repeat && {
+              repeat: Infinity,
+              repeatDelay: 0.05 * text.split('').length + 1,
+              repeatType: 'reverse'
+            })
           }}
           className="inline-block"
         >

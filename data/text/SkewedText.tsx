@@ -16,6 +16,12 @@ export const skewedText: Document = {
   content: {
     sections: [
       {
+        heading: 'Skewed Text',
+        content:
+          'Text that moves and rotates in 3D space when you move your mouse over it. It responds to mouse movement and creates a dynamic, interactive 3D effect.',
+        sectionType: 'paragraph'
+      },
+      {
         heading: 'Preview',
         sectionType: 'preview',
         code: <SkewedText className="text-4xl">Skewed Text</SkewedText>

@@ -16,6 +16,12 @@ export const countUp: Document = {
   content: {
     sections: [
       {
+        heading: 'Count Up',
+        content:
+          'A number that counts up from zero to a target value with a smooth animation. When it reaches the target, it shows confetti and scales up for a celebration effect.',
+        sectionType: 'paragraph'
+      },
+      {
         heading: 'Preview',
         sectionType: 'preview',
         code: <CountUp target={777} className="text-4xl font-bold"></CountUp>

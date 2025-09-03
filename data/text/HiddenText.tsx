@@ -16,6 +16,12 @@ export const hiddenText: Document = {
   content: {
     sections: [
       {
+        heading: 'Hidden Text',
+        content:
+          'Text that shows as symbols until you hover over it. When you hover, the real text appears with a smooth animation, and you can click to copy it to your clipboard.',
+        sectionType: 'paragraph'
+      },
+      {
         heading: 'Preview',
         sectionType: 'preview',
         code: <HiddenText text="hidden text" className="text-4xl" />

@@ -193,6 +193,13 @@ const sideBarOptions: Array<{
   {
     title: 'Text',
     children: [
+      {
+        name: 'Blur Text',
+        href: '/docs/blurText',
+        content: blurText,
+        preview: blurTextPreview,
+        isNew: false
+      },
       // {
       //   name: 'Fade In Text',
       //   href: '/docs/fadeInText',
@@ -240,13 +247,6 @@ const sideBarOptions: Array<{
         href: '/docs/wavyText',
         content: wavyText,
         preview: wavyTextPreview,
-        isNew: false
-      },
-      {
-        name: 'Blur Text',
-        href: '/docs/blurText',
-        content: blurText,
-        preview: blurTextPreview,
         isNew: false
       },
       {
