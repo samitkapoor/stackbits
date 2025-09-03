@@ -44,7 +44,7 @@ import { wavyText, wavyTextPreview } from './text/WavyText';
 import { blurText, blurTextPreview } from './text/BlurText';
 import { dottedText, dottedTextPreview } from './text/DottedText';
 import { hiddenText, hiddenTextPreview } from './text/HiddenText';
-import { gooeyWords, gooeyWordsPreview } from './frontend/GooeyWords';
+import { gooeyWords, gooeyWordsPreview } from './text/GooeyWords';
 import { skeumorphicMusicCard, skeumorphicMusicCardPreview } from './frontend/SkeumorphicMusicCard';
 import { imagePile, imagePilePreview } from './frontend/ImagePile';
 // import { gaugeChart, gaugeChartPreview } from './frontend/GaugeChart';
@@ -60,7 +60,7 @@ import { jellyLoader, jellyLoaderPreview } from './frontend/JellyLoader';
 import { proximityBackground, proximityBackgroundPreview } from './frontend/ProximityBackground';
 import { maskCursorEffect, maskCursorEffectPreview } from './frontend/MaskCursorEffect';
 import { pixelatedCarousel, pixelatedCarouselPreview } from './frontend/PixelatedCarousel';
-import { pixelatedText, pixelatedTextPreview } from './frontend/PixelatedText';
+import { pixelatedText, pixelatedTextPreview } from './text/PixelatedText';
 // import { glassGrid, glassGridPreview } from './frontend/GlassGrid';
 // import { spiderLoader, spiderLoaderPreview } from './frontend/SpiderLoader';
 import { sentenceFlip, sentenceFlipPreview } from './frontend/SentenceFlip';
@@ -200,6 +200,20 @@ const sideBarOptions: Array<{
         preview: blurTextPreview,
         isNew: false
       },
+      {
+        name: 'Dotted Text',
+        href: '/docs/dottedText',
+        content: dottedText,
+        preview: dottedTextPreview,
+        isNew: false
+      },
+      // {
+      //   name: 'Count Up',
+      //   href: '/docs/countUp',
+      //   content: countUp,
+      //   preview: countUpPreview,
+      //   isNew: false
+      // },
       // {
       //   name: 'Fade In Text',
       //   href: '/docs/fadeInText',
@@ -222,41 +236,6 @@ const sideBarOptions: Array<{
         isNew: false
       },
       {
-        name: 'Rainbow Text',
-        href: '/docs/rainbowText',
-        content: rainbowText,
-        preview: rainbowTextPreview,
-        isNew: false
-      },
-      // {
-      //   name: 'Skewed Text',
-      //   href: '/docs/skewedText',
-      //   content: skewedText,
-      //   preview: skewedTextPreview,
-      //   isNew: false
-      // },
-      {
-        name: 'Count Up',
-        href: '/docs/countUp',
-        content: countUp,
-        preview: countUpPreview,
-        isNew: false
-      },
-      {
-        name: 'Wavy Text',
-        href: '/docs/wavyText',
-        content: wavyText,
-        preview: wavyTextPreview,
-        isNew: false
-      },
-      {
-        name: 'Dotted Text',
-        href: '/docs/dottedText',
-        content: dottedText,
-        preview: dottedTextPreview,
-        isNew: false
-      },
-      {
         name: 'Hidden Text',
         href: '/docs/hiddenText',
         content: hiddenText,
@@ -271,11 +250,33 @@ const sideBarOptions: Array<{
         isNew: true
       },
       {
+        name: 'Rainbow Text',
+        href: '/docs/rainbowText',
+        content: rainbowText,
+        preview: rainbowTextPreview,
+        isNew: false
+      },
+      // {
+      //   name: 'Skewed Text',
+      //   href: '/docs/skewedText',
+      //   content: skewedText,
+      //   preview: skewedTextPreview,
+      //   isNew: false
+      // },
+
+      {
         name: 'Sentence Flip',
         href: '/docs/sentenceflip',
         content: sentenceFlip,
         preview: sentenceFlipPreview,
         isNew: true
+      },
+      {
+        name: 'Wavy Text',
+        href: '/docs/wavyText',
+        content: wavyText,
+        preview: wavyTextPreview,
+        isNew: false
       }
     ]
   },

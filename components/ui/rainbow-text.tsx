@@ -28,7 +28,7 @@ const RainbowText = ({
     '#FF944D'
   ],
   className = '',
-  duration = 2,
+  duration = 5,
   children
 }: RainbowTextProps) => {
   const linearGradients = [];

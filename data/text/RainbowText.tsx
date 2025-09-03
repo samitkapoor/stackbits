@@ -1,3 +1,4 @@
+import { installDependenciesCode } from '@/constants/code';
 import { Document } from '../main';
 import RainbowText from '@/components/ui/rainbow-text';
 
@@ -26,6 +27,7 @@ export const rainbowText: Document = {
         sectionType: 'preview',
         code: <RainbowText className="text-4xl">Rainbow Text</RainbowText>
       },
+      installDependenciesCode({ framerMotion: true }),
       {
         heading: 'Rainbow Text',
         sectionType: 'component',

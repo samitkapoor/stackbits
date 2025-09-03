@@ -8,7 +8,7 @@ import PrismaticHazeBackground from './ui/prismatic-haze';
 import TradingCardDemo from './trading-card-demo';
 import AnimatedGradientButton from './ui/animated-gradient-button';
 import ImagePile from './ui/image-pile';
-import { gooeyWordsPreview } from '@/data/frontend/GooeyWords';
+import { gooeyWordsPreview } from '@/data/text/GooeyWords';
 
 const Components = () => {
   const containerRef = useRef<HTMLDivElement>(null);

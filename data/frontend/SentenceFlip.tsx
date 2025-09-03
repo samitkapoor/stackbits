@@ -1,3 +1,4 @@
+import { cnCode, installDependenciesCode } from '@/constants/code';
 import { Document } from '../main';
 import SentenceFlip from '@/components/ui/sentence-flip';
 
@@ -28,14 +29,14 @@ export const sentenceFlip: Document = {
       {
         heading: 'Sentence Flip',
         content:
-          'A dynamic, animated text component that creates engaging sentence transitions with word-by-word flipping animations. Built with Framer Motion, this React component cycles through multiple sentences, highlighting specific words with custom styling and smooth blur transitions. Perfect for hero sections, landing pages, and interactive content displays where you want to showcase different messaging variations with elegant motion effects.',
+          'Text that cycles through different sentences with smooth word-by-word transitions. Each word flips individually with blur effects, and you can highlight specific words with custom styling.',
         sectionType: 'paragraph'
       },
       {
         heading: 'Preview',
         sectionType: 'preview',
         code: (
-          <div className="h-full w-full flex flex-col gap-5 items-center justify-center overflow-y-auto relative p-32">
+          <div className="h-full w-full flex flex-col gap-5 items-center justify-center overflow-y-auto relative px-10">
             <SentenceFlip
               sentences={[
                 { sentence: 'The home for your AI assistants', highlight: [1, 4, 5] },
@@ -48,11 +49,8 @@ export const sentenceFlip: Document = {
           </div>
         )
       },
-      {
-        heading: 'Install dependencies',
-        sectionType: 'dependencies',
-        code: `npm i framer-motion`
-      },
+      installDependenciesCode({ framerMotion: true }),
+      cnCode,
       {
         heading: 'Component',
         sectionType: 'component',

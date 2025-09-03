@@ -20,7 +20,7 @@ export const gooeyWords: Document = {
       {
         heading: 'Gooey Words',
         content:
-          'Create stunning animated text effects with the Gooey Words component. This React component transforms ordinary text into captivating liquid-style animations using SVG paths and Framer Motion. Perfect for modern web applications, landing pages, and interactive interfaces. Features smooth word transitions, customizable speed controls, and responsive design. Enhance user engagement with eye-catching typography animations that work seamlessly across all devices.',
+          'Text that morphs between different words with a smooth, liquid-like animation. Each word is drawn using SVG paths and smoothly transforms into the next word with flowing transitions.',
         sectionType: 'paragraph'
       },
       {

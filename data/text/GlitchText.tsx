@@ -1,3 +1,4 @@
+import { installDependenciesCode } from '@/constants/code';
 import { Document } from '../main';
 import GlitchText from '@/components/ui/glitch-text';
 
@@ -26,6 +27,7 @@ export const glitchText: Document = {
         sectionType: 'preview',
         code: <GlitchText className="text-4xl">Glitch Text</GlitchText>
       },
+      installDependenciesCode({ framerMotion: true }),
       {
         heading: 'Glitch Text',
         sectionType: 'component',

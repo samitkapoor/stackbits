@@ -25,7 +25,7 @@ export const pixelatedText: Document = {
       {
         heading: 'Pixelated Text',
         content:
-          'Create stunning retro-style text animations with the Pixelated Text component. This component transforms any text into animated pixelated characters that scroll across an LED-style grid, perfect for creating that nostalgic 80s arcade aesthetic. Choose from multiple visual effects including solid colors, disco randomness, wave gradients, and retro color cycling. Fully customizable with adjustable pixel sizes, animation speeds, and colors to match your design needs.',
+          "Text that looks like it's displayed on an LED screen with pixelated characters. The text scrolls across the screen and can have different color effects like solid, disco, wave, or retro styles.",
         sectionType: 'paragraph'
       },
       {
@@ -55,10 +55,6 @@ export const pixelatedText: Document = {
             />
           </div>
         )
-      },
-      {
-        heading: 'Follow below steps 👇🏻',
-        sectionType: 'heading'
       },
       {
         heading: 'Component',

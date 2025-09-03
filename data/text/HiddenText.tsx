@@ -1,3 +1,4 @@
+import { cnCode, installDependenciesCode } from '@/constants/code';
 import { Document } from '../main';
 import HiddenText from '@/components/ui/hidden-text';
 
@@ -26,6 +27,8 @@ export const hiddenText: Document = {
         sectionType: 'preview',
         code: <HiddenText text="hidden text" className="text-4xl" />
       },
+      installDependenciesCode({ framerMotion: true }),
+      cnCode,
       {
         heading: 'Hidden Text',
         sectionType: 'component',
