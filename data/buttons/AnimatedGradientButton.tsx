@@ -1,3 +1,4 @@
+import { cnCode } from '@/constants/code';
 import { Document } from '../main';
 import AnimatedGradientButton from '@/components/ui/animated-gradient-button';
 
@@ -20,6 +21,7 @@ export const animatedGradientButton: Document = {
         sectionType: 'preview',
         code: <AnimatedGradientButton>Continue</AnimatedGradientButton>
       },
+      cnCode,
       {
         heading: 'Animated Gradient Button',
         sectionType: 'component',
