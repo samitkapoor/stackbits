@@ -82,6 +82,7 @@ import { stackedInputForm, stackedInputFormPreview } from './frontend/StackedInp
 import { interactiveFolder, interactiveFolderPreview } from './frontend/InteractiveFolder';
 import { otpInput, otpInputPreview } from './frontend/OTPInput';
 import { rubikCube, rubikCubePreview } from './frontend/RubikCube';
+import { interestPicker, interestPickerPreview } from './frontend/InterestPicker';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -355,6 +356,13 @@ const sideBarOptions: Array<{
         href: '/docs/interactivefolder',
         content: interactiveFolder,
         preview: interactiveFolderPreview,
+        isNew: true
+      },
+      {
+        name: 'Interest Picker',
+        href: '/docs/interestpicker',
+        content: interestPicker,
+        preview: interestPickerPreview,
         isNew: true
       },
       {
