@@ -27,7 +27,7 @@ export const interestPicker: Document = {
         sectionType: 'preview',
         code: (
           <div className="w-full flex items-center md:justify-center px-3">
-            <InterestPicker />
+            <InterestPicker showEmptySlot />
           </div>
         )
       },
