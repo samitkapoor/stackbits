@@ -14,17 +14,19 @@ export function cn(...inputs: ClassValue[]) {
 export const installDependenciesCode = ({
   framerMotion = false,
   lucide = false,
-  tailwindcss = false
+  tailwindcss = false,
+  tablerIcons = false
 }: {
   framerMotion?: boolean;
   lucide?: boolean;
   tailwindcss?: boolean;
+  tablerIcons?: boolean;
 }) => {
   return {
     heading: 'Install dependencies',
     sectionType: 'dependencies',
     code: `npm i ${framerMotion ? 'framer-motion' : ''} ${lucide ? 'lucide-react' : ''} ${
       tailwindcss ? 'tailwindcss' : ''
-    }`
+    } ${tablerIcons ? '@tabler/icons-react' : ''}`
   };
 };

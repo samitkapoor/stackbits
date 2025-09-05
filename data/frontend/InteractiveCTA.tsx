@@ -1,4 +1,147 @@
-'use client';
+import { Document } from '../main';
+import InteractiveCTA from '@/components/ui/interactive-cta';
+import { cnCode, installDependenciesCode } from '@/constants/code';
+
+export const interactiveCTAPreview = (
+  <div className="h-full w-full flex items-center justify-center p-5 relative">
+    <InteractiveCTA />
+  </div>
+);
+
+export const interactiveCTA: Document = {
+  sideBar: {
+    group: 'Components',
+    name: 'Interactive CTA',
+    order: 4
+  },
+  content: {
+    sections: [
+      {
+        heading: 'Interactive CTA',
+        content:
+          'A floating call-to-action component that expands from a compact icon to reveal contact information and navigation links. Features smooth animations, customizable positioning, and dynamic content.',
+        sectionType: 'paragraph'
+      },
+      {
+        heading: 'Preview',
+        sectionType: 'preview',
+        code: (
+          <div className="h-[500px] w-full flex items-center justify-center relative">
+            <InteractiveCTA className="!absolute" initialOpen={false} />
+          </div>
+        )
+      },
+      installDependenciesCode({ framerMotion: true, tablerIcons: true, lucide: true }),
+      cnCode,
+      {
+        heading: 'Navigation Button Component',
+        sectionType: 'component',
+        description:
+          'First, create a file navigation-button.tsx in your components folder and paste this code',
+        code: `'use client';
+
+import { ArrowUpRight, Eye } from 'lucide-react';
+import Link from 'next/link';
+import React, { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { cn } from '@/lib/utils';
+
+interface ButtonProps {
+  text: string;
+  href: string;
+  target?: '_self' | '_blank' | '_parent' | '_top';
+  className?: string;
+  icon?: React.ReactNode;
+}
+
+const NavigationButton = ({
+  href,
+  text = 'Open',
+  icon = undefined,
+  target = '_blank',
+  className = ''
+}: ButtonProps) => {
+  const [hovered, setHovered] = useState(false);
+  return (
+    <div className="flex items-start">
+      <Link href={href} target={target}>
+        <AnimatePresence mode="popLayout">
+          <button
+            className={cn(
+              'flex items-center gap-1 outline-none cursor-pointer text-zinc-400 hover:text-blue-400 font-semibold shadow-sm py-2 px-4 hover:brightness-125 active:brightness-105 transition-opacity duration-100 rounded-lg',
+              className
+            )}
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+          >
+            {!hovered && (
+              <motion.div
+                key={'eye-btn' + href}
+                initial={{
+                  x: -10,
+                  opacity: 0
+                }}
+                animate={{
+                  x: 0,
+                  opacity: 1
+                }}
+                exit={{
+                  x: -10,
+                  opacity: 0
+                }}
+                transition={{
+                  ease: 'linear',
+                  duration: 0.1
+                }}
+              >
+                {icon ? icon : <Eye size={14} />}
+              </motion.div>
+            )}
+            <motion.p
+              layout
+              transition={{ duration: 0.1, ease: 'linear' }}
+              className="text-xs sm:text-sm whitespace-nowrap"
+            >
+              {text}
+            </motion.p>
+            {hovered && (
+              <motion.div
+                key={'arrow-btn' + href}
+                initial={{
+                  x: 10,
+                  opacity: 0
+                }}
+                animate={{
+                  x: 0,
+                  opacity: 1
+                }}
+                exit={{
+                  x: 10,
+                  opacity: 0
+                }}
+                transition={{
+                  ease: 'linear',
+                  duration: 0.1
+                }}
+              >
+                <ArrowUpRight size={14} />
+              </motion.div>
+            )}
+          </button>
+        </AnimatePresence>
+      </Link>
+    </div>
+  );
+};
+
+export default NavigationButton;`
+      },
+      {
+        heading: 'Interactive CTA Component',
+        sectionType: 'component',
+        description:
+          'Create a file interactive-cta.tsx in your components folder and paste this code',
+        code: `'use client';
 
 import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -138,7 +281,7 @@ const InteractiveCTA = ({
               >
                 {navigationLinks.map((link, index) => (
                   <NavigationButton
-                    key={`${link.href}-${index}`}
+                    key={\`\${link.href}-\${index}\`}
                     href={link.href}
                     text={link.text}
                     className={link.className}
@@ -168,3 +311,49 @@ const InteractiveCTA = ({
 };
 
 export default InteractiveCTA;
+`
+      },
+      {
+        heading: 'Usage',
+        sectionType: 'usage',
+        code: `// Basic usage
+<InteractiveCTA />
+
+// With custom content
+<InteractiveCTA 
+  heading="Need help?"
+  subheading="Get in touch!"
+  avatar={<User size={24} className="text-white" />}
+  position="top-left"
+  initialOpen={false}
+/>
+
+// With custom navigation links
+<InteractiveCTA 
+  navigationLinks={[
+    {
+      href: "https://github.com/yourusername",
+      text: "View GitHub",
+      icon: <IconBrandGithub size={14} />,
+      className: "px-2 py-1 text-white hover:text-green-500"
+    },
+    {
+      href: "/contact",
+      text: "Contact Form",
+      target: "_self",
+      className: "px-2 py-1 text-white hover:text-purple-500"
+    }
+  ]}
+/>
+
+// With custom dimensions
+<InteractiveCTA 
+  openWidth="400px"
+  openHeight="200px"
+  closeWidth="80px"
+  closeHeight="80px"
+/>`
+      }
+    ]
+  }
+};

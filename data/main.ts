@@ -83,6 +83,7 @@ import { interactiveFolder, interactiveFolderPreview } from './frontend/Interact
 import { otpInput, otpInputPreview } from './frontend/OTPInput';
 import { rubikCube, rubikCubePreview } from './frontend/RubikCube';
 import { interestPicker, interestPickerPreview } from './frontend/InterestPicker';
+import { interactiveCTA, interactiveCTAPreview } from './frontend/InteractiveCTA';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -350,6 +351,13 @@ const sideBarOptions: Array<{
         content: imagePile,
         preview: imagePilePreview,
         isNew: false
+      },
+      {
+        name: 'Interactive CTA',
+        href: '/docs/interactivecta',
+        content: interactiveCTA,
+        preview: interactiveCTAPreview,
+        isNew: true
       },
       {
         name: 'Interactive Folder',
