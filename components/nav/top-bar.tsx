@@ -1,6 +1,7 @@
 'use client';
 
-import { CodeXml, Github, Heading, Joystick, Puzzle } from 'lucide-react';
+import { CodeXml, Heading, Joystick, Puzzle } from 'lucide-react';
+import { IconBrandGithub, IconBrandX, IconComponents } from '@tabler/icons-react';
 import Link from 'next/link';
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -10,7 +11,9 @@ const TopBar = () => {
     {
       name: 'Components',
       href: '/docs/components',
-      icon: <Puzzle className="h-[12px] sm:h-[14px] md:h-[16px] w-[12px] sm:w-[14px] md:w-[16px]" />
+      icon: (
+        <IconComponents className="h-[12px] sm:h-[14px] md:h-[16px] w-[12px] sm:w-[14px] md:w-[16px]" />
+      )
     },
     {
       name: 'Buttons',
@@ -70,11 +73,11 @@ const TopBar = () => {
             Stackbits
           </Link>
           {/* Desktop navigation */}
-          <div className="hidden md:flex items-center text-white gap-2 pr-11 lg:pr-0 z-10">
+          <div className="hidden md:flex items-center text-white gap-2 z-10">
             {links.map((link) => {
               return (
                 <Link key={link.name} href={link.href}>
-                  <button className="rounded-md hover:bg-white/90 hover:text-black 0 h-7 w-min px-2 flex items-center justify-center gap-1.5 text-sm">
+                  <button className="rounded-md backdrop-blur-sm hover:bg-white/90 hover:text-black 0 h-7 w-min px-2 flex items-center justify-center gap-1.5 text-sm">
                     {link.icon}
                     <p className="text-xs sm:text-sm">{link.name}</p>
                   </button>
@@ -83,12 +86,20 @@ const TopBar = () => {
             })}
           </div>
         </div>
-        <Link href="https://github.com/samitkapoor/stackbits" target="_blank">
-          <button className="rounded-md hover:bg-white/90 hover:text-black h-7 w-min px-2 flex items-center justify-center text-sm gap-1.5">
-            <Github className="w-4 h-4" />
-            Github
-          </button>
-        </Link>
+        <div className="flex items-center gap-2">
+          <Link href="https://x.com/samitkapoorr" target="_blank">
+            <button className="rounded-md backdrop-blur-sm hover:bg-white/90 hover:text-black h-7 w-min px-2 flex items-center justify-center text-sm gap-1.5">
+              <IconBrandX className="w-4 h-4" />
+              <p className="whitespace-nowrap">Get in touch</p>
+            </button>
+          </Link>
+          <Link href="https://github.com/samitkapoor/stackbits" target="_blank">
+            <button className="rounded-md backdrop-blur-sm hover:bg-white/90 hover:text-black h-7 w-min px-2 flex items-center justify-center text-sm gap-1.5">
+              <IconBrandGithub className="w-4 h-4" />
+              Github
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );
