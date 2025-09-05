@@ -4,7 +4,7 @@ import TopBar from '@/components/nav/top-bar';
 import SchemaOrgWrapper from '@/components/schema-org-wrapper';
 import { Inter } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
-import CTAComponent from '@/components/ui/cta-component';
+import InteractiveCTA from '@/components/ui/interactive-cta';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -77,7 +77,7 @@ export default function RootLayout({
       >
         <TopBar />
         {children}
-        <CTAComponent />
+        <InteractiveCTA />
       </body>
     </html>
   );

@@ -5,16 +5,84 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { IconBrandX, IconMail } from '@tabler/icons-react';
 import { MessageCircle, X } from 'lucide-react';
 import NavigationButton from './navigation-button';
+import { cn } from '@/lib/utils';
 
-const CTAComponent = () => {
-  const [isOpen, setIsOpen] = useState(true);
+export interface NavigationLink {
+  href: string;
+  text: string;
+  icon?: React.ReactNode;
+  target?: '_self' | '_blank' | '_parent' | '_top';
+  className?: string;
+}
+
+export interface InteractiveCTAProps {
+  heading?: string;
+  subheading?: string;
+  avatar?: React.ReactNode;
+  navigationLinks?: NavigationLink[];
+  initialOpen?: boolean;
+  position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
+  className?: string;
+  openIcon?: React.ReactNode;
+  closeIcon?: React.ReactNode;
+  openWidth?: string;
+  closeWidth?: string;
+  openHeight?: string;
+  closeHeight?: string;
+}
+
+const DEFAULT_NAVIGATION_LINKS: NavigationLink[] = [
+  {
+    href: 'https://twitter.com/samitkapoorr',
+    text: 'DM me on X',
+    className: 'px-2 py-1 text-white hover:text-blue-500',
+    icon: <IconBrandX size={14} />
+  },
+  {
+    href: 'mailto:samitkapoor77@gmail.com',
+    text: 'Send me an email',
+    className: 'px-2 py-1 text-white hover:text-red-500',
+    icon: <IconMail size={14} />
+  }
+];
+
+const getPositionClasses = (position: string) => {
+  switch (position) {
+    case 'bottom-left':
+      return 'bottom-4 left-4';
+    case 'top-right':
+      return 'top-4 right-4';
+    case 'top-left':
+      return 'top-4 left-4';
+    case 'bottom-right':
+    default:
+      return 'bottom-4 right-4';
+  }
+};
+
+const InteractiveCTA = ({
+  heading = 'Want something custom made?',
+  subheading = "Let's talk",
+  avatar,
+  navigationLinks = DEFAULT_NAVIGATION_LINKS,
+  initialOpen = true,
+  position = 'bottom-right',
+  className,
+  openIcon,
+  closeIcon,
+  openWidth = '310px',
+  closeWidth = '64px',
+  openHeight = '155px',
+  closeHeight = '64px'
+}: InteractiveCTAProps) => {
+  const [isOpen, setIsOpen] = useState(initialOpen);
   return (
-    <div className="fixed bottom-4 right-4 z-50">
+    <div className={cn('fixed z-50', getPositionClasses(position), className)}>
       <AnimatePresence mode="popLayout">
         <motion.div
           animate={{
-            width: isOpen ? '310px' : '64px',
-            height: isOpen ? '155px' : '64px',
+            width: isOpen ? openWidth : closeWidth,
+            height: isOpen ? openHeight : closeHeight,
             borderColor: !isOpen ? '#3F3F46' : '#888888'
           }}
           transition={{
@@ -31,9 +99,10 @@ const CTAComponent = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(true)}
-              className="h-[64px] w-[64px] flex items-center hover:bg-white/5 rounded-xl justify-center absolute bottom-0 right-0"
+              className="flex items-center hover:bg-white/5 rounded-xl justify-center absolute bottom-0 right-0"
+              style={{ width: closeWidth, height: closeHeight }}
             >
-              <MessageCircle size={20} />
+              {openIcon || <MessageCircle size={20} />}
             </motion.button>
           )}
           {isOpen && (
@@ -49,8 +118,10 @@ const CTAComponent = () => {
                     delay: 0.1
                   }}
                   key="image-container"
-                  className="rounded-full h-[42px] w-[42px] bg-gradient-to-b from-yellow-400 to-purple-500"
-                ></motion.div>
+                  className="rounded-full h-[42px] w-[42px] bg-gradient-to-b from-yellow-400 to-purple-500 flex items-center justify-center overflow-hidden"
+                >
+                  {avatar}
+                </motion.div>
                 <motion.p
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -63,9 +134,9 @@ const CTAComponent = () => {
                   key="text-container"
                   className="text-sm truncate text-white/70 font-medium"
                 >
-                  Want something custom made?
+                  {heading}
                   <br />
-                  <span className="text-white">Let&apos;s talk</span>
+                  <span className="text-white">{subheading}</span>
                 </motion.p>
               </div>
               <motion.div
@@ -81,18 +152,16 @@ const CTAComponent = () => {
                 key="navigation-buttons"
                 className="flex flex-col mt-4"
               >
-                <NavigationButton
-                  href="https://twitter.com/samitkapoorr"
-                  text="DM me on X"
-                  className="px-2 py-1 text-white hover:text-blue-500"
-                  icon={<IconBrandX size={14} />}
-                />
-                <NavigationButton
-                  href="mailto:samitkapoor77@gmail.com"
-                  text="Send me an email"
-                  className="px-2 py-1 text-white hover:text-red-500"
-                  icon={<IconMail size={14} />}
-                />
+                {navigationLinks.map((link, index) => (
+                  <NavigationButton
+                    key={`${link.href}-${index}`}
+                    href={link.href}
+                    text={link.text}
+                    className={link.className}
+                    icon={link.icon}
+                    target={link.target}
+                  />
+                ))}
               </motion.div>
               <div className="absolute bottom-4 right-4">
                 <motion.button
@@ -103,7 +172,7 @@ const CTAComponent = () => {
                   onClick={() => setIsOpen(false)}
                   className="flex items-center justify-center hover:bg-white/10 place-self-end h-[32px] w-[32px] rounded-md"
                 >
-                  <X size={20} />
+                  {closeIcon || <X size={20} />}
                 </motion.button>
               </div>
             </div>
@@ -114,4 +183,4 @@ const CTAComponent = () => {
   );
 };
 
-export default CTAComponent;
+export default InteractiveCTA;
