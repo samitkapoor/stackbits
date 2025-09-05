@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     siteName: 'StackBits',
     images: [
       {
-        url: 'https://stackbits.dev/stackbits-logo.png',
+        url: 'https://stackbits.dev/og.png',
         width: 1200,
         height: 630,
         alt: 'StackBits - Full-Stack Code & UI Components'
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     title: 'StackBits - React UI & Full-Stack Code Library',
     description:
       'Ready-to-use React components, Tailwind UI elements, and full-stack code snippets to accelerate your web development. Build modern apps faster with StackBits.',
-    images: 'https://stackbits.dev/stackbits-logo.png'
+    images: 'https://stackbits.dev/og.png'
   },
   alternates: {
     canonical: 'https://stackbits.dev'
