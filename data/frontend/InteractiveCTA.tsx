@@ -204,7 +204,7 @@ const InteractiveCTA = ({
 }: InteractiveCTAProps) => {
   const [isOpen, setIsOpen] = useState(initialOpen);
   return (
-    <div className={cn('fixed z-50 bottom-4 right-4', className)}>
+    <div className={cn('fixed z-50 bottom-4 right-4 overflow-hidden', className)}>
       <AnimatePresence mode="popLayout">
         <motion.div
           animate={{
@@ -267,13 +267,13 @@ const InteractiveCTA = ({
                 </motion.p>
               </div>
               <motion.div
-                initial={{ x: 10 }}
-                animate={{ x: 0 }}
-                exit={{ x: -10 }}
+                initial={{ x: 10, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: -10, opacity: 0 }}
                 transition={{
                   duration: 0.1,
                   ease: 'linear',
-                  delay: 0.2,
+                  delay: 0.1,
                   staggerChildren: 0.1
                 }}
                 key="navigation-buttons"
