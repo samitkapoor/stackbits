@@ -62,7 +62,22 @@ import {
   Zap,
   LucideIcon,
   ArrowRight,
-  LoaderCircle
+  LoaderCircle,
+  Brush,
+  Guitar,
+  Mountain,
+  Waves,
+  Microscope,
+  Coins,
+  PenTool,
+  Headphones,
+  Flower,
+  Rocket,
+  Brain,
+  Compass,
+  Trophy,
+  Briefcase,
+  Sparkles
 } from 'lucide-react';
 import { useAnimationControls, motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
@@ -74,25 +89,40 @@ export interface Interest {
 }
 
 export const DUMMY_INTERESTS: Interest[] = [
-  { id: '1', name: 'Gaming', icon: Gamepad2 },
-  { id: '2', name: 'Music', icon: Music },
-  { id: '3', name: 'Reading', icon: BookOpen },
-  { id: '4', name: 'Learning', icon: GraduationCap },
-  { id: '5', name: 'Photography', icon: Camera },
-  { id: '6', name: 'Art & Design', icon: Palette },
+  { id: '23', name: 'Hiking & Climbing', icon: Mountain },
   { id: '7', name: 'Programming', icon: Code },
-  { id: '8', name: 'Fitness', icon: Dumbbell },
-  { id: '9', name: 'Travel', icon: Plane },
-  { id: '10', name: 'Health & Wellness', icon: Heart },
-  { id: '11', name: 'Food & Cooking', icon: Utensils },
+  { id: '31', name: 'Psychology & Mind', icon: Brain },
   { id: '12', name: 'Fashion', icon: Shirt },
-  { id: '13', name: 'Nature', icon: TreePine },
-  { id: '14', name: 'Movies & TV', icon: Star },
-  { id: '15', name: 'Socializing', icon: Users },
-  { id: '16', name: 'Technology', icon: Globe },
+  { id: '28', name: 'Podcasts & Audio', icon: Headphones },
+  { id: '5', name: 'Photography', icon: Camera },
   { id: '17', name: 'Sports', icon: Zap },
+  { id: '35', name: 'Magic & Illusion', icon: Sparkles },
+  { id: '2', name: 'Music', icon: Music },
+  { id: '26', name: 'Finance & Investing', icon: Coins },
+  { id: '14', name: 'Movies & TV', icon: Star },
+  { id: '9', name: 'Travel', icon: Plane },
+  { id: '21', name: 'Painting', icon: Brush },
+  { id: '34', name: 'Entrepreneurship', icon: Briefcase },
+  { id: '8', name: 'Fitness', icon: Dumbbell },
   { id: '18', name: 'Coffee Culture', icon: Coffee },
+  { id: '30', name: 'Space & Astronomy', icon: Rocket },
+  { id: '4', name: 'Learning', icon: GraduationCap },
+  { id: '11', name: 'Food & Cooking', icon: Utensils },
+  { id: '24', name: 'Water Sports', icon: Waves },
+  { id: '16', name: 'Technology', icon: Globe },
+  { id: '33', name: 'Competitive Gaming', icon: Trophy },
+  { id: '1', name: 'Gaming', icon: Gamepad2 },
+  { id: '29', name: 'Gardening & Plants', icon: Flower },
+  { id: '6', name: 'Art & Design', icon: Palette },
   { id: '19', name: 'Automotive', icon: Car },
+  { id: '27', name: 'Writing & Blogging', icon: PenTool },
+  { id: '13', name: 'Nature', icon: TreePine },
+  { id: '22', name: 'Musical Instruments', icon: Guitar },
+  { id: '10', name: 'Health & Wellness', icon: Heart },
+  { id: '32', name: 'Adventure & Exploring', icon: Compass },
+  { id: '15', name: 'Socializing', icon: Users },
+  { id: '25', name: 'Science & Research', icon: Microscope },
+  { id: '3', name: 'Reading', icon: BookOpen },
   { id: '20', name: 'Home & Garden', icon: Home }
 ];
 
@@ -211,18 +241,20 @@ const InterestMarquee = ({
         {Array.from({ length: 5 }).map((_, index) => {
           return (
             <div key={index} className="w-full flex items-center justify-start gap-2">
-              {[...interests.slice(index * 4), ...interests.slice(0, index * 4)].map((interest) => {
-                return (
-                  <MarqueeItem
-                    key={interest.id}
-                    interest={interest}
-                    row={index}
-                    isSelected={selectedInterests.some((i) => i.id === interest.id)}
-                    onSelect={onSelect}
-                    showEmptySlot={showEmptySlot}
-                  />
-                );
-              })}
+              {interests
+                .slice(index * (interests.length / 5), (index + 1) * (interests.length / 5))
+                .map((interest) => {
+                  return (
+                    <MarqueeItem
+                      key={interest.id}
+                      interest={interest}
+                      row={index}
+                      isSelected={selectedInterests.some((i) => i.id === interest.id)}
+                      onSelect={onSelect}
+                      showEmptySlot={showEmptySlot}
+                    />
+                  );
+                })}
             </div>
           );
         })}
@@ -248,9 +280,11 @@ const SelectedInterests = ({
 };
 
 const InterestPicker = ({
-  interests = DUMMY_INTERESTS,
-  showEmptySlot = false,
+  interests = DUMMY_INTERESTS, // You can pass your own interests category here
+  showEmptySlot = false, // You can choose to show an empty slot for the selected interests
   onSubmit = async (interests: Interest[]) => {
+    // You can pass your own onSubmit function here
+    console.log('Selected interests:', interests);
     await new Promise((resolve) => setTimeout(resolve, 4000));
   }
 }: {
