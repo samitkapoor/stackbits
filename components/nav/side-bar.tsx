@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { usePathname } from 'next/navigation';
 
 import { categories, getSideBarTabs } from '@/data/main';
-import RainbowText from './ui/rainbow-text';
+import RainbowText from '../ui/rainbow-text';
 import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';

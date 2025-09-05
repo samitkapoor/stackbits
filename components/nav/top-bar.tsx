@@ -1,6 +1,6 @@
 'use client';
 
-import { CodeXml, Heading, Joystick, Puzzle } from 'lucide-react';
+import { CodeXml, Github, Heading, Joystick, Puzzle } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -21,7 +21,7 @@ const TopBar = () => {
     },
     {
       name: 'Texts',
-      href: '/docs/text',
+      href: '/docs/texts',
       icon: (
         <Heading className="h-[12px] sm:h-[14px] md:h-[16px] w-[12px] sm:w-[14px] md:w-[16px]" />
       )
@@ -61,7 +61,7 @@ const TopBar = () => {
       ></div>
 
       <div className="flex items-center justify-between w-full px-3 pt-5 md:pt-0 h-full z-10">
-        <div className="overflow-hidden h-full">
+        <div className="overflow-hidden h-full w-full flex items-center gap-4">
           <Link
             href="/"
             className="flex items-center gap-2 h-full justify-center ml-1 sm:ml-2 text-base"
@@ -69,26 +69,26 @@ const TopBar = () => {
             <CodeXml className="w-5 h-5 md:w-6 md:h-6" />
             Stackbits
           </Link>
+          {/* Desktop navigation */}
+          <div className="hidden md:flex items-center text-white gap-2 pr-11 lg:pr-0 z-10">
+            {links.map((link) => {
+              return (
+                <Link key={link.name} href={link.href}>
+                  <button className="rounded-md hover:bg-white/90 hover:text-black 0 h-7 w-min px-2 flex items-center justify-center gap-1.5 text-sm">
+                    {link.icon}
+                    <p className="text-xs sm:text-sm">{link.name}</p>
+                  </button>
+                </Link>
+              );
+            })}
+          </div>
         </div>
-
-        {/* Desktop navigation */}
-        <div className="hidden md:flex items-center text-white gap-2 pr-11 lg:pr-0 z-10">
-          {links.map((link) => {
-            return (
-              <Link key={link.name} href={link.href}>
-                <button className="rounded-md bg-black hover:bg-[color-mix(in_srgb,black_90%,white)] 0 h-9 w-min px-2 flex items-center justify-center gap-1.5 text-sm">
-                  {link.icon}
-                  <p className="text-xs sm:text-sm">{link.name}</p>
-                </button>
-              </Link>
-            );
-          })}
-          <Link href="https://github.com/samitkapoor/stackbits" target="_blank">
-            <button className="rounded-md bg-black hover:bg-[color-mix(in_srgb,black_90%,white)] h-9 w-min px-2 flex items-center justify-center text-sm">
-              Github
-            </button>
-          </Link>
-        </div>
+        <Link href="https://github.com/samitkapoor/stackbits" target="_blank">
+          <button className="rounded-md hover:bg-white/90 hover:text-black h-7 w-min px-2 flex items-center justify-center text-sm gap-1.5">
+            <Github className="w-4 h-4" />
+            Github
+          </button>
+        </Link>
       </div>
     </div>
   );

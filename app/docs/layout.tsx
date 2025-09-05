@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 
-import SideBar from '@/components/side-bar';
+import SideBar from '@/components/nav/side-bar';
 import { Menu, X } from 'lucide-react';
 
 const DocumentationLayout = ({ children }: { children: React.ReactNode }) => {

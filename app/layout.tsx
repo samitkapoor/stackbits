@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import TopBar from '@/components/top-bar';
+import TopBar from '@/components/nav/top-bar';
 import SchemaOrgWrapper from '@/components/schema-org-wrapper';
 import { Inter } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
