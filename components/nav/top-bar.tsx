@@ -1,6 +1,6 @@
 'use client';
 
-import { CodeXml, Heading, Joystick, Puzzle } from 'lucide-react';
+import { CodeXml, Heading, Joystick } from 'lucide-react';
 import { IconBrandGithub, IconBrandX, IconComponents } from '@tabler/icons-react';
 import Link from 'next/link';
 import React from 'react';
