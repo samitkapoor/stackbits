@@ -64,8 +64,8 @@ const SideBar = ({ isOpen }: { isOpen: boolean }) => {
                           <motion.div
                             layout
                             layoutId="side-bar-highlight"
-                            transition={{ duration: 0.2 }}
-                            className="w-[4px] bg-yellow-500 absolute top-[0px] h-full z-10"
+                            transition={{ duration: 0.1 }}
+                            className="w-[4px] bg-yellow-400 absolute top-[0px] h-full z-10"
                           />
                         )}
                         <div className="border-l-[4px] border-zinc-800 z-0 absolute inset-0" />
@@ -73,8 +73,8 @@ const SideBar = ({ isOpen }: { isOpen: boolean }) => {
                           className={cn(
                             'z-20 relative pl-4 text-sm',
                             pathname === child.href
-                              ? 'text-yellow-500 font-medium'
-                              : 'text-white/70 group-hover:text-white transition-all'
+                              ? 'text-yellow-400 font-medium'
+                              : 'text-white/70 group-hover:text-white'
                           )}
                         >
                           {child.name}
