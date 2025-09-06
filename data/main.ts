@@ -84,6 +84,7 @@ import { otpInput, otpInputPreview } from './frontend/OTPInput';
 import { rubikCube, rubikCubePreview } from './frontend/RubikCube';
 import { interestPicker, interestPickerPreview } from './frontend/InterestPicker';
 import { interactiveCTA, interactiveCTAPreview } from './frontend/InteractiveCTA';
+import { photoGallery, photoGalleryPreview } from './frontend/PhotoGallery';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -433,6 +434,13 @@ const sideBarOptions: Array<{
         href: '/docs/otpinput',
         content: otpInput,
         preview: otpInputPreview,
+        isNew: true
+      },
+      {
+        name: 'Photo Gallery',
+        href: '/docs/photogallery',
+        content: photoGallery,
+        preview: photoGalleryPreview,
         isNew: true
       },
       {

@@ -77,7 +77,7 @@ export default function RootLayout({
       >
         <TopBar />
         {children}
-        <InteractiveCTA />
+        <InteractiveCTA initialOpen={false} />
       </body>
     </html>
   );
