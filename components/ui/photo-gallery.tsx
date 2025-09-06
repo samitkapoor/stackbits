@@ -61,6 +61,7 @@ const Vignette = memo(() => {
     ></div>
   );
 });
+Vignette.displayName = 'Vignette';
 
 const SelectedPhotoItem = memo(
   ({
@@ -119,6 +120,7 @@ const SelectedPhotoItem = memo(
     );
   }
 );
+SelectedPhotoItem.displayName = 'SelectedPhotoItem';
 
 const PhotoItem = ({
   rowIndex,
