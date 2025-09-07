@@ -21,10 +21,9 @@ export const expandableIconButton: Document = {
         heading: 'Expandable Icon Button',
         content:
           'A button that grows wider when you hover over it. Starts small and expands to show text alongside the icon.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: <ExpandableIconButton icon={<TwitterIcon size={18} />} text={'samitkapoorr'} />
       },

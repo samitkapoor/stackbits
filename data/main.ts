@@ -19,9 +19,9 @@ import { tradingCard, tradingCardPreview } from './frontend/TradingCard';
 import { SearchResult } from '@/components/support-plugin';
 import { expressServer } from './utilities/ExpressServer';
 import { axiosInterceptor } from './utilities/AxiosInterceptor';
-import { prismaticHaze, prismaticHazePreview } from './frontend/PrismaticHaze';
+import { prismaticHaze, prismaticHazePreview } from './backgrounds/PrismaticHaze';
 // // import { colorCyclone, colorCyclonePreview } from './frontend/ColorCyclone';
-import { wavyBackgroundPreview, wavyBackground } from './frontend/WavyBackground';
+import { wavyBackgroundPreview, wavyBackground } from './backgrounds/WavyBackground';
 // // import { flipRevealCard, flipRevealCardPreview } from './frontend/FlipRevealCard';
 // import { movingBorderCard, movingBorderCardPreview } from './frontend/MovingBorderCard';
 // import { iconWheel, iconWheelPreview } from './frontend/IconWheel';
@@ -32,7 +32,7 @@ import { wavyBackgroundPreview, wavyBackground } from './frontend/WavyBackground
 import {
   glowingDotsBackground,
   glowingDotsBackgroundPreview
-} from './frontend/GlowingDotsBackground';
+} from './backgrounds/GlowingDotsBackground';
 // // import { footer, footerPreview } from './frontend/Footer';
 import { masonryGrid, masonryGridPreview } from './frontend/MasonryGrid';
 // import { fileStack, fileStackPreview } from './frontend/FileStack';
@@ -57,7 +57,7 @@ import { imagePile, imagePilePreview } from './frontend/ImagePile';
 import { magnetTabs, magnetTabsPreview } from './frontend/MagnetTabs';
 import { jellyLoader, jellyLoaderPreview } from './frontend/JellyLoader';
 // import { proximityLiftGrid, proximityLiftGridPreview } from './frontend/ProximityLiftGrid';
-import { proximityBackground, proximityBackgroundPreview } from './frontend/ProximityBackground';
+import { proximityBackground, proximityBackgroundPreview } from './backgrounds/ProximityBackground';
 import { maskCursorEffect, maskCursorEffectPreview } from './frontend/MaskCursorEffect';
 import { pixelatedCarousel, pixelatedCarouselPreview } from './frontend/PixelatedCarousel';
 import { pixelatedText, pixelatedTextPreview } from './text/PixelatedText';

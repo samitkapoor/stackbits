@@ -112,6 +112,12 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
 
   // Render different content types
   switch (sectionType) {
+    case 'name':
+      if (typeof content === 'string') {
+        return <p className="w-full text-sm text-white/80">{content}</p>;
+      }
+      break;
+
     case 'paragraph':
       if (typeof content === 'string') {
         return <p className="w-full text-sm mt-4 text-white/80">{content}</p>;
@@ -193,8 +199,8 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
 
     case 'preview':
       return (
-        <div className="w-full rounded-2xl p-[12px] bg-[#131313] mt-6">
-          <div className="h-full w-full bg-[#040404] border border-white/15 rounded-lg flex items-center justify-center min-h-[500px] relative overflow-x-hidden">
+        <div className="w-full h-[calc(100vh-50px)] rounded-3xl p-[12px] bg-[#131313]">
+          <div className="h-full w-full bg-[#040404] border border-white/15 rounded-xl flex items-center justify-center min-h-[500px] relative overflow-x-hidden">
             {code}
           </div>
         </div>

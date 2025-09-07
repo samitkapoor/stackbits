@@ -20,10 +20,9 @@ export const movingBorderButton: Document = {
         heading: 'Moving Border Button',
         content:
           'A button with a spinning border that moves around the edge. The border changes color when you hover over it.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: <MovingBorderButton>Continue</MovingBorderButton>
       },

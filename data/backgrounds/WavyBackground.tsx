@@ -24,16 +24,15 @@ export const wavyBackground: Document = {
         heading: '🌊 Wavy Background',
         content:
           'A background with flowing wave animations that move smoothly. Perfect for creating modern, dynamic designs with a fluid feel.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
           <div className="h-full w-full flex flex-col items-center justify-center gap-2">
             <WavyBackground>
-              <div className="h-[500px] w-full flex items-center justify-center">
-                <p className="text-black font-extrabold text-5xl">Wavy Background</p>
+              <div className="h-full w-full flex items-center justify-center">
+                <p className="text-white font-extrabold text-5xl">Wavy Background</p>
               </div>
             </WavyBackground>
           </div>

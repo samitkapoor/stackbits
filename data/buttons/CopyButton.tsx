@@ -21,10 +21,9 @@ export const copyButton: Document = {
         heading: 'Copy Button',
         content:
           'A button that copies text to your clipboard when clicked. Shows a check mark after copying and comes in different sizes.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
           <div className="flex flex-col gap-4 items-center justify-center">

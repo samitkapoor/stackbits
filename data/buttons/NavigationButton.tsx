@@ -20,10 +20,9 @@ export const navigationButton: Document = {
         heading: 'Navigation Button',
         content:
           'A button that changes its icon when you hover over it. Perfect for navigation and external links.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: <NavigationButton href="https://twitter.com/samitkapoorr" text="Open twitter" />
       },

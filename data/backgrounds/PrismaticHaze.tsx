@@ -21,15 +21,16 @@ export const prismaticHaze: Document = {
         heading: 'Prismatic Haze Background',
         content:
           'A background with dreamy, shifting colors that blend together like cosmic swirls. Perfect for creating futuristic and atmospheric designs.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
-          <div className="h-[500px] w-full flex flex-col items-center justify-center gap-2">
+          <div className="h-full w-full flex flex-col items-center justify-center gap-2">
             <PrismaticHazeBackground className="flex items-center justify-center">
-              <p className="text-black font-extrabold text-5xl">Prismatic Haze Background</p>
+              <div className="h-full w-full flex items-center justify-center">
+                <p className="text-white font-extrabold text-5xl">Prismatic Haze Background</p>
+              </div>
             </PrismaticHazeBackground>
           </div>
         )

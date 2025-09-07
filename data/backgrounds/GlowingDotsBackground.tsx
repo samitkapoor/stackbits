@@ -22,16 +22,15 @@ export const glowingDotsBackground: Document = {
         heading: 'Glowing Dots Background',
         content:
           'A background with dots that light up when you hover over them. Creates an interactive grid of glowing elements.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
-          <div className="w-full h-[500px] flex flex-col items-center justify-center gap-2">
+          <div className="w-full h-full flex flex-col items-center justify-center gap-2">
             <GlowingDotsBackground
-              diameter={50}
-              className="text-2xl text-white rounded-xl flex items-center justify-center h-full w-full"
+              diameter={90}
+              className="text-5xl text-white font-extrabold rounded-xl flex items-center justify-center h-full w-full"
             >
               Glowing Dots Background
             </GlowingDotsBackground>

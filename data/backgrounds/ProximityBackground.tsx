@@ -20,14 +20,16 @@ export const proximityBackground: Document = {
         heading: 'Proximity Background',
         content:
           'A background with colorful circles that respond to your mouse movement. The circles change size and color based on how close your cursor is.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
-          <div className="w-full flex items-center justify-center">
-            <ProximityBackground circles={40} columns={8} diameter={50} />
+          <div className="w-full h-full flex items-center justify-center">
+            <ProximityBackground circles={150} columns={15} diameter={70} />
+            <div className="h-full w-full flex items-center justify-center absolute inset-0">
+              <p className="text-white font-extrabold text-5xl">Proximity Background</p>
+            </div>
           </div>
         )
       },
