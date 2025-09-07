@@ -1,10 +1,7 @@
-'use client';
-
 import { CodeXml, Heading, Joystick } from 'lucide-react';
 import { IconBrandGithub, IconBrandX, IconComponents } from '@tabler/icons-react';
 import Link from 'next/link';
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const TopBar = () => {
   const links = [
@@ -34,21 +31,10 @@ const TopBar = () => {
   return (
     <div className="flex flex-col w-full fixed h-[40px] sm:h-[50px] md:h-[50px] px-2 z-[200]">
       <div className="fixed top-0 w-full flex items-start justify-center h-[60px] z-0 pointer-events-none">
-        <motion.div
-          animate={{
-            background: [
-              'linear-gradient(to right, transparent, #8A2BE2, #00CED1, #FF4500, transparent)',
-              'linear-gradient(to right, transparent, #00CED1, #FF4500, #8A2BE2, transparent)',
-              'linear-gradient(to right, transparent, #FF4500, #8A2BE2, #00CED1, transparent)',
-              'linear-gradient(to right, transparent, #8A2BE2, #FF4500, #00CED1, transparent)',
-              'linear-gradient(to right, transparent, #00CED1, #8A2BE2, #FF4500, transparent)',
-              'linear-gradient(to right, transparent, #FF4500, #00CED1, #8A2BE2, transparent)'
-            ]
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            repeatType: 'reverse'
+        <div
+          style={{
+            background:
+              'linear-gradient(to right, transparent, #8A2BE2, #00CED1, #FF4500, transparent)'
           }}
           className="w-full h-full absolute bottom-8 pointer-events-none left-0 z-0 blur-xl opacity-40"
         />
