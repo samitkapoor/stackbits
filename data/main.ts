@@ -63,7 +63,7 @@ import { pixelatedCarousel, pixelatedCarouselPreview } from './frontend/Pixelate
 import { pixelatedText, pixelatedTextPreview } from './text/PixelatedText';
 // import { glassGrid, glassGridPreview } from './frontend/GlassGrid';
 // import { spiderLoader, spiderLoaderPreview } from './frontend/SpiderLoader';
-import { sentenceFlip, sentenceFlipPreview } from './frontend/SentenceFlip';
+import { sentenceFlip, sentenceFlipPreview } from './text/SentenceFlip';
 // import { expandableIconButton, expandableIconButtonPreview } from './buttons/ExpandableIconButton';
 import { copyButton, copyButtonPreview } from './buttons/CopyButton';
 import {

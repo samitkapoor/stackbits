@@ -21,10 +21,9 @@ export const gooeyWords: Document = {
         heading: 'Gooey Words',
         content:
           'Text that smoothly changes between different words with a liquid-like effect. Each word flows into the next one.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
           <div className="h-full w-full flex flex-col gap-5 items-center justify-center overflow-y-auto relative p-10">

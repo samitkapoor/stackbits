@@ -20,10 +20,9 @@ export const hiddenText: Document = {
         heading: 'Hidden Text',
         content:
           'Text that hides behind symbols until you hover over it. Perfect for creating mystery and surprise in your interface.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: <HiddenText text="hidden text" className="text-4xl" />
       },

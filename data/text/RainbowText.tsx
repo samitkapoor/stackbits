@@ -20,10 +20,9 @@ export const rainbowText: Document = {
         heading: 'Rainbow Text',
         content:
           'Text that changes colors like a rainbow, cycling through different hues continuously. Adds a fun, colorful touch to any design.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: <RainbowText className="text-4xl">Rainbow Text</RainbowText>
       },

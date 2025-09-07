@@ -20,10 +20,9 @@ export const dottedText: Document = {
         heading: 'Dotted Text',
         content:
           'Text created entirely from dots arranged in a grid. Each letter is built with dots that can change colors and move around.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
           <div className="flex flex-col gap-5">

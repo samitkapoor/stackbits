@@ -20,10 +20,9 @@ export const glitchText: Document = {
         heading: 'Glitch Text',
         content:
           'Text that looks broken and glitchy, like a computer screen with errors. Perfect for creating a digital, futuristic feel.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: <GlitchText className="text-4xl">Glitch Text</GlitchText>
       },

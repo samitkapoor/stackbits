@@ -26,10 +26,9 @@ export const pixelatedText: Document = {
         heading: 'Pixelated Text',
         content:
           "Text that looks like it's on an old LED display with blocky characters. Scrolls across the screen with different color themes.",
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
           <div className="h-full w-full flex flex-col gap-5 items-center justify-center overflow-y-auto relative p-10">

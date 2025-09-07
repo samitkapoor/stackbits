@@ -30,10 +30,9 @@ export const sentenceFlip: Document = {
         heading: 'Sentence Flip',
         content:
           'Text that cycles through different sentences with smooth word-by-word transitions. Each word flips individually with blur effects, and you can highlight specific words with custom styling.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
           <div className="h-full w-full flex flex-col gap-5 items-center justify-center overflow-y-auto relative px-10">
