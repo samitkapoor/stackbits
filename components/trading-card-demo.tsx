@@ -26,11 +26,11 @@ const TradingCardDemo = ({ variant = 'default' }: { variant?: 'default' | 'minim
     }
   ];
   return (
-    <div className="flex flex-col items-start justify-start lg:items-center lg:justify-center w-full gap-6">
+    <div className="flex items-start justify-start lg:items-center lg:justify-center w-full gap-6">
       <div
         className={cn(
           'w-full items-center justify-center gap-6',
-          variant === 'minimized' ? 'py-0 flex flex-row' : 'py-10 flex flex-col'
+          variant === 'minimized' ? 'py-0 flex flex-row' : 'py-10 flex'
         )}
       >
         {cards.map((card, index) => (

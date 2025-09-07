@@ -20,10 +20,9 @@ export const magnetTabs: Document = {
         heading: 'Magnet Tabs',
         content:
           'MagnetTabs is a stylish tab navigation component for switching between sections in a user interface. It’s ideal for dashboards, settings pages, admin panels, or product views, anywhere content needs to be organized into tabs for better usability.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
           <div className="h-full w-full flex flex-col gap-5 items-center justify-center overflow-y-auto relative p-10">

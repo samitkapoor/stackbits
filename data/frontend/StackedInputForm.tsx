@@ -107,13 +107,12 @@ export const stackedInputForm: Document = {
         heading: 'Stacked Input Form',
         content:
           'A progressive form that stacks input fields vertically with smooth animations, allowing users to focus on one field at a time while maintaining context.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
-          <div className="h-[500px] w-full flex flex-col items-center justify-start gap-2 bg-white/10 overflow-y-auto py-20">
+          <div className="h-full w-full flex flex-col items-center justify-center gap-2 bg-white/10 overflow-y-auto py-20">
             <StackedInputForm
               fields={[
                 {

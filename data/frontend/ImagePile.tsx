@@ -28,10 +28,9 @@ export const imagePile: Document = {
         heading: 'Image Pile',
         content:
           'A stack of images that shuffle and change positions automatically. Perfect for creating dynamic image galleries and portfolios.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
           <div className="h-[700px] w-full flex items-center justify-center">

@@ -27,15 +27,9 @@ export const maskCursorEffect: Document = {
         heading: 'Mask Cursor Effect',
         content:
           'A component that reveals hidden content through a circular mask that follows your mouse. Perfect for creating interactive reveal effects.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Original Designer',
-        sectionType: 'credits',
-        designer: [{ name: 'Minh Pham', link: 'https://minhpham.design' }]
-      },
-      {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
           <div className="h-full w-full flex flex-col gap-5 items-center justify-center overflow-y-auto relative p-10">
@@ -54,6 +48,11 @@ export const maskCursorEffect: Document = {
             </MaskCursorEffect>
           </div>
         )
+      },
+      {
+        heading: 'Original Designer',
+        sectionType: 'credits',
+        designer: [{ name: 'Minh Pham', link: 'https://minhpham.design' }]
       },
       installDependenciesCode({ framerMotion: true }),
       cnCode,

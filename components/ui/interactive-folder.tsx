@@ -196,8 +196,7 @@ const InteractiveFolder = ({ folderName = 'New Folder' }: { folderName?: string 
                       transition={{
                         type: 'spring',
                         stiffness: 300,
-                        damping: 30,
-                        delay: 0.1 + index * 0.02
+                        damping: 30
                       }}
                       className="w-[50px] h-[54px] gap-2 flex flex-col items-center justify-start overflow-hidden"
                     >

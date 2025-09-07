@@ -24,10 +24,9 @@ export const circleMenu: Document = {
         heading: 'Circle Menu',
         content:
           'A circular navigation menu that expands items in a circle around a central button with smooth animations and hover effects.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
           <div className="w-full h-full flex items-center justify-center">

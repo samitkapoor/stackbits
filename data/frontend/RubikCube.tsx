@@ -22,13 +22,12 @@ export const rubikCube: Document = {
         heading: 'Rubik Cube',
         content:
           "An interactive 3D Rubik's cube component with multiple dimensions, visual modes, and smooth drag-to-rotate animations.",
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
-          <div className="h-[700px] w-full flex flex-col gap-5 items-center justify-center relative px-10">
+          <div className="h-[700px] w-full flex flex-col md:flex-row gap-20 items-center justify-center relative px-10">
             <RubikCube dimensionMode="2x2" mode="glass" />
             <RubikCube />
             <RubikCube dimensionMode="4x4" mode="skeleton" />
