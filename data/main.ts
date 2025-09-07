@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 
 // import { flicker, flickerPreview } from './frontend/Flicker';
-import { installation } from './getting-started/installation';
-import { introduction } from './getting-started/introduction';
+// import { installation } from './getting-started/installation';
+// import { introduction } from './getting-started/introduction';
 // import { storyAvatar, storyAvatarPreview } from './frontend/StoryAvatar';
 // import { flipBadge, flipBadgePreview } from './frontend/FlipBadge';
 import { encryptionDecryption } from './utilities/EncryptionDecryption';
@@ -126,17 +126,6 @@ const sideBarOptions: Array<{
     preview?: ReactNode;
   }>;
 }> = [
-  {
-    title: 'Getting Started',
-    children: [
-      { name: 'Introduction', href: '/docs/introduction', content: introduction },
-      {
-        name: 'Installation',
-        href: '/docs/installation',
-        content: installation
-      }
-    ]
-  },
   {
     title: 'Buttons',
     children: [

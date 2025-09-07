@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation';
 
 const DocumentationPage = () => {
-  redirect('/docs/introduction');
+  redirect('/docs/animatedGradientButton');
 };
 
 export default DocumentationPage;
