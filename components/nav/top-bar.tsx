@@ -29,7 +29,7 @@ const TopBar = () => {
   ];
 
   return (
-    <div className="flex flex-col w-full fixed h-[40px] sm:h-[50px] md:h-[50px] px-2 z-[200]">
+    <div className="flex flex-col w-full max-w-[1440px] left-1/2 -translate-x-1/2 fixed h-[40px] sm:h-[50px] md:h-[50px] px-2 z-[200]">
       <div className="fixed top-0 w-full flex items-start justify-center h-[60px] z-0 pointer-events-none">
         <div
           style={{
@@ -49,7 +49,7 @@ const TopBar = () => {
         className="fixed top-0 w-full flex items-start justify-center h-[40px] sm:h-[50px] md:h-[50px] z-0"
       ></div>
 
-      <div className="flex items-center justify-between w-full pr-3 pl-10 pt-5 md:pt-0 h-full z-10">
+      <div className="flex items-center justify-between w-full px-5 pl-10 2xl:pl-0 pt-5 md:pt-0 h-full z-10">
         <div className="overflow-hidden h-full w-full flex items-center gap-4">
           <Link
             href="/"
