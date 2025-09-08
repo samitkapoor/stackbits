@@ -1,4 +1,4 @@
-import { CodeXml, Heading, Joystick } from 'lucide-react';
+import { Heading, Joystick } from 'lucide-react';
 import { IconBrandGithub, IconBrandX, IconComponents } from '@tabler/icons-react';
 import Link from 'next/link';
 import React from 'react';
@@ -29,8 +29,8 @@ const TopBar = () => {
   ];
 
   return (
-    <div className="flex flex-col w-full max-w-[1440px] left-1/2 -translate-x-1/2 fixed h-[40px] sm:h-[50px] md:h-[50px] px-2 z-[200]">
-      <div className="fixed top-0 w-full flex items-start justify-center h-[60px] z-0 pointer-events-none">
+    <div className="flex flex-col w-full left-1/2 -translate-x-1/2 fixed h-[40px] sm:h-[50px] md:h-[50px] px-2 z-[200] bg-background">
+      {/* <div className="fixed top-0 w-full flex items-start justify-center h-[60px] z-0 pointer-events-none">
         <div
           style={{
             background:
@@ -38,8 +38,8 @@ const TopBar = () => {
           }}
           className="w-full h-full absolute bottom-8 pointer-events-none left-0 z-0 blur-xl opacity-40"
         />
-      </div>
-      <div
+      </div> */}
+      {/* <div
         style={{
           backdropFilter: 'blur(10px)',
           WebkitBackdropFilter: 'blur(10px)',
@@ -47,15 +47,16 @@ const TopBar = () => {
           WebkitMaskImage: 'linear-gradient(to top, transparent, black)'
         }}
         className="fixed top-0 w-full flex items-start justify-center h-[40px] sm:h-[50px] md:h-[50px] z-0"
-      ></div>
+      ></div> */}
 
-      <div className="flex items-center justify-between w-full px-5 pl-10 2xl:pl-0 pt-5 md:pt-0 h-full z-10">
+      <div className="flex items-center justify-between w-full px-5 pl-10 pt-5 md:pt-0 h-full z-10">
         <div className="overflow-hidden h-full w-full flex items-center gap-4">
           <Link
             href="/"
             className="flex items-center gap-2 h-full justify-center ml-1 sm:ml-2 text-base"
           >
-            <CodeXml className="w-5 h-5 md:w-6 md:h-6" />
+            {/* <CodeXml className="w-5 h-5" /> */}
+            <span className="rounded-full h-4 w-4 bg-gradient-to-b from-yellow-400 to-purple-500 flex items-center justify-center overflow-hidden"></span>
             Stackbits
           </Link>
           {/* Desktop navigation */}

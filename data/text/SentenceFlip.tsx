@@ -6,6 +6,8 @@ export const sentenceFlipPreview = (
   <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden relative p-0 gap-5">
     <div className="w-full h-full flex items-center justify-center relative">
       <SentenceFlip
+        className="!text-2xl text-center"
+        wrapperClassName="justify-center"
         sentences={[
           { sentence: 'The home for your AI assistants', highlight: [1, 4, 5] },
           { sentence: 'Build personal AI assistants your way', highlight: [1, 2, 3] },

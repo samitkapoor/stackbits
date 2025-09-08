@@ -5,7 +5,7 @@ const words = ['SMART', 'SHINE', 'VIBES', 'TRICK', 'STACK', 'REACT'];
 
 export const gooeyWordsPreview = (
   <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden relative p-10 gap-5">
-    <GooeyWords words={words} />
+    <GooeyWords words={words} letterWidth={30} letterHeight={50} />
   </div>
 );
 

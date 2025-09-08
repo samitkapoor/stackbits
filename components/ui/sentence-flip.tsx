@@ -12,10 +12,12 @@ const raleway = Raleway({
 
 const WordFlipper = ({
   words,
-  wordIndex
+  wordIndex,
+  className
 }: {
   words: { word: string; isHighlighted: boolean }[];
   wordIndex: number;
+  className?: string;
 }) => {
   const wordRef = useRef<HTMLDivElement>(null);
   const [wordHeight, setWordHeight] = useState(0);
@@ -46,7 +48,10 @@ const WordFlipper = ({
   }, [words]);
 
   return (
-    <motion.div layout="position" className="text-3xl md:text-4xl lg:text-5xl relative">
+    <motion.div
+      layout="position"
+      className={cn('text-3xl md:text-4xl lg:text-5xl relative', className)}
+    >
       <p ref={wordRef} className="text-transparent opacity-0 select-none absolute">
         sample
       </p>
@@ -89,9 +94,13 @@ const WordFlipper = ({
 };
 
 const SentenceFlip = ({
-  sentences
+  sentences,
+  className,
+  wrapperClassName
 }: {
   sentences: { sentence: string; highlight: number[] }[];
+  className?: string;
+  wrapperClassName?: string;
 }) => {
   // contains the words length of the sentence that is longest
   const [words, setWords] = useState(0);
@@ -106,7 +115,7 @@ const SentenceFlip = ({
   return (
     <div className="w-full flex flex-col justify-center">
       <div className="max-w-3xl place-self-center w-full">
-        <div className="flex flex-wrap gap-x-2 justify-start">
+        <div className={cn('flex flex-wrap gap-x-2 justify-start', wrapperClassName)}>
           {Array.from({ length: words }).map((_, index) => {
             const wordsToFlip = sentences.map((sentence) => {
               const splits = sentence.sentence.split(' ');
@@ -119,7 +128,7 @@ const SentenceFlip = ({
 
             return (
               <React.Fragment key={'sentence' + index}>
-                <WordFlipper words={wordsToFlip} wordIndex={index} />
+                <WordFlipper words={wordsToFlip} wordIndex={index} className={className} />
                 {(index + 1) % 4 === 0 && <div className="w-full" />}
               </React.Fragment>
             );

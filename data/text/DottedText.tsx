@@ -4,7 +4,7 @@ import DottedText from '@/components/ui/dotted-text';
 
 export const dottedTextPreview = (
   <div className="h-full w-full flex items-center justify-center p-5">
-    <DottedText text="MESSI" />
+    <DottedText text="MESSI" size={5} />
   </div>
 );
 

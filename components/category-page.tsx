@@ -23,7 +23,7 @@ const CategoryPage = ({ docId }: CategoryPageProps) => {
 
   return (
     <div className="w-full max-w-[1440px] place-self-center flex flex-col h-full px-5">
-      <p className="font-medium text-xl text-white mb-12">{title}</p>
+      <p className="font-medium text-xl text-white mb-8 px-2">{title}</p>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
         {children.map((child, i) => {

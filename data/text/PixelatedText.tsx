@@ -8,8 +8,8 @@ export const pixelatedTextPreview = (
       variant="solid"
       color="#00ff00"
       speed={70}
-      pixelWidth={4}
-      pixelHeight={4}
+      pixelWidth={3}
+      pixelHeight={3}
     />
   </div>
 );

@@ -41,7 +41,9 @@ const Letter = memo(
     circles,
     circlesRef,
     circlesPositionsRef,
-    radius
+    radius,
+    width = 50,
+    height = 70
   }: {
     letterIndex: number;
     index: number;
@@ -51,10 +53,12 @@ const Letter = memo(
     circles: number;
     circlesRef: RefObject<Record<number, SVGCircleElement[][]>>;
     circlesPositionsRef: RefObject<{ x: number; y: number }[][]>;
+    width?: number;
+    height?: number;
   }) => {
     return (
       <div className="mx-1">
-        <svg width="50" height="70" viewBox="0 0 100 100" style={{ filter: 'url(#gooey)' }}>
+        <svg width={width} height={height} viewBox="0 0 100 100" style={{ filter: 'url(#gooey)' }}>
           <path
             ref={(el) => {
               if (el) {
@@ -108,7 +112,17 @@ const Letter = memo(
 );
 Letter.displayName = 'Letter';
 
-const GooeyWords = ({ words, speed = 2 }: { words: string[]; speed?: number }) => {
+const GooeyWords = ({
+  words,
+  speed = 2,
+  letterWidth = 50,
+  letterHeight = 70
+}: {
+  words: string[];
+  speed?: number;
+  letterWidth?: number;
+  letterHeight?: number;
+}) => {
   const [index, setIndex] = useState(0);
   const wordPathsRef = useRef<Record<number, SVGPathElement[]>>({});
   const circlesRef = useRef<Record<number, SVGCircleElement[][]>>({});
@@ -207,6 +221,8 @@ const GooeyWords = ({ words, speed = 2 }: { words: string[]; speed?: number }) =
                 circles={circles}
                 circlesRef={circlesRef}
                 circlesPositionsRef={circlesPositionsRef}
+                width={letterWidth}
+                height={letterHeight}
               />
             );
           })}
