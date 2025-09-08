@@ -55,7 +55,7 @@ const Vignette = memo(() => {
       className="absolute inset-0 z-20 pointer-events-none"
       style={{
         background:
-          'linear-gradient(to right, rgba(0,0,0,1) 0%, transparent 10%, transparent 90%, rgba(0,0,0,1) 100%)',
+          'linear-gradient(to right, #111111 0%, transparent 10%, transparent 90%, #111111 100%)',
         willChange: 'auto'
       }}
     ></div>

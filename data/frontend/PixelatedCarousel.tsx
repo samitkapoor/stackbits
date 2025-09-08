@@ -25,16 +25,15 @@ export const pixelatedCarousel: Document = {
         heading: 'Pixelated Carousel',
         content:
           'A carousel that shows images with a pixelated effect. Images change with a grid animation that makes them look blocky.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
           <div className="w-full flex items-center justify-center">
-            <div className="h-[300px] w-[500px]">
+            <div className="h-[600px] w-full max-w-[900px]">
               <PixelatedCarousel
-                pixelSize={50}
+                pixelSize={100}
                 pixelTransitionDuration={0.01}
                 images={['/godofwar.jpg', '/lastofus.jpg', '/rdr2.jpg', '/uncharted.jpg']}
               />

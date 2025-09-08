@@ -17,7 +17,7 @@ const HeroSection = () => {
         Why Start from Scratch When the Code You Need Is Already Here?
       </p>
       <div className="flex flex-col sm:flex-row justify-center items-center gap-1 sm:gap-4 md:gap-5 mt-4 sm:mt-5">
-        <Link href={'/docs/introduction'}>
+        <Link href={'/docs/animatedGradientButton'}>
           <MovingBorderButton className="px-3 py-2 sm:px-4 text-base sm:text-lg">
             Get Started&nbsp;
             <MoveRight className="w-4 h-4 sm:w-5 sm:h-5" />

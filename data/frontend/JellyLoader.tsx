@@ -20,15 +20,9 @@ export const jellyLoader: Document = {
         heading: 'Jelly Loader',
         content:
           'A loading animation with circles that move and scale like jelly. Perfect for showing that something is loading on your website.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Original Designer',
-        sectionType: 'credits',
-        designer: [{ name: 'Lovish Saini', link: 'https://x.com/lovishotherdays' }]
-      },
-      {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
           <div className="w-full flex items-center justify-center">
@@ -37,6 +31,11 @@ export const jellyLoader: Document = {
             </div>
           </div>
         )
+      },
+      {
+        heading: 'Original Designer',
+        sectionType: 'credits',
+        designer: [{ name: 'Lovish Saini', link: 'https://x.com/lovishotherdays' }]
       },
       installDependenciesCode({ framerMotion: true }),
       {

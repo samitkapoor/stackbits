@@ -79,10 +79,9 @@ export const masonryGrid: Document = {
         heading: 'Masonry Grid',
         content:
           'A grid layout that arranges items like Pinterest, automatically fitting them together without gaps. Perfect for image galleries and portfolios.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
           <div className="h-full w-full flex flex-col gap-5 items-center justify-center overflow-y-auto relative p-10">

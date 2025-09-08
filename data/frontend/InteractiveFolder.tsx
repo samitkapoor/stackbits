@@ -21,14 +21,13 @@ export const interactiveFolder: Document = {
         heading: 'Interactive Folder',
         content:
           'An animated folder component that expands to reveal file contents with smooth spring animations and interactive hover effects.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
           <div className="w-full flex items-center justify-center">
-            <div className="flex flex-wrap items-center gap-10 justify-center w-[600px]">
+            <div className="flex flex-wrap items-center gap-10 justify-center w-full">
               <InteractiveFolder />
             </div>
           </div>
@@ -238,8 +237,7 @@ const InteractiveFolder = ({ folderName = 'New Folder' }: { folderName?: string 
                       transition={{
                         type: 'spring',
                         stiffness: 300,
-                        damping: 30,
-                        delay: 0.1 + index * 0.02
+                        damping: 30
                       }}
                       className="w-[50px] h-[54px] gap-2 flex flex-col items-center justify-start overflow-hidden"
                     >

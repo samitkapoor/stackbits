@@ -20,13 +20,12 @@ export const photoGallery: Document = {
         heading: 'Photo Gallery',
         content:
           'An interactive photo gallery with smooth animations and layout transitions. Features a masonry-style grid with alternating row offsets, click-to-expand functionality, and elegant vignette effects for a premium visual experience.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
-          <div className="w-full h-[600px] flex flex-col items-center justify-center relative p-10 overflow-y-visible">
+          <div className="w-full h-[600px] max-w-[800px] flex flex-col items-center justify-center relative p-10 overflow-y-visible">
             <PhotoGallery />
           </div>
         )

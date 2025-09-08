@@ -22,41 +22,33 @@ const CategoryPage = ({ docId }: CategoryPageProps) => {
   const { title, children } = doc;
 
   return (
-    <div className="w-full flex flex-col h-full xl:px-10">
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="mb-12"
-      >
-        <p className="font-medium text-2xl text-white">{title}</p>
-      </motion.div>
+    <div className="w-full max-w-[1440px] place-self-center flex flex-col h-full px-5">
+      <p className="font-medium text-xl text-white mb-8 px-2">{title}</p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {children.map((child, i) => {
           return (
             <Link href={child.href} key={child.name + i} className="group transition-all">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                key={`${child.name}-${i}-component`}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i < 4 ? i * 0.1 : 0.1, duration: 0.2 }}
+                transition={{ delay: i < 6 ? i * 0.1 : 0.1, duration: 0.2 }}
                 className="relative flex flex-col gap-4 overflow-visible h-full w-full"
               >
-                <div className="rounded-3xl p-[12px] bg-[#131313] group-hover:bg-[#1a1a1a] transition-all">
-                  <div className="flex flex-col gap-4 relative overflow-visible h-full w-full rounded-xl border border-white/20 group-hover:border-white/40 transition-all bg-black">
+                <div className="rounded-3xl p-[6px] bg-[#131313] group-hover:bg-[#1a1a1a] transition-all">
+                  <div className="flex flex-col gap-4 relative overflow-visible h-full w-full rounded-2xl border border-white/15 group-hover:border-white/40 transition-all bg-black">
                     {/* Preview image container */}
-                    <div className="relative h-[300px] overflow-visible">
-                      <div className="rounded-xl overflow-hidden w-full h-full">
-                        {child?.preview}
-                      </div>
+                    <div className="rounded-xl overflow-hidden w-full h-[300px]">
+                      {child?.preview}
                       {/* <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" /> */}
                     </div>
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="flex flex-col gap-2 flex-grow group-hover:px-4 transition-all">
-                  <p className="text-lg font-medium text-white/70 group-hover:text-white">
+                <div className="flex flex-col gap-2 flex-grow px-2 group-hover:px-4 transition-all">
+                  <p className="text-base font-medium text-white/70 group-hover:text-white">
                     {child.name}
                   </p>
                 </div>

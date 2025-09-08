@@ -6,6 +6,8 @@ export const sentenceFlipPreview = (
   <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden relative p-0 gap-5">
     <div className="w-full h-full flex items-center justify-center relative">
       <SentenceFlip
+        className="!text-2xl text-center"
+        wrapperClassName="justify-center"
         sentences={[
           { sentence: 'The home for your AI assistants', highlight: [1, 4, 5] },
           { sentence: 'Build personal AI assistants your way', highlight: [1, 2, 3] },
@@ -30,10 +32,9 @@ export const sentenceFlip: Document = {
         heading: 'Sentence Flip',
         content:
           'Text that cycles through different sentences with smooth word-by-word transitions. Each word flips individually with blur effects, and you can highlight specific words with custom styling.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
           <div className="h-full w-full flex flex-col gap-5 items-center justify-center overflow-y-auto relative px-10">

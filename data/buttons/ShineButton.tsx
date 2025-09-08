@@ -20,10 +20,9 @@ export const shineButton: Document = {
         heading: 'Shine Button',
         content:
           'A button with a shining light that sweeps across the surface. Creates a polished, premium look for your interface.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: <ShineButton>Continue</ShineButton>
       },

@@ -314,7 +314,7 @@ const OTPInput = () => {
         onClick={() => {
           navigator.clipboard.writeText('424242');
         }}
-        className="absolute flex items-center gap-1 top-4 right-4 text-sm px-2 py-1 cursor-pointer bg-white/5 hover:bg-white/10 active:bg-white/15 select-none rounded-lg"
+        className="absolute flex items-center gap-1 bottom-4 right-4 text-sm px-2 py-1 cursor-pointer bg-white/5 hover:bg-white/10 active:bg-white/15 select-none rounded-lg"
       >
         Copy Password
       </div>

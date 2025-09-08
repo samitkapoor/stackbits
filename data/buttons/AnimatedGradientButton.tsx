@@ -20,10 +20,9 @@ export const animatedGradientButton: Document = {
         heading: 'Animated Gradient Button',
         content:
           'A button that continuously changes colors like a rainbow. Perfect for adding eye-catching, colorful elements to your interface.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: <AnimatedGradientButton>Continue</AnimatedGradientButton>
       },

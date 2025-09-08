@@ -20,13 +20,13 @@ export const interactiveCTA: Document = {
         heading: 'Interactive CTA',
         content:
           'A floating call-to-action component that expands from a compact icon to reveal contact information and navigation links. Features smooth animations, customizable positioning, and dynamic content.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
-          <div className="h-[500px] w-full flex items-center justify-center relative">
+          <div className="h-full w-full flex items-center justify-center relative">
+            <p>Look at the bottom right corner</p>
             <InteractiveCTA className="!absolute" initialOpen={false} />
           </div>
         )

@@ -20,13 +20,12 @@ export const tradingCard: Document = {
         heading: 'Trading Card',
         content:
           'A card that moves in 3D when you hover over it. Perfect for showcasing profiles, characters, or products with engaging effects.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
-          <div className="h-full w-full flex flex-col items-center justify-center gap-2">
+          <div className="h-full w-full flex items-center justify-center gap-2">
             <TradingCardDemo />
           </div>
         )

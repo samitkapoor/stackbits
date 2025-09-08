@@ -4,7 +4,7 @@ import DottedText from '@/components/ui/dotted-text';
 
 export const dottedTextPreview = (
   <div className="h-full w-full flex items-center justify-center p-5">
-    <DottedText text="MESSI" />
+    <DottedText text="MESSI" size={5} />
   </div>
 );
 
@@ -20,10 +20,9 @@ export const dottedText: Document = {
         heading: 'Dotted Text',
         content:
           'Text created entirely from dots arranged in a grid. Each letter is built with dots that can change colors and move around.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
           <div className="flex flex-col gap-5">

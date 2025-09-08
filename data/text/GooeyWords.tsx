@@ -5,7 +5,7 @@ const words = ['SMART', 'SHINE', 'VIBES', 'TRICK', 'STACK', 'REACT'];
 
 export const gooeyWordsPreview = (
   <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden relative p-10 gap-5">
-    <GooeyWords words={words} />
+    <GooeyWords words={words} letterWidth={30} letterHeight={50} />
   </div>
 );
 
@@ -21,20 +21,15 @@ export const gooeyWords: Document = {
         heading: 'Gooey Words',
         content:
           'Text that smoothly changes between different words with a liquid-like effect. Each word flows into the next one.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
           <div className="h-full w-full flex flex-col gap-5 items-center justify-center overflow-y-auto relative p-10">
             <GooeyWords words={words} />
           </div>
         )
-      },
-      {
-        heading: 'Follow below steps 👇🏻',
-        sectionType: 'heading'
       },
       {
         heading: 'Install dependencies',

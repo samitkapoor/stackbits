@@ -18,8 +18,8 @@ const getRandomColor = () => {
 const GlowingDotsBackground = ({
   children,
   className,
-  diameter = 50,
-  fadeDelay = 1000
+  diameter = 10,
+  fadeDelay = 350
 }: GlowingDotsBackgroundProps) => {
   const divRef = useRef<HTMLDivElement>(null);
   const activeCells = useRef<Set<number>>(new Set());
@@ -56,7 +56,7 @@ const GlowingDotsBackground = ({
   };
 
   return (
-    <div ref={divRef} className="h-full w-full flex items-center justify-center relative">
+    <div ref={divRef} className="h-full w-full flex items-center justify-center relative bg-black">
       <div
         id="glowing-dots-background"
         style={{
@@ -74,15 +74,15 @@ const GlowingDotsBackground = ({
                 boxShadow: hoveredCells.includes(i) ? `1px 1px 20px 2px ${getRandomColor()}` : ''
               }}
               transition={{ duration: 0.3 }}
-              className={`h-[${diameter}px] w-[${diameter}px] border-[1px] rounded-full border-neutral-800`}
+              className={`!h-[${diameter}px] !w-[${diameter}px] border-[1px] rounded-full border-transparent shrink-0`}
             />
           ))}
       </div>
 
-      <div
+      {/* <div
         style={{ background: 'radial-gradient(circle at center, transparent, #000000)' }}
         className="h-full w-full absolute pointer-events-none"
-      />
+      /> */}
 
       <div
         className={`h-full w-full flex items-center pointer-events-none justify-center absolute top-0 left-0 ${className}`}

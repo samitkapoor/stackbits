@@ -1,12 +1,18 @@
 'use client';
 
-import { CodeXml, Heading, Joystick } from 'lucide-react';
+import { Heading, Joystick, Menu } from 'lucide-react';
 import { IconBrandGithub, IconBrandX, IconComponents } from '@tabler/icons-react';
 import Link from 'next/link';
 import React from 'react';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
-const TopBar = () => {
+const TopBar = ({
+  sideBarIsOpen,
+  setSideBarIsOpen
+}: {
+  sideBarIsOpen?: boolean;
+  setSideBarIsOpen?: (isOpen: boolean) => void;
+}) => {
   const links = [
     {
       name: 'Components',
@@ -31,29 +37,24 @@ const TopBar = () => {
     }
   ];
 
+  const toggleSideBar = () => {
+    if (setSideBarIsOpen) {
+      setSideBarIsOpen(!sideBarIsOpen);
+    }
+  };
+
   return (
-    <div className="flex flex-col w-full fixed h-[40px] sm:h-[50px] md:h-[50px] px-2 z-[200]">
-      <div className="fixed top-0 w-full flex items-start justify-center h-[60px] z-0 pointer-events-none">
-        <motion.div
-          animate={{
-            background: [
-              'linear-gradient(to right, transparent, #8A2BE2, #00CED1, #FF4500, transparent)',
-              'linear-gradient(to right, transparent, #00CED1, #FF4500, #8A2BE2, transparent)',
-              'linear-gradient(to right, transparent, #FF4500, #8A2BE2, #00CED1, transparent)',
-              'linear-gradient(to right, transparent, #8A2BE2, #FF4500, #00CED1, transparent)',
-              'linear-gradient(to right, transparent, #00CED1, #8A2BE2, #FF4500, transparent)',
-              'linear-gradient(to right, transparent, #FF4500, #00CED1, #8A2BE2, transparent)'
-            ]
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            repeatType: 'reverse'
+    <div className="flex flex-col w-full left-1/2 -translate-x-1/2 fixed h-[50px] px-2 z-[200] bg-background">
+      {/* <div className="fixed top-0 w-full flex items-start justify-center h-[60px] z-0 pointer-events-none">
+        <div
+          style={{
+            background:
+              'linear-gradient(to right, transparent, #8A2BE2, #00CED1, #FF4500, transparent)'
           }}
           className="w-full h-full absolute bottom-8 pointer-events-none left-0 z-0 blur-xl opacity-40"
         />
-      </div>
-      <div
+      </div> */}
+      {/* <div
         style={{
           backdropFilter: 'blur(10px)',
           WebkitBackdropFilter: 'blur(10px)',
@@ -61,31 +62,54 @@ const TopBar = () => {
           WebkitMaskImage: 'linear-gradient(to top, transparent, black)'
         }}
         className="fixed top-0 w-full flex items-start justify-center h-[40px] sm:h-[50px] md:h-[50px] z-0"
-      ></div>
+      ></div> */}
 
-      <div className="flex items-center justify-between w-full px-3 pt-5 md:pt-0 h-full z-10">
-        <div className="overflow-hidden h-full w-full flex items-center gap-4">
-          <Link
-            href="/"
-            className="flex items-center gap-2 h-full justify-center ml-1 sm:ml-2 text-base"
+      <div className="flex items-center justify-between w-full px-5 pt-5 md:pt-0 h-full z-10">
+        <motion.div layout className="flex items-center gap-4">
+          <AnimatePresence mode="popLayout">
+            {sideBarIsOpen !== undefined && (
+              <motion.button
+                initial={{
+                  scale: 0
+                }}
+                animate={{
+                  scale: 1
+                }}
+                exit={{
+                  scale: 0
+                }}
+                onClick={toggleSideBar}
+                className="z-[1001] rounded-md bg-black p-2 flex items-center justify-center"
+              >
+                {!sideBarIsOpen && <Menu size={16} />}
+              </motion.button>
+            )}
+          </AnimatePresence>
+          <motion.div
+            layout
+            transition={{ duration: 0.15, ease: 'easeInOut' }}
+            className="overflow-hidden h-full w-full flex items-center gap-4"
           >
-            <CodeXml className="w-5 h-5 md:w-6 md:h-6" />
-            Stackbits
-          </Link>
-          {/* Desktop navigation */}
-          <div className="hidden md:flex items-center text-white gap-2 z-10">
-            {links.map((link) => {
-              return (
-                <Link key={link.name} href={link.href}>
-                  <button className="rounded-md backdrop-blur-sm hover:bg-white/90 hover:text-black 0 h-7 w-min px-2 flex items-center justify-center gap-1.5 text-sm">
-                    {link.icon}
-                    <p className="text-xs sm:text-sm">{link.name}</p>
-                  </button>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
+            <Link href="/" className="flex items-center gap-2 h-full justify-center text-base">
+              {/* <CodeXml className="w-5 h-5" /> */}
+              <span className="rounded-full h-4 w-4 bg-gradient-to-b from-yellow-400 to-purple-500 flex items-center justify-center overflow-hidden"></span>
+              Stackbits
+            </Link>
+            {/* Desktop navigation */}
+            <div className="hidden md:flex items-center text-white gap-2 z-10">
+              {links.map((link) => {
+                return (
+                  <Link key={link.name} href={link.href}>
+                    <button className="rounded-md backdrop-blur-sm hover:bg-white/90 hover:text-black 0 h-7 w-min px-2 flex items-center justify-center gap-1.5 text-sm">
+                      {link.icon}
+                      <p className="text-xs sm:text-sm">{link.name}</p>
+                    </button>
+                  </Link>
+                );
+              })}
+            </div>
+          </motion.div>
+        </motion.div>
         <div className="flex items-center gap-2">
           <Link href="https://x.com/samitkapoorr" target="_blank">
             <button className="rounded-md backdrop-blur-sm hover:bg-white/90 hover:text-black h-7 w-min px-2 flex items-center justify-center text-sm gap-1.5">

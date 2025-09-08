@@ -72,7 +72,7 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
               language={language}
               PreTag="div"
               customStyle={{
-                background: '#ffffff11',
+                background: '#ffffff02',
                 border: '1px solid #ffffff22',
                 borderRadius: '0.75rem',
                 padding: '1.5rem',
@@ -103,7 +103,7 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
             </div>
           )}
           {!isExpanded && isOverflowing && (
-            <div className="absolute bottom-0 left-0 right-0 h-full bg-gradient-to-t from-[#0c0c0c] to-transparent rounded-xl" />
+            <div className="absolute bottom-0 left-0 right-0 h-full bg-gradient-to-t from-[#0c0c0c] to-transparent" />
           )}
         </div>
       </div>
@@ -112,6 +112,12 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
 
   // Render different content types
   switch (sectionType) {
+    case 'name':
+      if (typeof content === 'string') {
+        return <p className="w-full text-sm text-white/80">{content}</p>;
+      }
+      break;
+
     case 'paragraph':
       if (typeof content === 'string') {
         return <p className="w-full text-sm mt-4 text-white/80">{content}</p>;
@@ -191,15 +197,6 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
     case 'italic-line':
       return <p className="text-yellow-400 italic text-sm">{section.sentence}</p>;
 
-    case 'preview':
-      return (
-        <div className="w-full rounded-2xl p-[12px] bg-[#131313] mt-6">
-          <div className="h-full w-full bg-[#040404] border border-white/15 rounded-lg flex items-center justify-center min-h-[500px] relative overflow-x-hidden">
-            {code}
-          </div>
-        </div>
-      );
-
     case 'heading':
       return null;
 
@@ -260,7 +257,6 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
       break;
 
     default:
-      console.log({ sectionType, content });
       return <div></div>;
   }
 

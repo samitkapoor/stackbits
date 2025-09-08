@@ -11,14 +11,16 @@ const Page = () => {
   const params = useParams();
 
   return (
-    <div className="w-full px-4 pt-4 flex flex-col mt-14">
+    <div className="w-full pt-4 flex flex-col">
       {params &&
         params.id &&
         typeof params.id === 'string' &&
         (categories.includes(params.id.toLowerCase()) ? (
-          <CategoryPage docId={params.id} />
+          <div className="mt-14 px-4 pb-20">
+            <CategoryPage docId={params.id} />
+          </div>
         ) : (
-          <div className="max-w-3xl place-self-start h-full flex flex-col w-full">
+          <div className="place-self-center h-full flex flex-col w-full mt-8">
             <DocumentContentBox docId={params.id} />
           </div>
         ))}

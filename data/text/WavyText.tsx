@@ -20,10 +20,9 @@ export const wavyText: Document = {
         heading: 'Wavy Text',
         content:
           'Text where each letter moves up and down like a wave. Creates a flowing, ocean-like animation effect.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: <WavyText text="Wavy Text" className="text-4xl" />
       },

@@ -1,4 +1,3 @@
-import BrowserWindow from '@/components/ui/browser-window';
 import { Document } from '../main';
 import CircleMenu from '@/components/ui/circle-menu';
 import { BookOpen, DollarSign, FlaskConical, Home, Mail, Projector, User } from 'lucide-react';
@@ -6,9 +5,17 @@ import { cnCode, installDependenciesCode } from '@/constants/code';
 
 export const circleMenuPreview = (
   <div className="h-full w-full flex items-center justify-center p-5">
-    <BrowserWindow url="stackbits.dev" childrenClassName="py-20">
-      <div>This is a browser window.</div>
-    </BrowserWindow>
+    <CircleMenu
+      items={[
+        { label: 'Home', icon: <Home size={16} />, href: '' },
+        { label: 'Projects', icon: <Projector size={16} />, href: '' },
+        { label: 'Skills', icon: <DollarSign size={16} />, href: '' },
+        { label: 'Articles', icon: <BookOpen size={16} />, href: '' },
+        { label: 'Lab', icon: <FlaskConical size={16} />, href: '' },
+        { label: 'About', icon: <User size={16} />, href: '' },
+        { label: 'Contact', icon: <Mail size={16} />, href: '' }
+      ]}
+    />
   </div>
 );
 
@@ -24,10 +31,9 @@ export const circleMenu: Document = {
         heading: 'Circle Menu',
         content:
           'A circular navigation menu that expands items in a circle around a central button with smooth animations and hover effects.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
           <div className="w-full h-full flex items-center justify-center">

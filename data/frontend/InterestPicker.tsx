@@ -20,10 +20,9 @@ export const interestPicker: Document = {
         heading: 'Interest Picker',
         content:
           'An interactive component that allows users to select their interests from a visually appealing marquee-style grid. Users can choose from predefined categories with smooth animations and a minimum selection requirement.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
           <div className="w-full flex items-center md:justify-center px-3">

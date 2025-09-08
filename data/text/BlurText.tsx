@@ -20,10 +20,9 @@ export const blurText: Document = {
         heading: 'Blur Text',
         content:
           'Text that starts blurry and becomes clear when you see it. Each letter appears with a smooth focus effect.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: <BlurText text="Blur Text" className="text-4xl" repeat />
       },

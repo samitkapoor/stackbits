@@ -21,13 +21,12 @@ export const otpInput: Document = {
         heading: 'OTP Input',
         content:
           'A six-digit OTP input component with smooth animations, auto-focus navigation, and visual feedback for verification success or errors.',
-        sectionType: 'paragraph'
+        sectionType: 'name'
       },
       {
-        heading: 'Preview',
         sectionType: 'preview',
         code: (
-          <div className="h-[500px] w-full flex flex-col gap-5 items-center justify-center overflow-y-auto relative p-10">
+          <div className="h-full w-full flex flex-col gap-5 items-center justify-center overflow-y-auto relative p-10">
             <OTPInput />
           </div>
         )
