@@ -32,10 +32,6 @@ export const gooeyWords: Document = {
         )
       },
       {
-        heading: 'Follow below steps 👇🏻',
-        sectionType: 'heading'
-      },
-      {
         heading: 'Install dependencies',
         sectionType: 'component',
         code: `npm i framer-motion`
