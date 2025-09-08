@@ -25,14 +25,15 @@ const CategoryPage = ({ docId }: CategoryPageProps) => {
     <div className="w-full max-w-[1440px] place-self-center flex flex-col h-full px-5">
       <p className="font-medium text-xl text-white mb-8 px-2">{title}</p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {children.map((child, i) => {
           return (
             <Link href={child.href} key={child.name + i} className="group transition-all">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                key={`${child.name}-${i}-component`}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i < 4 ? i * 0.1 : 0.1, duration: 0.2 }}
+                transition={{ delay: i < 6 ? i * 0.1 : 0.1, duration: 0.2 }}
                 className="relative flex flex-col gap-4 overflow-visible h-full w-full"
               >
                 <div className="rounded-3xl p-[6px] bg-[#131313] group-hover:bg-[#1a1a1a] transition-all">
