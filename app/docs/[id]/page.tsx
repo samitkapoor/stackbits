@@ -18,7 +18,7 @@ const Page = () => {
         (categories.includes(params.id.toLowerCase()) ? (
           <CategoryPage docId={params.id} />
         ) : (
-          <div className="place-self-start h-full flex flex-col w-full">
+          <div className="place-self-center h-full flex flex-col w-full max-w-7xl">
             <DocumentContentBox docId={params.id} />
           </div>
         ))}

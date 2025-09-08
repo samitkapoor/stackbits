@@ -15,10 +15,10 @@ const DocumentationLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="flex flex-col w-full h-screen relative">
       <div className={`flex items-start relative h-screen bg-zinc-950`}>
-        <SideBar isOpen={sideBarIsOpen} />
+        <SideBar isOpen={sideBarIsOpen} setIsOpen={setSideBarIsOpen} />
         <button
           onClick={toggleSideBar}
-          className="lg:hidden absolute top-3 sm:top-4 md:top-2 lg:top-6 right-3 z-[1001] rounded-md bg-black h-9 w-9 flex items-center justify-center"
+          className="absolute top-3 sm:top-4 md:top-2 left-3 z-[1001] rounded-md bg-black h-9 w-9 flex items-center justify-center"
         >
           {sideBarIsOpen ? <X size={16} /> : <Menu size={16} />}
         </button>

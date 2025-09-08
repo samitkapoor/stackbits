@@ -9,24 +9,45 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
-const SideBar = ({ isOpen }: { isOpen: boolean }) => {
+const SideBar = ({
+  isOpen,
+  setIsOpen
+}: {
+  isOpen: boolean;
+  setIsOpen: (isOpen: boolean) => void;
+}) => {
   const tabs = getSideBarTabs();
 
   const [hovered, setHovered] = useState<string | false>(false);
+  let timeoutId: NodeJS.Timeout | null = null;
 
   const pathname = usePathname();
 
   return (
     <div
       className={
-        `${
-          isOpen
-            ? `absolute lg:static left-[0px] w-full z-[900]`
-            : `absolute -left-[350px] lg:static`
-        } ` + `backdrop-blur-md h-full flex flex-col w-[350px] z-40 px-3`
+        `${isOpen ? `absolute left-[0px] w-full z-[900]` : `absolute -left-[350px]`} ` +
+        `h-full flex flex-col z-40 transition-all duration-200`
       }
     >
-      <div className="h-full overflow-y-auto scrollbar-hide flex flex-col gap-8 md:pl-4 w-full z-40 pt-10 md:pt-20">
+      <div
+        style={
+          {
+            // maskImage: 'linear-gradient(to left, transparent 60%, black)',
+            // WebkitMaskImage: 'linear-gradient(to left, transparent 60%, black)'
+          }
+        }
+        onClick={() => setIsOpen(false)}
+        className="absolute inset-0 black/15"
+      />
+      <div
+        className="w-full max-w-[350px] h-full bg-black absolute top-0 left-0"
+        style={{
+          maskImage: 'linear-gradient(to right, black 30%, transparent)',
+          WebkitMaskImage: 'linear-gradient(to right, black 30%, transparent)'
+        }}
+      ></div>
+      <div className="w-full max-w-[350px] flex flex-col gap-8 h-full items-start justify-start overflow-y-auto scrollbar-hide md:pl-4 pt-10 md:pt-20 z-40">
         {tabs.map((group) => {
           return (
             <div key={group.title} className="flex gap-2 flex-col items-start">
@@ -55,8 +76,20 @@ const SideBar = ({ isOpen }: { isOpen: boolean }) => {
                     return (
                       <Link
                         href={child.href}
-                        onMouseEnter={() => setHovered(child.href)}
-                        onMouseLeave={() => setHovered(false)}
+                        onMouseEnter={() => {
+                          if (timeoutId) {
+                            clearTimeout(timeoutId);
+                            timeoutId = null;
+                          }
+                          setHovered(child.href);
+                        }}
+                        onMouseLeave={() => {
+                          if (timeoutId) {
+                            clearTimeout(timeoutId);
+                            timeoutId = null;
+                          }
+                          timeoutId = setTimeout(() => setHovered(false), 100);
+                        }}
                         key={j}
                         className="flex items-center gap-1 relative py-1 group"
                       >
@@ -64,17 +97,17 @@ const SideBar = ({ isOpen }: { isOpen: boolean }) => {
                           <motion.div
                             layout
                             layoutId="side-bar-highlight"
-                            transition={{ duration: 0.1 }}
-                            className="w-[4px] bg-yellow-400 absolute top-[0px] h-full z-10"
+                            transition={{ duration: 0.15, ease: 'easeOut' }}
+                            className="w-[3px] bg-yellow-400 absolute top-[0px] h-full z-10 rounded-full"
                           />
                         )}
-                        <div className="border-l-[4px] border-zinc-800 z-0 absolute inset-0" />
+                        <div className="border-l-[3px] border-zinc-800 z-0 absolute inset-0" />
                         <p
                           className={cn(
                             'z-20 relative pl-4 text-sm',
                             pathname === child.href
                               ? 'text-yellow-400 font-medium'
-                              : 'text-white/70 group-hover:text-white'
+                              : 'text-zinc-300 group-hover:text-white'
                           )}
                         >
                           {child.name}
