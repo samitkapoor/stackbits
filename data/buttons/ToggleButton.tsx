@@ -1,27 +1,10 @@
+import ToggleButtonDemo from '@/components/demos/toggle-button-demo';
 import { Document } from '../main';
-import ToggleButton from '@/components/ui/toggle-button';
 import { cnCode } from '@/constants/code';
-import { Sun, Moon, Rocket } from 'lucide-react';
 
 export const toggleButtonPreview = (
   <div className="h-full w-full flex items-center justify-center p-5">
-    <ToggleButton
-      options={[
-        {
-          label: <Sun size={18} />,
-          value: 'Sun'
-        },
-        {
-          label: <Moon size={18} />,
-          value: 'Moon'
-        },
-        {
-          label: <Rocket size={18} />,
-          value: 'Rocket'
-        }
-      ]}
-      defaultValue="Sun"
-    />
+    <ToggleButtonDemo />
   </div>
 );
 
@@ -41,25 +24,7 @@ export const toggleButton: Document = {
       },
       {
         sectionType: 'preview',
-        code: (
-          <ToggleButton
-            options={[
-              {
-                label: <Sun size={18} />,
-                value: 'Sun'
-              },
-              {
-                label: <Moon size={18} />,
-                value: 'Moon'
-              },
-              {
-                label: <Rocket size={18} />,
-                value: 'Rocket'
-              }
-            ]}
-            defaultValue="Sun"
-          />
-        )
+        code: <ToggleButtonDemo />
       },
       {
         heading: 'Install dependencies',
