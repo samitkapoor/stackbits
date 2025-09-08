@@ -17,19 +17,20 @@ const DocumentContentBox = ({ docId }: { docId: string }) => {
 
   const { content } = doc;
 
+  const previewSection = content.sections.find((section) => section.sectionType === 'preview');
+
   return (
     doc && (
-      <div className="h-full w-full">
-        <div className="flex flex-col gap-16 mt-0 relative">
+      <div className="h-full w-full flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8 bg-background overflow-hidden">
+        <div className="flex flex-col gap-16 mt-0 relative col-span-1 overflow-y-auto pt-12 pb-32 h-[calc(100vh-50px)]">
           {content.sections.map((section, index) => {
+            if (section.sectionType === 'preview') return null;
             return (
               <div
                 key={`${section.heading}-${index}-${Date.now().toString()}`}
                 className={cn(
-                  'flex flex-col gap-0 relative',
-                  section.sectionType === 'name' && 'absolute top-10 left-10 z-10 pr-10',
-                  !['name', 'preview'].includes(section.sectionType) &&
-                    'max-w-5xl place-self-center w-full'
+                  'flex flex-col gap-0 relative px-9 lg:pl-14 lg:pr-0',
+                  'place-self-center w-full'
                 )}
               >
                 {section.heading && <p className={'font-medium text-lg'}>{section.heading}</p>}
@@ -38,7 +39,11 @@ const DocumentContentBox = ({ docId }: { docId: string }) => {
             );
           })}
         </div>
-        <div className="p-36"></div>
+        <div className="w-full h-[calc(100vh-50px)] p-9 lg:p-4">
+          <div className="h-full w-full border border-white/5 bg-[#111111] rounded-xl flex items-center justify-center min-h-[500px] relative overflow-x-hidden">
+            {previewSection?.code}
+          </div>
+        </div>
       </div>
     )
   );

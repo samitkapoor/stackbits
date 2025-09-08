@@ -197,15 +197,6 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
     case 'italic-line':
       return <p className="text-yellow-400 italic text-sm">{section.sentence}</p>;
 
-    case 'preview':
-      return (
-        <div className="w-full h-[calc(100vh-50px)] rounded-3xl p-[6px] lg:p-[12px] bg-[#131313]">
-          <div className="h-full w-full bg-[#040404] border border-white/15 rounded-2xl lg:rounded-xl flex items-center justify-center min-h-[500px] relative overflow-x-hidden">
-            {code}
-          </div>
-        </div>
-      );
-
     case 'heading':
       return null;
 

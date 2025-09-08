@@ -11,12 +11,12 @@ const Page = () => {
   const params = useParams();
 
   return (
-    <div className="w-full px-4 pt-4 flex flex-col">
+    <div className="w-full pt-4 flex flex-col">
       {params &&
         params.id &&
         typeof params.id === 'string' &&
         (categories.includes(params.id.toLowerCase()) ? (
-          <div className="mt-14">
+          <div className="mt-14 px-4">
             <CategoryPage docId={params.id} />
           </div>
         ) : (
