@@ -29,7 +29,7 @@ const DocumentContentBox = ({ docId }: { docId: string }) => {
               <div
                 key={`${section.heading}-${index}-${Date.now().toString()}`}
                 className={cn(
-                  'flex flex-col gap-0 relative px-9 lg:pl-14 lg:pr-0',
+                  'flex flex-col gap-0 relative px-9 lg:pl-20 lg:pr-0',
                   'place-self-center w-full'
                 )}
               >

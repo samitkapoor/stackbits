@@ -72,7 +72,7 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
               language={language}
               PreTag="div"
               customStyle={{
-                background: '#ffffff11',
+                background: '#ffffff02',
                 border: '1px solid #ffffff22',
                 borderRadius: '0.75rem',
                 padding: '1.5rem',
