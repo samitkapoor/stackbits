@@ -16,7 +16,7 @@ const Page = () => {
         params.id &&
         typeof params.id === 'string' &&
         (categories.includes(params.id.toLowerCase()) ? (
-          <div className="mt-14 px-4">
+          <div className="mt-14 px-4 pb-20">
             <CategoryPage docId={params.id} />
           </div>
         ) : (
