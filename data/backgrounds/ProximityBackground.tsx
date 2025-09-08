@@ -28,7 +28,7 @@ export const proximityBackground: Document = {
           <div className="w-full h-full flex items-center justify-center">
             <ProximityBackground circles={150} columns={15} diameter={70} />
             <div className="h-full w-full flex items-center justify-center absolute inset-0">
-              <p className="text-white font-extrabold text-5xl">Proximity Background</p>
+              <p className="text-white font-medium text-2xl">Proximity Background</p>
             </div>
           </div>
         )

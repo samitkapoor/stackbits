@@ -29,7 +29,7 @@ export const prismaticHaze: Document = {
           <div className="h-full w-full flex flex-col items-center justify-center gap-2">
             <PrismaticHazeBackground className="flex items-center justify-center">
               <div className="h-full w-full flex items-center justify-center">
-                <p className="text-white font-extrabold text-5xl">Prismatic Haze Background</p>
+                <p className="text-white font-medium text-2xl">Prismatic Haze Background</p>
               </div>
             </PrismaticHazeBackground>
           </div>

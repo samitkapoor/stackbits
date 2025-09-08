@@ -32,7 +32,7 @@ export const wavyBackground: Document = {
           <div className="h-full w-full flex flex-col items-center justify-center gap-2">
             <WavyBackground>
               <div className="h-full w-full flex items-center justify-center">
-                <p className="text-white font-extrabold text-5xl">Wavy Background</p>
+                <p className="text-white font-medium text-2xl">Wavy Background</p>
               </div>
             </WavyBackground>
           </div>

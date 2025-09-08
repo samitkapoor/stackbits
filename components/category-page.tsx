@@ -37,12 +37,10 @@ const CategoryPage = ({ docId }: CategoryPageProps) => {
                 className="relative flex flex-col gap-4 overflow-visible h-full w-full"
               >
                 <div className="rounded-3xl p-[6px] bg-[#131313] group-hover:bg-[#1a1a1a] transition-all">
-                  <div className="flex flex-col gap-4 relative overflow-visible h-full w-full rounded-2xl border border-white/20 group-hover:border-white/40 transition-all bg-black">
+                  <div className="flex flex-col gap-4 relative overflow-visible h-full w-full rounded-2xl border border-white/15 group-hover:border-white/40 transition-all bg-black">
                     {/* Preview image container */}
-                    <div className="relative h-[300px] overflow-visible">
-                      <div className="rounded-xl overflow-hidden w-full h-full">
-                        {child?.preview}
-                      </div>
+                    <div className="rounded-xl overflow-hidden w-full h-[300px]">
+                      {child?.preview}
                       {/* <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" /> */}
                     </div>
                   </div>
