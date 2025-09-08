@@ -10,8 +10,8 @@ const TopBar = ({
   sideBarIsOpen,
   setSideBarIsOpen
 }: {
-  sideBarIsOpen: boolean;
-  setSideBarIsOpen: (isOpen: boolean) => void;
+  sideBarIsOpen?: boolean;
+  setSideBarIsOpen?: (isOpen: boolean) => void;
 }) => {
   const links = [
     {
@@ -38,7 +38,9 @@ const TopBar = ({
   ];
 
   const toggleSideBar = () => {
-    setSideBarIsOpen(!sideBarIsOpen);
+    if (setSideBarIsOpen) {
+      setSideBarIsOpen(!sideBarIsOpen);
+    }
   };
 
   return (
