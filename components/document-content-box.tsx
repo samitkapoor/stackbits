@@ -22,7 +22,6 @@ const DocumentContentBox = ({ docId }: { docId: string }) => {
       <div className="h-full w-full">
         <div className="flex flex-col gap-16 mt-0 relative">
           {content.sections.map((section, index) => {
-            if (index === 0) console.log(section);
             return (
               <div
                 key={`${section.heading}-${index}-${Date.now().toString()}`}

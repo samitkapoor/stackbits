@@ -266,7 +266,6 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
       break;
 
     default:
-      console.log({ sectionType, content });
       return <div></div>;
   }
 
