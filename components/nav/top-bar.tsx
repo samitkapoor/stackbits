@@ -83,7 +83,11 @@ const TopBar = ({
               </motion.button>
             )}
           </AnimatePresence>
-          <motion.div layout className="overflow-hidden h-full w-full flex items-center gap-4">
+          <motion.div
+            layout
+            transition={{ duration: 0.15, ease: 'easeInOut' }}
+            className="overflow-hidden h-full w-full flex items-center gap-4"
+          >
             <Link href="/" className="flex items-center gap-2 h-full justify-center text-base">
               {/* <CodeXml className="w-5 h-5" /> */}
               <span className="rounded-full h-4 w-4 bg-gradient-to-b from-yellow-400 to-purple-500 flex items-center justify-center overflow-hidden"></span>

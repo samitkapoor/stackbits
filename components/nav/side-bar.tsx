@@ -65,25 +65,25 @@ const SideBar = ({
           zIndex: 900
         }}
         initial={{
-          left: '-300px'
+          left: '-250px'
         }}
         animate={{
-          left: isOpen ? 0 : '-300px'
+          left: isOpen ? 0 : '-250px'
         }}
         transition={{
-          duration: 0.2,
+          duration: 0.15,
           ease: 'easeInOut'
         }}
-        className="h-full flex flex-col z-40 w-[300px]"
+        className="h-full flex flex-col z-40 w-[250px] relative"
       >
         <div
-          className="w-full max-w-[300px] h-full bg-black absolute top-0 left-0"
+          className="w-full h-full bg-black absolute top-0 left-0"
           style={{
             maskImage: 'linear-gradient(to right, black 30%, transparent)',
             WebkitMaskImage: 'linear-gradient(to right, black 30%, transparent)'
           }}
         ></div>
-        <div className="w-full max-w-[300px] flex flex-col gap-8 h-full items-start justify-start overflow-y-auto scrollbar-hide md:pl-7 pt-3 z-40">
+        <div className="w-full flex flex-col gap-8 h-full items-start justify-start overflow-y-auto scrollbar-hide md:pl-7 pt-3 z-40">
           <button
             onClick={() => setIsOpen(false)}
             className="z-[1001] rounded-md bg-black p-2 flex items-center justify-center"
@@ -133,20 +133,20 @@ const SideBar = ({
                             timeoutId = setTimeout(() => setHovered(false), 100);
                           }}
                           key={j}
-                          className="flex items-center gap-1 relative py-1 group"
+                          className="flex items-center gap-1 relative py-0.5 group"
                         >
                           {isActive && (
                             <motion.div
                               layout
                               layoutId="side-bar-highlight"
-                              transition={{ duration: 0.15, ease: 'easeOut' }}
+                              transition={{ duration: 0.15, ease: 'easeInOut' }}
                               className="w-[3px] bg-yellow-400 absolute top-[0px] h-full z-10 rounded-full"
                             />
                           )}
                           <div className="z-0 absolute inset-0" />
                           <p
                             className={cn(
-                              'z-20 relative pl-4 text-sm',
+                              'z-20 relative pl-3 text-sm',
                               pathname === child.href
                                 ? 'text-yellow-400 font-medium'
                                 : 'text-zinc-300 group-hover:text-white'
