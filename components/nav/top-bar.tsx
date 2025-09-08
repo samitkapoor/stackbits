@@ -1,9 +1,18 @@
-import { Heading, Joystick } from 'lucide-react';
+'use client';
+
+import { Heading, Joystick, Menu } from 'lucide-react';
 import { IconBrandGithub, IconBrandX, IconComponents } from '@tabler/icons-react';
 import Link from 'next/link';
 import React from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 
-const TopBar = () => {
+const TopBar = ({
+  sideBarIsOpen,
+  setSideBarIsOpen
+}: {
+  sideBarIsOpen: boolean;
+  setSideBarIsOpen: (isOpen: boolean) => void;
+}) => {
   const links = [
     {
       name: 'Components',
@@ -28,6 +37,10 @@ const TopBar = () => {
     }
   ];
 
+  const toggleSideBar = () => {
+    setSideBarIsOpen(!sideBarIsOpen);
+  };
+
   return (
     <div className="flex flex-col w-full left-1/2 -translate-x-1/2 fixed h-[40px] sm:h-[50px] md:h-[50px] px-2 z-[200] bg-background">
       {/* <div className="fixed top-0 w-full flex items-start justify-center h-[60px] z-0 pointer-events-none">
@@ -49,30 +62,48 @@ const TopBar = () => {
         className="fixed top-0 w-full flex items-start justify-center h-[40px] sm:h-[50px] md:h-[50px] z-0"
       ></div> */}
 
-      <div className="flex items-center justify-between w-full px-5 pl-10 pt-5 md:pt-0 h-full z-10">
-        <div className="overflow-hidden h-full w-full flex items-center gap-4">
-          <Link
-            href="/"
-            className="flex items-center gap-2 h-full justify-center ml-1 sm:ml-2 text-base"
-          >
-            {/* <CodeXml className="w-5 h-5" /> */}
-            <span className="rounded-full h-4 w-4 bg-gradient-to-b from-yellow-400 to-purple-500 flex items-center justify-center overflow-hidden"></span>
-            Stackbits
-          </Link>
-          {/* Desktop navigation */}
-          <div className="hidden md:flex items-center text-white gap-2 z-10">
-            {links.map((link) => {
-              return (
-                <Link key={link.name} href={link.href}>
-                  <button className="rounded-md backdrop-blur-sm hover:bg-white/90 hover:text-black 0 h-7 w-min px-2 flex items-center justify-center gap-1.5 text-sm">
-                    {link.icon}
-                    <p className="text-xs sm:text-sm">{link.name}</p>
-                  </button>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
+      <div className="flex items-center justify-between w-full px-5 pt-5 md:pt-0 h-full z-10">
+        <motion.div layout className="flex items-center gap-4">
+          <AnimatePresence mode="popLayout">
+            {sideBarIsOpen !== undefined && (
+              <motion.button
+                initial={{
+                  scale: 0
+                }}
+                animate={{
+                  scale: 1
+                }}
+                exit={{
+                  scale: 0
+                }}
+                onClick={toggleSideBar}
+                className="z-[1001] rounded-md bg-black p-2 flex items-center justify-center"
+              >
+                {!sideBarIsOpen && <Menu size={16} />}
+              </motion.button>
+            )}
+          </AnimatePresence>
+          <motion.div layout className="overflow-hidden h-full w-full flex items-center gap-4">
+            <Link href="/" className="flex items-center gap-2 h-full justify-center text-base">
+              {/* <CodeXml className="w-5 h-5" /> */}
+              <span className="rounded-full h-4 w-4 bg-gradient-to-b from-yellow-400 to-purple-500 flex items-center justify-center overflow-hidden"></span>
+              Stackbits
+            </Link>
+            {/* Desktop navigation */}
+            <div className="hidden md:flex items-center text-white gap-2 z-10">
+              {links.map((link) => {
+                return (
+                  <Link key={link.name} href={link.href}>
+                    <button className="rounded-md backdrop-blur-sm hover:bg-white/90 hover:text-black 0 h-7 w-min px-2 flex items-center justify-center gap-1.5 text-sm">
+                      {link.icon}
+                      <p className="text-xs sm:text-sm">{link.name}</p>
+                    </button>
+                  </Link>
+                );
+              })}
+            </div>
+          </motion.div>
+        </motion.div>
         <div className="flex items-center gap-2">
           <Link href="https://x.com/samitkapoorr" target="_blank">
             <button className="rounded-md backdrop-blur-sm hover:bg-white/90 hover:text-black h-7 w-min px-2 flex items-center justify-center text-sm gap-1.5">
