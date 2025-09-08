@@ -103,7 +103,7 @@ const ContentTypeWiseComponent: React.FC<ContentTypeWiseComponentProps> = ({
             </div>
           )}
           {!isExpanded && isOverflowing && (
-            <div className="absolute bottom-0 left-0 right-0 h-full bg-gradient-to-t from-[#0c0c0c] to-transparent rounded-xl" />
+            <div className="absolute bottom-0 left-0 right-0 h-full bg-gradient-to-t from-[#0c0c0c] to-transparent" />
           )}
         </div>
       </div>
