@@ -28,7 +28,9 @@ const DocumentContentBox = ({ docId }: { docId: string }) => {
                 key={`${section.heading}-${index}-${Date.now().toString()}`}
                 className={cn(
                   'flex flex-col gap-0 relative',
-                  section.sectionType === 'name' && 'absolute top-10 left-10 z-10 pr-10'
+                  section.sectionType === 'name' && 'absolute top-10 left-10 z-10 pr-10',
+                  !['name', 'preview'].includes(section.sectionType) &&
+                    'max-w-5xl place-self-center w-full'
                 )}
               >
                 {section.heading && <p className={'font-medium text-lg'}>{section.heading}</p>}

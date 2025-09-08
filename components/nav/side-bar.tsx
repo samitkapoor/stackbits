@@ -83,7 +83,7 @@ const SideBar = ({
             WebkitMaskImage: 'linear-gradient(to right, black 30%, transparent)'
           }}
         ></div>
-        <div className="w-full flex flex-col gap-8 h-full items-start justify-start overflow-y-auto scrollbar-hide md:pl-7 pt-3 z-40">
+        <div className="w-full flex flex-col gap-8 h-full items-start justify-start overflow-y-auto scrollbar-hide pl-7 pt-3 z-40">
           <button
             onClick={() => setIsOpen(false)}
             className="z-[1001] rounded-md bg-black p-2 flex items-center justify-center"
