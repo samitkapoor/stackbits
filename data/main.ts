@@ -85,6 +85,7 @@ import { rubikCube, rubikCubePreview } from './frontend/RubikCube';
 import { interestPicker, interestPickerPreview } from './frontend/InterestPicker';
 import { interactiveCTA, interactiveCTAPreview } from './frontend/InteractiveCTA';
 import { photoGallery, photoGalleryPreview } from './frontend/PhotoGallery';
+import { holdButton, holdButtonPreview } from './buttons/HoldButton';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -157,6 +158,13 @@ const sideBarOptions: Array<{
       //   preview: glassButtonPreview,
       //   isNew: false
       // },
+      {
+        name: 'Hold Button',
+        href: '/docs/holdButton',
+        content: holdButton,
+        preview: holdButtonPreview,
+        isNew: true
+      },
       {
         name: 'Toggle Button',
         href: '/docs/toggleButton',
