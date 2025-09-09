@@ -1,4 +1,4 @@
-import ShineButton from '@/components/ui/shine-button';
+import ShineButton from '@/components/buttons/shine-button';
 import { Document } from '../main';
 
 export const shineButtonPreview = (

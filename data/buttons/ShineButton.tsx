@@ -1,6 +1,6 @@
 import { cnCode, installDependenciesCode } from '@/constants/code';
 import { Document } from '../main';
-import ShineButton from '@/components/ui/shine-button';
+import ShineButton from '@/components/buttons/shine-button';
 
 export const shineButtonPreview = (
   <div className="h-full w-full flex items-center justify-center p-5">

@@ -1,6 +1,6 @@
 import { cnCode, installDependenciesCode } from '@/constants/code';
 import { Document } from '../main';
-import NavigationButton from '@/components/ui/navigation-button';
+import NavigationButton from '@/components/buttons/navigation-button';
 
 export const navigationButtonPreview = (
   <div className="h-full w-full flex items-center justify-center p-5">

@@ -1,5 +1,5 @@
 import { Document } from '../main';
-import ExpandableIconButton from '@/components/ui/expandable-icon-button';
+import ExpandableIconButton from '@/components/buttons/expandable-icon-button';
 import { cnCode } from '@/constants/code';
 import { TwitterIcon } from 'lucide-react';
 

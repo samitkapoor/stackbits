@@ -1,7 +1,7 @@
 import crypto from 'crypto';
 
 import { Document } from '../main';
-import CopyTextButton from '@/components/ui/copy-text-button';
+import CopyTextButton from '@/components/buttons/copy-text-button';
 import { Copy } from 'lucide-react';
 import EncryptionDecryptionDemo from '@/components/encryption-decryption';
 

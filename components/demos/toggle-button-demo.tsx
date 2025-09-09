@@ -1,5 +1,5 @@
 import React from 'react';
-import ToggleButton from '../ui/toggle-button';
+import ToggleButton from '../buttons/toggle-button';
 import { Moon, Rocket, Sun } from 'lucide-react';
 
 const ToggleButtonDemo = () => {

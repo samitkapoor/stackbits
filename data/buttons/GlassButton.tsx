@@ -1,5 +1,5 @@
 import { Document } from '../main';
-import GlassButton from '@/components/ui/glass-button';
+import GlassButton from '@/components/buttons/glass-button';
 
 export const glassButtonPreview = (
   <div className="h-full w-full flex items-center justify-center p-5">

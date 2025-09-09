@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { IconBrandX, IconMail } from '@tabler/icons-react';
 import { MessageCircle, X } from 'lucide-react';
-import NavigationButton from './navigation-button';
+import NavigationButton from '../buttons/navigation-button';
 import { cn } from '@/lib/utils';
 
 export interface NavigationLink {

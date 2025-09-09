@@ -1,5 +1,5 @@
 import React from 'react';
-import MovingBorderButton from './ui/moving-border-button';
+import MovingBorderButton from './buttons/moving-border-button';
 import crypto from 'crypto';
 
 const IV_LENGTH = 16;

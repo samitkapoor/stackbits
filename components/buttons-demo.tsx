@@ -1,13 +1,13 @@
 import React from 'react';
-import ExpandableIconButton from './ui/expandable-icon-button';
+import ExpandableIconButton from './buttons/expandable-icon-button';
 import { Copy, Sun, Moon, Rocket, TwitterIcon } from 'lucide-react';
-import CopyTextButton from './ui/copy-text-button';
-import AnimatedGradientButton from './ui/animated-gradient-button';
-import GlassButton from './ui/glass-button';
-import ToggleButton from './ui/toggle-button';
-import MovingBorderButton from './ui/moving-border-button';
-import NavigationButton from './ui/navigation-button';
-import ShineButton from './ui/shine-button';
+import CopyTextButton from './buttons/copy-text-button';
+import AnimatedGradientButton from './buttons/animated-gradient-button';
+import GlassButton from './buttons/glass-button';
+import ToggleButton from './buttons/toggle-button';
+import MovingBorderButton from './buttons/moving-border-button';
+import NavigationButton from './buttons/navigation-button';
+import ShineButton from './buttons/shine-button';
 
 const ButtonDisplay = ({ children, name }: { children: React.ReactNode; name: string }) => {
   return (

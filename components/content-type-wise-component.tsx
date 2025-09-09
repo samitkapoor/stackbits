@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { SectionInDocument } from '@/data/main';
 import { Check, Copy } from 'lucide-react';
-import ShineButton from './ui/shine-button';
+import ShineButton from './buttons/shine-button';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { cn } from '@/lib/utils';

@@ -1,6 +1,6 @@
 import { cnCode } from '@/constants/code';
 import { Document } from '../main';
-import AnimatedGradientButton from '@/components/ui/animated-gradient-button';
+import AnimatedGradientButton from '@/components/buttons/animated-gradient-button';
 
 export const animatedGradientButtonPreview = (
   <div className="h-full w-full flex items-center justify-center p-5">

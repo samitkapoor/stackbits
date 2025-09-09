@@ -1,6 +1,6 @@
 import { cnCode } from '@/constants/code';
 import { Document } from '../main';
-import MovingBorderButton from '@/components/ui/moving-border-button';
+import MovingBorderButton from '@/components/buttons/moving-border-button';
 
 export const movingBorderButtonPreview = (
   <div className="h-full w-full flex items-center justify-center p-5">

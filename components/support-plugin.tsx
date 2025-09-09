@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import CopyTextButton from './ui/copy-text-button';
+import CopyTextButton from './buttons/copy-text-button';
 import { Mail, Search, Twitter } from 'lucide-react';
 import useDebounce from '@/lib/useDebounce';
 import { searchDocs } from '@/data/main';

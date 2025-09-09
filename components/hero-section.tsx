@@ -2,8 +2,8 @@
 
 import React from 'react';
 import HeroIllustration from './hero-illustration';
-import MovingBorderButton from './ui/moving-border-button';
-import ShineButton from './ui/shine-button';
+import MovingBorderButton from './buttons/moving-border-button';
+import ShineButton from './buttons/shine-button';
 import Link from 'next/link';
 import { Command, MoveRight } from 'lucide-react';
 

@@ -1,4 +1,4 @@
-import CopyTextButton from '@/components/ui/copy-text-button';
+import CopyTextButton from '@/components/buttons/copy-text-button';
 import { Document } from '../main';
 import { cnCode } from '@/constants/code';
 import { Copy } from 'lucide-react';

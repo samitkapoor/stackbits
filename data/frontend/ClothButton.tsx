@@ -1,5 +1,5 @@
 import { Document } from '../main';
-import ClothButton from '@/components/ui/cloth-button';
+import ClothButton from '@/components/buttons/cloth-button';
 
 export const clothButtonPreview = (
   <div className="h-full w-full flex flex-col items-center justify-center gap-2">

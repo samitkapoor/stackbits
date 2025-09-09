@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Github, Mail, Twitter, Instagram, LucideIcon, Code2Icon, Globe } from 'lucide-react';
-import ExpandableIconButton from './ui/expandable-icon-button';
+import ExpandableIconButton from './buttons/expandable-icon-button';
 import Image from 'next/image';
 
 interface NavLinkProps {
