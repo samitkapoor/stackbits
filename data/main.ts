@@ -86,6 +86,7 @@ import { interestPicker, interestPickerPreview } from './frontend/InterestPicker
 import { interactiveCTA, interactiveCTAPreview } from './frontend/InteractiveCTA';
 import { photoGallery, photoGalleryPreview } from './frontend/PhotoGallery';
 import { holdButton, holdButtonPreview } from './buttons/HoldButton';
+import { dialogForm, dialogFormPreview } from './frontend/DialogForm';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -343,6 +344,13 @@ const sideBarOptions: Array<{
       //   content: iconWheel,
       //   preview: iconWheelPreview
       // },
+      {
+        name: 'Dialog Form',
+        href: '/docs/dialogform',
+        content: dialogForm,
+        preview: dialogFormPreview,
+        isNew: true
+      },
       {
         name: 'Image Pile',
         href: '/docs/imagepile',
