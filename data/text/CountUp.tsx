@@ -1,5 +1,5 @@
 import { Document } from '../main';
-import CountUp from '@/components/ui/count-up';
+import CountUp from '@/components/texts/count-up';
 
 export const countUpPreview = (
   <div className="h-full w-full flex items-center justify-center p-5">

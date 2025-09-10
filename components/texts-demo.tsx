@@ -1,14 +1,14 @@
 import React from 'react';
-import GlitchText from './ui/glitch-text';
-import RainbowText from './ui/rainbow-text';
-import SkewedText from './ui/skewed-text';
-import CountUp from './ui/count-up';
-import FadeInText from './ui/fade-in-text';
-import WavyText from './ui/wavy-text';
-import BlurText from './ui/blur-text';
+import GlitchText from './texts/glitch-text';
+import RainbowText from './texts/rainbow-text';
+import SkewedText from './texts/skewed-text';
+import CountUp from './texts/count-up';
+import FadeInText from './texts/fade-in-text';
+import WavyText from './texts/wavy-text';
+import BlurText from './texts/blur-text';
 import { cn } from '@/lib/utils';
-import DottedText from './ui/dotted-text';
-import HiddenText from './ui/hidden-text';
+import DottedText from './texts/dotted-text';
+import HiddenText from './texts/hidden-text';
 
 const TextDisplay = ({
   children,

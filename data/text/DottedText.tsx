@@ -1,6 +1,6 @@
 import { installDependenciesCode } from '@/constants/code';
 import { Document } from '../main';
-import DottedText from '@/components/ui/dotted-text';
+import DottedText from '@/components/texts/dotted-text';
 
 export const dottedTextPreview = (
   <div className="h-full w-full flex items-center justify-center p-5">

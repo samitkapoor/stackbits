@@ -1,6 +1,6 @@
 import { cnCode, installDependenciesCode } from '@/constants/code';
 import { Document } from '../main';
-import BlurText from '@/components/ui/blur-text';
+import BlurText from '@/components/texts/blur-text';
 
 export const blurTextPreview = (
   <div className="h-full w-full flex items-center justify-center p-5">

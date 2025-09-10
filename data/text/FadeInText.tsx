@@ -1,4 +1,4 @@
-import FadeInText from '@/components/ui/fade-in-text';
+import FadeInText from '@/components/texts/fade-in-text';
 import { Document } from '../main';
 
 export const fadeInTextPreview = (

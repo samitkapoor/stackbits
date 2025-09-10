@@ -1,4 +1,4 @@
-import GooeyWords from '@/components/ui/gooey-words';
+import GooeyWords from '@/components/texts/gooey-words';
 import { Document } from '../main';
 
 const words = ['SMART', 'SHINE', 'VIBES', 'TRICK', 'STACK', 'REACT'];

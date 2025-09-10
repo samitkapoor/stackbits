@@ -1,6 +1,6 @@
 import { cnCode, installDependenciesCode } from '@/constants/code';
 import { Document } from '../main';
-import SentenceFlip from '@/components/ui/sentence-flip';
+import SentenceFlip from '@/components/texts/sentence-flip';
 
 export const sentenceFlipPreview = (
   <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden relative p-0 gap-5">

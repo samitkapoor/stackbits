@@ -1,4 +1,4 @@
-import PixelatedText from '@/components/ui/pixelated-text';
+import PixelatedText from '@/components/texts/pixelated-text';
 import { Document } from '../main';
 
 export const pixelatedTextPreview = (

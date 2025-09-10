@@ -3,7 +3,7 @@
 import React, { useRef } from 'react';
 import { motion, useTransform, useScroll } from 'framer-motion';
 import { useRouter } from 'next/navigation';
-import WavyText from './ui/wavy-text';
+import WavyText from './texts/wavy-text';
 import PrismaticHazeBackground from './ui/prismatic-haze';
 import TradingCardDemo from './trading-card-demo';
 import AnimatedGradientButton from './buttons/animated-gradient-button';

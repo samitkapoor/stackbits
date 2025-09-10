@@ -1,5 +1,5 @@
 import { Document } from '../main';
-import SkewedText from '@/components/ui/skewed-text';
+import SkewedText from '@/components/texts/skewed-text';
 
 export const skewedTextPreview = (
   <div className="h-full w-full flex items-center justify-center p-5">

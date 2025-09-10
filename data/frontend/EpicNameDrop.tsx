@@ -1,6 +1,6 @@
 import PrismaticHazeBackground from '@/components/ui/prismatic-haze';
 import { Document } from '../main';
-import EpicNameDrop from '@/components/ui/epic-name-drop';
+import EpicNameDrop from '@/components/texts/epic-name-drop';
 
 export const epicNameDropPreview = (
   <div className="h-full w-full flex flex-col items-center justify-center relative">

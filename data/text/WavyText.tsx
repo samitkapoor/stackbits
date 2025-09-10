@@ -1,6 +1,6 @@
 import { cnCode, installDependenciesCode } from '@/constants/code';
 import { Document } from '../main';
-import WavyText from '@/components/ui/wavy-text';
+import WavyText from '@/components/texts/wavy-text';
 
 export const wavyTextPreview = (
   <div className="h-full w-full flex items-center justify-center p-5">
