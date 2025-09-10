@@ -1,11 +1,10 @@
 import { Document } from '../main';
-import Image from 'next/image';
 import DialogFormDemo from '@/components/demos/dialog-form-demo';
 import { cnCode, installDependenciesCode } from '@/constants/code';
 
 export const dialogFormPreview = (
   <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden relative p-8 gap-5">
-    <Image src="/contact-section.png" alt="Project Grid" width={1000} height={1000} />
+    <DialogFormDemo />
   </div>
 );
 
