@@ -87,6 +87,7 @@ import { interactiveCTA, interactiveCTAPreview } from './frontend/InteractiveCTA
 import { photoGallery, photoGalleryPreview } from './frontend/PhotoGallery';
 import { holdButton, holdButtonPreview } from './buttons/HoldButton';
 import { dialogForm, dialogFormPreview } from './frontend/DialogForm';
+import { threeDScroll, threeDScrollPreview } from './frontend/ThreeDScroll';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -506,6 +507,13 @@ const sideBarOptions: Array<{
         content: stackedInputForm,
         preview: stackedInputFormPreview,
         isNew: true
+      },
+      {
+        name: '3D Scroll',
+        href: '/docs/3dScroll',
+        content: threeDScroll,
+        preview: threeDScrollPreview,
+        isNew: false
       },
       {
         name: 'Trading Card',
