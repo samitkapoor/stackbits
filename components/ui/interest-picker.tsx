@@ -157,7 +157,10 @@ const MarqueeItem = ({
   };
 
   return (
-    <motion.div layout className={cn('rounded-full', showEmptySlot && 'bg-white/5')}>
+    <motion.div
+      layout
+      className={cn('rounded-full active:scale-[0.97]', showEmptySlot && 'bg-white/5')}
+    >
       <motion.button
         layout
         initial={{

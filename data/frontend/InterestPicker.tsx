@@ -196,7 +196,10 @@ const MarqueeItem = ({
   };
 
   return (
-    <motion.div layout className={cn('rounded-full', showEmptySlot && 'bg-white/5')}>
+    <motion.div
+      layout
+      className={cn('rounded-full active:scale-[0.97]', showEmptySlot && 'bg-white/5')}
+    >
       <motion.button
         layout
         initial={{
@@ -233,8 +236,8 @@ const InterestMarquee = ({
 }) => {
   return (
     <div className="relative mt-4">
-      <div className="absolute w-full h-full inset-0 z-10 bg-gradient-to-l from-black pointer-events-none to-20% to-transparent" />
-      <div className="absolute w-full h-full inset-0 z-10 bg-gradient-to-t from-black pointer-events-none to-20% to-transparent" />
+      <div className="absolute w-full h-full inset-0 z-10 bg-gradient-to-l from-[#111111] pointer-events-none to-20% to-transparent" />
+      <div className="absolute w-full h-full inset-0 z-10 bg-gradient-to-t from-[#111111] pointer-events-none to-20% to-transparent" />
 
       <div className="grid grid-rows-5 gap-2 overflow-x-auto overflow-y-hidden relative pr-20 pb-10">
         {Array.from({ length: 5 }).map((_, index) => {
