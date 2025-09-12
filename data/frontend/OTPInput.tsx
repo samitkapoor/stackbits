@@ -1,11 +1,11 @@
 import OTPInput from '@/components/ui/otp-input';
 import { Document } from '../main';
-import MasonryGrid from '@/components/ui/masonry-grid';
 import { cnCode, installDependenciesCode } from '@/constants/code';
+import VideoPreview from '@/components/ui/video-preview';
 
 export const otpInputPreview = (
   <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden relative p-0 gap-5">
-    <OTPInput />
+    <VideoPreview videoUrl="/demos/otp-input.mp4" />
   </div>
 );
 

@@ -1,21 +1,12 @@
 import { Document } from '../main';
 import CircleMenu from '@/components/ui/circle-menu';
+import VideoPreview from '@/components/ui/video-preview';
 import { BookOpen, DollarSign, FlaskConical, Home, Mail, Projector, User } from 'lucide-react';
 import { cnCode, installDependenciesCode } from '@/constants/code';
 
 export const circleMenuPreview = (
-  <div className="h-full w-full flex items-center justify-center p-5">
-    <CircleMenu
-      items={[
-        { label: 'Home', icon: <Home size={16} />, href: '' },
-        { label: 'Projects', icon: <Projector size={16} />, href: '' },
-        { label: 'Skills', icon: <DollarSign size={16} />, href: '' },
-        { label: 'Articles', icon: <BookOpen size={16} />, href: '' },
-        { label: 'Lab', icon: <FlaskConical size={16} />, href: '' },
-        { label: 'About', icon: <User size={16} />, href: '' },
-        { label: 'Contact', icon: <Mail size={16} />, href: '' }
-      ]}
-    />
+  <div className="h-full w-full flex items-center justify-center">
+    <VideoPreview videoUrl="/demos/circle-menu.mp4" />
   </div>
 );
 

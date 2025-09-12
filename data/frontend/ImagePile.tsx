@@ -1,18 +1,11 @@
 import { Document } from '../main';
 import ImagePile from '@/components/ui/image-pile';
+import VideoPreview from '@/components/ui/video-preview';
 import { installDependenciesCode } from '@/constants/code';
 
 export const imagePilePreview = (
-  <div className="flex flex-wrap items-center gap-10 p-5 justify-center w-full h-full scale-75">
-    <ImagePile
-      images={[
-        'https://images.unsplash.com/photo-1728993559783-f657d4177c6b?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        'https://images.unsplash.com/photo-1501389446297-06c4c50b5ee8?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGhpa2luZ3xlbnwwfHwwfHx8MA%3D%3D',
-        'https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNvY2NlcnxlbnwwfHwwfHx8MA%3D%3D',
-        'https://images.unsplash.com/photo-1555979864-7a8f9b4fddf8?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHZpZXRuYW18ZW58MHx8MHx8fDA%3D',
-        'https://images.unsplash.com/photo-1528569449293-fdc35b48952d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8d2F0ZXIlMjBzcG9ydHN8ZW58MHx8MHx8fDA%3D'
-      ]}
-    />
+  <div className="flex flex-wrap items-center gap-10 justify-center w-full h-full">
+    <VideoPreview videoUrl="/demos/image-pile.mp4" />
   </div>
 );
 
