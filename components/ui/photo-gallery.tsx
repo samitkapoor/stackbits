@@ -77,7 +77,7 @@ const SelectedPhotoItem = memo(
   }) => {
     return (
       <motion.div
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 0.1 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.2 }}
         onClick={() => setSelectedPhoto(null)}
@@ -98,22 +98,15 @@ const SelectedPhotoItem = memo(
         </motion.div>
         {photos[selectedPhotoIndex].title && (
           <div className="max-w-72 w-full text-center mt-2 font-medium text-xl flex items-center justify-center">
-            {photos[selectedPhotoIndex].title.split('').map((char, index) => {
-              if (char === ' ') return <span key={`${char}-${index}`} className="w-1.5"></span>;
-              return (
-                <motion.span
-                  key={`${char}-${index}`}
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 0.1,
-                    delay: index * 0.015
-                  }}
-                >
-                  {char}
-                </motion.span>
-              );
-            })}
+            <motion.span
+              initial={{ opacity: 0.1, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0.1, y: 10 }}
+              key={`photo-title-${selectedPhoto.rowIndex}-${selectedPhoto.index}`}
+              transition={{ duration: 0.2 }}
+            >
+              {photos[selectedPhotoIndex].title}
+            </motion.span>
           </div>
         )}
       </motion.div>
@@ -166,7 +159,7 @@ const PhotoItem = ({
         transition: { duration: 0.2, delay: 0.05 }
       }}
       transition={{ duration: 0.15, ease: 'easeOut' }}
-      className="h-20 w-20 rounded-xl relative overflow-hidden shrink-0 border-[4px] border-zinc-900 hover:border-zinc-100 cursor-pointer transition-colors duration-200"
+      className="h-20 w-20 rounded-xl relative overflow-hidden shrink-0 border-[2px] border-zinc-900 hover:border-zinc-100 cursor-pointer transition-colors duration-75"
       style={{ willChange: 'transform, opacity' }}
       onClick={() => setSelectedPhoto({ rowIndex, index })}
       viewport={{ once: true }}

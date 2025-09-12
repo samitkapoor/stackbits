@@ -4,7 +4,7 @@ import { cnCode, installDependenciesCode } from '@/constants/code';
 
 export const interactiveCTAPreview = (
   <div className="h-full w-full flex items-center justify-center p-5 relative">
-    <InteractiveCTA />
+    <InteractiveCTA className="!absolute" />
   </div>
 );
 

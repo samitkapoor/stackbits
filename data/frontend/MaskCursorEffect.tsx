@@ -3,14 +3,18 @@ import { Document } from '../main';
 import { cnCode, installDependenciesCode } from '@/constants/code';
 
 export const maskCursorEffectPreview = (
-  <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden relative p-10 gap-5">
+  <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden relative gap-5">
     <MaskCursorEffect
       compressedMaskSize={40}
       expandedMaskSize={150}
-      className="h-[200px]"
-      hiddenComponent={<div className="max-w-2xl text-2xl font-bold">You can&apos;t see me</div>}
+      className="h-full"
+      hiddenComponent={
+        <div className="w-full h-full text-2xl font-bold">You can&apos;t see me</div>
+      }
     >
-      <div className="max-w-2xl text-2xl font-bold">John Cena</div>
+      <div className="w-full flex items-center justify-center h-full text-2xl font-bold">
+        John Cena
+      </div>
     </MaskCursorEffect>
   </div>
 );

@@ -127,7 +127,7 @@ export const SubmitDialogFormButton = ({
     <button
       type="button"
       disabled={state === 'loading' || state === 'success'}
-      className="disabled:opacity-50 disabled:cursor-not-allowed"
+      className="disabled:opacity-50 disabled:cursor-not-allowed active:scale-[0.97] disabled:active:scale-100"
     >
       <AnimatePresence initial={false} mode="popLayout">
         <motion.div
@@ -215,6 +215,7 @@ const DialogForm = ({
           setError((res as { message: string }).message);
         }
       } catch (error) {
+        console.error(error);
         setFormState('error');
         setError('Something went wrong.');
       }
