@@ -1,10 +1,11 @@
 import PhotoGallery from '@/components/ui/photo-gallery';
 import { Document } from '../main';
 import { cnCode, installDependenciesCode } from '@/constants/code';
+import VideoPreview from '@/components/ui/video-preview';
 
 export const photoGalleryPreview = (
   <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden relative p-0 gap-5">
-    <PhotoGallery />
+    <VideoPreview videoUrl="/demos/photo-gallery.mp4" />
   </div>
 );
 

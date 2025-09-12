@@ -1,11 +1,12 @@
 import { Document } from '../main';
 import ImagePile from '@/components/ui/image-pile';
 import InteractiveFolder from '@/components/ui/interactive-folder';
+import VideoPreview from '@/components/ui/video-preview';
 import { installDependenciesCode } from '@/constants/code';
 
 export const interactiveFolderPreview = (
-  <div className="flex flex-wrap items-center gap-10 p-5 justify-center w-full h-full scale-75">
-    <InteractiveFolder />
+  <div className="flex flex-wrap items-center gap-10 justify-center w-full h-full">
+    <VideoPreview videoUrl="/demos/interactive-folder.mp4" />
   </div>
 );
 

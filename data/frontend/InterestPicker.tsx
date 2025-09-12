@@ -1,10 +1,11 @@
 import { Document } from '../main';
 import InterestPicker from '@/components/ui/interest-picker';
+import VideoPreview from '@/components/ui/video-preview';
 import { cnCode, installDependenciesCode } from '@/constants/code';
 
 export const interestPickerPreview = (
-  <div className="flex flex-wrap items-center gap-10 p-5 justify-center w-full h-full scale-75">
-    <InterestPicker />
+  <div className="flex flex-wrap items-center gap-10 justify-center w-full h-full">
+    <VideoPreview videoUrl="/demos/interest-picker.mp4" />
   </div>
 );
 

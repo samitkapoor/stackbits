@@ -1,10 +1,11 @@
 import { installDependenciesCode } from '@/constants/code';
 import { Document } from '../main';
 import MagnetTabsDemo from '@/components/magnet-tabs-demo';
+import VideoPreview from '@/components/ui/video-preview';
 
 export const magnetTabsPreview = (
-  <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden relative p-10 gap-5">
-    <MagnetTabsDemo isPreview />
+  <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden relative gap-5">
+    <VideoPreview videoUrl="/demos/magnet-tabs.mp4" />
   </div>
 );
 

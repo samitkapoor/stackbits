@@ -1,10 +1,11 @@
 import TradingCardDemo from '@/components/trading-card-demo';
 import { Document } from '../main';
 import { installDependenciesCode } from '@/constants/code';
+import VideoPreview from '@/components/ui/video-preview';
 
 export const tradingCardPreview = (
-  <div className="h-full w-full flex items-center justify-center scale-50">
-    <TradingCardDemo variant="minimized" />
+  <div className="h-full w-full flex items-center justify-center">
+    <VideoPreview videoUrl="/demos/trading-cards.mp4" />
   </div>
 );
 
