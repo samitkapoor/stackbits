@@ -12,37 +12,30 @@ const PreviewSection = ({ code }: { code: ReactNode }) => {
     false: {
       icon: <Maximize />,
       onClick: () => {
-        console.log('maximize');
         setFullScreen(true);
       }
     },
     true: {
       icon: <Minimize />,
       onClick: () => {
-        console.log('minimize');
         setFullScreen(false);
       }
     }
   };
 
   return (
-    <motion.div
-      // layout
-      // transition={{
-      //   duration: 0.8,
-      //   ease: 'easeInOut'
-      // }}
+    <div
       className={cn(
         'w-full h-[calc(100vh-50px)] p-9 lg:p-4 z-50',
         fullScreen && 'fixed bottom-0.5 right-0 w-screen h-[calc(100vh-50px)]'
       )}
     >
-      <div className="h-full w-full border border-white/5 bg-[#111111] rounded-xl flex items-center justify-center min-h-[500px] relative overflow-x-hidden">
+      <div className="h-full w-full border border-white/5 bg-[#111111] rounded-xl flex items-center justify-center min-h-[500px] relative overflow-x-hidden overflow-y-auto">
         <motion.button
           onClick={() => buttons[`${fullScreen}`].onClick()}
           className="absolute top-4 right-4 z-50 bg-black/10 p-2"
         >
-          <AnimatePresence mode="popLayout">
+          <AnimatePresence mode="popLayout" initial={false}>
             <motion.div
               key={`${fullScreen}-icon`}
               initial={{ opacity: 0, scale: 0.3 }}
@@ -59,7 +52,7 @@ const PreviewSection = ({ code }: { code: ReactNode }) => {
         </motion.button>
         {code}
       </div>
-    </motion.div>
+    </div>
   );
 };
 
