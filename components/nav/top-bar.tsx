@@ -44,7 +44,7 @@ const TopBar = ({
   };
 
   return (
-    <div className="flex flex-col w-full left-1/2 -translate-x-1/2 fixed h-[50px] px-2 z-[200] bg-background">
+    <div className="flex flex-col w-full left-1/2 -translate-x-1/2 fixed h-[50px] px-2 z-20 bg-background">
       {/* <div className="fixed top-0 w-full flex items-start justify-center h-[60px] z-0 pointer-events-none">
         <div
           style={{

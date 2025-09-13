@@ -2,6 +2,7 @@ import { getDocs } from '@/data/main';
 import React from 'react';
 import ContentTypeWiseComponent from './content-type-wise-component';
 import { cn } from '@/lib/utils';
+import PreviewSection from './ui/preview-section';
 
 const DocumentContentBox = ({ docId }: { docId: string }) => {
   // ? Get content for that docId
@@ -39,11 +40,7 @@ const DocumentContentBox = ({ docId }: { docId: string }) => {
             );
           })}
         </div>
-        <div className="w-full h-[calc(100vh-50px)] p-9 lg:p-4">
-          <div className="h-full w-full border border-white/5 bg-[#111111] rounded-xl flex items-center justify-center min-h-[500px] relative overflow-x-hidden">
-            {previewSection?.code}
-          </div>
-        </div>
+        <PreviewSection code={previewSection?.code} />
       </div>
     )
   );

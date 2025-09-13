@@ -55,9 +55,9 @@ const InteractiveCTA = ({
   openIcon,
   closeIcon,
   openWidth = '310px',
-  closeWidth = '64px',
+  closeWidth = '50px',
   openHeight = '155px',
-  closeHeight = '64px'
+  closeHeight = '50px'
 }: InteractiveCTAProps) => {
   const [isOpen, setIsOpen] = useState(initialOpen);
   return (
