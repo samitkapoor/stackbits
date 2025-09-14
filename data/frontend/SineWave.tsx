@@ -25,7 +25,7 @@ export const sineWave: Document = {
       {
         heading: 'Sine Wave',
         content:
-          'ShineButton is a sleek, transparent button with a subtle diagonal shimmer effect. It features a smooth animated glow, a minimalist 1px border, and a modern hover interaction—perfect for adding a premium touch to your UI',
+          'An animated component that arranges items in a sine wave pattern with smooth spring animations. Perfect for creating dynamic, flowing layouts with customizable amplitude and frequency.',
         sectionType: 'paragraph'
       },
       {
