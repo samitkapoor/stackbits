@@ -1,7 +1,13 @@
 'use client';
 
 import { Heading, Joystick, Menu } from 'lucide-react';
-import { IconBrandGithub, IconBrandX, IconComponents } from '@tabler/icons-react';
+import {
+  IconBackground,
+  IconBrandGithub,
+  IconBrandX,
+  IconComponents,
+  IconLetterT
+} from '@tabler/icons-react';
 import Link from 'next/link';
 import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -15,10 +21,10 @@ const TopBar = ({
 }) => {
   const links = [
     {
-      name: 'Components',
-      href: '/docs/components',
+      name: 'Backgrounds',
+      href: '/docs/backgrounds',
       icon: (
-        <IconComponents className="h-[12px] sm:h-[14px] md:h-[16px] w-[12px] sm:w-[14px] md:w-[16px]" />
+        <IconBackground className="h-[12px] sm:h-[14px] md:h-[16px] w-[12px] sm:w-[14px] md:w-[16px]" />
       )
     },
     {
@@ -29,10 +35,17 @@ const TopBar = ({
       )
     },
     {
+      name: 'Components',
+      href: '/docs/components',
+      icon: (
+        <IconComponents className="h-[12px] sm:h-[14px] md:h-[16px] w-[12px] sm:w-[14px] md:w-[16px]" />
+      )
+    },
+    {
       name: 'Texts',
       href: '/docs/texts',
       icon: (
-        <Heading className="h-[12px] sm:h-[14px] md:h-[16px] w-[12px] sm:w-[14px] md:w-[16px]" />
+        <IconLetterT className="h-[12px] sm:h-[14px] md:h-[16px] w-[12px] sm:w-[14px] md:w-[16px]" />
       )
     }
   ];
