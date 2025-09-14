@@ -1,6 +1,6 @@
 'use client';
 
-import { Heading, Joystick, Menu } from 'lucide-react';
+import { Joystick, Menu } from 'lucide-react';
 import {
   IconBackground,
   IconBrandGithub,
