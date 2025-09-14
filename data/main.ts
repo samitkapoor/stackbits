@@ -88,6 +88,7 @@ import { photoGallery, photoGalleryPreview } from './frontend/PhotoGallery';
 import { holdButton, holdButtonPreview } from './buttons/HoldButton';
 import { dialogForm, dialogFormPreview } from './frontend/DialogForm';
 import { stackScroll, stackScrollPreview } from './frontend/StackScroll';
+import { horizontalScroll, horizontalScrollPreview } from './frontend/HorizontalScroll';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -350,6 +351,13 @@ const sideBarOptions: Array<{
         href: '/docs/dialogform',
         content: dialogForm,
         preview: dialogFormPreview,
+        isNew: true
+      },
+      {
+        name: 'Horizontal Scroll',
+        href: '/docs/horizontalscroll',
+        content: horizontalScroll,
+        preview: horizontalScrollPreview,
         isNew: true
       },
       {

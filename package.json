@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "compress": "ffmpeg -i public/demos/horizontal-scroll.mov -c:v libx264 -crf 23 -preset medium -c:a aac -b:a 128k public/demos/horizontal-scroll.mp4"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",

@@ -6,19 +6,21 @@ import { Maximize, Minimize } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const PreviewSection = ({ code }: { code: ReactNode }) => {
-  const [fullScreen, setFullScreen] = useState(false);
+  const [fullScreen, setFullScreen] = useState(localStorage.getItem('fullScreen') === 'true');
 
   const buttons = {
     false: {
       icon: <Maximize />,
       onClick: () => {
         setFullScreen(true);
+        localStorage.setItem('fullScreen', 'true');
       }
     },
     true: {
       icon: <Minimize />,
       onClick: () => {
         setFullScreen(false);
+        localStorage.setItem('fullScreen', 'false');
       }
     }
   };
