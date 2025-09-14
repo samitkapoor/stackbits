@@ -1,12 +1,20 @@
 'use client';
 
-import React, { ReactNode, useState } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Maximize, Minimize } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const PreviewSection = ({ code }: { code: ReactNode }) => {
-  const [fullScreen, setFullScreen] = useState(localStorage.getItem('fullScreen') === 'true');
+  const [fullScreen, setFullScreen] = useState(false);
+
+  useEffect(() => {
+    if (!localStorage) return;
+    const fullScreenValue = localStorage.getItem('fullScreen');
+    if (fullScreenValue) {
+      setFullScreen(fullScreenValue === 'true');
+    }
+  }, []);
 
   const buttons = {
     false: {
