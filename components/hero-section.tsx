@@ -24,7 +24,7 @@ const HeroSection = () => {
           </MovingBorderButton>
         </Link>
         <p className="my-2 sm:my-0">or, check out our</p>
-        <Link href={'/docs/dialogform'}>
+        <Link href={'/docs/horizontalscroll'}>
           <ShineButton className="px-3 py-2 sm:px-4 text-base sm:text-lg border bg-zinc-950">
             <Command className="w-4 h-4 sm:w-5 sm:h-5" />
             &nbsp; Latest Component
