@@ -30,3 +30,16 @@ export const dataArray = [
       'The Porsche 911 2018, a pinnacle of automotive excellence, offering a perfect blend of tradition and innovation.'
   }
 ];
+
+export const images = [
+  { image: '/dummy/1.png' },
+  { image: '/dummy/2.png' },
+  { image: '/dummy/3.png' },
+  { image: '/dummy/4.png' },
+  { image: '/dummy/5.png' },
+  { image: '/dummy/6.png' },
+  { image: '/dummy/7.png' },
+  { image: '/dummy/8.png' },
+  { image: '/dummy/9.png' },
+  { image: '/dummy/10.png' }
+];

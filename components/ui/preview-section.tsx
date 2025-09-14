@@ -1,19 +1,21 @@
 'use client';
 
-import React, { ReactNode, useEffect, useState } from 'react';
+import React, { ReactNode, useLayoutEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Maximize, Minimize } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const PreviewSection = ({ code }: { code: ReactNode }) => {
   const [fullScreen, setFullScreen] = useState(false);
+  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!localStorage) return;
     const fullScreenValue = localStorage.getItem('fullScreen');
     if (fullScreenValue) {
       setFullScreen(fullScreenValue === 'true');
     }
+    setLoading(false);
   }, []);
 
   const buttons = {
@@ -32,6 +34,9 @@ const PreviewSection = ({ code }: { code: ReactNode }) => {
       }
     }
   };
+
+  if (loading)
+    return <div className="h-full w-full flex items-center justify-center">Loading...</div>;
 
   return (
     <div

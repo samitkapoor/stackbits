@@ -90,6 +90,7 @@ import { dialogForm, dialogFormPreview } from './frontend/DialogForm';
 import { stackScroll, stackScrollPreview } from './frontend/StackScroll';
 import { horizontalScroll, horizontalScrollPreview } from './frontend/HorizontalScroll';
 import { flipScroll, flipScrollPreview } from './frontend/FlipScroll';
+import { sineWave, sineWavePreview } from './frontend/SineWave';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -495,6 +496,13 @@ const sideBarOptions: Array<{
       //   preview: proximityLiftGridPreview,
       //   isNew: false
       // },
+      {
+        name: 'Sine Wave',
+        href: '/docs/sineWave',
+        content: sineWave,
+        preview: sineWavePreview,
+        isNew: true
+      },
       {
         name: 'Skeumorphic Music Card',
         href: '/docs/skeumorphicMusicCard',
