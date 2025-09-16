@@ -91,6 +91,7 @@ import { stackScroll, stackScrollPreview } from './frontend/StackScroll';
 import { horizontalScroll, horizontalScrollPreview } from './frontend/HorizontalScroll';
 import { flipScroll, flipScrollPreview } from './frontend/FlipScroll';
 import { sineWave, sineWavePreview } from './frontend/SineWave';
+import { sidebar, sidebarPreview } from './frontend/Sidebar';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -496,6 +497,13 @@ const sideBarOptions: Array<{
       //   preview: proximityLiftGridPreview,
       //   isNew: false
       // },
+      {
+        name: 'Sidebar',
+        href: '/docs/sidebar',
+        content: sidebar,
+        preview: sidebarPreview,
+        isNew: true
+      },
       {
         name: 'Sine Wave',
         href: '/docs/sineWave',

@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "compress": "ffmpeg -i public/demos/flip-scroll.mov -c:v libx264 -crf 23 -preset medium -c:a aac -b:a 128k public/demos/flip-scroll.mp4"
+    "compress": "ffmpeg -i public/demos/sidebar.mov -c:v libx264 -crf 23 -preset medium -c:a aac -b:a 128k public/demos/sidebar.mp4"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
