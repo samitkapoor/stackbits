@@ -10,7 +10,7 @@ const TermsOfUsage = () => {
           <div className="mb-8">
             <h2 className="text-2xl font-semibold mb-4 text-white">Component Usage Terms</h2>
             <p className="text-gray-300 mb-4 text-sm">
-              Welcome to StackBits! We're excited that you want to use our components in your
+              Welcome to StackBits! We&apos;re excited that you want to use our components in your
               projects. Here are the important terms regarding the use of our components:
             </p>
 
@@ -43,10 +43,11 @@ const TermsOfUsage = () => {
             <h2 className="text-2xl font-semibold mb-4 text-white">Contact Us</h2>
             <p className="text-gray-300 mb-4 text-sm">
               If you have any questions about this terms of usage or our component usage terms,
-              please don't hesitate to reach out to us.
+              please don&apos;t hesitate to reach out to us.
             </p>
             <p className="text-gray-300 text-sm">
-              We're here to help and want to make sure you have a great experience using StackBits!
+              We&apos;re here to help and want to make sure you have a great experience using
+              StackBits!
             </p>
           </div>
         </div>
