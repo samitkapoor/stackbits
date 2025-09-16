@@ -59,7 +59,8 @@ const LandingFooter = () => {
     { href: '/docs/buttons', label: 'Buttons' },
     // { href: '/docs/cards', label: 'Cards' },
     { href: '/docs/components', label: 'Components' },
-    { href: '/docs', label: 'Documentation' }
+    { href: '/docs', label: 'Documentation' },
+    { href: '/terms-of-usage', label: 'Terms of Usage' }
   ];
 
   const socialLinks: SocialLink[] = [
