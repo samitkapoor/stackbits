@@ -27,7 +27,7 @@ export const sidebar: Document = {
         heading: 'Preview',
         sectionType: 'preview',
         code: (
-          <div className="h-full w-full flex flex-col items-start justify-start gap-2">
+          <div className="h-full w-full flex flex-col items-start justify-start gap-2 bg-white/30">
             <Sidebar />
           </div>
         )
