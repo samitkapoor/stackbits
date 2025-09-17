@@ -38,7 +38,7 @@ const MagnetTabs = ({ slug, options, onSelect, activeTab }: MagnetTabsProps) => 
                 <motion.div
                   layout
                   layoutId={slug + 'magnet'}
-                  transition={{ duration: 0.3, ease: 'backOut' }}
+                  transition={{ duration: 0.2, type: 'spring', bounce: 0.2 }}
                   className="w-full h-1 absolute bottom-full left-0 bg-red-500 rounded-sm"
                 />
               )}
@@ -47,7 +47,7 @@ const MagnetTabs = ({ slug, options, onSelect, activeTab }: MagnetTabsProps) => 
                 <motion.div
                   layout
                   layoutId={slug + 'tab-bar-highlight'}
-                  transition={{ duration: 0.3, ease: 'backOut' }}
+                  transition={{ duration: 0.2, type: 'spring', bounce: 0 }}
                   className="w-full h-full absolute bottom-0 left-0 bg-white/10 rounded-sm"
                 />
               )}
