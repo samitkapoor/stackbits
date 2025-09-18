@@ -92,6 +92,7 @@ import { horizontalScroll, horizontalScrollPreview } from './frontend/Horizontal
 import { flipScroll, flipScrollPreview } from './frontend/FlipScroll';
 import { sineWave, sineWavePreview } from './frontend/SineWave';
 import { sidebar, sidebarPreview } from './frontend/Sidebar';
+import { fileInput, fileInputPreview } from './frontend/FileInput';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -354,6 +355,13 @@ const sideBarOptions: Array<{
         href: '/docs/dialogform',
         content: dialogForm,
         preview: dialogFormPreview,
+        isNew: true
+      },
+      {
+        name: 'File Input',
+        href: '/docs/fileinput',
+        content: fileInput,
+        preview: fileInputPreview,
         isNew: true
       },
       {
