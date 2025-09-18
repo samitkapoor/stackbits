@@ -10,11 +10,13 @@ import { Command, MoveRight } from 'lucide-react';
 const HeroSection = () => {
   return (
     <div className="flex flex-col w-full items-center justify-center text-center px-0 sm:px-6 md:px-8">
-      <h1 className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold mt-6 sm:mt-8 md:mt-10">
-        The Faster Way To Build.
+      <h1 className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold mt-6 sm:mt-8 md:mt-10">
+        Components You'll Love
       </h1>
-      <p className="text-white/60 text-base sm:text-lg md:text-xl lg:text-2xl my-3 sm:my-4 md:my-5">
-        Why Start from Scratch When the Code You Need Is Already Here?
+      <p className="text-white/60 text-base sm:text-lg my-3 sm:my-4 md:my-5">
+        StackBits delivers clean, reusable building blocks for modern apps.
+        <br />
+        UI components, utilities, and backend snippets all in one place.
       </p>
       <div className="flex flex-col sm:flex-row justify-center items-center gap-1 sm:gap-4 md:gap-5 mt-4 sm:mt-5">
         <Link href={'/docs/animatedGradientButton'}>
