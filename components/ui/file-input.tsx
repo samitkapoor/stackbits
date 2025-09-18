@@ -109,7 +109,7 @@ const Idle = ({ accept, maxSizeInMB, onClick, onDrop, error }: IdleProps) => {
   return (
     <div
       className={cn(
-        `h-full w-full bg-black overflow-hidden relative border-[1.5px] border-dashed rounded-lg flex flex-col items-center justify-center select-none cursor-pointer transition-colors`,
+        `h-full w-full bg-black overflow-hidden relative border-[3px] border-dashed rounded-lg flex flex-col items-center justify-center select-none cursor-pointer transition-colors`,
         isDragOver ? 'border-blue-500 bg-blue-950/20' : 'border-zinc-800 hover:border-zinc-700'
       )}
       onClick={onClick}
@@ -218,7 +218,7 @@ const Loading = () => {
   }, []);
 
   return (
-    <div className="h-full w-full bg-black relative border-[1.5px] border-zinc-900 rounded-xl flex flex-col items-center justify-center gap-4">
+    <div className="h-full w-full bg-black relative border-[3px] border-zinc-900 rounded-xl flex flex-col items-center justify-center gap-4">
       <div ref={containerRef} className="w-full px-10 flex items-center justify-between relative">
         <motion.span
           animate={{
@@ -334,7 +334,7 @@ const Success = ({ file, onRemove }: SuccessProps) => {
   }, [file, fileType]);
 
   return (
-    <div className="h-full w-full bg-black relative border-[1.5px] border-zinc-900 rounded-xl flex flex-col items-center justify-center gap-4 overflow-hidden">
+    <div className="h-full w-full bg-black relative border-[3px] border-zinc-900 rounded-xl flex flex-col items-center justify-center gap-4 overflow-hidden">
       <div className="w-full flex-1 flex flex-col items-center justify-center gap-3 relative h-full overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full">
           {fileType === 'image' && imagePreview ? (
