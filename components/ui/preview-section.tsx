@@ -41,7 +41,7 @@ const PreviewSection = ({ code }: { code: ReactNode }) => {
   return (
     <div
       className={cn(
-        'w-full h-[75vh] lg:h-[calc(100vh-50px)] p-2 md:p-4 z-50',
+        'w-full h-[75vh] lg:h-[calc(100vh-50px)] p-2 md:p-4 z-50 mt-8',
         fullScreen && 'lg:fixed bottom-0.5 right-0 w-screen h-[calc(100vh-50px)]'
       )}
     >

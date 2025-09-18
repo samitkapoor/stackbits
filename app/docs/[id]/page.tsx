@@ -11,7 +11,7 @@ const Page = () => {
   const params = useParams();
 
   return (
-    <div className="w-full pt-4 flex flex-col">
+    <div className="w-full flex flex-col">
       {params &&
         params.id &&
         typeof params.id === 'string' &&
@@ -20,7 +20,7 @@ const Page = () => {
             <CategoryPage docId={params.id} />
           </div>
         ) : (
-          <div className="place-self-center h-full flex flex-col w-full mt-8">
+          <div className="place-self-center h-full flex flex-col w-full">
             <DocumentContentBox docId={params.id} />
           </div>
         ))}

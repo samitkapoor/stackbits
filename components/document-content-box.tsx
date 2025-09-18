@@ -23,7 +23,7 @@ const DocumentContentBox = ({ docId }: { docId: string }) => {
   return (
     doc && (
       <div className="h-full w-full flex flex-col-reverse lg:grid lg:grid-cols-2 gap-4 lg:gap-8 bg-background overflow-hidden">
-        <div className="flex flex-col gap-16 mt-0 relative col-span-1 overflow-y-auto lg:pt-12 pb-32 h-full lg:h-[calc(100vh-50px)]">
+        <div className="flex flex-col gap-16 mt-0 relative col-span-1 overflow-y-auto lg:pt-16 pb-32 h-full">
           {content.sections.map((section, index) => {
             if (section.sectionType === 'preview') return null;
             return (
