@@ -41,14 +41,14 @@ const PreviewSection = ({ code }: { code: ReactNode }) => {
   return (
     <div
       className={cn(
-        'w-full h-[calc(100vh-50px)] p-9 lg:p-4 z-50',
-        fullScreen && 'fixed bottom-0.5 right-0 w-screen h-[calc(100vh-50px)]'
+        'w-full h-[75vh] lg:h-[calc(100vh-50px)] p-2 md:p-4 z-50',
+        fullScreen && 'lg:fixed bottom-0.5 right-0 w-screen h-[calc(100vh-50px)]'
       )}
     >
       <div className="h-full w-full border border-white/5 bg-[#111111] rounded-xl flex items-center justify-center min-h-[500px] relative overflow-x-hidden overflow-y-auto">
         <motion.button
           onClick={() => buttons[`${fullScreen}`].onClick()}
-          className="absolute top-4 right-4 z-50 bg-black/10 p-2"
+          className="hidden lg:block absolute top-4 right-4 z-50 bg-black/10 p-2"
         >
           <AnimatePresence mode="popLayout" initial={false}>
             <motion.div

@@ -127,13 +127,13 @@ const TopBar = ({
           <Link href="https://x.com/samitkapoorr" target="_blank">
             <button className="rounded-md backdrop-blur-sm hover:bg-white/90 hover:text-black h-7 w-min px-2 flex items-center justify-center text-sm gap-1.5">
               <IconBrandX className="w-4 h-4" />
-              <p className="whitespace-nowrap">Get in touch</p>
+              <p className="whitespace-nowrap hidden sm:block">Get in touch</p>
             </button>
           </Link>
           <Link href="https://github.com/samitkapoor/stackbits" target="_blank">
             <button className="rounded-md backdrop-blur-sm hover:bg-white/90 hover:text-black h-7 w-min px-2 flex items-center justify-center text-sm gap-1.5">
               <IconBrandGithub className="w-4 h-4" />
-              Github
+              <p className="whitespace-nowrap hidden sm:block">Github</p>
             </button>
           </Link>
         </div>
