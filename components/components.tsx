@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import WavyText from './texts/wavy-text';
 import PrismaticHazeBackground from './ui/prismatic-haze';
 import TradingCardDemo from './trading-card-demo';
-import AnimatedGradientButton from './buttons/animated-gradient-button';
+// import AnimatedGradientButton from './buttons/animated-gradient-button';
 import ImagePile from './ui/image-pile';
 import { gooeyWordsPreview } from '@/data/text/GooeyWords';
 
@@ -154,7 +154,7 @@ const Components = () => {
         />
       </div>
 
-      <div className="flex flex-col">
+      {/* <div className="flex flex-col">
         <p className="text-white/80 text-xl sm:text-3xl lg:text-5xl mt-5 sm:mt-10 md:mt-20 text-center">
           Get the good stuff without the grunt work!
         </p>
@@ -164,7 +164,7 @@ const Components = () => {
         >
           Join Stackbits For Free
         </AnimatedGradientButton>
-      </div>
+      </div> */}
     </div>
   );
 };

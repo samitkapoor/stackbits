@@ -182,9 +182,9 @@ const GRADIENT_STYLES = {
 const Step1 = memo(() => (
   <GradientBackground gradientStyle={GRADIENT_STYLES.step1}>
     <div className="mt-10">
-      <StepTitle>Browse ready-to-use snippets</StepTitle>
+      <StepTitle>Browse components</StepTitle>
       <p className="text-white/70 text-xs sm:text-sm md:text-base text-center mb-2 sm:mb-3 md:mb-4 px-4 ">
-        Explore our React & Tailwind UI components and full-stack code. Pick the snippet you need!
+        Explore our React & Tailwind UI components and full-stack code.
       </p>
     </div>
     <AnimatedImage
