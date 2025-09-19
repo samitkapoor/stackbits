@@ -313,14 +313,14 @@ const Loading = () => {
 };
 
 interface SuccessProps {
-  file: File;
+  file: FileList;
   onRemove: () => void;
 }
 
 const Success = ({ file, onRemove }: SuccessProps) => {
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [previewLoaded, setPreviewLoaded] = useState(false);
-  const fileType = getFileType(file);
+  const fileType = getFileType(file[0]);
   const fileIcon = getFileIcon(fileType);
 
   useEffect(() => {
@@ -329,7 +329,7 @@ const Success = ({ file, onRemove }: SuccessProps) => {
       reader.onload = (e) => {
         setImagePreview(e.target?.result as string);
       };
-      reader.readAsDataURL(file);
+      reader.readAsDataURL(file[0]);
     }
   }, [file, fileType]);
 
@@ -377,13 +377,11 @@ const Success = ({ file, onRemove }: SuccessProps) => {
         <div className="absolute inset-0 flex flex-col items-start justify-end p-3 bg-black/50">
           <div className="flex items-end justify-between w-full">
             <div className="flex flex-col items-start justify-end">
-              <p
-                className="text-sm text-white font-medium truncate max-w-[200px]"
-                title={file.name}
-              >
-                {file.name}
-              </p>
-              <p className="text-xs text-white">{formatFileSize(file.size)}</p>
+              <p className="text-sm text-white font-medium truncate">{file[0].name}</p>
+              <p className="text-xs text-white truncate">{formatFileSize(file[0].size)}</p>
+              {file.length > 1 && (
+                <p className="text-xs text-white truncate">{file.length} files</p>
+              )}
             </div>
             <button
               type="button"
@@ -402,17 +400,19 @@ const Success = ({ file, onRemove }: SuccessProps) => {
 interface FileInputProps {
   accept?: string; // e.g. 'image/png, image/jpeg, application/pdf
   maxSizeInMB?: number;
-  onFileChange?: (file: File) => void | Promise<void>;
+  onFileChange?: (files: FileList) => void | Promise<void>;
+  allowMultiple?: boolean;
 }
 
 const FileInput = ({
   accept = 'image/png, image/jpeg, application/pdf',
   maxSizeInMB = 10,
-  onFileChange
+  onFileChange,
+  allowMultiple = false
 }: FileInputProps) => {
   const [state, setState] = useState<'idle' | 'loading' | 'success'>('idle');
   const [error, setError] = useState<string | null>(null);
-  const [file, setFile] = useState<File | null>(null);
+  const [file, setFile] = useState<FileList | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileInputClick = () => {
@@ -421,22 +421,26 @@ const FileInput = ({
 
   const onChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     setError(null);
-    const file = e.target.files?.[0];
+    const files = e.target.files;
+    let file = e.target.files?.[0];
 
-    if (!file) return;
+    if (!file || !files) return;
 
-    const { success, message } = validateFile(file, accept, maxSizeInMB);
-    if (!success) {
-      setError(message || 'Something went wrong.');
-      return;
+    for (let i = 0; i < files.length; i++) {
+      file = files[i];
+      const { success, message } = validateFile(file, accept, maxSizeInMB);
+      if (!success) {
+        setError(message || 'Something went wrong.');
+        return;
+      }
     }
 
     console.log('file', file);
 
     setState('loading');
-    await onFileChange?.(file);
+    await onFileChange?.(files);
     await new Promise((resolve) => setTimeout(resolve, 5000));
-    setFile(file);
+    setFile(files);
     setState('success');
   };
 
@@ -445,20 +449,23 @@ const FileInput = ({
     const files = e.dataTransfer.files;
     if (files.length === 0) return;
 
-    const file = files[0];
+    let file = files[0];
 
-    const { success, message } = validateFile(file, accept, maxSizeInMB);
-    if (!success) {
-      setError(message || 'Something went wrong.');
-      return;
+    for (let i = 0; i < files.length; i++) {
+      file = files[i];
+      const { success, message } = validateFile(file, accept, maxSizeInMB);
+      if (!success) {
+        setError(message || 'Something went wrong.');
+        return;
+      }
     }
 
     console.log('file', file);
 
     setState('loading');
-    await onFileChange?.(file);
+    await onFileChange?.(files);
     await new Promise((resolve) => setTimeout(resolve, 5000));
-    setFile(file);
+    setFile(files);
     setState('success');
   };
 
@@ -478,6 +485,7 @@ const FileInput = ({
         className="hidden"
         accept={accept}
         onChange={onChange}
+        multiple={allowMultiple}
       />
       <AnimatePresence mode="popLayout" initial={false}>
         <motion.div
