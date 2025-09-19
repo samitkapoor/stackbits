@@ -11,7 +11,7 @@ const HeroSection = () => {
   return (
     <div className="flex flex-col w-full items-center justify-center text-center px-0 sm:px-6 md:px-8">
       <h1 className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold mt-6 sm:mt-8 md:mt-10">
-        Components You'll Love
+        Components You&apos;ll Love
       </h1>
       <p className="text-white/60 text-base sm:text-lg my-3 sm:my-4 md:my-5">
         StackBits delivers clean, reusable building blocks for modern apps.
