@@ -478,7 +478,14 @@ const FileInput = ({
     console.log('file', file);
 
     setState('loading');
-    await onFileChange?.(files);
+    try {
+      await onFileChange?.(files);
+    } catch (error) {
+      console.error(error);
+      setState('idle');
+      setError('Something went wrong.');
+      return;
+    }
     setFile(files);
     setState('success');
   };
@@ -502,7 +509,14 @@ const FileInput = ({
     console.log('file', file);
 
     setState('loading');
-    await onFileChange?.(files);
+    try {
+      await onFileChange?.(files);
+    } catch (error) {
+      console.error(error);
+      setState('idle');
+      setError('Something went wrong.');
+      return;
+    }
     setFile(files);
     setState('success');
   };
