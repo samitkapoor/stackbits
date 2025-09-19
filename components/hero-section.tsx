@@ -89,7 +89,7 @@ const ComponentViewer = () => {
   };
 
   return (
-    <div className="h-[75vh] w-full flex flex-col gap-4 items-center justify-center border-4 rounded-3xl border-[#0f0f0f] bg-[#0d0d0d] relative overflow-hidden">
+    <div className="h-[50vh] md:h-[75vh] w-full flex flex-col gap-4 items-center justify-center border-4 rounded-3xl border-[#0f0f0f] bg-[#0d0d0d] relative overflow-hidden">
       <div
         className="absolute inset-0"
         style={{
@@ -108,7 +108,7 @@ const ComponentViewer = () => {
           custom={direction}
           transition={{ duration: 0.8, type: 'spring', bounce: 0 }}
           key={`component-viewer-${currentComponentIndex}`}
-          className="w-[500px] h-[500px] rounded-3xl overflow-hidden bg-black"
+          className="w-[300px] h-[300px] md:w-[500px] md:h-[500px] rounded-3xl overflow-hidden bg-black"
         >
           {currentComponent}
         </motion.div>
@@ -141,7 +141,7 @@ const HeroSection = () => {
   return (
     <div className="flex flex-col w-screen items-center justify-center text-center relative overflow-hidden gap-10">
       <TextInformation />
-      <div className="w-[75vw] h-full flex items-center justify-center">
+      <div className="w-[95vw] md:w-[75vw] h-full flex items-center justify-center">
         <ComponentViewer />
       </div>
     </div>
