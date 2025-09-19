@@ -28,6 +28,7 @@ export const eagleVision: Document = {
         sectionType: 'preview',
         code: (
           <div className="h-full w-full flex flex-col items-center justify-center gap-2 relative">
+            Can you find the target?
             <EagleVision />
           </div>
         )
@@ -37,7 +38,7 @@ export const eagleVision: Document = {
       {
         heading: 'Component',
         sectionType: 'component',
-        description: 'Create a file dialog-form.tsx in your components folder and paste this code',
+        description: 'Create a file eagle-vision.tsx in your components folder and paste this code',
         code: `import { useSpring, useTransform, MotionValue, motion, useMotionValue } from 'framer-motion';
 import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
@@ -46,14 +47,15 @@ interface RingProps {
   x: MotionValue<number>;
   y: MotionValue<number>;
   size: MotionValue<number>;
-  borderWidth: MotionValue<number>;
+  borderRadius: MotionValue<number>;
+  distanceBetweenRings: MotionValue<number>;
 }
 
 const MAX_DISTANCE = 1440;
 const MIN_DISTANCE = 100;
 const CORRECT_DISTANCE = 76;
 
-const Ring = ({ x, y, size, borderWidth }: RingProps) => {
+const Ring = ({ x, y, size, borderRadius, distanceBetweenRings }: RingProps) => {
   console.log(size);
   return (
     <motion.span
@@ -68,26 +70,64 @@ const Ring = ({ x, y, size, borderWidth }: RingProps) => {
         <motion.span
           style={{
             width: size,
-            height: useTransform(size, (value) => value - 50),
+            height: size,
             borderColor: useTransform(size, (value) =>
               value < CORRECT_DISTANCE ? '#00ff00' : 'white'
             ),
-            borderWidth: borderWidth
+            borderRadius: useTransform(borderRadius, (value) => \`\${value}px\`)
           }}
-          className="absolute rounded-[120px] border-white ring"
+          className="absolute border spin-circle-reverse"
         ></motion.span>
-      </span>
-      <span className="absolute inset-0 flex items-center justify-center">
         <motion.span
           style={{
-            width: size,
-            height: useTransform(size, (value) => value - 50),
+            width: useTransform(
+              [size, distanceBetweenRings],
+              ([size, distanceBetweenRings]: number[]) => size - distanceBetweenRings + 3
+            ),
+            height: useTransform(
+              [size, distanceBetweenRings],
+              ([size, distanceBetweenRings]: number[]) => size - distanceBetweenRings + 3
+            ),
             borderColor: useTransform(size, (value) =>
               value < CORRECT_DISTANCE ? '#00ff00' : 'white'
             ),
-            borderWidth: borderWidth
+            borderRadius: useTransform(borderRadius, (value) => \`\${value}px\`)
           }}
-          className="absolute rounded-[120px] border-white ring ring-reverse"
+          className="absolute border spin-circle-reverse"
+        ></motion.span>
+        <motion.span
+          style={{
+            width: useTransform(
+              [size, distanceBetweenRings],
+              ([size, distanceBetweenRings]: number[]) => size - distanceBetweenRings * 1 - 10
+            ),
+            height: useTransform(
+              [size, distanceBetweenRings],
+              ([size, distanceBetweenRings]: number[]) => size - distanceBetweenRings * 1 - 10
+            ),
+            borderColor: useTransform(size, (value) =>
+              value < CORRECT_DISTANCE ? '#00ff00' : 'white'
+            ),
+            borderRadius: useTransform(borderRadius, (value) => \`\${value}px\`)
+          }}
+          className="absolute border border-dashed spin-circle"
+        ></motion.span>
+        <motion.span
+          style={{
+            width: useTransform(
+              [size, distanceBetweenRings],
+              ([size, distanceBetweenRings]: number[]) => size + distanceBetweenRings - 7
+            ),
+            height: useTransform(
+              [size, distanceBetweenRings],
+              ([size, distanceBetweenRings]: number[]) => size + distanceBetweenRings - 7
+            ),
+            borderColor: useTransform(size, (value) =>
+              value < CORRECT_DISTANCE ? '#00ff00' : 'white'
+            ),
+            borderRadius: useTransform(borderRadius, (value) => \`\${value}px\`)
+          }}
+          className="absolute border border-dashed spin-circle"
         ></motion.span>
       </span>
     </motion.span>
@@ -100,7 +140,8 @@ const EagleVision = () => {
 
   const distanceFromTarget = useMotionValue(MAX_DISTANCE);
   const size = useTransform(distanceFromTarget, [MIN_DISTANCE, MAX_DISTANCE], [75, 400]);
-  const borderWidth = useTransform(distanceFromTarget, [MIN_DISTANCE, MAX_DISTANCE], [3, 2]);
+  const borderRadius = useTransform(distanceFromTarget, [MIN_DISTANCE, MAX_DISTANCE], [40, 150]);
+  const distanceBetweenRings = useTransform(distanceFromTarget, [0, MIN_DISTANCE + 100], [0, 15]);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -136,15 +177,22 @@ const EagleVision = () => {
                     transform: rotate(360deg);
                 }
             }
-            .ring {
+            .spin-circle {
                 animation: rotate 2s linear infinite;
             }
-            .ring-reverse {
+            .spin-circle-reverse {
+                animation: rotate 2s linear infinite;
                 animation-direction: reverse;
             }
         \`}
       </style>
-      <Ring x={mouseX} y={mouseY} size={size} borderWidth={borderWidth} />
+      <Ring
+        x={mouseX}
+        y={mouseY}
+        size={size}
+        borderRadius={borderRadius}
+        distanceBetweenRings={distanceBetweenRings}
+      />
     </div>,
     document.body
   );
