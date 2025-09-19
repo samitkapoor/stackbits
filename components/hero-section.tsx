@@ -21,6 +21,8 @@ import { dottedTextPreview } from '@/data/text/DottedText';
 import { gooeyWordsPreview } from '@/data/text/GooeyWords';
 import { sentenceFlipPreview } from '@/data/text/SentenceFlip';
 import { pixelatedTextPreview } from '@/data/text/PixelatedText';
+import ShineButton from './buttons/shine-button';
+import Link from 'next/link';
 
 const TextInformation = () => {
   return (
@@ -38,6 +40,9 @@ const TextInformation = () => {
         Clean, reusable building blocks for modern apps. UI components, utilities, and backend
         snippets all in one place.
       </p>
+      <Link href="/docs/components" className="mt-6">
+        <ShineButton>Explore Components</ShineButton>
+      </Link>
     </div>
   );
 };
