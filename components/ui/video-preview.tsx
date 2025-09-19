@@ -1,7 +1,6 @@
 'use client';
 
 import { memo, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
 
 interface VideoPreviewProps {
   videoUrl: string;
@@ -36,15 +35,7 @@ const VideoPreview = memo(({ videoUrl }: VideoPreviewProps) => {
   }, []);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{
-        duration: 0.5,
-        ease: 'easeInOut'
-      }}
-      className="relative w-full h-full flex items-center justify-center"
-    >
+    <div className="relative w-full h-full flex items-center justify-center">
       <video
         ref={videoRef}
         src={videoUrl}
@@ -54,7 +45,7 @@ const VideoPreview = memo(({ videoUrl }: VideoPreviewProps) => {
         className="w-full h-full object-cover rounded-lg"
         preload="metadata"
       />
-    </motion.div>
+    </div>
   );
 });
 

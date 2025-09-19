@@ -16,19 +16,23 @@ export const installDependenciesCode = ({
   lucide = false,
   tailwindcss = false,
   tablerIcons = false,
-  useHooks = false
+  useHooks = false,
+  clsx = false
 }: {
   framerMotion?: boolean;
   lucide?: boolean;
   tailwindcss?: boolean;
   tablerIcons?: boolean;
   useHooks?: boolean;
+  clsx?: boolean;
 }) => {
   return {
     heading: 'Install dependencies',
     sectionType: 'dependencies',
     code: `npm i ${framerMotion ? 'framer-motion' : ''} ${lucide ? 'lucide-react' : ''} ${
       tailwindcss ? 'tailwindcss' : ''
-    } ${tablerIcons ? '@tabler/icons-react' : ''} ${useHooks ? 'usehooks-ts' : ''}`
+    } ${tablerIcons ? '@tabler/icons-react' : ''} ${useHooks ? 'usehooks-ts' : ''} ${
+      clsx ? 'clsx' : ''
+    }`
   };
 };

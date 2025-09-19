@@ -93,6 +93,8 @@ import { flipScroll, flipScrollPreview } from './frontend/FlipScroll';
 import { sineWave, sineWavePreview } from './frontend/SineWave';
 import { sidebar, sidebarPreview } from './frontend/Sidebar';
 import { fileInput, fileInputPreview } from './frontend/FileInput';
+import { bounceInText, bounceInTextPreview } from './text/BounceInText';
+import { paginationButton, paginationButtonPreview } from './buttons/PaginationButton';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -192,6 +194,13 @@ const sideBarOptions: Array<{
         content: navigationButton,
         preview: navigationButtonPreview,
         isNew: false
+      },
+      {
+        name: 'Pagination Button',
+        href: '/docs/paginationButton',
+        content: paginationButton,
+        preview: paginationButtonPreview,
+        isNew: true
       },
       {
         name: 'Shine Button',
@@ -579,6 +588,13 @@ const sideBarOptions: Array<{
         content: blurText,
         preview: blurTextPreview,
         isNew: false
+      },
+      {
+        name: 'Bounce In Text',
+        href: '/docs/bounceInText',
+        content: bounceInText,
+        preview: bounceInTextPreview,
+        isNew: true
       },
       {
         name: 'Dotted Text',

@@ -49,7 +49,7 @@ const TechStack = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col items-center justify-center mt-10 sm:mt-12 md:mt-16 lg:mt-20">
+    <div className="w-full flex flex-col items-center justify-center mt-10 sm:mt-12 md:mt-16 lg:mt-20 px-4 sm:px-6 lg:px-8">
       <p className="text-white/60 text-lg sm:text-xl md:text-2xl font-semibold mt-5 sm:mt-8 md:mt-10">
         Built For The Modern Stack.
       </p>
