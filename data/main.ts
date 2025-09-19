@@ -95,6 +95,7 @@ import { sidebar, sidebarPreview } from './frontend/Sidebar';
 import { fileInput, fileInputPreview } from './frontend/FileInput';
 import { bounceInText, bounceInTextPreview } from './text/BounceInText';
 import { paginationButton, paginationButtonPreview } from './buttons/PaginationButton';
+import { randomButton, randomButtonPreview } from './buttons/RandomButton';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -200,6 +201,13 @@ const sideBarOptions: Array<{
         href: '/docs/paginationButton',
         content: paginationButton,
         preview: paginationButtonPreview,
+        isNew: true
+      },
+      {
+        name: 'Random Button',
+        href: '/docs/randomButton',
+        content: randomButton,
+        preview: randomButtonPreview,
         isNew: true
       },
       {
