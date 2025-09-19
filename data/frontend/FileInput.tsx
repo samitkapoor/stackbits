@@ -479,7 +479,6 @@ const FileInput = ({
 
     setState('loading');
     await onFileChange?.(files);
-    await new Promise((resolve) => setTimeout(resolve, 5000));
     setFile(files);
     setState('success');
   };
@@ -504,7 +503,6 @@ const FileInput = ({
 
     setState('loading');
     await onFileChange?.(files);
-    await new Promise((resolve) => setTimeout(resolve, 5000));
     setFile(files);
     setState('success');
   };
