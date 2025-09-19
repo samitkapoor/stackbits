@@ -96,6 +96,7 @@ import { fileInput, fileInputPreview } from './frontend/FileInput';
 import { bounceInText, bounceInTextPreview } from './text/BounceInText';
 import { paginationButton, paginationButtonPreview } from './buttons/PaginationButton';
 import { randomButton, randomButtonPreview } from './buttons/RandomButton';
+import { eagleVision, eagleVisionPreview } from './frontend/EagleVision';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -372,6 +373,13 @@ const sideBarOptions: Array<{
         href: '/docs/dialogform',
         content: dialogForm,
         preview: dialogFormPreview,
+        isNew: true
+      },
+      {
+        name: 'Eagle Vision',
+        href: '/docs/eagleVision',
+        content: eagleVision,
+        preview: eagleVisionPreview,
         isNew: true
       },
       {

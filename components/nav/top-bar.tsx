@@ -11,6 +11,7 @@ import {
 import Link from 'next/link';
 import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import { Target } from '../ui/eagle-vision';
 
 const TopBar = ({
   sideBarIsOpen,
@@ -124,12 +125,14 @@ const TopBar = ({
           </motion.div>
         </motion.div>
         <div className="flex items-center gap-2">
-          <Link href="https://x.com/samitkapoorr" target="_blank">
-            <button className="rounded-md backdrop-blur-sm hover:bg-white/90 hover:text-black h-7 w-min px-2 flex items-center justify-center text-sm gap-1.5">
-              <IconBrandX className="w-4 h-4" />
-              <p className="whitespace-nowrap hidden sm:block">Get in touch</p>
-            </button>
-          </Link>
+          <Target>
+            <Link href="https://x.com/samitkapoorr" target="_blank">
+              <button className="rounded-md backdrop-blur-sm hover:bg-white/90 hover:text-black h-7 w-min px-2 flex items-center justify-center text-sm gap-1.5">
+                <IconBrandX className="w-4 h-4" />
+                <p className="whitespace-nowrap hidden sm:block">Get in touch</p>
+              </button>
+            </Link>
+          </Target>
           <Link href="https://github.com/samitkapoor/stackbits" target="_blank">
             <button className="rounded-md backdrop-blur-sm hover:bg-white/90 hover:text-black h-7 w-min px-2 flex items-center justify-center text-sm gap-1.5">
               <IconBrandGithub className="w-4 h-4" />
