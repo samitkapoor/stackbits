@@ -33,7 +33,7 @@ export const eagleVision: Document = {
           </div>
         )
       },
-      installDependenciesCode({ framerMotion: true, lucide: true, useHooks: true }),
+      installDependenciesCode({ framerMotion: true }),
       cnCode,
       {
         heading: 'Component',
