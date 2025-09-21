@@ -174,7 +174,9 @@ const PixelatedCarousel = ({
 
   return (
     <div ref={ref} className="h-full w-full relative">
-      {isInitialized && <span className="h-full w-full absolute z-10">{gridElements}</span>}
+      {isInitialized && (
+        <span className="h-full w-full absolute top-0 left-0 z-10">{gridElements}</span>
+      )}
       <div className="h-full w-full z-0 relative">
         {images.map((image, index) => (
           <Image
