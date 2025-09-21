@@ -116,7 +116,7 @@ const LandingFooter = () => {
 
   return (
     <footer className="bg-black text-white/60">
-      <div className="container px-4 md:px-6 py-8 md:py-16 w-full mx-auto">
+      <div className="container px-4 md:px-6 py-8 md:py-16 w-full mx-auto max-w-6xl">
         <div className="flex flex-col md:flex-row items-start justify-between w-full gap-8">
           {/* Brand Section */}
           <div className="flex flex-col">
