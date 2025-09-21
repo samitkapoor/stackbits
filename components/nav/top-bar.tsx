@@ -7,7 +7,6 @@ import {
   IconBrandX,
   IconComponents,
   IconCurrencyDollar,
-  IconEyeDollar,
   IconLetterT
 } from '@tabler/icons-react';
 import Link from 'next/link';
@@ -109,7 +108,7 @@ const TopBar = ({
           >
             <Link href="/" className="flex items-center gap-2 h-full justify-center text-base">
               <StackbitsLogo />
-              Stackbits
+              StackBits
             </Link>
 
             <div className="hidden md:flex items-center text-white gap-2 z-10">
