@@ -23,6 +23,7 @@ import { sentenceFlipPreview } from '@/data/text/SentenceFlip';
 import { pixelatedTextPreview } from '@/data/text/PixelatedText';
 import ShineButton from './buttons/shine-button';
 import Link from 'next/link';
+import TechStack from './tech-stack';
 
 const TextInformation = () => {
   return (
@@ -30,19 +31,22 @@ const TextInformation = () => {
       style={{
         background: 'radial-gradient(ellipse, rgba(0, 0, 0, 0.8) 50%, transparent )'
       }}
-      className="flex flex-col items-center justify-center z-0 h-full w-full pt-20"
+      className="flex flex-col items-center justify-center z-0 h-full w-full pt-32"
     >
+      <TechStack />
       <BounceInText
-        className="text-white text-3xl sm:text-4xl md:text-8xl font-semibold mt-6 sm:mt-8 md:mt-10"
+        className="text-white text-3xl sm:text-4xl md:text-8xl font-semibold mt-6 sm:mt-8"
         text="Components You'll Love"
       />
       <p className="text-white text-base sm:text-lg my-3 sm:my-4 md:my-5">
         Clean, reusable building blocks for modern apps. UI components, utilities, and backend
         snippets all in one place.
       </p>
-      <Link href="/docs/components" className="mt-6">
-        <ShineButton>Explore Components</ShineButton>
-      </Link>
+      <div className="w-full flex items-center justify-center">
+        <Link href="/docs/components" className="mt-6">
+          <ShineButton>Explore Components</ShineButton>
+        </Link>
+      </div>
     </div>
   );
 };

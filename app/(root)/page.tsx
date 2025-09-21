@@ -2,10 +2,9 @@
 
 import Comments from '@/components/comments';
 import Components from '@/components/components';
-import Demo from '@/components/demo';
+// import Demo from '@/components/demo';
 import HeroSection from '@/components/hero-section';
 import LandingFooter from '@/components/landing-footer';
-import TechStack from '@/components/tech-stack';
 
 export default function Home() {
   return (
@@ -35,15 +34,14 @@ export default function Home() {
         {/* <div className="absolute inset-x-0 top-0 h-[60vh] bg-gradient-to-b from-black via-black/70 to-transparent" /> */}
         <div className="relative">
           <HeroSection />
-          <TechStack />
         </div>
       </div>
       {/* Removed background behind Demo component */}
-      <div className="relative mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      {/* <div className="relative mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="relative">
           <Demo />
         </div>
-      </div>
+      </div> */}
       <Components />
       <Comments />
       <LandingFooter />
