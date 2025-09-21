@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'StackBits - React UI & Full-Stack Code Library',
+  title: 'StackBits',
   description:
     'Ready-to-use React components, Tailwind UI elements, and full-stack code snippets to accelerate your web development. Build modern apps faster with StackBits.',
   keywords: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   ],
   robots: 'index, follow',
   openGraph: {
-    title: 'StackBits - React UI & Full-Stack Code Library',
+    title: 'StackBits',
     description:
       'Ready-to-use React components, Tailwind UI elements, and full-stack code snippets to accelerate your web development. Build modern apps faster with StackBits.',
     url: 'https://stackbits.dev',
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@samitkapoorr',
-    title: 'StackBits - React UI & Full-Stack Code Library',
+    title: 'StackBits',
     description:
       'Ready-to-use React components, Tailwind UI elements, and full-stack code snippets to accelerate your web development. Build modern apps faster with StackBits.',
     images: 'https://stackbits.dev/og.png'
