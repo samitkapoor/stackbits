@@ -5,7 +5,7 @@ import { installDependenciesCode } from '@/constants/code';
 export const glowingDotsBackgroundPreview = (
   <div className="h-full w-full relative flex items-center justify-center">
     <GlowingDotsBackground
-      diameter={90}
+      diameter={80}
       className="text-xl font-extrabold text-white  rounded-xl flex items-center justify-center h-full w-full"
     >
       Glowing Dots Background
