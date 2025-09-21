@@ -6,6 +6,8 @@ import {
   IconBrandGithub,
   IconBrandX,
   IconComponents,
+  IconCurrencyDollar,
+  IconEyeDollar,
   IconLetterT
 } from '@tabler/icons-react';
 import Link from 'next/link';
@@ -125,6 +127,19 @@ const TopBar = ({
           </motion.div>
         </motion.div>
         <div className="flex items-center gap-2">
+          <button
+            onClick={() => {
+              const element = document.getElementById('#pricing');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            className="rounded-md backdrop-blur-sm hover:bg-white/90 hover:text-black h-7 w-min px-2 flex items-center justify-center text-sm gap-1.5"
+          >
+            <IconCurrencyDollar className="w-4 h-4" />
+            <p className="whitespace-nowrap hidden sm:block">Pricing</p>
+          </button>
+
           <Target>
             <Link href="https://x.com/samitkapoorr" target="_blank">
               <button className="rounded-md backdrop-blur-sm hover:bg-white/90 hover:text-black h-7 w-min px-2 flex items-center justify-center text-sm gap-1.5">

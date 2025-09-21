@@ -25,6 +25,7 @@ const pricingPlans = [
     title: 'Custom Development',
     price: '$50',
     unit: '/component',
+    badge: 'Pro',
     features: [
       'All Open Source features included',
       'Personalized component development',
@@ -56,7 +57,10 @@ const Pricing = () => {
   const router = useRouter();
 
   return (
-    <div className="w-full flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 mt-4 gap-6">
+    <div
+      id="#pricing"
+      className="w-full flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 mt-4 gap-6"
+    >
       <BounceInText
         className="text-white text-2xl sm:text-4xl md:text-7xl font-semibold mt-6 sm:mt-8"
         text="Choose Your Plan"
@@ -104,7 +108,20 @@ const Pricing = () => {
                 </>
               )}
               <div className="flex flex-col gap-2 z-10">
-                <p className={cn(plan.special ? 'text-black' : 'text-white/80')}>{plan.title}</p>
+                <div className="flex items-center gap-2">
+                  <p className={cn(plan.special ? 'text-black' : 'text-white/80')}>{plan.title}</p>
+                  {plan.badge && (
+                    <p
+                      className={cn(
+                        'text-sm font-medium bg-gradient-to-br from-black via-zinc-600/90 to-black',
+                        'text-white/80',
+                        'px-2 py-1 rounded-full'
+                      )}
+                    >
+                      {plan.badge}
+                    </p>
+                  )}
+                </div>
                 <p
                   className={cn(
                     plan.special ? 'text-black' : 'text-white',
