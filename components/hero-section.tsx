@@ -59,7 +59,7 @@ const TextInformation = () => {
     >
       <TechStack />
       <BounceInText
-        className="text-white text-3xl sm:text-4xl md:text-7xl font-semibold mt-6 sm:mt-8"
+        className="text-white text-2xl sm:text-4xl md:text-7xl font-semibold mt-6 sm:mt-8"
         text="Components You'll Love"
         letterClassName="tracking-tight"
       />
@@ -67,7 +67,7 @@ const TextInformation = () => {
         initial={{ opacity: 0, filter: 'blur(4px)', y: 15 }}
         animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
         transition={{ duration: 0.4, delay: 0.6 }}
-        className="text-zinc-300 text-lg sm:text-xl my-3"
+        className="text-zinc-300 text-sm sm:text-base md:text-xl my-3"
       >
         Clean, reusable building blocks for modern apps. UI components, utilities, and backend
         snippets all in one place.
@@ -76,11 +76,11 @@ const TextInformation = () => {
         initial={{ opacity: 0, filter: 'blur(4px)', y: 15 }}
         animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
         transition={{ duration: 0.4, delay: 0.8 }}
-        className="flex items-center justify-center gap-4 mt-8"
+        className="flex items-center flex-col sm:flex-row justify-center gap-4 mt-8 mb-8 sm:mb-0"
       >
         <div className="w-full flex items-center justify-center">
           <Link href="/docs/components">
-            <button className="bg-zinc-800 px-4 py-2 hover:gap-3 active:gap-2  transition-all duration-200 font-medium text-white rounded-xl flex items-center gap-2 hover:bg-zinc-700">
+            <button className="bg-zinc-800 px-4 py-2 hover:gap-3 active:gap-2 text-sm sm:text-base transition-all duration-200 font-medium text-white rounded-xl flex items-center gap-2 hover:bg-zinc-700">
               <span className="relative h-3 w-3">
                 <StackbitsLogo className="absolute inset-0 h-3 w-3" />
                 <StackbitsLogo className="absolute inset-0 h-3 w-3 animate-ping" />
@@ -95,7 +95,7 @@ const TextInformation = () => {
             const index = Math.floor(Math.random() * components.length);
             router.push(components[index].link);
           }}
-          className="shrink-0 z-10 font-medium"
+          className="shrink-0 z-10 font-medium text-sm sm:text-base"
           iconClassName="h-9 w-9"
         >
           I&apos;m Feeling Lucky
@@ -180,7 +180,7 @@ const ComponentViewer = () => {
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col w-screen items-center justify-center text-center relative overflow-hidden z-10">
+    <div className="flex flex-col w-screen items-center justify-center text-center relative overflow-hidden z-10 md:px-0 px-6">
       <TextInformation />
       <motion.div
         initial={{ opacity: 0, filter: 'blur(4px)', y: 15 }}

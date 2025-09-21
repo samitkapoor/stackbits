@@ -205,7 +205,7 @@ const Step2 = memo(() => (
         alt="Copy with a click"
         initial={{ y: 100, x: -50 }}
         whileInView={{ y: 20, x: 0 }}
-        borderClassName="rounded-xl md:rounded-se-3xl md:rounded-ss-none translate-x-[55px] md:translate-x-[0px]"
+        borderClassName="rounded-xl md:rounded-se-3xl md:rounded-ss-none translate-x-[0px] md:translate-x-[0px]"
       />
     </div>
   </GradientBackground>
