@@ -74,7 +74,7 @@ const InteractiveCTA = ({
             stiffness: 300,
             damping: 27
           }}
-          className="flex-col border-[2px] rounded-xl border-white/5 bg-zinc-900 flex items-center justify-center"
+          className="flex-col border-[2px] rounded-xl border-white/5 bg-zinc-900 flex items-center justify-center relative"
         >
           {!isOpen && (
             <motion.button
@@ -83,7 +83,7 @@ const InteractiveCTA = ({
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(true)}
-              className="flex items-center hover:bg-white/5 rounded-xl justify-center absolute bottom-0 right-0"
+              className="flex items-center hover:bg-white/5 rounded-xl justify-center absolute -bottom-0.5 -right-0.5"
               style={{ width: closeWidth, height: closeHeight }}
             >
               {openIcon || <MessageCircle size={20} />}

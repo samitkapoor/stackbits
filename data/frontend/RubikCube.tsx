@@ -1,12 +1,11 @@
 import { cnCode, installDependenciesCode } from '@/constants/code';
 import { Document } from '../main';
 import RubikCube from '@/components/components/rubik-cube';
+import VideoPreview from '@/components/ui/video-preview';
 
 export const rubikCubePreview = (
   <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden relative p-0 gap-5">
-    <div className="w-full h-full flex items-center justify-center relative">
-      <RubikCube />
-    </div>
+    <VideoPreview videoUrl="/demos/rubik-cube.mp4" />
   </div>
 );
 

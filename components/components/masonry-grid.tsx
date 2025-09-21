@@ -21,7 +21,7 @@ const MasonryGrid: React.FC<MasonryGridProps> = ({ items, columns = undefined })
       }}
       className={`${
         !columns && 'columns-1 sm:columns-2 md:columns-3 lg:columns-4'
-      } gap-2 overflow-y-auto p-3 w-full hide-scrollbar`}
+      } gap-2 overflow-y-auto p-3 w-full max-w-4xl hide-scrollbar`}
     >
       {items.map((item, index) => {
         // Calculate row number based on screen size and index
@@ -51,7 +51,7 @@ const MasonryGrid: React.FC<MasonryGridProps> = ({ items, columns = undefined })
                 ease: 'easeOut'
               }
             }}
-            whileHover={{ scale: 1.05, rotateZ: 1 }}
+            whileHover={{ scale: 1.05 }}
           >
             <div className="relative">
               <div className="relative w-full flex gap-1 flex-col items-start justify-start">

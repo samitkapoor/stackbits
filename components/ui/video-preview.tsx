@@ -30,7 +30,7 @@ const VideoPreview = memo(({ videoUrl, thumbnailUrl }: VideoPreviewProps) => {
           video.currentTime = 0; // Reset to beginning when out of viewport
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0 }
     );
 
     observer.observe(video);

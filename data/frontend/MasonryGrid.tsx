@@ -1,69 +1,10 @@
+import VideoPreview from '@/components/ui/video-preview';
 import { Document } from '../main';
 import MasonryGrid from '@/components/components/masonry-grid';
 
 export const masonryGridPreview = (
   <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden relative p-0 gap-5">
-    <MasonryGrid
-      columns={2}
-      items={[
-        {
-          title: 'Urban Skyline',
-          image:
-            'https://images.unsplash.com/photo-1718563552473-2d97b224e801?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1fHx8ZW58MHx8fHx8',
-          description:
-            'A breathtaking view of a modern cityscape with towering skyscrapers illuminated at dusk.'
-        },
-        {
-          title: 'Mountain Retreat',
-          image:
-            'https://images.unsplash.com/photo-1735317461815-1a0ba64e9a56?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMXx8fGVufDB8fHx8fA%3D%3D',
-          description:
-            'A serene cabin nestled in the heart of towering mountains, perfect for a peaceful getaway.'
-        },
-        {
-          title: 'Forest Wander',
-          image:
-            'https://images.unsplash.com/photo-1502082553048-f009c37129b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-          description:
-            'A misty trail winding through a dense, enchanting forest filled with lush greenery.'
-        },
-        {
-          title: 'Serene Lake',
-          image:
-            'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-          description:
-            'A tranquil lake reflecting the golden hues of the sunset, surrounded by peaceful nature.'
-        },
-        {
-          title: 'Golden Hour',
-          image:
-            'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-          description:
-            'A mesmerizing sunset casting a warm glow over the ocean, creating a dreamlike atmosphere.'
-        },
-        {
-          title: 'Coastal Vibes',
-          image:
-            'https://images.unsplash.com/photo-1493558103817-58b2924bce98?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-          description:
-            'Crystal-clear waves crashing against a sandy shore, offering a perfect beach escape.'
-        },
-        {
-          title: 'Night Lights',
-          image:
-            'https://images.unsplash.com/photo-1502933691298-84fc14542831?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2F0ZXIlMjBzcG9ydHxlbnwwfHwwfHx8MA%3D%3D',
-          description:
-            'A dazzling city skyline at night, with vibrant lights illuminating the urban landscape.'
-        },
-        {
-          title: 'Rustic Charm',
-          image:
-            'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-          description:
-            'A cozy wooden cabin with a warm, inviting atmosphere set in a countryside setting.'
-        }
-      ]}
-    ></MasonryGrid>
+    <VideoPreview videoUrl="/demos/masonry-grid.mp4" />
   </div>
 );
 

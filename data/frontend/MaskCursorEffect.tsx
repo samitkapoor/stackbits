@@ -1,21 +1,11 @@
 import MaskCursorEffect from '@/components/components/mask-cursor-effect';
 import { Document } from '../main';
 import { cnCode, installDependenciesCode } from '@/constants/code';
+import VideoPreview from '@/components/ui/video-preview';
 
 export const maskCursorEffectPreview = (
   <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden relative gap-5">
-    <MaskCursorEffect
-      compressedMaskSize={40}
-      expandedMaskSize={150}
-      className="h-full"
-      hiddenComponent={
-        <div className="w-full h-full text-2xl font-bold">You can&apos;t see me</div>
-      }
-    >
-      <div className="w-full flex items-center justify-center h-full text-2xl font-bold">
-        John Cena
-      </div>
-    </MaskCursorEffect>
+    <VideoPreview videoUrl="/demos/mask-cursor-effect.mp4" />
   </div>
 );
 

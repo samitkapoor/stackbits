@@ -1,10 +1,11 @@
 import { Document } from '../main';
 import InteractiveCTA from '@/components/components/interactive-cta';
+import VideoPreview from '@/components/ui/video-preview';
 import { cnCode, installDependenciesCode } from '@/constants/code';
 
 export const interactiveCTAPreview = (
-  <div className="h-full w-full flex items-center justify-center p-5 relative">
-    <InteractiveCTA className="!absolute" />
+  <div className="h-full w-full flex items-center justify-center relative">
+    <VideoPreview videoUrl="/demos/interactive-cta.mp4" />
   </div>
 );
 
@@ -26,8 +27,9 @@ export const interactiveCTA: Document = {
         sectionType: 'preview',
         code: (
           <div className="h-full w-full flex items-center justify-center relative">
-            <p>Look at the bottom right corner</p>
-            <InteractiveCTA className="!absolute" initialOpen={false} />
+            <div className="w-[300px] h-[200px] relative">
+              <InteractiveCTA className="!absolute bottom-0 right-0" initialOpen={false} />
+            </div>
           </div>
         )
       },
@@ -147,7 +149,7 @@ import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { IconBrandX, IconMail } from '@tabler/icons-react';
 import { MessageCircle, X } from 'lucide-react';
-import NavigationButton from './navigation-button';
+import NavigationButton from '../buttons/navigation-button';
 import { cn } from '@/lib/utils';
 
 export interface NavigationLink {
@@ -198,9 +200,9 @@ const InteractiveCTA = ({
   openIcon,
   closeIcon,
   openWidth = '310px',
-  closeWidth = '64px',
+  closeWidth = '50px',
   openHeight = '155px',
-  closeHeight = '64px'
+  closeHeight = '50px'
 }: InteractiveCTAProps) => {
   const [isOpen, setIsOpen] = useState(initialOpen);
   return (
@@ -217,7 +219,7 @@ const InteractiveCTA = ({
             stiffness: 300,
             damping: 27
           }}
-          className="flex-col border-[2px] rounded-xl border-white/5 bg-zinc-900 flex items-center justify-center"
+          className="flex-col border-[2px] rounded-xl border-white/5 bg-zinc-900 flex items-center justify-center relative"
         >
           {!isOpen && (
             <motion.button
@@ -226,7 +228,7 @@ const InteractiveCTA = ({
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(true)}
-              className="flex items-center hover:bg-white/5 rounded-xl justify-center absolute bottom-0 right-0"
+              className="flex items-center hover:bg-white/5 rounded-xl justify-center absolute -bottom-0.5 -right-0.5"
               style={{ width: closeWidth, height: closeHeight }}
             >
               {openIcon || <MessageCircle size={20} />}
