@@ -121,15 +121,15 @@ export const comments: Comment[] = [
     pfp: 'https://pbs.twimg.com/profile_images/1495928034423152643/qc9juRL8_400x400.jpg',
     platform: 'x'
   },
-  {
-    id: 12,
-    href: 'https://www.reddit.com/r/SideProject/comments/1n5yozf/comment/nbx93ho/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button',
-    comment:
-      'The OTP one is quite satisfying. I can see it actually being practical in the real world to load the next page in the background while the animation plays to reduce perceived loading time.',
-    name: '_Invictuz',
-    pfp: 'https://styles.redditmedia.com/t5_bi4bb/styles/profileIcon_snoo20d793d1-9753-46dd-bf17-44ffcb07f56a-headshot.png?width=64&height=64&frame=1&auto=webp&crop=64%3A64%2Csmart&s=b22721518d0673f138fd19a3dbcc4ffbf32c8477',
-    platform: 'reddit'
-  },
+  // {
+  //   id: 12,
+  //   href: 'https://www.reddit.com/r/SideProject/comments/1n5yozf/comment/nbx93ho/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button',
+  //   comment:
+  //     'The OTP one is quite satisfying. I can see it actually being practical in the real world to load the next page in the background while the animation plays to reduce perceived loading time.',
+  //   name: '_Invictuz',
+  //   pfp: 'https://styles.redditmedia.com/t5_bi4bb/styles/profileIcon_snoo20d793d1-9753-46dd-bf17-44ffcb07f56a-headshot.png?width=64&height=64&frame=1&auto=webp&crop=64%3A64%2Csmart&s=b22721518d0673f138fd19a3dbcc4ffbf32c8477',
+  //   platform: 'reddit'
+  // },
   {
     id: 13,
     href: 'https://www.reddit.com/r/SideProject/comments/1n5yozf/comment/nbwidxg/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button',

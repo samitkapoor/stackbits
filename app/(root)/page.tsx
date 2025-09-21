@@ -4,6 +4,7 @@ import Comments from '@/components/comments';
 import Demo from '@/components/demo';
 import HeroSection from '@/components/hero-section';
 import LandingFooter from '@/components/landing-footer';
+import Testimonials from '@/components/testimonials';
 
 export default function Home() {
   return (
@@ -35,8 +36,8 @@ export default function Home() {
         <Comments />
       </div>
 
-      {/* Removed background behind Demo component */}
       <Demo />
+      <Testimonials />
       {/* <Components /> */}
       <LandingFooter />
     </div>
