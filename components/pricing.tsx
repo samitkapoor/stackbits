@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import BounceInText from './texts/bounce-in-text';
 import { Dot } from 'lucide-react';

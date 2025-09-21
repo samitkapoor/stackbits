@@ -14,6 +14,7 @@ import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Target } from '../components/eagle-vision';
 import StackbitsLogo from '../ui/stackbits-logo';
+import { usePathname, useRouter } from 'next/navigation';
 
 const TopBar = ({
   sideBarIsOpen,
@@ -22,6 +23,9 @@ const TopBar = ({
   sideBarIsOpen?: boolean;
   setSideBarIsOpen?: (isOpen: boolean) => void;
 }) => {
+  const pathname = usePathname();
+  const router = useRouter();
+
   const links = [
     {
       name: 'Backgrounds',
@@ -128,9 +132,13 @@ const TopBar = ({
         <div className="flex items-center gap-2">
           <button
             onClick={() => {
-              const element = document.getElementById('#pricing');
-              if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
+              if (pathname === '/') {
+                const element = document.getElementById('#pricing');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              } else {
+                router.push('/pricing');
               }
             }}
             className="rounded-md backdrop-blur-sm hover:bg-white/90 hover:text-black h-7 w-min px-2 flex items-center justify-center text-sm gap-1.5"
