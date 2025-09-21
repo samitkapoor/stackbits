@@ -18,7 +18,7 @@ const BounceInText = ({
       {text.split('').map((char, index) => {
         if (char === ' ')
           return (
-            <span key={`bounce-in-text-${text}-${index}`} className="w-2">
+            <span key={`bounce-in-text-${text}-${index}`} className="w-4">
               {' '}
             </span>
           );

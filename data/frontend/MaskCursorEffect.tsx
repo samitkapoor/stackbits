@@ -36,7 +36,7 @@ export const maskCursorEffect: Document = {
       {
         sectionType: 'preview',
         code: (
-          <div className="h-full w-full flex flex-col gap-5 items-center justify-center overflow-y-auto relative p-10">
+          <div className="h-full w-full flex flex-col gap-5 items-center justify-center overflow-y-auto relative p-0">
             <MaskCursorEffect
               hiddenComponent={
                 <div className="max-w-4xl text-7xl font-bold">
@@ -44,6 +44,7 @@ export const maskCursorEffect: Document = {
                   genius, 90% duct tape.
                 </div>
               }
+              className="p-10"
             >
               <div className="max-w-4xl text-7xl font-bold">
                 I'm a software engineer specializing in React, Next.js, and TypeScript. I build
