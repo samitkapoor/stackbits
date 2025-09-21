@@ -1,7 +1,6 @@
 'use client';
 
 import Comments from '@/components/comments';
-import Components from '@/components/components';
 // import Demo from '@/components/demo';
 import HeroSection from '@/components/hero-section';
 import LandingFooter from '@/components/landing-footer';
@@ -34,6 +33,7 @@ export default function Home() {
         {/* <div className="absolute inset-x-0 top-0 h-[60vh] bg-gradient-to-b from-black via-black/70 to-transparent" /> */}
         <div className="relative">
           <HeroSection />
+          <Comments />
         </div>
       </div>
       {/* Removed background behind Demo component */}
@@ -42,8 +42,7 @@ export default function Home() {
           <Demo />
         </div>
       </div> */}
-      <Components />
-      <Comments />
+      {/* <Components /> */}
       <LandingFooter />
     </div>
   );

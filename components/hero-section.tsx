@@ -29,7 +29,7 @@ const TextInformation = () => {
   return (
     <div
       style={{
-        background: 'radial-gradient(ellipse, rgba(0, 0, 0, 0.8) 50%, transparent )'
+        background: 'radial-gradient(ellipse, rgba(0, 0, 0, 0.2) 20%, transparent )'
       }}
       className="flex flex-col items-center justify-center z-0 h-full w-full pt-32"
     >
@@ -38,15 +38,25 @@ const TextInformation = () => {
         className="text-white text-3xl sm:text-4xl md:text-8xl font-semibold mt-6 sm:mt-8"
         text="Components You'll Love"
       />
-      <p className="text-white text-base sm:text-lg my-3 sm:my-4 md:my-5">
+      <motion.p
+        initial={{ opacity: 0, filter: 'blur(4px)', y: 15 }}
+        animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
+        transition={{ duration: 0.4, delay: 0.6 }}
+        className="text-white text-base sm:text-lg my-3"
+      >
         Clean, reusable building blocks for modern apps. UI components, utilities, and backend
         snippets all in one place.
-      </p>
-      <div className="w-full flex items-center justify-center">
+      </motion.p>
+      <motion.div
+        initial={{ opacity: 0, filter: 'blur(4px)', y: 15 }}
+        animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
+        transition={{ duration: 0.4, delay: 0.8 }}
+        className="w-full flex items-center justify-center"
+      >
         <Link href="/docs/components" className="mt-6">
           <ShineButton>Explore Components</ShineButton>
         </Link>
-      </div>
+      </motion.div>
     </div>
   );
 };
@@ -93,14 +103,14 @@ const ComponentViewer = () => {
   };
 
   return (
-    <div className="h-[50vh] md:h-[75vh] w-full flex flex-col gap-4 items-center justify-center border-4 rounded-3xl border-[#0f0f0f] bg-[#0d0d0d] relative overflow-hidden">
+    <div className="h-[50vh] md:h-[75vh] w-full flex flex-col gap-4 items-center justify-center relative overflow-hidden">
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 rounded-xl"
         style={{
-          background: 'url(/hero-bg.png)',
+          background: 'url(/hero-bg2.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          maskImage: 'linear-gradient(to top, transparent 20%, black 100%)'
+          maskImage: 'radial-gradient(ellipse at center, black, transparent 85%)'
         }}
       />
       <AnimatePresence mode="popLayout" initial={false} custom={direction}>
@@ -143,11 +153,16 @@ const ComponentViewer = () => {
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col w-screen items-center justify-center text-center relative overflow-hidden gap-10">
+    <div className="flex flex-col w-screen items-center justify-center text-center relative overflow-hidden z-10">
       <TextInformation />
-      <div className="w-[95vw] md:w-[75vw] h-full flex items-center justify-center">
+      <motion.div
+        initial={{ opacity: 0, filter: 'blur(4px)', y: 15 }}
+        animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
+        transition={{ duration: 0.4, delay: 1 }}
+        className="w-[95vw] md:w-[70vw] h-full flex items-center justify-center"
+      >
         <ComponentViewer />
-      </div>
+      </motion.div>
     </div>
   );
 };
