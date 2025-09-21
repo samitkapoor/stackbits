@@ -27,6 +27,11 @@ import RandomButton from './buttons/random-button';
 import StackbitsLogo from './ui/stackbits-logo';
 import { useRouter } from 'next/navigation';
 import PingButton from './buttons/ping-button';
+import { interactiveCTAPreview } from '@/data/frontend/InteractiveCTA';
+import { maskCursorEffectPreview } from '@/data/frontend/MaskCursorEffect';
+import { magnetTabsPreview } from '@/data/frontend/MagnetTabs';
+import { masonryGridPreview } from '@/data/frontend/MasonryGrid';
+import { randomButtonPreview } from '@/data/buttons/RandomButton';
 
 const components = [
   { component: circleMenuPreview, link: '/docs/circleMenu' },
@@ -35,8 +40,12 @@ const components = [
   { component: flipScrollPreview, link: '/docs/flipScroll' },
   { component: horizontalScrollPreview, link: '/docs/horizontalScroll' },
   { component: imagePilePreview, link: '/docs/imagePile' },
+  { component: interactiveCTAPreview, link: '/docs/interactiveCTA' },
   { component: interactiveFolderPreview, link: '/docs/interactiveFolder' },
   { component: interestPickerPreview, link: '/docs/interestPicker' },
+  { component: maskCursorEffectPreview, link: '/docs/maskCursorEffect' },
+  { component: magnetTabsPreview, link: '/docs/magnetTabs' },
+  { component: masonryGridPreview, link: '/docs/masonryGrid' },
   { component: otpInputPreview, link: '/docs/otpInput' },
   { component: photoGalleryPreview, link: '/docs/photoGallery' },
   { component: pixelatedCarouselPreview, link: '/docs/pixelatedCarousel' },
@@ -45,7 +54,8 @@ const components = [
   { component: dottedTextPreview, link: '/docs/dottedText' },
   { component: gooeyWordsPreview, link: '/docs/gooeyWords' },
   { component: sentenceFlipPreview, link: '/docs/sentenceFlip' },
-  { component: pixelatedTextPreview, link: '/docs/pixelatedText' }
+  { component: pixelatedTextPreview, link: '/docs/pixelatedText' },
+  { component: randomButtonPreview, link: '/docs/randomButton' }
 ];
 
 const TextInformation = () => {
