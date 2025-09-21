@@ -227,8 +227,11 @@ const TestimonyItem = ({
   const indexInLayer = index % itemsInLayer;
   const totalLayers = Math.floor(totalItems / itemsInLayer);
 
-  const delay = layer * fullTravelDuration + indexInLayer * (fullTravelDuration / itemsInLayer);
-  const repeatDelay = (totalLayers - 1) * fullTravelDuration;
+  const delay = Math.max(
+    0,
+    layer * fullTravelDuration + indexInLayer * (fullTravelDuration / itemsInLayer - 1) - 4
+  );
+  const repeatDelay = totalLayers * fullTravelDuration - 4;
 
   return (
     <motion.div

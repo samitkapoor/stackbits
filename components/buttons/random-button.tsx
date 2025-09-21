@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 interface RandomButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;
   className?: string;
+  iconClassName?: string;
 }
 
 const Icon = ({
@@ -34,7 +35,7 @@ const Icon = ({
   );
 };
 
-const RandomButton = ({ children, className, ...props }: RandomButtonProps) => {
+const RandomButton = ({ children, className, iconClassName, ...props }: RandomButtonProps) => {
   const [hovering, setHovering] = useState(false);
 
   const randomEmojis = [
@@ -74,7 +75,12 @@ const RandomButton = ({ children, className, ...props }: RandomButtonProps) => {
       {...props}
     >
       {children}
-      <span className="w-9 h-9 flex items-start justify-start rounded-full bg-white text-black overflow-hidden border-[1.5px] border-[#93c5fd]">
+      <span
+        className={cn(
+          'w-9 h-9 flex items-start justify-start rounded-full bg-white text-black overflow-hidden border-[1.5px] border-[#93c5fd]',
+          iconClassName
+        )}
+      >
         <AnimatePresence mode="popLayout" initial={false}>
           {!hovering ? (
             <Icon keyId="main-icon">?</Icon>

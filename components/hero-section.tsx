@@ -24,6 +24,7 @@ import { pixelatedTextPreview } from '@/data/text/PixelatedText';
 import ShineButton from './buttons/shine-button';
 import Link from 'next/link';
 import TechStack from './tech-stack';
+import RandomButton from './buttons/random-button';
 
 const TextInformation = () => {
   return (
@@ -63,7 +64,7 @@ const TextInformation = () => {
 
 const ComponentViewer = () => {
   const [currentComponentIndex, setCurrentComponentIndex] = useState(0);
-  const [direction, setDirection] = useState<1 | -1>(1);
+  const [direction, setDirection] = useState<1 | -1 | 0>(1);
   const components = [
     circleMenuPreview,
     dialogFormPreview,
@@ -113,20 +114,34 @@ const ComponentViewer = () => {
           maskImage: 'radial-gradient(ellipse at center, black, transparent 85%)'
         }}
       />
-      <AnimatePresence mode="popLayout" initial={false} custom={direction}>
-        <motion.div
-          variants={variants}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          custom={direction}
-          transition={{ duration: 0.8, type: 'spring', bounce: 0 }}
-          key={`component-viewer-${currentComponentIndex}`}
-          className="w-[300px] h-[300px] md:w-[500px] md:h-[500px] rounded-3xl overflow-hidden bg-black"
-        >
-          {currentComponent}
-        </motion.div>
-      </AnimatePresence>
+      <div className="w-[300px] h-[300px] md:w-[500px] md:h-[500px] relative">
+        <div className="absolute top-4 right-4 z-10">
+          <RandomButton
+            onClick={() => {
+              setDirection(0);
+              setCurrentComponentIndex(Math.floor(Math.random() * components.length));
+            }}
+            className="bg-gradient-to-r from-zinc-800 to-zinc-900 text-xs"
+            iconClassName="h-7 w-7"
+          >
+            I&apos;m Feeling Lucky
+          </RandomButton>
+        </div>
+        <AnimatePresence mode="popLayout" initial={false} custom={direction}>
+          <motion.div
+            variants={variants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            custom={direction}
+            transition={{ duration: 0.8, type: 'spring', bounce: 0 }}
+            key={`component-viewer-${currentComponentIndex}`}
+            className="h-full w-full rounded-3xl overflow-hidden bg-black relative"
+          >
+            {currentComponent}
+          </motion.div>
+        </AnimatePresence>
+      </div>
       <div className="flex items-center justify-center gap-4 max-w-[500px] w-full z-10">
         <PaginationButton
           onClick={() => {
