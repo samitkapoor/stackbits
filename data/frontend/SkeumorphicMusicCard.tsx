@@ -1,6 +1,6 @@
 import { installDependenciesCode } from '@/constants/code';
 import { Document } from '../main';
-import SkeumorphicMusicCard from '@/components/ui/skeumorphic-music-card';
+import SkeumorphicMusicCard from '@/components/components/skeumorphic-music-card';
 
 export const skeumorphicMusicCardPreview = (
   <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden relative p-0 gap-5 bg-blue-100">

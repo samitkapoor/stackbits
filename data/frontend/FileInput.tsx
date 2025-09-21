@@ -1,5 +1,5 @@
 import { Document } from '../main';
-import FileInput from '@/components/ui/file-input';
+import FileInput from '@/components/components/file-input';
 import VideoPreview from '@/components/ui/video-preview';
 import { cnCode, installDependenciesCode } from '@/constants/code';
 

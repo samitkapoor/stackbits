@@ -1,5 +1,5 @@
 import { Document } from '../main';
-import SineWave from '@/components/ui/sine-wave';
+import SineWave from '@/components/components/sine-wave';
 import { images } from '../constants';
 import { cnCode } from '@/constants/code';
 

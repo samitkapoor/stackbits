@@ -7,7 +7,7 @@ import WavyText from './texts/wavy-text';
 import PrismaticHazeBackground from './ui/prismatic-haze';
 import TradingCardDemo from './trading-card-demo';
 // import AnimatedGradientButton from './buttons/animated-gradient-button';
-import ImagePile from './ui/image-pile';
+import ImagePile from './components/image-pile';
 import { gooeyWordsPreview } from '@/data/text/GooeyWords';
 
 const Components = () => {

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import Accordion from './ui/accordion';
+import Accordion from './components/accordion';
 
 // ? Content of the accordions
 const accordionItems = [

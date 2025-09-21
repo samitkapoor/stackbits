@@ -1,7 +1,7 @@
 import { installDependenciesCode } from '@/constants/code';
 import { Document } from '../main';
 import VideoPreview from '@/components/ui/video-preview';
-import HorizontalScroll from '@/components/ui/horizontal-scroll';
+import HorizontalScroll from '@/components/components/horizontal-scroll';
 
 export const horizontalScrollPreview = (
   <div className="h-full w-full flex flex-col items-center justify-center gap-2 bg-white/10">

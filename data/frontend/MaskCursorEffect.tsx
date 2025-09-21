@@ -1,4 +1,4 @@
-import MaskCursorEffect from '@/components/ui/mask-cursor-effect';
+import MaskCursorEffect from '@/components/components/mask-cursor-effect';
 import { Document } from '../main';
 import { cnCode, installDependenciesCode } from '@/constants/code';
 

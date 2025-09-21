@@ -1,4 +1,4 @@
-import PhotoGallery from '@/components/ui/photo-gallery';
+import PhotoGallery from '@/components/components/photo-gallery';
 import { Document } from '../main';
 import { cnCode, installDependenciesCode } from '@/constants/code';
 import VideoPreview from '@/components/ui/video-preview';

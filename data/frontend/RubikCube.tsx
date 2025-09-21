@@ -1,6 +1,6 @@
 import { cnCode, installDependenciesCode } from '@/constants/code';
 import { Document } from '../main';
-import RubikCube from '@/components/ui/rubik-cube';
+import RubikCube from '@/components/components/rubik-cube';
 
 export const rubikCubePreview = (
   <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden relative p-0 gap-5">

@@ -1,5 +1,5 @@
 import { Document } from '../main';
-import EagleVision from '@/components/ui/eagle-vision';
+import EagleVision from '@/components/components/eagle-vision';
 import VideoPreview from '@/components/ui/video-preview';
 import { cnCode, installDependenciesCode } from '@/constants/code';
 

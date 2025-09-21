@@ -1,5 +1,5 @@
 import { Document } from '../main';
-import ImagePile from '@/components/ui/image-pile';
+import ImagePile from '@/components/components/image-pile';
 import VideoPreview from '@/components/ui/video-preview';
 import { installDependenciesCode } from '@/constants/code';
 

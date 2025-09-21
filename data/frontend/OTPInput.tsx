@@ -1,4 +1,4 @@
-import OTPInput from '@/components/ui/otp-input';
+import OTPInput from '@/components/components/otp-input';
 import { Document } from '../main';
 import { cnCode, installDependenciesCode } from '@/constants/code';
 import VideoPreview from '@/components/ui/video-preview';

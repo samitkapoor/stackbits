@@ -1,6 +1,5 @@
 import { Document } from '../main';
-import ImagePile from '@/components/ui/image-pile';
-import InteractiveFolder from '@/components/ui/interactive-folder';
+import InteractiveFolder from '@/components/components/interactive-folder';
 import VideoPreview from '@/components/ui/video-preview';
 import { installDependenciesCode } from '@/constants/code';
 

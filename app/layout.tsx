@@ -3,7 +3,7 @@ import './globals.css';
 import SchemaOrgWrapper from '@/components/schema-org-wrapper';
 import { Inter } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
-import InteractiveCTA from '@/components/ui/interactive-cta';
+import InteractiveCTA from '@/components/components/interactive-cta';
 
 const inter = Inter({
   subsets: ['latin'],

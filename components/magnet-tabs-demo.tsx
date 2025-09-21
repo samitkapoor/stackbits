@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import MagnetTabs from './ui/magnet-tabs';
+import MagnetTabs from './components/magnet-tabs';
 
 const MagnetTabsDemo = ({ isPreview = false }) => {
   const [activeTab, setActiveTab] = useState('Tab 1');

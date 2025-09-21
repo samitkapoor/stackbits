@@ -1,6 +1,6 @@
 import { cnCode, installDependenciesCode } from '@/constants/code';
 import { Document } from '../main';
-import StackedInputForm from '@/components/ui/input-stack-form';
+import StackedInputForm from '@/components/components/input-stack-form';
 import VideoPreview from '@/components/ui/video-preview';
 
 export const stackedInputFormPreview = (

@@ -1,5 +1,5 @@
 import { Document } from '../main';
-import InterestPicker from '@/components/ui/interest-picker';
+import InterestPicker from '@/components/components/interest-picker';
 import VideoPreview from '@/components/ui/video-preview';
 import { cnCode, installDependenciesCode } from '@/constants/code';
 

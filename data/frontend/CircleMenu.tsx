@@ -1,5 +1,5 @@
 import { Document } from '../main';
-import CircleMenu from '@/components/ui/circle-menu';
+import CircleMenu from '@/components/components/circle-menu';
 import VideoPreview from '@/components/ui/video-preview';
 import { BookOpen, DollarSign, FlaskConical, Home, Mail, Projector, User } from 'lucide-react';
 import { cnCode, installDependenciesCode } from '@/constants/code';

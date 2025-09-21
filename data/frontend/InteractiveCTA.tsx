@@ -1,5 +1,5 @@
 import { Document } from '../main';
-import InteractiveCTA from '@/components/ui/interactive-cta';
+import InteractiveCTA from '@/components/components/interactive-cta';
 import { cnCode, installDependenciesCode } from '@/constants/code';
 
 export const interactiveCTAPreview = (

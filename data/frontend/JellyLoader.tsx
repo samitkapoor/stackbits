@@ -1,4 +1,4 @@
-import JellyLoader from '@/components/ui/jelly-loader';
+import JellyLoader from '@/components/components/jelly-loader';
 import { Document } from '../main';
 import { installDependenciesCode } from '@/constants/code';
 

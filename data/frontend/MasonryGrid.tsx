@@ -1,5 +1,5 @@
 import { Document } from '../main';
-import MasonryGrid from '@/components/ui/masonry-grid';
+import MasonryGrid from '@/components/components/masonry-grid';
 
 export const masonryGridPreview = (
   <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden relative p-0 gap-5">

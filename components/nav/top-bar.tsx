@@ -11,7 +11,7 @@ import {
 import Link from 'next/link';
 import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Target } from '../ui/eagle-vision';
+import { Target } from '../components/eagle-vision';
 
 const TopBar = ({
   sideBarIsOpen,

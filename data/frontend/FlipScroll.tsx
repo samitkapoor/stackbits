@@ -1,7 +1,7 @@
 import { Document } from '../main';
 import { installDependenciesCode } from '@/constants/code';
 import VideoPreview from '@/components/ui/video-preview';
-import FlipScroll from '@/components/ui/flip-scroll';
+import FlipScroll from '@/components/components/flip-scroll';
 
 export const flipScrollPreview = (
   <div className="h-full w-full flex items-center justify-center">

@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils';
-import TradingCard from './ui/trading-card';
+import TradingCard from './components/trading-card';
 
 const TradingCardDemo = ({ variant = 'default' }: { variant?: 'default' | 'minimized' }) => {
   const cards = [

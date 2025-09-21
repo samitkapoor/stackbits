@@ -1,5 +1,5 @@
 import { Document } from '../main';
-import Sidebar from '@/components/ui/sidebar';
+import Sidebar from '@/components/components/sidebar';
 import { cnCode, installDependenciesCode } from '@/constants/code';
 import VideoPreview from '@/components/ui/video-preview';
 

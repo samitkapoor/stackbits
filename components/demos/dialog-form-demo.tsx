@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import DialogForm from '../ui/dialog-form';
+import DialogForm from '../components/dialog-form';
 import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 import * as yup from 'yup';

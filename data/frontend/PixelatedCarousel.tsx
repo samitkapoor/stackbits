@@ -1,5 +1,5 @@
 import { Document } from '../main';
-import PixelatedCarousel from '@/components/ui/pixelated-carousel';
+import PixelatedCarousel from '@/components/components/pixelated-carousel';
 
 export const pixelatedCarouselPreview = (
   <div className="h-full w-full flex flex-col items-center justify-center gap-2">
