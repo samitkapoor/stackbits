@@ -4,11 +4,12 @@ import Comments from '@/components/comments';
 import Demo from '@/components/demo';
 import HeroSection from '@/components/hero-section';
 import LandingFooter from '@/components/landing-footer';
+import Pricing from '@/components/pricing';
 import Testimonials from '@/components/testimonials';
 
 export default function Home() {
   return (
-    <div className="h-full w-full overflow-x-hidden overflow-y-auto flex flex-col gap-20 bg-black relative">
+    <div className="h-full w-full overflow-x-hidden overflow-y-auto flex flex-col gap-16 bg-black relative">
       {/* <div className="absolute inset-0 h-full w-full"> */}
       {/* Enhanced grid pattern with CSS animation */}
       {/* <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.15)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.15)_1px,transparent_1px)] bg-[size:50px_50px]" /> */}
@@ -38,6 +39,8 @@ export default function Home() {
 
       <Demo />
       <Testimonials />
+      <Pricing />
+
       {/* <Components /> */}
       <LandingFooter />
     </div>

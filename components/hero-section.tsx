@@ -26,6 +26,7 @@ import TechStack from './tech-stack';
 import RandomButton from './buttons/random-button';
 import StackbitsLogo from './ui/stackbits-logo';
 import { useRouter } from 'next/navigation';
+import PingButton from './buttons/ping-button';
 
 const components = [
   { component: circleMenuPreview, link: '/docs/circleMenu' },
@@ -76,17 +77,13 @@ const TextInformation = () => {
         initial={{ opacity: 0, filter: 'blur(4px)', y: 15 }}
         animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
         transition={{ duration: 0.4, delay: 0.8 }}
-        className="flex items-center flex-col sm:flex-row justify-center gap-4 mt-8 mb-8 sm:mb-0"
+        className="flex items-center flex-col sm:flex-row justify-center gap-4 mt-8 mb-8 sm:mb-8"
       >
         <div className="w-full flex items-center justify-center">
           <Link href="/docs/components">
-            <button className="bg-zinc-800 px-4 py-2 hover:gap-3 active:gap-2 text-sm sm:text-base transition-all duration-200 font-medium text-white rounded-xl flex items-center gap-2 hover:bg-zinc-700">
-              <span className="relative h-3 w-3">
-                <StackbitsLogo className="absolute inset-0 h-3 w-3" />
-                <StackbitsLogo className="absolute inset-0 h-3 w-3 animate-ping" />
-              </span>
+            <PingButton ping={<StackbitsLogo className="h-full w-full" />}>
               Explore Components
-            </button>
+            </PingButton>
           </Link>
         </div>
 

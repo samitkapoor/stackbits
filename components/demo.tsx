@@ -243,7 +243,7 @@ const Demo = () => {
   );
 
   return (
-    <div className="w-full flex flex-col items-center justify-center mt-10 sm:mt-16 md:mt-20 px-4 sm:px-6 md:px-8">
+    <div className="w-full flex flex-col items-center justify-center px-4 sm:px-6 md:px-8">
       <BounceInText
         className="text-white text-2xl sm:text-4xl md:text-7xl font-semibold mt-6 sm:mt-8"
         text="How It Works"

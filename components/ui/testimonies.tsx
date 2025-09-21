@@ -124,7 +124,7 @@ const Testimonies = ({ items }: { items: Comment[] }) => {
       {items.map((item, index) => {
         return (
           <TestimonyItem
-            key={`testimony-${index}`}
+            key={`testimony-${item.name}-${index}`}
             item={item}
             index={index}
             totalItems={items.length}

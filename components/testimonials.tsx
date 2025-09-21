@@ -28,7 +28,7 @@ const Testimonials = () => {
           {[...comments, ...comments].slice(layer * 6, layer * 6 + 6).map((comment) => {
             return (
               <motion.div
-                key={`testimonial-item-${comment.id}-${layer}`}
+                key={`testimonial-item-${comment.id}-${comment.name}-${layer}`}
                 id={`testimonial-item-${comment.id}-${layer}`}
                 initial={{ opacity: 0, scale: 0.97, filter: 'blur(5px)' }}
                 animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
