@@ -2,8 +2,9 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Github, Mail, Twitter, Instagram, LucideIcon, Code2Icon, Globe } from 'lucide-react';
+import { Github, Mail, Twitter, Instagram, LucideIcon, Globe } from 'lucide-react';
 import Image from 'next/image';
+import StackbitsLogo from './ui/stackbits-logo';
 
 interface NavLinkProps {
   href: string;
@@ -120,7 +121,7 @@ const LandingFooter = () => {
           {/* Brand Section */}
           <div className="flex flex-col">
             <div className="flex text-white items-center gap-2">
-              <Code2Icon className="w-6 h-6" />
+              <StackbitsLogo className="w-6 h-6" />
               <h2 className="text-xl font-medium">StackBits</h2>
             </div>
             <p className="text-xs md:text-sm text-muted-foreground my-3">

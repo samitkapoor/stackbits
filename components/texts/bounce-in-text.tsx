@@ -7,10 +7,12 @@ import React from 'react';
 const BounceInText = ({
   text,
   className,
+  letterClassName,
   repeat = false
 }: {
   text: string;
   className?: string;
+  letterClassName?: string;
   repeat?: boolean;
 }) => {
   return (
@@ -26,7 +28,8 @@ const BounceInText = ({
         return (
           <motion.span
             initial={{ filter: 'blur(4px)', opacity: 0, scale: 0.5, transform: 'translateY(100%)' }}
-            animate={{ filter: 'blur(0px)', opacity: 1, scale: 1, transform: 'translateY(0%)' }}
+            whileInView={{ filter: 'blur(0px)', opacity: 1, scale: 1, transform: 'translateY(0%)' }}
+            viewport={{ once: true }}
             transition={{
               duration: 0.7,
               type: 'spring',
@@ -39,7 +42,7 @@ const BounceInText = ({
               })
             }}
             key={`bounce-in-text-${text}-${index}`}
-            className="inline-block"
+            className={cn('inline-block', letterClassName)}
           >
             {char}
           </motion.span>

@@ -21,12 +21,35 @@ import { dottedTextPreview } from '@/data/text/DottedText';
 import { gooeyWordsPreview } from '@/data/text/GooeyWords';
 import { sentenceFlipPreview } from '@/data/text/SentenceFlip';
 import { pixelatedTextPreview } from '@/data/text/PixelatedText';
-import ShineButton from './buttons/shine-button';
 import Link from 'next/link';
 import TechStack from './tech-stack';
 import RandomButton from './buttons/random-button';
+import StackbitsLogo from './ui/stackbits-logo';
+import { useRouter } from 'next/navigation';
+
+const components = [
+  { component: circleMenuPreview, link: '/docs/circleMenu' },
+  { component: dialogFormPreview, link: '/docs/dialogForm' },
+  { component: fileInputPreview, link: '/docs/fileInput' },
+  { component: flipScrollPreview, link: '/docs/flipScroll' },
+  { component: horizontalScrollPreview, link: '/docs/horizontalScroll' },
+  { component: imagePilePreview, link: '/docs/imagePile' },
+  { component: interactiveFolderPreview, link: '/docs/interactiveFolder' },
+  { component: interestPickerPreview, link: '/docs/interestPicker' },
+  { component: otpInputPreview, link: '/docs/otpInput' },
+  { component: photoGalleryPreview, link: '/docs/photoGallery' },
+  { component: pixelatedCarouselPreview, link: '/docs/pixelatedCarousel' },
+  { component: rubikCubePreview, link: '/docs/rubikCube' },
+  { component: sineWavePreview, link: '/docs/sineWave' },
+  { component: dottedTextPreview, link: '/docs/dottedText' },
+  { component: gooeyWordsPreview, link: '/docs/gooeyWords' },
+  { component: sentenceFlipPreview, link: '/docs/sentenceFlip' },
+  { component: pixelatedTextPreview, link: '/docs/pixelatedText' }
+];
 
 const TextInformation = () => {
+  const router = useRouter();
+
   return (
     <div
       style={{
@@ -36,14 +59,15 @@ const TextInformation = () => {
     >
       <TechStack />
       <BounceInText
-        className="text-white text-3xl sm:text-4xl md:text-8xl font-semibold mt-6 sm:mt-8"
+        className="text-white text-3xl sm:text-4xl md:text-7xl font-semibold mt-6 sm:mt-8"
         text="Components You'll Love"
+        letterClassName="tracking-tight"
       />
       <motion.p
         initial={{ opacity: 0, filter: 'blur(4px)', y: 15 }}
         animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
         transition={{ duration: 0.4, delay: 0.6 }}
-        className="text-white text-base sm:text-lg my-3"
+        className="text-zinc-300 text-lg sm:text-xl my-3"
       >
         Clean, reusable building blocks for modern apps. UI components, utilities, and backend
         snippets all in one place.
@@ -52,11 +76,30 @@ const TextInformation = () => {
         initial={{ opacity: 0, filter: 'blur(4px)', y: 15 }}
         animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
         transition={{ duration: 0.4, delay: 0.8 }}
-        className="w-full flex items-center justify-center"
+        className="flex items-center justify-center gap-4 mt-8"
       >
-        <Link href="/docs/components" className="mt-6">
-          <ShineButton>Explore Components</ShineButton>
-        </Link>
+        <div className="w-full flex items-center justify-center">
+          <Link href="/docs/components">
+            <button className="bg-zinc-800 px-4 py-2 hover:gap-3 active:gap-2  transition-all duration-200 font-medium text-white rounded-xl flex items-center gap-2 hover:bg-zinc-700">
+              <span className="relative h-3 w-3">
+                <StackbitsLogo className="absolute inset-0 h-3 w-3" />
+                <StackbitsLogo className="absolute inset-0 h-3 w-3 animate-ping" />
+              </span>
+              Explore Components
+            </button>
+          </Link>
+        </div>
+
+        <RandomButton
+          onClick={() => {
+            const index = Math.floor(Math.random() * components.length);
+            router.push(components[index].link);
+          }}
+          className="shrink-0 z-10 font-medium"
+          iconClassName="h-9 w-9"
+        >
+          I&apos;m Feeling Lucky
+        </RandomButton>
       </motion.div>
     </div>
   );
@@ -65,25 +108,6 @@ const TextInformation = () => {
 const ComponentViewer = () => {
   const [currentComponentIndex, setCurrentComponentIndex] = useState(0);
   const [direction, setDirection] = useState<1 | -1 | 0>(1);
-  const components = [
-    circleMenuPreview,
-    dialogFormPreview,
-    fileInputPreview,
-    flipScrollPreview,
-    horizontalScrollPreview,
-    imagePilePreview,
-    interactiveFolderPreview,
-    interestPickerPreview,
-    otpInputPreview,
-    photoGalleryPreview,
-    pixelatedCarouselPreview,
-    rubikCubePreview,
-    sineWavePreview,
-    dottedTextPreview,
-    gooeyWordsPreview,
-    sentenceFlipPreview,
-    pixelatedTextPreview
-  ];
 
   const currentComponent = components[currentComponentIndex];
 
@@ -106,7 +130,7 @@ const ComponentViewer = () => {
   return (
     <div className="h-[50vh] md:h-[75vh] w-full flex flex-col gap-4 items-center justify-center relative overflow-hidden">
       <div
-        className="absolute inset-0 rounded-xl"
+        className="absolute inset-0 rounded-xl opacity-75"
         style={{
           background: 'url(/hero-bg2.png)',
           backgroundSize: 'cover',
@@ -115,18 +139,6 @@ const ComponentViewer = () => {
         }}
       />
       <div className="w-[300px] h-[300px] md:w-[500px] md:h-[500px] relative">
-        <div className="absolute top-4 right-4 z-10">
-          <RandomButton
-            onClick={() => {
-              setDirection(0);
-              setCurrentComponentIndex(Math.floor(Math.random() * components.length));
-            }}
-            className="bg-gradient-to-r from-zinc-800 to-zinc-900 text-xs"
-            iconClassName="h-7 w-7"
-          >
-            I&apos;m Feeling Lucky
-          </RandomButton>
-        </div>
         <AnimatePresence mode="popLayout" initial={false} custom={direction}>
           <motion.div
             variants={variants}
@@ -138,7 +150,7 @@ const ComponentViewer = () => {
             key={`component-viewer-${currentComponentIndex}`}
             className="h-full w-full rounded-3xl overflow-hidden bg-black relative"
           >
-            {currentComponent}
+            {currentComponent.component}
           </motion.div>
         </AnimatePresence>
       </div>

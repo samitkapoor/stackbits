@@ -254,7 +254,7 @@ const TestimonyItem = ({
           opacity: 0
         }}
         animate={{
-          opacity: [0, 1, 1, 0, 0]
+          opacity: [0, 0.6, 0.6, 0, 0]
         }}
         transition={{
           duration: fullTravelDuration,

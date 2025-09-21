@@ -12,6 +12,7 @@ import Link from 'next/link';
 import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Target } from '../components/eagle-vision';
+import StackbitsLogo from '../ui/stackbits-logo';
 
 const TopBar = ({
   sideBarIsOpen,
@@ -105,11 +106,10 @@ const TopBar = ({
             className="overflow-hidden h-full w-full flex items-center gap-4"
           >
             <Link href="/" className="flex items-center gap-2 h-full justify-center text-base">
-              {/* <CodeXml className="w-5 h-5" /> */}
-              <span className="rounded-full h-4 w-4 bg-gradient-to-b from-yellow-400 to-purple-500 flex items-center justify-center overflow-hidden"></span>
+              <StackbitsLogo />
               Stackbits
             </Link>
-            {/* Desktop navigation */}
+
             <div className="hidden md:flex items-center text-white gap-2 z-10">
               {links.map((link) => {
                 return (

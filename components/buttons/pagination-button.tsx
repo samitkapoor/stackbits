@@ -30,7 +30,8 @@ const PaginationButton = ({
       className={cn(
         variantClasses[variant],
         'px-1 py-1 rounded-full flex text-sm items-center gap-2 group hover:gap-2.5 hover:scale-x-105 active:scale-x-95 active:gap-2 transition-all duration-200',
-        className
+        className,
+        !children && '!px-0.5 !py-0.5'
       )}
       {...props}
     >

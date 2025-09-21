@@ -1,7 +1,7 @@
 'use client';
 
 import Comments from '@/components/comments';
-// import Demo from '@/components/demo';
+import Demo from '@/components/demo';
 import HeroSection from '@/components/hero-section';
 import LandingFooter from '@/components/landing-footer';
 
@@ -37,11 +37,9 @@ export default function Home() {
         </div>
       </div>
       {/* Removed background behind Demo component */}
-      {/* <div className="relative mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="relative">
-          <Demo />
-        </div>
-      </div> */}
+      <div className="relative mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <Demo />
+      </div>
       {/* <Components /> */}
       <LandingFooter />
     </div>
