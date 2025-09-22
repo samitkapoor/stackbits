@@ -312,15 +312,10 @@ const Loading = () => {
   );
 };
 
-interface SuccessProps {
-  file: FileList;
-  onRemove: () => void;
-}
-
-const Success = ({ file, onRemove }: SuccessProps) => {
+const Preview = ({ file }: { file: File }) => {
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [previewLoaded, setPreviewLoaded] = useState(false);
-  const fileType = getFileType(file[0]);
+  const fileType = getFileType(file);
   const fileIcon = getFileIcon(fileType);
 
   useEffect(() => {
@@ -329,38 +324,66 @@ const Success = ({ file, onRemove }: SuccessProps) => {
       reader.onload = (e) => {
         setImagePreview(e.target?.result as string);
       };
-      reader.readAsDataURL(file[0]);
+      reader.readAsDataURL(file);
     }
   }, [file, fileType]);
 
   return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: previewLoaded ? 1 : 0, scale: previewLoaded ? 1 : 0.8 }}
+      transition={{ duration: 0.3, ease: 'easeInOut', delay: 0.2 }}
+      className="relative w-full h-full rounded-lg overflow-hidden border border-zinc-700"
+    >
+      {fileType === 'image' && imagePreview ? (
+        <Image
+          onLoad={() => setPreviewLoaded(true)}
+          src={imagePreview}
+          alt="File preview"
+          fill
+          className="w-full h-full object-cover"
+        />
+      ) : (
+        <div className="w-full h-full bg-zinc-800 rounded-lg flex items-center justify-center border border-zinc-700">
+          {fileIcon}
+        </div>
+      )}
+    </motion.div>
+  );
+};
+
+interface SuccessProps {
+  files: FileList;
+  onRemove: () => void;
+}
+
+const Success = ({ files, onRemove }: SuccessProps) => {
+  return (
     <div className="h-full w-full bg-black relative border-[3px] border-zinc-900 rounded-xl flex flex-col items-center justify-center gap-4 overflow-hidden">
       <div className="w-full flex-1 flex flex-col items-center justify-center gap-3 relative h-full overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full">
-          {fileType === 'image' && imagePreview ? (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: previewLoaded ? 1 : 0, scale: previewLoaded ? 1 : 0.8 }}
-              transition={{ duration: 0.3, ease: 'easeInOut', delay: 0.2 }}
-              className="relative w-full h-full rounded-lg overflow-hidden border border-zinc-700"
-            >
-              <Image
-                onLoad={() => setPreviewLoaded(true)}
-                src={imagePreview}
-                alt="File preview"
-                fill
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
+          {files.length === 1 ? (
+            <Preview file={files[0]} />
           ) : (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.3, delay: 0.3 }}
-              className="w-full h-full bg-zinc-800 rounded-lg flex items-center justify-center border border-zinc-700"
-            >
-              {fileIcon}
-            </motion.div>
+            <div className="h-full w-full flex items-center justify-center">
+              {Array.from(files)
+                .slice(0, 4)
+                .map((file, index) => {
+                  return (
+                    <motion.div
+                      key={`file-upload-preview-${index}-${file.name}`}
+                      style={{
+                        rotateZ: files.length <= 2 ? index * 15 : -(15 - index * 15),
+                        x: files.length <= 2 ? index * 10 : index * 15 - 15,
+                        y: index * 10
+                      }}
+                      className="h-3/4 w-3/4 absolute"
+                    >
+                      <Preview file={file} />
+                    </motion.div>
+                  );
+                })}
+            </div>
           )}
         </div>
         <div
@@ -374,14 +397,15 @@ const Success = ({ file, onRemove }: SuccessProps) => {
           className="absolute inset-0"
         />
 
-        <div className="absolute inset-0 flex flex-col items-start justify-end p-3 bg-black/50">
+        <div className="absolute inset-0 flex flex-col items-start justify-end p-3 bg-black/20">
           <div className="flex items-end justify-between w-full">
             <div className="flex flex-col items-start justify-end flex-1">
-              <p className="text-sm text-white font-medium line-clamp-1">{file[0].name}</p>
-              <p className="text-xs text-white line-clamp-1">{formatFileSize(file[0].size)}</p>
-              {file.length > 1 && (
-                <p className="text-xs text-white line-clamp-1">{file.length} files</p>
-              )}
+              <p className="text-sm text-white font-medium line-clamp-1">
+                {files.length > 1 ? `${files.length} files` : files[0].name}
+              </p>
+              <p className="text-xs text-white line-clamp-1">
+                {formatFileSize(Array.from(files).reduce((acc, file) => acc + file.size, 0))}
+              </p>
             </div>
             <button
               type="button"
@@ -412,7 +436,7 @@ const FileInput = ({
 }: FileInputProps) => {
   const [state, setState] = useState<'idle' | 'loading' | 'success'>('idle');
   const [error, setError] = useState<string | null>(null);
-  const [file, setFile] = useState<FileList | null>(null);
+  const [files, setFiles] = useState<FileList | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileInputClick = () => {
@@ -446,8 +470,8 @@ const FileInput = ({
       setError('Something went wrong.');
       return;
     }
-    await new Promise((resolve) => setTimeout(resolve, 5000));
-    setFile(files);
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+    setFiles(files);
     setState('success');
   };
 
@@ -478,13 +502,13 @@ const FileInput = ({
       setError('Something went wrong.');
       return;
     }
-    await new Promise((resolve) => setTimeout(resolve, 5000));
-    setFile(files);
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+    setFiles(files);
     setState('success');
   };
 
   const handleRemove = () => {
-    setFile(null);
+    setFiles(null);
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
     }
@@ -534,7 +558,7 @@ const FileInput = ({
             />
           )}
           {state === 'loading' && <Loading />}
-          {state === 'success' && file && <Success file={file} onRemove={handleRemove} />}
+          {state === 'success' && files && <Success files={files} onRemove={handleRemove} />}
         </motion.div>
       </AnimatePresence>
     </div>
