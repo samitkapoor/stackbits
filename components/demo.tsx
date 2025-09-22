@@ -167,13 +167,13 @@ const GRADIENT_STYLES = {
           radial-gradient(circle at 0% 50%, #ff8000 0%, transparent 40%),
           radial-gradient(circle at 0% 0%, #8b5cf6 0%, transparent 40%),
           radial-gradient(circle at 50% 0%, #000000 0%, transparent 40%)`,
-  step3: `radial-gradient(circle at 100% 0%, #ff8000 0%, transparent 50%),
+  step3: `radial-gradient(circle at 100% 0%, #e67300C7 0%, transparent 50%),
           radial-gradient(circle at 100% 50%, #000000 0%, transparent 50%),
           radial-gradient(circle at 100% 100%, #8b5cf6 0%, transparent 50%), 
           radial-gradient(circle at 50% 100%, #000000 0%, transparent 50%),
-          radial-gradient(circle at 0% 100%, #ff8000 0%, transparent 50%),
+          radial-gradient(circle at 0% 100%, #e67300C7 0%, transparent 50%),
           radial-gradient(circle at 0% 50%, #8b5cf6 0%, transparent 50%),
-          radial-gradient(circle at 0% 0%, #ff8000 0%, transparent 50%),
+          radial-gradient(circle at 0% 0%, #e67300C7 0%, transparent 50%),
           radial-gradient(circle at 50% 0%, #8b5cf6 0%, transparent 60%)`
 };
 

@@ -66,23 +66,24 @@ const TextInformation = () => {
       style={{
         background: 'radial-gradient(ellipse, rgba(0, 0, 0, 0.2) 20%, transparent )'
       }}
-      className="flex flex-col items-center justify-center z-0 h-full w-full pt-32"
+      className="flex flex-col items-center justify-center z-0 h-full w-full pt-20"
     >
       <a
         href="https://peerlist.io/samitkapoor/project/stackbits-v2"
         target="_blank"
         rel="noreferrer"
-        className="mb-6"
+        className="mb-12"
       >
         <img
-          src="https://peerlist.io/api/v1/projects/embed/PRJH6A7JL79ELL6K8CGMJJOPG6OAO7?showUpvote=false&theme=dark"
+          src="https://peerlist.io/api/v1/projects/embed/PRJH6A7JL79ELL6K8CGMJJOPG6OAO7?showUpvote=true&theme=dark"
           alt="StackBits V2"
           style={{ width: 'auto', height: '54px' }}
         />
       </a>
+
       <TechStack />
       <BounceInText
-        className="text-white text-2xl sm:text-4xl md:text-7xl font-semibold mt-6 sm:mt-8"
+        className="text-white text-2xl sm:text-4xl md:text-7xl font-semibold mt-8"
         text="Components You'll Love"
         letterClassName="tracking-tight"
       />
@@ -99,7 +100,7 @@ const TextInformation = () => {
         initial={{ opacity: 0, filter: 'blur(4px)', y: 15 }}
         animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
         transition={{ duration: 0.4, delay: 0.8 }}
-        className="flex items-center flex-col sm:flex-row justify-center gap-4 mt-8 mb-8 sm:mb-8"
+        className="flex items-center flex-col sm:flex-row justify-center gap-4 mt-8 mb-8"
       >
         <div className="w-full flex items-center justify-center">
           <Link href="/docs/components">
@@ -147,7 +148,7 @@ const ComponentViewer = () => {
   };
 
   return (
-    <div className="h-[50vh] md:h-[75vh] w-full flex flex-col gap-4 items-center justify-center relative overflow-hidden">
+    <div className="h-[50vh] md:h-[700px] w-full flex flex-col gap-4 items-center justify-center relative overflow-hidden">
       <div
         className="absolute inset-0 rounded-xl opacity-75"
         style={{

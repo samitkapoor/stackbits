@@ -73,7 +73,7 @@ const TechStack = () => {
               alt={tech.name}
               width={16}
               height={16}
-              className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"
+              className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8"
             />
           </motion.div>
         ))}
