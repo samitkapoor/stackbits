@@ -66,13 +66,13 @@ const getFileType = (file: File): 'image' | 'pdf' | 'text' | 'other' => {
 const getFileIcon = (fileType: 'image' | 'pdf' | 'text' | 'other') => {
   switch (fileType) {
     case 'image':
-      return <ImageIcon size={24} className="text-blue-400" />;
+      return <ImageIcon size={24} className="text-white" />;
     case 'pdf':
-      return <FileText size={24} className="text-red-400" />;
+      return <FileText size={24} className="text-white" />;
     case 'text':
-      return <FileText size={24} className="text-green-400" />;
+      return <FileText size={24} className="text-white" />;
     default:
-      return <File size={24} className="text-zinc-400" />;
+      return <File size={24} className="text-white" />;
   }
 };
 
@@ -325,6 +325,8 @@ const Preview = ({ file }: { file: File }) => {
         setImagePreview(e.target?.result as string);
       };
       reader.readAsDataURL(file);
+    } else {
+      setPreviewLoaded(true);
     }
   }, [file, fileType]);
 
@@ -333,7 +335,7 @@ const Preview = ({ file }: { file: File }) => {
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: previewLoaded ? 1 : 0, scale: previewLoaded ? 1 : 0.8 }}
       transition={{ duration: 0.3, ease: 'easeInOut', delay: 0.2 }}
-      className="relative w-full h-full rounded-lg overflow-hidden border border-zinc-700"
+      className="relative w-full h-full rounded-lg overflow-hidden border border-zinc-700 flex items-center justify-center"
     >
       {fileType === 'image' && imagePreview ? (
         <Image
@@ -344,9 +346,7 @@ const Preview = ({ file }: { file: File }) => {
           className="w-full h-full object-cover"
         />
       ) : (
-        <div className="w-full h-full bg-zinc-800 rounded-lg flex items-center justify-center border border-zinc-700">
-          {fileIcon}
-        </div>
+        <div className="w-full h-full bg-zinc-800 flex items-center justify-center">{fileIcon}</div>
       )}
     </motion.div>
   );
