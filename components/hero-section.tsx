@@ -68,6 +68,18 @@ const TextInformation = () => {
       }}
       className="flex flex-col items-center justify-center z-0 h-full w-full pt-32"
     >
+      <a
+        href="https://peerlist.io/samitkapoor/project/stackbits-v2"
+        target="_blank"
+        rel="noreferrer"
+        className="mb-6"
+      >
+        <img
+          src="https://peerlist.io/api/v1/projects/embed/PRJH6A7JL79ELL6K8CGMJJOPG6OAO7?showUpvote=false&theme=dark"
+          alt="StackBits V2"
+          style={{ width: 'auto', height: '54px' }}
+        />
+      </a>
       <TechStack />
       <BounceInText
         className="text-white text-2xl sm:text-4xl md:text-7xl font-semibold mt-6 sm:mt-8"
