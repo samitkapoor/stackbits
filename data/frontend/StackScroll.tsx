@@ -39,7 +39,7 @@ export const stackScroll: Document = {
       {
         sectionType: 'preview',
         code: (
-          <div className="h-full w-full flex flex-col items-center justify-center gap-2 bg-white/10">
+          <div className="h-full w-full flex flex-col items-center justify-center gap-2">
             <StackScroll items={[...images, ...images]} />
           </div>
         )
