@@ -5,9 +5,10 @@ import { memo, useEffect, useRef, useState } from 'react';
 interface VideoPreviewProps {
   videoUrl: string;
   thumbnailUrl?: string;
+  className?: string;
 }
 
-const VideoPreview = memo(({ videoUrl, thumbnailUrl }: VideoPreviewProps) => {
+const VideoPreview = memo(({ videoUrl, thumbnailUrl, className }: VideoPreviewProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isInViewport, setIsInViewport] = useState(false);
   const [thumbnailLoaded, setThumbnailLoaded] = useState(false);
@@ -71,7 +72,7 @@ const VideoPreview = memo(({ videoUrl, thumbnailUrl }: VideoPreviewProps) => {
         playsInline
         muted
         loop
-        className="w-full h-full object-cover rounded-lg"
+        className={`w-full h-full object-cover rounded-lg ${className}`}
         preload="metadata"
         poster={thumbnailUrl}
         style={{

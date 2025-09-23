@@ -1,4 +1,4 @@
-import PrismaticHazeBackground from '@/components/ui/prismatic-haze';
+import PrismaticHazeBackground from '@/components/backgrounds/prismatic-haze';
 import { Document } from '../main';
 import EpicNameDrop from '@/components/texts/epic-name-drop';
 

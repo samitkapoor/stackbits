@@ -1,4 +1,4 @@
-import ProximityBackground from '@/components/ui/proximity-background';
+import ProximityBackground from '@/components/backgrounds/proximity-background';
 import { Document } from '../main';
 import { cnCode, installDependenciesCode } from '@/constants/code';
 

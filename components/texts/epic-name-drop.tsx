@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { motion, useAnimationControls } from 'framer-motion';
-import PrismaticHazeBackground from '../ui/prismatic-haze';
+import PrismaticHazeBackground from '../backgrounds/prismatic-haze';
 
 type EpicNameDropProps = {
   name: string;

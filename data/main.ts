@@ -97,6 +97,7 @@ import { bounceInText, bounceInTextPreview } from './text/BounceInText';
 import { paginationButton, paginationButtonPreview } from './buttons/PaginationButton';
 import { randomButton, randomButtonPreview } from './buttons/RandomButton';
 import { eagleVision, eagleVisionPreview } from './frontend/EagleVision';
+import { spaceTravel, spaceTravelPreview } from './backgrounds/SpaceTravel';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -243,6 +244,13 @@ const sideBarOptions: Array<{
         content: proximityBackground,
         preview: proximityBackgroundPreview,
         isNew: false
+      },
+      {
+        name: 'Space Travel',
+        href: '/docs/spacetravel',
+        content: spaceTravel,
+        preview: spaceTravelPreview,
+        isNew: true
       },
       {
         name: 'Wavy Background',

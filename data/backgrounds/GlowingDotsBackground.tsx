@@ -1,4 +1,4 @@
-import GlowingDotsBackground from '@/components/ui/glowing-dots-background';
+import GlowingDotsBackground from '@/components/backgrounds/glowing-dots-background';
 import { Document } from '../main';
 import { installDependenciesCode } from '@/constants/code';
 

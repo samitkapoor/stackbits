@@ -1,4 +1,4 @@
-import WavyBackground from '@/components/ui/wavy-background';
+import WavyBackground from '@/components/backgrounds/wavy-background';
 import { Document } from '../main';
 import { installDependenciesCode } from '@/constants/code';
 
