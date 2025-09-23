@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { comments } from '@/data/comments';
-import TestimonialCardItem from './components/testimonial-card';
+import SocialMediaCard, { PostType } from './components/social-media-card';
 import BounceInText from './texts/bounce-in-text';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
@@ -36,7 +36,7 @@ const Testimonials = () => {
                 transition={{ duration: 0.5 }}
               >
                 <Link href={comment.href} target="_blank">
-                  <TestimonialCardItem item={comment} />
+                  <SocialMediaCard post={comment as PostType} />
                 </Link>
               </motion.div>
             );

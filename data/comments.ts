@@ -1,15 +1,4 @@
-export type Comment = {
-  id: number;
-  image?: string;
-  href: string;
-  special?: boolean;
-  name?: string;
-  comment?: string;
-  pfp?: string;
-  platform?: 'x' | 'peerlist' | 'reddit';
-};
-
-export const comments: Comment[] = [
+export const comments = [
   {
     id: 30,
     comment: 'Beautiful work!',

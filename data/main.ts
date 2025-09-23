@@ -98,6 +98,7 @@ import { paginationButton, paginationButtonPreview } from './buttons/PaginationB
 import { randomButton, randomButtonPreview } from './buttons/RandomButton';
 import { eagleVision, eagleVisionPreview } from './frontend/EagleVision';
 import { spaceTravel, spaceTravelPreview } from './backgrounds/SpaceTravel';
+import { socialMediaCard, socialMediaCardPreview } from './frontend/SocialMediaCard';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -573,7 +574,13 @@ const sideBarOptions: Array<{
       //   preview: spotlightGridPreview,
       //   isNew: false
       // },
-
+      {
+        name: 'Social Media Card',
+        href: '/docs/socialMediaCard',
+        content: socialMediaCard,
+        preview: socialMediaCardPreview,
+        isNew: true
+      },
       {
         name: 'Stacked Input Form',
         href: '/docs/stackedInputForm',
