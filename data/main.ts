@@ -99,6 +99,7 @@ import { randomButton, randomButtonPreview } from './buttons/RandomButton';
 import { eagleVision, eagleVisionPreview } from './frontend/EagleVision';
 import { spaceTravel, spaceTravelPreview } from './backgrounds/SpaceTravel';
 import { socialMediaCard, socialMediaCardPreview } from './frontend/SocialMediaCard';
+import { aiInput, aiInputPreview } from './frontend/AiInput';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -265,6 +266,13 @@ const sideBarOptions: Array<{
   {
     title: 'Components',
     children: [
+      {
+        name: 'AI Input',
+        href: '/docs/aiInput',
+        content: aiInput,
+        preview: aiInputPreview,
+        isNew: true
+      },
       {
         name: 'Circle Menu',
         href: '/docs/circleMenu',
