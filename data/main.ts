@@ -268,7 +268,7 @@ const sideBarOptions: Array<{
     children: [
       {
         name: 'Electric AI Input',
-        href: '/docs/aiInput',
+        href: '/docs/electricaiinput',
         content: aiInput,
         preview: aiInputPreview,
         isNew: true
