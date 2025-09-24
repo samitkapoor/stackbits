@@ -12,13 +12,13 @@ export const aiInputPreview = (
 export const aiInput: Document = {
   sideBar: {
     group: 'Components',
-    name: 'AI Input',
+    name: 'Electric AI Input',
     order: 1
   },
   content: {
     sections: [
       {
-        heading: 'AI Input',
+        heading: 'Electric AI Input',
         content:
           'A modern AI-style input component with file upload support. Features smooth loading animations, customizable colors, and an intuitive interface perfect for AI chat applications.',
         sectionType: 'name'

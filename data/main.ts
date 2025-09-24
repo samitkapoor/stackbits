@@ -267,7 +267,7 @@ const sideBarOptions: Array<{
     title: 'Components',
     children: [
       {
-        name: 'AI Input',
+        name: 'Electric AI Input',
         href: '/docs/aiInput',
         content: aiInput,
         preview: aiInputPreview,
