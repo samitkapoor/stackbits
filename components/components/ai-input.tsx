@@ -59,6 +59,7 @@ type AiInputProps = {
   mainColor?: string;
   backgroundColor?: string;
   onSubmit?: (value: string, file: File | null) => void | Promise<void>;
+  animationStyle?: 'orbit' | 'pulse';
 } & Omit<React.ComponentProps<'textarea'>, 'onSubmit'>;
 
 const AiInput = ({
@@ -70,6 +71,7 @@ const AiInput = ({
   backgroundColor = '#111111',
   rows = 2,
   onSubmit,
+  animationStyle = 'orbit',
   ...props
 }: AiInputProps) => {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -167,8 +169,8 @@ const AiInput = ({
     ]);
     await Promise.all([
       leftBlob.start({
-        top: '0%',
-        left: '50%',
+        top: animationStyle === 'orbit' ? '0%' : '50%',
+        left: animationStyle === 'orbit' ? '50%' : '0%',
         translateY: '-50%',
         translateX: '-50%',
         transition: {
@@ -177,8 +179,8 @@ const AiInput = ({
         }
       }),
       rightBlob.start({
-        top: '100%',
-        left: '50%',
+        top: animationStyle === 'orbit' ? '100%' : '50%',
+        left: animationStyle === 'orbit' ? '50%' : '0%',
         translateY: '-50%',
         translateX: '-50%',
         transition: {
@@ -192,22 +194,36 @@ const AiInput = ({
   const thinkingAnimation = async () => {
     Promise.all([
       leftBlob.start({
-        left: ['50%', '100%', '100%', '0%', '0%', '50%'],
-        top: ['0%', '0%', '100%', '100%', '0%', '0%'],
+        left:
+          animationStyle === 'orbit'
+            ? ['50%', '100%', '100%', '0%', '0%', '50%']
+            : ['0%', '0%', '100%', '100%'],
+        top:
+          animationStyle === 'orbit'
+            ? ['0%', '0%', '100%', '100%', '0%', '0%']
+            : ['50%', '0%', '0%', '50%'],
+        width: animationStyle === 'orbit' ? '80px' : ['80px', '80px', '150px', '20px'],
         transition: {
           repeat: Infinity,
           repeatType: 'loop',
-          duration: 1,
+          duration: animationStyle === 'orbit' ? 1 : 0.8,
           ease: 'linear'
         }
       }),
       rightBlob.start({
-        left: ['50%', '0%', '0%', '100%', '100%', '50%'],
-        top: ['100%', '100%', '0%', '0%', '100%', '100%'],
+        left:
+          animationStyle === 'orbit'
+            ? ['50%', '0%', '0%', '100%', '100%', '50%']
+            : ['0%', '0%', '100%', '100%'],
+        top:
+          animationStyle === 'orbit'
+            ? ['100%', '100%', '0%', '0%', '100%', '100%']
+            : ['50%', '100%', '100%', '50%'],
+        width: animationStyle === 'orbit' ? '80px' : ['80px', '80px', '150px', '20px'],
         transition: {
           repeat: Infinity,
           repeatType: 'loop',
-          duration: 1,
+          duration: animationStyle === 'orbit' ? 1 : 0.8,
           ease: 'linear'
         }
       })
@@ -328,7 +344,7 @@ const AiInput = ({
 
       <motion.span
         initial={{
-          top: '0%',
+          top: animationStyle === 'orbit' ? '0%' : '50%',
           left: '0%',
           translateY: '-50%',
           translateX: '-40%',
@@ -343,8 +359,8 @@ const AiInput = ({
       />
       <motion.span
         initial={{
-          top: '100%',
-          left: '100%',
+          top: animationStyle === 'orbit' ? '100%' : '50%',
+          left: animationStyle === 'orbit' ? '100%' : '0%',
           translateY: '-50%',
           translateX: '-60%',
           height: '80px',

@@ -26,15 +26,31 @@ export const aiInput: Document = {
       {
         sectionType: 'preview',
         code: (
-          <div className="w-full h-full flex items-center justify-center bg-[#0d0d0d]">
-            <AiInput
-              width="500px"
-              backgroundColor="#0d0d0d"
-              onSubmit={async (value, file) => {
-                console.log(value, file);
-                await new Promise((resolve) => setTimeout(resolve, 3000));
-              }}
-            />
+          <div className="w-full h-full flex flex-col gap-32 items-center justify-center bg-[#0d0d0d]">
+            <div className="flex flex-col gap-2">
+              <p className="text-center !text-white z-10">Pulse Animation</p>
+              <AiInput
+                width="300px"
+                backgroundColor="#0d0d0d"
+                onSubmit={async (value, file) => {
+                  console.log(value, file);
+                  await new Promise((resolve) => setTimeout(resolve, 3000));
+                }}
+                animationStyle="pulse"
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <p className="text-center !text-white z-10">Orbit Animation</p>
+              <AiInput
+                width="300px"
+                backgroundColor="#0d0d0d"
+                onSubmit={async (value, file) => {
+                  console.log(value, file);
+                  await new Promise((resolve) => setTimeout(resolve, 3000));
+                }}
+                animationStyle="orbit"
+              />
+            </div>
           </div>
         )
       },
@@ -86,7 +102,7 @@ const Placeholder = ({ placeholder }: { placeholder: string }) => {
               type: 'spring'
             }}
             key={\`placeholder-text-\${i}-\${word}\`}
-            className="text-white/60"
+            className="text-white/60 font-extralight"
           >
             {word}
           </motion.span>
@@ -105,6 +121,7 @@ type AiInputProps = {
   mainColor?: string;
   backgroundColor?: string;
   onSubmit?: (value: string, file: File | null) => void | Promise<void>;
+  animationStyle?: 'orbit' | 'pulse';
 } & Omit<React.ComponentProps<'textarea'>, 'onSubmit'>;
 
 const AiInput = ({
@@ -116,6 +133,7 @@ const AiInput = ({
   backgroundColor = '#111111',
   rows = 2,
   onSubmit,
+  animationStyle = 'orbit',
   ...props
 }: AiInputProps) => {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -213,8 +231,8 @@ const AiInput = ({
     ]);
     await Promise.all([
       leftBlob.start({
-        top: '0%',
-        left: '50%',
+        top: animationStyle === 'orbit' ? '0%' : '50%',
+        left: animationStyle === 'orbit' ? '50%' : '0%',
         translateY: '-50%',
         translateX: '-50%',
         transition: {
@@ -223,8 +241,8 @@ const AiInput = ({
         }
       }),
       rightBlob.start({
-        top: '100%',
-        left: '50%',
+        top: animationStyle === 'orbit' ? '100%' : '50%',
+        left: animationStyle === 'orbit' ? '50%' : '0%',
         translateY: '-50%',
         translateX: '-50%',
         transition: {
@@ -238,22 +256,36 @@ const AiInput = ({
   const thinkingAnimation = async () => {
     Promise.all([
       leftBlob.start({
-        left: ['50%', '100%', '100%', '0%', '0%', '50%'],
-        top: ['0%', '0%', '100%', '100%', '0%', '0%'],
+        left:
+          animationStyle === 'orbit'
+            ? ['50%', '100%', '100%', '0%', '0%', '50%']
+            : ['0%', '0%', '100%', '100%'],
+        top:
+          animationStyle === 'orbit'
+            ? ['0%', '0%', '100%', '100%', '0%', '0%']
+            : ['50%', '0%', '0%', '50%'],
+        width: animationStyle === 'orbit' ? '80px' : ['80px', '80px', '150px', '20px'],
         transition: {
           repeat: Infinity,
           repeatType: 'loop',
-          duration: 1,
+          duration: animationStyle === 'orbit' ? 1 : 0.8,
           ease: 'linear'
         }
       }),
       rightBlob.start({
-        left: ['50%', '0%', '0%', '100%', '100%', '50%'],
-        top: ['100%', '100%', '0%', '0%', '100%', '100%'],
+        left:
+          animationStyle === 'orbit'
+            ? ['50%', '0%', '0%', '100%', '100%', '50%']
+            : ['0%', '0%', '100%', '100%'],
+        top:
+          animationStyle === 'orbit'
+            ? ['100%', '100%', '0%', '0%', '100%', '100%']
+            : ['50%', '100%', '100%', '50%'],
+        width: animationStyle === 'orbit' ? '80px' : ['80px', '80px', '150px', '20px'],
         transition: {
           repeat: Infinity,
           repeatType: 'loop',
-          duration: 1,
+          duration: animationStyle === 'orbit' ? 1 : 0.8,
           ease: 'linear'
         }
       })
@@ -374,7 +406,7 @@ const AiInput = ({
 
       <motion.span
         initial={{
-          top: '0%',
+          top: animationStyle === 'orbit' ? '0%' : '50%',
           left: '0%',
           translateY: '-50%',
           translateX: '-40%',
@@ -389,8 +421,8 @@ const AiInput = ({
       />
       <motion.span
         initial={{
-          top: '100%',
-          left: '100%',
+          top: animationStyle === 'orbit' ? '100%' : '50%',
+          left: animationStyle === 'orbit' ? '100%' : '0%',
           translateY: '-50%',
           translateX: '-60%',
           height: '80px',
@@ -513,6 +545,7 @@ export default AiInput;
     console.log(value, file);
     await new Promise((resolve) => setTimeout(resolve, 3000));
   }}
+  animationStyle="orbit" // or 'pulse'
 />`
       }
     ]
