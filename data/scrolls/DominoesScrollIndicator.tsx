@@ -44,7 +44,7 @@ export const dominoesScrollIndicator: Document = {
               </div>
             </div>
 
-            <div className="sticky top-full right-10 z-[999] w-full bg-black/50 p-2">
+            <div className="absolute bottom-4 right-4 z-[999] bg-black/50 p-2 rounded">
               <DominoesScrollIndicator
                 scrollContainerId="dominoes-scroll-target"
                 direction="vertical"
@@ -157,7 +157,7 @@ export default DominoesScrollIndicator;
       })}
     </div>
   </div>
-  <div className="sticky top-full right-10 z-[999] w-full bg-black/50 p-2">
+  <div className="absolute bottom-4 right-4 z-[999] bg-black/50 p-2 rounded">
     <DominoesScrollIndicator scrollContainerId="scroll-target" direction="vertical" />
   </div>
 </div>`
