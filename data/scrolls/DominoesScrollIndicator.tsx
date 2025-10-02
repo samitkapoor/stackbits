@@ -31,11 +31,8 @@ export const dominoesScrollIndicator: Document = {
         sectionType: 'preview',
         code: (
           <div className="h-full w-full flex items-start justify-center gap-2 relative overflow-hidden">
-            <div
-              id="dominoes-scroll-target"
-              className="h-full w-full overflow-y-scroll absolute top-0 left-0"
-            >
-              <div className="flex flex-col items-center justify-start gap-2 pb-14 absolute top-0 left-1/2 -translate-x-1/2">
+            <div id="dominoes-scroll-target" className="h-full w-full overflow-y-scroll">
+              <div className="flex flex-col items-center justify-start gap-2 pb-14">
                 {images.map((image, i) => {
                   return (
                     <Image key={i} src={image.image} alt={image.image} width={512} height={512} />
