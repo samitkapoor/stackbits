@@ -100,6 +100,10 @@ import { eagleVision, eagleVisionPreview } from './frontend/EagleVision';
 import { spaceTravel, spaceTravelPreview } from './backgrounds/SpaceTravel';
 import { socialMediaCard, socialMediaCardPreview } from './frontend/SocialMediaCard';
 import { aiInput, aiInputPreview } from './frontend/AiInput';
+import {
+  dominoesScrollIndicator,
+  dominoesScrollIndicatorPreview
+} from './scrolls/DominoesScrollIndicator';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -267,13 +271,6 @@ const sideBarOptions: Array<{
     title: 'Components',
     children: [
       {
-        name: 'Electric AI Input',
-        href: '/docs/electricaiinput',
-        content: aiInput,
-        preview: aiInputPreview,
-        isNew: true
-      },
-      {
         name: 'Circle Menu',
         href: '/docs/circleMenu',
         content: circleMenu,
@@ -393,10 +390,24 @@ const sideBarOptions: Array<{
         isNew: true
       },
       {
+        name: 'Dominoes Scroll Indicator',
+        href: '/docs/dominoesscrollindicator',
+        content: dominoesScrollIndicator,
+        preview: dominoesScrollIndicatorPreview,
+        isNew: true
+      },
+      {
         name: 'Eagle Vision',
         href: '/docs/eagleVision',
         content: eagleVision,
         preview: eagleVisionPreview,
+        isNew: true
+      },
+      {
+        name: 'Electric AI Input',
+        href: '/docs/electricaiinput',
+        content: aiInput,
+        preview: aiInputPreview,
         isNew: true
       },
       {
