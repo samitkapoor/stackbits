@@ -108,6 +108,10 @@ import {
   rollingBallScrollIndicator,
   rollingBallScrollIndicatorPreview
 } from './scrolls/RollingBallScrollIndicator';
+import {
+  glowingScrollIndicator,
+  glowingScrollIndicatorPreview
+} from './scrolls/GlowingScrollIndicator';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -426,6 +430,13 @@ const sideBarOptions: Array<{
         href: '/docs/flipScroll',
         content: flipScroll,
         preview: flipScrollPreview,
+        isNew: true
+      },
+      {
+        name: 'Glowing Scroll Indicator',
+        href: '/docs/glowingscrollindicator',
+        content: glowingScrollIndicator,
+        preview: glowingScrollIndicatorPreview,
         isNew: true
       },
       {
