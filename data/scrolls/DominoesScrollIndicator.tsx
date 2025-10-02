@@ -30,12 +30,12 @@ export const dominoesScrollIndicator: Document = {
       {
         sectionType: 'preview',
         code: (
-          <div className="h-full w-full flex items-start justify-center gap-2 relative">
+          <div className="h-full w-full flex items-start justify-center gap-2 relative overflow-hidden">
             <div
               id="dominoes-scroll-target"
               className="h-full w-full overflow-y-scroll absolute top-0 left-0"
             >
-              <div className="flex flex-col items-center justify-start gap-2 pb-14">
+              <div className="flex flex-col items-center justify-start gap-2 pb-14 absolute top-0 left-1/2 -translate-x-1/2">
                 {images.map((image, i) => {
                   return (
                     <Image key={i} src={image.image} alt={image.image} width={512} height={512} />
@@ -43,6 +43,7 @@ export const dominoesScrollIndicator: Document = {
                 })}
               </div>
             </div>
+
             <div className="sticky top-full right-10 z-[999] w-full bg-black/50 p-2">
               <DominoesScrollIndicator
                 scrollContainerId="dominoes-scroll-target"
