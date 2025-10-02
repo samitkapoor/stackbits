@@ -2,7 +2,7 @@
 
 import { motion, MotionValue, useScroll, useSpring, useTransform } from 'framer-motion';
 import { usePathname } from 'next/navigation';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 
 const BARS = 40;
 
@@ -41,22 +41,19 @@ const ScrollBar = ({
   );
 };
 
-const ScrollIndicator = ({
-  scrollContainerId = 'scroll-target',
-  direction = 'vertical'
+const ScrollIndicatorBars = ({
+  container,
+  direction
 }: {
-  scrollContainerId?: string;
-  direction?: 'vertical' | 'horizontal';
+  container: HTMLElement;
+  direction: 'vertical' | 'horizontal';
 }) => {
-  const ref = useRef<HTMLElement>(null);
+  const ref = React.useRef<HTMLElement>(container);
 
-  useEffect(() => {
-    ref.current = null;
-    const scrollContainer = document.getElementById(scrollContainerId);
-    if (scrollContainer) {
-      ref.current = scrollContainer;
-    }
-  }, []);
+  // Update ref if container changes
+  React.useEffect(() => {
+    ref.current = container;
+  }, [container]);
 
   const { scrollXProgress, scrollYProgress } = useScroll({
     container: ref
@@ -92,6 +89,29 @@ const ScrollIndicator = ({
       </motion.div>
     </div>
   );
+};
+
+const ScrollIndicator = ({
+  scrollContainerId,
+  direction
+}: {
+  scrollContainerId: string;
+  direction: 'vertical' | 'horizontal';
+}) => {
+  const [container, setContainer] = React.useState<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const scrollContainer = document.getElementById(scrollContainerId);
+    if (scrollContainer) {
+      setContainer(scrollContainer);
+    }
+  }, [scrollContainerId]);
+
+  if (!container) {
+    return null;
+  }
+
+  return <ScrollIndicatorBars container={container} direction={direction} />;
 };
 
 const RollingBallScrollIndicator = ({

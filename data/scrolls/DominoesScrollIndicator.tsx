@@ -60,7 +60,7 @@ export const dominoesScrollIndicator: Document = {
 
 import { motion, MotionValue, useScroll, useTransform } from 'framer-motion';
 import { usePathname } from 'next/navigation';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 
 const BARS = 40;
 
@@ -86,21 +86,19 @@ const ScrollBar = ({
   );
 };
 
-const DominoesScroll = ({
-  scrollContainerId,
+const DominoesScrollBars = ({
+  container,
   direction
 }: {
-  scrollContainerId: string;
+  container: HTMLElement;
   direction: 'vertical' | 'horizontal';
 }) => {
-  const ref = useRef<HTMLElement>(null);
+  const ref = React.useRef<HTMLElement>(container);
 
-  useEffect(() => {
-    const scrollContainer = document.getElementById(scrollContainerId);
-    if (scrollContainer) {
-      ref.current = scrollContainer;
-    }
-  }, [scrollContainerId]);
+  // Update ref if container changes
+  React.useEffect(() => {
+    ref.current = container;
+  }, [container]);
 
   const { scrollYProgress, scrollXProgress } = useScroll({
     container: ref
@@ -119,6 +117,29 @@ const DominoesScroll = ({
       })}
     </div>
   );
+};
+
+const DominoesScroll = ({
+  scrollContainerId,
+  direction
+}: {
+  scrollContainerId: string;
+  direction: 'vertical' | 'horizontal';
+}) => {
+  const [container, setContainer] = React.useState<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const scrollContainer = document.getElementById(scrollContainerId);
+    if (scrollContainer) {
+      setContainer(scrollContainer);
+    }
+  }, [scrollContainerId]);
+
+  if (!container) {
+    return null;
+  }
+
+  return <DominoesScrollBars container={container} direction={direction} />;
 };
 
 const DominoesScrollIndicator = ({
@@ -141,11 +162,8 @@ export default DominoesScrollIndicator;
       {
         heading: 'Usage',
         sectionType: 'usage',
-        code: `<div className="h-full w-full flex items-start justify-center gap-2 relative">
-  <div
-    id="scroll-target"
-    className="h-full w-full overflow-y-scroll absolute top-0 left-0"
-  >
+        code: `<div className="h-full w-full flex items-start justify-center gap-2 relative overflow-hidden">
+  <div id="dominoes-scroll-target" className="h-full w-full overflow-y-scroll">
     <div className="flex flex-col items-center justify-start gap-2 pb-14">
       {images.map((image, i) => {
         return (
@@ -154,8 +172,12 @@ export default DominoesScrollIndicator;
       })}
     </div>
   </div>
+
   <div className="absolute bottom-4 right-4 z-[999] bg-black/50 p-2 rounded">
-    <DominoesScrollIndicator scrollContainerId="scroll-target" direction="vertical" />
+    <DominoesScrollIndicator
+      scrollContainerId="dominoes-scroll-target"
+      direction="vertical"
+    />
   </div>
 </div>`
       }
