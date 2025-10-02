@@ -1,3 +1,5 @@
+'use client';
+
 import { installDependenciesCode } from '@/constants/code';
 import { Document } from '../main';
 import DominoesScrollIndicator from '@/components/scrolls/dominoes-scroll-indicator';
@@ -30,7 +32,7 @@ export const dominoesScrollIndicator: Document = {
         code: (
           <div className="h-full w-full flex items-start justify-center gap-2 relative">
             <div
-              id="scroll-target"
+              id="dominoes-scroll-target"
               className="h-full w-full overflow-y-scroll absolute top-0 left-0"
             >
               <div className="flex flex-col items-center justify-start gap-2 pb-14">
@@ -42,7 +44,10 @@ export const dominoesScrollIndicator: Document = {
               </div>
             </div>
             <div className="sticky top-full right-10 z-[999] w-full bg-black/50 p-2">
-              <DominoesScrollIndicator scrollContainerId="scroll-target" direction="vertical" />
+              <DominoesScrollIndicator
+                scrollContainerId="dominoes-scroll-target"
+                direction="vertical"
+              />
             </div>
           </div>
         )
