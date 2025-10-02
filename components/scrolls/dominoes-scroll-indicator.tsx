@@ -2,7 +2,7 @@
 
 import { motion, MotionValue, useScroll, useTransform } from 'framer-motion';
 import { usePathname } from 'next/navigation';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 
 const BARS = 40;
 
