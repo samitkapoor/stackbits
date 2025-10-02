@@ -29,20 +29,18 @@ const ScrollBar = ({
 };
 
 const DominoesScrollBars = ({
-  scrollContainerId,
+  container,
   direction
 }: {
-  scrollContainerId: string;
+  container: HTMLElement;
   direction: 'vertical' | 'horizontal';
 }) => {
-  const ref = useRef<HTMLElement>(null);
+  const ref = React.useRef<HTMLElement>(container);
 
-  useEffect(() => {
-    const scrollContainer = document.getElementById(scrollContainerId);
-    if (scrollContainer) {
-      ref.current = scrollContainer;
-    }
-  }, [scrollContainerId]);
+  // Update ref if container changes
+  React.useEffect(() => {
+    ref.current = container;
+  }, [container]);
 
   const { scrollYProgress, scrollXProgress } = useScroll({
     container: ref
@@ -70,20 +68,20 @@ const DominoesScroll = ({
   scrollContainerId: string;
   direction: 'vertical' | 'horizontal';
 }) => {
-  const [isReady, setIsReady] = React.useState(false);
+  const [container, setContainer] = React.useState<HTMLElement | null>(null);
 
   useEffect(() => {
     const scrollContainer = document.getElementById(scrollContainerId);
     if (scrollContainer) {
-      setIsReady(true);
+      setContainer(scrollContainer);
     }
   }, [scrollContainerId]);
 
-  if (!isReady) {
+  if (!container) {
     return null;
   }
 
-  return <DominoesScrollBars scrollContainerId={scrollContainerId} direction={direction} />;
+  return <DominoesScrollBars container={container} direction={direction} />;
 };
 
 const DominoesScrollIndicator = ({
