@@ -104,6 +104,10 @@ import {
   dominoesScrollIndicator,
   dominoesScrollIndicatorPreview
 } from './scrolls/DominoesScrollIndicator';
+import {
+  rollingBallScrollIndicator,
+  rollingBallScrollIndicatorPreview
+} from './scrolls/RollingBallScrollIndicator';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -533,6 +537,13 @@ const sideBarOptions: Array<{
         href: '/docs/pixelatedcarousel',
         content: pixelatedCarousel,
         preview: pixelatedCarouselPreview,
+        isNew: true
+      },
+      {
+        name: 'Rolling Ball Scroll Indicator',
+        href: '/docs/rollingballscrollindicator',
+        content: rollingBallScrollIndicator,
+        preview: rollingBallScrollIndicatorPreview,
         isNew: true
       },
       {

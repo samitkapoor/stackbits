@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "compress": "ffmpeg -i public/demos/dominoes-scroll-indicator.mov -c:v libx264 -crf 23 -preset medium -c:a aac -b:a 128k public/demos/dominoes-scroll-indicator.mp4"
+    "compress": "ffmpeg -i public/demos/rolling-ball-scroll-indicator.mov -c:v libx264 -crf 23 -preset medium -c:a aac -b:a 128k public/demos/rolling-ball-scroll-indicator.mp4"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",

@@ -1,0 +1,1 @@
+generate a short no more than 2 3 lines paragraph description for this component, read other files in this folder to understand the format, i need it to be seo friendly and layman english to target seo keywords. don't be technical, just explain what this component does and looks like in layman terms.
