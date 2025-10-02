@@ -2,7 +2,7 @@
 
 import { motion, MotionValue, useScroll, useTransform } from 'framer-motion';
 import { usePathname } from 'next/navigation';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const BARS = 40;
 
@@ -36,11 +36,13 @@ const DominoesScroll = ({
   direction: 'vertical' | 'horizontal';
 }) => {
   const ref = useRef<HTMLElement>(null);
+  const [foundScrollContainer, setFoundScrollContainer] = useState(false);
 
   useEffect(() => {
     const scrollContainer = document.getElementById(scrollContainerId);
     if (scrollContainer) {
       ref.current = scrollContainer;
+      setFoundScrollContainer(true);
     }
   }, [scrollContainerId]);
 
@@ -50,15 +52,16 @@ const DominoesScroll = ({
 
   return (
     <div className="flex items-end justify-center gap-1 relative">
-      {Array.from({ length: BARS }).map((_, index) => {
-        return (
-          <ScrollBar
-            key={`scroll-bar-${index}`}
-            index={index}
-            scrollProgress={direction === 'vertical' ? scrollYProgress : scrollXProgress}
-          />
-        );
-      })}
+      {foundScrollContainer &&
+        Array.from({ length: BARS }).map((_, index) => {
+          return (
+            <ScrollBar
+              key={`scroll-bar-${index}`}
+              index={index}
+              scrollProgress={direction === 'vertical' ? scrollYProgress : scrollXProgress}
+            />
+          );
+        })}
     </div>
   );
 };
