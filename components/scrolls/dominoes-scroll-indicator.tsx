@@ -28,7 +28,7 @@ const ScrollBar = ({
   );
 };
 
-const DominoesScroll = ({
+const DominoesScrollBars = ({
   scrollContainerId,
   direction
 }: {
@@ -38,29 +38,15 @@ const DominoesScroll = ({
   const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    ref.current = null;
     const scrollContainer = document.getElementById(scrollContainerId);
     if (scrollContainer) {
       ref.current = scrollContainer;
-      console.log('Found scroll container:', scrollContainerId, scrollContainer);
-    } else {
-      console.log('Scroll container not found:', scrollContainerId);
     }
-  }, []);
+  }, [scrollContainerId]);
 
   const { scrollYProgress, scrollXProgress } = useScroll({
     container: ref
   });
-
-  // Debug scroll progress
-  useEffect(() => {
-    if (ref.current) {
-      const unsubscribe = scrollYProgress.on('change', (latest) => {
-        console.log('Scroll Y Progress:', latest);
-      });
-      return unsubscribe;
-    }
-  }, [scrollYProgress]);
 
   return (
     <div className="flex items-end justify-center gap-1 relative">
@@ -75,6 +61,29 @@ const DominoesScroll = ({
       })}
     </div>
   );
+};
+
+const DominoesScroll = ({
+  scrollContainerId,
+  direction
+}: {
+  scrollContainerId: string;
+  direction: 'vertical' | 'horizontal';
+}) => {
+  const [isReady, setIsReady] = React.useState(false);
+
+  useEffect(() => {
+    const scrollContainer = document.getElementById(scrollContainerId);
+    if (scrollContainer) {
+      setIsReady(true);
+    }
+  }, [scrollContainerId]);
+
+  if (!isReady) {
+    return null;
+  }
+
+  return <DominoesScrollBars scrollContainerId={scrollContainerId} direction={direction} />;
 };
 
 const DominoesScrollIndicator = ({
