@@ -87,9 +87,9 @@ import { interactiveCTA, interactiveCTAPreview } from './frontend/InteractiveCTA
 import { photoGallery, photoGalleryPreview } from './frontend/PhotoGallery';
 import { holdButton, holdButtonPreview } from './buttons/HoldButton';
 import { dialogForm, dialogFormPreview } from './frontend/DialogForm';
-import { stackScroll, stackScrollPreview } from './frontend/StackScroll';
-import { horizontalScroll, horizontalScrollPreview } from './frontend/HorizontalScroll';
-import { flipScroll, flipScrollPreview } from './frontend/FlipScroll';
+import { stackScroll, stackScrollPreview } from './list-scroll/StackScroll';
+import { horizontalScroll, horizontalScrollPreview } from './list-scroll/HorizontalScroll';
+import { flipScroll, flipScrollPreview } from './list-scroll/FlipScroll';
 import { sineWave, sineWavePreview } from './frontend/SineWave';
 import { sidebar, sidebarPreview } from './frontend/Sidebar';
 import { fileInput, fileInputPreview } from './frontend/FileInput';
@@ -100,6 +100,7 @@ import { eagleVision, eagleVisionPreview } from './frontend/EagleVision';
 import { spaceTravel, spaceTravelPreview } from './backgrounds/SpaceTravel';
 import { socialMediaCard, socialMediaCardPreview } from './frontend/SocialMediaCard';
 import { aiInput, aiInputPreview } from './frontend/AiInput';
+import { dominoesListScroll, dominoesListScrollPreview } from './list-scroll/DominoesScroll';
 import {
   dominoesScrollIndicator,
   dominoesScrollIndicatorPreview
@@ -395,6 +396,13 @@ const sideBarOptions: Array<{
         href: '/docs/dialogform',
         content: dialogForm,
         preview: dialogFormPreview,
+        isNew: true
+      },
+      {
+        name: 'Dominoes List Scroll',
+        href: '/docs/dominoeslistscroll',
+        content: dominoesListScroll,
+        preview: dominoesListScrollPreview,
         isNew: true
       },
       {
