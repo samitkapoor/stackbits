@@ -66,9 +66,9 @@ const TextInformation = () => {
       style={{
         background: 'radial-gradient(ellipse, rgba(0, 0, 0, 0.2) 20%, transparent )'
       }}
-      className="flex flex-col items-center justify-center z-0 h-full w-full pt-20"
+      className="flex flex-col items-center justify-center z-0 h-full w-full pt-32"
     >
-      <a
+      {/* <a
         href="https://peerlist.io/samitkapoor/project/stackbits-v2"
         target="_blank"
         rel="noreferrer"
@@ -79,7 +79,7 @@ const TextInformation = () => {
           alt="StackBits V2"
           style={{ width: 'auto', height: '54px' }}
         />
-      </a>
+      </a> */}
 
       <TechStack />
       <BounceInText
