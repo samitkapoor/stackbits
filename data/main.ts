@@ -24,7 +24,7 @@ import { prismaticHaze, prismaticHazePreview } from './backgrounds/PrismaticHaze
 import { wavyBackgroundPreview, wavyBackground } from './backgrounds/WavyBackground';
 // // import { flipRevealCard, flipRevealCardPreview } from './frontend/FlipRevealCard';
 // import { movingBorderCard, movingBorderCardPreview } from './frontend/MovingBorderCard';
-// import { iconWheel, iconWheelPreview } from './frontend/IconWheel';
+import { iconWheel, iconWheelPreview } from './frontend/IconWheel';
 // import { waveNoiseBackground, waveNoiseBackgroundPreview } from './frontend/WaveNoiseBackground';
 // import { topographyBackground, topographyBackgroundPreview } from './frontend/TopographyBackground';
 // // import { textureBackground, textureBackgroundPreview } from './frontend/TextureBackground';
@@ -190,7 +190,7 @@ const sideBarOptions: Array<{
         href: '/docs/holdButton',
         content: holdButton,
         preview: holdButtonPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Toggle Button',
@@ -218,14 +218,14 @@ const sideBarOptions: Array<{
         href: '/docs/paginationButton',
         content: paginationButton,
         preview: paginationButtonPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Random Button',
         href: '/docs/randomButton',
         content: randomButton,
         preview: randomButtonPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Shine Button',
@@ -265,7 +265,7 @@ const sideBarOptions: Array<{
         href: '/docs/spacetravel',
         content: spaceTravel,
         preview: spaceTravelPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Wavy Background',
@@ -284,7 +284,7 @@ const sideBarOptions: Array<{
         href: '/docs/circleMenu',
         content: circleMenu,
         preview: circleMenuPreview,
-        isNew: true
+        isNew: false
       },
       // {
       //   name: 'Flip Reveal Card',
@@ -382,7 +382,7 @@ const sideBarOptions: Array<{
       //   href: '/docs/glassGrid',
       //   content: glassGrid,
       //   preview: glassGridPreview,
-      //   isNew: true
+      //   isNew: false
       // },
 
       // {
@@ -396,63 +396,70 @@ const sideBarOptions: Array<{
         href: '/docs/dialogform',
         content: dialogForm,
         preview: dialogFormPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Dominoes List Scroll',
         href: '/docs/dominoeslistscroll',
         content: dominoesListScroll,
         preview: dominoesListScrollPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Dominoes Scroll Indicator',
         href: '/docs/dominoesscrollindicator',
         content: dominoesScrollIndicator,
         preview: dominoesScrollIndicatorPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Eagle Vision',
         href: '/docs/eagleVision',
         content: eagleVision,
         preview: eagleVisionPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Electric AI Input',
         href: '/docs/electricaiinput',
         content: aiInput,
         preview: aiInputPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'File Input',
         href: '/docs/fileinput',
         content: fileInput,
         preview: fileInputPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Flip Scroll',
         href: '/docs/flipScroll',
         content: flipScroll,
         preview: flipScrollPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Glowing Scroll Indicator',
         href: '/docs/glowingscrollindicator',
         content: glowingScrollIndicator,
         preview: glowingScrollIndicatorPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Horizontal Scroll',
         href: '/docs/horizontalscroll',
         content: horizontalScroll,
         preview: horizontalScrollPreview,
-        isNew: true
+        isNew: false
+      },
+      {
+        name: 'Icon Wheel',
+        href: '/docs/iconwheel',
+        content: iconWheel,
+        preview: iconWheelPreview,
+        isNew: false
       },
       {
         name: 'Image Pile',
@@ -466,21 +473,21 @@ const sideBarOptions: Array<{
         href: '/docs/interactivecta',
         content: interactiveCTA,
         preview: interactiveCTAPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Interactive Folder',
         href: '/docs/interactivefolder',
         content: interactiveFolder,
         preview: interactiveFolderPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Interest Picker',
         href: '/docs/interestpicker',
         content: interestPicker,
         preview: interestPickerPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Jelly Loader',
@@ -542,35 +549,35 @@ const sideBarOptions: Array<{
         href: '/docs/otpinput',
         content: otpInput,
         preview: otpInputPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Photo Gallery',
         href: '/docs/photogallery',
         content: photoGallery,
         preview: photoGalleryPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Pixelated Carousel',
         href: '/docs/pixelatedcarousel',
         content: pixelatedCarousel,
         preview: pixelatedCarouselPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Rolling Ball Scroll Indicator',
         href: '/docs/rollingballscrollindicator',
         content: rollingBallScrollIndicator,
         preview: rollingBallScrollIndicatorPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Rubik Cube',
         href: '/docs/rubikcube',
         content: rubikCube,
         preview: rubikCubePreview,
-        isNew: true
+        isNew: false
       },
 
       // {
@@ -593,14 +600,14 @@ const sideBarOptions: Array<{
         href: '/docs/sidebar',
         content: sidebar,
         preview: sidebarPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Sine Wave',
         href: '/docs/sineWave',
         content: sineWave,
         preview: sineWavePreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Skeumorphic Music Card',
@@ -614,7 +621,7 @@ const sideBarOptions: Array<{
       //   href: '/docs/spiderloader',
       //   content: spiderLoader,
       //   preview: spiderLoaderPreview,
-      //   isNew: true
+      //   isNew: false
       // },
       // {
       //   name: 'Spotlight Grid',
@@ -628,21 +635,21 @@ const sideBarOptions: Array<{
         href: '/docs/socialMediaCard',
         content: socialMediaCard,
         preview: socialMediaCardPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Stacked Input Form',
         href: '/docs/stackedInputForm',
         content: stackedInputForm,
         preview: stackedInputFormPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Stack Scroll',
         href: '/docs/stackScroll',
         content: stackScroll,
         preview: stackScrollPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Trading Card',
@@ -674,7 +681,7 @@ const sideBarOptions: Array<{
         href: '/docs/bounceInText',
         content: bounceInText,
         preview: bounceInTextPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Dotted Text',
@@ -745,7 +752,7 @@ const sideBarOptions: Array<{
         href: '/docs/sentenceflip',
         content: sentenceFlip,
         preview: sentenceFlipPreview,
-        isNew: true
+        isNew: false
       },
       {
         name: 'Wavy Text',

@@ -1,22 +1,23 @@
 import IconWheel from '@/components/ui/icon-wheel';
 import { Document } from '../main';
+import { cnCode, installDependenciesCode } from '@/constants/code';
 
 export const iconWheelPreview = (
   <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden relative p-10 gap-5">
-    <div className="scale-50">
-      <IconWheel
-        icons={[
-          '/css.svg',
-          '/framermotion.png',
-          '/javascript.svg',
-          '/nextjs.svg',
-          '/nodejs.svg',
-          '/react.svg',
-          '/tailwindcss.svg',
-          '/typescript.svg'
-        ]}
-      />
-    </div>
+    <IconWheel
+      icons={[
+        '/css.svg',
+        '/framermotion.png',
+        '/javascript.svg',
+        '/nextjs.svg',
+        '/nodejs.svg',
+        '/react.svg',
+        '/tailwindcss.svg',
+        '/typescript.svg'
+      ]}
+      radius={75}
+      className="!h-[32px] !w-[32px]"
+    />
   </div>
 );
 
@@ -31,7 +32,7 @@ export const iconWheel: Document = {
       {
         heading: 'Icon Wheel',
         content:
-          'The IconWheel brings your favorite icons to life, spinning endlessly in a mesmerizing circular motion. Whether showcasing tech stacks, skills, or fun graphics, this component keeps things dynamic and engaging. Plus, with smooth hover effects and responsive resizing, it’s the perfect way to add some interactive flair to your UI. Let your icons orbit in style! ✨🌀',
+          'A rotating wheel that displays your tech stack icons in continuous motion. Perfect for showcasing programming languages and frameworks on your portfolio with smooth animations and hover effects.',
         sectionType: 'paragraph'
       },
       {
@@ -54,15 +55,8 @@ export const iconWheel: Document = {
           </div>
         )
       },
-      {
-        heading: 'Follow below steps 👇🏻',
-        sectionType: 'heading'
-      },
-      {
-        heading: 'Install dependencies',
-        sectionType: 'component',
-        code: `npm i framer-motion`
-      },
+      installDependenciesCode({ framerMotion: true }),
+      cnCode,
       {
         heading: 'Component',
         sectionType: 'component',
