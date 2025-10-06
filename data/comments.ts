@@ -24,6 +24,87 @@ export const comments = [
     href: 'https://x.com/samstooff/status/1968650211774918719'
   },
   {
+    href: 'https://x.com/mannupaaji/status/1974868581608550493',
+    name: 'Manu Arora',
+    pfp: 'https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg',
+    comment: 'Mast',
+    isVerified: true,
+    username: 'mannupaaji',
+    platform: 'x'
+  },
+  {
+    href: 'https://x.com/mihirtwt/status/1974650100447433056',
+    name: 'OPM',
+    pfp: 'https://pbs.twimg.com/profile_images/1938744598832259077/gN5y6Lls_400x400.jpg',
+    comment: 'damn, looking at all these components, makes me feel like stealing all these concept',
+    isVerified: true,
+    username: 'mihirtwt',
+    platform: 'x'
+  },
+  {
+    href: 'https://x.com/basit_designs/status/1974479284484952255',
+    username: 'basit_designs',
+    name: 'Basit A. Khan',
+    pfp: 'https://pbs.twimg.com/profile_images/1624467229617319936/YjWCi14M_400x400.jpg',
+    comment: 'Great work mate 🔥',
+    isVerified: true,
+    platform: 'x'
+  },
+  {
+    href: 'https://x.com/Gur__vi/status/1974074008292503758',
+    name: 'Guri',
+    username: 'Gur__vi',
+    pfp: 'https://pbs.twimg.com/profile_images/1917119966035193856/K_vuaHAt_400x400.jpg',
+    comment: 'Killed it',
+    isVerified: true,
+    platform: 'x'
+  },
+  {
+    href: 'https://x.com/madebyvishesh/status/1974604485935955974',
+    name: 'vishesh',
+    pfp: 'https://pbs.twimg.com/profile_images/1962872565120241664/4dQVx-rc_400x400.jpg',
+    comment: 'so cool man',
+    isVerified: true,
+    platform: 'x',
+    username: 'madebyvishesh'
+  },
+  {
+    href: 'https://x.com/TukiFromKL/status/1974603208464138663',
+    name: 'Tuki',
+    pfp: 'https://pbs.twimg.com/profile_images/1967778836910616576/-PF6qOy4_400x400.jpg',
+    comment: 'Looks really good',
+    isVerified: true,
+    platform: 'x',
+    username: 'TukiFromKL'
+  },
+  {
+    href: 'https://x.com/SanndyCreationz/status/1974350462444056698',
+    name: 'Sanndy',
+    pfp: 'https://pbs.twimg.com/profile_images/1954932902208446464/OZUWaCPk_400x400.jpg',
+    comment: 'Really cool man 🔥',
+    isVerified: true,
+    platform: 'x',
+    username: 'SanndyCreationz'
+  },
+  {
+    href: 'https://x.com/justjossy__/status/1974381299751399741',
+    name: 'Josiah Bhanghoyer',
+    pfp: 'https://pbs.twimg.com/profile_images/1943629441059401728/ndzlm3z1_400x400.jpg',
+    comment: 'This looks cool!',
+    isVerified: true,
+    platform: 'x',
+    username: 'justjossy__'
+  },
+  {
+    href: 'https://x.com/BlessCreatics/status/1974349894115865018',
+    name: 'blesson',
+    pfp: 'https://pbs.twimg.com/profile_images/1895077904549134337/tShuYhw2_400x400.jpg',
+    comment: 'looks really cool',
+    isVerified: true,
+    platform: 'x',
+    username: 'BlessCreatics'
+  },
+  {
     id: 25,
     comment: 'You’ve clearly got a strong eye for detail. Love it',
     name: 'Kelechi',
