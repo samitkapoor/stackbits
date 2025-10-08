@@ -32,10 +32,16 @@ import { maskCursorEffectPreview } from '@/data/frontend/MaskCursorEffect';
 import { magnetTabsPreview } from '@/data/frontend/MagnetTabs';
 import { masonryGridPreview } from '@/data/frontend/MasonryGrid';
 import { randomButtonPreview } from '@/data/buttons/RandomButton';
+import { dominoesListScrollPreview } from '@/data/list-scroll/DominoesScroll';
+import { dominoesScrollIndicatorPreview } from '@/data/scrolls/DominoesScrollIndicator';
+import { leaveRatingPreview } from '@/data/frontend/LeaveRating';
 
 const components = [
+  { component: dominoesListScrollPreview, link: '/docs/dominoesListScroll' },
   { component: circleMenuPreview, link: '/docs/circleMenu' },
+  { component: leaveRatingPreview, link: '/docs/leaveRating' },
   { component: dialogFormPreview, link: '/docs/dialogForm' },
+  { component: dominoesScrollIndicatorPreview, link: '/docs/dominoesScrollIndicator' },
   { component: fileInputPreview, link: '/docs/fileInput' },
   { component: flipScrollPreview, link: '/docs/flipScroll' },
   { component: horizontalScrollPreview, link: '/docs/horizontalScroll' },

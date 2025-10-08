@@ -113,6 +113,7 @@ import {
   glowingScrollIndicator,
   glowingScrollIndicatorPreview
 } from './scrolls/GlowingScrollIndicator';
+import { leaveRating, leaveRatingPreview } from './frontend/LeaveRating';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -494,6 +495,13 @@ const sideBarOptions: Array<{
         href: '/docs/jellyloader',
         content: jellyLoader,
         preview: jellyLoaderPreview,
+        isNew: false
+      },
+      {
+        name: 'Leave Rating',
+        href: '/docs/leaverating',
+        content: leaveRating,
+        preview: leaveRatingPreview,
         isNew: false
       },
       // {
