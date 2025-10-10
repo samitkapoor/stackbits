@@ -114,6 +114,7 @@ import {
   glowingScrollIndicatorPreview
 } from './scrolls/GlowingScrollIndicator';
 import { leaveRating, leaveRatingPreview } from './frontend/LeaveRating';
+import { planetLoader, planetLoaderPreview } from './frontend/PlanetLoader';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -571,6 +572,13 @@ const sideBarOptions: Array<{
         href: '/docs/pixelatedcarousel',
         content: pixelatedCarousel,
         preview: pixelatedCarouselPreview,
+        isNew: false
+      },
+      {
+        name: 'Planet Loader',
+        href: '/docs/planetloader',
+        content: planetLoader,
+        preview: planetLoaderPreview,
         isNew: false
       },
       {
