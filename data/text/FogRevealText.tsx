@@ -2,17 +2,11 @@ import { cnCode, installDependenciesCode } from '@/constants/code';
 import { Document } from '../main';
 import FogRevealText from '@/components/texts/fog-reveal-text';
 import StackbitsLogo from '@/components/ui/stackbits-logo';
+import VideoPreview from '@/components/ui/video-preview';
 
 export const fogRevealTextPreview = (
   <div className="h-full w-full flex items-center justify-center">
-    <FogRevealText>
-      <div className="flex items-center justify-center gap-4">
-        <StackbitsLogo className="size-10" />
-        <p style={{ fontSize: '20px' }} className="font-black">
-          stackbits
-        </p>
-      </div>
-    </FogRevealText>
+    <VideoPreview videoUrl="/demos/fog-reveal-text.mp4" />
   </div>
 );
 
