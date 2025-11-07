@@ -114,6 +114,7 @@ import {
   glowingScrollIndicatorPreview
 } from './scrolls/GlowingScrollIndicator';
 import { leaveRating, leaveRatingPreview } from './frontend/LeaveRating';
+import { fogRevealText, fogRevealTextPreview } from './text/FogRevealText';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -731,6 +732,13 @@ const sideBarOptions: Array<{
         href: '/docs/hiddenText',
         content: hiddenText,
         preview: hiddenTextPreview,
+        isNew: false
+      },
+      {
+        name: 'Fog Reveal Text',
+        href: '/docs/fogRevealText',
+        content: fogRevealText,
+        preview: fogRevealTextPreview,
         isNew: false
       },
       {
