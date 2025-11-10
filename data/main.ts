@@ -115,6 +115,7 @@ import {
 } from './scrolls/GlowingScrollIndicator';
 import { leaveRating, leaveRatingPreview } from './frontend/LeaveRating';
 import { fogRevealText, fogRevealTextPreview } from './text/FogRevealText';
+import { appleSpotlight, appleSpotlightPreview } from './frontend/AppleSpotlight';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -281,6 +282,13 @@ const sideBarOptions: Array<{
   {
     title: 'Components',
     children: [
+      {
+        name: 'Apple Spotlight',
+        href: '/docs/appleSpotlight',
+        content: appleSpotlight,
+        preview: appleSpotlightPreview,
+        isNew: false
+      },
       {
         name: 'Circle Menu',
         href: '/docs/circleMenu',
