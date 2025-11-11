@@ -116,6 +116,7 @@ import {
 import { leaveRating, leaveRatingPreview } from './frontend/LeaveRating';
 import { fogRevealText, fogRevealTextPreview } from './text/FogRevealText';
 import { appleSpotlight, appleSpotlightPreview } from './frontend/AppleSpotlight';
+import { sphereScroll, sphereScrollPreview } from './list-scroll/SphereScroll';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -652,6 +653,13 @@ const sideBarOptions: Array<{
         href: '/docs/socialMediaCard',
         content: socialMediaCard,
         preview: socialMediaCardPreview,
+        isNew: false
+      },
+      {
+        name: 'Sphere Scroll',
+        href: '/docs/sphereScroll',
+        content: sphereScroll,
+        preview: sphereScrollPreview,
         isNew: false
       },
       {
