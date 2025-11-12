@@ -5,11 +5,8 @@ import FlowScroll from '@/components/list-scroll/flow-scroll';
 import { images } from '../constants';
 
 export const flowScrollPreview = (
-  <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden relative scale-75">
-    <VideoPreview
-      videoUrl="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-      className="w-[420px] h-[420px]"
-    />
+  <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden relative">
+    <VideoPreview videoUrl="/demos/flow-scroll.mp4" className="w-[420px] h-[420px]" />
   </div>
 );
 
