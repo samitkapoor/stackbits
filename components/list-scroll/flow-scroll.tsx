@@ -1,15 +1,15 @@
-import { motion, MotionValue, useMotionValueEvent, useScroll, useTransform } from 'framer-motion';
+import { motion, MotionValue, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
-import React, { RefObject, useRef } from 'react';
+import React, { useRef } from 'react';
 
-interface SphereScrollCardProps {
+interface FlowScrollCardProps {
   image: string;
   index: number;
   scrollYProgress: MotionValue<number>;
   totalItems: number;
 }
 
-const SphereScrollCard = ({ image, index, scrollYProgress, totalItems }: SphereScrollCardProps) => {
+const FlowScrollCard = ({ image, index, scrollYProgress, totalItems }: FlowScrollCardProps) => {
   const ITEMS_PER_ROW = 3;
   const prev = Math.max(0, index - ITEMS_PER_ROW);
   const next = Math.min(totalItems - 1, index + ITEMS_PER_ROW);
@@ -30,27 +30,35 @@ const SphereScrollCard = ({ image, index, scrollYProgress, totalItems }: SphereS
 
   const offsetToAdd = (scrollRangePerRow / totalItems) * (currentRow + 2);
   const range = [
+    0,
     entryAnimation - offsetToAdd,
     holdAnimationStart - offsetToAdd,
     holdAnimationEnd - offsetToAdd,
-    exitAnimation - offsetToAdd
+    exitAnimation - offsetToAdd,
+    1
   ];
 
-  const scale = useTransform(scrollYProgress, range, [0, 1, 1, 0]);
+  const scale = useTransform(scrollYProgress, range, [0.5, 0.5, 1, 1, 0.5, 0.5]);
 
   const isLeft = index % ITEMS_PER_ROW === 0;
   const isRight = index % ITEMS_PER_ROW === 2;
   const xTransform = useTransform(scrollYProgress, range, [
-    isLeft ? '200%' : isRight ? '-200%' : '0%',
+    isLeft ? '100%' : isRight ? '-100%' : '0%',
+    isLeft ? '100%' : isRight ? '-100%' : '0%',
+    '0%',
     '0%',
     '0%',
     '0%'
   ]);
-  const rotate = useTransform(scrollYProgress, range, [isLeft ? -20 : isRight ? 20 : 0, 0, 0, 0]);
-  const shadowY = useTransform(scrollYProgress, range, [200, 0, 0, -200]);
-  const shadowScale = useTransform(scrollYProgress, range, [-10, 2, 2, -10]);
-
-  const blur = useTransform(scrollYProgress, range, [5, 0, 0, 0]);
+  const rotate = useTransform(scrollYProgress, range, [
+    isLeft ? -20 : isRight ? 20 : 0,
+    isLeft ? -20 : isRight ? 20 : 0,
+    0,
+    0,
+    0,
+    0
+  ]);
+  const shadowY = useTransform(scrollYProgress, range, [50, 50, 25, 25, -50, -50]);
 
   return (
     <motion.div
@@ -59,13 +67,9 @@ const SphereScrollCard = ({ image, index, scrollYProgress, totalItems }: SphereS
         x: xTransform,
         rotate,
         zIndex: !isLeft && !isRight ? 1 : 0,
-        filter: useTransform(blur, (value) => `blur(${value}px)`),
-        boxShadow: useTransform(
-          [shadowY, shadowScale],
-          (value) => `0px ${value[0]}px 40px ${value[1]}px rgba(0, 0, 0, 0.3)`
-        )
+        boxShadow: useTransform(shadowY, (value) => `0px ${value}px 40px 10px rgba(0, 0, 0, 0.1)`)
       }}
-      className="w-full max-w-xs h-96 overflow-hidden rounded-2xl"
+      className="w-full sm:max-w-48 md:max-w-60 h-32 sm:h-60 md:h-72 overflow-hidden rounded-2xl"
     >
       <Image
         src={image}
@@ -78,11 +82,11 @@ const SphereScrollCard = ({ image, index, scrollYProgress, totalItems }: SphereS
   );
 };
 
-interface SphereScrollProps {
+interface FlowScrollProps {
   images: string[];
 }
 
-const SphereScroll = ({ images }: SphereScrollProps) => {
+const FlowScroll = ({ images }: FlowScrollProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     container: ref,
@@ -91,9 +95,9 @@ const SphereScroll = ({ images }: SphereScrollProps) => {
 
   return (
     <div ref={ref} className="w-full h-full overflow-y-auto flex justify-center py-36 pb-96">
-      <div className="grid grid-cols-3 gap-12 h-max">
+      <div className="grid grid-cols-3 gap-4 md:gap-6 lg:gap-12 h-max">
         {images.map((image, index) => (
-          <SphereScrollCard
+          <FlowScrollCard
             key={`sphere-scroll-card-${index}`}
             image={image}
             index={index}
@@ -106,4 +110,4 @@ const SphereScroll = ({ images }: SphereScrollProps) => {
   );
 };
 
-export default SphereScroll;
+export default FlowScroll;
