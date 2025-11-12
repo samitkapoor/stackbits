@@ -116,6 +116,7 @@ import {
 import { leaveRating, leaveRatingPreview } from './frontend/LeaveRating';
 import { fogRevealText, fogRevealTextPreview } from './text/FogRevealText';
 import { appleSpotlight, appleSpotlightPreview } from './frontend/AppleSpotlight';
+import { flowScroll, flowScrollPreview } from './list-scroll/FlowScroll';
 
 export type SideBarSectionInDocument = {
   group: string;
@@ -448,6 +449,13 @@ const sideBarOptions: Array<{
         href: '/docs/flipScroll',
         content: flipScroll,
         preview: flipScrollPreview,
+        isNew: false
+      },
+      {
+        name: 'Flow Scroll',
+        href: '/docs/flowScroll',
+        content: flowScroll,
+        preview: flowScrollPreview,
         isNew: false
       },
       {
