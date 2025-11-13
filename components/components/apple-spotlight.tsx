@@ -322,126 +322,122 @@ const AppleSpotlight = ({
   ];
 
   return (
-    <AnimatePresence mode="popLayout">
+    <AnimatePresence mode="wait">
       {isOpen && (
-        <div
+        <motion.div
+          initial={{
+            opacity: 0,
+            filter: 'blur(20px) url(#blob)',
+            scaleX: 1.3,
+            scaleY: 1.1,
+            y: -10
+          }}
+          animate={{
+            opacity: 1,
+            filter: 'blur(0px) url(#blob)',
+            scaleX: 1,
+            scaleY: 1,
+            y: 0
+          }}
+          exit={{
+            opacity: 0,
+            filter: 'blur(20px) url(#blob)',
+            scaleX: 1.3,
+            scaleY: 1.1,
+            y: 10
+          }}
+          transition={{
+            stiffness: 550,
+            damping: 50,
+            type: 'spring'
+          }}
           className="fixed inset-0 z-50 flex flex-col items-center justify-center"
           onClick={handleClose}
         >
           <SVGFilter />
 
           <div
-            className="w-full flex flex-col max-w-3xl gap-4"
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => {
+              setHovered(false);
+              setHoveredShortcut(null);
+            }}
             onClick={(e) => e.stopPropagation()}
+            style={{ filter: 'url(#blob)' }}
+            className={cn(
+              'w-full flex items-center justify-end gap-4 z-20 group',
+              '[&>div]:bg-neutral-100 [&>div]:text-black [&>div]:rounded-full [&>div]:backdrop-blur-xl',
+              '[&_svg]:size-7 [&_svg]:stroke-[1.4]',
+              'max-w-3xl'
+            )}
           >
-            <motion.div
-              initial={{
-                opacity: 0,
-                filter: 'blur(20px) url(#blob)',
-                scaleX: 1.3,
-                scaleY: 1.1,
-                y: -10
-              }}
-              animate={{
-                opacity: 1,
-                filter: 'blur(0px) url(#blob)',
-                scaleX: 1,
-                scaleY: 1,
-                y: 0
-              }}
-              exit={{
-                opacity: 0,
-                filter: 'blur(20px) url(#blob)',
-                scaleX: 1.3,
-                scaleY: 1.1,
-                y: 10
-              }}
-              transition={{
-                stiffness: 550,
-                damping: 50,
-                type: 'spring'
-              }}
-              onMouseEnter={() => setHovered(true)}
-              onMouseLeave={() => {
-                setHovered(false);
-                setHoveredShortcut(null);
-              }}
-              style={{ filter: 'url(#blob)' }}
-              className={cn(
-                'w-full flex items-center justify-end gap-4 z-20 group',
-                '[&>div]:bg-neutral-100 [&>div]:text-black [&>div]:rounded-full [&>div]:backdrop-blur-xl',
-                '[&_svg]:size-7 [&_svg]:stroke-[1.4]'
-              )}
-            >
-              <AnimatePresence mode="popLayout">
-                <motion.div
-                  layoutId="search-input-container"
-                  transition={{
-                    layout: {
-                      duration: 0.5,
-                      type: 'spring',
-                      bounce: 0.2
-                    }
-                  }}
-                  style={{
-                    borderRadius: '30px'
-                  }}
-                  className="h-full w-full flex flex-col items-center justify-start z-10 relative shadow-lg overflow-hidden border"
-                >
-                  <SpotlightInput
-                    placeholder={
-                      hoveredShortcut !== null
-                        ? shortcuts[hoveredShortcut].label
-                        : hoveredSearchResult !== null
-                        ? searchResults[hoveredSearchResult].label
-                        : 'Search'
-                    }
-                    placeholderClassName={
-                      hoveredSearchResult !== null ? 'text-black bg-white' : 'text-gray-500'
-                    }
-                    hidePlaceholder={!(hoveredSearchResult !== null || !searchValue)}
-                    value={searchValue}
-                    onChange={handleSearchValueChange}
-                  />
+            <AnimatePresence mode="popLayout">
+              <motion.div
+                layoutId="search-input-container"
+                transition={{
+                  layout: {
+                    duration: 0.5,
+                    type: 'spring',
+                    bounce: 0.2
+                  }
+                }}
+                style={{
+                  borderRadius: '30px'
+                }}
+                className="h-full w-full flex flex-col items-center justify-start z-10 relative shadow-lg overflow-hidden border"
+              >
+                <SpotlightInput
+                  placeholder={
+                    hoveredShortcut !== null
+                      ? shortcuts[hoveredShortcut].label
+                      : hoveredSearchResult !== null
+                      ? searchResults[hoveredSearchResult].label
+                      : 'Search'
+                  }
+                  placeholderClassName={
+                    hoveredSearchResult !== null ? 'text-black bg-white' : 'text-gray-500'
+                  }
+                  hidePlaceholder={!(hoveredSearchResult !== null || !searchValue)}
+                  value={searchValue}
+                  onChange={handleSearchValueChange}
+                />
 
-                  {searchValue && (
-                    <SearchResultsContainer
-                      searchResults={searchResults}
-                      onHover={setHoveredSearchResult}
-                    />
-                  )}
-                </motion.div>
-                {hovered &&
-                  !searchValue &&
-                  shortcuts.map((shortcut, index) => (
-                    <motion.div
-                      key={`shortcut-${index}`}
-                      onMouseEnter={() => setHoveredShortcut(index)}
-                      layout
-                      initial={{ scale: 0.7, x: -1 * (64 * (index + 1)) }}
-                      animate={{ scale: 1, x: 0 }}
-                      exit={{
-                        scale: 0.7,
-                        x:
-                          1 *
-                          (16 * (shortcuts.length - index - 1) +
-                            64 * (shortcuts.length - index - 1))
-                      }}
-                      transition={{
-                        duration: 0.8,
-                        type: 'spring',
-                        bounce: 0.2,
-                        delay: index * 0.05
-                      }}
-                      className="rounded-full cursor-pointer"
-                    >
-                      <ShortcutButton icon={shortcut.icon} link={shortcut.link} />
-                    </motion.div>
-                  ))}
-              </AnimatePresence>
-            </motion.div>
+                {searchValue && (
+                  <SearchResultsContainer
+                    searchResults={searchResults}
+                    onHover={setHoveredSearchResult}
+                  />
+                )}
+              </motion.div>
+              {hovered &&
+                !searchValue &&
+                shortcuts.map((shortcut, index) => (
+                  <motion.div
+                    key={`shortcut-${index}`}
+                    onMouseEnter={() => setHoveredShortcut(index)}
+                    layout
+                    initial={{ scale: 0.7, x: -1 * (64 * (index + 1)) }}
+                    animate={{ scale: 1, x: 0 }}
+                    exit={{
+                      scale: 0.7,
+                      x:
+                        1 *
+                        (16 * (shortcuts.length - index - 1) + 64 * (shortcuts.length - index - 1))
+                    }}
+                    transition={{
+                      duration: 0.8,
+                      type: 'spring',
+                      bounce: 0.2,
+                      delay: index * 0.05
+                    }}
+                    className="rounded-full cursor-pointer"
+                  >
+                    <ShortcutButton icon={shortcut.icon} link={shortcut.link} />
+                  </motion.div>
+                ))}
+            </AnimatePresence>
           </div>
-        </div>
+        </motion.div>
       )}
     </AnimatePresence>
   );
